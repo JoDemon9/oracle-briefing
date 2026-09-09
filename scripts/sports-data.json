@@ -1,0 +1,138 @@
+{
+  "omonoia": {
+    "team": "Omonoia",
+    "sources": [
+      "Kerkida.net"
+    ],
+    "articles": [
+      {
+        "title": "Το ΟΧΙ... του Κουλιμπαλί",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ohi-toy-koylimpali",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Ντιονί με Άρη (βίντεο)",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ntioni-me-ari-binteo",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Αποκάλυψη για Ομόνοια από την Μαρία στο kerkida OnAiR!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/apokalypsi-gia-omonoia-apo-tin-maria-sto-kerkida-onair",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Eδώ είναι το (μεταγραφικό) ΚΟΥΙΖ!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/edo-einai-metagrafiko-koyiz",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Ανάρτηση για Μπάλκοβετς",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/anartisi-gia-mpalkobets",
+        "source": "Kerkida.net"
+      }
+    ],
+    "fetched_at": "2026-09-09T11:50:52.751148+00:00"
+  },
+  "manchester_united": {
+    "team": "Manchester United",
+    "sources": [
+      "The Guardian"
+    ],
+    "articles": [
+      {
+        "title": "Premier League: 10 talking points from the weekend’s action",
+        "url": "https://www.theguardian.com/football/2026/sep/07/premier-league-10-talking-points-from-the-weekends-action",
+        "source": "The Guardian"
+      },
+      {
+        "title": "‘No excuses’: Moyes says transfer troubles will not hurt Everton after United draw",
+        "url": "https://www.theguardian.com/football/2026/sep/06/david-moyes-ainsley-maitland-niles-everton-manchester-united-premier-league",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Manchester United’s front four show flashes but need more time to become fantastic",
+        "url": "https://www.theguardian.com/football/2026/sep/06/manchester-uniteds-front-four-show-flashes-but-need-more-time-to-become-fantastic",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Everton 2-2 Manchester United: Premier League –as it happened",
+        "url": "https://www.theguardian.com/football/live/2026/sep/06/everton-v-manchester-united-premier-league-live",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Maitland-Niles stunner rescues late point for Everton against Manchester United",
+        "url": "https://www.theguardian.com/football/2026/sep/06/everton-manchester-united-premier-league-match-report",
+        "source": "The Guardian"
+      }
+    ],
+    "fetched_at": "2026-09-09T11:50:53.167868+00:00"
+  },
+  "real_madrid": {
+    "team": "Real Madrid",
+    "sources": [
+      "Marca"
+    ],
+    "articles": [
+      {
+        "title": "Real Madrid is ruthless in the Champions League",
+        "url": "https://www.marca.com/en/football/champions-league/2026/09/08/real-madrid-is-ruthless-in-the-champions-league.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Lamine Yamal sends a message to Mbappé: \"I won't beg for the Ballon d'Or\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/08/lamine-yamal-sends-a-message-to-mbappe-i-won-t-beg-for-the-ballon-d-or.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Mourinho's Champions League with Real Madrid: The Final Chapter",
+        "url": "https://www.marca.com/en/football/champions-league/2026/09/08/mourinho-s-champions-league-with-real-madrid-the-final-chapter.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Fermín vs. Bellingham: the new duel pitting Barcelona against Real Madrid",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/08/fermin-vs-bellingham-the-new-duel-pitting-barcelona-against-real-madrid.html",
+        "source": "Marca"
+      },
+      {
+        "title": "The \"BMV\" stalls at the starting line: Real Madrid's star-studded offense hits a wall as Mbappé goes cold",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/05/the-bmv-stalls-at-the-starting-line-real-madrid-s-star-studded-offense-hits-wall-as-mbappe-goes-cold.html",
+        "source": "Marca"
+      }
+    ],
+    "fetched_at": "2026-09-09T11:50:53.786801+00:00"
+  },
+  "formula1": {
+    "team": "Formula 1",
+    "sources": [
+      "BBC Sport F1"
+    ],
+    "articles": [
+      {
+        "title": "McLaren talks, 'numb' cars and being 'captain of the ship' - Verstappen Q&A",
+        "url": "https://www.bbc.com/sport/formula1/articles/cy4ze023nvro",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Ukraine federation calls for Russian sanctions by FIA",
+        "url": "https://www.bbc.com/sport/formula1/articles/c5y7k2grx1lo",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Russell hindered or just Antonelli brilliance? - F1 Q&A",
+        "url": "https://www.bbc.com/sport/formula1/articles/c8r6e663g1lo",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Ecclestone stopped by police for taking shotgun into Portugal",
+        "url": "https://www.bbc.com/sport/formula1/articles/cy9zx52xen2o",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Antonelli 'walks over water' for win that will go down in F1 folklore",
+        "url": "https://www.bbc.com/sport/formula1/articles/cm2my2z365lo",
+        "source": "BBC Sport F1"
+      }
+    ],
+    "fetched_at": "2026-09-09T11:50:54.243876+00:00"
+  }
+}

@@ -16,6 +16,9 @@ import subprocess
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+SPORTS_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'fetch-sports.py')
 VERIFY_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'verify-links.py')
 BUILD_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'build-html.py')
 CHECK_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'check-duplication.py')
@@ -39,6 +42,15 @@ def main():
     print("=" * 60)
     print("🏛️ THE ORACLE SOVEREIGN — DAILY AUTOMATED PIPELINE")
     print("=" * 60)
+
+    # -1. Sports Data Harvester (Automated scraping for cross-checking)
+    if os.path.exists(SPORTS_SCRIPT):
+        sports_output = os.path.join(BASE_DIR, 'scripts', 'sports-data.json')
+        sports_cmd = f'python "{SPORTS_SCRIPT}" "{sports_output}"'
+        if not run_command(sports_cmd, "Harvesting live sports data from Kerkida, BBC, Guardian, Marca, F1"):
+            print("   ⚠ Sports harvester failed — continuing with manual data")
+    else:
+        print("\n⚠ Sports harvester script not found — skipping automated sports fetch")
 
     # 0. Mandatory Link Verification Gate (100% 200 OK Requirement)
     verify_cmd = f'python "{VERIFY_SCRIPT}" "{target_md}"' if target_md else f'python "{VERIFY_SCRIPT}"'

@@ -181,39 +181,180 @@
       outline-offset: 2px;
     }
 
-    /* Print styles */
+    /* ============================================== */
+    /* BESPOKE BROADSHEET PRINT / PDF EXPORT          */
+    /* Financial Times / NYT quality broadsheet layout */
+    /* ============================================== */
     @media print {
+      @page {
+        size: A4;
+        margin: 1.2cm 1.5cm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
       body {
         background-color: #ffffff !important;
-        color: #000000 !important;
+        color: #0a0a0a !important;
+        font-size: 9.5pt !important;
+        line-height: 1.45 !important;
+        font-family: 'Newsreader', 'Georgia', 'Times New Roman', serif !important;
       }
+
+      /* Hide all interactive / digital-only elements */
       .ticker-wrap,
       nav,
+      #mainNav,
       #themeToggle,
+      #themeToggleNav,
       #archiveSearch,
       #searchResults,
-      button[title="Εκτύπωση / PDF"],
-      a[href*="youtube.com"] {
+      button,
+      input[type="range"],
+      a[href*="youtube.com"],
+      .print\:hidden,
+      .no-print,
+      footer {
         display: none !important;
       }
+
+      /* Force show all expandable content */
       details {
         display: block !important;
       }
-      details[open] summary,
       details summary {
         display: none !important;
       }
       details > div {
         display: block !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-top: 0.3em !important;
       }
+
+      /* Broadsheet masthead */
+      .font-masthead {
+        font-size: 28pt !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.02em !important;
+        border-bottom: 3pt double #000 !important;
+        padding-bottom: 0.3em !important;
+        margin-bottom: 0.5em !important;
+        text-align: center !important;
+      }
+
+      /* Section headers — broadsheet rules */
+      .t-section {
+        font-size: 13pt !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        border-bottom: 2pt solid #000 !important;
+        padding-bottom: 0.15em !important;
+        margin-bottom: 0.6em !important;
+        page-break-after: avoid !important;
+      }
+
+      /* Card layout — clean flat broadsheet panels */
       .card, .card--hero, .editorial-card {
-        border: 1px solid #ccc !important;
+        border: none !important;
+        border-bottom: 0.5pt solid #ccc !important;
         box-shadow: none !important;
-        page-break-inside: avoid;
+        border-radius: 0 !important;
+        padding: 0.4em 0 !important;
+        margin-bottom: 0.5em !important;
+        page-break-inside: avoid !important;
+        background: transparent !important;
       }
+
+      /* Headlines in print */
+      .t-lead {
+        font-size: 16pt !important;
+        font-weight: 800 !important;
+        line-height: 1.15 !important;
+      }
+      .t-title {
+        font-size: 12pt !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+      }
+
+      /* Body text — newspaper column style */
+      .t-body, .t-body-sm {
+        font-size: 9pt !important;
+        line-height: 1.4 !important;
+        text-align: justify !important;
+        hyphens: auto !important;
+      }
+
+      /* Meta / source lines */
+      .t-meta {
+        font-size: 7.5pt !important;
+        color: #666 !important;
+      }
+
+      /* Links — print as black, no decoration */
       a {
         text-decoration: none !important;
-        color: #000000 !important;
+        color: #0a0a0a !important;
+      }
+
+      /* Grid columns → stacked for print */
+      .grid {
+        display: block !important;
+      }
+
+      /* Images — constrained, captioned */
+      img {
+        max-height: 160px !important;
+        width: auto !important;
+        margin: 0 auto 0.3em !important;
+        display: block !important;
+        border: 0.5pt solid #ddd !important;
+      }
+
+      /* Dashboard table compact */
+      table {
+        font-size: 8pt !important;
+        border-collapse: collapse !important;
+      }
+      th, td {
+        padding: 2pt 4pt !important;
+        border-bottom: 0.5pt solid #ddd !important;
+      }
+
+      /* Sports cards — compact inline */
+      .bg-gradient-to-br {
+        background: transparent !important;
+        color: #000 !important;
+      }
+
+      /* Weather — inline compact */
+      #weatherGrid {
+        display: block !important;
+      }
+
+      /* Page breaks */
+      h2 {
+        page-break-after: avoid !important;
+      }
+      article {
+        page-break-inside: avoid !important;
+      }
+
+      /* Add print footer with branding */
+      body::after {
+        content: "THE ORACLE SOVEREIGN — Confidential Executive Briefing — © 2026";
+        display: block;
+        text-align: center;
+        font-size: 7pt;
+        color: #999;
+        margin-top: 1cm;
+        border-top: 0.5pt solid #ccc;
+        padding-top: 0.3em;
       }
     }
 
@@ -1386,7 +1527,7 @@
         </div>
 
         <!-- Interactive Mortgage Calculator -->
-        <div class="lg:col-span-6 card p-5 flex flex-col justify-between">
+        <div class="lg:col-span-6 card p-5 flex flex-col justify-between no-print">
           <div>
             <div class="flex items-center justify-between mb-3 border-b border-[var(--rule)] pb-2">
               <h3 class="t-title font-bold text-[var(--ink)]">Υπολογιστής Στεγαστικής Δόσης</h3>
@@ -1418,14 +1559,48 @@
                 <input type="range" id="calcRate" min="1.0" max="8.0" step="0.05" value="3.78" class="w-full" style="accent-color: var(--accent);">
               </div>
 
-              <div class="bg-[var(--paper)] border border-[var(--rule)] p-4 rounded-xl flex items-center justify-between mt-4">
-                <div>
-                  <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Μηνιαία Δόση</div>
-                  <div id="monthlyInstallment" class="font-masthead text-2xl sm:text-3xl font-black text-[var(--accent)]">€1.032</div>
+              <!-- Results Panel -->
+              <div class="bg-[var(--paper)] border border-[var(--rule)] p-4 rounded-xl mt-4 space-y-3">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Μηνιαία Δόση</div>
+                    <div id="monthlyInstallment" class="font-masthead text-2xl sm:text-3xl font-black text-[var(--accent)]">€1.032</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Σύνολο Τόκων</div>
+                    <div id="totalInterest" class="font-mono text-sm sm:text-base font-bold text-[var(--down)]">€109.680</div>
+                  </div>
                 </div>
-                <div class="text-right">
-                  <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Σύνολο Τόκων</div>
-                  <div id="totalInterest" class="font-mono text-sm sm:text-base font-bold text-[var(--ink)]">€109.680</div>
+                <!-- Total repayment + cost of credit -->
+                <div class="flex items-center justify-between border-t border-[var(--rule)] pt-2">
+                  <div>
+                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Συνολική Αποπληρωμή</div>
+                    <div id="totalRepayment" class="font-mono text-sm font-bold text-[var(--ink)]">€309.680</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Κόστος Πίστωσης</div>
+                    <div id="costOfCredit" class="font-mono text-sm font-bold text-[var(--ink)]">54,8%</div>
+                  </div>
+                </div>
+                <!-- Visual cost breakdown bar -->
+                <div class="mt-2">
+                  <div class="flex w-full h-3 rounded-full overflow-hidden">
+                    <div id="principalBar" class="bg-[var(--accent)] transition-all duration-300" style="width:65%"></div>
+                    <div id="interestBar" class="bg-[var(--down)] opacity-60 transition-all duration-300" style="width:35%"></div>
+                  </div>
+                  <div class="flex justify-between mt-1">
+                    <span class="t-meta font-mono text-[var(--ink-quiet)]">🟢 Κεφάλαιο</span>
+                    <span class="t-meta font-mono text-[var(--ink-quiet)]">🔴 Τόκοι</span>
+                  </div>
+                </div>
+                <!-- Euribor comparison -->
+                <div id="euriborCompare" class="border-t border-[var(--rule)] pt-2 mt-2">
+                  <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider mb-1">📊 Σύγκριση Euribor 3M</div>
+                  <div class="flex items-center gap-2">
+                    <span class="t-meta text-[var(--ink-body)]">Αν Euribor 3M + spread 1,1%:</span>
+                    <span id="euriborPayment" class="font-mono font-bold text-[var(--up)]">€977</span>
+                    <span id="euriborDiff" class="t-meta font-mono text-[var(--up)]">(−€55/μήνα)</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1922,7 +2097,7 @@
       if (btnNav) btnNav.addEventListener('click', toggleTheme);
     })();
 
-    // 2. Interactive Mortgage Calculator
+    // 2. Interactive Mortgage Calculator (Enhanced with Euribor comparison)
     (function () {
       const amountEl = document.getElementById('calcAmount');
       const yearsEl = document.getElementById('calcYears');
@@ -1933,6 +2108,20 @@
       const rateVal = document.getElementById('rateVal');
       const monthlyInstallment = document.getElementById('monthlyInstallment');
       const totalInterest = document.getElementById('totalInterest');
+      const totalRepayment = document.getElementById('totalRepayment');
+      const costOfCredit = document.getElementById('costOfCredit');
+      const principalBar = document.getElementById('principalBar');
+      const interestBar = document.getElementById('interestBar');
+      const euriborPayment = document.getElementById('euriborPayment');
+      const euriborDiff = document.getElementById('euriborDiff');
+
+      const EURIBOR_3M = 2.670;  // Current Euribor 3M rate
+      const SPREAD = 1.10;       // Typical Cyprus bank spread
+
+      function calcMonthly(P, r, n) {
+        if (r > 0) return (P * r) / (1 - Math.pow(1 + r, -n));
+        return P / n;
+      }
 
       function calculate() {
         if (!amountEl || !yearsEl || !rateEl) return;
@@ -1947,18 +2136,45 @@
         const r = (annualRate / 100) / 12;
         const n = y * 12;
 
-        let m = 0;
-        if (r > 0) {
-          m = (P * r) / (1 - Math.pow(1 + r, -n));
-        } else {
-          m = P / n;
-        }
-
+        const m = calcMonthly(P, r, n);
         const totalPay = m * n;
         const interest = totalPay - P;
 
+        // Core results
         monthlyInstallment.textContent = '€' + Math.round(m).toLocaleString('el-CY');
         totalInterest.textContent = '€' + Math.round(interest).toLocaleString('el-CY');
+
+        // Total repayment
+        if (totalRepayment) totalRepayment.textContent = '€' + Math.round(totalPay).toLocaleString('el-CY');
+
+        // Cost of credit %
+        if (costOfCredit) {
+          const pct = ((interest / P) * 100).toFixed(1).replace('.', ',');
+          costOfCredit.textContent = pct + '%';
+        }
+
+        // Visual breakdown bar
+        if (principalBar && interestBar) {
+          const principalPct = (P / totalPay) * 100;
+          const interestPct = (interest / totalPay) * 100;
+          principalBar.style.width = principalPct.toFixed(1) + '%';
+          interestBar.style.width = interestPct.toFixed(1) + '%';
+        }
+
+        // Euribor 3M comparison
+        if (euriborPayment && euriborDiff) {
+          const euriborRate = ((EURIBOR_3M + SPREAD) / 100) / 12;
+          const euriborM = calcMonthly(P, euriborRate, n);
+          const diff = Math.round(euriborM) - Math.round(m);
+          euriborPayment.textContent = '€' + Math.round(euriborM).toLocaleString('el-CY');
+          if (diff <= 0) {
+            euriborDiff.textContent = '(−€' + Math.abs(diff).toLocaleString('el-CY') + '/μήνα)';
+            euriborDiff.className = 't-meta font-mono text-[var(--up)]';
+          } else {
+            euriborDiff.textContent = '(+€' + diff.toLocaleString('el-CY') + '/μήνα)';
+            euriborDiff.className = 't-meta font-mono text-[var(--down)]';
+          }
+        }
       }
 
       if (amountEl && yearsEl && rateEl) {
