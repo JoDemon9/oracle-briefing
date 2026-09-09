@@ -2,8 +2,16 @@
   "omonoia": {
     "team": "Omonoia",
     "sources": [
+      "ΚΟΠ / CFA",
       "Kerkida.net"
     ],
+    "next_fixture": {
+      "fixture": "20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026)",
+      "match": "20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ)",
+      "date": "Σάββατο 12.09.2026",
+      "source_url": "https://www.cfa.com.cy/Gr/news/53637",
+      "source": "ΚΟΠ / CFA"
+    },
     "articles": [
       {
         "title": "Το ΟΧΙ... του Κουλιμπαλί",
@@ -31,7 +39,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-09T11:59:11.672074+00:00"
+    "fetched_at": "2026-09-09T12:04:49.775802+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -65,7 +73,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-09T11:59:12.097263+00:00"
+    "fetched_at": "2026-09-09T12:04:50.213714+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,7 +107,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-09T11:59:12.835603+00:00"
+    "fetched_at": "2026-09-09T12:04:50.948077+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -133,6 +141,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-09T11:59:13.292889+00:00"
+    "fetched_at": "2026-09-09T12:04:51.437203+00:00"
   }
 }

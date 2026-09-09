@@ -61,11 +61,11 @@ Dating: use the date in the search result; accept the last 48 hours; if no times
 - Όλοι οι σύνδεσμοι πρέπει να είναι πραγματικοί, λειτουργικοί και να οδηγούν σε υπαρκτή, ζωντανή σελίδα άρθρου.
 - Όταν τα αποτελέσματα αναζήτησης περιέχουν redirect URLs (π.χ. grounding-api-redirect), επίλυσε άμεσα την τελική διεύθυνση ή χρησιμοποίησε το πραγματικό, έγκυρο και λειτουργικό URL του μέσου.
 - ΠΟΛΛΑΠΛΗ ΔΙΑΣΤΑΥΡΩΣΗ ΑΘΛΗΤΙΚΩΝ (Cross-checking 2-3 φορές):
-  * ΟΜΟΝΟΙΑ: Διασταύρωση ειδήσεων και αποτελεσμάτων από Kerkida.net και Goal.com.cy (Goal Philenews) / Politis Sports.
-  * Manchester United: Διασταύρωση από πολλαπλές βρετανικές πηγές (BBC Sport, The Guardian, Sky Sports).
-  * Real Madrid: Διασταύρωση από ισπανικές και διεθνείς πηγές (Marca, Diario AS, BBC Sport European).
+  * ΟΜΟΝΟΙΑ: Ο επόμενος αγώνας (αντίπαλος, ημερομηνία, ώρα, έδρα, διοργάνωση/αγωνιστική) επαληθεύεται ΥΠΟΧΡΕΩΤΙΚΑ από το επίσημο πρόγραμμα της ΚΟΠ (Cyprus Football Association — cfa.com.cy) και διασταυρώνεται με Kerkida.net και Goal.com.cy / Politis Sports. ΑΠΑΓΟΡΕΥΕΤΑΙ ΑΥΣΤΗΡΑ η μηχανική αντιγραφή του επόμενου αγώνα από προηγούμενη έκδοση χωρίς άμεση επαλήθευση.
+  * Manchester United: Διασταύρωση από πολλαπλές βρετανικές πηγές (BBC Sport, The Guardian, Sky Sports, Premier League official).
+  * Real Madrid: Διασταύρωση από ισπανικές και διεθνείς πηγές (Marca, Diario AS, BBC Sport European, La Liga official).
   * Formula 1: Διασταύρωση από BBC Sport F1 και Formula1.com.
-- Κάθε στοιχείο (σκορ, ημερομηνία, ώρα, σκόρερ, μεταγραφικό ρεπορτάζ) ελέγχεται και διασταυρώνεται 2-3 φορές πριν τυπωθεί.
+- Κάθε στοιχείο (σκορ, ημερομηνία, ώρα, σκόρερ, μεταγραφικό ρεπορτάζ, επόμενος αντίπαλος) ελέγχεται και διασταυρώνεται 2-3 φορές πριν τυπωθεί.
 
 SEARCH PLAN
 stock market today S&P 500 Nasdaq VIX

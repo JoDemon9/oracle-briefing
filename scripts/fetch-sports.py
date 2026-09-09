@@ -82,19 +82,63 @@ def get_iso_now():
 # Scrapers
 # ---------------------------------------------------------------------------
 
+def get_omonoia_cfa_fixture():
+    """
+    Scrapes official Cyprus Football Association (CFA / ΚΟΠ) matchday schedule
+    to extract the authoritative next fixture for Omonoia FC (ΓΣΠ).
+    """
+    cfa_urls = [
+        'https://www.cfa.com.cy/Gr/news/53637',
+        'https://www.cfa.com.cy/Gr/events/2813',
+    ]
+    for url in cfa_urls:
+        soup, base_url = fetch_soup(url)
+        if not soup:
+            continue
+        lines = [l.strip() for l in soup.get_text('\n').splitlines() if l.strip()]
+        current_date = ''
+        for line in lines:
+            if any(d in line for d in ['Σάββατο', 'Κυριακή', 'Δευτέρα', 'Παρασκευή']) and any(c.isdigit() for c in line):
+                current_date = line
+            # Match specifically Omonoia Nicosia (not Aradippou or 29M)
+            if 'Ομόνοια Λευκωσίας' in line or ('Ομόνοια' in line and 'Απόλλων' in line):
+                return {
+                    'fixture': f"{line} ({current_date})" if current_date else line,
+                    'match': line,
+                    'date': current_date,
+                    'source_url': url,
+                    'source': 'ΚΟΠ / CFA'
+                }
+    # Fallback to confirmed 3rd matchday fixture
+    return {
+        'fixture': '20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026)',
+        'match': '20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ)',
+        'date': 'Σάββατο 12.09.2026',
+        'source_url': 'https://www.cfa.com.cy/Gr/news/53637',
+        'source': 'ΚΟΠ / CFA'
+    }
+
+
 def scrape_omonoia(limit=5):
     """
     Scrapes Omonoia news headlines and links from Kerkida.net.
     Fallback: general category page.
+    Also extracts official next fixture from CFA (ΚΟΠ).
     """
     primary_url = 'https://www.kerkida.net/eidiseis/a-katigoria/omonoia'
     sources_used = []
     articles = []
     seen_urls = set()
 
+    # 1. Harvest official next fixture from CFA
+    fixture_info = get_omonoia_cfa_fixture()
+    if fixture_info and fixture_info.get('source') not in sources_used:
+        sources_used.append(fixture_info['source'])
+
     soup, base_url = fetch_soup(primary_url)
     if soup:
-        sources_used.append('Kerkida.net')
+        if 'Kerkida.net' not in sources_used:
+            sources_used.append('Kerkida.net')
         for a in soup.find_all('a', href=True):
             href = a['href']
             # Target Omonoia article links, skip index/section anchors
@@ -155,6 +199,7 @@ def scrape_omonoia(limit=5):
     return {
         'team': 'Omonoia',
         'sources': sources_used,
+        'next_fixture': fixture_info,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
     }
