@@ -16,7 +16,7 @@ import subprocess
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+VERIFY_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'verify-links.py')
 BUILD_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'build-html.py')
 CHECK_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'check-duplication.py')
 SEND_SCRIPT = os.path.join(BASE_DIR, 'scripts', 'send-briefing.py')
@@ -39,6 +39,13 @@ def main():
     print("=" * 60)
     print("🏛️ THE ORACLE SOVEREIGN — DAILY AUTOMATED PIPELINE")
     print("=" * 60)
+
+    # 0. Mandatory Link Verification Gate (100% 200 OK Requirement)
+    verify_cmd = f'python "{VERIFY_SCRIPT}" "{target_md}"' if target_md else f'python "{VERIFY_SCRIPT}"'
+    if not run_command(verify_cmd, "Enforcing 100% link verification gate (Zero 404/403 Policy)"):
+        print("\n❌ PIPELINE HALTED: One or more links in the briefing are invalid or blocked.")
+        print("   Fix all broken/unreachable URLs before deployment to GitHub Pages and Telegram.")
+        sys.exit(1)
 
     # 1. Build HTML & Search Index
     build_cmd = f'python "{BUILD_SCRIPT}" "{target_md}"' if target_md else f'python "{BUILD_SCRIPT}"'
