@@ -353,7 +353,7 @@ def parse_markdown(md_content):
                 why_match = re.search(r'\*\*Γιατί με αφορά:\*\*\s*(.+)', raw_item)
                 why_text = why_match.group(1).strip() if why_match else ''
 
-                src_match = re.search(r'\*\*Πηγή:\*\*\s*(.+)', raw_item)
+                src_match = re.search(r'\*\*(?:Πηγή|Πηγές):\*\*\s*(.+)', raw_item)
                 source = None
                 if src_match:
                     src_parsed = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
@@ -363,7 +363,7 @@ def parse_markdown(md_content):
                 body_lines = []
                 for bl in lines_i[1:]:
                     bl_c = bl.strip()
-                    if bl_c.startswith('**Γιατί με αφορά:') or bl_c.startswith('**Βάθος:') or bl_c.startswith('**Πηγή:'):
+                    if bl_c.startswith('**Γιατί με αφορά:') or bl_c.startswith('**Βάθος:') or bl_c.startswith('**Πηγή:') or bl_c.startswith('**Πηγές:'):
                         break
                     if bl_c.startswith('* **') or bl_c.startswith('- **') or bl_c.startswith('• **'):
                         break
@@ -407,7 +407,7 @@ def parse_markdown(md_content):
                 tag = tag_match[-1] if tag_match else 'Μονή πηγή'
                 clean_title = re.sub(r'^\d+\.\s*', '', title_line).replace(f'[{tag}]', '').strip()
 
-                src_match = re.search(r'\*\*Πηγή:\*\*\s*(.+)', raw_item)
+                src_match = re.search(r'\*\*(?:Πηγή|Πηγές):\*\*\s*(.+)', raw_item)
                 source = None
                 if src_match:
                     src_parsed = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
@@ -417,7 +417,7 @@ def parse_markdown(md_content):
                 body_lines = []
                 for bl in lines_i[1:]:
                     bl_c = bl.strip()
-                    if bl_c.startswith('**Βάθος:') or bl_c.startswith('**Πηγή:'):
+                    if bl_c.startswith('**Βάθος:') or bl_c.startswith('**Πηγή:') or bl_c.startswith('**Πηγές:'):
                         break
                     if bl_c.startswith('* **') or bl_c.startswith('- **') or bl_c.startswith('• **'):
                         break
