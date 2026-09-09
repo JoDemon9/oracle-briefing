@@ -215,10 +215,10 @@
 ### Formula 1
 
 *   **Τελευταίο αποτέλεσμα:** **Italian Grand Prix 2026 (Monza)** — Ιστορικός θρίαμβος του 20χρονου Ιταλού Kimi Antonelli με Mercedes ξεκινώντας από τη 19η θέση του grid (1-2 για τη Mercedes με τον George Russell, 3ος ο Max Verstappen).
-*   **Επόμενος αγώνας:** **Azerbaijan Grand Prix (Baku City Circuit)**, **Κυριακή, 20 Σεπτεμβρίου 2026**, **14:00** ώρα Κύπρου.
-*   **Μία γραμμή νέων:** Παγκόσμια αποθέωση στον διεθνή Τύπο για την επίδοση του Antonelli στη Μόντσα, ενώ οι μηχανικοί της Mercedes και της McLaren προετοιμάζουν ειδικά πακέτα χαμηλής οπισθέλκουσας για τις ατέλειωτες ευθείες του Μπακού.
+*   **Επόμενος αγώνας:** **Spanish Grand Prix 2026 (Gran Premio de España, Madrid)**, **Κυριακή, 13 Σεπτεμβρίου 2026**, **16:00** ώρα Κύπρου (15:00 CEST) — 14ος γύρος του Παγκοσμίου Πρωταθλήματος ([Πρόγραμμα Formula1.com](https://www.formula1.com/en/racing/2026/spain.html)).
+*   **Μία γραμμή νέων:** Παγκόσμια αποθέωση στον διεθνή Τύπο για τον ιστορικό θρίαμβο του Antonelli στη Μόντσα, ενώ το grid ταξιδεύει άμεσα στην Ισπανία για τον 14ο γύρο, με τη Mercedes να στοχεύει σε back-to-back νίκες και τη Ferrari να αναζητά απαντήσεις.
 *   **Βίντεο Highlights:** [Highlights Italian Grand Prix Monza στο YouTube](https://www.youtube.com/results?search_query=Formula+1+Italian+Grand+Prix+2026+Monza+highlights)
-*   **Πηγές:** [BBC Sport F1](https://www.bbc.com/sport/formula1/articles/cm2my2z365lo) · [Formula1.com](https://www.formula1.com/en/racing/2026.html)
+*   **Πηγές:** [BBC Sport F1](https://www.bbc.com/sport/formula1/articles/cm2my2z365lo) · [Formula1.com](https://www.formula1.com/en/racing/2026/spain.html)
 
 ---
 

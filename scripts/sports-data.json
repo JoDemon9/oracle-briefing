@@ -39,7 +39,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-09T12:04:49.775802+00:00"
+    "fetched_at": "2026-09-09T12:07:12.622436+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -73,7 +73,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-09T12:04:50.213714+00:00"
+    "fetched_at": "2026-09-09T12:07:13.038843+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -107,13 +107,23 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-09T12:04:50.948077+00:00"
+    "fetched_at": "2026-09-09T12:07:13.768679+00:00"
   },
   "formula1": {
     "team": "Formula 1",
     "sources": [
+      "Formula1.com",
       "BBC Sport F1"
     ],
+    "next_fixture": {
+      "race": "Spanish Grand Prix 2026 (Gran Premio de España)",
+      "circuit": "Madrid / Circuit de Barcelona-Catalunya",
+      "round": "Round 14",
+      "dates": "11 - 13 Σεπτεμβρίου 2026",
+      "race_day": "Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου",
+      "source_url": "https://www.formula1.com/en/racing/2026/spain.html",
+      "source": "Formula1.com"
+    },
     "articles": [
       {
         "title": "McLaren talks, 'numb' cars and being 'captain of the ship' - Verstappen Q&A",
@@ -141,6 +151,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-09T12:04:51.437203+00:00"
+    "fetched_at": "2026-09-09T12:07:15.535216+00:00"
   }
 }

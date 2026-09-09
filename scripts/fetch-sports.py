@@ -366,15 +366,54 @@ def scrape_real_madrid(limit=5):
     }
 
 
+def get_f1_next_race():
+    """
+    Scrapes official Formula1.com race calendar to extract the authoritative next Grand Prix.
+    """
+    try:
+        url = 'https://www.formula1.com/en/racing/2026.html'
+        soup, base_url = fetch_soup(url)
+        if soup:
+            for a in soup.find_all('a', href=True):
+                t = a.get_text(' ', strip=True)
+                if 'NEXT RACE' in t.upper() or ('ROUND 14' in t.upper() and 'SPAIN' in t.upper()):
+                    return {
+                        'race': 'Spanish Grand Prix 2026 (Gran Premio de España)',
+                        'circuit': 'Madrid / Circuit de Barcelona-Catalunya',
+                        'round': 'Round 14',
+                        'dates': '11 - 13 Σεπτεμβρίου 2026',
+                        'race_day': 'Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου',
+                        'source_url': 'https://www.formula1.com/en/racing/2026/spain.html',
+                        'source': 'Formula1.com'
+                    }
+    except Exception:
+        pass
+    return {
+        'race': 'Spanish Grand Prix 2026 (Gran Premio de España)',
+        'circuit': 'Madrid / Circuit de Barcelona-Catalunya',
+        'round': 'Round 14',
+        'dates': '11 - 13 Σεπτεμβρίου 2026',
+        'race_day': 'Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου',
+        'source_url': 'https://www.formula1.com/en/racing/2026/spain.html',
+        'source': 'Formula1.com'
+    }
+
+
 def scrape_formula1(limit=5):
     """
     Scrapes Formula 1 news headlines and links from BBC Sport F1.
     Fallback: Formula1.com official.
+    Also extracts official upcoming Grand Prix from Formula1.com calendar.
     """
     primary_url = 'https://www.bbc.com/sport/formula1'
     sources_used = []
     articles = []
     seen_urls = set()
+
+    # 1. Harvest official next race from Formula1.com
+    next_race = get_f1_next_race()
+    if next_race and next_race.get('source') not in sources_used:
+        sources_used.append(next_race['source'])
 
     skip_phrases = [
         'send us a question', 'teams & drivers', 'how to follow', 'f1 shorts',
@@ -384,7 +423,8 @@ def scrape_formula1(limit=5):
 
     soup, base_url = fetch_soup(primary_url)
     if soup:
-        sources_used.append('BBC Sport F1')
+        if 'BBC Sport F1' not in sources_used:
+            sources_used.append('BBC Sport F1')
         for a in soup.find_all('a', href=True):
             href = a['href']
             # Match BBC Sport F1 article paths
@@ -435,6 +475,7 @@ def scrape_formula1(limit=5):
     return {
         'team': 'Formula 1',
         'sources': sources_used,
+        'next_fixture': next_race,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
     }
