@@ -6,25 +6,21 @@
 
 ## ⚡ ΜΕΣΗΜΒΡΙΝΟ BREAKING & DEAL WIRE
 
-### Βίντεο. Κύπρος: Παράταση έως το τέλος Νοεμβρίου στην μείωση του φόρου κατανάλωσης στα καύσιμα - gr.euronews.com
+### Παράταση έως το τέλος Νοεμβρίου στη μείωση του φόρου κατανάλωσης στα καύσιμα
+Η κυβέρνηση ενέκρινε την πρόταση του Υπουργείου Οικονομικών για την παράταση του μέτρου μείωσης των συντελεστών ειδικού φόρου κατανάλωσης στα καύσιμα κίνησης (κατά 8,33 σεντ ανά λίτρο) έως τις 30 Νοεμβρίου 2026, επιδιώκοντας να αναχαιτίσει τις πληθωριστικές πιέσεις στα νοικοκυριά και στις επιχειρήσεις.
+**Πηγή:** [Politis](https://www.politis.com.cy/politis-news/oikonomia/1031884/paratinetai-mekhri-tis-30-noemvrioy-i-miosi-toy-foroy-katanalosis-sta-kausima)
 
-Βίντεο. Κύπρος: Παράταση έως το τέλος Νοεμβρίου στην μείωση του φόρου κατανάλωσης στα καύσιμα&nbsp;&nbsp;gr.euronews.com
+### Συμμαχία Κύπρου, Ελλάδας, Μάλτας και Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα
+Κοινή πρωτοβουλία ανέλαβαν τα τέσσερα μεσογειακά κράτη-μέλη της ΕΕ με στόχο την προστασία της ευρωπαϊκής ναυτιλιακής ανταγωνιστικότητας απέναντι στους αυστηρούς περιβαλλοντικούς κανονισμούς, διασφαλίζοντας παράλληλα την ανθεκτικότητα των λιμενικών υποδομών και των εφοδιαστικών αλυσίδων.
+**Πηγή:** [Η Ναυτεμπορική](https://www.naftemporiki.gr/maritime/2073284/eyropaiki-enosi-enonei-ton-noto-enanti-toy-vorra-i-machi-gia-ti-naytilia/)
 
-Η εξέλιξη αυτή απασχολεί έντονα τους επιχειρηματικούς κύκλους της Λεμεσού και της Λευκωσίας ενόψει των απογευματινών επαφών.
+### Συναντήσεις ασφάλειας, ενέργειας και άμυνας Χριστοδουλίδη - Χέρτσογκ στη Λευκωσία
+Στο Προεδρικό Μέγαρο συναντήθηκαν ο Πρόεδρος της Κυπριακής Δημοκρατίας Νίκος Χριστοδουλίδης και ο Πρόεδρος του Ισραήλ Ισαάκ Χέρτσογκ, με την ατζέντα να επικεντρώνεται στην περιφερειακή σταθερότητα, την ενεργειακή ασφάλεια και τις διμερείς στρατηγικές σχέσεις.
+**Πηγή:** [Sofokleousin](https://www.sofokleousin.gr/epikairotita/diethni/kypros-asfaleia-energeia-kai-amyna-syzitoun-xristodoulidis-xertso)
 
-**Πηγή:** [Βίντεο. Κύπρος: Παράταση έως τ](https://news.google.com/rss/articles/CBMivwFBVV95cUxNRzJwMEk0YnQyaV9RdEgxWW5ROFp4aXFCU2FFX05waklaNDdDWU9KeDI1MkNuNEJ5QlNpZEt0SjBfVXRPbGh1YVdfT3lXb1V6dDBlSndDdDZJWUc1R1pTUXprTWVmWGtyV0E0LU5FR1IzbkkzYXpFblUzVnl0TlhlaHVaMXhtWm1adkZ6c0ZCU2FBcUlRbWRMM25uMmVRMTh3Z21fVk44Y1hleS1XSGliaFdKZGROVVFRcldhOWpVSQ?oc=5)
-
-### 1. Greece, Cyprus, Malta and Italy join forces to support European shipping competitiveness - η ναυτεμπορικη
-Greece, Cyprus, Malta and Italy join forces to support European shipping competitiveness&nbsp;&nbsp;η ναυτεμπορικη  
-**Πηγή:** [Ειδήσεις](https://news.google.com/rss/articles/CBMiywFBVV95cUxPWjNhaHFlMjVUOFY4TU0yUG5IZUx5VDB4MndpVnN6S1RPTmJEYmVTR2pEaHp6RlhwUHRIMVk1VE91VGs2UVlGZEhzVlhBd2dRbnNTMV85eThySUtfTzZHS1ZGYlFxcUtyQlQ3cXh4U3VObHNfZHMxRFM5TE5wenZFejh1U3hsUmtYbjdUb3ozd2NEd0FfNTZKbVl2c0JuN2JDY3Y4clpKNmJDTEtJT3hpU2JTSjJYVkJnZFJ0NG5tdjJyN0R5R3lsNVVMdw?oc=5)
-
-### 2. Κύπρος: Aσφάλεια, ενέργεια και άμυνα συζητούν Χριστοδουλίδης-Χέρτσογκ - Sofokleousin.gr
-Κύπρος: Aσφάλεια, ενέργεια και άμυνα συζητούν Χριστοδουλίδης-Χέρτσογκ&nbsp;&nbsp;Sofokleousin.gr  
-**Πηγή:** [Ειδήσεις](https://news.google.com/rss/articles/CBMitAFBVV95cUxPelVYUkxBQVJPQ3FRMTFKcXNpTF9YS3gxSGpxWlRYRV93MEltU3pleGlSWWc5Qkc0bDVmR05QdFIwM1NrYkpVOGEwUnQtZkdFc3hHMUYwWnFuWnVtMHV2QzF4OWtqeUFUNzJCU2Y4cG92clUteU5VS2p6aWg4aElTODNWeFFlTGxDdFR5MnhJLVJmSWhjRGEzRnhmd0Qzd1dKdHBmMHllVWR4VVM1amtHM3Nnb27SAboBQVVfeXFMTUNON3ZmN1lIZzI1a1VoLUZaM1FsSHFKX0tMM2xwS0hKbFcwR1NDVnF1Z1ZxRGx6V1Q2N0haajV4QUllX1hBOGJjNklOQ245dU1yXzh3eFRsQjFkaTlBaHVDcUZVOExBZUUtSWk2SVpkMGxpNDFKOG5oQmMxbU9DSzVNVzNFdFRtY1dRLWVxTGI0amlCRkgxT3dTRjhLMi02ekgyNW1JTUJ0Y1ZzOEtHaUxoN0w3b0pNeGNR?oc=5)
-
-### 3. Ν. Δένδιας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας, σοβαρότητας και ασφάλειας στην Ανατολική Μεσόγειο - Μακεδονικά Νέα
-Ν. Δένδιας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας, σοβαρότητας και ασφάλειας στην Ανατολική Μεσόγειο&nbsp;&nbsp;Μακεδονικά Νέα  
-**Πηγή:** [Ειδήσεις](https://news.google.com/rss/articles/CBMixAFBVV95cUxPbkhJbkxndWxvdG04aDJYQmJLaXQwYWZGcmQwMzFuZVYtNl9iNVo2ZThac3lGc2k3b3VMRUNuUGxRYzMwNmFSOXhrRlVKaXZvOWQyN2JUSmJLMkVPeDdZZkpNYU9ua3ZqZzlsc0FqS3BIa2p1Zm9UTGRsc0VjZ3RhY1JuUHdxUGNiNEhXalc0ZGRsTm5ubUhmbnFUVEZRclVyWE9XVl85dFBMYnhsaVFTNFQ3d2FKdVJUUG44a00wM2JwR09r?oc=5)
+### Ν. Δένδιας & Β. Πάλμας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας στην Ανατολική Μεσόγειο
+Συνάντηση στην Αθήνα πραγματοποίησαν οι υπουργοί Άμυνας Ελλάδας και Κύπρου, επιβεβαιώνοντας τη στενή αμυντική συνεργασία, την ενίσχυση της ευρωπαϊκής αμυντικής ετοιμότητας και τον κοινό ρόλο ως πυλώνα ασφάλειας στην περιοχή.
+**Πηγή:** [Newsbeast](https://www.newsbeast.gr/politiki/arthro/13348708/dendias-palmas-ellada-kypros-amyntiki-synergasia)
 
 ---
 

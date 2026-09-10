@@ -720,7 +720,7 @@ def parse_markdown(md_content, filename=""):
                                     'title': 'YouTube Highlights',
                                     'url': u_match.group(0).strip(')')
                                 }
-                    elif 'Πηγή:' in item_text:
+                    elif 'Πηγή:' in item_text or 'Πηγές:' in item_text:
                         src_match = re.search(r'\[(.*?)\]\((.*?)\)', item_text)
                         if src_match:
                             data['sports'][team]['source'] = {
@@ -2256,7 +2256,8 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     house_nav_html = ""
     house_card_html = ""
     if house_stats and house_stats.get('local_url'):
-        house_nav_html = f'''<a href="{house_stats['local_url']}" target="_blank" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium flex items-center gap-1">🏠 <span>Ακίνητα</span></a>'''
+        house_href = f"../{house_stats['local_url']}" if is_subfolder else house_stats['local_url']
+        house_nav_html = f'''<a href="{house_href}" target="_blank" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium flex items-center gap-1">🏠 <span>Ακίνητα</span></a>'''
         house_card_html = f'''
         <div class="card p-5 border-l-4 border-[var(--accent)] mb-6">
           <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -2269,7 +2270,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
             Εντοπίστηκαν <strong>{house_stats['unique_properties']} μοναδικά ακίνητα</strong> (Bazaraki & BuySellCyprus) στον άξονα Ύψωνα → Γερμασόγειας. 
             <strong>{house_stats['top_picks_count']} Top Picks</strong> πέρασαν όλα τα φίλτρα: {house_stats['top_pick_highlights']}.
           </p>
-          <a href="{house_stats['local_url']}" target="_blank" class="inline-flex items-center gap-1.5 t-meta font-bold text-[var(--accent)] hover:underline">
+          <a href="{house_href}" target="_blank" class="inline-flex items-center gap-1.5 t-meta font-bold text-[var(--accent)] hover:underline">
             <span>Άνοιγμα πλήρους εβδομαδιαίας έκθεσης ακινήτων</span> <span>➔</span>
           </a>
         </div>
@@ -2494,7 +2495,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
             'border_cls': 'border-red-900/40 dark:border-red-800/50',
             'badge_bg': 'bg-red-950/70 text-red-200 border border-red-500/30',
             'default_hl_query': 'Manchester+United+highlights+2026',
-            'default_source': {'name': 'ManUtd.com', 'url': 'https://www.manutd.com/'}
+            'default_source': {'name': 'Premier League', 'url': 'https://www.premierleague.com/'}
         },
         'realmadrid': {
             'name': 'REAL MADRID',

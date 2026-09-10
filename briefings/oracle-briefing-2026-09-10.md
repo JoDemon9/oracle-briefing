@@ -56,7 +56,7 @@
 *   **Μεταβολή έναντι προηγούμενης έκδοσης:** €0,00 (αμετάβλητο βάσει των μηνιαίων στοιχείων ΚΤΚ).  
     *Ο υπολογισμός είναι ενδεικτικός, με σταθερή τοκοχρεολυτική δόση, χωρίς έξοδα τραπέζης ή ασφάλιστρα.*
 
-**Πηγές:** [euribor-rates.eu](https://www.euribor-rates.eu/en/) · [Κεντρική Τράπεζα Κύπρου](https://www.centralbank.cy/)
+**Πηγές:** [euribor-rates.eu](https://www.euribor-rates.eu/en/current-euribor-rates/) · [Κεντρική Τράπεζα Κύπρου](https://www.centralbank.cy/el/monetary-policy/interest-rates)
 
 ---
 
@@ -253,8 +253,8 @@
 
 *   **Έως 30 Σεπτεμβρίου 2026:** Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ ([StockWatch](https://www.stockwatch.com.cy/el/news/paratasi-mekhri-to-telos-septemvrioy-ghia-to-skhedio-enikio-enanti-dosis)).
 *   **Έως 30 Σεπτεμβρίου 2026:** Υποβολή αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ (€10.000 – €120.000) μέσω της πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας ([MECI Funding Apps](https://fundingapps.meci.gov.cy/)).
-*   **Έως 15 Οκτωβρίου 2026:** Προετοιμασία δικαιολογητικών για τη νέα ηλεκτρονική πλατφόρμα των στεγαστικών σχεδίων παραχώρησης οικοπέδων ([StockWatch](https://www.stockwatch.com.cy)).
-*   **Έως 31 Οκτωβρίου 2026:** Εμπρόθεσμη πληρωμή τελών σκυβάλων και επαγγελματικής άδειας Δήμου Λεμεσού ([Δήμος Λεμεσού](https://www.limassol.org.cy/)).
+*   **Έως 15 Οκτωβρίου 2026:** Προετοιμασία δικαιολογητικών για τη νέα ηλεκτρονική πλατφόρμα των στεγαστικών σχεδίων παραχώρησης οικοπέδων ([StockWatch](https://www.stockwatch.com.cy/el/news/neo-skhedio-parakhwrisis-oikopedon-osa-prepei-na-ghnorizete)).
+*   **Έως 31 Οκτωβρίου 2026:** Εμπρόθεσμη πληρωμή τελών σκυβάλων και επαγγελματικής άδειας Δήμου Λεμεσού ([Δήμος Λεμεσού](https://www.limassol.org.cy/el/pliromes-logariasmon)).
 
 ---
 

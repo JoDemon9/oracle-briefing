@@ -49,27 +49,27 @@
 ### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Παράταση έως το τέλος Νοεμβρίου στη μείωση του φόρου κατανάλωσης στα καύσιμα
 Η κυβέρνηση αποφάσισε την παράταση του μέτρου μείωσης των συντελεστών ειδικού φόρου κατανάλωσης στα καύσιμα κίνησης και θέρμανσης έως τα τέλη Νοεμβρίου 2026, επιδιώκοντας να αναχαιτίσει τις πληθωριστικές πιέσεις στα νοικοκυριά και στις επιχειρήσεις ενόψει της χειμερινής περιόδου.
 **Γιατί με αφορά:** Άμεση συγκράτηση του λειτουργικού κόστους μετακίνησης και των εφοδιαστικών αλυσίδων στη Λεμεσό και παγκύπρια.  
-**Πηγή:** [Euronews Business](https://gr.euronews.com/business)
+**Πηγή:** [RIK News](https://news.rik.cy/article/2026/9/10/paratase-tou-meiomenou-phorou-katanaloses-sta-kausima-enekrine-to-upourgiko-sumboulio/)
 
 ### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Συμμαχία Κύπρου, Ελλάδας, Μάλτας και Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα και κυβερνοασφάλεια
 Η κοινή πρωτοβουλία ανέλαβαν τα τέσσερα μεσογειακά κράτη-μέλη της ΕΕ με στόχο την προστασία της ναυτιλιακής ανταγωνιστικότητας απέναντι στους αυστηρούς περιβαλλοντικούς κανονισμούς, ενσωματώνοντας παράλληλα κοινό πρωτόκολλο κυβερνοασφάλειας για τα λιμενικά συστήματα και τις πλατφόρμες διαχείρισης στόλου.
 **Γιατί με αφορά:** Θωράκιση της θέσης της Λεμεσού ως κορυφαίου ναυτιλιακού κέντρου πλοιοδιαχείρισης και κυβερνοανθεκτικότητας στην Ευρώπη.  
-**Πηγή:** [Η Ναυτεμπορική / Maritime](https://www.naftemporiki.gr/maritime/)
+**Πηγή:** [Η Ναυτεμπορική](https://www.naftemporiki.gr/maritime/2073284/eyropaiki-enosi-enonei-ton-noto-enanti-toy-vorra-i-machi-gia-ti-naytilia/)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Εδραίωση του Brent πάνω από τα $102 εν αναμονή των αποφάσεων νομισματικής πολιτικής
 Οι διεθνείς τιμές του αργού πετρελαίου διατηρήθηκαν σταθερά άνω του ορίου των 102 δολαρίων στη συνεδρίαση της Wall Street, καθώς οι επενδυτές σταθμίζουν τα γεωπολιτικά ρίσκα στη Μέση Ανατολή και την επικείμενη συνεδρίαση της Ευρωπαϊκής Κεντρικής Τράπεζας.
 **Γιατί με αφορά:** Άμεση αντανάκλαση στο ενεργειακό κόστος παραγωγής της ΑΗΚ και στο ισοζύγιο τρεχουσών συναλλαγών.  
-**Πηγή:** [CNBC Energy](https://www.cnbc.com/energy/)
+**Πηγή:** [CNBC Markets](https://www.cnbc.com/2026/09/10/iran-us-oil-hormuz-supply-trump-military-brent-wti.html)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Νέο ρυθμιστικό πλαίσιο ΕΕ και ΗΠΑ για την κυβερνοασφάλεια υποδομών Cloud και AI
 Συντονισμένη δέσμη οδηγιών ανακοίνωσαν οι αρχές κυβερνοασφάλειας σε Βρυξέλλες και Ουάσιγκτον για την προστασία των υποδομών υπερυπολογιστών και μοντέλων τεχνητής νοημοσύνης από εξελιγμένες κρατικές κυβερνοεπιθέσεις (APTs) και διαρροές δεδομένων.
 **Γιατί με αφορά:** Επιβάλλει αυστηρότερα πρότυπα ασφάλειας δεδομένων σε όλες τις επιχειρήσεις τεχνολογίας, fintech και χρηματοοικονομικών που αξιοποιούν AI συστήματα.  
-**Πηγή:** [TechCrunch Security](https://techcrunch.com/category/security/)
+**Πηγή:** [The Guardian](https://www.theguardian.com/technology/2026/sep/04/openai-agent-goes-rogue)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Στρατηγική ανθεκτικότητα και αναδρομολόγηση στις εμπορικές οδούς της Ερυθράς Θάλασσας
 Οι διεθνείς ναυτιλιακοί κολοσσοί εδραιώνουν εναλλακτικές ναυτιλιακές οδούς μέσω του Ακρωτηρίου της Καλής Ελπίδας, ενώ ευρωπαϊκές ναυτικές δυνάμεις ενισχύουν την αποστολή Aspides για την προστασία των εμπορικών πλοίων που προσεγγίζουν τη Μεσόγειο.
 **Γιατί με αφορά:** Επιμήκυνση χρόνων παράδοσης εισαγόμενων εμπορευμάτων και διατήρηση αυξημένων ναύλων στα λιμάνια της Ανατολικής Μεσογείου.  
-**Πηγή:** [BBC World News](https://www.bbc.com/news/world)
+**Πηγή:** [The Guardian](https://www.theguardian.com/world/2026/jul/28/asia-energy-oil-crisis-red-sea-blockade-houthis)
 
 ---
 
@@ -80,28 +80,28 @@
 *   **Επόμενος αγώνας:** 20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026)
 *   **Ρεπορτάζ & Νέα:** Ολοκληρώθηκε η απογευματινή προπόνηση στο «Ηλίας Πούλλος» με έμφαση στην τακτική οργάνωση και στην ενσωμάτωση των νεοαποκτηθέντων.
 *   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026)
-*   **Πηγή:** [ΚΟΠ / CFA](https://www.cfa.com.cy/Gr/news/53637)
+*   **Πηγή:** [Kerkida.net](https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-akintola-den-xehno-tin-agapi-toy-kosmoy-eimai-100-etoimos)
 
 ### Manchester United
 *   **Τελευταίο αποτέλεσμα:** Ισοπαλία 1-1 στην Premier League
 *   **Επόμενος αγώνας:** UEFA Champions League: Manchester United versus Sabah — 20:00
 *   **Ρεπορτάζ & Νέα:** Ευρωπαϊκή πρεμιέρα στο Old Trafford για τους «κόκκινους διαβόλους», με τον Michael Carrick να δηλώνει έτοιμος για τη νέα σεζόν παρά τη χρονική πίεση του ντέρμπι.
 *   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights+2026)
-*   **Πηγή:** [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)
+*   **Πηγή:** [The Guardian](https://www.theguardian.com/football/2026/sep/09/michael-carrick-manchester-united-sabah-champions-league-old-trafford)
 
 ### Real Madrid
 *   **Τελευταίο αποτέλεσμα:** Νίκη 3-0 επί της Real Betis
 *   **Επόμενος αγώνας:** Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Σάββατο 12.09.2026)
 *   **Ρεπορτάζ & Νέα:** Προετοιμασία στο Valdebebas με πλήρη ένταση ενόψει της αναμέτρησης πρωταθλήματος, με τον Lamine Yamal και τον Kylian Mbappé να μονοπωλούν το ισπανικό ρεπορτάζ.
 *   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026)
-*   **Πηγή:** [Marca Real Madrid Hub](https://www.marca.com/en/football/real-madrid.html)
+*   **Πηγή:** [Marca](https://www.marca.com/en/football/champions-league/2026/09/08/real-madrid-is-ruthless-in-the-champions-league.html)
 
 ### Formula 1
 *   **Τελευταίο αποτέλεσμα:** Italian Grand Prix (Monza)
 *   **Επόμενος αγώνας:** Spanish Grand Prix 2026 (Gran Premio de España) — 11 έως 13 Σεπτεμβρίου 2026 (Κυριακή 16:00 ώρα Κύπρου)
 *   **Ρεπορτάζ & Νέα:** Τελευταίες προετοιμασίες των ομάδων για το αγωνιστικό τριήμερο στην Ισπανία, με σημαντικές αεροδυναμικές αναβαθμίσεις στα μονοθέσια της κορυφής.
 *   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights+2026)
-*   **Πηγή:** [Formula 1 Official Hub](https://www.formula1.com/en/latest.html)
+*   **Πηγή:** [BBC Sport F1](https://www.bbc.com/sport/formula1/articles/cjw5n195nx8o)
 
 ---
 
