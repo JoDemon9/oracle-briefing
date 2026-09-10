@@ -20,6 +20,10 @@ on:
         required: false
         default: 'morning'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   wire_monitor:
     # Only run wire monitor on the 30-min cron ticks

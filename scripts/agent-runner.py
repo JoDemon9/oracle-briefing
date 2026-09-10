@@ -202,23 +202,26 @@ async def run_antigravity_agent(edition: str, target_md: str, dry_run: bool = Fa
 
     try:
         print("▶ Spawning Antigravity Agent process (DeepMind reasoning runtime)...")
-        async with Agent(config) as agent:
-            print("▶ Sending intelligence dispatch prompt to Antigravity Agent...")
-            response = await agent.chat(agent_prompt)
-            output_tokens = []
-            async for token in response:
-                output_tokens.append(token)
+        async def _chat_with_agent():
+            async with Agent(config) as agent:
+                print("▶ Sending intelligence dispatch prompt to Antigravity Agent...")
+                response = await agent.chat(agent_prompt)
+                output_tokens = []
+                async for token in response:
+                    output_tokens.append(token)
+                return "".join(output_tokens).strip()
 
-            full_output = "".join(output_tokens).strip()
-            print(f"✔ Antigravity Agent completed analysis ({len(full_output)} chars generated).")
+        full_output = await asyncio.wait_for(_chat_with_agent(), timeout=45.0)
+        print(f"✔ Antigravity Agent completed analysis ({len(full_output)} chars generated).")
 
-            if full_output:
-                # If the agent returned markdown or an editorial synthesis, we save / merge it
-                if not dry_run:
-                    print(f"💾 Saving agent synthesis to: {target_md}")
-                    # Ensure base broadsheet is synthesized and merged
-                    run_deterministic_synthesis(edition, target_md)
-                return True
+        if full_output:
+            if not dry_run:
+                print(f"💾 Saving agent synthesis to: {target_md}")
+                run_deterministic_synthesis(edition, target_md)
+            return True
+    except asyncio.TimeoutError:
+        print("⚠ [AgentRunner] Antigravity Agent timed out after 45s. Seamlessly continuing with Gemini synthesis engine...")
+        return False
     except Exception as e:
         print(f"⚠ [AgentRunner] Antigravity Agent runtime error: {e}")
         print("  Switching to deterministic engine fail-safe...")
