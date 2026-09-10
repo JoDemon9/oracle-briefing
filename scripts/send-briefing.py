@@ -50,8 +50,13 @@ else:
     md_path = next((c for c in candidates if os.path.exists(c)), candidates[0])
 
 if not TOKEN or not CHAT:
-    print("Warning: Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID in environment.")
-    print("Test run mode: parsing markdown and validating formatted message...")
+    if os.environ.get("GITHUB_ACTIONS"):
+        print("❌ CRITICAL: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is NOT set in GitHub Repository Secrets!")
+        print("👉 Go to GitHub Repo -> Settings -> Secrets and variables -> Actions -> Secrets and add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.")
+        sys.exit(1)
+    else:
+        print("Warning: Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID in environment.")
+        print("Test run mode: parsing markdown and validating formatted message...")
 
 with open(md_path, "r", encoding="utf-8") as f:
     md = f.read()
@@ -187,6 +192,7 @@ if TOKEN and CHAT:
                 print(f"✔ Στάλθηκε επιτυχώς το briefing {date} στο Telegram!")
             else:
                 print("Error from Telegram API:", res)
+                sys.exit(1)
     except urllib.error.HTTPError as e:
         err_body = e.read().decode("utf-8", errors="ignore")
         print(f"❌ Failed to send message: HTTP {e.code}")
@@ -194,7 +200,9 @@ if TOKEN and CHAT:
             print("👉 Απαιτείται ενέργεια: Ανοίξτε το bot στο Telegram (https://t.me/JohnBriefing_bot) και πατήστε 'START' μία φορά ώστε να επιτραπεί η αποστολή μηνυμάτων!")
         else:
             print("Telegram API Response:", err_body)
+        sys.exit(1)
     except Exception as e:
         print("Failed to send message:", e)
+        sys.exit(1)
 else:
     print("Dry-run successful! When TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are set, this message will be dispatched.")

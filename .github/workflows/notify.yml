@@ -71,11 +71,9 @@ jobs:
           git config user.email "oracle-agent@antigravity.internal"
           git add docs/ briefings/ scripts/*.json || true
           git diff --staged --quiet || (git commit -m "🤖 [Oracle Sovereign Agent] Auto-edition update [skip-ci-dispatch]" && git push)
-      - uses: actions/setup-node@v4
-        with: { node-version: '20' }
       - name: Dispatch Briefing to Telegram
         if: "github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip-ci-dispatch]')"
-        run: node scripts/send-briefing.mjs
+        run: python scripts/send-briefing.py
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

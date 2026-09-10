@@ -38,6 +38,13 @@ if (!mdPath) {
 }
 
 if (!mdPath) mdPath = `briefings/oracle-briefing-${date}.md`;
+const esc = (s) => {
+  if (!s) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+};
 const md = await fs.readFile(mdPath, 'utf8');
 
 // --- εξαγωγή των βασικών από το markdown ---
