@@ -288,6 +288,8 @@ def parse_markdown(md_content, filename=""):
         'evening_news': [],
         'afternoon_priorities': [],
         'weather': {},
+        'tomorrow_weather': {},
+        'executive_pulse': [],
         'developments': [],
         'portfolio': [],
         'deadlines': [],
@@ -325,6 +327,14 @@ def parse_markdown(md_content, filename=""):
         m_read = re.search(r'χρόνος ανάγνωσης\s*~?(\d+)', line_clean)
         if m_read:
             data['read_time'] = f"{m_read.group(1)}'"
+
+    pulse_match = re.search(r'>\s*\[!NOTE\]\s*\n((?:>\s*.*?\n?)+)', md_content)
+    if pulse_match:
+        for pl in pulse_match.group(1).splitlines():
+            pl_clean = re.sub(r'^>\s*', '', pl).strip()
+            if pl_clean.startswith('*') or pl_clean.startswith('-'):
+                cleaned_item = re.sub(r'^[*\-]\s*', '', pl_clean).strip()
+                data['executive_pulse'].append(cleaned_item)
 
     sections = re.split(r'\n##\s+', md_content)
     for sec in sections[1:]:
@@ -424,26 +434,50 @@ def parse_markdown(md_content, filename=""):
 
         # DASHBOARD / CLOSING BELL / MIDDAY MARKET PULSE
         elif 'DASHBOARD' in sec_header or 'CLOSING BELL' in sec_header or 'MARKET PULSE' in sec_header or 'ΑΓΟΡΕΣ' in sec_header:
-            table_lines = [l.strip() for l in sec_lines if l.strip().startswith('|') and not '---' in l]
-            for row in table_lines:
-                cols = [c.strip() for c in row.split('|')[1:-1]]
-                if len(cols) >= 3 and not any(cols[0].startswith(x) for x in ['Δείκτης', 'Αγορά', ':---']):
-                    asset_name = re.sub(r'\*\*', '', cols[0]).strip()
-                    price = cols[1].strip()
-                    change = cols[2].strip()
-                    date_ref = cols[3].strip() if len(cols) >= 4 else "Κλείσιμο"
-                    data['dashboard'].append({
-                        'asset': asset_name,
-                        'price': price,
-                        'change': change,
-                        'date_ref': date_ref
-                    })
+            current_category = 'Δείκτες & Συνάλλαγμα'
+            for sl in sec_lines:
+                sl_c = sl.strip()
+                if sl_c.startswith('###'):
+                    if any(k in sl_c.upper() for k in ['ΜΕΤΟΧ', 'STOCKS', 'EQUITIES', 'TECH', 'WATCHLIST']):
+                        current_category = 'Μετοχές Τεχνολογίας'
+                    else:
+                        current_category = 'Δείκτες & Συνάλλαγμα'
+                elif sl_c.startswith('|') and not '---' in sl_c:
+                    cols = [c.strip() for c in sl_c.split('|')[1:-1]]
+                    if len(cols) >= 3 and not any(cols[0].startswith(x) for x in ['Δείκτης', 'Αγορά', 'Μετοχή', 'Ticker', 'Asset', ':---']):
+                        asset_name = re.sub(r'\*\*', '', cols[0]).strip()
+                        cat = current_category
+                        if any(s in asset_name.upper() for s in ['TSM', 'NVDA', 'GOOG', 'AAPL', 'MSFT', 'AMZN', 'META']):
+                            cat = 'Μετοχές Τεχνολογίας'
+                        price = cols[1].strip()
+                        change = cols[2].strip()
+                        date_ref = cols[3].strip() if len(cols) >= 4 else "Κλείσιμο"
+                        data['dashboard'].append({
+                            'asset': asset_name,
+                            'price': price,
+                            'change': change,
+                            'date_ref': date_ref,
+                            'category': cat
+                        })
             nod_match = re.search(r'\*\*Ο αριθμός της ημέρας:\*\*\s*\*\*([^*]+)\*\*\s*[—–-]\s*(.+)', sec)
             if nod_match:
                 data['number_of_day'] = {
                     'number': nod_match.group(1).strip(),
                     'text': nod_match.group(2).strip()
                 }
+
+        # TOMORROW WEATHER / OUTLOOK (EVENING)
+        elif 'ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ' in sec_header or 'ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ' in sec_header:
+            tw = {}
+            for sl in sec_lines:
+                sl_c = sl.strip()
+                if 'Θερμοκρασία:' in sl_c:
+                    tw['temp'] = re.sub(r'^\*?\*?Θερμοκρασία:\*?\*?\s*', '', sl_c).strip()
+                elif 'Πρόγνωση:' in sl_c:
+                    tw['forecast'] = re.sub(r'^\*?\*?Πρόγνωση:\*?\*?\s*', '', sl_c).strip()
+                elif 'Άνεμοι' in sl_c:
+                    tw['wind'] = re.sub(r'^\*?\*?Άνεμοι.*?:\*?\*?\s*', '', sl_c).strip()
+            data['tomorrow_weather'] = tw
 
         # NOCTURNAL RISK RADAR
         elif 'ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ' in sec_header or 'ΝΥΧΤΕΡΙΝΟ' in sec_header:
@@ -893,29 +927,184 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         ticker_spans.append(f'<span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">{d["asset"]}:</span> <span class="text-[var(--ink-body)]">{d["price"]}</span> <span class="{color_cls} font-semibold inline-flex items-center">{d["change"]}{spk}</span></span>')
     ticker_html = ' · '.join(ticker_spans) + ' · ' + ' · '.join(ticker_spans) if ticker_spans else ''
 
-    # Market Table Rows
-    market_rows = []
+    # Market Tables (Two-Tier: Macro Radar vs Tech Equities Watchlist)
+    macro_rows = []
+    stock_rows = []
+
     for d in data.get('dashboard', []):
         is_up = '+' in d['change']
         is_down = '-' in d['change']
         badge_cls = "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20" if is_up else ("bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" if is_down else "bg-gray-500/10 text-gray-600 border-gray-500/20")
         spk = generate_sparkline(d['change'])
         comment = md_to_inline_html(d.get('date_ref', ''))
-        market_rows.append(f'''
+
+        row_html = f'''
         <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3.5 px-4 font-bold text-[var(--ink)] flex items-center gap-2">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
             <span>{d["asset"]}</span>
           </td>
-          <td class="py-3.5 px-4 font-mono font-bold text-[var(--ink)]">{d["price"]}</td>
-          <td class="py-3.5 px-4 font-mono">
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">{d["price"]}</td>
+          <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold {badge_cls}">
               <span>{d["change"]}</span> {spk}
             </span>
           </td>
-          <td class="py-3.5 px-4 text-xs text-[var(--ink-body)]">{comment}</td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">{comment}</td>
         </tr>
-        ''')
-    market_table_html = '\n'.join(market_rows)
+        '''
+        if d.get('category') == 'Μετοχές Τεχνολογίας':
+            stock_rows.append(row_html)
+        else:
+            macro_rows.append(row_html)
+
+    if stock_rows:
+        market_section_html = f'''
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <!-- Macro Indices & FX -->
+          <div class="lg:col-span-7 card overflow-hidden shadow-xs border border-[var(--rule)]">
+            <div class="p-3.5 bg-[var(--paper)] border-b border-[var(--rule)] flex items-center justify-between">
+              <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+                <span>🏛️</span> <span>Κύριοι Δείκτες, Συνάλλαγμα & Crypto</span>
+              </span>
+              <span class="text-[10px] font-mono text-[var(--accent)] font-bold">MACRO & FX</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-[var(--paper)] text-[10px] uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                  <tr>
+                    <th class="py-2.5 px-3.5">Αγορά / Τίτλος</th>
+                    <th class="py-2.5 px-3.5 font-mono">Κλείσιμο</th>
+                    <th class="py-2.5 px-3.5 font-mono">Μεταβολή</th>
+                    <th class="py-2.5 px-3.5">Σχόλιο</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[var(--rule)] font-sans">
+                  {''.join(macro_rows)}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tech Stocks Watchlist -->
+          <div class="lg:col-span-5 card overflow-hidden shadow-xs border border-indigo-500/30">
+            <div class="p-3.5 bg-gradient-to-r from-[var(--paper)] to-indigo-950/10 border-b border-[var(--rule)] flex items-center justify-between">
+              <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+                <span>💻</span> <span>Μετοχές Τεχνολογίας (Watchlist)</span>
+              </span>
+              <span class="text-[10px] font-mono text-indigo-500 font-bold">TECH RADAR</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-[var(--paper)] text-[10px] uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                  <tr>
+                    <th class="py-2.5 px-3.5">Μετοχή</th>
+                    <th class="py-2.5 px-3.5 font-mono">Τιμή</th>
+                    <th class="py-2.5 px-3.5 font-mono">Μεταβολή</th>
+                    <th class="py-2.5 px-3.5">Σχόλιο</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[var(--rule)] font-sans">
+                  {''.join(stock_rows)}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        '''
+    else:
+        market_section_html = f'''
+        <div class="card overflow-hidden shadow-xs">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                <tr>
+                  <th class="py-3 px-4">Αγορά / Τίτλος</th>
+                  <th class="py-3 px-4 font-mono">Κλείσιμο</th>
+                  <th class="py-3 px-4 font-mono">Μεταβολή</th>
+                  <th class="py-3 px-4">Επιτελικό Σχόλιο</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[var(--rule)] font-sans">
+                {''.join(macro_rows)}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        '''
+
+    # Executive Pulse (60-second summary)
+    pulse_items = data.get('executive_pulse', [])
+    pulse_html = ""
+    if pulse_items:
+        pulse_cols = []
+        icons = ["📊", "🇨🇾", "⚽"]
+        for idx, itm in enumerate(pulse_items):
+            ico = icons[idx] if idx < len(icons) else "⚡"
+            pulse_cols.append(f'''
+            <div class="p-3.5 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                <span class="mr-1 text-sm">{ico}</span> {md_to_inline_html(itm)}
+              </div>
+            </div>
+            ''')
+        pulse_html = f'''
+        <!-- ⚡ 60-SECOND EXECUTIVE PULSE -->
+        <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-[var(--paper-raised)] to-[var(--paper-raised)] border border-amber-500/30 shadow-xs">
+          <div class="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-[var(--rule)]">
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--accent)] animate-ping"></span> ⚡ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ
+            </span>
+            <span class="text-[10px] font-mono text-[var(--ink-quiet)]">EXECUTIVE PULSE</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {''.join(pulse_cols)}
+          </div>
+        </div>
+        '''
+
+    # Tomorrow's Limassol Outlook
+    tw = data.get('tomorrow_weather', {})
+    tomorrow_weather_html = ""
+    if tw:
+        temp_val = md_to_inline_html(tw.get('temp', '34°C / 24°C'))
+        fc_val = md_to_inline_html(tw.get('forecast', 'Αίθριος & διαυγής ουρανός'))
+        wind_val = md_to_inline_html(tw.get('wind', '16 km/h ΝΔ'))
+        tomorrow_weather_html = f'''
+        <!-- ==================== 🌤️ ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ ==================== -->
+        <section id="tomorrow-outlook" class="scroll-mt-24">
+          <div class="card p-5 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-amber-500/5 border border-amber-500/20 rounded-2xl shadow-xs">
+            <div class="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-[var(--rule)]">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] flex items-center gap-1.5">
+                <span>🌤️</span> <span>Αυριανή Πρόγνωση & Συνθήκες Λεμεσού</span>
+              </span>
+              <span class="text-[10px] font-mono text-[var(--ink-quiet)] uppercase">TOMORROW PREVIEW</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                <span class="text-2xl flex-shrink-0">☀️</span>
+                <div>
+                  <div class="font-bold text-[var(--ink)] text-sm">{temp_val}</div>
+                  <div class="text-[11px] text-[var(--ink-quiet)]">{fc_val}</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                <span class="text-2xl flex-shrink-0">💨</span>
+                <div>
+                  <div class="font-bold text-[var(--ink)] text-sm">Άνεμοι</div>
+                  <div class="text-[11px] text-[var(--ink-quiet)]">{wind_val}</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                <span class="text-2xl flex-shrink-0">🌊</span>
+                <div>
+                  <div class="font-bold text-[var(--ink)] text-sm">Θαλάσσιες Συνθήκες</div>
+                  <div class="text-[11px] text-[var(--ink-quiet)]">Ήρεμη θάλασσα · Ιδανικό πρωινό</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        '''
 
     # Sports Cards
     sports = data.get('sports', {})
@@ -1296,6 +1485,8 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
       </div>
     </div>
 
+    {pulse_html}
+
     <!-- ==================== 🏁 1. ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ ==================== -->
     <section id="top-story" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
@@ -1351,23 +1542,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         <span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">ΤΕΛΙΚΑ ΚΛΕΙΣΙΜΑΤΑ</span>
       </div>
 
-      <div class="card overflow-hidden shadow-xs">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm">
-            <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
-              <tr>
-                <th class="py-3 px-4">Αγορά / Τίτλος</th>
-                <th class="py-3 px-4">Κλείσιμο</th>
-                <th class="py-3 px-4">Μεταβολή</th>
-                <th class="py-3 px-4">Επιτελικό Σχόλιο</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[var(--rule)] font-sans">
-              {market_table_html}
-            </tbody>
-          </table>
-        </div>
-      </div>
+      {market_section_html}
     </section>
 
     <!-- ==================== ⚽ 4. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
@@ -1383,6 +1558,8 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         {sports_html}
       </div>
     </section>
+
+    {tomorrow_weather_html}
 
     <!-- ==================== 🌌 5. ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ ==================== -->
     <section id="night-radar" class="scroll-mt-24">

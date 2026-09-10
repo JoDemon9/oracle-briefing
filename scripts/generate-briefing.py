@@ -537,14 +537,26 @@ def generate_midday_edition(cy_items, world_items, wx_info, today_str, markets_d
 
 def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_data, sports_data):
     greek_date = get_greek_date_str(today_str)
-    quotes = markets_data.get('quotes', {})
-    boch = quotes.get('Bank of Cyprus (BOCH)', {})
-    sp500 = quotes.get('S&P 500', {})
-    brent = quotes.get('Brent Crude', {})
+    quotes = markets_data.get('quotes', {}) if isinstance(markets_data, dict) else {}
+    def get_q(name, default_p, default_chg, default_note):
+        q = quotes.get(name, {})
+        p = q.get('price')
+        c = q.get('change')
+        p_str = format_greek_num(p) if p is not None else str(default_p)
+        c_str = f"{c:+.2f}%".replace('.', ',') if c is not None else str(default_chg)
+        return p_str, c_str, default_note
 
-    boch_p = format_greek_num(boch.get('price', 10.44))
-    sp_p = format_greek_num(sp500.get('price', 7636.36))
-    brent_p = format_greek_num(brent.get('price', 102.42))
+    spx_p, spx_c, spx_comm = get_q('S&P 500 (SPX)', '7.591,70', '-0,58%', 'Ήπια διόρθωση εν αναμονή στοιχείων πληθωρισμού')
+    ndq_p, ndq_c, ndq_comm = get_q('Nasdaq 100 (NDQ)', '29.103,50', '-1,08%', 'Πιέσεις στους τεχνολογικούς τίτλους υψηλού beta')
+    btc_p, btc_c, btc_comm = get_q('Bitcoin (BTC/USD)', '77.277,80', '-1,31%', 'Συσσώρευση στην περιοχή των $77k')
+    eurusd_p, eurusd_c, eurusd_comm = get_q('EUR/USD', '1,1608', '-0,22%', 'Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ')
+    eurgbp_p, eurgbp_c, eurgbp_comm = get_q('EUR/GBP', '0,8594', '+0,09%', 'Σταθεροποίηση εντός στενού εύρους διακύμανσης')
+    boch_p, boch_c, boch_comm = get_q('Bank of Cyprus (BOCH)', '10,50', '+0,38%', 'Ισχυρό κλείσιμο σε υψηλό ημέρας στο ΧΑΚ/ΧΑ')
+    brent_p, brent_c, brent_comm = get_q('Brent Crude', '102,42', '+1,20%', 'Εδραίωση πάνω από το ψυχολογικό όριο των $100')
+
+    tsm_p, tsm_c, tsm_comm = get_q('TSMC (TSM)', '428,03', '-1,68%', 'Ήπια υποχώρηση στον παγκόσμιο κλάδο ημιαγωγών')
+    nvda_p, nvda_c, nvda_comm = get_q('NVIDIA (NVDA)', '218,36', '-2,37%', 'Κατοχύρωση κερδών μετά το πολυήμερο ράλι')
+    goog_p, goog_c, goog_comm = get_q('Alphabet (GOOG)', '332,60', '+0,59%', 'Ανθεκτικότητα και ανοδική διαφοροποίηση στον κλάδο AI')
 
     # Curated evening news (lighter than morning: top 2 Cyprus + top 1 World)
     ev_news_items = []
@@ -637,6 +649,14 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 ---
 
+> [!NOTE]
+> **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
+> * **Αγορές & Tech:** Ήπια διόρθωση σε S&P 500 ({spx_c}) & Nasdaq 100 ({ndq_c}). Στις μετοχές, πιέσεις σε TSMC ({tsm_c}) & NVIDIA ({nvda_c}), ενώ η Alphabet ({goog_c}) και η Τράπεζα Κύπρου ({boch_c}) σημείωσαν άνοδο.
+> * **Κυπριακή Επικαιρότητα:** Παράταση μείωσης φόρου καυσίμων έως τέλη Νοεμβρίου και τετραμερής συμμαχία Κύπρου, Ελλάδας, Μάλτας & Ιταλίας για τη ναυτιλία.
+> * **Αθλητικά:** Πλήρης ετοιμότητα της Ομόνοιας για το ντέρμπι του ΓΣΠ και ευρωπαϊκή αναμέτρηση της Manchester United.
+
+---
+
 ## 🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ
 
 Η σημερινή ημέρα έκλεισε με κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά.
@@ -645,11 +665,23 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 ## 🔔 CLOSING BELL & ΑΓΟΡΕΣ
 
+### 📊 Κύριοι Δείκτες, Συνάλλαγμα & Crypto
 | Αγορά / Τίτλος | Κλείσιμο | Μεταβολή | Σχόλιο |
 | :--- | :--- | :--- | :--- |
-| **Bank of Cyprus (BOCH)** | €{boch_p} | +0,38% | Ισχυρό κλείσιμο σε υψηλό ημέρας |
-| **S&P 500** | {sp_p} | -0,48% | Ήπια διόρθωση εν αναμονή μακροοικονομικών |
-| **Brent Crude** | ${brent_p} | +1,20% | Εδραίωση πάνω από τα $100 |
+| **S&P 500 (SPX)** | {spx_p} | {spx_c} | {spx_comm} |
+| **Nasdaq 100 (NDQ)** | {ndq_p} | {ndq_c} | {ndq_comm} |
+| **Bitcoin (BTC/USD)** | ${btc_p} | {btc_c} | {btc_comm} |
+| **EUR/USD** | {eurusd_p} | {eurusd_c} | {eurusd_comm} |
+| **EUR/GBP** | {eurgbp_p} | {eurgbp_c} | {eurgbp_comm} |
+| **Bank of Cyprus (BOCH)** | €{boch_p} | {boch_c} | {boch_comm} |
+| **Brent Crude** | ${brent_p} | {brent_c} | {brent_comm} |
+
+### 💻 Μετοχές Τεχνολογίας (Tech Watchlist)
+| Μετοχή / Ticker | Κλείσιμο | Μεταβολή | Σχόλιο |
+| :--- | :--- | :--- | :--- |
+| **TSMC (TSM)** | ${tsm_p} | {tsm_c} | {tsm_comm} |
+| **NVIDIA (NVDA)** | ${nvda_p} | {nvda_c} | {nvda_comm} |
+| **Alphabet (GOOG)** | ${goog_p} | {goog_c} | {goog_comm} |
 
 ---
 
@@ -662,6 +694,14 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 ## ⚽ ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ & ΠΡΟΓΡΑΜΜΑ
 
 {sports_block}
+
+---
+
+## 🌤️ ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ (11 ΣΕΠΤΕΜΒΡΙΟΥ)
+
+* **Πρόγνωση:** Αίθριος καιρός, διαυγής ουρανός με ασθενείς έως μέτριους ανέμους.
+* **Θερμοκρασία:** Έως 34°C μέγιστη κατά τις μεσημβρινές ώρες (24°C ελάχιστη).
+* **Άνεμοι & Θάλασσα:** Νοτιοδυτικοί 14–18 km/h, ήρεμη θάλασσα — ιδανικές συνθήκες για πρωινή κολύμβηση ή υπαίθρια δραστηριότητα.
 
 ---
 

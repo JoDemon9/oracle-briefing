@@ -1,64 +1,64 @@
 {
-  "fetched_at": "2026-09-10T19:11:21.995650",
+  "fetched_at": "2026-09-10T23:39:53.565048",
   "quotes": {
-    "S&P 500": {
+    "S&P 500 (SPX)": {
       "symbol": "^GSPC",
-      "price": 7590.37,
-      "change": -0.602250286785848,
+      "price": 7591.7,
+      "change": -0.5848336118255275,
       "date": "10/09/2026"
     },
-    "Nasdaq Composite": {
-      "symbol": "^IXIC",
-      "price": 26086.607,
-      "change": -0.635092525370106,
+    "Nasdaq 100 (NDQ)": {
+      "symbol": "^NDX",
+      "price": 29103.514,
+      "change": -1.0809728500735523,
       "date": "10/09/2026"
     },
-    "CBOE VIX": {
-      "symbol": "^VIX",
-      "price": 17.69,
-      "change": 12.531806615776084,
-      "date": "10/09/2026"
-    },
-    "US 10Y Yield": {
-      "symbol": "^TNX",
-      "price": 4.948,
-      "change": 2.294810833161064,
-      "date": "10/09/2026"
-    },
-    "Brent Crude": {
-      "symbol": "BZ=F",
-      "price": 107.29,
-      "change": 6.007311530481191,
-      "date": "10/09/2026"
-    },
-    "WTI Crude": {
-      "symbol": "CL=F",
-      "price": 102.05,
-      "change": 6.246746486205101,
+    "Bitcoin (BTC/USD)": {
+      "symbol": "BTC-USD",
+      "price": 77248.13,
+      "change": -1.3328498419499129,
       "date": "10/09/2026"
     },
     "EUR/USD": {
       "symbol": "EURUSD=X",
-      "price": 1.1616,
-      "change": -0.19761147864936582,
+      "price": 1.1613,
+      "change": -0.22338688890797628,
       "date": "10/09/2026"
     },
-    "Bitcoin (BTC)": {
-      "symbol": "BTC-USD",
-      "price": 77132.58,
-      "change": -1.4804390353810415,
+    "EUR/GBP": {
+      "symbol": "EURGBP=X",
+      "price": 0.8593,
+      "change": 0.0698730639338458,
       "date": "10/09/2026"
     },
-    "Ethereum (ETH)": {
-      "symbol": "ETH-USD",
-      "price": 2462.93,
-      "change": -0.19809397659942365,
+    "TSMC (TSM)": {
+      "symbol": "TSM",
+      "price": 428.03,
+      "change": -1.683664094083067,
+      "date": "10/09/2026"
+    },
+    "NVIDIA (NVDA)": {
+      "symbol": "NVDA",
+      "price": 218.36,
+      "change": -2.3740331738722107,
+      "date": "10/09/2026"
+    },
+    "Alphabet (GOOG)": {
+      "symbol": "GOOG",
+      "price": 330.39,
+      "change": 0.6120957427370701,
       "date": "10/09/2026"
     },
     "Bank of Cyprus (BOCH)": {
       "symbol": "BOCHGR.AT",
       "price": 10.5,
       "change": 0.9615384615384581,
+      "date": "10/09/2026"
+    },
+    "Brent Crude": {
+      "symbol": "BZ=F",
+      "price": 108.42,
+      "change": 7.12380199585022,
       "date": "10/09/2026"
     }
   },

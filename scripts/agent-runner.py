@@ -333,19 +333,22 @@ def main():
     print(f"   Time:   {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 70)
 
-    agent_succeeded = False
-    if not args.force_fallback:
-        try:
-            agent_succeeded = asyncio.run(run_antigravity_agent(edition, target_md, dry_run=args.dry_run))
-        except Exception as e:
-            print(f"⚠ Agent execution error: {e}")
-            agent_succeeded = False
+    if os.path.exists(target_md) and not args.force:
+        print(f"ℹ Broadsheet already exists at: {target_md} and --force was not set. Preserving existing broadsheet.")
+    else:
+        agent_succeeded = False
+        if not args.force_fallback:
+            try:
+                agent_succeeded = asyncio.run(run_antigravity_agent(edition, target_md, dry_run=args.dry_run))
+            except Exception as e:
+                print(f"⚠ Agent execution error: {e}")
+                agent_succeeded = False
 
-    if not agent_succeeded:
-        if not args.dry_run:
-            run_deterministic_synthesis(edition, target_md)
-        else:
-            print("ℹ Dry-run mode enabled: skipping file generation.")
+        if not agent_succeeded:
+            if not args.dry_run:
+                run_deterministic_synthesis(edition, target_md)
+            else:
+                print("ℹ Dry-run mode enabled: skipping file generation.")
 
     if not args.dry_run:
         gates_ok = post_processing(target_md)

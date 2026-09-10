@@ -134,17 +134,30 @@ if top_story_block:
             top_story_desc = line_clean
             break
 
-dash_block = grab("## 📊", "## 🏦") or grab("## 📊", "## 🎯") or grab("## 🔔", "## ⚽") or grab("## 🔔", "---")
-dash_rows = []
+dash_block = grab("## 📊", "## 🏦") or grab("## 📊", "## 🎯") or grab("## 🔔", "## 📰") or grab("## 🔔", "## ⚽") or grab("## 🔔", "---")
+macro_dash = []
+tech_dash = []
+current_dash_sub = "macro"
 for line in dash_block.split("\n"):
-    if line.startswith("| **"):
+    if "###" in line:
+        if any(k in line.upper() for k in ["ΜΕΤΟΧ", "TECH", "WATCHLIST", "STOCKS"]):
+            current_dash_sub = "tech"
+        else:
+            current_dash_sub = "macro"
+    elif line.startswith("| **"):
         cols = [c.strip() for c in line.split("|") if c.strip()]
-        if len(cols) >= 3:
+        if len(cols) >= 3 and not any(cols[0].startswith(x) for x in ['Δείκτης', 'Αγορά', 'Μετοχή', 'Ticker', 'Asset', ':---']):
             name = cols[0].replace("**", "")
             val = cols[1]
             chg = cols[2]
-            dash_rows.append(f"• {name}: {val} ({chg})")
-dash_rows_str = "\n".join(dash_rows[:6])
+            entry = f"• {name}: {val} ({chg})"
+            if current_dash_sub == "tech" or any(s in name.upper() for s in ['TSM', 'NVDA', 'GOOG']):
+                tech_dash.append(entry)
+            else:
+                macro_dash.append(entry)
+
+dash_rows = macro_dash + tech_dash
+dash_rows_str = "\n".join(dash_rows[:8])
 
 my_file_block = grab("## 🎯", "## 📅") or grab("## 🎯", "## ⚽") or grab("## 🎯", "---")
 my_file = []
@@ -258,16 +271,38 @@ if is_evening:
                 if cleaned and cleaned not in ['--', '---']:
                     nr_items.append(f"• {cleaned}")
 
+    # Closing Bell grouped
+    closing_bell_parts = []
+    if macro_dash:
+        closing_bell_parts.append("📊 <b>Δείκτες & Macro:</b>\n" + "\n".join(macro_dash[:5]))
+    if tech_dash:
+        closing_bell_parts.append("💻 <b>Μετοχές Τεχνολογίας:</b>\n" + "\n".join(tech_dash[:3]))
+
+    # Tomorrow's Limassol Outlook
+    tom_block = grab("## 🌤️ ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ", "## 🌌") or grab("## 🌤️", "## 🌌")
+    tom_summary = ""
+    if tom_block:
+        m_t = re.search(r'\*\*Θερμοκρασία:\*\*\s*(.+)', tom_block)
+        m_f = re.search(r'\*\*Πρόγνωση:\*\*\s*(.+)', tom_block)
+        if m_t and m_f:
+            tom_summary = f"🌤️ <b>Αυριανή Πρόγνωση Λεμεσού:</b> {esc(m_t.group(1).strip())} · {esc(m_f.group(1).strip())}"
+        elif m_t:
+            tom_summary = f"🌤️ <b>Αυριανή Πρόγνωση Λεμεσού:</b> {esc(m_t.group(1).strip())}"
+
     msg_parts = [
         header_text,
         f"🏁 <b>Το Αποτύπωμα της Ημέρας</b>\n{top_story_content}"
     ]
     if ev_headlines:
         msg_parts.append("📰 <b>Απογευματινή Επικαιρότητα</b>\n" + "\n".join(ev_headlines[:3]))
-    if dash_rows_str:
+    if closing_bell_parts:
+        msg_parts.append("🔔 <b>Closing Bell & Αγορές</b>\n" + "\n\n".join(closing_bell_parts))
+    elif dash_rows_str:
         msg_parts.append(f"🔔 <b>Closing Bell & Αγορές</b>\n{esc(dash_rows_str)}")
     if sp_items:
         msg_parts.append("⚽ <b>Αθλητικό Πρόγραμμα</b>\n" + "\n".join(sp_items))
+    if tom_summary:
+        msg_parts.append(tom_summary)
     if nr_items:
         msg_parts.append("🌌 <b>Νυχτερινό Ραντάρ</b>\n" + "\n".join(nr_items[:3]))
 

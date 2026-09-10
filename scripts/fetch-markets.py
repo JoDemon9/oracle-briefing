@@ -22,16 +22,16 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 OUTPUT_FILE = os.path.join(BASE_DIR, 'scripts', 'markets-data.json')
 
 SYMBOLS = {
-    'S&P 500': '^GSPC',
-    'Nasdaq Composite': '^IXIC',
-    'CBOE VIX': '^VIX',
-    'US 10Y Yield': '^TNX',
-    'Brent Crude': 'BZ=F',
-    'WTI Crude': 'CL=F',
+    'S&P 500 (SPX)': '^GSPC',
+    'Nasdaq 100 (NDQ)': '^NDX',
+    'Bitcoin (BTC/USD)': 'BTC-USD',
     'EUR/USD': 'EURUSD=X',
-    'Bitcoin (BTC)': 'BTC-USD',
-    'Ethereum (ETH)': 'ETH-USD',
-    'Bank of Cyprus (BOCH)': 'BOCHGR.AT'
+    'EUR/GBP': 'EURGBP=X',
+    'TSMC (TSM)': 'TSM',
+    'NVIDIA (NVDA)': 'NVDA',
+    'Alphabet (GOOG)': 'GOOG',
+    'Bank of Cyprus (BOCH)': 'BOCHGR.AT',
+    'Brent Crude': 'BZ=F'
 }
 
 DEFAULT_HEADERS = {
