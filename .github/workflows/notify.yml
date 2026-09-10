@@ -5,12 +5,14 @@ on:
     - cron: '30 4 * * *'
     # 13:30 PM Cyprus Time (EEST, UTC+3) — Midday Market Pulse
     - cron: '30 10 * * *'
+    # 15:30 PM Cyprus Time (EEST, UTC+3) — Test Run
+    - cron: '30 12 * * *'
     # 19:30 PM Cyprus Time (EEST, UTC+3) — Evening Debrief & Global Wrap
     - cron: '30 16 * * *'
     # Every 30 mins between 08:00 - 21:00 Cyprus Time — Real-time Breaking Wire Monitor
     - cron: '*/30 5-18 * * *'
   push:
-    paths: ['docs/briefings/*.md', 'briefings/*.md']
+    paths: ['docs/briefings/**', 'briefings/**', '.github/workflows/**']
   workflow_dispatch:
     inputs:
       edition:
