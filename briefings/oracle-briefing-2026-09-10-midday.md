@@ -6,9 +6,9 @@
 
 ## ⚡ ΜΕΣΗΜΒΡΙΝΟ BREAKING & DEAL WIRE
 
-### Βίντεο. Κύπρος: Παράταση έως το τέλος Νοεμβρίου στην μείωση του φόρου κατανάλωσης στα καύσιμα - Euronews.com
+### Βίντεο. Κύπρος: Παράταση έως το τέλος Νοεμβρίου στην μείωση του φόρου κατανάλωσης στα καύσιμα - gr.euronews.com
 
-Βίντεο. Κύπρος: Παράταση έως το τέλος Νοεμβρίου στην μείωση του φόρου κατανάλωσης στα καύσιμα&nbsp;&nbsp;Euronews.com
+Βίντεο. Κύπρος: Παράταση έως το τέλος Νοεμβρίου στην μείωση του φόρου κατανάλωσης στα καύσιμα&nbsp;&nbsp;gr.euronews.com
 
 Η εξέλιξη αυτή απασχολεί έντονα τους επιχειρηματικούς κύκλους της Λεμεσού και της Λευκωσίας ενόψει των απογευματινών επαφών.
 
@@ -22,9 +22,9 @@ Greece, Cyprus, Malta and Italy join forces to support European shipping competi
 Κύπρος: Aσφάλεια, ενέργεια και άμυνα συζητούν Χριστοδουλίδης-Χέρτσογκ&nbsp;&nbsp;Sofokleousin.gr  
 **Πηγή:** [Ειδήσεις](https://news.google.com/rss/articles/CBMitAFBVV95cUxPelVYUkxBQVJPQ3FRMTFKcXNpTF9YS3gxSGpxWlRYRV93MEltU3pleGlSWWc5Qkc0bDVmR05QdFIwM1NrYkpVOGEwUnQtZkdFc3hHMUYwWnFuWnVtMHV2QzF4OWtqeUFUNzJCU2Y4cG92clUteU5VS2p6aWg4aElTODNWeFFlTGxDdFR5MnhJLVJmSWhjRGEzRnhmd0Qzd1dKdHBmMHllVWR4VVM1amtHM3Nnb27SAboBQVVfeXFMTUNON3ZmN1lIZzI1a1VoLUZaM1FsSHFKX0tMM2xwS0hKbFcwR1NDVnF1Z1ZxRGx6V1Q2N0haajV4QUllX1hBOGJjNklOQ245dU1yXzh3eFRsQjFkaTlBaHVDcUZVOExBZUUtSWk2SVpkMGxpNDFKOG5oQmMxbU9DSzVNVzNFdFRtY1dRLWVxTGI0amlCRkgxT3dTRjhLMi02ekgyNW1JTUJ0Y1ZzOEtHaUxoN0w3b0pNeGNR?oc=5)
 
-### 3. Κύπρος: Για πρώτη φορά η Αίγυπτος στέλνει άγημα – «Μήνυμα προς την Τουρκία» - In.gr
-Κύπρος: Για πρώτη φορά η Αίγυπτος στέλνει άγημα – «Μήνυμα προς την Τουρκία»&nbsp;&nbsp;In.gr  
-**Πηγή:** [Ειδήσεις](https://news.google.com/rss/articles/CBMivwFBVV95cUxNMTJiQ0JmSWY5TmxTenY4ODh2SEFDZkFaZHkxNUZtS05WTmFmRnNwMUVWSWJnMGN3Y1FlV3R3TXZmVnd4dHQ1ejZQTDdFWDdnV2tHYlp6X1Z6YzdjaDZyeWJxLUw0N1lmdTBVLWNpYXR6TWs1MkFZZml2bTJaTXZLVEVINkYtakQzYlVuOWNwSnhXSTk5cHhRVy1YejAweTZfb21qRHZpeERIOFplRFhDNFp5ZVBiTFoweS0xMU5la9IBxAFBVV95cUxNTHplRi1JTVJnUWwzQkkybW5acXhtZFBhYmdWRTEzN3d6bzFWNTQwTlg0Zno2SW1lalFoSVk4WW5waE0yQlZlS3U2Vk5nUV93S1h2dEdYVl82a2RJTGNiNkpzUEpCQ05ON3Q0Z01IX1NyT09QSlJiZFgyVG40ZWZpZXBUQnFQYkhWclVHZ1hUYUJIdmF4d2lGbERwVzBfaU5nUFFtbS14UzVTTWNqODVuNklJZS1qZ0JzakpKWTZ2b0tjUzlX?oc=5)
+### 3. Ν. Δένδιας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας, σοβαρότητας και ασφάλειας στην Ανατολική Μεσόγειο - Μακεδονικά Νέα
+Ν. Δένδιας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας, σοβαρότητας και ασφάλειας στην Ανατολική Μεσόγειο&nbsp;&nbsp;Μακεδονικά Νέα  
+**Πηγή:** [Ειδήσεις](https://news.google.com/rss/articles/CBMixAFBVV95cUxPbkhJbkxndWxvdG04aDJYQmJLaXQwYWZGcmQwMzFuZVYtNl9iNVo2ZThac3lGc2k3b3VMRUNuUGxRYzMwNmFSOXhrRlVKaXZvOWQyN2JUSmJLMkVPeDdZZkpNYU9ua3ZqZzlsc0FqS3BIa2p1Zm9UTGRsc0VjZ3RhY1JuUHdxUGNiNEhXalc0ZGRsTm5ubUhmbnFUVEZRclVyWE9XVl85dFBMYnhsaVFTNFQ3d2FKdVJUUG44a00wM2JwR09r?oc=5)
 
 ---
 
