@@ -151,7 +151,7 @@ for line in dash_block.split("\n"):
             val = cols[1]
             chg = cols[2]
             entry = f"• {name}: {val} ({chg})"
-            if current_dash_sub == "tech" or any(s in name.upper() for s in ['TSM', 'NVDA', 'GOOG']):
+            if current_dash_sub == "tech" or any(s in name.upper() for s in ['TSM', 'NVDA', 'GOOG', 'AAPL', 'MSFT', 'MU', 'META']):
                 tech_dash.append(entry)
             else:
                 macro_dash.append(entry)
@@ -274,9 +274,9 @@ if is_evening:
     # Closing Bell grouped
     closing_bell_parts = []
     if macro_dash:
-        closing_bell_parts.append("📊 <b>Δείκτες & Macro:</b>\n" + "\n".join(macro_dash[:5]))
+        closing_bell_parts.append("📊 <b>Δείκτες & Macro:</b>\n" + "\n".join(macro_dash[:7]))
     if tech_dash:
-        closing_bell_parts.append("💻 <b>Μετοχές Τεχνολογίας:</b>\n" + "\n".join(tech_dash[:3]))
+        closing_bell_parts.append("💻 <b>Μετοχές Τεχνολογίας:</b>\n" + "\n".join(tech_dash[:7]))
 
     # Tomorrow's Limassol Outlook
     tom_block = grab("## 🌤️ ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ", "## 🌌") or grab("## 🌤️", "## 🌌")
@@ -294,7 +294,7 @@ if is_evening:
         f"🏁 <b>Το Αποτύπωμα της Ημέρας</b>\n{top_story_content}"
     ]
     if ev_headlines:
-        msg_parts.append("📰 <b>Απογευματινή Επικαιρότητα</b>\n" + "\n".join(ev_headlines[:3]))
+        msg_parts.append("📰 <b>Απογευματινή Επικαιρότητα</b>\n" + "\n".join(ev_headlines[:5]))
     if closing_bell_parts:
         msg_parts.append("🔔 <b>Closing Bell & Αγορές</b>\n" + "\n\n".join(closing_bell_parts))
     elif dash_rows_str:

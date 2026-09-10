@@ -20,6 +20,7 @@ import urllib.parse
 import ssl
 from datetime import datetime, timezone
 import warnings
+import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
@@ -45,35 +46,87 @@ HEADERS = {
 }
 
 SOURCES = [
+    # 1. International News (Dominant - 4 sources)
     {
-        'name': 'CNA (ΚΥΠΕ)',
-        'url': 'https://www.cna.org.cy/rss',
-        'lang': 'el'
+        'name': 'BBC World',
+        'url': 'https://feeds.bbci.co.uk/news/world/rss.xml',
+        'lang': 'en',
+        'category': 'international'
     },
     {
-        'name': 'InBusinessNews',
-        'url': 'https://inbusinessnews.reporter.com.cy/feed/',
-        'lang': 'el'
+        'name': 'France 24',
+        'url': 'https://www.france24.com/en/rss',
+        'lang': 'en',
+        'category': 'international'
     },
+    {
+        'name': 'Al Jazeera',
+        'url': 'https://www.aljazeera.com/xml/rss/all.xml',
+        'lang': 'en',
+        'category': 'international'
+    },
+    {
+        'name': 'DW World',
+        'url': 'https://rss.dw.com/rdf/rss-en-all',
+        'lang': 'en',
+        'category': 'international'
+    },
+    # 2. Finance & Market Intelligence (3 sources)
+    {
+        'name': 'Yahoo Finance',
+        'url': 'https://finance.yahoo.com/news/rssindex',
+        'lang': 'en',
+        'category': 'finance'
+    },
+    {
+        'name': 'CNBC',
+        'url': 'https://www.cnbc.com/id/100003114/device/rss/rss.html',
+        'lang': 'en',
+        'category': 'finance'
+    },
+    {
+        'name': 'MarketWatch',
+        'url': 'https://feeds.content.dowjones.io/public/rss/mw_topstories',
+        'lang': 'en',
+        'category': 'finance'
+    },
+    # 3. Cyprus National & Strategic (3 sources)
     {
         'name': 'Philenews',
         'url': 'https://www.philenews.com/feed/',
-        'lang': 'el'
+        'lang': 'el',
+        'category': 'cyprus'
+    },
+    {
+        'name': 'Sigmalive',
+        'url': 'https://www.sigmalive.com/rss',
+        'lang': 'el',
+        'category': 'cyprus'
     },
     {
         'name': 'Cyprus Mail',
         'url': 'https://cyprus-mail.com/feed/',
-        'lang': 'en'
+        'lang': 'en',
+        'category': 'cyprus'
+    },
+    # 4. Sports Intelligence (3 sources)
+    {
+        'name': 'BBC Sport',
+        'url': 'https://feeds.bbci.co.uk/sport/rss.xml',
+        'lang': 'en',
+        'category': 'sports'
     },
     {
-        'name': 'SigmaLive',
-        'url': 'https://www.sigmalive.com/rss',
-        'lang': 'el'
+        'name': 'Sky Sports',
+        'url': 'https://www.skysports.com/rss/12040',
+        'lang': 'en',
+        'category': 'sports'
     },
     {
-        'name': 'BBC World',
-        'url': 'https://feeds.bbci.co.uk/news/world/rss.xml',
-        'lang': 'en'
+        'name': 'Kerkida',
+        'url': 'https://www.kerkida.net/rss.xml',
+        'lang': 'el',
+        'category': 'sports'
     }
 ]
 
@@ -81,13 +134,14 @@ CRITICAL_KEYWORDS_EL = [
     'έκτακτο', 'εκτακτο', 'επείγον', 'επειγον', 'σεισμός', 'σεισμος',
     'τράπεζα κύπρου', 'τραπεζα κυπρου', 'κεντρική τράπεζα', 'εκτ',
     'επιτόκια', 'επιτοκια', 'προεδρικό', 'υπουργικό συμβούλιο',
-    'κατάπαυση του πυρός', 'ναυάγιο', 'απαγόρευση'
+    'κατάπαυση του πυρός', 'ναυάγιο', 'απαγόρευση', 'πληθωρισμός',
+    'χρηματιστήριο', 'ομόλογα', 'κυβερνοεπίθεση'
 ]
 
 CRITICAL_KEYWORDS_EN = [
-    'breaking', 'urgent', 'emergency', 'central bank', 'ecb',
-    'bank of cyprus', 'rate cut', 'rate hike', 'earthquake',
-    'ceasefire', 'explosion', 'presidential decree', 'sanctions'
+    'breaking', 'urgent', 'emergency', 'central bank', 'ecb', 'fed',
+    'bank of cyprus', 'rate cut', 'rate hike', 'earthquake', 'inflation',
+    'ceasefire', 'explosion', 'presidential decree', 'sanctions', 'cyberattack'
 ]
 
 
@@ -125,11 +179,49 @@ def load_live_wire():
 
 
 def save_live_wire(items):
-    items = sorted(items, key=lambda x: x.get('timestamp', 0), reverse=True)[:50]
+    # Balanced retention across categories:
+    # International (largest share: up to 26 items), Finance (up to 14), Cyprus (up to 12), Sports (up to 8)
+    cat_limits = {
+        'international': 26,
+        'finance': 14,
+        'cyprus': 12,
+        'sports': 8
+    }
+    cat_buckets = {c: [] for c in cat_limits}
+    other_bucket = []
+
+    sorted_items = sorted(items, key=lambda x: x.get('timestamp', 0), reverse=True)
+    for itm in sorted_items:
+        cat = itm.get('category', 'international')
+        if cat in cat_buckets:
+            if len(cat_buckets[cat]) < cat_limits[cat]:
+                cat_buckets[cat].append(itm)
+        else:
+            if len(other_bucket) < 5:
+                other_bucket.append(itm)
+
+    balanced = []
+    for b in cat_buckets.values():
+        balanced.extend(b)
+    balanced.extend(other_bucket)
+    final_items = sorted(balanced, key=lambda x: x.get('timestamp', 0), reverse=True)[:60]
+
     for path in [LIVE_WIRE_FILE, DOCS_WIRE_FILE]:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
-            json.dump(items, f, indent=2, ensure_ascii=False)
+            json.dump(final_items, f, indent=2, ensure_ascii=False)
+
+
+def get_xml_child_text(elem, tag_names):
+    for child in elem:
+        t = child.tag.split('}')[-1].lower()
+        if t in tag_names:
+            txt = (child.text or '').strip()
+            if txt:
+                return txt
+            if 'href' in child.attrib:
+                return child.attrib['href'].strip()
+    return ''
 
 
 def fetch_feed(source):
@@ -139,12 +231,44 @@ def fetch_feed(source):
         ctx = create_ssl_context()
         with urllib.request.urlopen(req, context=ctx, timeout=12) as resp:
             content = resp.read()
+
+        # 1. Primary parser: xml.etree.ElementTree
+        parsed_via_et = False
+        try:
+            root = ET.fromstring(content)
+            xml_items = [e for e in root.iter() if e.tag.split('}')[-1].lower() in ('item', 'entry')]
+            for it in xml_items:
+                title = get_xml_child_text(it, ['title'])
+                link = get_xml_child_text(it, ['link', 'guid', 'origlink'])
+                desc_raw = get_xml_child_text(it, ['description', 'summary', 'content'])
+                pub_date = get_xml_child_text(it, ['pubdate', 'updated', 'published', 'date'])
+
+                desc = re.sub(r'<[^>]+>', '', desc_raw)
+                desc = re.sub(r'\s+', ' ', desc).strip()
+
+                if title and link:
+                    items.append({
+                        'title': title,
+                        'link': link,
+                        'description': desc[:300],
+                        'pub_date': pub_date,
+                        'source': source['name'],
+                        'lang': source['lang'],
+                        'category': source.get('category', 'international')
+                    })
+            if items:
+                parsed_via_et = True
+        except Exception:
+            parsed_via_et = False
+
+        # 2. Fallback parser: BeautifulSoup if ET found nothing or errored
+        if not parsed_via_et:
             soup = BeautifulSoup(content, 'html.parser')
-            for item in soup.find_all('item'):
+            for item in soup.find_all(['item', 'entry']):
                 title_tag = item.find('title')
                 link_tag = item.find('link')
-                desc_tag = item.find('description')
-                pub_tag = item.find('pubdate')
+                desc_tag = item.find(['description', 'summary'])
+                pub_tag = item.find(['pubdate', 'updated', 'published'])
 
                 title = title_tag.get_text(strip=True) if title_tag else ''
                 link = ''
@@ -162,11 +286,13 @@ def fetch_feed(source):
                         'description': desc[:300],
                         'pub_date': pub_date,
                         'source': source['name'],
-                        'lang': source['lang']
+                        'lang': source['lang'],
+                        'category': source.get('category', 'international')
                     })
     except Exception as e:
         print(f"[!] Feed fetch error for {source['name']}: {e}", file=sys.stderr)
     return items
+
 
 
 def is_high_impact(item):
@@ -268,6 +394,7 @@ def run_monitor(dispatch=True):
             'link': item['link'],
             'snippet': item['description'][:180],
             'source': item['source'],
+            'category': item.get('category', 'international'),
             'timestamp': int(time.time()),
             'time_str': datetime.now(timezone.utc).strftime('%H:%M UTC'),
             'is_breaking': False

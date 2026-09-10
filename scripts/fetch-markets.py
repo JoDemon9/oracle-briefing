@@ -27,11 +27,15 @@ SYMBOLS = {
     'Bitcoin (BTC/USD)': 'BTC-USD',
     'EUR/USD': 'EURUSD=X',
     'EUR/GBP': 'EURGBP=X',
+    'Bank of Cyprus (BOCH)': 'BOCHGR.AT',
+    'Brent Crude': 'BZ=F',
     'TSMC (TSM)': 'TSM',
     'NVIDIA (NVDA)': 'NVDA',
     'Alphabet (GOOG)': 'GOOG',
-    'Bank of Cyprus (BOCH)': 'BOCHGR.AT',
-    'Brent Crude': 'BZ=F'
+    'Apple (AAPL)': 'AAPL',
+    'Microsoft (MSFT)': 'MSFT',
+    'Micron (MU)': 'MU',
+    'Meta (META)': 'META'
 }
 
 DEFAULT_HEADERS = {

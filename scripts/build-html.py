@@ -255,6 +255,51 @@ def annuity_payment(principal: float, annual_rate_pct: float, years: int) -> flo
     return principal * (r * (1 + r)**n) / ((1 + r)**n - 1)
 
 
+
+def resolve_edition_urls(iso_date, is_subfolder):
+    """Resolves correct relative links between editions and resources.
+    Guarantees seamless navigation whether viewing from root index.html or docs/briefings/*.
+    """
+    if is_subfolder:
+        return {
+            'home': '../index.html',
+            'morning': f'{iso_date}.html',
+            'midday': f'{iso_date}-midday.html',
+            'evening': f'{iso_date}-evening.html',
+            'live_wire': '../live-wire.json',
+            'search_index': '../search-index.json',
+        }
+    else:
+        return {
+            'home': 'index.html',
+            'morning': f'briefings/{iso_date}.html',
+            'midday': f'briefings/{iso_date}-midday.html',
+            'evening': f'briefings/{iso_date}-evening.html',
+            'live_wire': 'live-wire.json',
+            'search_index': 'search-index.json',
+        }
+
+
+def render_edition_switcher_html(urls, current_edition):
+    active_cls = "bg-[var(--accent)] text-white font-bold shadow-xs"
+    inactive_cls = "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
+
+    morning_cls = active_cls if current_edition == 'morning' else inactive_cls
+    midday_cls = active_cls if current_edition == 'midday' else inactive_cls
+    evening_cls = active_cls if current_edition == 'evening' else inactive_cls
+
+    return f'''
+    <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+      <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
+      <a href="{urls['morning']}" class="px-2 py-0.5 rounded transition {morning_cls}">🌅 07:30 Πρωί</a>
+      <a href="{urls['midday']}" class="px-2 py-0.5 rounded transition {midday_cls}">☀️ 13:30 Μεσημέρι</a>
+      <a href="{urls['evening']}" class="px-2 py-0.5 rounded transition {evening_cls}">🌙 19:30 Απόγευμα</a>
+      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
+      </button>
+    </div>
+    '''
+
 def parse_markdown(md_content, filename=""):
     data = {
         'title': 'THE ORACLE SOVEREIGN',
@@ -447,7 +492,7 @@ def parse_markdown(md_content, filename=""):
                     if len(cols) >= 3 and not any(cols[0].startswith(x) for x in ['Δείκτης', 'Αγορά', 'Μετοχή', 'Ticker', 'Asset', ':---']):
                         asset_name = re.sub(r'\*\*', '', cols[0]).strip()
                         cat = current_category
-                        if any(s in asset_name.upper() for s in ['TSM', 'NVDA', 'GOOG', 'AAPL', 'MSFT', 'AMZN', 'META']):
+                        if any(s in asset_name.upper() for s in ['TSM', 'NVDA', 'GOOG', 'AAPL', 'MSFT', 'MU', 'META', 'AMZN']):
                             cat = 'Μετοχές Τεχνολογίας'
                         price = cols[1].strip()
                         change = cols[2].strip()
@@ -911,13 +956,14 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
 
     gen_iso = f"{iso_date}T{time_display}:00+03:00" if ':' in time_display else f"{iso_date}T19:30:00+03:00"
 
-    prefix = "../" if is_subfolder else ""
-    home_url = f"{prefix}index.html"
-    morning_url = f"{prefix}briefings/{iso_date}.html"
-    midday_url = f"{prefix}briefings/{iso_date}-midday.html"
-    evening_url = f"{prefix}briefings/{iso_date}-evening.html"
-    live_wire_url = f"{prefix}live-wire.json"
-    search_index_url = f"{prefix}search-index.json"
+    urls = resolve_edition_urls(iso_date, is_subfolder)
+    home_url = urls['home']
+    morning_url = urls['morning']
+    midday_url = urls['midday']
+    evening_url = urls['evening']
+    live_wire_url = urls['live_wire']
+    search_index_url = urls['search_index']
+    edition_switcher_html = render_edition_switcher_html(urls, 'evening')
 
     # Ticker Items
     ticker_spans = []
@@ -961,7 +1007,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         market_section_html = f'''
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
           <!-- Macro Indices & FX -->
-          <div class="lg:col-span-7 card overflow-hidden shadow-xs border border-[var(--rule)]">
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-[var(--rule)]">
             <div class="p-3.5 bg-[var(--paper)] border-b border-[var(--rule)] flex items-center justify-between">
               <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
                 <span>🏛️</span> <span>Κύριοι Δείκτες, Συνάλλαγμα & Crypto</span>
@@ -986,7 +1032,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
           </div>
 
           <!-- Tech Stocks Watchlist -->
-          <div class="lg:col-span-5 card overflow-hidden shadow-xs border border-indigo-500/30">
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-indigo-500/30">
             <div class="p-3.5 bg-gradient-to-r from-[var(--paper)] to-indigo-950/10 border-b border-[var(--rule)] flex items-center justify-between">
               <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
                 <span>💻</span> <span>Μετοχές Τεχνολογίας (Watchlist)</span>
@@ -1375,15 +1421,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         </span>
 
         <!-- Edition Switcher -->
-        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
-          <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-          <a href="{morning_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
-          <a href="{midday_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">☀️ 13:30 Μεσημέρι</a>
-          <a href="{evening_url}" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">🌙 19:30 Απόγευμα</a>
-          <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
-          </button>
-        </div>
+{edition_switcher_html}
       </div>
 
       <!-- Global Clocks Bar -->
@@ -1406,7 +1444,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
 
   <!-- MASTHEAD -->
   <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 bg-[var(--paper-raised)]">
-    <div class="max-w-5xl mx-auto text-center">
+    <div class="max-w-7xl mx-auto text-center">
       <div class="flex justify-between items-center text-xs uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
         <div>ΕΤΟΣ 2026 · DAILY BRIEFING</div>
         <div class="font-bold text-[var(--accent)]">🌙 NIGHT DEBRIEF & CLOSING BELL</div>
@@ -1457,7 +1495,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
   </div>
 
   <!-- MAIN CONTAINER -->
-  <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
 
     <!-- 🎙️ AUDIO BRIEFING PLAYER -->
     <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
@@ -1602,7 +1640,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
 
   <!-- FOOTER -->
   <footer class="mt-16 border-t border-[var(--rule)] bg-[var(--paper-raised)] py-8 px-4 text-xs text-[var(--ink-quiet)]">
-    <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
       <div class="space-y-1">
         <div class="font-bold text-[var(--ink)] font-masthead">THE ORACLE SOVEREIGN</div>
         <div>Confidential Executive Briefing · Night Debrief Edition</div>
@@ -1841,13 +1879,14 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
 
     gen_iso = f"{iso_date}T{time_display}:00+03:00" if ':' in time_display else f"{iso_date}T13:30:00+03:00"
 
-    prefix = "../" if is_subfolder else ""
-    home_url = f"{prefix}index.html"
-    morning_url = f"{prefix}briefings/{iso_date}.html"
-    midday_url = f"{prefix}briefings/{iso_date}-midday.html"
-    evening_url = f"{prefix}briefings/{iso_date}-evening.html"
-    live_wire_url = f"{prefix}live-wire.json"
-    search_index_url = f"{prefix}search-index.json"
+    urls = resolve_edition_urls(iso_date, is_subfolder)
+    home_url = urls['home']
+    morning_url = urls['morning']
+    midday_url = urls['midday']
+    evening_url = urls['evening']
+    live_wire_url = urls['live_wire']
+    search_index_url = urls['search_index']
+    edition_switcher_html = render_edition_switcher_html(urls, 'midday')
 
     # Ticker Items
     ticker_spans = []
@@ -1987,15 +2026,7 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
         <span class="inline-flex items-center px-2 py-0.5 rounded font-mono font-semibold text-[11px] bg-amber-500/10 text-amber-800 dark:text-amber-300">
           ☀️ 13:30 · {date_display}
         </span>
-        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
-          <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-          <a href="{morning_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
-          <a href="{midday_url}" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">☀️ 13:30 Μεσημέρι</a>
-          <a href="{evening_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌙 19:30 Απόγευμα</a>
-          <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
-          </button>
-        </div>
+{edition_switcher_html}
       </div>
       <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
         <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
@@ -2032,7 +2063,7 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
   </div>
 
   <!-- MAIN CONTENT -->
-  <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
     <!-- 1. BREAKING & DEAL WIRE -->
     <section>
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
@@ -2127,8 +2158,11 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     time_display = data['time_str'] or '13:30'
     read_time = data['read_time'] or "7'"
 
-    m_iso = re.search(r'(\d{4}-\d{2}-\d{2})', date_display)
-    iso_date = m_iso.group(1) if m_iso else datetime.now().strftime('%Y-%m-%d')
+    if not date_slug:
+        m_iso = re.search(r'(\d{4}-\d{2}-\d{2})', date_display)
+        iso_date = m_iso.group(1) if m_iso else datetime.now().strftime('%Y-%m-%d')
+    else:
+        iso_date = date_slug
     gen_iso = f"{iso_date}T{time_display}:00+03:00" if ':' in time_display else f"{iso_date}T13:30:00+03:00"
 
     # Ticker Items
@@ -2150,18 +2184,14 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     midday_cls = "bg-[var(--accent)] text-white font-bold shadow-xs" if current_edition == 'midday' else "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
     evening_cls = "bg-[var(--accent)] text-white font-bold shadow-xs" if current_edition == 'evening' else "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
 
-    prefix = "../" if is_subfolder else ""
-    edition_switcher_html = f'''
-    <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
-      <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-      <a href="{prefix}index.html" class="px-2 py-0.5 rounded transition {morning_cls}">🌅 07:30 Πρωί</a>
-      <a href="{prefix}briefings/{iso_date}-midday.html" class="px-2 py-0.5 rounded transition {midday_cls}">☀️ 13:30 Μεσημέρι</a>
-      <a href="{prefix}briefings/{iso_date}-evening.html" class="px-2 py-0.5 rounded transition {evening_cls}">🌙 19:30 Απόγευμα</a>
-      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
-        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
-      </button>
-    </div>
-    '''
+    urls = resolve_edition_urls(iso_date, is_subfolder)
+    home_url = urls['home']
+    morning_url = urls['morning']
+    midday_url = urls['midday']
+    evening_url = urls['evening']
+    live_wire_url = urls['live_wire']
+    search_index_url = urls['search_index']
+    edition_switcher_html = render_edition_switcher_html(urls, 'morning')
 
     global_clocks_html = '''
     <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
@@ -4415,11 +4445,12 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
 def render_html(data, house_stats, search_index, is_subfolder=False, date_slug=None):
     current_edition = data.get('edition') or 'morning'
     title_upper = (data.get('title') or '').upper()
-    time_display = data.get('time_str') or ''
-    if 'ΜΕΣΗΜΒΡΙΝΟΣ' in title_upper or 'MIDDAY' in title_upper or '13:30' in time_display:
-        current_edition = 'midday'
-    elif 'ΑΠΟΓΕΥΜΑΤΙΝΗ' in title_upper or 'EVENING' in title_upper or '19:30' in time_display:
+    if 'ΑΠΟΓΕΥΜΑΤΙΝΗ' in title_upper or 'EVENING' in title_upper or current_edition == 'evening':
         current_edition = 'evening'
+    elif 'ΜΕΣΗΜΒΡΙΝΟΣ' in title_upper or 'MIDDAY' in title_upper or current_edition == 'midday':
+        current_edition = 'midday'
+    else:
+        current_edition = 'morning'
 
     if current_edition == 'evening':
         return render_evening_html(data, house_stats, search_index, is_subfolder=is_subfolder, date_slug=date_slug)
@@ -4450,7 +4481,7 @@ def main():
     edition_suffix = "-midday" if "-midday" in filename else ("-evening" if "-evening" in filename else "")
     edition_slug = f"{date_slug}{edition_suffix}"
 
-    data = parse_markdown(content)
+    data = parse_markdown(content, filename=filename)
     house_stats = get_latest_house_search()
     if house_stats:
         print(f"Linked House Search from: {house_stats['date']} ({house_stats['unique_properties']} properties)")

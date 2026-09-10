@@ -78,15 +78,17 @@
         </span>
 
         <!-- Edition Switcher -->
-        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
-          <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-          <a href="../briefings/2026-09-10.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
-          <a href="../briefings/2026-09-10-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">☀️ 13:30 Μεσημέρι</a>
-          <a href="../briefings/2026-09-10-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">🌙 19:30 Απόγευμα</a>
-          <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
-          </button>
-        </div>
+
+    <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+      <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
+      <a href="2026-09-10.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
+      <a href="2026-09-10-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">☀️ 13:30 Μεσημέρι</a>
+      <a href="2026-09-10-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">🌙 19:30 Απόγευμα</a>
+      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
+      </button>
+    </div>
+    
       </div>
 
       <!-- Global Clocks Bar -->
@@ -109,7 +111,7 @@
 
   <!-- MASTHEAD -->
   <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 bg-[var(--paper-raised)]">
-    <div class="max-w-5xl mx-auto text-center">
+    <div class="max-w-7xl mx-auto text-center">
       <div class="flex justify-between items-center text-xs uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
         <div>ΕΤΟΣ 2026 · DAILY BRIEFING</div>
         <div class="font-bold text-[var(--accent)]">🌙 NIGHT DEBRIEF & CLOSING BELL</div>
@@ -138,7 +140,7 @@
   <!-- LIVE MARKET TICKER -->
   <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
     <div class="ticker-content space-x-8 font-mono">
-      <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.591,70</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,58%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">29.103,50</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$77.277,80</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,31%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,1608</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,22%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,8594</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,09%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,50</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,38%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$102,42</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$428,03</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,68%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$218,36</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-2,37%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$332,60</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,59%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.591,70</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,58%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">29.103,50</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$77.277,80</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,31%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,1608</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,22%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,8594</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,09%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,50</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,38%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$102,42</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$428,03</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,68%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$218,36</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-2,37%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$332,60</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,59%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span>
+      <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.591,70</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,58%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">29.103,50</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$77.233,01</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,37%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,1613</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,17%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,8593</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,50</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,38%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$108,79</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$428,03</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,68%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$218,36</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-2,37%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$330,39</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$326,57</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,42%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$492,44</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,61%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$977,41</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,15%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$644,38</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,24%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.591,70</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,58%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">29.103,50</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$77.233,01</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,37%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,1613</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,17%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,8593</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,50</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,38%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$108,79</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$428,03</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,68%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$218,36</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-2,37%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$330,39</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$326,57</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,42%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$492,44</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,61%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$977,41</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,15%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$644,38</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,24%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span>
     </div>
   </div>
 
@@ -160,7 +162,7 @@
   </div>
 
   <!-- MAIN CONTAINER -->
-  <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
 
     <!-- 🎙️ AUDIO BRIEFING PLAYER -->
     <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
@@ -222,7 +224,7 @@
                 Ημερήσιο Οικονομικό & Στρατηγικό Αποτύπωμα
               </h3>
               <p id="topStoryBody" class="font-editorial text-base sm:text-lg text-[var(--ink-body)] leading-relaxed">
-                Η σημερινή ημέρα έκλεισε με αξιοσημείωτη κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των ενεργειακών δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά, ενώ οι ευρωπαϊκές κεφαλαιαγορές ολοκλήρωσαν τις συναλλαγές με θετικό πρόσημο για τις τράπεζες. > [!NOTE] > <strong>⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:</strong> > <em> <strong>Αγορές & Tech:</strong> Ήπια διόρθωση σε S&P 500 (-0,58%) & Nasdaq 100 (-1,08%). Στις μετοχές, πιέσεις σε TSMC (-1,68%) & NVIDIA (-2,37%), ενώ η Alphabet (+0,59%) και η Τράπεζα Κύπρου (+0,38%) σημείωσαν άνοδο. > </em> <strong>Κυπριακή Επικαιρότητα:</strong> Παράταση μείωσης φόρου καυσίμων έως τέλη Νοεμβρίου και τετραμερής συμμαχία Κύπρου, Ελλάδας, Μάλτας & Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα. > * <strong>Αθλητικά:</strong> Πλήρης ετοιμότητα της Ομόνοιας για το ντέρμπι του ΓΣΠ και ευρωπαϊκή αναμέτρηση της Manchester United.
+                Η σημερινή ημέρα έκλεισε με αξιοσημείωτη κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των ενεργειακών δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά, ενώ οι ευρωπαϊκές κεφαλαιαγορές ολοκλήρωσαν τις συναλλαγές με θετικό πρόσημο για τις τράπεζες. > [!NOTE] > <strong>⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:</strong> > <em> <strong>Αγορές & Tech:</strong> Ήπια διόρθωση σε S&P 500 (-0,58%) & Nasdaq 100 (-1,08%). Στο Tech Radar, πιέσεις σε TSMC (-1,68%), NVIDIA (-2,37%) & Apple (-0,42%), ενώ η Micron (+1,15%), η Meta (+0,24%) και η Τράπεζα Κύπρου (+0,38%) κινήθηκαν ανοδικά. > </em> <strong>Επικαιρότητα (5 Εξελίξεις):</strong> Παράταση μείωσης φόρου καυσίμων στην Κύπρο, τετραμερής μεσογειακή συμμαχία ναυτιλίας, εδραίωση Brent άνω των $102, νέο πλαίσιο κυβερνοασφάλειας AI/Cloud σε ΕΕ/ΗΠΑ και επανασχεδιασμός εμπορικών οδών Μέσης Ανατολής. > * <strong>Αθλητικά:</strong> Πλήρης ετοιμότητα της Ομόνοιας για το ντέρμπι του ΓΣΠ και ευρωπαϊκή αναμέτρηση της Manchester United.
               </p>
             </div>
             <div class="pt-4 mt-4 border-t border-[var(--rule)] flex items-center justify-between text-xs text-[var(--ink-quiet)] font-mono">
@@ -284,14 +286,14 @@
               </span>
             </div>
             <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
-              [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Συμμαχία Κύπρου, Ελλάδας, Μάλτας και Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα
+              [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Συμμαχία Κύπρου, Ελλάδας, Μάλτας και Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα και κυβερνοασφάλεια
             </h3>
             <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-3">
-              Κοινή πρωτοβουλία ανέλαβαν τα τέσσερα μεσογειακά κράτη-μέλη της ΕΕ με στόχο την προστασία της ναυτιλιακής ανταγωνιστικότητας απέναντι στους αυστηρούς περιβαλλοντικούς κανονισμούς και τον αθέμιτο ανταγωνισμό από λιμένες τρίτων χωρών.
+              Κοινή πρωτοβουλία ανέλαβαν τα τέσσερα μεσογειακά κράτη-μέλη της ΕΕ με στόχο την προστασία της ναυτιλιακής ανταγωνιστικότητας απέναντι στους αυστηρούς περιβαλλοντικούς κανονισμούς, ενσωματώνοντας παράλληλα κοινό πρωτόκολλο κυβερνοασφάλειας για τα λιμενικά συστήματα και τις πλατφόρμες διαχείρισης στόλου.
             </p>
             
         <div class="text-xs text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> Προστασία της θέσης της Λεμεσού ως κορυφαίου ναυτιλιακού κέντρου πλοιοδιαχείρισης στην Ευρώπη.
+          <strong class="font-bold">Γιατί με αφορά:</strong> Θωράκιση της θέσης της Λεμεσού ως κορυφαίου ναυτιλιακού κέντρου πλοιοδιαχείρισης και κυβερνοανθεκτικότητας στην Ευρώπη.
         </div>
           </div>
           <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
@@ -328,6 +330,62 @@
           </div>
         </article>
         
+
+        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider uppercase bg-indigo-900/80 text-white">
+                🌍 ΔΙΕΘΝΗ
+              </span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                Επιβεβαιωμένο
+              </span>
+            </div>
+            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
+              [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Νέο ρυθμιστικό πλαίσιο ΕΕ και ΗΠΑ για την κυβερνοασφάλεια υποδομών Cloud και AI
+            </h3>
+            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-3">
+              Συντονισμένη δέσμη οδηγιών ανακοίνωσαν οι αρχές κυβερνοασφάλειας σε Βρυξέλλες και Ουάσιγκτον για την προστασία των υποδομών υπερυπολογιστών και μοντέλων τεχνητής νοημοσύνης από εξελιγμένες κρατικές κυβερνοεπιθέσεις (APTs) και διαρροές δεδομένων.
+            </p>
+            
+        <div class="text-xs text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
+          <strong class="font-bold">Γιατί με αφορά:</strong> Επιβάλλει αυστηρότερα πρότυπα ασφάλειας δεδομένων σε όλες τις επιχειρήσεις τεχνολογίας, fintech και χρηματοοικονομικών που αξιοποιούν AI συστήματα.
+        </div>
+          </div>
+          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">19:30 EEST</span>
+            <a href="https://techcrunch.com" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Financial Times / TechCrunch</span> <span>➔</span></a>
+          </div>
+        </article>
+        
+
+        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider uppercase bg-indigo-900/80 text-white">
+                🌍 ΔΙΕΘΝΗ
+              </span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                Επιβεβαιωμένο
+              </span>
+            </div>
+            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
+              [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Στρατηγική ανθεκτικότητα και αναδρομολόγηση στις εμπορικές οδούς της Ερυθράς Θάλασσας
+            </h3>
+            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-3">
+              Οι διεθνείς ναυτιλιακοί κολοσσοί εδραιώνουν εναλλακτικές ναυτιλιακές οδούς μέσω του Ακρωτηρίου της Καλής Ελπίδας, ενώ ευρωπαϊκές ναυτικές δυνάμεις ενισχύουν την αποστολή Aspides για την προστασία των εμπορικών πλοίων που προσεγγίζουν τη Μεσόγειο.
+            </p>
+            
+        <div class="text-xs text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
+          <strong class="font-bold">Γιατί με αφορά:</strong> Επιμήκυνση χρόνων παράδοσης εισαγόμενων εμπορευμάτων και διατήρηση αυξημένων ναύλων στα λιμάνια της Ανατολικής Μεσογείου.
+        </div>
+          </div>
+          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">19:30 EEST</span>
+            <a href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>BBC News / Lloyd's List</span> <span>➔</span></a>
+          </div>
+        </article>
+        
       </div>
     </section>
     
@@ -344,7 +402,7 @@
       
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
           <!-- Macro Indices & FX -->
-          <div class="lg:col-span-7 card overflow-hidden shadow-xs border border-[var(--rule)]">
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-[var(--rule)]">
             <div class="p-3.5 bg-[var(--paper)] border-b border-[var(--rule)] flex items-center justify-between">
               <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
                 <span>🏛️</span> <span>Κύριοι Δείκτες, Συνάλλαγμα & Crypto</span>
@@ -393,10 +451,10 @@
           <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
             <span>Bitcoin (BTC/USD)</span>
           </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$77.277,80</td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$77.233,01</td>
           <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-1,31%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+              <span>-1,37%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
             </span>
           </td>
           <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Συσσώρευση στην περιοχή των $77k</td>
@@ -406,10 +464,10 @@
           <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
             <span>EUR/USD</span>
           </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">1,1608</td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">1,1613</td>
           <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-0,22%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+              <span>-0,17%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
             </span>
           </td>
           <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ</td>
@@ -419,10 +477,10 @@
           <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
             <span>EUR/GBP</span>
           </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">0,8594</td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">0,8593</td>
           <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+0,09%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+              <span>+0,08%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
             </span>
           </td>
           <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Σταθεροποίηση εντός στενού εύρους διακύμανσης</td>
@@ -445,7 +503,7 @@
           <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
             <span>Brent Crude</span>
           </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$102,42</td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$108,79</td>
           <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
               <span>+1,20%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
@@ -460,7 +518,7 @@
           </div>
 
           <!-- Tech Stocks Watchlist -->
-          <div class="lg:col-span-5 card overflow-hidden shadow-xs border border-indigo-500/30">
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-indigo-500/30">
             <div class="p-3.5 bg-gradient-to-r from-[var(--paper)] to-indigo-950/10 border-b border-[var(--rule)] flex items-center justify-between">
               <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
                 <span>💻</span> <span>Μετοχές Τεχνολογίας (Watchlist)</span>
@@ -509,13 +567,65 @@
           <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
             <span>Alphabet (GOOG)</span>
           </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$332,60</td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$330,39</td>
           <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+0,59%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-0,08%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
             </span>
           </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ανθεκτικότητα και ανοδική διαφοροποίηση στον κλάδο AI</td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Σταθεροποίηση και ανθεκτικότητα στο οικοσύστημα AI</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Apple (AAPL)</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$326,57</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-0,42%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Συσσώρευση ενόψει νέου κύκλου ανακοινώσεων υλικού & AI</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Microsoft (MSFT)</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$492,44</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-0,61%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Διατήρηση υψηλών επιπέδων σε εταιρικό cloud & Azure</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Micron (MU)</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$977,41</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
+              <span>+1,15%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ισχυρή ζήτηση μνημών HBM για επιταχυντές AI</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Meta (META)</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$644,38</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
+              <span>+0,24%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Θετική διαφοροποίηση χάρη στις αποδόσεις διαφήμισης & Llama</td>
         </tr>
         
                 </tbody>
@@ -803,7 +913,7 @@
           Ανατρέξτε στην πρωινή έκδοση (07:30) για το πλήρες ρεπορτάζ Κύπρου, τον υπολογιστή δανείων Euribor, την εβδομαδιαία έκθεση ακινήτων Λεμεσού και τα διεθνή νέα.
         </p>
       </div>
-      <a href="../briefings/2026-09-10.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent)] text-white font-bold text-xs hover:opacity-90 transition shadow">
+      <a href="2026-09-10.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent)] text-white font-bold text-xs hover:opacity-90 transition shadow">
         <span>Άνοιγμα Πρωινού Broadsheet</span> <span>➔</span>
       </a>
     </div>
@@ -812,7 +922,7 @@
 
   <!-- FOOTER -->
   <footer class="mt-16 border-t border-[var(--rule)] bg-[var(--paper-raised)] py-8 px-4 text-xs text-[var(--ink-quiet)]">
-    <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
       <div class="space-y-1">
         <div class="font-bold text-[var(--ink)] font-masthead">THE ORACLE SOVEREIGN</div>
         <div>Confidential Executive Briefing · Night Debrief Edition</div>
@@ -820,9 +930,9 @@
       <div class="flex items-center gap-4 font-mono text-[11px]">
         <a href="../index.html" class="hover:text-[var(--accent)]">Αρχική</a>
         <span>·</span>
-        <a href="../briefings/2026-09-10.html" class="hover:text-[var(--accent)]">Πρωινό Broadsheet</a>
+        <a href="2026-09-10.html" class="hover:text-[var(--accent)]">Πρωινό Broadsheet</a>
         <span>·</span>
-        <a href="../briefings/2026-09-10-midday.html" class="hover:text-[var(--accent)]">Μεσημβρινός Παλμός</a>
+        <a href="2026-09-10-midday.html" class="hover:text-[var(--accent)]">Μεσημβρινός Παλμός</a>
         <span>·</span>
         <button onclick="window.print()" class="hover:text-[var(--accent)]">Εκτύπωση PDF</button>
       </div>
@@ -890,7 +1000,7 @@
         const topEl = document.getElementById('topStoryBody');
         if (topEl) text += topEl.innerText + " ";
         text += "Στις αγορές και το closing bell: ";
-        ['S&P 500 (SPX): 7.591,70, μεταβολή -0,58%.', 'Nasdaq 100 (NDQ): 29.103,50, μεταβολή -1,08%.', 'Bitcoin (BTC/USD): $77.277,80, μεταβολή -1,31%.', 'EUR/USD: 1,1608, μεταβολή -0,22%.', 'EUR/GBP: 0,8594, μεταβολή +0,09%.', 'Bank of Cyprus (BOCH): €10,50, μεταβολή +0,38%.', 'Brent Crude: $102,42, μεταβολή +1,20%.', 'TSMC (TSM): $428,03, μεταβολή -1,68%.', 'NVIDIA (NVDA): $218,36, μεταβολή -2,37%.', 'Alphabet (GOOG): $332,60, μεταβολή +0,59%.'].forEach(m => text += m + " ");
+        ['S&P 500 (SPX): 7.591,70, μεταβολή -0,58%.', 'Nasdaq 100 (NDQ): 29.103,50, μεταβολή -1,08%.', 'Bitcoin (BTC/USD): $77.233,01, μεταβολή -1,37%.', 'EUR/USD: 1,1613, μεταβολή -0,17%.', 'EUR/GBP: 0,8593, μεταβολή +0,08%.', 'Bank of Cyprus (BOCH): €10,50, μεταβολή +0,38%.', 'Brent Crude: $108,79, μεταβολή +1,20%.', 'TSMC (TSM): $428,03, μεταβολή -1,68%.', 'NVIDIA (NVDA): $218,36, μεταβολή -2,37%.', 'Alphabet (GOOG): $330,39, μεταβολή -0,08%.', 'Apple (AAPL): $326,57, μεταβολή -0,42%.', 'Microsoft (MSFT): $492,44, μεταβολή -0,61%.', 'Micron (MU): $977,41, μεταβολή +1,15%.', 'Meta (META): $644,38, μεταβολή +0,24%.'].forEach(m => text += m + " ");
         text += "Στον νυχτερινό κίνδυνο: Παρακολούθηση ασιατικού ανοίγματος στις δύο τα ξημερώματα και περιφερειακού εναέριου χώρου.";
         return text;
       }

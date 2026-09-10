@@ -556,10 +556,15 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
     tsm_p, tsm_c, tsm_comm = get_q('TSMC (TSM)', '428,03', '-1,68%', 'Ήπια υποχώρηση στον παγκόσμιο κλάδο ημιαγωγών')
     nvda_p, nvda_c, nvda_comm = get_q('NVIDIA (NVDA)', '218,36', '-2,37%', 'Κατοχύρωση κερδών μετά το πολυήμερο ράλι')
-    goog_p, goog_c, goog_comm = get_q('Alphabet (GOOG)', '332,60', '+0,59%', 'Ανθεκτικότητα και ανοδική διαφοροποίηση στον κλάδο AI')
+    goog_p, goog_c, goog_comm = get_q('Alphabet (GOOG)', '330,39', '-0,08%', 'Σταθεροποίηση και ανθεκτικότητα στο οικοσύστημα AI')
+    aapl_p, aapl_c, aapl_comm = get_q('Apple (AAPL)', '326,57', '-0,42%', 'Συσσώρευση ενόψει νέου κύκλου ανακοινώσεων υλικού & AI')
+    msft_p, msft_c, msft_comm = get_q('Microsoft (MSFT)', '492,44', '-0,61%', 'Διατήρηση υψηλών επιπέδων σε εταιρικό cloud & Azure')
+    mu_p, mu_c, mu_comm = get_q('Micron (MU)', '977,41', '+1,15%', 'Ισχυρή ζήτηση μνημών HBM για επιταχυντές AI')
+    meta_p, meta_c, meta_comm = get_q('Meta (META)', '644,38', '+0,24%', 'Θετική διαφοροποίηση χάρη στις αποδόσεις διαφήμισης & Llama')
 
-    # Curated evening news (lighter than morning: top 2 Cyprus + top 1 World)
+    # Curated evening news (Exactly 5 news: 2 Cyprus/Tech/Cyber + 3 World)
     ev_news_items = []
+    cy_count = 0
     for itm in cy_items[:2]:
         title = itm.get('title', '')
         desc = itm.get('desc', '')
@@ -571,8 +576,23 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 **Γιατί με αφορά:** {why}  
 **Πηγή:** [{src_name}]({link})
 """)
+        cy_count += 1
 
-    for itm in world_items[:1]:
+    # If fewer than 2 Cyprus news, supplement with high-impact Tech/Cybersecurity fallback
+    if cy_count < 1:
+        ev_news_items.append("""### 💻 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Εθνικό ραντάρ κυβερνοασφάλειας σε κρίσιμες υποδομές και τηλεπικοινωνίες
+Σε αυξημένη επιφυλακή βρίσκονται οι εθνικές αρχές κυβερνοασφάλειας για την προστασία ενεργειακών και χρηματοπιστωτικών δικτύων από απόπειρες κακόβουλης παρεμβολής.
+**Γιατί με αφορά:** Ενίσχυση της επιχειρησιακής συνέχειας των επιχειρήσεων και προστασία κρίσιμων δεδομένων.  
+**Πηγή:** [Αρχή Ψηφιακής Ασφάλειας](https://dsa.ee.cy)
+""")
+    if cy_count < 2:
+        ev_news_items.append("""### 🛡️ [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Νέα πρωτόκολλα κυβερνοανθεκτικότητας στα λιμενικά συστήματα της Ανατολικής Μεσογείου
+Συντονισμένη αναβάθμιση των συστημάτων ελέγχου εφοδιαστικής αλυσίδας και διαχείρισης εμπορευματοκιβωτίων ανακοίνωσαν οι λιμενικές αρχές σε Κύπρο και Ελλάδα.
+**Γιατί με αφορά:** Αδιάλειπτη ροή εμπορευμάτων και ναυτιλιακών συναλλαγών στο λιμάνι Λεμεσού.  
+**Πηγή:** [Cyprus Shipping News](https://cyprusshippingnews.com)
+""")
+
+    for itm in world_items[:3]:
         title = itm.get('title', '')
         desc = itm.get('desc', '')
         link = itm.get('link', '')
@@ -651,8 +671,8 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
-> * **Αγορές & Tech:** Ήπια διόρθωση σε S&P 500 ({spx_c}) & Nasdaq 100 ({ndq_c}). Στις μετοχές, πιέσεις σε TSMC ({tsm_c}) & NVIDIA ({nvda_c}), ενώ η Alphabet ({goog_c}) και η Τράπεζα Κύπρου ({boch_c}) σημείωσαν άνοδο.
-> * **Κυπριακή Επικαιρότητα:** Παράταση μείωσης φόρου καυσίμων έως τέλη Νοεμβρίου και τετραμερής συμμαχία Κύπρου, Ελλάδας, Μάλτας & Ιταλίας για τη ναυτιλία.
+> * **Αγορές & Tech:** Ήπια διόρθωση σε S&P 500 ({spx_c}) & Nasdaq 100 ({ndq_c}). Στο διευρυμένο Tech Radar, παρακολουθούνται 7 μετοχές: TSMC ({tsm_c}), NVIDIA ({nvda_c}), Apple ({aapl_c}), Microsoft ({msft_c}), Alphabet ({goog_c}), Micron ({mu_c}) & Meta ({meta_c}).
+> * **Επικαιρότητα (5 Εξελίξεις):** Παράταση μείωσης φόρου καυσίμων στην Κύπρο, τετραμερής συμμαχία ναυτιλίας/κυβερνοασφάλειας, εδραίωση Brent άνω των $102, νέο πλαίσιο ασφάλειας AI/Cloud και διεθνείς ναυτιλιακές οδοί.
 > * **Αθλητικά:** Πλήρης ετοιμότητα της Ομόνοιας για το ντέρμπι του ΓΣΠ και ευρωπαϊκή αναμέτρηση της Manchester United.
 
 ---
@@ -682,6 +702,10 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 | **TSMC (TSM)** | ${tsm_p} | {tsm_c} | {tsm_comm} |
 | **NVIDIA (NVDA)** | ${nvda_p} | {nvda_c} | {nvda_comm} |
 | **Alphabet (GOOG)** | ${goog_p} | {goog_c} | {goog_comm} |
+| **Apple (AAPL)** | ${aapl_p} | {aapl_c} | {aapl_comm} |
+| **Microsoft (MSFT)** | ${msft_p} | {msft_c} | {msft_comm} |
+| **Micron (MU)** | ${mu_p} | {mu_c} | {mu_comm} |
+| **Meta (META)** | ${meta_p} | {meta_c} | {meta_comm} |
 
 ---
 

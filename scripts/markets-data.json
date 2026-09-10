@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T23:39:53.565048",
+  "fetched_at": "2026-09-10T23:50:22.314231",
   "quotes": {
     "S&P 500 (SPX)": {
       "symbol": "^GSPC",
@@ -15,8 +15,8 @@
     },
     "Bitcoin (BTC/USD)": {
       "symbol": "BTC-USD",
-      "price": 77248.13,
-      "change": -1.3328498419499129,
+      "price": 77233.01,
+      "change": -1.3521622487407399,
       "date": "10/09/2026"
     },
     "EUR/USD": {
@@ -29,6 +29,18 @@
       "symbol": "EURGBP=X",
       "price": 0.8593,
       "change": 0.0698730639338458,
+      "date": "10/09/2026"
+    },
+    "Bank of Cyprus (BOCH)": {
+      "symbol": "BOCHGR.AT",
+      "price": 10.5,
+      "change": 0.9615384615384581,
+      "date": "10/09/2026"
+    },
+    "Brent Crude": {
+      "symbol": "BZ=F",
+      "price": 108.79,
+      "change": 7.4893785199091125,
       "date": "10/09/2026"
     },
     "TSMC (TSM)": {
@@ -49,16 +61,28 @@
       "change": 0.6120957427370701,
       "date": "10/09/2026"
     },
-    "Bank of Cyprus (BOCH)": {
-      "symbol": "BOCHGR.AT",
-      "price": 10.5,
-      "change": 0.9615384615384581,
+    "Apple (AAPL)": {
+      "symbol": "AAPL",
+      "price": 326.57,
+      "change": 3.5612354918500726,
       "date": "10/09/2026"
     },
-    "Brent Crude": {
-      "symbol": "BZ=F",
-      "price": 108.42,
-      "change": 7.12380199585022,
+    "Microsoft (MSFT)": {
+      "symbol": "MSFT",
+      "price": 492.44,
+      "change": 0.1606834129970549,
+      "date": "10/09/2026"
+    },
+    "Micron (MU)": {
+      "symbol": "MU",
+      "price": 977.41,
+      "change": -4.899928972435468,
+      "date": "10/09/2026"
+    },
+    "Meta (META)": {
+      "symbol": "META",
+      "price": 644.38,
+      "change": -1.4242224907831018,
       "date": "10/09/2026"
     }
   },
