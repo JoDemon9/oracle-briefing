@@ -6,7 +6,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>THE ORACLE SOVEREIGN — 7 Σεπτεμβρίου 2026</title>
+  <title>THE ORACLE SOVEREIGN — 🌙 Night Debrief — 10 Σεπτεμβρίου 2026</title>
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = { darkMode: 'class' };
@@ -32,406 +32,38 @@
       --accent: #8a5320;
       --up: #1f6b3f;
       --down: #a3282b;
-      --s1: 4px;
-      --s2: 8px;
-      --s3: 12px;
-      --s4: 16px;
-      --s5: 24px;
-      --s6: 32px;
-      --s7: 48px;
-      --s8: 64px;
-      --r-sm: 4px;
       --r-md: 8px;
-
-      /* Compatible fallbacks */
-      --paper-bg: var(--paper);
-      --paper-card: var(--paper-raised);
-      --paper-border: var(--rule);
-      --ink-dark: var(--ink);
-      --ink-muted: var(--ink-quiet);
-      --accent-gold: var(--accent);
-      --accent-blue: var(--accent);
-      --accent-red: var(--down);
-      --accent-green: var(--up);
     }
 
     .dark {
       --paper: #14120e;
       --paper-raised: #1c1a15;
-      --rule: #33302a;
-      --rule-strong: #4a463d;
-      --ink: #f4f1e8;
-      --ink-body: #ddd8cc;
-      --ink-quiet: #948d7e;
-      --accent: #d69a5c;
-      --up: #56b37c;
-      --down: #e0736f;
-
-      /* Compatible fallbacks */
-      --paper-bg: var(--paper);
-      --paper-card: var(--paper-raised);
-      --paper-border: var(--rule);
-      --ink-dark: var(--ink);
-      --ink-muted: var(--ink-quiet);
-      --accent-gold: var(--accent);
-      --accent-blue: var(--accent);
-      --accent-red: var(--down);
-      --accent-green: var(--up);
+      --rule: #2e2920;
+      --rule-strong: #4a4233;
+      --ink: #ede8dc;
+      --ink-body: #cfc8ba;
+      --ink-quiet: #8c8373;
+      --accent: #d4954b;
+      --up: #43a047;
+      --down: #e53935;
     }
 
     body {
-      font-family: 'Newsreader', Georgia, serif;
       background-color: var(--paper);
       color: var(--ink-body);
-      transition: background-color 0.2s ease, color 0.2s ease;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
 
-    /* Typographical scale */
-    .t-masthead {
-      font-family: 'Cinzel', serif;
-      font-weight: 900;
-      font-size: clamp(2.4rem, 7vw, 4.4rem);
-      line-height: 0.95;
-      letter-spacing: .06em;
-    }
-    .t-section {
-      font-family: 'Newsreader', Georgia, serif;
-      font-weight: 700;
-      font-size: 1.55rem;
-      line-height: 1.15;
-      letter-spacing: -.01em;
-      color: var(--ink);
-    }
-    .t-lead {
-      font-family: 'Newsreader', Georgia, serif;
-      font-weight: 700;
-      font-size: clamp(1.6rem, 3vw, 2.3rem);
-      line-height: 1.18;
-      letter-spacing: -.02em;
-      color: var(--ink);
-    }
-    .t-title {
-      font-family: 'Newsreader', Georgia, serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      line-height: 1.28;
-      letter-spacing: -.01em;
-      color: var(--ink);
-    }
-    .t-body {
-      font-family: 'Newsreader', Georgia, serif;
-      font-weight: 400;
-      font-size: 1.0625rem;
-      line-height: 1.62;
-      color: var(--ink-body);
-      max-width: 68ch;
-    }
-    .t-body-sm {
-      font-family: 'Newsreader', Georgia, serif;
-      font-weight: 400;
-      font-size: .95rem;
-      line-height: 1.6;
-      color: var(--ink-body);
-    }
-    .t-meta {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 500;
-      font-size: .75rem;
-      line-height: 1.4;
-      color: var(--ink-quiet);
-    }
-    .t-num {
-      font-variant-numeric: tabular-nums;
-      font-feature-settings: "tnum";
-    }
+    .font-masthead { font-family: 'Cinzel', serif; }
+    .font-editorial { font-family: 'Newsreader', serif; }
+    .t-masthead { font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }
+    .t-section { font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }
+    .card { background-color: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--r-md); }
 
-    /* Cards */
-    .card, .editorial-card {
-      background-color: var(--paper-raised);
-      border: 1px solid var(--rule);
-      border-radius: var(--r-md);
-      transition: border-color 0.2s ease;
-    }
-    .card:hover, .editorial-card:hover {
-      border-color: var(--rule-strong);
-    }
-    .card--hero {
-      background-color: var(--paper-raised);
-      border: 1px solid var(--rule);
-      border-radius: var(--r-md);
-      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Drop cap for lead story */
-    .lead-body::first-letter {
-      font-family: 'Cinzel', serif;
-      font-size: 3.4rem;
-      line-height: 0.8;
-      float: left;
-      margin-top: 0.12em;
-      margin-right: 0.18em;
-      margin-bottom: -0.05em;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    /* Focus & Accessibility */
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-
-    /* ============================================== */
-    /* BESPOKE BROADSHEET PRINT / PDF EXPORT          */
-    /* Financial Times / NYT quality broadsheet layout */
-    /* ============================================== */
-    @media print {
-      @page {
-        size: A4;
-        margin: 1.2cm 1.5cm;
-      }
-
-      * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
-
-      body {
-        background-color: #ffffff !important;
-        color: #0a0a0a !important;
-        font-size: 9.5pt !important;
-        line-height: 1.45 !important;
-        font-family: 'Newsreader', 'Georgia', 'Times New Roman', serif !important;
-      }
-
-      /* Hide all interactive / digital-only elements */
-      .ticker-wrap,
-      nav,
-      #mainNav,
-      #themeToggle,
-      #themeToggleNav,
-      #archiveSearch,
-      #searchResults,
-      button,
-      input[type="range"],
-      a[href*="youtube.com"],
-      .print\:hidden,
-      .no-print,
-      footer {
-        display: none !important;
-      }
-
-      /* Force show all expandable content */
-      details {
-        display: block !important;
-      }
-      details summary {
-        display: none !important;
-      }
-      details > div {
-        display: block !important;
-        border: none !important;
-        padding: 0 !important;
-        margin-top: 0.3em !important;
-      }
-
-      /* Broadsheet masthead */
-      .font-masthead {
-        font-size: 28pt !important;
-        font-weight: 900 !important;
-        letter-spacing: -0.02em !important;
-        border-bottom: 3pt double #000 !important;
-        padding-bottom: 0.3em !important;
-        margin-bottom: 0.5em !important;
-        text-align: center !important;
-      }
-
-      /* Section headers — broadsheet rules */
-      .t-section {
-        font-size: 13pt !important;
-        font-weight: 800 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.08em !important;
-        border-bottom: 2pt solid #000 !important;
-        padding-bottom: 0.15em !important;
-        margin-bottom: 0.6em !important;
-        page-break-after: avoid !important;
-      }
-
-      /* Card layout — clean flat broadsheet panels */
-      .card, .card--hero, .editorial-card {
-        border: none !important;
-        border-bottom: 0.5pt solid #ccc !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        padding: 0.4em 0 !important;
-        margin-bottom: 0.5em !important;
-        page-break-inside: avoid !important;
-        background: transparent !important;
-      }
-
-      /* Headlines in print */
-      .t-lead {
-        font-size: 16pt !important;
-        font-weight: 800 !important;
-        line-height: 1.15 !important;
-      }
-      .t-title {
-        font-size: 12pt !important;
-        font-weight: 700 !important;
-        line-height: 1.2 !important;
-      }
-
-      /* Body text — newspaper column style */
-      .t-body, .t-body-sm {
-        font-size: 9pt !important;
-        line-height: 1.4 !important;
-        text-align: justify !important;
-        hyphens: auto !important;
-      }
-
-      /* Meta / source lines */
-      .t-meta {
-        font-size: 7.5pt !important;
-        color: #666 !important;
-      }
-
-      /* Links — print as black, no decoration */
-      a {
-        text-decoration: none !important;
-        color: #0a0a0a !important;
-      }
-
-      /* Grid columns → stacked for print */
-      .grid {
-        display: block !important;
-      }
-
-      /* Images — constrained, captioned */
-      img {
-        max-height: 160px !important;
-        width: auto !important;
-        margin: 0 auto 0.3em !important;
-        display: block !important;
-        border: 0.5pt solid #ddd !important;
-      }
-
-      /* Dashboard table compact */
-      table {
-        font-size: 8pt !important;
-        border-collapse: collapse !important;
-      }
-      th, td {
-        padding: 2pt 4pt !important;
-        border-bottom: 0.5pt solid #ddd !important;
-      }
-
-      /* Sports cards — compact inline */
-      .bg-gradient-to-br {
-        background: transparent !important;
-        color: #000 !important;
-      }
-
-      /* Weather — inline compact */
-      #weatherGrid {
-        display: block !important;
-      }
-
-      /* Page breaks */
-      h2 {
-        page-break-after: avoid !important;
-      }
-      article {
-        page-break-inside: avoid !important;
-      }
-
-      /* Add print footer with branding */
-      body::after {
-        content: "THE ORACLE SOVEREIGN — Confidential Executive Briefing — © 2026";
-        display: block;
-        text-align: center;
-        font-size: 7pt;
-        color: #999;
-        margin-top: 1cm;
-        border-top: 0.5pt solid #ccc;
-        padding-top: 0.3em;
-      }
-    }
-
-    .ticker-wrap {
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .ticker-content {
-      display: inline-block;
-      animation: tickerAnimation 40s linear infinite;
-    }
-
-    .ticker-wrap:hover .ticker-content {
-      animation-play-state: paused;
-    }
-
-    @keyframes tickerAnimation {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .ticker-content { animation: none; }
-      body { transition: none; }
-    }
-    [id] { scroll-margin-top: 5rem; }
-    @media (max-width: 640px) { [id] { scroll-margin-top: 5rem; } }
-
-    /* Smart Navigation Header (Headroom Auto-hide) */
-    #mainNav {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
-      will-change: transform;
-    }
-    #mainNav.nav-hidden {
-      transform: translateY(-100%);
-      box-shadow: none !important;
-    }
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    details > summary {
-      list-style: none;
-    }
-    details > summary::-webkit-details-marker {
-      display: none;
-    }
-    details[open] summary .expand-icon {
-      transform: rotate(180deg);
-    }
-
-    /* Executive 60-Second Scan Mode */
-    body.scan-mode article:not(:first-of-type),
-    body.scan-mode #world,
-    body.scan-mode #sports,
-    body.scan-mode #portfolio,
-    body.scan-mode #developments,
-    body.scan-mode #rates-and-tools,
-    body.scan-mode details.depth,
-    body.scan-mode #houseSearchSection,
-    body.scan-mode .ticker-wrap {
-      display: none !important;
-    }
-    body.scan-mode #top-story {
-      border: 2px solid var(--accent);
-      border-radius: var(--r-md);
-      padding: 1.25rem;
-      background: var(--paper-raised);
-    }
+    .ticker-wrap { overflow: hidden; white-space: nowrap; }
+    .ticker-content { display: inline-block; animation: tickerAnimation 40s linear infinite; }
+    .ticker-wrap:hover .ticker-content { animation-play-state: paused; }
+    @keyframes tickerAnimation { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -441,1348 +73,552 @@
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex flex-wrap items-center gap-3">
         <span id="freshness" data-generated="2026-09-10T19:30:00+03:00"
-              class="inline-flex items-center px-2 py-0.5 rounded t-meta font-semibold"></span>
+              class="inline-flex items-center px-2 py-0.5 rounded font-mono font-semibold text-[11px] bg-amber-500/10 text-amber-800 dark:text-amber-300">
+          🌙 19:30 · 10 Σεπτεμβρίου 2026
+        </span>
 
-        <script>
-        (function () {
-          const el = document.getElementById('freshness');
-          const gen = new Date(el.dataset.generated);
-          const paint = () => {
-            const mins = Math.round((Date.now() - gen) / 60000);
-            let txt, cls;
-            if (mins < 90) { txt = `● ΦΡΕΣΚΟ · πριν ${mins}′`; cls = 'bg-[var(--up)]/15 text-[var(--up)] border border-[var(--up)]/30'; }
-            else if (mins < 720) { txt = `◐ πριν ${Math.round(mins / 60)} ώρες`; cls = 'bg-[var(--accent)]/15 text-[var(--accent)] border border-[var(--accent)]/30'; }
-            else { txt = `○ ΑΡΧΕΙΟ · ${gen.toLocaleDateString('el-CY')}`; cls = 'bg-[var(--rule)]/50 text-[var(--ink-quiet)]'; }
-            el.textContent = txt;
-            el.className = 'inline-flex items-center px-2 py-0.5 rounded t-meta font-semibold ' + cls;
-          };
-          paint(); setInterval(paint, 60000);
-        })();
-        </script>
-        <span class="t-meta text-[var(--ink-quiet)]">7 Σεπτεμβρίου 2026</span>
-        <span class="hidden sm:inline text-[var(--ink-quiet)]">·</span>
-        <span class="hidden sm:inline t-meta text-[var(--ink-quiet)]">19:30 ώρα Κύπρου (EEST)</span>
-        
-    <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
-      <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-      <a href="index.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
-      <a href="briefings/2026-09-10-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">☀️ 13:30 Μεσημέρι</a>
-      <a href="briefings/2026-09-10-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">🌙 19:30 Απόγευμα</a>
-      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
-        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
-      </button>
-    </div>
-    
+        <!-- Edition Switcher -->
+        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+          <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
+          <a href="briefings/2026-09-10.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
+          <a href="briefings/2026-09-10-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">☀️ 13:30 Μεσημέρι</a>
+          <a href="briefings/2026-09-10-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">🌙 19:30 Απόγευμα</a>
+          <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
+          </button>
+        </div>
       </div>
-      <div class="flex items-center gap-4 t-meta text-[var(--ink-quiet)]">
-        
-    <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
-      <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
-      <span>·</span>
-      <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span> <span id="statusLON" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
-      <span>·</span>
-      <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span> <span id="statusNYC" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
-      <span>·</span>
-      <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span> <span id="statusTYO" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
-    </div>
-    
-        <span>📍 Λεμεσός</span>
-        <span>⏱️ ~4'</span>
-        <button id="themeToggle" class="px-2.5 py-1 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition t-meta" aria-pressed="false" aria-label="Εναλλαγή θέματος">
-          🌓 Θέμα
-        </button>
+
+      <!-- Global Clocks Bar -->
+      <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
+        <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span></span>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="px-2 py-1 rounded border border-[var(--rule)] text-xs hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος">🌓</button>
       </div>
     </div>
   </div>
 
   <!-- MASTHEAD -->
-  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 text-center bg-[var(--paper-raised)]">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex justify-between items-center t-meta uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
+  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 bg-[var(--paper-raised)]">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="flex justify-between items-center text-xs uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
         <div>ΕΤΟΣ 2026 · DAILY BRIEFING</div>
-        <div class="font-bold text-[var(--accent)]">ΕΜΠΙΣΤΕΥΤΙΚΟ BRIEFING</div>
+        <div class="font-bold text-[var(--accent)]">🌙 NIGHT DEBRIEF & CLOSING BELL</div>
         <div>ONE-READER EDITION</div>
       </div>
 
-      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase text-center">
+      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase">
         THE ORACLE SOVEREIGN
       </h1>
-      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto text-center">
-        Ημερήσια Εφημερίδα Στρατηγικής, Αγορών, Κυπριακής Οικονομίας & Διεθνών Εξελίξεων
+      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto">
+        Απογευματινή Επιτελική Ανασκόπηση, Τελικά Κλεισίματα Αγορών, Αθλητικό Πρόγραμμα & Νυχτερινό Ραντάρ
       </p>
 
-      <div class="flex flex-wrap justify-center items-center gap-3 mt-5 pt-3 border-t border-[var(--rule)] t-meta text-[var(--ink-quiet)]">
-        <span>🇨🇾 Κύπρος & Ακίνητα</span>
+      <div class="flex flex-wrap justify-center items-center gap-3 mt-4 pt-3 border-t border-[var(--rule)] text-xs text-[var(--ink-quiet)] font-mono">
+        <span>📅 10 Σεπτεμβρίου 2026</span>
         <span>·</span>
-        <span>🌍 Γεωπολιτική</span>
+        <span>⏰ 19:30 ώρα Κύπρου</span>
         <span>·</span>
-        <span>📊 Αγορές & Euribor</span>
+        <span>⏱️ 4' ανάγνωση</span>
         <span>·</span>
-        <span>⚽ Ομόνοια, Clubs & Formula 1</span>
-        <span>·</span>
-        <span>🌤️ Καιρός Λεμεσού</span>
+        <a href="index.html" class="text-[var(--accent)] hover:underline font-bold">🏛️ Πύλη The Oracle</a>
       </div>
     </div>
   </header>
 
   <!-- LIVE MARKET TICKER -->
-  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] t-meta ticker-wrap">
+  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
     <div class="ticker-content space-x-8 font-mono">
-       
+      <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,50</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,38%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500:</span> <span class="text-[var(--ink-body)]">7.590,37</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,48%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$102,42</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,50</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,38%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500:</span> <span class="text-[var(--ink-body)]">7.590,37</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,48%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$102,42</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span>
     </div>
   </div>
 
-  
-    <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
-    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] t-meta">
-      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-        <div class="flex items-center gap-2 flex-shrink-0">
-          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
-            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
-          </span>
-        </div>
-        <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
-          <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
-        </div>
-        <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
-          <span>Προβολή Όλων (50+)</span> <span>➔</span>
-        </button>
+  <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
+  <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] text-xs">
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
+        </span>
       </div>
+      <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
+        <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
+      </div>
+      <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
+        <span>Προβολή Όλων (50+)</span> <span>➔</span>
+      </button>
     </div>
-    
+  </div>
 
-  <!-- NAVIGATION & INSTANT SEARCH -->
-  <nav id="mainNav" class="bg-[var(--paper-raised)] border-b border-[var(--rule)] sticky top-0 z-40 px-3 sm:px-4 py-2 shadow-xs backdrop-blur-md bg-opacity-95" aria-label="Κύρια πλοήγηση">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
-      <div class="flex items-center gap-1.5 t-meta font-medium overflow-x-auto no-scrollbar py-0.5 max-w-full flex-nowrap sm:flex-wrap">
-        <a href="#top-story" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--accent)] text-white font-semibold transition">⭐ Πρώτο Θέμα</a>
-        <a href="#cyprus" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-semibold">🇨🇾 Κύπρος</a>
-        <a href="#world" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🌍 Διεθνή</a>
-        <a href="#sports" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium">⚽ Αθλητικά & F1</a>
-        <a href="#markets" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">💰 Αγορές</a>
-        <a href="#rates-and-tools" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🏦 Επιτόκια & Dashboard</a>
-        <a href="#portfolio" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🎯 Ο Φάκελός μου</a>
-        <a href="house-search/latest.html" target="_blank" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium flex items-center gap-1">🏠 <span>Ακίνητα</span></a>
-        <a href="#weather" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🌤️ Καιρός</a>
-        <a href="#deadlines" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">📅 Προθεσμίες</a>
-      </div>
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
 
-      <!-- Search Input Container with Instant Dropdown & Actions -->
-      <div class="relative flex items-center gap-1.5 flex-shrink-0 ml-auto sm:ml-0">
-        <button id="scanModeToggle" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--accent)] font-semibold transition flex items-center gap-1" title="Εναλλαγή σε 60-Second Scan">
-          <span>⚡</span> <span class="hidden md:inline">60″ Scan</span>
-        </button>
-        <button onclick="window.print()" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition flex items-center gap-1" title="Εκτύπωση ή Αποθήκευση σε Broadsheet PDF" aria-label="Εκτύπωση σελίδας">
-          <span>📄</span> <span class="hidden md:inline">PDF Broadsheet</span>
-        </button>
-        <div class="relative">
-          <label for="archiveSearch" class="sr-only">Αναζήτηση στο αρχείο</label>
-          <input type="text" id="archiveSearch" placeholder="🔍 Αναζήτηση στο αρχείο..." 
-                 class="t-meta px-3 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] w-32 sm:w-56 focus:w-44 sm:focus:w-60 transition-all shadow-xs">
-          <!-- Live Search Results Dropdown -->
-          <div id="searchResults" class="hidden absolute right-0 top-full mt-2 w-80 sm:w-96 max-h-96 overflow-y-auto bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl shadow-xl z-50 p-2 text-xs space-y-2">
-          </div>
-        </div>
-        <button id="themeToggleNav" class="t-meta px-2 py-1.5 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος" aria-label="Εναλλαγή θέματος">
-          🌓
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MAIN CONTAINER (NEWS-FIRST HIERARCHY) -->
-  <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
-
-    <!-- 🎙️ THE SOVEREIGN EXECUTIVE AUDIO BRIEFING -->
+    <!-- 🎙️ AUDIO BRIEFING PLAYER -->
     <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
       <div class="flex items-center gap-3.5">
         <button id="audioPlayBtn" class="w-11 h-11 rounded-full bg-[var(--accent)] text-white flex items-center justify-center shadow hover:opacity-90 transition font-bold text-lg flex-shrink-0" aria-label="Αναπαραγωγή ηχητικής σύνοψης">
           ▶
         </button>
         <div>
-          <div class="t-meta font-bold text-[var(--ink)] flex items-center gap-2">
-            <span>🎙️ Ακρόαση Πρωινής Σύνοψης (The Sovereign Audio Briefing)</span>
+          <div class="text-xs font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>🎙️ Ακρόαση Απογευματινής Σύνοψης (The Sovereign Audio Debrief)</span>
             <span id="audioLiveBadge" class="hidden text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">LIVE</span>
           </div>
-          <div id="audioStatusText" class="t-meta text-[var(--ink-quiet)]">
-            Επιτελική σύνοψη ~2 λεπτών · Πατήστε Play για φωνητική ανάγνωση
+          <div id="audioStatusText" class="text-xs text-[var(--ink-quiet)]">
+            Επιτελική σύνοψη κλεισίματος ~1.5 λεπτού · Πατήστε Play για φωνητική ανάγνωση
           </div>
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <button id="audioSpeedBtn" class="t-meta font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
+        <button id="audioSpeedBtn" class="text-xs font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
           1.0x
         </button>
-        <button id="audioStopBtn" class="t-meta px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
+        <button id="audioStopBtn" class="text-xs px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
           ⏹ Διακοπή
         </button>
       </div>
     </div>
 
-    <!-- ==================== ⭐ 1. ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ (HERO NEWS) ==================== -->
+    <!-- ==================== 🏁 1. ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ ==================== -->
     <section id="top-story" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>⭐</span> <span>Το Θέμα της Ημέρας</span>
+          <span>🏁</span> <span>Το Αποτύπωμα της Ημέρας</span>
         </h2>
-        <span class="t-meta ml-auto uppercase">ΚΥΠΡΟΣ</span>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">EXECUTIVE RECAP</span>
       </div>
 
-      <div class="card--hero overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
-          
-          <!-- Image Column -->
-          <div class="lg:col-span-6 relative min-h-[340px] bg-[var(--paper)]">
-            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" 
-                 alt="" 
-                 class="w-full h-full object-cover object-center"
-                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80';">
-            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-4 text-white">
-              <span class="bg-[var(--accent)] font-semibold px-2 py-0.5 rounded t-meta uppercase tracking-wider text-white">ΚΥΠΡΟΣ</span>
-              <p class="mt-1 font-medium leading-snug t-meta"></p>
+      <div class="card overflow-hidden shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
+          <div class="md:col-span-5 relative min-h-[220px] bg-[var(--paper)]">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" 
+                 alt="Evening Capital Recap" 
+                 class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider bg-[var(--accent)] text-white font-bold">
+                ΑΠΟΓΕΥΜΑΤΙΝΗ ΣΥΝΘΕΣΗ
+              </span>
             </div>
           </div>
-
-          <!-- Text Column -->
-          <div class="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between">
+          <div class="md:col-span-7 p-6 sm:p-7 flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-2 t-meta uppercase tracking-wider mb-2 text-[var(--accent)] font-semibold">
-                <span>Κορυφαία Εξέλιξη</span>
+              <div class="flex items-center gap-2 text-xs uppercase tracking-wider mb-2 text-[var(--accent)] font-semibold">
+                <span>Τελική Αποτίμηση</span>
                 <span>·</span>
-                <span class="text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
+                <span class="text-[var(--ink-quiet)] font-mono">10 Σεπτεμβρίου 2026</span>
               </div>
-
-              <h3 class="t-lead mb-4">
-                
+              <h3 class="font-editorial text-2xl font-bold text-[var(--ink)] mb-3 leading-snug">
+                Ημερήσιο Οικονομικό & Στρατηγικό Αποτύπωμα
               </h3>
-
-              <p class="t-body lead-body mb-4 leading-relaxed">
-                
+              <p id="topStoryBody" class="font-editorial text-base sm:text-lg text-[var(--ink-body)] leading-relaxed">
+                Η σημερινή ημέρα έκλεισε με αξιοσημείωτη κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των ενεργειακών δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά.
               </p>
-
-              <details class="depth mt-3 border-t border-[var(--rule)] pt-2.5">
-                <summary class="cursor-pointer flex items-center justify-between t-meta font-semibold text-[var(--accent)] hover:underline py-1">
-                  <span>Ανάλυση & Αντίλογος</span>
-                  <span class="expand-icon transition-transform duration-200 text-[10px]">▼</span>
-                </summary>
-                <div class="mt-2.5 t-meta text-[var(--ink-body)] space-y-2 bg-[var(--paper)] p-4 rounded border border-[var(--rule)] leading-relaxed">
-                  <p>
-                    <strong class="text-[var(--ink)]">Ο Αντίλογος:</strong> Δεν καταγράφηκε ουσιαστικός αντίλογος.
-                  </p>
-                </div>
-              </details>
             </div>
-
-            <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--rule)] mt-4">
-              <div class="flex items-center gap-2 t-meta">
-                <span class="text-[var(--ink-quiet)]">Πηγές:</span>
-                
-              </div>
-              <span class="t-meta text-[var(--ink-quiet)] font-mono">7 Σεπτεμβρίου 2026</span>
+            <div class="pt-4 mt-4 border-t border-[var(--rule)] flex items-center justify-between text-xs text-[var(--ink-quiet)] font-mono">
+              <span>Ώρα Καταγραφής: 19:30 EEST</span>
+              <span>The Oracle Sovereign</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ==================== 🇨🇾 2. ΚΥΠΡΟΣ (NEWS LEAD) ==================== -->
-    <section id="cyprus" class="scroll-mt-24">
+    <!-- ==================== 🔔 2. CLOSING BELL & ΑΓΟΡΕΣ ==================== -->
+    <section id="closing-bell" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>🇨🇾</span> <span>Κύπρος</span>
+          <span>🔔</span> <span>Closing Bell & Αγορές</span>
         </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-      </div>
-    </section>
-
-    <!-- ==================== 🌍 3. ΔΙΕΘΝΗ ==================== -->
-    <section id="world" class="scroll-mt-24">
-      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🌍</span> <span>Διεθνή</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-      </div>
-    </section>
-
-    <!-- ==================== ⚽ 4. ΑΘΛΗΤΙΚΑ & FORMULA 1 ==================== -->
-    <section id="sports" class="scroll-mt-24 my-8 sm:my-12">
-      <div class="flex items-center gap-2 mb-6 pb-3 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🏆</span> <span>Αθλητικός Παλμός & Formula 1</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8">
-        
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-emerald-800/40 dark:border-emerald-700/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-emerald-900 via-green-900 to-emerald-950 p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">☘️</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ</h3>
-                </div>
-                <span class="t-meta uppercase tracking-wider px-3 py-1 rounded-full text-xs bg-emerald-950/70 text-emerald-200 border border-emerald-500/30">
-                  CYPRUS LEAGUE & EUROPA LEAGUE
-                </span>
-              </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
-              </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Δείτε τα Highlights (ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ)
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-              
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
-            
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.omonoiafc.com.cy/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            OmonoiaFC.com.cy
-          </a>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-red-900/40 dark:border-red-800/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-red-950 via-zinc-950 to-black p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">🔴</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">MANCHESTER UNITED</h3>
-                </div>
-                <span class="t-meta uppercase tracking-wider px-3 py-1 rounded-full text-xs bg-red-950/70 text-red-200 border border-red-500/30">
-                  PREMIER LEAGUE
-                </span>
-              </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Manchester+United+highlights+2026" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
-              </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Δείτε τα Highlights (MANCHESTER UNITED)
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-              
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
-            
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.manutd.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            ManUtd.com
-          </a>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-blue-900/40 dark:border-blue-800/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-slate-950 via-blue-950 to-indigo-950 p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">👑</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">REAL MADRID</h3>
-                </div>
-                <span class="t-meta uppercase tracking-wider px-3 py-1 rounded-full text-xs bg-blue-950/70 text-blue-200 border border-blue-500/30">
-                  LA LIGA & CHAMPIONS LEAGUE
-                </span>
-              </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
-              </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Δείτε τα Highlights (REAL MADRID)
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-              
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
-            
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.realmadrid.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            RealMadrid.com
-          </a>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-red-900/40 dark:border-red-800/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-neutral-950 via-zinc-900 to-red-950 p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">🏎️</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">FORMULA 1</h3>
-                </div>
-                <span class="t-meta uppercase tracking-wider px-3 py-1 rounded-full text-xs bg-red-950/70 text-red-200 border border-red-500/30">
-                  FIA WORLD CHAMPIONSHIP
-                </span>
-              </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Formula+1+highlights+2026" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
-              </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Δείτε τα Highlights (FORMULA 1)
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-              
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
-            
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.formula1.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Formula1.com
-          </a>
-        </div>
-          </div>
-        </article>
-        
-      </div>
-    </section>
-
-    <!-- ==================== 💰 5. ΑΓΟΡΕΣ: TOP MOVERS ==================== -->
-    <section id="markets" class="scroll-mt-24">
-      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>💰</span> <span>Αγορές & Top Movers</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        
-      </div>
-    </section>
-
-    <!-- ==================== 🏦 5. ΕΠΙΤΟΚΙΑ, ΥΠΟΛΟΓΙΣΤΗΣ ΔΟΣΗΣ & DASHBOARD ==================== -->
-    <section id="rates-and-tools" class="scroll-mt-24 space-y-8 bg-[var(--paper-raised)] p-6 rounded border border-[var(--rule)]">
-      
-      <!-- Rates Header -->
-      <div class="flex items-center gap-2 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🏦</span> <span>Χρηματοοικονομικά Εργαλεία & Επιτόκια</span>
-        </h2>
+        <span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">ΤΕΛΙΚΑ ΚΛΕΙΣΙΜΑΤΑ</span>
       </div>
 
-      <!-- Euribor & Mortgage Calculator Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
-        <!-- Euribor Table -->
-        <div class="lg:col-span-6 card p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3 border-b border-[var(--rule)] pb-2">
-              <h3 class="t-title font-bold text-[var(--ink)]">Διατραπεζικά Επιτόκια Euribor</h3>
-              <span class="t-meta font-mono text-[var(--ink-quiet)]">euribor-rates.eu</span>
-            </div>
-            <table class="w-full text-left t-meta mb-4">
-              <thead>
-                <tr class="border-b border-[var(--rule)] text-[var(--ink-quiet)] font-mono uppercase t-meta">
-                  <th class="pb-2 font-medium">Περίοδος</th>
-                  <th class="pb-2 font-medium text-center">1M</th>
-                  <th class="pb-2 font-medium text-center">3M</th>
-                  <th class="pb-2 font-medium text-center">6M</th>
-                  <th class="pb-2 font-medium text-center">12M</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-[var(--rule)] font-mono t-num">
-                
-              </tbody>
-            </table>
-            <div class="t-meta text-[var(--ink-body)] space-y-1 bg-[var(--paper)] p-3 rounded border border-[var(--rule)]">
-              <div>• <strong class="text-[var(--ink)]">Επιτόκιο ΕΚΤ (deposit facility):</strong> — (Επόμενη συνεδρίαση: —)</div>
-              <div>• <strong class="text-[var(--ink)]">Μέσο επιτόκιο νέων στεγαστικών Κύπρου:</strong> — (στοιχεία ΚΤΚ)</div>
-              <div>• <strong class="text-[var(--ink)]">Ενδεικτική δόση έκδοσης:</strong> — (—)</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive Mortgage Calculator -->
-        <div class="lg:col-span-6 card p-5 flex flex-col justify-between no-print">
-          <div>
-            <div class="flex items-center justify-between mb-3 border-b border-[var(--rule)] pb-2">
-              <h3 class="t-title font-bold text-[var(--ink)]">Υπολογιστής Στεγαστικής Δόσης</h3>
-              <span class="t-meta font-mono text-[var(--accent)] font-bold">ΔΙΑΔΡΑΣΤΙΚΟ</span>
-            </div>
-            
-            <div class="space-y-4 t-meta">
-              <div>
-                <div class="flex justify-between items-center mb-1">
-                  <label for="calcAmount" class="font-medium text-[var(--ink)]">Ποσό Δανείου (€):</label>
-                  <span id="amountVal" class="font-mono font-bold text-[var(--accent)]">€200.000</span>
-                </div>
-                <input type="range" id="calcAmount" min="50000" max="800000" step="10000" value="200000" class="w-full" style="accent-color: var(--accent);">
-              </div>
-
-              <div>
-                <div class="flex justify-between items-center mb-1">
-                  <label for="calcYears" class="font-medium text-[var(--ink)]">Διάρκεια (Έτη):</label>
-                  <span id="yearsVal" class="font-mono font-bold text-[var(--accent)]">25 έτη</span>
-                </div>
-                <input type="range" id="calcYears" min="5" max="35" step="1" value="25" class="w-full" style="accent-color: var(--accent);">
-              </div>
-
-              <div>
-                <div class="flex justify-between items-center mb-1">
-                  <label for="calcRate" class="font-medium text-[var(--ink)]">Συνολικό Επιτόκιο (%):</label>
-                  <span id="rateVal" class="font-mono font-bold text-[var(--accent)]">3,78%</span>
-                </div>
-                <input type="range" id="calcRate" min="1.0" max="8.0" step="0.05" value="3.78" class="w-full" style="accent-color: var(--accent);">
-              </div>
-
-              <!-- Results Panel -->
-              <div class="bg-[var(--paper)] border border-[var(--rule)] p-4 rounded-xl mt-4 space-y-3">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Μηνιαία Δόση</div>
-                    <div id="monthlyInstallment" class="font-masthead text-2xl sm:text-3xl font-black text-[var(--accent)]">€1.032</div>
-                  </div>
-                  <div class="text-right">
-                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Σύνολο Τόκων</div>
-                    <div id="totalInterest" class="font-mono text-sm sm:text-base font-bold text-[var(--down)]">€109.680</div>
-                  </div>
-                </div>
-                <!-- Total repayment + cost of credit -->
-                <div class="flex items-center justify-between border-t border-[var(--rule)] pt-2">
-                  <div>
-                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Συνολική Αποπληρωμή</div>
-                    <div id="totalRepayment" class="font-mono text-sm font-bold text-[var(--ink)]">€309.680</div>
-                  </div>
-                  <div class="text-right">
-                    <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider">Κόστος Πίστωσης</div>
-                    <div id="costOfCredit" class="font-mono text-sm font-bold text-[var(--ink)]">54,8%</div>
-                  </div>
-                </div>
-                <!-- Visual cost breakdown bar -->
-                <div class="mt-2">
-                  <div class="flex w-full h-3 rounded-full overflow-hidden">
-                    <div id="principalBar" class="bg-[var(--accent)] transition-all duration-300" style="width:65%"></div>
-                    <div id="interestBar" class="bg-[var(--down)] opacity-60 transition-all duration-300" style="width:35%"></div>
-                  </div>
-                  <div class="flex justify-between mt-1">
-                    <span class="t-meta font-mono text-[var(--ink-quiet)]">🟢 Κεφάλαιο</span>
-                    <span class="t-meta font-mono text-[var(--ink-quiet)]">🔴 Τόκοι</span>
-                  </div>
-                </div>
-                <!-- Euribor comparison -->
-                <div id="euriborCompare" class="border-t border-[var(--rule)] pt-2 mt-2">
-                  <div class="t-meta font-mono text-[var(--ink-quiet)] uppercase tracking-wider mb-1">📊 Σύγκριση Euribor 3M</div>
-                  <div class="flex items-center gap-2">
-                    <span class="t-meta text-[var(--ink-body)]">Αν Euribor 3M + spread 1,1%:</span>
-                    <span id="euriborPayment" class="font-mono font-bold text-[var(--up)]">€977</span>
-                    <span id="euriborDiff" class="t-meta font-mono text-[var(--up)]">(−€55/μήνα)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Dashboard Watchlist & Number of Day -->
-      <div id="dashboard" class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-4 border-t border-[var(--rule)]">
-        <div class="lg:col-span-8 card p-5 overflow-x-auto">
-          <div class="flex items-center justify-between mb-3 border-b border-[var(--rule)] pb-2">
-            <h3 class="t-title font-bold text-[var(--ink)]">Πίνακας Δεικτών & Assets</h3>
-            <span class="t-meta font-mono text-[var(--ink-quiet)]">MARKET WATCHLIST</span>
-          </div>
-          <table class="w-full text-left t-meta">
-            <thead>
-              <tr class="border-b border-[var(--rule)] text-[var(--ink-quiet)] font-mono uppercase t-meta">
-                <th class="pb-2 font-medium">Δείκτης / Περιουσιακό Στοιχείο</th>
-                <th class="pb-2 font-medium">Τιμή</th>
-                <th class="pb-2 font-medium">Μεταβολή</th>
-                <th class="pb-2 font-medium">Ημ. Αναφοράς</th>
+      <div class="card overflow-hidden shadow-xs">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+              <tr>
+                <th class="py-3 px-4">Αγορά / Τίτλος</th>
+                <th class="py-3 px-4">Κλείσιμο</th>
+                <th class="py-3 px-4">Μεταβολή</th>
+                <th class="py-3 px-4">Επιτελικό Σχόλιο</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-[var(--rule)] font-mono t-num">
+            <tbody class="divide-y divide-[var(--rule)] font-sans">
               
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3.5 px-4 font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>Bank of Cyprus (BOCH)</span>
+          </td>
+          <td class="py-3.5 px-4 font-mono font-bold text-[var(--ink)]">€10,50</td>
+          <td class="py-3.5 px-4 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
+              <span>+0,38%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+            </span>
+          </td>
+          <td class="py-3.5 px-4 text-xs text-[var(--ink-body)]">Ισχυρό κλείσιμο σε υψηλό ημέρας</td>
+        </tr>
+        
+
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3.5 px-4 font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>S&P 500</span>
+          </td>
+          <td class="py-3.5 px-4 font-mono font-bold text-[var(--ink)]">7.590,37</td>
+          <td class="py-3.5 px-4 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-0,48%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3.5 px-4 text-xs text-[var(--ink-body)]">Ήπια διόρθωση εν αναμονή μακροοικονομικών</td>
+        </tr>
+        
+
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3.5 px-4 font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>Brent Crude</span>
+          </td>
+          <td class="py-3.5 px-4 font-mono font-bold text-[var(--ink)]">$102,42</td>
+          <td class="py-3.5 px-4 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
+              <span>+1,20%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+            </span>
+          </td>
+          <td class="py-3.5 px-4 text-xs text-[var(--ink-body)]">Εδραίωση πάνω από τα $100</td>
+        </tr>
+        
             </tbody>
           </table>
         </div>
-
-        <div class="lg:col-span-4 flex flex-col justify-between gap-4">
-          <div class="card p-6 bg-[var(--paper)] border border-[var(--rule)] flex-1 flex flex-col justify-center">
-            <span class="t-meta uppercase tracking-widest text-[var(--accent)] font-bold mb-1">
-              Ο Αριθμός της Ημέρας
-            </span>
-            <div class="font-masthead text-4xl sm:text-5xl font-black text-[var(--ink)] my-2">
-              —
-            </div>
-            <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">
-              
-            </p>
-          </div>
-        </div>
       </div>
-
     </section>
 
-    <!-- ==================== 🏠 6. Ο ΦΑΚΕΛΟΣ ΜΟΥ & REAL ESTATE RADAR ==================== -->
-    <section id="portfolio" class="scroll-mt-24">
+    <!-- ==================== ⚽ 3. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
+    <section id="sports-radar" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>🎯</span> <span>Ο Φάκελός μου & Ακίνητα</span>
+          <span>⚽</span> <span>Απογευματινός Αθλητισμός & Πρόγραμμα</span>
         </h2>
+        <span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">HIGHLIGHTS & FIXTURES</span>
       </div>
 
-      <!-- House Search Banner if available -->
-      
-        <div class="card p-5 border-l-4 border-[var(--accent)] mb-6">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-            <span class="t-meta font-bold uppercase tracking-wider text-[var(--accent)] flex items-center gap-1.5">
-              <span>🏠</span> REAL ESTATE RADAR — ΕΒΔΟΜΑΔΙΑΙΟ ΔΕΛΤΙΟ ΛΕΜΕΣΟΥ
-            </span>
-            <span class="t-meta font-mono text-[var(--ink-quiet)]">Έκδοση: 2026-09-07</span>
-          </div>
-          <p class="t-body-sm text-[var(--ink-body)] mb-3 leading-relaxed">
-            Εντοπίστηκαν <strong>— μοναδικά ακίνητα</strong> (Bazaraki & BuySellCyprus) στον άξονα Ύψωνα → Γερμασόγειας. 
-            <strong>— Top Picks</strong> πέρασαν όλα τα φίλτρα: —.
-          </p>
-          <a href="house-search/latest.html" target="_blank" class="inline-flex items-center gap-1.5 t-meta font-bold text-[var(--accent)] hover:underline">
-            <span>Άνοιγμα πλήρους εβδομαδιαίας έκθεσης ακινήτων</span> <span>➔</span>
-          </a>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         
-
-      <div class="space-y-3.5">
-        
-      </div>
-    </section>
-
-    <!-- ==================== 🌤️ 8. ΚΑΙΡΟΣ ==================== -->
-    <section id="weather" class="scroll-mt-24 my-8 sm:my-12">
-      <div class="flex items-center justify-between gap-2 mb-6 pb-3 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🌤️</span> <span>Καιρός & Μετεωρολογικές Προγνώσεις 🌡️</span>
-        </h2>
-        <span class="t-meta text-[var(--ink-quiet)] hidden sm:inline font-mono">Ζωντανά δεδομένα Κύπρου</span>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8">
-        <div class="lg:col-span-7 card p-5 sm:p-6 shadow-xs">
-          <div class="flex items-center justify-between mb-4 border-b border-[var(--rule)] pb-2.5">
-            <h3 class="t-title font-bold text-[var(--ink)] flex items-center gap-2">
-              <span>📡</span> <span>Ζωντανή Πρόγνωση Πόλεων (Open-Meteo)</span>
-            </h3>
-            <span class="t-meta font-mono text-[var(--up)] font-bold flex items-center gap-1">● LIVE API</span>
-          </div>
-          <div id="wx-live" class="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 text-center">
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🌊</span> <span>Λεμεσός</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">☀️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">35°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Αίθριος</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🏛️</span> <span>Λευκωσία</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">☀️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">38°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Θερμός</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>✈️</span> <span>Λάρνακα</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">☀️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">34°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Αίθριος</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🪨</span> <span>Πάφος</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">🌤️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">32°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Αίθριος</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition col-span-2 sm:col-span-1">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🌲</span> <span>Τρόοδος</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">⛅</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">26°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Ήπιος</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-5 card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
+        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-emerald-700/30 dark:border-emerald-600/40">
           <div>
-            <div class="flex items-center justify-between mb-4 border-b border-[var(--rule)] pb-2.5">
-              <h3 class="t-title font-bold text-[var(--ink)] flex items-center gap-2">
-                <span>📋</span> <span>Ανάλυση & Προειδοποιήσεις</span>
-              </h3>
-              <span class="t-meta font-mono text-[var(--ink-quiet)]">KITASWEATHER</span>
+            <div class="bg-gradient-to-r from-emerald-900 to-green-950 p-4 text-white flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl">☘️</span>
+                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ</h3>
+              </div>
+              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                CYPRUS LEAGUE & EUROPE
+              </span>
             </div>
-            <div class="space-y-2.5">
-              
+            <div class="p-5 space-y-3">
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                Τελευταία προπόνηση ενόψει του αγώνα: <em>20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026)</em>.
+              </div>
             </div>
           </div>
-        </div>
+          <div class="p-4 pt-0">
+            <a href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
+              <span>▶</span> <span>YouTube Highlights & Match Hub</span>
+            </a>
+          </div>
+        </article>
+        
+
+        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-700/30 dark:border-red-600/40">
+          <div>
+            <div class="bg-gradient-to-r from-red-900 to-stone-950 p-4 text-white flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl">🔴</span>
+                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">MANCHESTER UNITED</h3>
+              </div>
+              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                UEFA CHAMPIONS LEAGUE
+              </span>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                <em>UEFA Champions League: Manchester United versus Sabah — 20:00</em>.
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <a href="https://www.youtube.com/results?search_query=Manchester+United+highlights+2026" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
+              <span>▶</span> <span>YouTube Highlights & Match Hub</span>
+            </a>
+          </div>
+        </article>
+        
+
+        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-amber-700/30 dark:border-amber-600/40">
+          <div>
+            <div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-purple-950 p-4 text-white flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl">⚪</span>
+                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">REAL MADRID</h3>
+              </div>
+              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                SPANISH LA LIGA
+              </span>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                <em>Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)</em>.
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <a href="https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
+              <span>▶</span> <span>YouTube Highlights & Match Hub</span>
+            </a>
+          </div>
+        </article>
+        
+
+        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-600/30 dark:border-red-500/40">
+          <div>
+            <div class="bg-gradient-to-r from-neutral-900 to-red-950 p-4 text-white flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl">🏎️</span>
+                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">FORMULA 1</h3>
+              </div>
+              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                FIA WORLD CHAMPIONSHIP
+              </span>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                <em>Spanish Grand Prix 2026 (Gran Premio de España)</em>.
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <a href="https://www.youtube.com/results?search_query=Formula+1+highlights+2026" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
+              <span>▶</span> <span>YouTube Highlights & Match Hub</span>
+            </a>
+          </div>
+        </article>
+        
       </div>
     </section>
 
-    <!-- ==================== 🗂️ 9 & 10. ΕΞΕΛΙΞΕΙΣ & ΠΡΟΘΕΣΜΙΕΣ ==================== -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8 my-8 sm:my-10">
-      <section id="developments" class="card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
-        <div>
-          <h3 class="t-section mb-4 border-b border-[var(--rule)] pb-2.5 flex items-center gap-2">
-            <span>🗂️</span> <span>Εξελίξεις & Συνέχεια</span>
-          </h3>
-          <div class="space-y-3.5">
-            
-          </div>
-        </div>
-      </section>
+    <!-- ==================== 🌌 4. ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ ==================== -->
+    <section id="night-radar" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🌌</span> <span>Νυχτερινό Ραντάρ Κινδύνου</span>
+        </h2>
+        <span class="text-xs font-mono text-indigo-500 uppercase font-bold ml-auto">OVERNIGHT WATCH</span>
+      </div>
 
-      <section id="deadlines" class="card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
-        <div>
-          <h3 class="t-section mb-4 border-b border-[var(--rule)] pb-2.5 flex items-center gap-2">
-            <span>📅</span> <span>Προθεσμίες & Δράσεις</span>
-          </h3>
-          <div class="space-y-3.5">
-            
+      <div class="card p-5 sm:p-6 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-indigo-950/10 border-indigo-500/20">
+        <p class="text-xs text-[var(--ink-quiet)] mb-4 font-mono">
+          Κρίσιμοι άξονες παρακολούθησης κατά τη διάρκεια της νύχτας μέχρι το επόμενο πρωινό άνοιγμα:
+        </p>
+        <ul class="space-y-3">
+          
+        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
+          <span class="text-xl flex-shrink-0 mt-0.5">🌏</span>
+          <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
+            *Ασιατικό Άνοιγμα (02:00 EEST):** Παρακολούθηση Nikkei & Hang Seng.
           </div>
+        </li>
+        
+
+        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
+          <span class="text-xl flex-shrink-0 mt-0.5">🛡️</span>
+          <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
+            *Νυχτερινές Εξελίξεις Μέσης Ανατολής:** Επιφυλακή για γεωπολιτικές μεταβολές στον περιφερειακό εναέριο χώρο.
+          </div>
+        </li>
+        
+
+        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
+          <span class="text-xl flex-shrink-0 mt-0.5">🌅</span>
+          <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
+            *Αυριανή Ώρα Έναρξης:** Το πρωινό Sovereign Broadsheet θα εκδοθεί στις 07:30 ώρα Κύπρου.
+          </div>
+        </li>
+        
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 🏛️ 5. ΣΥΝΔΕΣΗ ΜΕ ΤΟ ΠΡΩΙΝΟ BROADSHEET ==================== -->
+    <div class="card p-6 bg-gradient-to-r from-amber-500/5 via-[var(--paper-raised)] to-[var(--paper-raised)] border-l-4 border-[var(--accent)] flex flex-wrap items-center justify-between gap-4 shadow-xs">
+      <div class="max-w-2xl">
+        <div class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] mb-1">
+          🏛️ THE SOVEREIGN MORNING BROADSHEET
         </div>
-      </section>
+        <h3 class="font-editorial text-xl font-bold text-[var(--ink)] mb-1">
+          Χρειάζεστε την πλήρη ανάλυση της ημέρας;
+        </h3>
+        <p class="text-xs text-[var(--ink-body)] leading-relaxed">
+          Ανατρέξτε στην πρωινή έκδοση (07:30) για το πλήρες ρεπορτάζ Κύπρου, τον υπολογιστή δανείων Euribor, την εβδομαδιαία έκθεση ακινήτων Λεμεσού και τα διεθνή νέα.
+        </p>
+      </div>
+      <a href="briefings/2026-09-10.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent)] text-white font-bold text-xs hover:opacity-90 transition shadow">
+        <span>Άνοιγμα Πρωινού Broadsheet</span> <span>➔</span>
+      </a>
     </div>
-
-    <!-- ==================== 🔍 11. ΓΙΑ ΑΥΡΙΟ ==================== -->
-    <section id="tomorrow" class="card p-6 sm:p-7 shadow-xs border-t-4 border-[var(--accent)] my-8 sm:my-10">
-      <h3 class="t-section mb-4 border-b border-[var(--rule)] pb-2.5 flex items-center gap-2">
-        <span>🔍</span> <span>Για Αύριο — Θέματα προς Παρακολούθηση</span>
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        
-      </div>
-    </section>
-
-    <!-- ==================== 12. FOOTNOTES ==================== -->
-    <footer class="border-t-2 border-[var(--rule-strong)] pt-6 t-meta text-[var(--ink-quiet)] space-y-2 font-mono">
-      <div class="font-bold text-[var(--ink)] uppercase">Υποσημειώσεις & Τεκμηρίωση:</div>
-      <ul class="space-y-1 list-disc list-inside">
-        
-      </ul>
-      <div class="pt-4 text-center t-meta text-[var(--ink-quiet)]">
-        THE ORACLE SOVEREIGN © 2026 · One-Reader Executive Intelligence System
-      </div>
-    </footer>
 
   </main>
 
-  <!-- SCRIPTS: Theme Toggle, Calculator, Weather Fetch, Instant Search -->
+  <!-- FOOTER -->
+  <footer class="mt-16 border-t border-[var(--rule)] bg-[var(--paper-raised)] py-8 px-4 text-xs text-[var(--ink-quiet)]">
+    <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-4">
+      <div class="space-y-1">
+        <div class="font-bold text-[var(--ink)] font-masthead">THE ORACLE SOVEREIGN</div>
+        <div>Confidential Executive Briefing · Night Debrief Edition</div>
+      </div>
+      <div class="flex items-center gap-4 font-mono text-[11px]">
+        <a href="index.html" class="hover:text-[var(--accent)]">Αρχική</a>
+        <span>·</span>
+        <a href="briefings/2026-09-10.html" class="hover:text-[var(--accent)]">Πρωινό Broadsheet</a>
+        <span>·</span>
+        <a href="briefings/2026-09-10-midday.html" class="hover:text-[var(--accent)]">Μεσημβρινός Παλμός</a>
+        <span>·</span>
+        <button onclick="window.print()" class="hover:text-[var(--accent)]">Εκτύπωση PDF</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
+  <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
+    <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
+      <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+          <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
+        </div>
+        <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
+      </div>
+      <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
+        Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
+      </div>
+      <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
+        <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT ENGINE -->
   <script>
-    // 1. Theme Toggle
-    (function () {
-      const btn = document.getElementById('themeToggle');
-      const btnNav = document.getElementById('themeToggleNav');
-      const updateThemeButtons = (isDark) => {
-        if (btn) btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-        if (btnNav) btnNav.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-      };
-      const isDarkInit = document.documentElement.classList.contains('dark');
-      updateThemeButtons(isDarkInit);
-
-      const toggleTheme = () => {
-        const darkNow = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('oracle-theme', darkNow ? 'dark' : 'light');
-        updateThemeButtons(darkNow);
-      };
-
-      if (btn) btn.addEventListener('click', toggleTheme);
-      if (btnNav) btnNav.addEventListener('click', toggleTheme);
-    })();
-
-    // 2. Interactive Mortgage Calculator (Enhanced with Euribor comparison)
-    (function () {
-      const amountEl = document.getElementById('calcAmount');
-      const yearsEl = document.getElementById('calcYears');
-      const rateEl = document.getElementById('calcRate');
-
-      const amountVal = document.getElementById('amountVal');
-      const yearsVal = document.getElementById('yearsVal');
-      const rateVal = document.getElementById('rateVal');
-      const monthlyInstallment = document.getElementById('monthlyInstallment');
-      const totalInterest = document.getElementById('totalInterest');
-      const totalRepayment = document.getElementById('totalRepayment');
-      const costOfCredit = document.getElementById('costOfCredit');
-      const principalBar = document.getElementById('principalBar');
-      const interestBar = document.getElementById('interestBar');
-      const euriborPayment = document.getElementById('euriborPayment');
-      const euriborDiff = document.getElementById('euriborDiff');
-
-      const EURIBOR_3M = 2.670;  // Current Euribor 3M rate
-      const SPREAD = 1.10;       // Typical Cyprus bank spread
-
-      function calcMonthly(P, r, n) {
-        if (r > 0) return (P * r) / (1 - Math.pow(1 + r, -n));
-        return P / n;
-      }
-
-      function calculate() {
-        if (!amountEl || !yearsEl || !rateEl) return;
-        const P = parseFloat(amountEl.value);
-        const y = parseFloat(yearsEl.value);
-        const annualRate = parseFloat(rateEl.value);
-
-        amountVal.textContent = '€' + P.toLocaleString('el-CY');
-        yearsVal.textContent = y + ' έτη';
-        rateVal.textContent = annualRate.toFixed(2).replace('.', ',') + '%';
-
-        const r = (annualRate / 100) / 12;
-        const n = y * 12;
-
-        const m = calcMonthly(P, r, n);
-        const totalPay = m * n;
-        const interest = totalPay - P;
-
-        // Core results
-        monthlyInstallment.textContent = '€' + Math.round(m).toLocaleString('el-CY');
-        totalInterest.textContent = '€' + Math.round(interest).toLocaleString('el-CY');
-
-        // Total repayment
-        if (totalRepayment) totalRepayment.textContent = '€' + Math.round(totalPay).toLocaleString('el-CY');
-
-        // Cost of credit %
-        if (costOfCredit) {
-          const pct = ((interest / P) * 100).toFixed(1).replace('.', ',');
-          costOfCredit.textContent = pct + '%';
-        }
-
-        // Visual breakdown bar
-        if (principalBar && interestBar) {
-          const principalPct = (P / totalPay) * 100;
-          const interestPct = (interest / totalPay) * 100;
-          principalBar.style.width = principalPct.toFixed(1) + '%';
-          interestBar.style.width = interestPct.toFixed(1) + '%';
-        }
-
-        // Euribor 3M comparison
-        if (euriborPayment && euriborDiff) {
-          const euriborRate = ((EURIBOR_3M + SPREAD) / 100) / 12;
-          const euriborM = calcMonthly(P, euriborRate, n);
-          const diff = Math.round(euriborM) - Math.round(m);
-          euriborPayment.textContent = '€' + Math.round(euriborM).toLocaleString('el-CY');
-          if (diff <= 0) {
-            euriborDiff.textContent = '(−€' + Math.abs(diff).toLocaleString('el-CY') + '/μήνα)';
-            euriborDiff.className = 't-meta font-mono text-[var(--up)]';
-          } else {
-            euriborDiff.textContent = '(+€' + diff.toLocaleString('el-CY') + '/μήνα)';
-            euriborDiff.className = 't-meta font-mono text-[var(--down)]';
-          }
-        }
-      }
-
-      if (amountEl && yearsEl && rateEl) {
-        amountEl.addEventListener('input', calculate);
-        yearsEl.addEventListener('input', calculate);
-        rateEl.addEventListener('input', calculate);
-        calculate();
-      }
-    })();
-
-    // 3. Open-Meteo Live Client Weather Fetch
-    (function () {
-      const cities = [
-        { name: 'Λεμεσός', icon: '🌊', lat: 34.68, lon: 33.04 },
-        { name: 'Λευκωσία', icon: '🏛️', lat: 35.17, lon: 33.36 },
-        { name: 'Λάρνακα', icon: '✈️', lat: 34.92, lon: 33.63 },
-        { name: 'Πάφος', icon: '🪨', lat: 34.77, lon: 32.42 },
-        { name: 'Τρόοδος', icon: '🌲', lat: 34.92, lon: 32.88 }
-      ];
-
-      const wmoText = {
-        0: 'Αίθριος', 1: 'Κυρίως αίθριος', 2: 'Μερικώς νεφελώδης', 3: 'Συννεφιασμένος',
-        45: 'Ομίχλη', 51: 'Ψεκάδες', 61: 'Ασθενής βροχή', 63: 'Βροχή', 65: 'Ισχυρή βροχή',
-        80: 'Μπόρες', 95: 'Καταιγίδα'
-      };
-
-      const wmoIcons = {
-        0: '☀️', 1: '🌤️', 2: '⛅', 3: '☁️',
-        45: '🌫️', 51: '🌦️', 61: '🌧️', 63: '🌧️', 65: '⛈️',
-        80: '🌦️', 95: '⛈️'
-      };
-
-      async function fetchWeather() {
-        try {
-          const container = document.getElementById('wx-live');
-          if (!container) return;
-          const fetches = cities.map(c =>
-            fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,weather_code&timezone=auto`)
-              .then(r => r.json())
-              .then(d => ({ name: c.name, cityIcon: c.icon, temp: Math.round(d.current.temperature_2m), code: d.current.weather_code }))
-              .catch(() => null)
-          );
-
-          const results = await Promise.all(fetches);
-          if (results.some(r => r !== null)) {
-            container.innerHTML = results.map(r => {
-              if (!r) return '';
-              const desc = wmoText[r.code] || 'Ήπιος';
-              const icon = wmoIcons[r.code] || '🌤️';
-              return `
-                <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-                  <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                    <span>${r.cityIcon}</span> <span>${r.name}</span>
-                  </div>
-                  <div class="text-3xl sm:text-4xl my-2">${icon}</div>
-                  <div class="text-2xl font-black text-[var(--accent)] t-num">${r.temp}°C</div>
-                  <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">${desc}</div>
-                </div>
-              `;
-            }).join('');
-          }
-        } catch (e) {
-          console.warn('Open-Meteo live weather fetch fallback maintained.', e);
-        }
-      }
-      fetchWeather();
-    })();
-
-    // 4. Instant Archive Search (Asynchronous Fetch with client-side cache)
-    (function () {
-      const input = document.getElementById('archiveSearch');
-      const resultsContainer = document.getElementById('searchResults');
-      if (!input || !resultsContainer) return;
-
-      let searchData = [];
-      let loadingPromise = null;
-
-      function getSearchData() {
-        if (!loadingPromise) {
-          loadingPromise = fetch('search-index.json')
-            .then(r => r.json())
-            .then(d => { searchData = d; return d; })
-            .catch(err => {
-              console.warn('Could not load search index asynchronously:', err);
-              return [];
-            });
-        }
-        return loadingPromise;
-      }
-
-      input.addEventListener('focus', getSearchData);
-
-      input.addEventListener('input', async (e) => {
-        const q = e.target.value.trim().toLowerCase();
-        if (q.length < 2) {
-          resultsContainer.classList.add('hidden');
-          resultsContainer.innerHTML = '';
-          return;
-        }
-
-        const data = searchData.length ? searchData : await getSearchData();
-        const matches = data.filter(item => 
-          item.title.toLowerCase().includes(q) || 
-          item.snippet.toLowerCase().includes(q) ||
-          item.section.toLowerCase().includes(q)
-        ).slice(0, 8);
-
-        if (matches.length === 0) {
-          resultsContainer.innerHTML = '<div class="p-3 text-center t-meta text-[var(--ink-quiet)]">Δεν βρέθηκαν αποτελέσματα.</div>';
-          resultsContainer.classList.remove('hidden');
-          return;
-        }
-
-        resultsContainer.innerHTML = matches.map(m => `
-          <a href="${m.url}" class="block p-2.5 rounded hover:bg-[var(--paper)] transition border-b border-[var(--rule)] last:border-0">
-            <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)] mb-1">
-              <span>${m.section}</span>
-              <span>📅 ${m.date}</span>
-            </div>
-            <div class="font-bold text-[var(--ink)] leading-snug mb-1">${m.title}</div>
-            <div class="t-meta text-[var(--ink-quiet)] line-clamp-2">${m.snippet}</div>
-          </a>
-        `).join('');
-
-        resultsContainer.classList.remove('hidden');
+    // Theme Toggle
+    const themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('oracle-theme', isDark ? 'dark' : 'light');
       });
+    }
 
-      document.addEventListener('click', (e) => {
-        if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
-          resultsContainer.classList.add('hidden');
-        }
-      });
-    })();
+    // Global Clocks
+    function updateClocks() {
+      const now = new Date();
+      const fmt = (tz) => new Intl.DateTimeFormat('el-GR', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
+      const cy = document.getElementById('clockCY'); if (cy) cy.textContent = fmt('Asia/Nicosia');
+      const lon = document.getElementById('clockLON'); if (lon) lon.textContent = fmt('Europe/London');
+      const nyc = document.getElementById('clockNYC'); if (nyc) nyc.textContent = fmt('America/New_York');
+      const tyo = document.getElementById('clockTYO'); if (tyo) tyo.textContent = fmt('Asia/Tokyo');
+    }
+    updateClocks();
+    setInterval(updateClocks, 10000);
 
-    // 5. 60-Second Executive Scan Mode Toggle
-    (function () {
-      const scanBtn = document.getElementById('scanModeToggle');
-      if (!scanBtn) return;
-
-      const savedMode = localStorage.getItem('oracle-scan-mode') === '1';
-      if (savedMode) {
-        document.body.classList.add('scan-mode');
-        scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
-        scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
-      }
-
-      scanBtn.addEventListener('click', () => {
-        const isScan = document.body.classList.toggle('scan-mode');
-        localStorage.setItem('oracle-scan-mode', isScan ? '1' : '0');
-        if (isScan) {
-          scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
-          scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
-        } else {
-          scanBtn.innerHTML = '<span>⚡</span> <span class="hidden md:inline">60″ Scan</span>';
-          scanBtn.classList.remove('bg-[var(--accent)]', 'text-white');
-        }
-      });
-    })();
-
-    // 6. Sovereign Executive Audio Briefing (SpeechSynthesis)
+    // Audio Briefing Player (Web Speech API)
     (function () {
       const playBtn = document.getElementById('audioPlayBtn');
-      const speedBtn = document.getElementById('audioSpeedBtn');
       const stopBtn = document.getElementById('audioStopBtn');
+      const speedBtn = document.getElementById('audioSpeedBtn');
       const statusText = document.getElementById('audioStatusText');
-      const badge = document.getElementById('audioLiveBadge');
-
+      const liveBadge = document.getElementById('audioLiveBadge');
       if (!playBtn || !('speechSynthesis' in window)) return;
 
-      const speeds = [1.0, 1.25, 1.5];
+      let synth = window.speechSynthesis;
+      let utterance = null;
+      let speeds = [1.0, 1.25, 1.5];
       let speedIdx = 0;
-      let isSpeaking = false;
 
       function getBriefingText() {
-        const titleEl = document.querySelector('#top-story h3');
-        const title = titleEl ? titleEl.innerText : '';
-        const bodyEl = document.querySelector('#top-story p');
-        const body = bodyEl ? bodyEl.innerText : '';
-        const deadlines = Array.from(document.querySelectorAll('#deadlines li')).slice(0, 3).map(li => li.innerText.split('—')[0]).join('. ');
-
-        return `The Oracle Sovereign. Ημερήσιο εμπιστευτικό briefing. Πρώτο θέμα: ${title}. ${body.slice(0, 320)}. Σημαντικές προθεσμίες και ενέργειες: ${deadlines}. Τέλος συνοπτικής ενημέρωσης.`;
-      }
-
-      function startPlayback() {
-        window.speechSynthesis.cancel();
-        const text = getBriefingText();
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = 'el-GR';
-        utter.rate = speeds[speedIdx];
-
-        const voices = window.speechSynthesis.getVoices();
-        const elVoice = voices.find(v => v.lang.startsWith('el') || v.lang.includes('GR'));
-        if (elVoice) utter.voice = elVoice;
-
-        utter.onstart = () => {
-          isSpeaking = true;
-          playBtn.textContent = '⏸';
-          if (badge) badge.classList.remove('hidden');
-          if (stopBtn) stopBtn.classList.remove('hidden');
-          statusText.textContent = `Φωνητική ανάγνωση σε εξέλιξη (${speeds[speedIdx]}x)...`;
-        };
-
-        utter.onend = () => {
-          isSpeaking = false;
-          playBtn.textContent = '▶';
-          if (badge) badge.classList.add('hidden');
-          if (stopBtn) stopBtn.classList.add('hidden');
-          statusText.textContent = 'Ολοκληρώθηκε η ηχητική σύνοψη.';
-        };
-
-        utter.onerror = () => {
-          isSpeaking = false;
-          playBtn.textContent = '▶';
-          if (badge) badge.classList.add('hidden');
-          if (stopBtn) stopBtn.classList.add('hidden');
-          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
-        };
-
-        window.speechSynthesis.speak(utter);
+        let text = "Απογευματινή επιτελική σύνοψη της εφημερίδας The Oracle Sovereign για τις 10 Σεπτεμβρίου 2026. ";
+        const topEl = document.getElementById('topStoryBody');
+        if (topEl) text += topEl.innerText + " ";
+        text += "Στις αγορές και το closing bell: ";
+        ['Bank of Cyprus (BOCH): €10,50, μεταβολή +0,38%.', 'S&P 500: 7.590,37, μεταβολή -0,48%.', 'Brent Crude: $102,42, μεταβολή +1,20%.'].forEach(m => text += m + " ");
+        text += "Στον νυχτερινό κίνδυνο: Παρακολούθηση ασιατικού ανοίγματος στις δύο τα ξημερώματα και περιφερειακού εναέριου χώρου.";
+        return text;
       }
 
       playBtn.addEventListener('click', () => {
-        if (isSpeaking) {
-          if (window.speechSynthesis.paused) {
-            window.speechSynthesis.resume();
-            playBtn.textContent = '⏸';
-            statusText.textContent = `Συνέχιση ανάγνωσης (${speeds[speedIdx]}x)...`;
-          } else {
-            window.speechSynthesis.pause();
-            playBtn.textContent = '▶';
-            statusText.textContent = 'Σε παύση.';
-          }
-        } else {
-          startPlayback();
+        if (synth.speaking && !synth.paused) {
+          synth.pause();
+          playBtn.innerHTML = '▶';
+          statusText.innerText = 'Σε παύση · Πατήστε Play για συνέχεια';
+          return;
         }
+        if (synth.paused) {
+          synth.resume();
+          playBtn.innerHTML = '⏸';
+          statusText.innerText = 'Αναπαραγωγή σε εξέλιξη...';
+          return;
+        }
+
+        utterance = new SpeechSynthesisUtterance(getBriefingText());
+        utterance.lang = 'el-GR';
+        utterance.rate = speeds[speedIdx];
+        utterance.onend = () => {
+          playBtn.innerHTML = '▶';
+          stopBtn.classList.add('hidden');
+          liveBadge.classList.add('hidden');
+          statusText.innerText = 'Ολοκληρώθηκε η ανάγνωση της απογευματινής σύνοψης';
+        };
+
+        synth.speak(utterance);
+        playBtn.innerHTML = '⏸';
+        stopBtn.classList.remove('hidden');
+        liveBadge.classList.remove('hidden');
+        statusText.innerText = 'Αναπαραγωγή απογευματινής σύνοψης...';
       });
 
-      if (stopBtn) {
-        stopBtn.addEventListener('click', () => {
-          window.speechSynthesis.cancel();
-          isSpeaking = false;
-          playBtn.textContent = '▶';
-          if (badge) badge.classList.add('hidden');
-          stopBtn.classList.add('hidden');
-          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
-        });
-      }
+      stopBtn.addEventListener('click', () => {
+        synth.cancel();
+        playBtn.innerHTML = '▶';
+        stopBtn.classList.add('hidden');
+        liveBadge.classList.add('hidden');
+        statusText.innerText = 'Διακόπηκε η ανάγνωση';
+      });
 
-      if (speedBtn) {
-        speedBtn.addEventListener('click', () => {
-          speedIdx = (speedIdx + 1) % speeds.length;
-          speedBtn.textContent = `${speeds[speedIdx]}x`;
-          if (isSpeaking) startPlayback();
-        });
-      }
+      speedBtn.addEventListener('click', () => {
+        speedIdx = (speedIdx + 1) % speeds.length;
+        speedBtn.innerText = speeds[speedIdx] + 'x';
+        if (synth.speaking) {
+          synth.cancel();
+          playBtn.click();
+        }
+      });
     })();
 
-    // 7. Smart Sticky Navigation Header (Auto-hide on scroll down, reveal on scroll up)
-    (function () {
-      const nav = document.getElementById('mainNav');
-      if (!nav) return;
-
-      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
-      let ticking = false;
-      const threshold = 8;
-      const minScrollToHide = 100;
-
-      function onScroll() {
-        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Near top of the page: always keep visible
-        if (currentScrollY <= minScrollToHide) {
-          nav.classList.remove('nav-hidden');
-          lastScrollY = currentScrollY;
-          ticking = false;
-          return;
-        }
-
-        // Prevent triggering on iOS rubber-band overscroll at bottom of document
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        if (currentScrollY >= maxScroll - 20) {
-          ticking = false;
-          return;
-        }
-
-        const delta = currentScrollY - lastScrollY;
-
-        if (Math.abs(delta) > threshold) {
-          if (delta > 0) {
-            // Scrolling down -> hide nav
-            nav.classList.add('nav-hidden');
-            const sr = document.getElementById('searchResults');
-            if (sr && !sr.classList.contains('hidden')) sr.classList.add('hidden');
-          } else {
-            // Scrolling up -> show nav
-            nav.classList.remove('nav-hidden');
-          }
-          lastScrollY = currentScrollY;
-        }
-        ticking = false;
-      }
-
-      window.addEventListener('scroll', function () {
-        if (!ticking) {
-          window.requestAnimationFrame(onScroll);
-          ticking = true;
-        }
-      }, { passive: true });
-    })();
-
-    // 8. 24/7 Global Market Clocks & Live Trading Badges
-    (function () {
-      function updateClocks() {
-        const now = new Date();
-        
-        function formatTZ(tz) {
-          try {
-            return new Intl.DateTimeFormat('el-GR', {
-              timeZone: tz,
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: false
-            }).format(now);
-          } catch (e) {
-            return '--:--';
-          }
-        }
-
-        function getMarketStatus(tz, openH, openM, closeH, closeM) {
-          try {
-            const parts = new Intl.DateTimeFormat('en-US', {
-              timeZone: tz,
-              weekday: 'short',
-              hour: 'numeric',
-              minute: 'numeric',
-              hour12: false
-            }).formatToParts(now);
-            
-            const p = {};
-            parts.forEach(x => p[x.type] = x.value);
-            const day = p.weekday;
-            const h = parseInt(p.hour, 10);
-            const m = parseInt(p.minute, 10);
-            
-            if (day === 'Sat' || day === 'Sun') return { open: false, label: 'CLOSED' };
-            
-            const currentMins = h * 60 + m;
-            const openMins = openH * 60 + openM;
-            const closeMins = closeH * 60 + closeM;
-            
-            const isOpen = currentMins >= openMins && currentMins < closeMins;
-            return { open: isOpen, label: isOpen ? 'OPEN' : 'CLOSED' };
-          } catch (e) {
-            return { open: false, label: '--' };
-          }
-        }
-
-        const cyEl = document.getElementById('clockCY');
-        const lonEl = document.getElementById('clockLON');
-        const nycEl = document.getElementById('clockNYC');
-        const tyoEl = document.getElementById('clockTYO');
-
-        if (cyEl) cyEl.textContent = formatTZ('Asia/Nicosia');
-        if (lonEl) lonEl.textContent = formatTZ('Europe/London');
-        if (nycEl) nycEl.textContent = formatTZ('America/New_York');
-        if (tyoEl) tyoEl.textContent = formatTZ('Asia/Tokyo');
-
-        // London: LSE 08:00 - 16:30
-        const lonSt = getMarketStatus('Europe/London', 8, 0, 16, 30);
-        const lonStEl = document.getElementById('statusLON');
-        if (lonStEl) {
-          lonStEl.textContent = lonSt.label;
-          lonStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (lonSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
-        }
-
-        // NYC: NYSE 09:30 - 16:00
-        const nycSt = getMarketStatus('America/New_York', 9, 30, 16, 0);
-        const nycStEl = document.getElementById('statusNYC');
-        if (nycStEl) {
-          nycStEl.textContent = nycSt.label;
-          nycStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (nycSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
-        }
-
-        // Tokyo: TSE 09:00 - 15:30
-        const tyoSt = getMarketStatus('Asia/Tokyo', 9, 0, 15, 30);
-        const tyoStEl = document.getElementById('statusTYO');
-        if (tyoStEl) {
-          tyoStEl.textContent = tyoSt.label;
-          tyoStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (tyoSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
-        }
-      }
-
-      updateClocks();
-      setInterval(updateClocks, 1000);
-    })();
-
-    // 9. 24/7 Live Wire Feed Ticker & Drawer Modal
+    // 24/7 Live Wire Fetcher & Drawer
     (function () {
       const tickerEl = document.getElementById('liveWireTicker');
-      const drawerModal = document.getElementById('wireDrawerModal');
       const drawerContent = document.getElementById('wireDrawerContent');
+      const drawerModal = document.getElementById('wireDrawerModal');
       const openBtn = document.getElementById('openWireDrawerBtn');
       const openBtnNav = document.getElementById('openWireDrawerBtnNav');
       const closeBtn = document.getElementById('closeWireDrawerBtn');
@@ -1793,6 +629,7 @@
 
       function fetchWire() {
         return fetch('live-wire.json')
+          .catch(() => fetch('live-wire.json'))
           .catch(() => fetch('../live-wire.json'))
           .then(r => r.json())
           .then(data => {
@@ -1803,9 +640,7 @@
               rotatorInterval = setInterval(rotateTicker, 6000);
             }
           })
-          .catch(e => {
-            console.warn('Could not load live-wire:', e);
-          });
+          .catch(e => console.warn('Could not load live-wire:', e));
       }
 
       function renderTicker() {
@@ -1814,8 +649,7 @@
         const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
         const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${item.time_str || ''}]</span>`;
         const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${item.source})</span>`;
-        
-        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${breakBadge}${timeBadge}<a href="${item.link}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${item.title}</a>${srcBadge}</div>`;
+        tickerEl.innerHTML = `<div class="truncate">${breakBadge}${timeBadge}<a href="${item.link}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${item.title}</a>${srcBadge}</div>`;
       }
 
       function rotateTicker() {
@@ -1868,27 +702,5 @@
       fetchWire();
     })();
   </script>
-
-  
-    <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
-    <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
-      <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
-        <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
-          <div class="flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
-            <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
-          </div>
-          <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
-        </div>
-        <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
-          Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
-        </div>
-        <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
-          <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
-        </div>
-      </div>
-    </div>
-    
-
 </body>
 </html>

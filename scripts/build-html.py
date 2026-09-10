@@ -239,9 +239,10 @@ def annuity_payment(principal: float, annual_rate_pct: float, years: int) -> flo
     return principal * (r * (1 + r)**n) / ((1 + r)**n - 1)
 
 
-def parse_markdown(md_content):
+def parse_markdown(md_content, filename=""):
     data = {
         'title': 'THE ORACLE SOVEREIGN',
+        'edition': 'morning',
         'date_str': '',
         'time_str': '',
         'read_time': "7'",
@@ -266,6 +267,9 @@ def parse_markdown(md_content):
             'realmadrid': {'last_result': '', 'next_match': '', 'highlights': None, 'news': [], 'source': None, 'raw': []},
             'formula1': {'last_result': '', 'next_match': '', 'highlights': None, 'news': [], 'source': None, 'raw': []}
         },
+        'night_radar': [],
+        'midday_news': [],
+        'afternoon_priorities': [],
         'weather': {},
         'developments': [],
         'portfolio': [],
@@ -274,13 +278,31 @@ def parse_markdown(md_content):
         'footnotes': []
     }
 
+    fn = filename.lower()
+    if '-evening' in fn or 'evening' in fn:
+        data['edition'] = 'evening'
+        data['time_str'] = '19:30'
+        data['read_time'] = "4'"
+    elif '-midday' in fn or 'midday' in fn:
+        data['edition'] = 'midday'
+        data['time_str'] = '13:30'
+        data['read_time'] = "3'"
+
     lines = md_content.splitlines()
-    for line in lines[:6]:
+    for line in lines[:8]:
         line_clean = line.strip()
-        m_title = re.search(r'#\s+🏛️\s+THE ORACLE SOVEREIGN\s*[—–-]\s*(.+)', line_clean)
+        m_title = re.search(r'#.*?THE ORACLE SOVEREIGN\s*[—–-]\s*(.+)', line_clean)
         if m_title:
-            data['date_str'] = m_title.group(1).strip()
-        m_time = re.search(r'\*\*(\d{1,2}:\d{2})\s*ώρα Κύπρου', line_clean)
+            raw_title_rest = m_title.group(1).strip()
+            data['title'] = f"THE ORACLE SOVEREIGN — {raw_title_rest}"
+            if 'ΑΠΟΓΕΥΜΑΤΙΝΗ' in raw_title_rest.upper() or 'EVENING' in raw_title_rest.upper():
+                data['edition'] = 'evening'
+            elif 'ΜΕΣΗΜΒΡΙΝ' in raw_title_rest.upper() or 'MIDDAY' in raw_title_rest.upper():
+                data['edition'] = 'midday'
+            parts = [p.strip() for p in re.split(r'[—–-]', raw_title_rest) if p.strip()]
+            data['date_str'] = parts[-1] if parts else raw_title_rest
+
+        m_time = re.search(r'(?:\*\*)?(\d{1,2}:\d{2})\s*ώρα Κύπρου', line_clean)
         if m_time:
             data['time_str'] = m_time.group(1).strip()
         m_read = re.search(r'χρόνος ανάγνωσης\s*~?(\d+)', line_clean)
@@ -294,12 +316,16 @@ def parse_markdown(md_content):
             continue
         sec_header = sec_lines[0].strip()
 
-        # TOP STORY
-        if 'ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ' in sec_header:
+        # TOP STORY / FOOTPRINT
+        if 'ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ' in sec_header or 'ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ' in sec_header:
             top_data = {'title': '', 'body': '', 'antilogos': '', 'sources': []}
             h3_match = re.search(r'###\s+(.+)', sec)
             if h3_match:
                 top_data['title'] = h3_match.group(1).strip()
+            elif 'ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ' in sec_header:
+                top_data['title'] = '🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ'
+            else:
+                top_data['title'] = sec_header.replace('##', '').strip()
 
             anti_match = re.search(r'\*\*Αντίλογος:\*\*\s*(.+?)(?=\n\n|\n\*\*Πηγές:|\Z)', sec, re.DOTALL)
             if anti_match:
@@ -311,7 +337,7 @@ def parse_markdown(md_content):
                 top_data['sources'] = [{'name': name, 'url': url} for name, url in sources_raw]
 
             body_parts = []
-            capture = False
+            capture = False if h3_match else True
             for sl in sec_lines[1:]:
                 sl_clean = sl.strip()
                 if sl_clean.startswith('### '):
@@ -325,16 +351,39 @@ def parse_markdown(md_content):
             top_data['body'] = ' '.join(body_parts)
             data['top_story'] = top_data
 
-        # DASHBOARD
-        elif 'DASHBOARD' in sec_header:
+        # MIDDAY BREAKING & DEAL WIRE
+        elif 'BREAKING' in sec_header or 'DEAL WIRE' in sec_header:
+            items = re.split(r'\n###\s+', sec)
+            for itm in items[1:]:
+                itm_lines = itm.strip().splitlines()
+                if not itm_lines: continue
+                itm_title = itm_lines[0].strip()
+                itm_body = []
+                itm_src = None
+                for il in itm_lines[1:]:
+                    il_c = il.strip()
+                    if il_c.startswith('**Πηγή:**') or il_c.startswith('Πηγή:'):
+                        src_match = re.search(r'\[(.*?)\]\((.*?)\)', il_c)
+                        if src_match:
+                            itm_src = {'name': src_match.group(1).strip(), 'url': src_match.group(2).strip()}
+                    elif il_c and not il_c.startswith('---'):
+                        itm_body.append(il_c)
+                data['midday_news'].append({
+                    'title': itm_title,
+                    'body': ' '.join(itm_body),
+                    'source': itm_src
+                })
+
+        # DASHBOARD / CLOSING BELL / MIDDAY MARKET PULSE
+        elif 'DASHBOARD' in sec_header or 'CLOSING BELL' in sec_header or 'MARKET PULSE' in sec_header or 'ΑΓΟΡΕΣ' in sec_header:
             table_lines = [l.strip() for l in sec_lines if l.strip().startswith('|') and not '---' in l]
             for row in table_lines:
                 cols = [c.strip() for c in row.split('|')[1:-1]]
-                if len(cols) >= 4 and not cols[0].startswith('Δείκτης') and not ':---' in cols[0]:
+                if len(cols) >= 3 and not any(cols[0].startswith(x) for x in ['Δείκτης', 'Αγορά', ':---']):
                     asset_name = re.sub(r'\*\*', '', cols[0]).strip()
                     price = cols[1].strip()
                     change = cols[2].strip()
-                    date_ref = cols[3].strip()
+                    date_ref = cols[3].strip() if len(cols) >= 4 else "Κλείσιμο"
                     data['dashboard'].append({
                         'asset': asset_name,
                         'price': price,
@@ -348,6 +397,26 @@ def parse_markdown(md_content):
                     'text': nod_match.group(2).strip()
                 }
 
+        # NOCTURNAL RISK RADAR
+        elif 'ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ' in sec_header or 'ΝΥΧΤΕΡΙΝΟ' in sec_header:
+            for sl in sec_lines[1:]:
+                sl_c = sl.strip()
+                if sl_c and (sl_c[0].isdigit() or sl_c.startswith('*') or sl_c.startswith('-')):
+                    clean_sl = re.sub(r'^\d+\.\s*', '', sl_c).strip()
+                    clean_sl = re.sub(r'^[*\-]\s*', '', clean_sl).strip()
+                    if clean_sl and clean_sl not in ['--', '---']:
+                        data['night_radar'].append(clean_sl)
+
+        # AFTERNOON PRIORITIES (MIDDAY)
+        elif 'ΠΡΟΤΕΡΑΙΟΤΗΤΕΣ' in sec_header:
+            for sl in sec_lines[1:]:
+                sl_c = sl.strip()
+                if sl_c and (sl_c[0].isdigit() or sl_c.startswith('*') or sl_c.startswith('-')):
+                    clean_sl = re.sub(r'^\d+\.\s*', '', sl_c).strip()
+                    clean_sl = re.sub(r'^[*\-]\s*', '', clean_sl).strip()
+                    if clean_sl and clean_sl not in ['--', '---']:
+                        data['afternoon_priorities'].append(clean_sl)
+
         # RATES & MORTGAGE
         elif 'ΕΠΙΤΟΚΙΑ' in sec_header:
             table_lines = [l.strip() for l in sec_lines if l.strip().startswith('|') and not '---' in l]
@@ -359,170 +428,111 @@ def parse_markdown(md_content):
                         'period': period,
                         '1m': cols[1], '3m': cols[2], '6m': cols[3], '12m': cols[4]
                     })
-            ecb_m = re.search(r'Επιτόκιο ΕΚΤ.*?:\s*([\d,]+%?).*?Επόμενη συνεδρίαση:\s*([^\n·]+)', sec)
-            if ecb_m:
-                data['rates']['ecb_rate'] = ecb_m.group(1).strip()
-                data['rates']['next_ecb'] = ecb_m.group(2).strip()
-            cbc_m = re.search(r'Μέσο επιτόκιο νέων στεγαστικών.*?:.*?([\d,]+%).*?\((.*?)\)', sec)
-            if cbc_m:
-                data['rates']['cbc_mortgage_rate'] = cbc_m.group(1).strip()
+            ecb_match = re.search(r'Βασικό Επιτόκιο ΕΚΤ \(DFR\):\s*\*\*([^*]+)\*\*', sec)
+            if ecb_match:
+                data['rates']['ecb_rate'] = ecb_match.group(1).strip()
+            next_ecb_match = re.search(r'Επόμενη Συνεδρίαση ΕΚΤ:\s*\*\*([^*]+)\*\*', sec)
+            if next_ecb_match:
+                data['rates']['next_ecb'] = next_ecb_match.group(1).strip()
+            cbc_match = re.search(r'Μέσο Επιτόκιο Στεγαστικών ΚΤΚ:\s*\*\*([^*]+)\*\*', sec)
+            if cbc_match:
+                data['rates']['cbc_mortgage_rate'] = cbc_match.group(1).strip()
+            ex_pay_match = re.search(r'Μηνιαία δόση:\s*\*\*([^*]+)\*\*', sec)
+            if ex_pay_match:
+                data['rates']['example_payment'] = ex_pay_match.group(1).strip()
+            ex_chg_match = re.search(r'Μεταβολή:\s*\*\*([^*]+)\*\*', sec)
+            if ex_chg_match:
+                data['rates']['example_change'] = ex_chg_match.group(1).strip()
 
-            calc_m = re.search(r'Ενδεικτική δόση.*?→\s*\*\*([^*]+)\*\*', sec)
-            if calc_m:
-                data['rates']['example_payment'] = calc_m.group(1).strip()
-            elif data['rates']['cbc_mortgage_rate'] != '—':
-                try:
-                    r_clean = data['rates']['cbc_mortgage_rate'].replace('%', '').replace(',', '.').strip()
-                    r_val = float(r_clean)
-                    pmt_val = annuity_payment(200000, r_val, 25)
-                    data['rates']['example_payment'] = f"€{pmt_val:,.2f}".replace(',', 'X').replace('.', ',').replace('X', '.')
-                except Exception:
-                    pass
-
-            srcs_m = re.search(r'Πηγές:\s*(.+)', sec)
-            if srcs_m:
-                sources_raw = re.findall(r'\[(.*?)\]\((.*?)\)', srcs_m.group(1))
-                data['rates']['sources'] = [{'name': name, 'url': url} for name, url in sources_raw]
-
-        # CYPRUS
+        # CYPRUS NEWS
         elif 'ΚΥΠΡΟΣ' in sec_header:
-            items_raw = re.split(r'\n###\s+', '\n' + sec)
-            for raw_item in items_raw[1:]:
-                lines_i = raw_item.strip().splitlines()
-                if not lines_i:
-                    continue
-                title_line = lines_i[0].strip()
-                tag_match = re.findall(r'\[([^\]]+)\]', title_line)
-                tags = [t for t in tag_match if t not in ['Ο Φάκελός μου']]
-                tag = tags[-1] if tags else 'Μονή πηγή'
+            c_items = re.split(r'\n###\s+', sec)
+            for ci in c_items[1:]:
+                ci_lines = ci.strip().splitlines()
+                if not ci_lines: continue
+                c_title = ci_lines[0].strip()
+                c_tag = 'Επιβεβαιωμένο'
+                if '[ΕΞΕΛΙΣΣΟΜΕΝΟ]' in c_title:
+                    c_tag = 'Εξελισσόμενο'
+                    c_title = c_title.replace('[ΕΞΕΛΙΣΣΟΜΕΝΟ]', '').strip()
+                elif '[ΕΠΙΒΕΒΑΙΩΜΕΝΟ]' in c_title:
+                    c_tag = 'Επιβεβαιωμένο'
+                    c_title = c_title.replace('[ΕΠΙΒΕΒΑΙΩΜΕΝΟ]', '').strip()
 
-                is_portfolio = '[Ο Φάκελός μου]' in title_line or 'Ο Φάκελός μου' in title_line
-                clean_title = re.sub(r'^\d+\.\s*', '', title_line)
-                clean_title = clean_title.replace('[Ο Φάκελός μου]', '').replace(f'[{tag}]', '').strip()
+                c_why = ''
+                why_m = re.search(r'\*\*Γιατί με αφορά:\*\*\s*(.+?)(?=\n\*\*Πηγή:|\n\n|\Z)', ci, re.DOTALL)
+                if why_m:
+                    c_why = why_m.group(1).strip()
 
-                why_match = re.search(r'\*\*Γιατί με αφορά:\*\*\s*(.+)', raw_item)
-                why_text = why_match.group(1).strip() if why_match else ''
+                c_src = None
+                src_m = re.search(r'\*\*Πηγή:\*\*\s*(.+)', ci)
+                if src_m:
+                    s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_m.group(1))
+                    if s_raw:
+                        c_src = {'name': s_raw[0][0], 'url': s_raw[0][1]}
 
-                src_match = re.search(r'\*\*(?:Πηγή|Πηγές):\*\*\s*(.+)', raw_item)
-                source = None
-                if src_match:
-                    src_parsed = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
-                    if src_parsed:
-                        source = {'name': src_parsed[0][0], 'url': src_parsed[0][1]}
-
-                body_lines = []
-                for bl in lines_i[1:]:
-                    bl_c = bl.strip()
-                    if bl_c.startswith('**Γιατί με αφορά:') or bl_c.startswith('**Βάθος:') or bl_c.startswith('**Πηγή:') or bl_c.startswith('**Πηγές:'):
+                c_body = []
+                for cl in ci_lines[1:]:
+                    cl_c = cl.strip()
+                    if cl_c.startswith('**Γιατί με αφορά:') or cl_c.startswith('**Πηγή:'):
                         break
-                    if bl_c.startswith('* **') or bl_c.startswith('- **') or bl_c.startswith('• **'):
-                        break
-                    if bl_c and not bl_c.startswith('---'):
-                        body_lines.append(bl_c)
-                body_text = ' '.join(body_lines)
-
-                depth = {}
-                bg_m = re.search(r'\*\*Το υπόβαθρο:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                pr_m = re.search(r'\*\*Τι σημαίνει πρακτικά:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                nw_m = re.search(r'\*\*Τι να παρακολουθήσω:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                an_m = re.search(r'\*\*Αντίλογος:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                if bg_m and bg_m.group(1).strip():
-                    depth['background'] = bg_m.group(1).strip().replace('\n', ' ')
-                if pr_m and pr_m.group(1).strip():
-                    depth['practical'] = pr_m.group(1).strip().replace('\n', ' ')
-                if nw_m and nw_m.group(1).strip():
-                    depth['next_watch'] = nw_m.group(1).strip().replace('\n', ' ')
-                if an_m and an_m.group(1).strip():
-                    depth['antilogos'] = an_m.group(1).strip().replace('\n', ' ')
+                    if cl_c and not cl_c.startswith('---'):
+                        c_body.append(cl_c)
 
                 data['cyprus'].append({
-                    'title': clean_title,
-                    'tag': tag,
-                    'is_portfolio': is_portfolio,
-                    'body': body_text,
-                    'why': why_text,
-                    'source': source,
-                    'depth': depth
+                    'title': c_title,
+                    'tag': c_tag,
+                    'why': c_why,
+                    'source': c_src,
+                    'body': ' '.join(c_body),
+                    'is_portfolio': False
                 })
 
-        # WORLD
+        # WORLD NEWS
         elif 'ΔΙΕΘΝΗ' in sec_header:
-            items_raw = re.split(r'\n###\s+', '\n' + sec)
-            for raw_item in items_raw[1:]:
-                lines_i = raw_item.strip().splitlines()
-                if not lines_i:
-                    continue
-                title_line = lines_i[0].strip()
-                tag_match = re.findall(r'\[([^\]]+)\]', title_line)
-                tag = tag_match[-1] if tag_match else 'Μονή πηγή'
-                clean_title = re.sub(r'^\d+\.\s*', '', title_line).replace(f'[{tag}]', '').strip()
+            w_items = re.split(r'\n###\s+', sec)
+            for wi in w_items[1:]:
+                wi_lines = wi.strip().splitlines()
+                if not wi_lines: continue
+                w_title = wi_lines[0].strip()
+                w_tag = 'Επιβεβαιωμένο'
+                if '[ΕΞΕΛΙΣΣΟΜΕΝΟ]' in w_title:
+                    w_tag = 'Εξελισσόμενο'
+                    w_title = w_title.replace('[ΕΞΕΛΙΣΣΟΜΕΝΟ]', '').strip()
+                elif '[ΕΠΙΒΕΒΑΙΩΜΕΝΟ]' in w_title:
+                    w_tag = 'Επιβεβαιωμένο'
+                    w_title = w_title.replace('[ΕΠΙΒΕΒΑΙΩΜΕΝΟ]', '').strip()
 
-                src_match = re.search(r'\*\*(?:Πηγή|Πηγές):\*\*\s*(.+)', raw_item)
-                source = None
-                if src_match:
-                    src_parsed = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
-                    if src_parsed:
-                        source = {'name': src_parsed[0][0], 'url': src_parsed[0][1]}
+                w_why = ''
+                why_m = re.search(r'\*\*Γιατί με αφορά:\*\*\s*(.+?)(?=\n\*\*Πηγή:|\n\n|\Z)', wi, re.DOTALL)
+                if why_m:
+                    w_why = why_m.group(1).strip()
 
-                body_lines = []
-                for bl in lines_i[1:]:
-                    bl_c = bl.strip()
-                    if bl_c.startswith('**Βάθος:') or bl_c.startswith('**Πηγή:') or bl_c.startswith('**Πηγές:'):
+                w_src = None
+                src_m = re.search(r'\*\*Πηγή:\*\*\s*(.+)', wi)
+                if src_m:
+                    s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_m.group(1))
+                    if s_raw:
+                        w_src = {'name': s_raw[0][0], 'url': s_raw[0][1]}
+
+                w_body = []
+                for wl in wi_lines[1:]:
+                    wl_c = wl.strip()
+                    if wl_c.startswith('**Γιατί με αφορά:') or wl_c.startswith('**Πηγή:'):
                         break
-                    if bl_c.startswith('* **') or bl_c.startswith('- **') or bl_c.startswith('• **'):
-                        break
-                    if bl_c and not bl_c.startswith('---'):
-                        body_lines.append(bl_c)
-                body_text = ' '.join(body_lines)
-
-                depth = {}
-                bg_m = re.search(r'\*\*Το υπόβαθρο:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                pr_m = re.search(r'\*\*Τι σημαίνει πρακτικά:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                nw_m = re.search(r'\*\*Τι να παρακολουθήσω:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                an_m = re.search(r'\*\*Αντίλογος:\*\*\s*(.+?)(?=\n\s*[*•-]\s*\*\*|\n\*\*|\Z)', raw_item, re.DOTALL)
-                if bg_m and bg_m.group(1).strip():
-                    depth['background'] = bg_m.group(1).strip().replace('\n', ' ')
-                if pr_m and pr_m.group(1).strip():
-                    depth['practical'] = pr_m.group(1).strip().replace('\n', ' ')
-                if nw_m and nw_m.group(1).strip():
-                    depth['next_watch'] = nw_m.group(1).strip().replace('\n', ' ')
-                if an_m and an_m.group(1).strip():
-                    depth['antilogos'] = an_m.group(1).strip().replace('\n', ' ')
+                    if wl_c and not wl_c.startswith('---'):
+                        w_body.append(wl_c)
 
                 data['world'].append({
-                    'title': clean_title,
-                    'tag': tag,
-                    'body': body_text,
-                    'source': source,
-                    'depth': depth
-                })
-
-        # MARKETS TOP MOVERS
-        elif 'ΑΓΟΡΕΣ' in sec_header or 'MOVERS' in sec_header:
-            items_raw = re.split(r'\n###\s+', '\n' + sec)
-            for raw_item in items_raw[1:]:
-                lines_i = raw_item.strip().splitlines()
-                if not lines_i:
-                    continue
-                header_line = lines_i[0].strip()
-                cause_m = re.search(r'\*\*Αιτία:\*\*\s*(.+)', raw_item)
-                cause = cause_m.group(1).strip() if cause_m else ''
-
-                src_m = re.search(r'\*\*Πηγή:\*\*\s*(.+)', raw_item)
-                source = None
-                if src_m:
-                    src_parsed = re.findall(r'\[(.*?)\]\((.*?)\)', src_m.group(1))
-                    if src_parsed:
-                        source = {'name': src_parsed[0][0], 'url': src_parsed[0][1]}
-
-                data['markets'].append({
-                    'header': header_line,
-                    'cause': cause,
-                    'source': source
+                    'title': w_title,
+                    'tag': w_tag,
+                    'why': w_why,
+                    'source': w_src,
+                    'body': ' '.join(w_body)
                 })
 
         # SPORTS
-        elif 'ΑΘΛΗΤΙΚΑ' in sec_header:
+        elif 'ΑΘΛΗΤΙΚΑ' in sec_header or 'ΑΘΛΗΤΙΣΜΟΣ' in sec_header:
             team = None
             for sl in sec_lines:
                 sl_c = sl.strip()
@@ -537,6 +547,25 @@ def parse_markdown(md_content):
                     elif 'FORMULA 1' in sl_upper or 'FORMULA1' in sl_upper or 'F1' in sl_upper:
                         team = 'formula1'
                     continue
+
+                if sl_c.startswith('*') or sl_c.startswith('-'):
+                    item_text = re.sub(r'^[*\-]\s*', '', sl_c).strip()
+                    m_team = re.match(r'^\*\*(.*?):\*\*\s*(.*)$', item_text)
+                    if m_team:
+                        t_label = m_team.group(1).strip().upper()
+                        t_rest = m_team.group(2).strip()
+                        if 'ΟΜΟΝΟΙΑ' in t_label:
+                            team = 'omonoia'
+                        elif 'MANCHESTER' in t_label or 'MAN UTD' in t_label:
+                            team = 'manutd'
+                        elif 'REAL' in t_label:
+                            team = 'realmadrid'
+                        elif 'FORMULA' in t_label or 'F1' in t_label:
+                            team = 'formula1'
+                        if team:
+                            data['sports'][team]['raw'].append(t_rest)
+                            data['sports'][team]['next_match'] = t_rest
+                            continue
 
                 if team and (sl_c.startswith('*') or sl_c.startswith('-')):
                     item_text = re.sub(r'^[*\-]\s*', '', sl_c).strip()
@@ -572,18 +601,6 @@ def parse_markdown(md_content):
                     else:
                         clean_news = re.sub(r'^\*?\*?(?:Μία γραμμή νέων|Νέα):\*?\*?\s*', '', item_text).strip()
                         data['sports'][team]['news'].append(clean_news)
-
-            # Fallback source search for any team missing source
-            for t_key, t_val in data['sports'].items():
-                if not t_val['source']:
-                    for r in reversed(t_val['raw']):
-                        candidates = re.findall(r'\[(.*?)\]\((https?://.*?)\)', r)
-                        for name, url in candidates:
-                            if 'youtube' not in url.lower():
-                                t_val['source'] = {'name': name, 'url': url}
-                                break
-                        if t_val['source']:
-                            break
 
         # WEATHER
         elif 'ΚΑΙΡΟΣ' in sec_header:
@@ -727,7 +744,7 @@ def build_search_index():
         try:
             with open(bpath, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read()
-            data = parse_markdown(content)
+            data = parse_markdown(content, bfilename)
 
             def clean_plain(s):
                 if not s: return ""
@@ -797,7 +814,993 @@ def generate_sparkline(change_str):
     return f'<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="{stroke}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="{pts}" /></svg>'
 
 
-def render_html(data, house_stats, search_index):
+def render_evening_html(data, house_stats, search_index, is_subfolder=False, date_slug=None):
+    date_display = data.get('date_str') or '10 Σεπτεμβρίου 2026'
+    time_display = data.get('time_str') or '19:30'
+    read_time = data.get('read_time') or "4'"
+
+    if not date_slug:
+        m_iso = re.search(r'(\d{4}-\d{2}-\d{2})', date_display)
+        iso_date = m_iso.group(1) if m_iso else datetime.now().strftime('%Y-%m-%d')
+    else:
+        iso_date = date_slug
+
+    gen_iso = f"{iso_date}T{time_display}:00+03:00" if ':' in time_display else f"{iso_date}T19:30:00+03:00"
+
+    prefix = "../" if is_subfolder else ""
+    home_url = f"{prefix}index.html"
+    morning_url = f"{prefix}briefings/{iso_date}.html"
+    midday_url = f"{prefix}briefings/{iso_date}-midday.html"
+    evening_url = f"{prefix}briefings/{iso_date}-evening.html"
+    live_wire_url = f"{prefix}live-wire.json"
+    search_index_url = f"{prefix}search-index.json"
+
+    # Ticker Items
+    ticker_spans = []
+    for d in data.get('dashboard', []):
+        color_cls = "text-[var(--up)]" if "+" in d['change'] else ("text-[var(--down)]" if "-" in d['change'] else "text-[var(--ink-quiet)]")
+        spk = generate_sparkline(d['change'])
+        ticker_spans.append(f'<span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">{d["asset"]}:</span> <span class="text-[var(--ink-body)]">{d["price"]}</span> <span class="{color_cls} font-semibold inline-flex items-center">{d["change"]}{spk}</span></span>')
+    ticker_html = ' · '.join(ticker_spans) + ' · ' + ' · '.join(ticker_spans) if ticker_spans else ''
+
+    # Market Table Rows
+    market_rows = []
+    for d in data.get('dashboard', []):
+        is_up = '+' in d['change']
+        is_down = '-' in d['change']
+        badge_cls = "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20" if is_up else ("bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" if is_down else "bg-gray-500/10 text-gray-600 border-gray-500/20")
+        spk = generate_sparkline(d['change'])
+        comment = md_to_inline_html(d.get('date_ref', ''))
+        market_rows.append(f'''
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3.5 px-4 font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>{d["asset"]}</span>
+          </td>
+          <td class="py-3.5 px-4 font-mono font-bold text-[var(--ink)]">{d["price"]}</td>
+          <td class="py-3.5 px-4 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold {badge_cls}">
+              <span>{d["change"]}</span> {spk}
+            </span>
+          </td>
+          <td class="py-3.5 px-4 text-xs text-[var(--ink-body)]">{comment}</td>
+        </tr>
+        ''')
+    market_table_html = '\n'.join(market_rows)
+
+    # Sports Cards
+    sports = data.get('sports', {})
+    sports_config = [
+        {
+            'key': 'omonoia',
+            'name': 'ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ',
+            'icon': '☘️',
+            'league': 'CYPRUS LEAGUE & EUROPE',
+            'border': 'border-emerald-700/30 dark:border-emerald-600/40',
+            'header_bg': 'bg-gradient-to-r from-emerald-900 to-green-950',
+            'search_q': 'Omonoia FC highlights 2026'
+        },
+        {
+            'key': 'manutd',
+            'name': 'MANCHESTER UNITED',
+            'icon': '🔴',
+            'league': 'UEFA CHAMPIONS LEAGUE',
+            'border': 'border-red-700/30 dark:border-red-600/40',
+            'header_bg': 'bg-gradient-to-r from-red-900 to-stone-950',
+            'search_q': 'Manchester United highlights 2026'
+        },
+        {
+            'key': 'realmadrid',
+            'name': 'REAL MADRID',
+            'icon': '⚪',
+            'league': 'SPANISH LA LIGA',
+            'border': 'border-amber-700/30 dark:border-amber-600/40',
+            'header_bg': 'bg-gradient-to-r from-indigo-950 via-slate-900 to-purple-950',
+            'search_q': 'Real Madrid highlights 2026'
+        },
+        {
+            'key': 'formula1',
+            'name': 'FORMULA 1',
+            'icon': '🏎️',
+            'league': 'FIA WORLD CHAMPIONSHIP',
+            'border': 'border-red-600/30 dark:border-red-500/40',
+            'header_bg': 'bg-gradient-to-r from-neutral-900 to-red-950',
+            'search_q': 'Formula 1 highlights 2026'
+        }
+    ]
+
+    sports_cards = []
+    for sc in sports_config:
+        s_data = sports.get(sc['key'], {})
+        next_m = s_data.get('next_match') or ''
+        # clean any '--'
+        if next_m == '--': next_m = ''
+        match_html = md_to_inline_html(next_m) if next_m else '<span class="text-[var(--ink-quiet)] italic">Αναμονή επόμενου αγώνα</span>'
+        search_url = f"https://www.youtube.com/results?search_query={sc['search_q'].replace(' ', '+')}"
+
+        sports_cards.append(f'''
+        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs {sc['border']}">
+          <div>
+            <div class="{sc['header_bg']} p-4 text-white flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl">{sc['icon']}</span>
+                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">{sc['name']}</h3>
+              </div>
+              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                {sc['league']}
+              </span>
+            </div>
+            <div class="p-5 space-y-3">
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                {match_html}
+              </div>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <a href="{search_url}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
+              <span>▶</span> <span>YouTube Highlights & Match Hub</span>
+            </a>
+          </div>
+        </article>
+        ''')
+    sports_html = '\n'.join(sports_cards)
+
+    # Night Radar Items
+    radar_items = []
+    for idx, r in enumerate(data.get('night_radar', []), 1):
+        clean_r = md_to_inline_html(r)
+        icons = ["🌏", "🛡️", "🌅"]
+        ico = icons[idx-1] if idx <= len(icons) else "⚡"
+        radar_items.append(f'''
+        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
+          <span class="text-xl flex-shrink-0 mt-0.5">{ico}</span>
+          <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
+            {clean_r}
+          </div>
+        </li>
+        ''')
+    radar_html = '\n'.join(radar_items)
+
+    top_body = md_to_inline_html(data.get('top_story', {}).get('body', ''))
+
+    html = f'''<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>THE ORACLE SOVEREIGN — 🌙 Night Debrief — {date_display}</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {{ darkMode: 'class' }};
+  </script>
+  <script>
+    (function () {{
+      var s = localStorage.getItem('oracle-theme');
+      var d = s ? s === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (d) document.documentElement.classList.add('dark');
+    }})();
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {{
+      --paper: #f6f3ec;
+      --paper-raised: #fffdf8;
+      --rule: #d9d3c5;
+      --rule-strong: #b3aa96;
+      --ink: #17150f;
+      --ink-body: #2e2a22;
+      --ink-quiet: #6d675a;
+      --accent: #8a5320;
+      --up: #1f6b3f;
+      --down: #a3282b;
+      --r-md: 8px;
+    }}
+
+    .dark {{
+      --paper: #14120e;
+      --paper-raised: #1c1a15;
+      --rule: #2e2920;
+      --rule-strong: #4a4233;
+      --ink: #ede8dc;
+      --ink-body: #cfc8ba;
+      --ink-quiet: #8c8373;
+      --accent: #d4954b;
+      --up: #43a047;
+      --down: #e53935;
+    }}
+
+    body {{
+      background-color: var(--paper);
+      color: var(--ink-body);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }}
+
+    .font-masthead {{ font-family: 'Cinzel', serif; }}
+    .font-editorial {{ font-family: 'Newsreader', serif; }}
+    .t-masthead {{ font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }}
+    .t-section {{ font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }}
+    .card {{ background-color: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--r-md); }}
+
+    .ticker-wrap {{ overflow: hidden; white-space: nowrap; }}
+    .ticker-content {{ display: inline-block; animation: tickerAnimation 40s linear infinite; }}
+    .ticker-wrap:hover .ticker-content {{ animation-play-state: paused; }}
+    @keyframes tickerAnimation {{ 0% {{ transform: translateX(0); }} 100% {{ transform: translateX(-50%); }} }}
+  </style>
+</head>
+<body class="antialiased min-h-screen">
+
+  <!-- TOP BAR & STATUS -->
+  <div class="bg-[var(--paper-raised)] border-b border-[var(--rule)] text-xs py-1.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex flex-wrap items-center gap-3">
+        <span id="freshness" data-generated="{gen_iso}"
+              class="inline-flex items-center px-2 py-0.5 rounded font-mono font-semibold text-[11px] bg-amber-500/10 text-amber-800 dark:text-amber-300">
+          🌙 19:30 · {date_display}
+        </span>
+
+        <!-- Edition Switcher -->
+        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+          <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
+          <a href="{morning_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
+          <a href="{midday_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">☀️ 13:30 Μεσημέρι</a>
+          <a href="{evening_url}" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">🌙 19:30 Απόγευμα</a>
+          <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
+          </button>
+        </div>
+      </div>
+
+      <!-- Global Clocks Bar -->
+      <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
+        <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span></span>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="px-2 py-1 rounded border border-[var(--rule)] text-xs hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος">🌓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASTHEAD -->
+  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 bg-[var(--paper-raised)]">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="flex justify-between items-center text-xs uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
+        <div>ΕΤΟΣ 2026 · DAILY BRIEFING</div>
+        <div class="font-bold text-[var(--accent)]">🌙 NIGHT DEBRIEF & CLOSING BELL</div>
+        <div>ONE-READER EDITION</div>
+      </div>
+
+      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase">
+        THE ORACLE SOVEREIGN
+      </h1>
+      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto">
+        Απογευματινή Επιτελική Ανασκόπηση, Τελικά Κλεισίματα Αγορών, Αθλητικό Πρόγραμμα & Νυχτερινό Ραντάρ
+      </p>
+
+      <div class="flex flex-wrap justify-center items-center gap-3 mt-4 pt-3 border-t border-[var(--rule)] text-xs text-[var(--ink-quiet)] font-mono">
+        <span>📅 {date_display}</span>
+        <span>·</span>
+        <span>⏰ 19:30 ώρα Κύπρου</span>
+        <span>·</span>
+        <span>⏱️ {read_time} ανάγνωση</span>
+        <span>·</span>
+        <a href="{home_url}" class="text-[var(--accent)] hover:underline font-bold">🏛️ Πύλη The Oracle</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- LIVE MARKET TICKER -->
+  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
+    <div class="ticker-content space-x-8 font-mono">
+      {ticker_html}
+    </div>
+  </div>
+
+  <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
+  <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] text-xs">
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
+        </span>
+      </div>
+      <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
+        <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
+      </div>
+      <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
+        <span>Προβολή Όλων (50+)</span> <span>➔</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
+
+    <!-- 🎙️ AUDIO BRIEFING PLAYER -->
+    <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <button id="audioPlayBtn" class="w-11 h-11 rounded-full bg-[var(--accent)] text-white flex items-center justify-center shadow hover:opacity-90 transition font-bold text-lg flex-shrink-0" aria-label="Αναπαραγωγή ηχητικής σύνοψης">
+          ▶
+        </button>
+        <div>
+          <div class="text-xs font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>🎙️ Ακρόαση Απογευματινής Σύνοψης (The Sovereign Audio Debrief)</span>
+            <span id="audioLiveBadge" class="hidden text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">LIVE</span>
+          </div>
+          <div id="audioStatusText" class="text-xs text-[var(--ink-quiet)]">
+            Επιτελική σύνοψη κλεισίματος ~1.5 λεπτού · Πατήστε Play για φωνητική ανάγνωση
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="audioSpeedBtn" class="text-xs font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
+          1.0x
+        </button>
+        <button id="audioStopBtn" class="text-xs px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
+          ⏹ Διακοπή
+        </button>
+      </div>
+    </div>
+
+    <!-- ==================== 🏁 1. ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ ==================== -->
+    <section id="top-story" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🏁</span> <span>Το Αποτύπωμα της Ημέρας</span>
+        </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">EXECUTIVE RECAP</span>
+      </div>
+
+      <div class="card overflow-hidden shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
+          <div class="md:col-span-5 relative min-h-[220px] bg-[var(--paper)]">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" 
+                 alt="Evening Capital Recap" 
+                 class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider bg-[var(--accent)] text-white font-bold">
+                ΑΠΟΓΕΥΜΑΤΙΝΗ ΣΥΝΘΕΣΗ
+              </span>
+            </div>
+          </div>
+          <div class="md:col-span-7 p-6 sm:p-7 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs uppercase tracking-wider mb-2 text-[var(--accent)] font-semibold">
+                <span>Τελική Αποτίμηση</span>
+                <span>·</span>
+                <span class="text-[var(--ink-quiet)] font-mono">{date_display}</span>
+              </div>
+              <h3 class="font-editorial text-2xl font-bold text-[var(--ink)] mb-3 leading-snug">
+                Ημερήσιο Οικονομικό & Στρατηγικό Αποτύπωμα
+              </h3>
+              <p id="topStoryBody" class="font-editorial text-base sm:text-lg text-[var(--ink-body)] leading-relaxed">
+                {top_body}
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[var(--rule)] flex items-center justify-between text-xs text-[var(--ink-quiet)] font-mono">
+              <span>Ώρα Καταγραφής: 19:30 EEST</span>
+              <span>The Oracle Sovereign</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 🔔 2. CLOSING BELL & ΑΓΟΡΕΣ ==================== -->
+    <section id="closing-bell" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🔔</span> <span>Closing Bell & Αγορές</span>
+        </h2>
+        <span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">ΤΕΛΙΚΑ ΚΛΕΙΣΙΜΑΤΑ</span>
+      </div>
+
+      <div class="card overflow-hidden shadow-xs">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+              <tr>
+                <th class="py-3 px-4">Αγορά / Τίτλος</th>
+                <th class="py-3 px-4">Κλείσιμο</th>
+                <th class="py-3 px-4">Μεταβολή</th>
+                <th class="py-3 px-4">Επιτελικό Σχόλιο</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--rule)] font-sans">
+              {market_table_html}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ⚽ 3. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
+    <section id="sports-radar" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>⚽</span> <span>Απογευματινός Αθλητισμός & Πρόγραμμα</span>
+        </h2>
+        <span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">HIGHLIGHTS & FIXTURES</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {sports_html}
+      </div>
+    </section>
+
+    <!-- ==================== 🌌 4. ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ ==================== -->
+    <section id="night-radar" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🌌</span> <span>Νυχτερινό Ραντάρ Κινδύνου</span>
+        </h2>
+        <span class="text-xs font-mono text-indigo-500 uppercase font-bold ml-auto">OVERNIGHT WATCH</span>
+      </div>
+
+      <div class="card p-5 sm:p-6 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-indigo-950/10 border-indigo-500/20">
+        <p class="text-xs text-[var(--ink-quiet)] mb-4 font-mono">
+          Κρίσιμοι άξονες παρακολούθησης κατά τη διάρκεια της νύχτας μέχρι το επόμενο πρωινό άνοιγμα:
+        </p>
+        <ul class="space-y-3">
+          {radar_html}
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 🏛️ 5. ΣΥΝΔΕΣΗ ΜΕ ΤΟ ΠΡΩΙΝΟ BROADSHEET ==================== -->
+    <div class="card p-6 bg-gradient-to-r from-amber-500/5 via-[var(--paper-raised)] to-[var(--paper-raised)] border-l-4 border-[var(--accent)] flex flex-wrap items-center justify-between gap-4 shadow-xs">
+      <div class="max-w-2xl">
+        <div class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] mb-1">
+          🏛️ THE SOVEREIGN MORNING BROADSHEET
+        </div>
+        <h3 class="font-editorial text-xl font-bold text-[var(--ink)] mb-1">
+          Χρειάζεστε την πλήρη ανάλυση της ημέρας;
+        </h3>
+        <p class="text-xs text-[var(--ink-body)] leading-relaxed">
+          Ανατρέξτε στην πρωινή έκδοση (07:30) για το πλήρες ρεπορτάζ Κύπρου, τον υπολογιστή δανείων Euribor, την εβδομαδιαία έκθεση ακινήτων Λεμεσού και τα διεθνή νέα.
+        </p>
+      </div>
+      <a href="{morning_url}" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent)] text-white font-bold text-xs hover:opacity-90 transition shadow">
+        <span>Άνοιγμα Πρωινού Broadsheet</span> <span>➔</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 border-t border-[var(--rule)] bg-[var(--paper-raised)] py-8 px-4 text-xs text-[var(--ink-quiet)]">
+    <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-4">
+      <div class="space-y-1">
+        <div class="font-bold text-[var(--ink)] font-masthead">THE ORACLE SOVEREIGN</div>
+        <div>Confidential Executive Briefing · Night Debrief Edition</div>
+      </div>
+      <div class="flex items-center gap-4 font-mono text-[11px]">
+        <a href="{home_url}" class="hover:text-[var(--accent)]">Αρχική</a>
+        <span>·</span>
+        <a href="{morning_url}" class="hover:text-[var(--accent)]">Πρωινό Broadsheet</a>
+        <span>·</span>
+        <a href="{midday_url}" class="hover:text-[var(--accent)]">Μεσημβρινός Παλμός</a>
+        <span>·</span>
+        <button onclick="window.print()" class="hover:text-[var(--accent)]">Εκτύπωση PDF</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
+  <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
+    <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
+      <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+          <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
+        </div>
+        <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
+      </div>
+      <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
+        Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
+      </div>
+      <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
+        <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT ENGINE -->
+  <script>
+    // Theme Toggle
+    const themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {{
+      themeBtn.addEventListener('click', () => {{
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('oracle-theme', isDark ? 'dark' : 'light');
+      }});
+    }}
+
+    // Global Clocks
+    function updateClocks() {{
+      const now = new Date();
+      const fmt = (tz) => new Intl.DateTimeFormat('el-GR', {{ timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }}).format(now);
+      const cy = document.getElementById('clockCY'); if (cy) cy.textContent = fmt('Asia/Nicosia');
+      const lon = document.getElementById('clockLON'); if (lon) lon.textContent = fmt('Europe/London');
+      const nyc = document.getElementById('clockNYC'); if (nyc) nyc.textContent = fmt('America/New_York');
+      const tyo = document.getElementById('clockTYO'); if (tyo) tyo.textContent = fmt('Asia/Tokyo');
+    }}
+    updateClocks();
+    setInterval(updateClocks, 10000);
+
+    // Audio Briefing Player (Web Speech API)
+    (function () {{
+      const playBtn = document.getElementById('audioPlayBtn');
+      const stopBtn = document.getElementById('audioStopBtn');
+      const speedBtn = document.getElementById('audioSpeedBtn');
+      const statusText = document.getElementById('audioStatusText');
+      const liveBadge = document.getElementById('audioLiveBadge');
+      if (!playBtn || !('speechSynthesis' in window)) return;
+
+      let synth = window.speechSynthesis;
+      let utterance = null;
+      let speeds = [1.0, 1.25, 1.5];
+      let speedIdx = 0;
+
+      function getBriefingText() {{
+        let text = "Απογευματινή επιτελική σύνοψη της εφημερίδας The Oracle Sovereign για τις 10 Σεπτεμβρίου 2026. ";
+        const topEl = document.getElementById('topStoryBody');
+        if (topEl) text += topEl.innerText + " ";
+        text += "Στις αγορές και το closing bell: ";
+        {repr([f"{d['asset']}: {d['price']}, μεταβολή {d['change']}." for d in data.get('dashboard', [])])}.forEach(m => text += m + " ");
+        text += "Στον νυχτερινό κίνδυνο: Παρακολούθηση ασιατικού ανοίγματος στις δύο τα ξημερώματα και περιφερειακού εναέριου χώρου.";
+        return text;
+      }}
+
+      playBtn.addEventListener('click', () => {{
+        if (synth.speaking && !synth.paused) {{
+          synth.pause();
+          playBtn.innerHTML = '▶';
+          statusText.innerText = 'Σε παύση · Πατήστε Play για συνέχεια';
+          return;
+        }}
+        if (synth.paused) {{
+          synth.resume();
+          playBtn.innerHTML = '⏸';
+          statusText.innerText = 'Αναπαραγωγή σε εξέλιξη...';
+          return;
+        }}
+
+        utterance = new SpeechSynthesisUtterance(getBriefingText());
+        utterance.lang = 'el-GR';
+        utterance.rate = speeds[speedIdx];
+        utterance.onend = () => {{
+          playBtn.innerHTML = '▶';
+          stopBtn.classList.add('hidden');
+          liveBadge.classList.add('hidden');
+          statusText.innerText = 'Ολοκληρώθηκε η ανάγνωση της απογευματινής σύνοψης';
+        }};
+
+        synth.speak(utterance);
+        playBtn.innerHTML = '⏸';
+        stopBtn.classList.remove('hidden');
+        liveBadge.classList.remove('hidden');
+        statusText.innerText = 'Αναπαραγωγή απογευματινής σύνοψης...';
+      }});
+
+      stopBtn.addEventListener('click', () => {{
+        synth.cancel();
+        playBtn.innerHTML = '▶';
+        stopBtn.classList.add('hidden');
+        liveBadge.classList.add('hidden');
+        statusText.innerText = 'Διακόπηκε η ανάγνωση';
+      }});
+
+      speedBtn.addEventListener('click', () => {{
+        speedIdx = (speedIdx + 1) % speeds.length;
+        speedBtn.innerText = speeds[speedIdx] + 'x';
+        if (synth.speaking) {{
+          synth.cancel();
+          playBtn.click();
+        }}
+      }});
+    }})();
+
+    // 24/7 Live Wire Fetcher & Drawer
+    (function () {{
+      const tickerEl = document.getElementById('liveWireTicker');
+      const drawerContent = document.getElementById('wireDrawerContent');
+      const drawerModal = document.getElementById('wireDrawerModal');
+      const openBtn = document.getElementById('openWireDrawerBtn');
+      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
+      const closeBtn = document.getElementById('closeWireDrawerBtn');
+
+      let wireItems = [];
+      let activeIndex = 0;
+      let rotatorInterval = null;
+
+      function fetchWire() {{
+        return fetch('{live_wire_url}')
+          .catch(() => fetch('live-wire.json'))
+          .catch(() => fetch('../live-wire.json'))
+          .then(r => r.json())
+          .then(data => {{
+            wireItems = data;
+            renderTicker();
+            renderDrawer();
+            if (!rotatorInterval && wireItems.length > 1) {{
+              rotatorInterval = setInterval(rotateTicker, 6000);
+            }}
+          }})
+          .catch(e => console.warn('Could not load live-wire:', e));
+      }}
+
+      function renderTicker() {{
+        if (!tickerEl || !wireItems.length) return;
+        const item = wireItems[activeIndex];
+        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
+        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${{item.time_str || ''}}]</span>`;
+        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${{item.source}})</span>`;
+        tickerEl.innerHTML = `<div class="truncate">${{breakBadge}}${{timeBadge}}<a href="${{item.link}}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${{item.title}}</a>${{srcBadge}}</div>`;
+      }}
+
+      function rotateTicker() {{
+        if (!tickerEl || !wireItems.length) return;
+        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
+        renderTicker();
+      }}
+
+      function renderDrawer() {{
+        if (!drawerContent || !wireItems.length) return;
+        drawerContent.innerHTML = wireItems.map(item => {{
+          const isB = item.is_breaking;
+          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
+          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
+          return `
+            <div class="p-3 rounded-lg border ${{borderCls}} space-y-1 text-xs">
+              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
+                <span>${{item.source}} · ${{item.time_str || ''}}</span>
+                ${{isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}}
+              </div>
+              <a href="${{item.link}}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
+                ${{breakTag}}${{item.title}}
+              </a>
+              ${{item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${{item.snippet}}</p>` : ''}}
+            </div>
+          `;
+        }}).join('');
+      }}
+
+      function toggleDrawer(open) {{
+        if (!drawerModal) return;
+        if (open) {{
+          drawerModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }} else {{
+          drawerModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }}
+      }}
+
+      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
+      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+      if (drawerModal) {{
+        drawerModal.addEventListener('click', (e) => {{
+          if (e.target === drawerModal) toggleDrawer(false);
+        }});
+      }}
+
+      fetchWire();
+    }})();
+  </script>
+</body>
+</html>
+'''
+    return html
+
+
+def render_midday_html(data, house_stats, search_index, is_subfolder=False, date_slug=None):
+    date_display = data.get('date_str') or '10 Σεπτεμβρίου 2026'
+    time_display = data.get('time_str') or '13:30'
+    read_time = data.get('read_time') or "3'"
+
+    if not date_slug:
+        m_iso = re.search(r'(\d{4}-\d{2}-\d{2})', date_display)
+        iso_date = m_iso.group(1) if m_iso else datetime.now().strftime('%Y-%m-%d')
+    else:
+        iso_date = date_slug
+
+    gen_iso = f"{iso_date}T{time_display}:00+03:00" if ':' in time_display else f"{iso_date}T13:30:00+03:00"
+
+    prefix = "../" if is_subfolder else ""
+    home_url = f"{prefix}index.html"
+    morning_url = f"{prefix}briefings/{iso_date}.html"
+    midday_url = f"{prefix}briefings/{iso_date}-midday.html"
+    evening_url = f"{prefix}briefings/{iso_date}-evening.html"
+    live_wire_url = f"{prefix}live-wire.json"
+    search_index_url = f"{prefix}search-index.json"
+
+    # Ticker Items
+    ticker_spans = []
+    for d in data.get('dashboard', []):
+        color_cls = "text-[var(--up)]" if "+" in d['change'] else ("text-[var(--down)]" if "-" in d['change'] else "text-[var(--ink-quiet)]")
+        spk = generate_sparkline(d['change'])
+        ticker_spans.append(f'<span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">{d["asset"]}:</span> <span class="text-[var(--ink-body)]">{d["price"]}</span> <span class="{color_cls} font-semibold inline-flex items-center">{d["change"]}{spk}</span></span>')
+    ticker_html = ' · '.join(ticker_spans) + ' · ' + ' · '.join(ticker_spans) if ticker_spans else ''
+
+    # Midday News Cards
+    news_cards = []
+    for idx, item in enumerate(data.get('midday_news', []), 1):
+        src_html = ""
+        if item.get('source'):
+            src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
+        clean_title = md_to_inline_html(item['title'])
+        clean_body = md_to_inline_html(item['body'])
+
+        news_cards.append(f'''
+        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2 font-mono text-[10px] text-[var(--ink-quiet)] uppercase tracking-wider">
+              <span>ΕΞΕΛΙΞΗ #{idx}</span>
+              <span class="text-amber-600 dark:text-amber-400 font-bold">⚡ MIDDAY WIRE</span>
+            </div>
+            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
+              {clean_title}
+            </h3>
+            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-4">
+              {clean_body}
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
+            {src_html}
+          </div>
+        </article>
+        ''')
+    news_html = '\n'.join(news_cards)
+
+    # Market Table Rows
+    market_rows = []
+    for d in data.get('dashboard', []):
+        is_up = '+' in d['change']
+        is_down = '-' in d['change']
+        badge_cls = "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20" if is_up else ("bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" if is_down else "bg-gray-500/10 text-gray-600 border-gray-500/20")
+        spk = generate_sparkline(d['change'])
+        date_ref = md_to_inline_html(d.get('date_ref', ''))
+        market_rows.append(f'''
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-4 font-bold text-[var(--ink)]">{d["asset"]}</td>
+          <td class="py-3 px-4 font-mono font-bold text-[var(--ink)]">{d["price"]}</td>
+          <td class="py-3 px-4 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold {badge_cls}">
+              <span>{d["change"]}</span> {spk}
+            </span>
+          </td>
+          <td class="py-3 px-4 text-xs font-mono text-[var(--ink-quiet)]">{date_ref}</td>
+        </tr>
+        ''')
+    market_table_html = '\n'.join(market_rows)
+
+    # Priorities List
+    priority_items = []
+    for p in data.get('afternoon_priorities', []):
+        clean_p = md_to_inline_html(p)
+        priority_items.append(f'''
+        <li class="flex items-start gap-3 p-3 rounded-lg bg-[var(--paper-raised)] border border-[var(--rule)]">
+          <span class="text-base flex-shrink-0">🎯</span>
+          <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+            {clean_p}
+          </div>
+        </li>
+        ''')
+    priorities_html = '\n'.join(priority_items)
+
+    html = f'''<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>THE ORACLE SOVEREIGN — ☀️ Midday Pulse — {date_display}</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = {{ darkMode: 'class' }};</script>
+  <script>
+    (function () {{
+      var s = localStorage.getItem('oracle-theme');
+      var d = s ? s === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (d) document.documentElement.classList.add('dark');
+    }})();
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap');
+    :root {{
+      --paper: #f6f3ec;
+      --paper-raised: #fffdf8;
+      --rule: #d9d3c5;
+      --rule-strong: #b3aa96;
+      --ink: #17150f;
+      --ink-body: #2e2a22;
+      --ink-quiet: #6d675a;
+      --accent: #8a5320;
+      --up: #1f6b3f;
+      --down: #a3282b;
+      --r-md: 8px;
+    }}
+    .dark {{
+      --paper: #14120e;
+      --paper-raised: #1c1a15;
+      --rule: #2e2920;
+      --rule-strong: #4a4233;
+      --ink: #ede8dc;
+      --ink-body: #cfc8ba;
+      --ink-quiet: #8c8373;
+      --accent: #d4954b;
+      --up: #43a047;
+      --down: #e53935;
+    }}
+    body {{ background-color: var(--paper); color: var(--ink-body); font-family: 'Inter', system-ui, sans-serif; }}
+    .font-masthead {{ font-family: 'Cinzel', serif; }}
+    .font-editorial {{ font-family: 'Newsreader', serif; }}
+    .t-masthead {{ font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }}
+    .t-section {{ font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }}
+    .card {{ background-color: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--r-md); }}
+    .ticker-wrap {{ overflow: hidden; white-space: nowrap; }}
+    .ticker-content {{ display: inline-block; animation: tickerAnimation 40s linear infinite; }}
+    .ticker-wrap:hover .ticker-content {{ animation-play-state: paused; }}
+    @keyframes tickerAnimation {{ 0% {{ transform: translateX(0); }} 100% {{ transform: translateX(-50%); }} }}
+  </style>
+</head>
+<body class="antialiased min-h-screen">
+  <!-- TOP BAR -->
+  <div class="bg-[var(--paper-raised)] border-b border-[var(--rule)] text-xs py-1.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center px-2 py-0.5 rounded font-mono font-semibold text-[11px] bg-amber-500/10 text-amber-800 dark:text-amber-300">
+          ☀️ 13:30 · {date_display}
+        </span>
+        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+          <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
+          <a href="{morning_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
+          <a href="{midday_url}" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">☀️ 13:30 Μεσημέρι</a>
+          <a href="{evening_url}" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌙 19:30 Απόγευμα</a>
+          <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
+          </button>
+        </div>
+      </div>
+      <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
+        <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span></span>
+        <span>·</span>
+        <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span></span>
+      </div>
+      <button id="themeToggle" class="px-2 py-1 rounded border border-[var(--rule)] text-xs hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος">🌓</button>
+    </div>
+  </div>
+
+  <!-- MASTHEAD -->
+  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 bg-[var(--paper-raised)] text-center">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex justify-between items-center text-xs uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
+        <div>ΕΤΟΣ 2026 · DAILY BRIEFING</div>
+        <div class="font-bold text-[var(--accent)]">☀️ MIDDAY EXECUTIVE PULSE</div>
+        <div>ONE-READER EDITION</div>
+      </div>
+      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase">THE ORACLE SOVEREIGN</h1>
+      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto">
+        Μεσημβρινός Παλμός Ειδήσεων, Deal Wire, Ενδιάμεσες Τιμές Αγορών & Απογευματινές Προτεραιότητες
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-3 mt-4 pt-3 border-t border-[var(--rule)] text-xs text-[var(--ink-quiet)] font-mono">
+        <span>📅 {date_display}</span> <span>·</span> <span>⏰ 13:30 ώρα Κύπρου</span> <span>·</span> <span>⏱️ {read_time} ανάγνωση</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
+    <div class="ticker-content space-x-8 font-mono">{ticker_html}</div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-5xl mx-auto px-4 py-8 space-y-10">
+    <!-- 1. BREAKING & DEAL WIRE -->
+    <section>
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>⚡</span> <span>Μεσημβρινό Breaking & Deal Wire</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {news_html}
+      </div>
+    </section>
+
+    <!-- 2. MIDDAY MARKET PULSE -->
+    <section>
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>📊</span> <span>Midday Market Pulse (ΧΑΚ · ATHEX · Ευρώπη)</span>
+        </h2>
+      </div>
+      <div class="card overflow-hidden">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+            <tr>
+              <th class="py-3 px-4">Δείκτης / Αξία</th>
+              <th class="py-3 px-4">Τιμή</th>
+              <th class="py-3 px-4">Μεταβολή</th>
+              <th class="py-3 px-4">Ώρα Αποτίμησης</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--rule)] font-sans">
+            {market_table_html}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. PRIORITIES -->
+    <section>
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🎯</span> <span>Απογευματινές Προτεραιότητες</span>
+        </h2>
+      </div>
+      <div class="card p-5">
+        <ul class="space-y-2.5">
+          {priorities_html}
+        </ul>
+      </div>
+    </section>
+
+    <!-- CALLOUT TO MORNING & EVENING -->
+    <div class="card p-6 bg-gradient-to-r from-amber-500/5 to-[var(--paper-raised)] border-l-4 border-[var(--accent)] flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <div class="text-xs font-mono font-bold uppercase text-[var(--accent)] mb-1">🏛️ ΟΛΕΣ ΟΙ ΕΚΔΟΣΕΙΣ ΤΗΣ ΗΜΕΡΑΣ</div>
+        <h3 class="font-editorial text-lg font-bold text-[var(--ink)]">Πρωινό Broadsheet & Απογευματινή Σύνοψη</h3>
+        <p class="text-xs text-[var(--ink-body)]">Συνεχής κάλυψη καθ' όλη τη διάρκεια της ημέρας με πλήρη ανάλυση, επιτόκια και closing bell.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="{morning_url}" class="px-3 py-2 rounded-lg bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] text-xs font-bold">Πρωινό 07:30</a>
+        <a href="{evening_url}" class="px-3 py-2 rounded-lg bg-[var(--accent)] text-white text-xs font-bold hover:opacity-90">Απόγευμα 19:30 ➔</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- SCRIPT -->
+  <script>
+    const themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {{
+      themeBtn.addEventListener('click', () => {{
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('oracle-theme', isDark ? 'dark' : 'light');
+      }});
+    }}
+    function updateClocks() {{
+      const now = new Date();
+      const fmt = (tz) => new Intl.DateTimeFormat('el-GR', {{ timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }}).format(now);
+      const cy = document.getElementById('clockCY'); if (cy) cy.textContent = fmt('Asia/Nicosia');
+      const lon = document.getElementById('clockLON'); if (lon) lon.textContent = fmt('Europe/London');
+      const nyc = document.getElementById('clockNYC'); if (nyc) nyc.textContent = fmt('America/New_York');
+    }}
+    updateClocks();
+    setInterval(updateClocks, 10000);
+  </script>
+</body>
+</html>
+'''
+    return html
+
+
+def render_morning_html(data, house_stats, search_index, is_subfolder=False, date_slug=None):
     date_display = data['date_str'] or '7 Σεπτεμβρίου 2026'
     time_display = data['time_str'] or '13:30'
     read_time = data['read_time'] or "7'"
@@ -825,12 +1828,13 @@ def render_html(data, house_stats, search_index):
     midday_cls = "bg-[var(--accent)] text-white font-bold shadow-xs" if current_edition == 'midday' else "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
     evening_cls = "bg-[var(--accent)] text-white font-bold shadow-xs" if current_edition == 'evening' else "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
 
+    prefix = "../" if is_subfolder else ""
     edition_switcher_html = f'''
     <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
       <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-      <a href="index.html" class="px-2 py-0.5 rounded transition {morning_cls}">🌅 07:30 Πρωί</a>
-      <a href="briefings/{iso_date}-midday.html" class="px-2 py-0.5 rounded transition {midday_cls}">☀️ 13:30 Μεσημέρι</a>
-      <a href="briefings/{iso_date}-evening.html" class="px-2 py-0.5 rounded transition {evening_cls}">🌙 19:30 Απόγευμα</a>
+      <a href="{prefix}index.html" class="px-2 py-0.5 rounded transition {morning_cls}">🌅 07:30 Πρωί</a>
+      <a href="{prefix}briefings/{iso_date}-midday.html" class="px-2 py-0.5 rounded transition {midday_cls}">☀️ 13:30 Μεσημέρι</a>
+      <a href="{prefix}briefings/{iso_date}-evening.html" class="px-2 py-0.5 rounded transition {evening_cls}">🌙 19:30 Απόγευμα</a>
       <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
         <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
       </button>
@@ -2669,7 +3673,7 @@ def render_html(data, house_stats, search_index):
 
       function getSearchData() {{
         if (!loadingPromise) {{
-          loadingPromise = fetch('search-index.json')
+          loadingPromise = fetch('search-index.json').catch(() => fetch('../search-index.json'))
             .then(r => r.json())
             .then(d => {{ searchData = d; return d; }})
             .catch(err => {{
@@ -3085,6 +4089,23 @@ def render_html(data, house_stats, search_index):
     return html
 
 
+
+def render_html(data, house_stats, search_index, is_subfolder=False, date_slug=None):
+    current_edition = data.get('edition') or 'morning'
+    title_upper = (data.get('title') or '').upper()
+    time_display = data.get('time_str') or ''
+    if 'ΜΕΣΗΜΒΡΙΝΟΣ' in title_upper or 'MIDDAY' in title_upper or '13:30' in time_display:
+        current_edition = 'midday'
+    elif 'ΑΠΟΓΕΥΜΑΤΙΝΗ' in title_upper or 'EVENING' in title_upper or '19:30' in time_display:
+        current_edition = 'evening'
+
+    if current_edition == 'evening':
+        return render_evening_html(data, house_stats, search_index, is_subfolder=is_subfolder, date_slug=date_slug)
+    elif current_edition == 'midday':
+        return render_midday_html(data, house_stats, search_index, is_subfolder=is_subfolder, date_slug=date_slug)
+    else:
+        return render_morning_html(data, house_stats, search_index, is_subfolder=is_subfolder, date_slug=date_slug)
+
 def main():
     target_md = None
     if len(sys.argv) > 1:
@@ -3116,7 +4137,8 @@ def main():
     search_index = build_search_index()
     print(f"Indexed {len(search_index)} items across editions.")
 
-    html_content = render_html(data, house_stats, search_index)
+    html_root = render_html(data, house_stats, search_index, is_subfolder=False, date_slug=date_slug)
+    html_sub = render_html(data, house_stats, search_index, is_subfolder=True, date_slug=date_slug)
 
     os.makedirs(BRIEFINGS_DIR, exist_ok=True)
     os.makedirs(DOCS_DIR, exist_ok=True)
@@ -3127,13 +4149,14 @@ def main():
     docs_briefing_html = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.html')
     docs_briefing_md = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.md')
 
-    # Write only to docs/ and briefings/
-    paths_to_write = [briefing_html, docs_briefing_html, docs_index]
+    with open(docs_index, 'w', encoding='utf-8') as f:
+        f.write(html_root)
+    print(f"Generated root index: {docs_index}")
 
-    for path in paths_to_write:
+    for path in [briefing_html, docs_briefing_html]:
         with open(path, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-        print(f"Generated: {path}")
+            f.write(html_sub)
+        print(f"Generated subfolder: {path}")
 
     shutil.copy2(target_md, docs_briefing_md)
     print(f"Copied markdown to docs: {docs_briefing_md}")
