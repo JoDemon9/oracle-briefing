@@ -41,16 +41,11 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BRIEFINGS_DIR = os.path.join(BASE_DIR, 'briefings')
 DOCS_BRIEFINGS_DIR = os.path.join(BASE_DIR, 'docs', 'briefings')
 SCRIPTS_DIR = os.path.join(BASE_DIR, 'scripts')
-ENV_PATH = os.path.join(BASE_DIR, '.env')
+if SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, SCRIPTS_DIR)
 
-# Load environment variables from .env if present
-if os.path.exists(ENV_PATH):
-    with open(ENV_PATH, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('#') and '=' in line:
-                k, v = line.split('=', 1)
-                os.environ.setdefault(k.strip(), v.strip())
+from env_loader import load_env
+load_env()
 
 
 # ==============================================================================
@@ -211,16 +206,21 @@ async def run_antigravity_agent(edition: str, target_md: str, dry_run: bool = Fa
                     output_tokens.append(token)
                 return "".join(output_tokens).strip()
 
-        full_output = await asyncio.wait_for(_chat_with_agent(), timeout=45.0)
+        full_output = await asyncio.wait_for(_chat_with_agent(), timeout=120.0)
         print(f"✔ Antigravity Agent completed analysis ({len(full_output)} chars generated).")
 
-        if full_output:
+        if full_output and ('## ⭐' in full_output or '# ' in full_output) and '## ' in full_output:
             if not dry_run:
                 print(f"💾 Saving agent synthesis to: {target_md}")
-                run_deterministic_synthesis(edition, target_md)
+                os.makedirs(os.path.dirname(target_md), exist_ok=True)
+                with open(target_md, 'w', encoding='utf-8') as f:
+                    f.write(full_output)
             return True
+        else:
+            print("⚠ [AgentRunner] Agent output was empty or missing required broadsheet sections.")
+            return False
     except asyncio.TimeoutError:
-        print("⚠ [AgentRunner] Antigravity Agent timed out after 45s. Seamlessly continuing with Gemini synthesis engine...")
+        print("⚠ [AgentRunner] Antigravity Agent timed out after 120s. Seamlessly continuing with deterministic engine...")
         return False
     except Exception as e:
         print(f"⚠ [AgentRunner] Antigravity Agent runtime error: {e}")
@@ -245,37 +245,60 @@ def run_deterministic_synthesis(edition: str, target_md: str) -> bool:
     return True
 
 
-def post_processing(target_md: str):
+def post_processing(target_md: str) -> bool:
     """Runs quality gates: build-html, check-duplication, verify-links."""
     print("\n" + "=" * 70)
     print("🏗️ EXECUTING QUALITY GATES & WEB COMPILATION")
     print("=" * 70)
 
-    # 1. Build HTML & Search Index
+    all_passed = True
     build_script = os.path.join(SCRIPTS_DIR, 'build-html.py')
+    check_script = os.path.join(SCRIPTS_DIR, 'check-duplication.py')
+    verify_script = os.path.join(SCRIPTS_DIR, 'verify-links.py')
+    docs_index = os.path.join(BASE_DIR, 'docs', 'index.html')
+
+    # 1. Build HTML & Search Index
     if os.path.exists(build_script):
-        print("\n▶ Compiling HTML, Global Clocks, Search Index, and Wire Drawer...")
-        subprocess.run([sys.executable, build_script], cwd=BASE_DIR)
+        print(f"\n▶ Compiling HTML, Global Clocks, Search Index, and Wire Drawer for {os.path.basename(target_md)}...")
+        res = subprocess.run([sys.executable, build_script, target_md], cwd=BASE_DIR)
+        if res.returncode != 0:
+            print("❌ Quality gate FAILED: HTML compilation")
+            all_passed = False
 
     # 2. Check Duplication
-    check_script = os.path.join(SCRIPTS_DIR, 'check-duplication.py')
     if os.path.exists(check_script):
         print("\n▶ Auditing story duplication...")
-        subprocess.run([sys.executable, check_script], cwd=BASE_DIR)
+        res = subprocess.run([sys.executable, check_script, docs_index], cwd=BASE_DIR)
+        if res.returncode != 0:
+            print("❌ Quality gate FAILED: Duplication audit")
+            all_passed = False
 
     # 3. Verify Links
-    verify_script = os.path.join(SCRIPTS_DIR, 'verify-links.py')
     if os.path.exists(verify_script):
         print("\n▶ Verifying link health (HTTP status checks)...")
-        subprocess.run([sys.executable, verify_script, target_md], cwd=BASE_DIR)
+        res = subprocess.run([sys.executable, verify_script, target_md], cwd=BASE_DIR)
+        if res.returncode != 0:
+            print("❌ Quality gate FAILED: Link verification")
+            all_passed = False
+
+    return all_passed
+
+
+def get_cyprus_now():
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("Asia/Nicosia"))
+    except Exception:
+        from datetime import timezone, timedelta
+        return datetime.now(timezone(timedelta(hours=3)))
 
 
 def auto_detect_edition() -> str:
-    """Detects current edition based on Cyprus / Local time hour."""
-    hour = datetime.now().hour
+    """Detects current edition based on Cyprus local time (EEST/EET)."""
+    hour = get_cyprus_now().hour
     if 5 <= hour < 12:
         return "morning"
-    elif 12 <= hour < 17:
+    elif 12 <= hour < 18:
         return "midday"
     else:
         return "evening"
@@ -298,7 +321,7 @@ def main():
     if edition == 'auto':
         edition = auto_detect_edition()
 
-    today_str = datetime.now().strftime('%Y-%m-%d')
+    today_str = get_cyprus_now().strftime('%Y-%m-%d')
     if edition == 'morning':
         target_md = os.path.join(BRIEFINGS_DIR, f'oracle-briefing-{today_str}.md')
     else:
@@ -325,7 +348,12 @@ def main():
             print("ℹ Dry-run mode enabled: skipping file generation.")
 
     if not args.dry_run:
-        post_processing(target_md)
+        gates_ok = post_processing(target_md)
+        if not gates_ok:
+            print("\n" + "=" * 70)
+            print(f"❌ [ORACLE RUNNER WARNING] One or more quality gates failed for {edition.upper()} edition.")
+            print("=" * 70)
+            sys.exit(1)
 
     print("\n" + "=" * 70)
     print(f"✅ [ORACLE RUNNER COMPLETE] {edition.upper()} edition ready for publication.")

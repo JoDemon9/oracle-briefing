@@ -230,6 +230,15 @@ def find_latest_briefing():
     return files[-1]
 
 
+def annuity_payment(principal: float, annual_rate_pct: float, years: int) -> float:
+    """Standard annuity formula: M = P * r(1+r)^n / ((1+r)^n - 1)"""
+    r = annual_rate_pct / 100 / 12
+    n = years * 12
+    if r == 0:
+        return principal / n
+    return principal * (r * (1 + r)**n) / ((1 + r)**n - 1)
+
+
 def parse_markdown(md_content):
     data = {
         'title': 'THE ORACLE SOVEREIGN',
@@ -241,11 +250,11 @@ def parse_markdown(md_content):
         'number_of_day': {},
         'rates': {
             'euribor': [],
-            'ecb_rate': '3,75%',
-            'next_ecb': '10 Σεπτεμβρίου 2026',
-            'cbc_mortgage_rate': '3,78%',
-            'example_payment': '€1.032',
-            'example_change': '€0 (αμετάβλητο)',
+            'ecb_rate': '—',
+            'next_ecb': '—',
+            'cbc_mortgage_rate': '—',
+            'example_payment': '—',
+            'example_change': '—',
             'sources': []
         },
         'cyprus': [],
@@ -361,6 +370,14 @@ def parse_markdown(md_content):
             calc_m = re.search(r'Ενδεικτική δόση.*?→\s*\*\*([^*]+)\*\*', sec)
             if calc_m:
                 data['rates']['example_payment'] = calc_m.group(1).strip()
+            elif data['rates']['cbc_mortgage_rate'] != '—':
+                try:
+                    r_clean = data['rates']['cbc_mortgage_rate'].replace('%', '').replace(',', '.').strip()
+                    r_val = float(r_clean)
+                    pmt_val = annuity_payment(200000, r_val, 25)
+                    data['rates']['example_payment'] = f"€{pmt_val:,.2f}".replace(',', 'X').replace('.', ',').replace('X', '.')
+                except Exception:
+                    pass
 
             srcs_m = re.search(r'Πηγές:\s*(.+)', sec)
             if srcs_m:
@@ -663,9 +680,9 @@ def get_latest_house_search():
 
     stats = {
         'date': date_str,
-        'unique_properties': '1.427',
-        'top_picks_count': '3',
-        'top_pick_highlights': '2x 1Υ/Δ Ζακάκι + 1x 2Υ/Δ Ύψωνας (από €196k + ΦΠΑ)',
+        'unique_properties': '—',
+        'top_picks_count': '—',
+        'top_pick_highlights': '—',
         'html_filename': os.path.basename(latest_html) if latest_html else None,
         'md_filename': os.path.basename(latest_md)
     }
@@ -758,10 +775,7 @@ def build_search_index():
         except Exception as e:
             print(f"Error indexing {bpath}: {e}")
 
-    index_path = os.path.join(BASE_DIR, 'search-index.json')
     docs_index_path = os.path.join(DOCS_DIR, 'search-index.json')
-    with open(index_path, 'w', encoding='utf-8') as f:
-        json.dump(index_entries, f, ensure_ascii=False, indent=2)
     with open(docs_index_path, 'w', encoding='utf-8') as f:
         json.dump(index_entries, f, ensure_ascii=False, indent=2)
 
@@ -1481,7 +1495,7 @@ def render_html(data, house_stats, search_index):
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>THE ORACLE SOVEREIGN — {date_display}</title>
-  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {{ darkMode: 'class' }};
   </script>
@@ -3108,17 +3122,13 @@ def main():
     os.makedirs(DOCS_DIR, exist_ok=True)
     os.makedirs(DOCS_BRIEFINGS_DIR, exist_ok=True)
 
-    root_index = os.path.join(BASE_DIR, 'index.html')
     briefing_html = os.path.join(BRIEFINGS_DIR, f'oracle-briefing-{edition_slug}.html')
-    root_briefing_slug = os.path.join(BRIEFINGS_DIR, f'{edition_slug}.html')
     docs_index = os.path.join(DOCS_DIR, 'index.html')
     docs_briefing_html = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.html')
     docs_briefing_md = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.md')
 
-    # Paths to write
-    paths_to_write = [briefing_html, root_briefing_slug, docs_briefing_html]
-    # If morning or default briefing, or if latest generated today, update index.html
-    paths_to_write.extend([root_index, docs_index])
+    # Write only to docs/ and briefings/
+    paths_to_write = [briefing_html, docs_briefing_html, docs_index]
 
     for path in paths_to_write:
         with open(path, 'w', encoding='utf-8') as f:
@@ -3132,7 +3142,6 @@ def main():
     live_wire_src = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
     if os.path.exists(live_wire_src):
         shutil.copy2(live_wire_src, os.path.join(DOCS_DIR, 'live-wire.json'))
-        shutil.copy2(live_wire_src, os.path.join(BASE_DIR, 'live-wire.json'))
 
     print("\nSUCCESS! The Oracle Sovereign web portal and archives have been built with full news-first layout and imagery.")
 

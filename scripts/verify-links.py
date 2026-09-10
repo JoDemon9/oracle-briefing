@@ -45,12 +45,14 @@ def check_file(filepath: str) -> bool:
     }
 
     passed: List[Tuple[str, str]] = []
+    soft_passed: List[Tuple[str, str, str]] = []
     failed: List[Tuple[str, str, str]] = []
 
     print(f"[*] Found {len(matches)} links. Starting HTTP verification...\n")
 
     for idx, (label, url) in enumerate(matches, 1):
         success = False
+        is_soft = False
         last_err = ""
         for attempt in range(2):
             try:
@@ -74,9 +76,10 @@ def check_file(filepath: str) -> bool:
                         req_root = urllib.request.Request(root_url, headers=headers)
                         with urllib.request.urlopen(req_root, timeout=8, context=ctx) as r_root:
                             if r_root.getcode() in [200, 301, 302]:
-                                passed.append((label, url))
-                                print(f"[{idx}/{len(matches)}] [OK 200 via host] {label[:30]} -> {url[:70]}")
+                                soft_passed.append((label, url, "Host reachable (403 Cloudflare challenge on article)"))
+                                print(f"[{idx}/{len(matches)}] [SOFT 403] {label[:30]} -> {url[:70]}")
                                 success = True
+                                is_soft = True
                                 break
                     except Exception:
                         pass
@@ -87,20 +90,47 @@ def check_file(filepath: str) -> bool:
             failed.append((label, url, last_err))
             print(f"[{idx}/{len(matches)}] [FAIL] {label} -> {url}: {last_err}")
 
+    # Write report JSON
+    import json
+    from datetime import datetime
+    import os
+    m_d = re.search(r'(\d{4}-\d{2}-\d{2})', os.path.basename(filepath))
+    date_tag = m_d.group(1) if m_d else datetime.now().strftime('%Y-%m-%d')
+    report_path = os.path.join(os.path.dirname(filepath), f'.link-check-{date_tag}.json')
+    try:
+        with open(report_path, 'w', encoding='utf-8') as rf:
+            json.dump({
+                'filepath': filepath,
+                'timestamp': datetime.now().isoformat(),
+                'total': len(matches),
+                'passed_200_count': len(passed),
+                'soft_pass_count': len(soft_passed),
+                'failed_count': len(failed),
+                'passed': [{'label': l, 'url': u} for l, u in passed],
+                'soft_passed': [{'label': l, 'url': u, 'reason': r} for l, u, r in soft_passed],
+                'failed': [{'label': l, 'url': u, 'error': e} for l, u, e in failed]
+            }, rf, indent=2, ensure_ascii=False)
+        print(f"\n[*] Link verification report saved to: {report_path}")
+    except Exception as e:
+        print(f"Note: Could not write link check report: {e}")
+
     print("\n" + "="*50)
-    print(f"VERIFICATION SUMMARY: {len(passed)}/{len(matches)} PASSED (100% required)")
+    print(f"VERIFICATION SUMMARY: {len(passed)} 200 OK, {len(soft_passed)} SOFT PASS / {len(matches)} TOTAL")
     print("="*50)
 
     if failed:
-        print(f"\n[FAIL] Found {len(failed)} non-working or blocked URLs:")
+        print(f"\n[FAIL] Found {len(failed)} non-working or unreachable URLs:")
         for label, url, err in failed:
             print(f"  - [{label}]({url}): {err}")
         return False
     else:
-        print("\n[SUCCESS] All URLs verified successfully with HTTP 200 OK!")
+        if soft_passed:
+            print(f"\n[SUCCESS] All URLs accessible ({len(passed)} HTTP 200 OK, {len(soft_passed)} Cloudflare soft-pass).")
+        else:
+            print("\n[SUCCESS] All URLs verified successfully with HTTP 200 OK!")
         return True
 
 if __name__ == '__main__':
-    target = sys.argv[1] if len(sys.argv) > 1 else 'briefings/oracle-briefing-2026-09-09.md'
+    target = sys.argv[1] if len(sys.argv) > 1 else 'briefings/oracle-briefing-2026-09-10.md'
     ok = check_file(target)
     sys.exit(0 if ok else 1)

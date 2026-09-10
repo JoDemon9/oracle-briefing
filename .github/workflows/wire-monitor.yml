@@ -1,0 +1,32 @@
+name: 24/7 Breaking Wire Monitor
+on:
+  schedule:
+    # Every 30 mins between 08:00 - 21:00 Cyprus Time (05:00 - 18:00 UTC)
+    - cron: '*/30 5-18 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: oracle-wire-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  wire_monitor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install beautifulsoup4
+      - name: Run 24/7 Wire Monitor
+        run: python scripts/monitor-breaking.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Commit Updated Wire Data
+        run: |
+          git config user.name "The Oracle Wire"
+          git config user.email "oracle-wire@antigravity.internal"
+          git add scripts/live-wire.json docs/live-wire.json || true
+          git diff --staged --quiet || (git commit -m "⚡ [Wire Update] Sync live wire ticker [skip-ci-dispatch]" && git push)

@@ -19,33 +19,83 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BRIEFINGS_DIR = os.path.join(BASE_DIR, 'briefings')
-ENV_PATH = os.path.join(BASE_DIR, '.env')
+SCRIPTS_DIR = os.path.join(BASE_DIR, 'scripts')
+if SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, SCRIPTS_DIR)
+from env_loader import load_env
+load_env()
 
-# Load .env
-env_vars = {}
-if os.path.exists(ENV_PATH):
-    with open(ENV_PATH, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('#') and '=' in line:
-                k, v = line.split('=', 1)
-                env_vars[k.strip()] = v.strip()
+DEFAULT_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'el-GR,el;q=0.9,en-US;q=0.8,en;q=0.7'
+}
+
+
+def clean_rss_title(title: str) -> str:
+    if not title:
+        return ""
+    t = re.sub(r'&nbsp;', ' ', title)
+    t = re.sub(r'<[^>]+>', '', t)
+    t = re.sub(r'\s*-\s*[a-zA-Z0-9\.\-]+\.[a-z]{2,}.*$', '', t)
+    t = re.sub(r'\s*\|\s*.*$', '', t)
+    return re.sub(r'\s+', ' ', t).strip()
+
+
+def resolve_redirect_url(url: str, timeout: int = 5) -> str:
+    if not url or 'news.google.com' not in url:
+        return url
+    try:
+        req = urllib.request.Request(url, headers=DEFAULT_HEADERS)
+        req.get_method = lambda: 'HEAD'
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            final_url = resp.geturl()
+            if 'news.google.com' not in final_url:
+                return final_url
+    except Exception:
+        pass
+    return url
 
 
 def fetch_rss_items(url, limit=8):
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+        req = urllib.request.Request(url, headers=DEFAULT_HEADERS)
         with urllib.request.urlopen(req, timeout=10) as r:
             xml_data = r.read()
-            root = ET.fromstring(xml_data)
             items = []
+            try:
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(xml_data, 'html.parser')
+                for it in soup.find_all('item')[:limit]:
+                    t_tag = it.find('title')
+                    l_tag = it.find('link')
+                    d_tag = it.find('description')
+                    title = t_tag.get_text(strip=True) if t_tag else ''
+                    link = l_tag.get_text(strip=True) if l_tag else ''
+                    if not link and l_tag and l_tag.next_sibling:
+                        link = str(l_tag.next_sibling).strip()
+                    desc = d_tag.get_text(strip=True) if d_tag else ''
+                    desc = re.sub(r'<[^>]+>', '', desc).strip()
+                    title = clean_rss_title(title)
+                    link = resolve_redirect_url(link)
+                    if title:
+                        items.append({'title': title, 'link': link, 'desc': desc})
+                if items:
+                    return items
+            except Exception:
+                pass
+
+            # Fallback to ElementTree
+            root = ET.fromstring(xml_data)
             for it in root.findall('.//item')[:limit]:
                 title = it.find('title').text if it.find('title') is not None else ''
                 link = it.find('link').text if it.find('link') is not None else ''
                 desc = it.find('description').text if it.find('description') is not None else ''
                 desc = re.sub(r'<[^>]+>', '', desc).strip()
+                title = clean_rss_title(title)
+                link = resolve_redirect_url(link)
                 if title:
-                    items.append({'title': title.strip(), 'link': link.strip(), 'desc': desc})
+                    items.append({'title': title, 'link': link, 'desc': desc})
             return items
     except Exception as e:
         print(f"Error fetching RSS {url}: {e}")
@@ -224,26 +274,40 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 
     # Extract sports
     omonoia = sports_data.get('omonoia', {})
-    om_fix = omonoia.get('next_fixture', {}).get('fixture', 'Ομόνοια – Απόλλων (Σάββατο 12.09.2026, 20:00, ΓΣΠ)')
-    om_url = omonoia.get('next_fixture', {}).get('source_url', 'https://www.cfa.com.cy/Gr/news/53637')
+    om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
+    om_url = omonoia.get('next_fixture', {}).get('source_url', 'https://www.cfa.com.cy')
+    om_res = omonoia.get('last_result', '')
 
     mu = sports_data.get('manchester_united', {})
-    mu_fix = mu.get('next_fixture', {}).get('fixture', 'UEFA Champions League: Manchester United versus Sabah — 20:00')
-    mu_url = mu.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures')
+    mu_fix = mu.get('next_fixture', {}).get('fixture', '')
+    mu_url = mu.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/manchester-united')
+    mu_res = mu.get('last_result', '')
 
     rm = sports_data.get('real_madrid', {})
-    rm_fix = rm.get('next_fixture', {}).get('fixture', 'Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)')
-    rm_url = rm.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures')
+    rm_fix = rm.get('next_fixture', {}).get('fixture', '')
+    rm_url = rm.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/real-madrid')
+    rm_res = rm.get('last_result', '')
 
     f1 = sports_data.get('formula1', {})
-    f1_fix = f1.get('next_fixture', {}).get('race_day', 'Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου')
-    f1_race = f1.get('next_fixture', {}).get('race', 'Spanish Grand Prix 2026 (Madrid)')
-    f1_url = f1.get('next_fixture', {}).get('source_url', 'https://www.formula1.com/en/racing/2026/spain.html')
+    f1_fix = f1.get('next_fixture', {}).get('race_day', '')
+    f1_race = f1.get('next_fixture', {}).get('race', '')
+    f1_url = f1.get('next_fixture', {}).get('source_url', 'https://www.formula1.com')
+    f1_res = f1.get('last_result', '')
 
-    e1m = euribor.get('1m', '2,369%')
-    e3m = euribor.get('3m', '2,626%')
-    e6m = euribor.get('6m', '2,800%')
-    e12m = euribor.get('12m', '3,138%')
+    e1m = euribor.get('1m', '—')
+    e3m = euribor.get('3m', '—')
+    e6m = euribor.get('6m', '—')
+    e12m = euribor.get('12m', '—')
+
+    cbc_rate = markets_data.get('cbc_rate', '3,85%')
+    try:
+        r_num = float(cbc_rate.replace('%', '').replace(',', '.'))
+        r_m = r_num / 100 / 12
+        n_m = 25 * 12
+        pmt = 200000 * (r_m * (1 + r_m)**n_m) / ((1 + r_m)**n_m - 1)
+        pmt_str = f"€{format_greek_num(pmt)}"
+    except Exception:
+        pmt_str = "—"
 
     md = f"""# 🏛️ THE ORACLE SOVEREIGN — {greek_date}
 
@@ -257,11 +321,7 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 
 {top['desc']}
 
-Η σημερινή εξέλιξη διαμορφώνει νέα δεδομένα για την κυπριακή αγορά και τους επενδυτές. Οι αρμόδιοι φορείς παρακολουθούν στενά τις διακυμάνσεις, ενώ οι αναλυτές επισημαίνουν ότι απαιτείται προσεκτική στρατηγική τοποθέτηση και αξιολόγηση των επόμενων βημάτων.
-
-**Αντίλογος:** Παρά τη θετική δυναμική, στελέχη της αγοράς υπογραμμίζουν ότι οι εξωγενείς γεωπολιτικές πιέσεις και ο πληθωρισμός στον τομέα υπηρεσιών ενδέχεται να περιορίσουν το εύρος των θετικών επιδράσεων τους επόμενους μήνες.
-
-**Πηγές:** [Cyprus Mail]({top['link']}) · [StockWatch](https://www.stockwatch.com.cy)
+**Πηγές:** [Ενημέρωση]({top['link']})
 
 ---
 
@@ -271,8 +331,6 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 | :--- | :--- | :--- | :--- |
 {dash_table}
 
-**Ο αριθμός της ημέρας:** **8,33 σεντ** — Η μείωση του ειδικού φόρου κατανάλωσης ανά λίτρο σε βενζίνη και πετρέλαιο κίνησης, την παράταση της οποίας έως τις 30 Νοεμβρίου ενέκρινε το Υπουργικό Συμβούλιο.
-
 ---
 
 ## 🏦 ΕΠΙΤΟΚΙΑ & ΔΟΣΗ
@@ -280,13 +338,11 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 | Euribor | 1M | 3M | 6M | 12M |
 |---|---|---|---|---|
 | **Τρέχον** | {e1m} | {e3m} | {e6m} | {e12m} |
-| **Πριν 1 μήνα** | 2,886% | 2,750% | 2,610% | 2,510% |
 
-Επιτόκιο ΕΚΤ (deposit facility): 3,75% · Επόμενη συνεδρίαση: 10 Σεπτεμβρίου 2026  
-Μέσο επιτόκιο νέων στεγαστικών Κύπρου: 3,78% (στοιχεία ΚΤΚ)  
-
-Ενδεικτική δόση: €200.000 / 25 έτη με επιτόκιο 3,78% → **€1.032 τον μήνα**.  
-Μεταβολή έναντι προηγούμενης έκδοσης: €0 (αμετάβλητο).  
+*   **Επιτόκιο ΕΚΤ (deposit facility):** {markets_data.get('ecb_rate', '2,00%')}
+*   **Μέσο επιτόκιο νέων στεγαστικών Κύπρου:** {cbc_rate} (στοιχεία ΚΤΚ)
+*   **Ενδεικτική δόση:** €200.000 / 25 έτη με επιτόκιο {cbc_rate} → **{pmt_str} τον μήνα**.
+    *Ο υπολογισμός είναι ενδεικτικός, με σταθερή τοκοχρεολυτική δόση, χωρίς έξοδα τραπέζης.*
 
 Πηγές: [euribor-rates.eu](https://www.euribor-rates.eu/en/) · [Κεντρική Τράπεζα Κύπρου](https://www.centralbank.cy/)
 
@@ -297,14 +353,11 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 """
     for i, it in enumerate(cy_items[1:6], 1):
         tag = "[Ο Φάκελός μου]" if i == 5 else "[Επικαιρότητα]"
+        src_label = it.get('source', 'Ειδήσεις Κύπρου')
         md += f"""### {i}. {it['title']} {tag}
 {it['desc']}  
 **Γιατί με αφορά:** Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.  
-**Βάθος:**
-*   **Το υπόβαθρο:** Οι αρμόδιες αρχές και φορείς εξετάζουν το ζήτημα στα πλαίσια της στρατηγικής επικαιροποίησης.
-*   **Τι σημαίνει πρακτικά:** Άμεση παρακολούθηση των αποφάσεων για τυχόν αντίκτυπο σε επαγγελματικές ή τοπικές δραστηριότητες.
-*   **Τι να παρακολουθήσω:** Τις επίσημες ανακοινώσεις και τις σχετικές τοποθετήσεις εντός της εβδομάδας.
-**Πηγή:** [Ειδήσεις Κύπρου]({it['link']})
+**Πηγή:** [{src_label}]({it['link']})
 
 """
 
@@ -314,13 +367,10 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 
 """
     for i, it in enumerate(world_items[:5], 1):
+        src_label = it.get('source', 'Διεθνή')
         md += f"""### {i}. {it['title']} [Διεθνή]
 {it['desc']}  
-**Βάθος:**
-*   **Το υπόβαθρο:** Οι διεθνείς αγορές και οι διπλωματικές αντιπροσωπείες αξιολογούν τον αντίκτυπο της είδησης.
-*   **Τι σημαίνει πρακτικά:** Επίδραση στο ευρύτερο γεωπολιτικό και επενδυτικό περιβάλλον.
-*   **Τι να παρακολουθήσω:** Τις επόμενες συνεδριάσεις και τις δηλώσεις αξιωματούχων.
-**Πηγή:** [BBC News]({it['link']})
+**Πηγή:** [{src_label}]({it['link']})
 
 """
 
@@ -329,49 +379,55 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 
 ## 💰 ΑΓΟΡΕΣ: TOP MOVERS
 
-### Brent Crude (BZ=F) — ${format_greek_num(quotes.get('Brent Crude', {}).get('price', 102.42))} (+1,20%)
-**Αιτία:** Διατήρηση των τιμών του πετρελαίου σε υψηλά επίπεδα λόγω περιφερειακών γεωπολιτικών πιέσεων και κινήσεων στον Περσικό Κόλπο.  
+"""
+    movers_count = 0
+    for asset_name, q in quotes.items():
+        if movers_count >= 5:
+            break
+        c_val = q.get('change', 0)
+        p_val = q.get('price', 0)
+        sign = "+" if c_val > 0 else ""
+        prefix = "$" if any(k in asset_name for k in ['Crude', 'BTC', 'ETH']) else ("€" if 'Cyprus' in asset_name else "")
+        md += f"""### {asset_name} — {prefix}{format_greek_num(p_val)} ({sign}{format_greek_num(c_val)}%)
+**Αιτία:** Εμπορική δραστηριότητα και διακυμάνσεις της τρέχουσας συνεδρίασης.  
 **Πηγή:** [Yahoo Finance](https://finance.yahoo.com)
 
-### Bank of Cyprus (BOCH) — €{format_greek_num(quotes.get('Bank of Cyprus (BOCH)', {}).get('price', 10.44))} (+0,38%)
-**Αιτία:** Σταθερός όγκος συναλλαγών στο ΧΑΚ και στο Χρηματιστήριο Αθηνών με θετικό επενδυτικό κλίμα.  
-**Πηγή:** [Yahoo Finance](https://finance.yahoo.com)
+"""
+        movers_count += 1
 
-### S&P 500 — {format_greek_num(quotes.get('S&P 500', {}).get('price', 7636.36))} (-0,48%)
-**Αιτία:** Ήπιες διορθωτικές κινήσεις εν αναμονή των αποφάσεων νομισματικής πολιτικής της κεντρικής τράπεζας.  
-**Πηγή:** [Yahoo Finance](https://finance.yahoo.com)
+    # Sports section
+    om_res_line = f"*   **Τελευταίο αποτέλεσμα:** {om_res}\n" if om_res else ""
+    om_fix_line = f"*   **Επόμενος αγώνας:** {om_fix} ([Πρόγραμμα ΚΟΠ]({om_url}))\n" if om_fix else ""
+    mu_res_line = f"*   **Τελευταίο αποτέλεσμα:** {mu_res}\n" if mu_res else ""
+    mu_fix_line = f"*   **Επόμενος αγώνας:** {mu_fix} ([BBC Sport]({mu_url}))\n" if mu_fix else ""
+    rm_res_line = f"*   **Τελευταίο αποτέλεσμα:** {rm_res}\n" if rm_res else ""
+    rm_fix_line = f"*   **Επόμενος αγώνας:** {rm_fix} ([BBC Sport]({rm_url}))\n" if rm_fix else ""
+    f1_res_line = f"*   **Τελευταίο αποτέλεσμα:** {f1_res}\n" if f1_res else ""
+    f1_fix_line = f"*   **Επόμενος αγώνας:** {f1_race} — {f1_fix} ([Formula1.com]({f1_url}))\n" if f1_race else ""
 
----
+    md += f"""---
 
 ## ⚽ ΑΘΛΗΤΙΚΑ
 
 ### ΟΜΟΝΟΙΑ
 
-*   **Τελευταίο αποτέλεσμα:** Άρης Λεμεσού – Ομόνοια 1-4 (Cyprus League by Stoiximan, 2η αγωνιστική). Μεγάλη νίκη στο Στάδιο «Άλφαμεγα».
-*   **Επόμενος αγώνας:** {om_fix} ([Πρόγραμμα ΚΟΠ]({om_url})).
-*   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026)
-*   **Πηγή:** [ΚΟΠ / CFA]({om_url}) · [Kerkida.net](https://www.kerkida.net)
+{om_res_line}{om_fix_line}*   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights)
+*   **Πηγή:** [ΚΟΠ / CFA]({om_url})
 
 ### Manchester United
 
-*   **Τελευταίο αποτέλεσμα:** Everton – Manchester United 2-2 (Premier League).
-*   **Επόμενος αγώνας:** {mu_fix} ([BBC Sport]({mu_url})).
-*   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights+2026)
-*   **Πηγή:** [BBC Sport]({mu_url}) · [The Guardian](https://www.theguardian.com/football)
+{mu_res_line}{mu_fix_line}*   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights)
+*   **Πηγή:** [BBC Sport]({mu_url})
 
 ### Real Madrid
 
-*   **Τελευταίο αποτέλεσμα:** Real Madrid – Inter Milan 2-1 (UEFA Champions League, League Phase).
-*   **Επόμενος αγώνας:** {rm_fix} ([BBC Sport]({rm_url})).
-*   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026)
-*   **Πηγή:** [BBC Sport]({rm_url}) · [Marca](https://www.marca.com)
+{rm_res_line}{rm_fix_line}*   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights)
+*   **Πηγή:** [BBC Sport]({rm_url})
 
 ### Formula 1
 
-*   **Τελευταίο αποτέλεσμα:** Italian Grand Prix (Monza) — Νίκη Antonelli με Mercedes, 2ος Russell, 3ος Verstappen.
-*   **Επόμενος αγώνας:** {f1_race} — {f1_fix} ([Formula1.com]({f1_url})).
-*   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights+2026)
-*   **Πηγή:** [Formula1.com]({f1_url}) · [BBC Sport F1](https://www.bbc.com/sport/formula1)
+{f1_res_line}{f1_fix_line}*   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights)
+*   **Πηγή:** [Formula1.com]({f1_url})
 
 ---
 
@@ -379,42 +435,37 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
 
 *   **Θερμοκρασία:** {wx_info['temp']}°C (Μέγιστη) / 24°C (Ελάχιστη)
 *   **Υγρασία:** {wx_info['humidity']}%
-*   **Άνεμος:** {wx_info['wind']} km/h (Νοτιοδυτικός)
-*   **Πρόγνωση υπόλοιπης ημέρας:** Γενικά αίθριος καιρός με έντονη ηλιοφάνεια.
-*   **Προειδοποιήσεις:** Δείκτης UV: {wx_info['uv']} (Υψηλός — Απαραίτητη η χρήση αντηλιακού).
+*   **Άνεμος:** {wx_info['wind']} km/h
+*   **Πρόγνωση υπόλοιπης ημέρας:** Γενικά αίθριος καιρός.
+*   **Προειδοποιήσεις:** Δείκτης UV: {wx_info['uv']}
 *   **Πηγή:** [Open-Meteo](https://open-meteo.com/)
 
 ---
 
 ## 🗂️ ΕΞΕΛΙΞΕΙΣ
 
-*   **Great Sea Interconnector:** Συνεχίζονται οι διαβουλεύσεις για την ηλεκτρική διασύνδεση Κύπρου-Ελλάδας.
-*   **Αγορά Ενέργειας & ΑΠΕ:** Ενίσχυση των επενδύσεων σε φωτοβολταϊκά και αποθήκευση ενέργειας.
-*   **Τραπεζικός Τομέας:** Σταθεροποίηση των κεφαλαιακών δεικτών και νέες πιστώσεις.
+*   **Αγορά Ενέργειας & ΑΠΕ:** Ενίσχυση επενδύσεων σε φωτοβολταϊκά και αποθήκευση ενέργειας.
+*   **Τραπεζικός Τομέας:** Σταθεροποίηση κεφαλαιακών δεικτών και πιστωτική επέκταση.
 
 ---
 
 ## 🎯 Ο ΦΑΚΕΛΟΣ ΜΟΥ
 
-*   **Ακίνητα Λεμεσού:** Σταθερή διατήρηση των αξιών στα παραλιακά διαμερίσματα και στα ανατολικά προάστια.
-*   **Διαχείριση Ρευστότητας:** Ευνοϊκή τοποθέτηση σε προθεσμιακές αποδόσεις 2,6%-2,8% πριν τις αποφάσεις της ΕΚΤ.
-*   **Επιχειρηματικό Περιβάλλον:** Έμφαση σε καινοτόμες ψηφιακές υποδομές και αξιοποίηση κρατικών κινήτρων.
+*   **Ακίνητα & Ενοίκια Λεμεσού:** Παρακολούθηση τιμών και αδειοδοτήσεων στο εβδομαδιαίο Real Estate Radar.
+*   **Επιτόκια & Δάνεια:** Εξέλιξη Euribor και συνεδριάσεων ΕΚΤ.
 
 ---
 
 ## 📅 ΤΙ ΝΑ ΚΑΝΩ
 
-*   **Φορολογικές Δηλώσεις:** Υποβολή συγκεντρωτικών καταστάσεων μέχρι το τέλος του τρέχοντος μηνός.
 *   **Τραπεζικές Ρυθμίσεις:** Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.
-*   **Ανανέωση Αδειών:** Έλεγχος δημοτικών τελών και επαγγελματικών αδειών Λεμεσού.
 
 ---
 
 ## 🔍 ΓΙΑ ΑΥΡΙΟ
 
-1.  **Ανακοίνωση Δεικτών Ευρωζώνης:** Δημοσίευση στοιχείων για τη βιομηχανική παραγωγή.
-2.  **Ενεργειακές Εξελίξεις:** Ενημέρωση για το καλώδιο Great Sea Interconnector.
-3.  **Συνεδρίαση ΧΑΚ:** Παρακολούθηση της πορείας των τραπεζικών μετοχών.
+1.  **Πρωινό Sovereign Broadsheet:** Έκδοση στις 07:30 ώρα Κύπρου.
+2.  **Παρακολούθηση Αγορών:** Εξέλιξη πετρελαίου Brent και ισοτιμίας EUR/USD.
 """
     return md
 
@@ -429,6 +480,9 @@ def generate_midday_edition(cy_items, world_items, wx_info, today_str, markets_d
     top = cy_items[0] if cy_items else {'title': 'Σημαντικές οικονομικές εξελίξεις στην Κύπρο', 'link': 'https://cyprus-mail.com', 'desc': 'Συνεχίζονται οι διαβουλεύσεις στα κέντρα λήψης αποφάσεων.'}
     mid_items = cy_items[1:4]
 
+    top_title = clean_rss_title(top.get('title', ''))
+    top_src = top.get('source', 'Ειδήσεις')
+
     md = f"""# ☀️ THE ORACLE SOVEREIGN — ΜΕΣΗΜΒΡΙΝΟΣ ΠΑΛΜΟΣ — {greek_date}
 
 **13:30 ώρα Κύπρου · χρόνος ανάγνωσης ~3 λεπτά**
@@ -437,19 +491,19 @@ def generate_midday_edition(cy_items, world_items, wx_info, today_str, markets_d
 
 ## ⚡ ΜΕΣΗΜΒΡΙΝΟ BREAKING & DEAL WIRE
 
-### {top['title']}
+### {top_title}
 
-{top['desc']}
+{top.get('desc', '')}
 
-Η εξέλιξη αυτή απασχολεί έντονα τους επιχειρηματικούς κύκλους της Λεμεσού και της Λευκωσίας ενόψει των απογευματινών επαφών.
-
-**Πηγή:** [{top.get('title', 'Cyprus News')[:30]}]({top['link']})
+**Πηγή:** [{top_src}]({top.get('link', '')})
 
 """
     for i, it in enumerate(mid_items, 1):
-        md += f"""### {i}. {it['title']}
-{it['desc']}  
-**Πηγή:** [Ειδήσεις]({it['link']})
+        item_title = clean_rss_title(it.get('title', ''))
+        item_src = it.get('source', 'Ειδήσεις')
+        md += f"""### {i}. {item_title}
+{it.get('desc', '')}  
+**Πηγή:** [{item_src}]({it.get('link', '')})
 
 """
 
@@ -468,14 +522,14 @@ def generate_midday_edition(cy_items, world_items, wx_info, today_str, markets_d
 | **Brent Crude** | ${brent_p} | +1,20% | 13:00 EEST |
 | **S&P 500 Futures** | {sp_p} | -0,48% | Pre-Market US |
 
-**Εκτίμηση Αγοράς:** Σταθερή ζήτηση για κυπριακές τραπεζικές μετοχές με αξιοσημείωτο όγκο συναλλαγών στο ΧΑΚ και στο Χρηματιστήριο Αθηνών. Οι ευρωπαϊκοί δείκτες κινούνται με συγκρατημένες διακυμάνσεις εν αναμονή του ανοίγματος της Wall Street.
+**Εκτίμηση Αγοράς:** Σταθερή ζήτηση για κυπριακές τραπεζικές μετοχές με αξιοσημείωτο όγκο συναλλαγών στο ΧΑΚ και στο Χρηματιστήριο Αθηνών.
 
 ---
 
 ## 🎯 ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΠΡΟΤΕΡΑΙΟΤΗΤΕΣ
 
 *   **15:30 ώρα Κύπρου:** Άνοιγμα Wall Street (NYSE / Nasdaq).
-*   **16:30 ώρα Κύπρου:** Κλείσιμο Χρηματιστηρίου Αξιών Κύπρου (ΧΑΚ) και Χρηματιστηρίου Αθηνών.
+*   **16:30 ώρα Κύπρου:** Κλείσιμο Χρηματιστηρίου Αξιών Κύπρου (ΧΑΚ).
 *   **18:00 ώρα Κύπρου:** Εταιρικές ανακοινώσεις και συνεντεύξεις τύπου.
 """
     return md
@@ -486,18 +540,31 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
     quotes = markets_data.get('quotes', {})
     boch = quotes.get('Bank of Cyprus (BOCH)', {})
     sp500 = quotes.get('S&P 500', {})
+    brent = quotes.get('Brent Crude', {})
 
     omonoia = sports_data.get('omonoia', {})
-    om_fix = omonoia.get('next_fixture', {}).get('fixture', 'Ομόνοια – Απόλλων (Σάββατο 12.09.2026, 20:00, ΓΣΠ)')
+    om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
     mu = sports_data.get('manchester_united', {})
-    mu_fix = mu.get('next_fixture', {}).get('fixture', 'Manchester United – Manchester City')
+    mu_fix = mu.get('next_fixture', {}).get('fixture', '')
     rm = sports_data.get('real_madrid', {})
-    rm_fix = rm.get('next_fixture', {}).get('fixture', 'Real Madrid – Rayo Vallecano')
+    rm_fix = rm.get('next_fixture', {}).get('fixture', '')
     f1 = sports_data.get('formula1', {})
-    f1_race = f1.get('next_fixture', {}).get('race', 'Spanish Grand Prix 2026')
+    f1_race = f1.get('next_fixture', {}).get('race', '')
 
     boch_p = format_greek_num(boch.get('price', 10.44))
     sp_p = format_greek_num(sp500.get('price', 7636.36))
+    brent_p = format_greek_num(brent.get('price', 102.42))
+
+    sports_lines = []
+    if om_fix:
+        sports_lines.append(f"*   **ΟΜΟΝΟΙΑ:** Επόμενος αγώνας: *{om_fix}*.")
+    if mu_fix:
+        sports_lines.append(f"*   **Manchester United:** *{mu_fix}*.")
+    if rm_fix:
+        sports_lines.append(f"*   **Real Madrid:** *{rm_fix}*.")
+    if f1_race:
+        sports_lines.append(f"*   **Formula 1:** *{f1_race}*.")
+    sports_block = "\n".join(sports_lines) if sports_lines else "*   **Αθλητικό Πρόγραμμα:** Παρακολούθηση προσεχών αγωνιστικών υποχρεώσεων."
 
     md = f"""# 🌙 THE ORACLE SOVEREIGN — ΑΠΟΓΕΥΜΑΤΙΝΗ ΣΥΝΟΨΗ — {greek_date}
 
@@ -507,7 +574,7 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 ## 🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ
 
-Η σημερινή ημέρα έκλεισε με αξιοσημείωτη κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των ενεργειακών δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά.
+Η σημερινή ημέρα έκλεισε με κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά.
 
 ---
 
@@ -515,25 +582,22 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 | Αγορά / Τίτλος | Κλείσιμο | Μεταβολή | Σχόλιο |
 | :--- | :--- | :--- | :--- |
-| **Bank of Cyprus (BOCH)** | €{boch_p} | +0,38% | Ισχυρό κλείσιμο σε υψηλό ημέρας |
-| **S&P 500** | {sp_p} | -0,48% | Ήπια διόρθωση εν αναμονή μακροοικονομικών |
-| **Brent Crude** | $102,42 | +1,20% | Εδραίωση πάνω από τα $100 |
+| **Bank of Cyprus (BOCH)** | €{boch_p} | +0,38% | Ισχυρό κλείσιμο ημέρας |
+| **S&P 500** | {sp_p} | -0,48% | Ήπια διακύμανση |
+| **Brent Crude** | ${brent_p} | +1,20% | Εδραίωση τιμών πετρελαίου |
 
 ---
 
 ## ⚽ ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ & ΠΡΟΓΡΑΜΜΑ
 
-*   **ΟΜΟΝΟΙΑ:** Τελευταία προπόνηση ενόψει του αγώνα: *{om_fix}*.
-*   **Manchester United:** *{mu_fix}*.
-*   **Real Madrid:** *{rm_fix}*.
-*   **Formula 1:** *{f1_race}*.
+{sports_block}
 
 ---
 
 ## 🌌 ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ
 
 1.  **Ασιατικό Άνοιγμα (02:00 EEST):** Παρακολούθηση Nikkei & Hang Seng.
-2.  **Νυχτερινές Εξελίξεις Μέσης Ανατολής:** Επιφυλακή για γεωπολιτικές μεταβολές στον περιφερειακό εναέριο χώρο.
+2.  **Νυχτερινές Εξελίξεις Μέσης Ανατολής:** Επιφυλακή για γεωπολιτικές μεταβολές.
 3.  **Αυριανή Ώρα Έναρξης:** Το πρωινό Sovereign Broadsheet θα εκδοθεί στις 07:30 ώρα Κύπρου.
 """
     return md
@@ -563,14 +627,44 @@ def main():
     markets_data, sports_data = ensure_grounded_data()
 
     print(f"Collecting live news for {today_str} ({edition})...")
-    cy_items = fetch_rss_items('https://news.google.com/rss/search?q=Cyprus+when:1d&hl=el&gl=CY&ceid=CY:el', 8)
+
+    # Priority 1: Check live-wire.json for fresh verified Cyprus news
+    cy_items = []
+    wire_file = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
+    if os.path.exists(wire_file):
+        try:
+            with open(wire_file, 'r', encoding='utf-8') as wf:
+                wire_data = json.load(wf)
+                for w in wire_data:
+                    title_w = clean_rss_title(w.get('title', ''))
+                    if title_w and w.get('source') in ['CNA', 'InBusinessNews', 'Philenews', 'Cyprus Mail', 'SigmaLive']:
+                        cy_items.append({
+                            'title': title_w,
+                            'link': w.get('link', ''),
+                            'desc': re.sub(r'<[^>]+>', '', w.get('snippet', '')).strip(),
+                            'source': w.get('source', 'Κύπρος')
+                        })
+                    if len(cy_items) >= 8:
+                        break
+        except Exception as e:
+            print(f"Note: wire cache read notice: {e}")
+
+    # Priority 2: Direct Cyprus feeds
     if not cy_items:
         cy_items = fetch_rss_items('https://cyprus-mail.com/feed/', 8)
+    if not cy_items:
+        cy_items = fetch_rss_items('https://www.sigmalive.com/rss', 8)
+    if not cy_items:
+        cy_items = fetch_rss_items('https://news.google.com/rss/search?q=Cyprus+when:1d&hl=el&gl=CY&ceid=CY:el', 8)
+
+    if not cy_items:
+        print(f"❌ CRITICAL ERROR: Could not retrieve any live news for Cyprus ({edition} edition). Halting publication.")
+        sys.exit(1)
 
     world_items = fetch_rss_items('https://feeds.bbci.co.uk/news/world/rss.xml', 6)
     wx_info = fetch_open_meteo()
 
-    api_key = env_vars.get('GEMINI_API_KEY') or os.environ.get('GEMINI_API_KEY')
+    api_key = os.environ.get('GEMINI_API_KEY') or os.environ.get('GOOGLE_API_KEY')
     md_content = None
 
     if edition == 'midday':
@@ -584,6 +678,10 @@ def main():
         if not md_content:
             print("Synthesizing briefing via structured live RSS feeds & grounded data...")
             md_content = generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_data, sports_data)
+
+    if not md_content:
+        print(f"❌ CRITICAL ERROR: Briefing content synthesis failed for [{edition.upper()}]. Halting publication.")
+        sys.exit(1)
 
     os.makedirs(BRIEFINGS_DIR, exist_ok=True)
     with open(target_md, 'w', encoding='utf-8') as f:

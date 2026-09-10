@@ -1,4 +1,4 @@
-name: 24/7 Sovereign Intelligence Engine
+name: 24/7 Sovereign Intelligence Engine (Editions)
 on:
   schedule:
     # 07:30 AM Cyprus Time (EEST, UTC+3) — Flagship Morning Broadsheet
@@ -7,48 +7,21 @@ on:
     - cron: '30 10 * * *'
     # 19:30 PM Cyprus Time (EEST, UTC+3) — Evening Debrief & Global Wrap
     - cron: '30 16 * * *'
-    # Every 30 mins between 08:00 - 21:00 Cyprus Time — Real-time Breaking Wire Monitor
-    - cron: '*/30 5-18 * * *'
   push:
-    paths: ['docs/briefings/**', 'briefings/**', '.github/workflows/**']
+    paths: ['docs/briefings/**', 'briefings/**', '.github/workflows/notify.yml']
   workflow_dispatch:
     inputs:
       edition:
-        description: 'Edition to run (morning, midday, evening, wire)'
+        description: 'Edition to run (morning, midday, evening, auto)'
         required: false
-        default: 'morning'
+        default: 'auto'
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: oracle-edition-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  wire_monitor:
-    # Only run wire monitor on the 30-min cron ticks
-    if: "github.event_name == 'schedule' && github.event.schedule == '*/30 5-18 * * *'"
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: pip install beautifulsoup4
-      - name: Run 24/7 Wire Monitor
-        run: python scripts/monitor-breaking.py
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      - name: Commit Updated Wire Data
-        run: |
-          git config user.name "The Oracle Wire"
-          git config user.email "oracle-wire@antigravity.internal"
-          git add scripts/live-wire.json docs/live-wire.json || true
-          git diff --staged --quiet || (git commit -m "⚡ [Wire Update] Sync live wire ticker [skip-ci-dispatch]" && git push)
-
   edition_dispatch:
-    # Run on scheduled edition times, git push, or manual dispatch
-    if: "github.event_name != 'schedule' || github.event.schedule != '*/30 5-18 * * *'"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -60,17 +33,36 @@ jobs:
         with: { python-version: '3.12' }
       - name: Install Python Dependencies & Antigravity SDK
         run: pip install google-antigravity beautifulsoup4 yfinance
+
+      - name: Resolve Edition
+        id: resolve_edition
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.edition }}" ] && [ "${{ github.event.inputs.edition }}" != "auto" ]; then
+            EDITION="${{ github.event.inputs.edition }}"
+          elif [ "${{ github.event.schedule }}" = "30 4 * * *" ]; then
+            EDITION="morning"
+          elif [ "${{ github.event.schedule }}" = "30 10 * * *" ]; then
+            EDITION="midday"
+          elif [ "${{ github.event.schedule }}" = "30 16 * * *" ]; then
+            EDITION="evening"
+          else
+            EDITION="auto"
+          fi
+          echo "edition=$EDITION" >> $GITHUB_OUTPUT
+          echo "Resolved edition: $EDITION"
+
       - name: Run Autonomous Antigravity Sovereign Agent
-        run: python scripts/agent-runner.py --edition ${{ github.event.inputs.edition || 'auto' }}
+        run: python scripts/agent-runner.py --edition ${{ steps.resolve_edition.outputs.edition }}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
+
       - name: Dispatch Briefing to Telegram
         if: "github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip-ci-dispatch]')"
         run: |
-          python scripts/send-briefing.py 2>&1 | tee dispatch.log
+          python scripts/send-briefing.py --edition ${{ steps.resolve_edition.outputs.edition }} 2>&1 | tee dispatch.log
           echo "## Telegram Dispatch Output" >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           cat dispatch.log >> $GITHUB_STEP_SUMMARY
@@ -79,6 +71,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
+
       - name: Commit & Push Broadsheet Editions
         if: always()
         run: |
@@ -86,4 +79,3 @@ jobs:
           git config user.email "oracle-agent@antigravity.internal"
           git add docs/ briefings/ scripts/*.json dispatch.log || true
           git diff --staged --quiet || (git commit -m "🤖 [Oracle Sovereign Agent] Auto-edition update [skip-ci-dispatch]" && git push)
-

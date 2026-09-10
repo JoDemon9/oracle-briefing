@@ -60,17 +60,26 @@ def main():
             target_md = a
         i += 1
 
+    def get_cyprus_now():
+        try:
+            from zoneinfo import ZoneInfo
+            return datetime.now(ZoneInfo("Asia/Nicosia"))
+        except Exception:
+            from datetime import timezone, timedelta
+            return datetime.now(timezone(timedelta(hours=3)))
+
+    cy_now = get_cyprus_now()
+    today_str = cy_now.strftime('%Y-%m-%d')
+    hour = cy_now.hour
+
     # Auto-detect edition by current hour if none explicitly specified
     if not target_md and '--edition' not in args and not any(e in args for e in ['morning', 'midday', 'evening']):
-        hour = datetime.now().hour
         if 5 <= hour < 12:
             edition = "morning"
-        elif 12 <= hour < 17:
+        elif 12 <= hour < 18:
             edition = "midday"
         else:
             edition = "evening"
-
-    today_str = datetime.now().strftime('%Y-%m-%d')
     if not target_md:
         if edition == 'morning':
             target_md = os.path.join(BASE_DIR, 'briefings', f'oracle-briefing-{today_str}.md')

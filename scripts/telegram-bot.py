@@ -27,24 +27,15 @@ if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-ENV_PATH = os.path.join(BASE_DIR, '.env')
+SCRIPTS_DIR = os.path.join(BASE_DIR, 'scripts')
+if SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, SCRIPTS_DIR)
+from env_loader import load_env
+load_env()
 
-# Load .env
-env_vars = {}
-if os.path.exists(ENV_PATH):
-    try:
-        with open(ENV_PATH, 'r', encoding='utf-8-sig') as ef:
-            for line in ef:
-                line = line.strip()
-                if line and not line.startswith('#') and '=' in line:
-                    k, v = line.split('=', 1)
-                    env_vars[k.strip().lstrip('\ufeff')] = v.strip().strip('\'"')
-    except Exception:
-        pass
-
-TOKEN = env_vars.get('TELEGRAM_BOT_TOKEN') or os.environ.get('TELEGRAM_BOT_TOKEN')
-AUTHORIZED_CHAT_ID = env_vars.get('TELEGRAM_CHAT_ID') or os.environ.get('TELEGRAM_CHAT_ID')
-BASE_URL = env_vars.get('BRIEFING_BASE_URL') or os.environ.get('BRIEFING_BASE_URL') or 'https://jodemon9.github.io/oracle-briefing'
+TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+AUTHORIZED_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
+BASE_URL = os.environ.get('BRIEFING_BASE_URL') or 'https://jodemon9.github.io/oracle-briefing'
 
 
 def create_ssl_context():

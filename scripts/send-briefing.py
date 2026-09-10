@@ -9,23 +9,12 @@ from datetime import datetime
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-# Automatically load .env file if present
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-env_file = os.path.join(BASE_DIR, '.env')
-if os.path.exists(env_file):
-    try:
-        with open(env_file, 'r', encoding='utf-8-sig') as ef:
-            for line in ef:
-                line = line.strip()
-                if not line or line.startswith('#') or '=' not in line:
-                    continue
-                k, v = line.split('=', 1)
-                k = k.strip().lstrip('\ufeff')
-                v = v.strip().strip('\'"')
-                if k not in os.environ:
-                    os.environ[k] = v
-    except Exception:
-        pass
+SCRIPTS_DIR = os.path.join(BASE_DIR, 'scripts')
+if SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, SCRIPTS_DIR)
+from env_loader import load_env
+load_env()
 
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip().strip("'\"")
 CHAT  = os.environ.get("TELEGRAM_CHAT_ID", "").strip().strip("'\"")
@@ -42,22 +31,72 @@ if CHAT:
 else:
     print("❌ TELEGRAM_CHAT_ID is empty or not found in environment.")
 
-arg = sys.argv[1] if len(sys.argv) > 1 else ""
-if arg and os.path.isfile(arg):
-    md_path = arg
-    m = re.search(r'(\d{4}-\d{2}-\d{2}(?:-[a-zA-Z]+)?)', os.path.basename(arg))
-    date = m.group(1) if m else datetime.now().strftime('%Y-%m-%d')
+def get_cyprus_now():
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("Asia/Nicosia"))
+    except Exception:
+        from datetime import timezone, timedelta
+        return datetime.now(timezone(timedelta(hours=3)))
+
+cy_now = get_cyprus_now()
+cy_date_str = cy_now.strftime('%Y-%m-%d')
+cy_hour = cy_now.hour
+
+explicit_edition = None
+target_file = None
+
+args = sys.argv[1:]
+i = 0
+while i < len(args):
+    a = args[i]
+    if a == '--edition' and i + 1 < len(args):
+        explicit_edition = args[i + 1].lower()
+        i += 2
+        continue
+    elif a in ['morning', 'midday', 'evening']:
+        explicit_edition = a.lower()
+    elif os.path.isfile(a):
+        target_file = a
+    elif re.match(r'^\d{4}-\d{2}-\d{2}', a):
+        cy_date_str = a
+    i += 1
+
+if target_file and os.path.isfile(target_file):
+    md_path = target_file
+    m = re.search(r'(\d{4}-\d{2}-\d{2})(?:-(morning|midday|evening))?', os.path.basename(target_file))
+    if m:
+        date_only = m.group(1)
+        edition_detected = m.group(2)
+        if edition_detected:
+            edition_tag = f"-{edition_detected}"
+        else:
+            edition_tag = ""
+    else:
+        date_only = cy_date_str
+        edition_tag = ""
 else:
-    date = arg if arg else datetime.now().strftime('%Y-%m-%d')
-    hour = datetime.now().hour
-    edition_tag = '-evening' if hour >= 17 else ('-midday' if hour >= 12 else '')
+    date_only = cy_date_str
+    if explicit_edition:
+        edition_tag = f"-{explicit_edition}" if explicit_edition != "morning" else ""
+    else:
+        if 5 <= cy_hour < 12:
+            edition_tag = ""
+        elif 12 <= cy_hour < 18:
+            edition_tag = "-midday"
+        else:
+            edition_tag = "-evening"
+
     candidates = [
-        f"docs/briefings/{date}{edition_tag}.md",
-        f"briefings/oracle-briefing-{date}{edition_tag}.md",
-        f"docs/briefings/{date}.md",
-        f"briefings/oracle-briefing-{date}.md"
+        f"docs/briefings/{date_only}{edition_tag}.md",
+        f"briefings/oracle-briefing-{date_only}{edition_tag}.md",
+        f"docs/briefings/{date_only}.md",
+        f"briefings/oracle-briefing-{date_only}.md"
     ]
     md_path = next((c for c in candidates if os.path.exists(c)), candidates[0])
+
+edition_slug = f"{date_only}{edition_tag}"
+print(f"ℹ Targeting briefing markdown: {md_path} (Edition slug: {edition_slug})")
 
 if not TOKEN or not CHAT:
     if os.environ.get("GITHUB_ACTIONS"):
@@ -85,10 +124,17 @@ def first_heading(block):
     m = re.search(r"^##\s+(.+)$", block, re.MULTILINE)
     return m.group(1).strip() if m else ""
 
-top_story_block = grab("## ⭐", "## 📊") or grab("## ⚡", "## 📊") or grab("## 🏁", "## 🔔")
+top_story_block = grab("## ⭐", "## 📊") or grab("## ⚡", "## 📊") or grab("## 🏁", "## 🔔") or grab("## 🏁", "---")
 top_story = first_heading(top_story_block)
+top_story_desc = ""
+if top_story_block:
+    for line in top_story_block.splitlines():
+        line_clean = line.strip()
+        if line_clean and not line_clean.startswith("#") and not line_clean.startswith("-") and not line_clean.startswith("*") and len(line_clean) > 25:
+            top_story_desc = line_clean
+            break
 
-dash_block = grab("## 📊", "## 🏦") or grab("## 📊", "## 🎯") or grab("## 🔔", "## ⚽")
+dash_block = grab("## 📊", "## 🏦") or grab("## 📊", "## 🎯") or grab("## 🔔", "## ⚽") or grab("## 🔔", "---")
 dash_rows = []
 for line in dash_block.split("\n"):
     if line.startswith("| **"):
@@ -129,10 +175,10 @@ for l in md.splitlines()[:6]:
         edition_time = m_ed.group(1).strip()
         break
 
-sports_block = grab("## ⚽", "## 🌤️")
+sports_block = grab("## ⚽", "## 🌤️") or grab("## ⚽", "## 🌌") or grab("## ⚽", "---")
 sports_summary = ""
-if "### ΟΜΟΝΟΙΑ" in sports_block:
-    m_om = re.search(r'\*\*Επόμενος αγώνας:\*\*\s*(.+)', sports_block)
+if sports_block:
+    m_om = re.search(r'\*\*ΟΜΟΝΟΙΑ:\*\*\s*(.+)', sports_block) or re.search(r'###\s+ΟΜΟΝΟΙΑ.*?\n\*\*Επόμενος αγώνας:\*\*\s*(.+)', sports_block)
     if m_om:
         raw_om = m_om.group(1).strip()
         # Convert markdown links to HTML
@@ -148,14 +194,19 @@ if m_w:
     clean_w = re.sub(r'[*_]', '', clean_w).strip()
     weather_summary = f"🌤️ <b>Καιρός:</b> {esc(clean_w)}"
 
-header_text = f"🏛️ <b>THE ORACLE SOVEREIGN</b> — {date}"
+header_text = f"🏛️ <b>THE ORACLE SOVEREIGN</b> — {date_only}"
 if edition_time:
     header_text += f"\n🕒 <i>{esc(edition_time)}</i>"
 
+if top_story_desc and top_story and top_story_desc != top_story:
+    top_story_content = f"<b>{esc(top_story)}</b>\n{esc(top_story_desc)}"
+else:
+    top_story_content = esc(top_story) or "—"
+
 msg_parts = [
     header_text,
-    f"⭐ <b>Θέμα της ημέρας</b>\n{esc(top_story)}",
-    f"📊 <b>Αγορές</b>\n{esc(dash_rows_str)}",
+    f"⭐ <b>Θέμα της ημέρας</b>\n{top_story_content}",
+    f"📊 <b>Αγορές</b>\n{esc(dash_rows_str) or '—'}",
     f"🎯 <b>Ο φάκελός μου</b>\n{esc(my_file_str) or '—'}",
     f"📅 <b>Προθεσμίες</b>\n{esc(deadlines_str) or '—'}"
 ]
@@ -165,12 +216,13 @@ if sports_summary:
 if weather_summary:
     msg_parts.append(weather_summary)
 
-msg_parts.append(f'📖 <a href="{BASE}/briefings/{date}.html">Πλήρης έκδοση</a>')
+full_edition_url = f"{BASE}/briefings/{edition_slug}.html"
+msg_parts.append(f'📖 <a href="{full_edition_url}">Πλήρης έκδοση</a>')
 
 text = "\n\n".join(msg_parts)
 
 if len(text) > 4000:
-    text = text[:3900] + "\n…\n" + f'<a href="{BASE}/briefings/{date}.html">Πλήρης έκδοση</a>'
+    text = text[:3900] + "\n…\n" + f'<a href="{full_edition_url}">Πλήρης έκδοση</a>'
 
 print("=" * 60)
 print("FORMATTED TELEGRAM MESSAGE PREVIEW:")
@@ -187,7 +239,7 @@ if TOKEN and CHAT:
         "link_preview_options": {"is_disabled": False},
         "reply_markup": {
             "inline_keyboard": [
-                [{"text": "📖 Διαβάστε την Πλήρη Έκδοση", "url": f"{BASE}/briefings/{date}.html"}],
+                [{"text": "📖 Διαβάστε την Πλήρη Έκδοση", "url": full_edition_url}],
                 [{"text": "🏛️ Αρχική Πύλη (The Oracle)", "url": f"{BASE}/"}]
             ]
         },
@@ -199,7 +251,7 @@ if TOKEN and CHAT:
         with urllib.request.urlopen(req) as resp:
             res = json.loads(resp.read().decode("utf-8"))
             if res.get("ok"):
-                print(f"✔ Στάλθηκε επιτυχώς το briefing {date} στο Telegram!")
+                print(f"✔ Στάλθηκε επιτυχώς το briefing {edition_slug} στο Telegram!")
             else:
                 print("Error from Telegram API:", res)
                 sys.exit(1)
