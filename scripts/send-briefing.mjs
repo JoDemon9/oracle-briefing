@@ -18,10 +18,20 @@ if (arg) {
 }
 
 if (!mdPath) {
-  for (const cand of [`docs/briefings/${date}.md`, `briefings/oracle-briefing-${date}.md`]) {
+  const hour = new Date().getUTCHours() + 3; // Cyprus Time EEST (UTC+3)
+  const editionTag = hour >= 17 ? '-evening' : (hour >= 12 ? '-midday' : '');
+  const candidates = [
+    `docs/briefings/${date}${editionTag}.md`,
+    `briefings/oracle-briefing-${date}${editionTag}.md`,
+    `docs/briefings/${date}.md`,
+    `briefings/oracle-briefing-${date}.md`
+  ];
+  for (const cand of candidates) {
     try {
       await fs.access(cand);
       mdPath = cand;
+      const m = cand.match(/(\d{4}-\d{2}-\d{2}(?:-[a-zA-Z]+)?)/);
+      if (m) date = m[1];
       break;
     } catch {}
   }

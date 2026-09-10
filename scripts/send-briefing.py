@@ -39,9 +39,15 @@ if arg and os.path.isfile(arg):
     date = m.group(1) if m else datetime.now().strftime('%Y-%m-%d')
 else:
     date = arg if arg else datetime.now().strftime('%Y-%m-%d')
-    md_path = f"docs/briefings/{date}.md"
-    if not os.path.exists(md_path):
-        md_path = f"briefings/oracle-briefing-{date}.md"
+    hour = datetime.now().hour
+    edition_tag = '-evening' if hour >= 17 else ('-midday' if hour >= 12 else '')
+    candidates = [
+        f"docs/briefings/{date}{edition_tag}.md",
+        f"briefings/oracle-briefing-{date}{edition_tag}.md",
+        f"docs/briefings/{date}.md",
+        f"briefings/oracle-briefing-{date}.md"
+    ]
+    md_path = next((c for c in candidates if os.path.exists(c)), candidates[0])
 
 if not TOKEN or not CHAT:
     print("Warning: Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID in environment.")

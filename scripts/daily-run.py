@@ -98,8 +98,12 @@ def main():
             print("   ⚠ Sports harvester failed — continuing with manual data")
 
     # Ensure briefing exists; generate if missing
+    AGENT_RUNNER = os.path.join(BASE_DIR, 'scripts', 'agent-runner.py')
     if not os.path.exists(target_md):
-        gen_cmd = f'python "{GENERATE_SCRIPT}" --edition {edition}'
+        if os.path.exists(AGENT_RUNNER):
+            gen_cmd = f'python "{AGENT_RUNNER}" --edition {edition}'
+        else:
+            gen_cmd = f'python "{GENERATE_SCRIPT}" --edition {edition}'
         if not run_command(gen_cmd, f"Synthesizing {edition.upper()} edition briefing"):
             sys.exit(1)
 

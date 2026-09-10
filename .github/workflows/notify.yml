@@ -23,34 +23,59 @@ jobs:
     # Only run wire monitor on the 30-min cron ticks
     if: "github.event_name == 'schedule' && github.event.schedule == '*/30 5-18 * * *'"
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with: { python-version: '3.12' }
       - run: pip install beautifulsoup4
       - name: Run 24/7 Wire Monitor
         run: python scripts/monitor-breaking.py
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Commit Updated Wire Data
+        run: |
+          git config user.name "The Oracle Wire"
+          git config user.email "oracle-wire@antigravity.internal"
+          git add scripts/live-wire.json docs/live-wire.json || true
+          git diff --staged --quiet || (git commit -m "⚡ [Wire Update] Sync live wire ticker [skip-ci-dispatch]" && git push)
 
   edition_dispatch:
     # Run on scheduled edition times, git push, or manual dispatch
     if: "github.event_name != 'schedule' || github.event.schedule != '*/30 5-18 * * *'"
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
-      - run: pip install beautifulsoup4 yfinance
-      - name: Build HTML & Search Index
-        run: python scripts/build-html.py
+        with: { python-version: '3.12' }
+      - name: Install Python Dependencies & Antigravity SDK
+        run: pip install google-antigravity beautifulsoup4 yfinance
+      - name: Run Autonomous Antigravity Sovereign Agent
+        run: python scripts/agent-runner.py --edition ${{ github.event.inputs.edition || 'auto' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
+      - name: Commit & Push Broadsheet Editions
+        run: |
+          git config user.name "The Oracle Sovereign Agent"
+          git config user.email "oracle-agent@antigravity.internal"
+          git add docs/ briefings/ scripts/*.json || true
+          git diff --staged --quiet || (git commit -m "🤖 [Oracle Sovereign Agent] Auto-edition update [skip-ci-dispatch]" && git push)
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
       - name: Dispatch Briefing to Telegram
-        if: "!contains(github.event.head_commit.message, '[skip-ci-dispatch]')"
+        if: "github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip-ci-dispatch]')"
         run: node scripts/send-briefing.mjs
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
+
