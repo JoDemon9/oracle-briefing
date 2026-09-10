@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Ο καλός...\"Μάγια\" και ο Ακιντόλα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/o-kalosmagia-kai-o-akintola",
+        "title": "ΠΟΙΟΣ θα παίξει με Απόλλωνα;",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/poios-tha-paixei-me-apollona",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τούρτα στο...γυμναστήριο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/toyrta-stogymnastirio",
+        "title": "Ντεμπούτο με Παναθηναϊκό!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ntempoyto-me-panathinaiko",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Ομόνοια-Απόλλων)/Οι ΔΥΟ μπροστά θα είναι εκεί στο ντέρμπι...",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/apollonas/omonoia-apollonoi-dyo-mprosta-tha-einai-ekei-sto-ntermpi",
+        "title": "(ΒΙΝΤΕΟ) Η δράση στο \"Ηλίας Πούλλος\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/binteo-i-drasi-sto-ilias-poyllos",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Φώτος) Δουλειά... για Απόλλωνα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-doyleia-gia-apollona",
+        "title": "ΤΟΠΟΘΕΤΗΣΗ/\"Αυτή είναι η πολιτική της Ομόνοιας στις μεταγραφές\"",
+        "url": "https://www.kerkida.net/super-monday/omonoia/topothetisiayti-einai-i-politiki-tis-omonoias-stis-metagrafes",
         "source": "Kerkida.net"
       },
       {
-        "title": "(ΤΕΛΕΥΤΑΙΟ ΝΕΟ) Πάει σήμερα στο Ηράκλειο...",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/teleytaio-neo-paei-simera-sto-irakleio",
+        "title": "Ανάλογη... συνέχεια",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/analogi-syneheia",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-10T12:29:32.237753+00:00"
+    "fetched_at": "2026-09-10T19:11:25.208128+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -48,13 +48,18 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "UEFA Champions League - League Stage: Manchester United versus Sabah — 20:00",
+      "fixture": "UEFA Champions League: Manchester United versus Sabah — 20:00",
       "match": "Manchester United versus Sabah — 20:00",
-      "competition": "UEFA Champions League - League Stage",
+      "competition": "UEFA Champions League",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Manchester United v Sabah: Champions League – live",
+        "url": "https://www.theguardian.com/football/live/2026/sep/10/manchester-united-v-sabah-champions-league-live",
+        "source": "The Guardian"
+      },
       {
         "title": "‘That’s how it started’: Dambrauskas’ journey from Who Wants to Be a Millionaire to Champions League",
         "url": "https://www.theguardian.com/football/2026/sep/10/valdas-dambrauskas-sabah-manchester-united-arsenal-champions-league",
@@ -74,14 +79,9 @@
         "title": "‘No excuses’: Moyes says transfer troubles will not hurt Everton after United draw",
         "url": "https://www.theguardian.com/football/2026/sep/06/david-moyes-ainsley-maitland-niles-everton-manchester-united-premier-league",
         "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United’s front four show flashes but need more time to become fantastic",
-        "url": "https://www.theguardian.com/football/2026/sep/06/manchester-uniteds-front-four-show-flashes-but-need-more-time-to-become-fantastic",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-10T12:29:33.410421+00:00"
+    "fetched_at": "2026-09-10T19:11:26.096538+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-10T12:29:34.142406+00:00"
+    "fetched_at": "2026-09-10T19:11:26.757909+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Hamilton and Leclerc 'squash' Monza controversy",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg825g59l1o",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "'It started as a joke, a fantasy' - F1 heads to football-obsessed Madrid",
         "url": "https://www.bbc.com/sport/formula1/articles/cjw5n195nx8o",
@@ -161,13 +166,8 @@
         "title": "Kimi Raikkonen's son Robin, 11, signs for Red Bull",
         "url": "https://www.bbc.com/sport/formula1/articles/c3v437155e3o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Russell hindered or just Antonelli brilliance? - F1 Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/c8r6e663g1lo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-10T12:29:35.156227+00:00"
+    "fetched_at": "2026-09-10T19:11:28.135225+00:00"
   }
 }
