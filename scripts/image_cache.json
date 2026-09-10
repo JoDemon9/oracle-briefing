@@ -274,5 +274,25 @@
   "https://www.bbc.com/news/articles/cy4zd4dn9n9o": {
     "image": "https://ichef.bbci.co.uk/news/1024/branded_news/c2bd/live/40eb11a0-acc8-11f1-950e-0d3c5642d8c0.png",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://gr.euronews.com/business": {
+    "image": "https://static.euronews.com/website/images/euronews-og-image-1200x675.png",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.naftemporiki.gr/maritime/": {
+    "image": "https://www.naftemporiki.gr/wp-content/uploads/2022/10/OpenGraph.png",
+    "category": "ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ"
+  },
+  "https://www.cnbc.com/energy/": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108285632-1774986309800-cnbc_versant_share.png?v=1774986411&amp;w=1920&amp;h=1080",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://techcrunch.com/category/security/": {
+    "image": "https://techcrunch.com/wp-content/uploads/2018/04/tc-logo-2018-square-reverse2x.png?resize=1200,1200",
+    "category": "ΠΑΙΔΕΙΑ & ΥΠΟΔΟΜΕΣ"
+  },
+  "https://www.bbc.com/news/world": {
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }

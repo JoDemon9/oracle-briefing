@@ -1009,9 +1009,9 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
           <!-- Macro Indices & FX -->
           <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-[var(--rule)]">
             <div class="p-3.5 bg-[var(--paper)] border-b border-[var(--rule)] flex items-center justify-between">
-              <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
                 <span>🏛️</span> <span>Κύριοι Δείκτες, Συνάλλαγμα & Crypto</span>
-              </span>
+              </h3>
               <span class="text-[10px] font-mono text-[var(--accent)] font-bold">MACRO & FX</span>
             </div>
             <div class="overflow-x-auto">
@@ -1034,9 +1034,9 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
           <!-- Tech Stocks Watchlist -->
           <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-indigo-500/30">
             <div class="p-3.5 bg-gradient-to-r from-[var(--paper)] to-indigo-950/10 border-b border-[var(--rule)] flex items-center justify-between">
-              <span class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
                 <span>💻</span> <span>Μετοχές Τεχνολογίας (Watchlist)</span>
-              </span>
+              </h3>
               <span class="text-[10px] font-mono text-indigo-500 font-bold">TECH RADAR</span>
             </div>
             <div class="overflow-x-auto">
@@ -1116,15 +1116,15 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         fc_val = md_to_inline_html(tw.get('forecast', 'Αίθριος & διαυγής ουρανός'))
         wind_val = md_to_inline_html(tw.get('wind', '16 km/h ΝΔ'))
         tomorrow_weather_html = f'''
-        <!-- ==================== 🌤️ ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ ==================== -->
+        <!-- ==================== 🌤️ 5. ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ ==================== -->
         <section id="tomorrow-outlook" class="scroll-mt-24">
+          <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+            <h2 class="t-section flex items-center gap-2">
+              <span>🌤️</span> <span>Αυριανή Πρόγνωση & Συνθήκες Λεμεσού</span>
+            </h2>
+            <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">TOMORROW OUTLOOK</span>
+          </div>
           <div class="card p-5 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-amber-500/5 border border-amber-500/20 rounded-2xl shadow-xs">
-            <div class="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-[var(--rule)]">
-              <span class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] flex items-center gap-1.5">
-                <span>🌤️</span> <span>Αυριανή Πρόγνωση & Συνθήκες Λεμεσού</span>
-              </span>
-              <span class="text-[10px] font-mono text-[var(--ink-quiet)] uppercase">TOMORROW PREVIEW</span>
-            </div>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
               <div class="flex items-center gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
                 <span class="text-2xl flex-shrink-0">☀️</span>
@@ -1262,46 +1262,51 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         ''')
     sports_html = '\n'.join(sports_cards)
 
-    # Evening News Wire Cards (Curated, Lighter than morning)
+    # Evening News Wire Cards (Curated with Broadsheet Images & Typography)
     evening_news_cards = []
     for idx, item in enumerate(data.get('evening_news', []), 1):
-        clean_title = md_to_inline_html(item['title'])
-        clean_body = md_to_inline_html(item['body'])
+        raw_title = item.get('title', '')
+        raw_title = re.sub(r'\[(ΕΠΙΒΕΒΑΙΩΜΕΝΟ|ΕΞΕΛΙΣΣΟΜΕΝΟ)\]\s*', '', raw_title)
+        raw_title = re.sub(r'^[🇨🇾🌍🇬🇷🇪🇺]\s*', '', raw_title).strip()
+        clean_title = md_to_inline_html(raw_title)
+        clean_body = md_to_inline_html(item.get('body', ''))
         clean_why = md_to_inline_html(item.get('why', ''))
 
         region = item.get('region', '🇨🇾 ΚΥΠΡΟΣ')
         reg_badge_cls = "bg-[var(--accent)] text-white" if 'ΚΥΠΡΟΣ' in region else "bg-indigo-900/80 text-white"
 
+        item_url = item['source']['url'] if item.get('source') else ''
+        img_url, cat_name = resolve_image(item_url, clean_title, region)
+
         src_html = ""
         if item.get('source'):
-            src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
+            src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
 
         why_html = f'''
-        <div class="text-xs text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
+        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
           <strong class="font-bold">Γιατί με αφορά:</strong> {clean_why}
         </div>''' if clean_why else ""
 
         evening_news_cards.append(f'''
-        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
+        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider uppercase {reg_badge_cls}">
-                {region}
-              </span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
-                Επιβεβαιωμένο
-              </span>
+            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
+              <img src="{img_url}" alt="{clean_title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='{TOPIC_FALLBACKS['general']}';">
+              <span class="absolute top-2.5 left-2.5 {reg_badge_cls} t-meta px-2 py-0.5 rounded shadow-xs font-bold uppercase">{region}</span>
+              <span class="absolute top-2.5 right-2.5 bg-emerald-500/90 text-white font-bold t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
             </div>
-            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
-              {clean_title}
-            </h3>
-            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-3">
-              {clean_body}
-            </p>
-            {why_html}
+            <div class="p-5 sm:p-6">
+              <h3 class="t-title mb-2.5 text-[var(--ink)]">
+                {clean_title}
+              </h3>
+              <p class="t-body-sm leading-relaxed mb-3 text-[var(--ink-body)]">
+                {clean_body}
+              </p>
+              {why_html}
+            </div>
           </div>
-          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
-            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">19:30 EEST</span>
+          <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="t-meta text-[var(--ink-quiet)] font-mono">19:30 EEST</span>
             {src_html}
           </div>
         </article>
@@ -1553,10 +1558,10 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
                 <span>·</span>
                 <span class="text-[var(--ink-quiet)] font-mono">{date_display}</span>
               </div>
-              <h3 class="font-editorial text-2xl font-bold text-[var(--ink)] mb-3 leading-snug">
+              <h3 class="t-lead mb-3">
                 Ημερήσιο Οικονομικό & Στρατηγικό Αποτύπωμα
               </h3>
-              <p id="topStoryBody" class="font-editorial text-base sm:text-lg text-[var(--ink-body)] leading-relaxed">
+              <p id="topStoryBody" class="t-body leading-relaxed mb-4">
                 {top_body}
               </p>
             </div>
@@ -1599,7 +1604,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
 
     {tomorrow_weather_html}
 
-    <!-- ==================== 🌌 5. ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ ==================== -->
+    <!-- ==================== 🌌 6. ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ ==================== -->
     <section id="night-radar" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
@@ -1618,7 +1623,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
       </div>
     </section>
 
-    <!-- ==================== 🏛️ 5. ΣΥΝΔΕΣΗ ΜΕ ΤΟ ΠΡΩΙΝΟ BROADSHEET ==================== -->
+    <!-- ==================== 🏛️ 7. ΣΥΝΔΕΣΗ ΜΕ ΤΟ ΠΡΩΙΝΟ BROADSHEET ==================== -->
     <div class="card p-6 bg-gradient-to-r from-amber-500/5 via-[var(--paper-raised)] to-[var(--paper-raised)] border-l-4 border-[var(--accent)] flex flex-wrap items-center justify-between gap-4 shadow-xs">
       <div class="max-w-2xl">
         <div class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] mb-1">

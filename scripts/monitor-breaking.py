@@ -79,14 +79,14 @@ SOURCES = [
         'category': 'finance'
     },
     {
-        'name': 'CNBC',
+        'name': 'CNBC Top News',
         'url': 'https://www.cnbc.com/id/100003114/device/rss/rss.html',
         'lang': 'en',
         'category': 'finance'
     },
     {
-        'name': 'MarketWatch',
-        'url': 'https://feeds.content.dowjones.io/public/rss/mw_topstories',
+        'name': 'CNBC Markets',
+        'url': 'https://www.cnbc.com/id/100727362/device/rss/rss.html',
         'lang': 'en',
         'category': 'finance'
     },
@@ -190,7 +190,9 @@ def save_live_wire(items):
     cat_buckets = {c: [] for c in cat_limits}
     other_bucket = []
 
-    sorted_items = sorted(items, key=lambda x: x.get('timestamp', 0), reverse=True)
+    # Enforce valid HTTP/HTTPS URL
+    valid_items = [itm for itm in items if (itm.get('link') or '').startswith('http')]
+    sorted_items = sorted(valid_items, key=lambda x: x.get('timestamp', 0), reverse=True)
     for itm in sorted_items:
         cat = itm.get('category', 'international')
         if cat in cat_buckets:
@@ -213,15 +215,21 @@ def save_live_wire(items):
 
 
 def get_xml_child_text(elem, tag_names):
-    for child in elem:
-        t = child.tag.split('}')[-1].lower()
-        if t in tag_names:
-            txt = (child.text or '').strip()
-            if txt:
-                return txt
-            if 'href' in child.attrib:
-                return child.attrib['href'].strip()
+    for wanted in tag_names:
+        for child in elem:
+            t = child.tag.split('}')[-1].lower()
+            if t == wanted.lower():
+                txt = (child.text or '').strip()
+                if txt:
+                    if wanted.lower() in ('link', 'guid', 'origlink') and not txt.startswith('http'):
+                        continue
+                    return txt
+                if 'href' in child.attrib:
+                    href = child.attrib['href'].strip()
+                    if href.startswith('http'):
+                        return href
     return ''
+
 
 
 def fetch_feed(source):
@@ -383,6 +391,8 @@ def run_monitor(dispatch=True):
         all_harvested.extend(items)
 
     for item in all_harvested:
+        if not (item.get('link') or '').startswith('http'):
+            continue
         h = hashlib.sha256((item['link'] + item['title']).encode('utf-8')).hexdigest()
         if h in seen_hashes:
             continue
