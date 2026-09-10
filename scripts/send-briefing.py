@@ -194,31 +194,120 @@ if m_w:
     clean_w = re.sub(r'[*_]', '', clean_w).strip()
     weather_summary = f"🌤️ <b>Καιρός:</b> {esc(clean_w)}"
 
-header_text = f"🏛️ <b>THE ORACLE SOVEREIGN</b> — {date_only}"
-if edition_time:
-    header_text += f"\n🕒 <i>{esc(edition_time)}</i>"
+is_evening = "-evening" in edition_slug or explicit_edition == "evening"
+is_midday = "-midday" in edition_slug or explicit_edition == "midday"
+
+if is_evening:
+    header_text = f"🏛️ <b>THE ORACLE SOVEREIGN</b> — {date_only}\n🌙 <b>Night Debrief & Closing Bell</b> (19:30)"
+elif is_midday:
+    header_text = f"🏛️ <b>THE ORACLE SOVEREIGN</b> — {date_only}\n☀️ <b>Μεσημβρινός Παλμός</b> (13:30)"
+else:
+    header_text = f"🏛️ <b>THE ORACLE SOVEREIGN</b> — {date_only}"
+    if edition_time:
+        header_text += f"\n🕒 <i>{esc(edition_time)}</i>"
 
 if top_story_desc and top_story and top_story_desc != top_story:
-    top_story_content = f"<b>{esc(top_story)}</b>\n{esc(top_story_desc)}"
+    clean_top_heading = re.sub(r'^[🏁⭐⚡]\s*', '', top_story).strip()
+    if clean_top_heading in ['ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ', 'ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ', 'ΕΚΤΑΚΤΗ ΕΠΙΚΑΙΡΟΤΗΤΑ']:
+        top_story_content = esc(top_story_desc)
+    else:
+        top_story_content = f"<b>{esc(clean_top_heading)}</b>\n{esc(top_story_desc)}"
 else:
-    top_story_content = esc(top_story) or "—"
-
-msg_parts = [
-    header_text,
-    f"⭐ <b>Θέμα της ημέρας</b>\n{top_story_content}",
-    f"📊 <b>Αγορές</b>\n{esc(dash_rows_str) or '—'}",
-    f"🎯 <b>Ο φάκελός μου</b>\n{esc(my_file_str) or '—'}",
-    f"📅 <b>Προθεσμίες</b>\n{esc(deadlines_str) or '—'}"
-]
-
-if sports_summary:
-    msg_parts.append(sports_summary)
-if weather_summary:
-    msg_parts.append(weather_summary)
+    clean_top_heading = re.sub(r'^[🏁⭐⚡]\s*', '', top_story).strip()
+    top_story_content = esc(clean_top_heading) or "—"
 
 full_edition_url = f"{BASE}/briefings/{edition_slug}.html"
-msg_parts.append(f'📖 <a href="{full_edition_url}">Πλήρης έκδοση</a>')
 
+if is_evening:
+    # 1. Evening News Headlines
+    ev_news_block = grab("## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ", "## ⚽") or grab("## 📰", "## ⚽")
+    ev_headlines = []
+    if ev_news_block:
+        for item in re.split(r'\n###\s+', ev_news_block)[1:]:
+            lines = item.strip().splitlines()
+            if lines:
+                h = lines[0].strip()
+                h = re.sub(r'\[(ΕΠΙΒΕΒΑΙΩΜΕΝΟ|ΕΞΕΛΙΣΣΟΜΕΝΟ)\]\s*', '', h)
+                ev_headlines.append(f"• {esc(h)}")
+
+    # 2. Sports fixtures
+    sp_items = []
+    if sports_block:
+        m_om = re.search(r'###\s+.*?ΟΜΟΝΟΙΑ.*?\n([\s\S]*?)(?=###|\Z)', sports_block, re.I)
+        if m_om:
+            om_next = re.search(r'\*\*Επόμενος αγώνας:\*\*\s*(.+)', m_om.group(1))
+            if om_next:
+                sp_items.append(f"• ☘️ <b>Ομόνοια:</b> {esc(om_next.group(1).strip())}")
+        m_mu = re.search(r'###\s+.*?MANCHESTER UNITED.*?\n([\s\S]*?)(?=###|\Z)', sports_block, re.I)
+        if m_mu:
+            mu_next = re.search(r'\*\*Επόμενος αγώνας:\*\*\s*(.+)', m_mu.group(1))
+            if mu_next:
+                sp_items.append(f"• 🔴 <b>Man Utd:</b> {esc(mu_next.group(1).strip())}")
+
+    # 3. Night Radar
+    nr_block = grab("## 🌌", "---") or grab("## 🌌", "")
+    nr_items = []
+    if nr_block:
+        for l in nr_block.splitlines():
+            lc = l.strip()
+            if lc and (lc[0].isdigit() or lc.startswith('*') or lc.startswith('-')):
+                cleaned = re.sub(r'^\d+\.\s*', '', lc)
+                cleaned = re.sub(r'^[*\-]\s*', '', cleaned).strip()
+                cleaned = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', cleaned)
+                cleaned = cleaned.replace('*', '')
+                if cleaned and cleaned not in ['--', '---']:
+                    nr_items.append(f"• {cleaned}")
+
+    msg_parts = [
+        header_text,
+        f"🏁 <b>Το Αποτύπωμα της Ημέρας</b>\n{top_story_content}"
+    ]
+    if ev_headlines:
+        msg_parts.append("📰 <b>Απογευματινή Επικαιρότητα</b>\n" + "\n".join(ev_headlines[:3]))
+    if dash_rows_str:
+        msg_parts.append(f"🔔 <b>Closing Bell & Αγορές</b>\n{esc(dash_rows_str)}")
+    if sp_items:
+        msg_parts.append("⚽ <b>Αθλητικό Πρόγραμμα</b>\n" + "\n".join(sp_items))
+    if nr_items:
+        msg_parts.append("🌌 <b>Νυχτερινό Ραντάρ</b>\n" + "\n".join(nr_items[:3]))
+
+elif is_midday:
+    # Midday priorities
+    prio_block = grab("## 🎯", "## 🏦") or grab("## 🎯", "---")
+    prio_items = []
+    if prio_block:
+        for l in prio_block.splitlines():
+            lc = l.strip()
+            if lc and (lc.startswith('*') or lc.startswith('-') or lc[0].isdigit()):
+                cleaned = re.sub(r'^\d+\.\s*', '', lc)
+                cleaned = re.sub(r'^[*\-]\s*', '', cleaned).strip()
+                if cleaned and cleaned not in ['--', '---']:
+                    prio_items.append(f"• {esc(cleaned)}")
+
+    msg_parts = [
+        header_text,
+        f"⚡ <b>Μεσημβρινή Έκτακτη Επικαιρότητα</b>\n{top_story_content}"
+    ]
+    if dash_rows_str:
+        msg_parts.append(f"📊 <b>Αγορές & Τάσεις</b>\n{esc(dash_rows_str)}")
+    if prio_items:
+        msg_parts.append("🎯 <b>Απογευματινές Προτεραιότητες</b>\n" + "\n".join(prio_items[:3]))
+
+else:
+    # Morning Broadsheet
+    msg_parts = [
+        header_text,
+        f"⭐ <b>Θέμα της ημέρας</b>\n{top_story_content}",
+        f"📊 <b>Αγορές</b>\n{esc(dash_rows_str) or '—'}",
+        f"🎯 <b>Ο φάκελός μου</b>\n{esc(my_file_str) or '—'}",
+        f"📅 <b>Προθεσμίες</b>\n{esc(deadlines_str) or '—'}"
+    ]
+    if sports_summary:
+        msg_parts.append(sports_summary)
+    if weather_summary:
+        msg_parts.append(weather_summary)
+
+msg_parts.append(f'📖 <a href="{full_edition_url}">Πλήρης έκδοση</a>')
 text = "\n\n".join(msg_parts)
 
 if len(text) > 4000:

@@ -222,11 +222,27 @@ def resolve_image(url, title, default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
     return final_img, category
 
 
+def briefing_sort_key(filepath):
+    filename = os.path.basename(filepath)
+    m = re.search(r'oracle-briefing-(\d{4}-\d{2}-\d{2})(?:-(midday|evening))?\.md', filename)
+    if not m:
+        return ('0000-00-00', 0)
+    date_part = m.group(1)
+    ed_part = m.group(2)
+    order = 1
+    if ed_part == 'midday':
+        order = 2
+    elif ed_part == 'evening':
+        order = 3
+    return (date_part, order)
+
+
 def find_latest_briefing():
     pattern = os.path.join(BRIEFINGS_DIR, 'oracle-briefing-*.md')
-    files = sorted(glob.glob(pattern))
+    files = glob.glob(pattern)
     if not files:
         raise FileNotFoundError(f"No briefing files found in {BRIEFINGS_DIR}")
+    files.sort(key=briefing_sort_key)
     return files[-1]
 
 
@@ -269,6 +285,7 @@ def parse_markdown(md_content, filename=""):
         },
         'night_radar': [],
         'midday_news': [],
+        'evening_news': [],
         'afternoon_priorities': [],
         'weather': {},
         'developments': [],
@@ -371,6 +388,37 @@ def parse_markdown(md_content, filename=""):
                 data['midday_news'].append({
                     'title': itm_title,
                     'body': ' '.join(itm_body),
+                    'source': itm_src
+                })
+
+        # EVENING NEWS WIRE
+        elif 'ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ' in sec_header or 'ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ' in sec_header:
+            items = re.split(r'\n###\s+', sec)
+            for itm in items[1:]:
+                itm_lines = itm.strip().splitlines()
+                if not itm_lines: continue
+                raw_title = itm_lines[0].strip()
+                region = '🇨🇾 ΚΥΠΡΟΣ' if '🇨🇾' in raw_title else ('🌍 ΔΙΕΘΝΗ' if '🌍' in raw_title else '⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ')
+                clean_title = re.sub(r'^(?:🇨🇾|🌍|⚡)\s*', '', raw_title).strip()
+
+                itm_body = []
+                itm_why = ''
+                itm_src = None
+                for il in itm_lines[1:]:
+                    il_c = il.strip()
+                    if il_c.startswith('**Γιατί με αφορά:**') or il_c.startswith('Γιατί με αφορά:'):
+                        itm_why = re.sub(r'^\*?\*?Γιατί με αφορά:\*?\*?\s*', '', il_c).strip()
+                    elif il_c.startswith('**Πηγή:**') or il_c.startswith('Πηγή:'):
+                        src_match = re.search(r'\[(.*?)\]\((.*?)\)', il_c)
+                        if src_match:
+                            itm_src = {'name': src_match.group(1).strip(), 'url': src_match.group(2).strip()}
+                    elif il_c and not il_c.startswith('---'):
+                        itm_body.append(il_c)
+                data['evening_news'].append({
+                    'title': clean_title,
+                    'region': region,
+                    'body': ' '.join(itm_body),
+                    'why': itm_why,
                     'source': itm_src
                 })
 
@@ -554,15 +602,17 @@ def parse_markdown(md_content, filename=""):
                     if m_team:
                         t_label = m_team.group(1).strip().upper()
                         t_rest = m_team.group(2).strip()
+                        matched_team = None
                         if 'ΟΜΟΝΟΙΑ' in t_label:
-                            team = 'omonoia'
+                            matched_team = 'omonoia'
                         elif 'MANCHESTER' in t_label or 'MAN UTD' in t_label:
-                            team = 'manutd'
+                            matched_team = 'manutd'
                         elif 'REAL' in t_label:
-                            team = 'realmadrid'
+                            matched_team = 'realmadrid'
                         elif 'FORMULA' in t_label or 'F1' in t_label:
-                            team = 'formula1'
-                        if team:
+                            matched_team = 'formula1'
+                        if matched_team:
+                            team = matched_team
                             data['sports'][team]['raw'].append(t_rest)
                             data['sports'][team]['next_match'] = t_rest
                             continue
@@ -599,7 +649,7 @@ def parse_markdown(md_content, filename=""):
                                 'url': src_match.group(2).strip()
                             }
                     else:
-                        clean_news = re.sub(r'^\*?\*?(?:Μία γραμμή νέων|Νέα):\*?\*?\s*', '', item_text).strip()
+                        clean_news = re.sub(r'^\*?\*?(?:Μία γραμμή νέων|Νέα|Ρεπορτάζ\s*&\s*Νέα|Ρεπορτάζ):\*?\*?\s*', '', item_text).strip()
                         data['sports'][team]['news'].append(clean_news)
 
         # WEATHER
@@ -911,11 +961,42 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
     sports_cards = []
     for sc in sports_config:
         s_data = sports.get(sc['key'], {})
+        last_res = s_data.get('last_result') or ''
         next_m = s_data.get('next_match') or ''
-        # clean any '--'
-        if next_m == '--': next_m = ''
-        match_html = md_to_inline_html(next_m) if next_m else '<span class="text-[var(--ink-quiet)] italic">Αναμονή επόμενου αγώνα</span>'
-        search_url = f"https://www.youtube.com/results?search_query={sc['search_q'].replace(' ', '+')}"
+        news_list = s_data.get('news') or []
+        src = s_data.get('source')
+        hl = s_data.get('highlights')
+
+        if next_m in ['--', '---']: next_m = ''
+        if last_res in ['--', '---']: last_res = ''
+        clean_news = [n for n in news_list if n not in ['--', '---', '']]
+
+        last_res_html = f'''
+        <div class="flex items-start gap-2 text-xs">
+          <span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
+          <span class="text-[var(--ink-body)]">{md_to_inline_html(last_res)}</span>
+        </div>''' if last_res else ""
+
+        next_match_html = f'''
+        <div class="flex items-start gap-2 text-xs">
+          <span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
+          <span class="text-[var(--ink-body)] font-medium">{md_to_inline_html(next_m)}</span>
+        </div>''' if next_m else '<div class="text-xs text-[var(--ink-quiet)] italic">Αναμονή ορισμού επόμενου αγώνα</div>'
+
+        news_html = f'''
+        <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
+          <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
+          {' '.join(md_to_inline_html(n) for n in clean_news)}
+        </div>''' if clean_news else ""
+
+        src_html = f'''
+        <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
+          <span>Επίσημη Πηγή:</span>
+          <a href="{src['url']}" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">{src['name']}</a>
+        </div>''' if src else ""
+
+        search_url = hl['url'] if hl and hl.get('url') else f"https://www.youtube.com/results?search_query={sc['search_q'].replace(' ', '+')}"
+        search_title = hl['title'] if hl and hl.get('title') else "YouTube Highlights & Match Hub"
 
         sports_cards.append(f'''
         <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs {sc['border']}">
@@ -930,20 +1011,82 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
               </span>
             </div>
             <div class="p-5 space-y-3">
-              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-                {match_html}
-              </div>
+              {last_res_html}
+              {next_match_html}
+              {news_html}
+              {src_html}
             </div>
           </div>
           <div class="p-4 pt-0">
             <a href="{search_url}" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
-              <span>▶</span> <span>YouTube Highlights & Match Hub</span>
+              <span>▶</span> <span>{search_title}</span>
             </a>
           </div>
         </article>
         ''')
     sports_html = '\n'.join(sports_cards)
+
+    # Evening News Wire Cards (Curated, Lighter than morning)
+    evening_news_cards = []
+    for idx, item in enumerate(data.get('evening_news', []), 1):
+        clean_title = md_to_inline_html(item['title'])
+        clean_body = md_to_inline_html(item['body'])
+        clean_why = md_to_inline_html(item.get('why', ''))
+
+        region = item.get('region', '🇨🇾 ΚΥΠΡΟΣ')
+        reg_badge_cls = "bg-[var(--accent)] text-white" if 'ΚΥΠΡΟΣ' in region else "bg-indigo-900/80 text-white"
+
+        src_html = ""
+        if item.get('source'):
+            src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
+
+        why_html = f'''
+        <div class="text-xs text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
+          <strong class="font-bold">Γιατί με αφορά:</strong> {clean_why}
+        </div>''' if clean_why else ""
+
+        evening_news_cards.append(f'''
+        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider uppercase {reg_badge_cls}">
+                {region}
+              </span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">
+                Επιβεβαιωμένο
+              </span>
+            </div>
+            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
+              {clean_title}
+            </h3>
+            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-3">
+              {clean_body}
+            </p>
+            {why_html}
+          </div>
+          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">19:30 EEST</span>
+            {src_html}
+          </div>
+        </article>
+        ''')
+    evening_news_html = '\n'.join(evening_news_cards)
+
+    evening_news_section = f'''
+    <!-- ==================== 📰 2. ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ ==================== -->
+    <section id="evening-news" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>📰</span> <span>Απογευματινή Επικαιρότητα & Εξελίξεις</span>
+        </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">CURATED DIGEST</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {evening_news_html}
+      </div>
+    </section>
+    ''' if evening_news_cards else ""
 
     # Night Radar Items
     radar_items = []
@@ -1197,7 +1340,9 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
       </div>
     </section>
 
-    <!-- ==================== 🔔 2. CLOSING BELL & ΑΓΟΡΕΣ ==================== -->
+    {evening_news_section}
+
+    <!-- ==================== 🔔 3. CLOSING BELL & ΑΓΟΡΕΣ ==================== -->
     <section id="closing-bell" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
@@ -1225,7 +1370,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
       </div>
     </section>
 
-    <!-- ==================== ⚽ 3. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
+    <!-- ==================== ⚽ 4. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
     <section id="sports-radar" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
@@ -1239,7 +1384,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
       </div>
     </section>
 
-    <!-- ==================== 🌌 4. ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ ==================== -->
+    <!-- ==================== 🌌 5. ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ ==================== -->
     <section id="night-radar" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">

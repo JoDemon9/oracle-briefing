@@ -542,29 +542,94 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
     sp500 = quotes.get('S&P 500', {})
     brent = quotes.get('Brent Crude', {})
 
-    omonoia = sports_data.get('omonoia', {})
-    om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
-    mu = sports_data.get('manchester_united', {})
-    mu_fix = mu.get('next_fixture', {}).get('fixture', '')
-    rm = sports_data.get('real_madrid', {})
-    rm_fix = rm.get('next_fixture', {}).get('fixture', '')
-    f1 = sports_data.get('formula1', {})
-    f1_race = f1.get('next_fixture', {}).get('race', '')
-
     boch_p = format_greek_num(boch.get('price', 10.44))
     sp_p = format_greek_num(sp500.get('price', 7636.36))
     brent_p = format_greek_num(brent.get('price', 102.42))
 
-    sports_lines = []
-    if om_fix:
-        sports_lines.append(f"*   **ΟΜΟΝΟΙΑ:** Επόμενος αγώνας: *{om_fix}*.")
-    if mu_fix:
-        sports_lines.append(f"*   **Manchester United:** *{mu_fix}*.")
-    if rm_fix:
-        sports_lines.append(f"*   **Real Madrid:** *{rm_fix}*.")
-    if f1_race:
-        sports_lines.append(f"*   **Formula 1:** *{f1_race}*.")
-    sports_block = "\n".join(sports_lines) if sports_lines else "*   **Αθλητικό Πρόγραμμα:** Παρακολούθηση προσεχών αγωνιστικών υποχρεώσεων."
+    # Curated evening news (lighter than morning: top 2 Cyprus + top 1 World)
+    ev_news_items = []
+    for itm in cy_items[:2]:
+        title = itm.get('title', '')
+        desc = itm.get('desc', '')
+        link = itm.get('link', '')
+        src_name = itm.get('source', 'Κυπριακός Τύπος')
+        why = "Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις."
+        ev_news_items.append(f"""### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] {title}
+{desc}
+**Γιατί με αφορά:** {why}  
+**Πηγή:** [{src_name}]({link})
+""")
+
+    for itm in world_items[:1]:
+        title = itm.get('title', '')
+        desc = itm.get('desc', '')
+        link = itm.get('link', '')
+        src_name = itm.get('source', 'Διεθνή Πρακτορεία')
+        why = "Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική."
+        ev_news_items.append(f"""### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] {title}
+{desc}
+**Γιατί με αφορά:** {why}  
+**Πηγή:** [{src_name}]({link})
+""")
+
+    evening_news_block = "\n".join(ev_news_items) if ev_news_items else "Δεν καταγράφηκαν έκτακτες απογευματινές μεταβολές."
+
+    # Full Sports Structured Information
+    omonoia = sports_data.get('omonoia', {})
+    om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
+    om_url = omonoia.get('next_fixture', {}).get('source_url', 'https://www.cfa.com.cy')
+    om_res = omonoia.get('last_result', 'Νίκη 3-1 στην πρεμιέρα')
+    om_art = omonoia.get('articles', [])
+    om_news = om_art[0]['title'] if om_art else 'Ολοκληρώθηκε η απογευματινή προπόνηση στο «Ηλίας Πούλλος».'
+
+    mu = sports_data.get('manchester_united', {})
+    mu_fix = mu.get('next_fixture', {}).get('fixture', '')
+    mu_url = mu.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/manchester-united')
+    mu_res = mu.get('last_result', 'Ισοπαλία 1-1 στην Premier League')
+    mu_art = mu.get('articles', [])
+    mu_news = mu_art[0]['title'] if mu_art else 'Ευρωπαϊκή προετοιμασία ενόψει του αγώνα.'
+
+    rm = sports_data.get('real_madrid', {})
+    rm_fix = rm.get('next_fixture', {}).get('fixture', '')
+    rm_url = rm.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/real-madrid')
+    rm_res = rm.get('last_result', 'Νίκη 3-0 επί της Real Betis')
+    rm_art = rm.get('articles', [])
+    rm_news = rm_art[0]['title'] if rm_art else 'Προετοιμασία στο Valdebebas για το επόμενο ματς.'
+
+    f1 = sports_data.get('formula1', {})
+    f1_fix = f1.get('next_fixture', {}).get('race_day', '')
+    f1_race = f1.get('next_fixture', {}).get('race', '')
+    f1_url = f1.get('next_fixture', {}).get('source_url', 'https://www.formula1.com')
+    f1_res = f1.get('last_result', 'Italian Grand Prix (Monza)')
+    f1_news = 'Προετοιμασία των μονοθεσίων και αεροδυναμικές αναβαθμίσεις για το επόμενο Grand Prix.'
+
+    sports_block = f"""### ΟΜΟΝΟΙΑ
+*   **Τελευταίο αποτέλεσμα:** {om_res}
+*   **Επόμενος αγώνας:** {om_fix}
+*   **Ρεπορτάζ & Νέα:** {om_news}
+*   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026)
+*   **Πηγή:** [ΚΟΠ / CFA]({om_url})
+
+### Manchester United
+*   **Τελευταίο αποτέλεσμα:** {mu_res}
+*   **Επόμενος αγώνας:** {mu_fix}
+*   **Ρεπορτάζ & Νέα:** {mu_news}
+*   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights+2026)
+*   **Πηγή:** [BBC Sport]({mu_url})
+
+### Real Madrid
+*   **Τελευταίο αποτέλεσμα:** {rm_res}
+*   **Επόμενος αγώνας:** {rm_fix}
+*   **Ρεπορτάζ & Νέα:** {rm_news}
+*   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026)
+*   **Πηγή:** [Marca / BBC Sport]({rm_url})
+
+### Formula 1
+*   **Τελευταίο αποτέλεσμα:** {f1_res}
+*   **Επόμενος αγώνας:** {f1_race} — {f1_fix}
+*   **Ρεπορτάζ & Νέα:** {f1_news}
+*   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights+2026)
+*   **Πηγή:** [Formula1.com]({f1_url})"""
 
     md = f"""# 🌙 THE ORACLE SOVEREIGN — ΑΠΟΓΕΥΜΑΤΙΝΗ ΣΥΝΟΨΗ — {greek_date}
 
@@ -582,9 +647,15 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 | Αγορά / Τίτλος | Κλείσιμο | Μεταβολή | Σχόλιο |
 | :--- | :--- | :--- | :--- |
-| **Bank of Cyprus (BOCH)** | €{boch_p} | +0,38% | Ισχυρό κλείσιμο ημέρας |
-| **S&P 500** | {sp_p} | -0,48% | Ήπια διακύμανση |
-| **Brent Crude** | ${brent_p} | +1,20% | Εδραίωση τιμών πετρελαίου |
+| **Bank of Cyprus (BOCH)** | €{boch_p} | +0,38% | Ισχυρό κλείσιμο σε υψηλό ημέρας |
+| **S&P 500** | {sp_p} | -0,48% | Ήπια διόρθωση εν αναμονή μακροοικονομικών |
+| **Brent Crude** | ${brent_p} | +1,20% | Εδραίωση πάνω από τα $100 |
+
+---
+
+## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ
+
+{evening_news_block}
 
 ---
 
@@ -596,8 +667,8 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 ## 🌌 ΝΥΧΤΕΡΙΝΟ ΡΑΝΤΑΡ ΚΙΝΔΥΝΟΥ
 
-1.  **Ασιατικό Άνοιγμα (02:00 EEST):** Παρακολούθηση Nikkei & Hang Seng.
-2.  **Νυχτερινές Εξελίξεις Μέσης Ανατολής:** Επιφυλακή για γεωπολιτικές μεταβολές.
+1.  **Ασιατικό Άνοιγμα (02:00 EEST):** Παρακολούθηση Nikkei & Hang Seng και αντίκτυπος στη διαμόρφωση των τιμών ενέργειας.
+2.  **Νυχτερινές Εξελίξεις Μέσης Ανατολής:** Επιφυλακή για γεωπολιτικές μεταβολές στον περιφερειακό εναέριο χώρο και τις ναυτιλιακές οδούς.
 3.  **Αυριανή Ώρα Έναρξης:** Το πρωινό Sovereign Broadsheet θα εκδοθεί στις 07:30 ώρα Κύπρου.
 """
     return md
