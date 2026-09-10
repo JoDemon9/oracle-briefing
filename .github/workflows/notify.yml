@@ -67,17 +67,23 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
-      - name: Commit & Push Broadsheet Editions
-        run: |
-          git config user.name "The Oracle Sovereign Agent"
-          git config user.email "oracle-agent@antigravity.internal"
-          git add docs/ briefings/ scripts/*.json || true
-          git diff --staged --quiet || (git commit -m "🤖 [Oracle Sovereign Agent] Auto-edition update [skip-ci-dispatch]" && git push)
       - name: Dispatch Briefing to Telegram
         if: "github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip-ci-dispatch]')"
-        run: python scripts/send-briefing.py
+        run: |
+          python scripts/send-briefing.py 2>&1 | tee dispatch.log
+          echo "## Telegram Dispatch Output" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat dispatch.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
+      - name: Commit & Push Broadsheet Editions
+        if: always()
+        run: |
+          git config user.name "The Oracle Sovereign Agent"
+          git config user.email "oracle-agent@antigravity.internal"
+          git add docs/ briefings/ scripts/*.json dispatch.log || true
+          git diff --staged --quiet || (git commit -m "🤖 [Oracle Sovereign Agent] Auto-edition update [skip-ci-dispatch]" && git push)
 

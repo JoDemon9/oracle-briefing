@@ -4,6 +4,7 @@ import re
 import json
 import html
 import urllib.request
+from datetime import datetime
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -26,11 +27,20 @@ if os.path.exists(env_file):
     except Exception:
         pass
 
-TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-from datetime import datetime
-
-CHAT  = os.environ.get("TELEGRAM_CHAT_ID")
+TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip().strip("'\"")
+CHAT  = os.environ.get("TELEGRAM_CHAT_ID", "").strip().strip("'\"")
 BASE  = os.environ.get("BRIEFING_BASE_URL", "https://jodemon9.github.io/oracle-briefing")
+
+if TOKEN:
+    masked_token = TOKEN[:6] + "..." + TOKEN[-4:] if len(TOKEN) > 10 else "***"
+    print(f"ℹ Telegram Bot Token detected: {masked_token} (length: {len(TOKEN)})")
+else:
+    print("❌ TELEGRAM_BOT_TOKEN is empty or not found in environment.")
+
+if CHAT:
+    print(f"ℹ Telegram Chat ID detected: {CHAT}")
+else:
+    print("❌ TELEGRAM_CHAT_ID is empty or not found in environment.")
 
 arg = sys.argv[1] if len(sys.argv) > 1 else ""
 if arg and os.path.isfile(arg):
