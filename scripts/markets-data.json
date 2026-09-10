@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T15:08:09.979696",
+  "fetched_at": "2026-09-10T12:29:28.866907",
   "quotes": {
     "S&P 500": {
       "symbol": "^GSPC",
@@ -15,50 +15,50 @@
     },
     "CBOE VIX": {
       "symbol": "^VIX",
-      "price": 16.78,
-      "change": 6.743002544529266,
+      "price": 16.9,
+      "change": 7.506361323155203,
       "date": "10/09/2026"
     },
     "US 10Y Yield": {
       "symbol": "^TNX",
       "price": 4.837,
-      "change": 0.6450270495214252,
+      "change": 0.0,
       "date": "10/09/2026"
     },
     "Brent Crude": {
       "symbol": "BZ=F",
-      "price": 103.12,
-      "change": 1.8871652998715651,
+      "price": 103.97,
+      "change": 2.727003260547382,
       "date": "10/09/2026"
     },
     "WTI Crude": {
       "symbol": "CL=F",
-      "price": 98.1,
-      "change": 2.134305049453407,
+      "price": 98.87,
+      "change": 2.9359708485164058,
       "date": "10/09/2026"
     },
     "EUR/USD": {
       "symbol": "EURUSD=X",
-      "price": 1.162,
-      "change": -0.16324426497121858,
+      "price": 1.1625,
+      "change": -0.12028524787351541,
       "date": "10/09/2026"
     },
     "Bitcoin (BTC)": {
       "symbol": "BTC-USD",
-      "price": 77713.93,
-      "change": -0.7378948761323768,
+      "price": 77728.73,
+      "change": -0.7189911975276077,
       "date": "10/09/2026"
     },
     "Ethereum (ETH)": {
       "symbol": "ETH-USD",
-      "price": 2458.28,
-      "change": -0.38651949539564456,
+      "price": 2457.22,
+      "change": -0.42947240935781344,
       "date": "10/09/2026"
     },
     "Bank of Cyprus (BOCH)": {
       "symbol": "BOCHGR.AT",
-      "price": 10.5,
-      "change": 0.9615384615384581,
+      "price": 10.49,
+      "change": 0.8653846153846141,
       "date": "10/09/2026"
     }
   },
