@@ -112,9 +112,11 @@ sports_summary = ""
 if "### ΟΜΟΝΟΙΑ" in sports_block:
     m_om = re.search(r'\*\*Επόμενος αγώνας:\*\*\s*(.+)', sports_block)
     if m_om:
-        clean_om = re.sub(r'\(\[.*?\]\(.*?\)\)', '', m_om.group(1)).strip()
-        clean_om = re.sub(r'[*_]', '', clean_om).strip()
-        sports_summary = f"⚽ <b>Αθλητικά:</b> {esc(clean_om)}"
+        raw_om = m_om.group(1).strip()
+        # Convert markdown links to HTML
+        raw_om = re.sub(r'\[([^\]]+)\]\((https?://[^\)]+)\)', r'<a href="\2">\1</a>', raw_om)
+        raw_om = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', raw_om)
+        sports_summary = f"⚽ <b>Αθλητικά:</b> {raw_om}"
 
 weather_block = grab("## 🌤️", "## 🗂️")
 weather_summary = ""
@@ -160,7 +162,13 @@ if TOKEN and CHAT:
         "chat_id": CHAT,
         "text": text,
         "parse_mode": "HTML",
-        "link_preview_options": {"is_disabled": True},
+        "link_preview_options": {"is_disabled": False},
+        "reply_markup": {
+            "inline_keyboard": [
+                [{"text": "📖 Διαβάστε την Πλήρη Έκδοση", "url": f"{BASE}/briefings/{date}.html"}],
+                [{"text": "🏛️ Αρχική Πύλη (The Oracle)", "url": f"{BASE}/"}]
+            ]
+        },
         "disable_notification": False
     }
     data = json.dumps(payload).encode("utf-8")
