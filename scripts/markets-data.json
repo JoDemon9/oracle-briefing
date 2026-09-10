@@ -1,0 +1,73 @@
+{
+  "fetched_at": "2026-09-10T15:08:09.979696",
+  "quotes": {
+    "S&P 500": {
+      "symbol": "^GSPC",
+      "price": 7636.36,
+      "change": -0.4842627633732728,
+      "date": "10/09/2026"
+    },
+    "Nasdaq Composite": {
+      "symbol": "^IXIC",
+      "price": 26253.34,
+      "change": -0.6361204314137341,
+      "date": "10/09/2026"
+    },
+    "CBOE VIX": {
+      "symbol": "^VIX",
+      "price": 16.78,
+      "change": 6.743002544529266,
+      "date": "10/09/2026"
+    },
+    "US 10Y Yield": {
+      "symbol": "^TNX",
+      "price": 4.837,
+      "change": 0.6450270495214252,
+      "date": "10/09/2026"
+    },
+    "Brent Crude": {
+      "symbol": "BZ=F",
+      "price": 103.12,
+      "change": 1.8871652998715651,
+      "date": "10/09/2026"
+    },
+    "WTI Crude": {
+      "symbol": "CL=F",
+      "price": 98.1,
+      "change": 2.134305049453407,
+      "date": "10/09/2026"
+    },
+    "EUR/USD": {
+      "symbol": "EURUSD=X",
+      "price": 1.162,
+      "change": -0.16324426497121858,
+      "date": "10/09/2026"
+    },
+    "Bitcoin (BTC)": {
+      "symbol": "BTC-USD",
+      "price": 77713.93,
+      "change": -0.7378948761323768,
+      "date": "10/09/2026"
+    },
+    "Ethereum (ETH)": {
+      "symbol": "ETH-USD",
+      "price": 2458.28,
+      "change": -0.38651949539564456,
+      "date": "10/09/2026"
+    },
+    "Bank of Cyprus (BOCH)": {
+      "symbol": "BOCHGR.AT",
+      "price": 10.5,
+      "change": 0.9615384615384581,
+      "date": "10/09/2026"
+    }
+  },
+  "euribor": {
+    "1m": "2,369%",
+    "3m": "2,626%",
+    "6m": "2,800%",
+    "12m": "3,138%",
+    "date": "10/09/2026",
+    "source": "euribor-rates.eu"
+  }
+}

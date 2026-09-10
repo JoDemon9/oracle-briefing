@@ -413,6 +413,25 @@
     details[open] summary .expand-icon {
       transform: rotate(180deg);
     }
+
+    /* Executive 60-Second Scan Mode */
+    body.scan-mode article:not(:first-of-type),
+    body.scan-mode #world,
+    body.scan-mode #sports,
+    body.scan-mode #portfolio,
+    body.scan-mode #developments,
+    body.scan-mode #rates-and-tools,
+    body.scan-mode details.depth,
+    body.scan-mode #houseSearchSection,
+    body.scan-mode .ticker-wrap {
+      display: none !important;
+    }
+    body.scan-mode #top-story {
+      border: 2px solid var(--accent);
+      border-radius: var(--r-md);
+      padding: 1.25rem;
+      background: var(--paper-raised);
+    }
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -420,7 +439,7 @@
   <!-- TOP BAR & STATUS -->
   <div class="bg-[var(--paper-raised)] border-b border-[var(--rule)] text-xs py-1.5 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3">
         <span id="freshness" data-generated="2026-09-10T13:30:00+03:00"
               class="inline-flex items-center px-2 py-0.5 rounded t-meta font-semibold"></span>
 
@@ -443,10 +462,32 @@
         <span class="t-meta text-[var(--ink-quiet)]">Πέμπτη, 10 Σεπτεμβρίου 2026</span>
         <span class="hidden sm:inline text-[var(--ink-quiet)]">·</span>
         <span class="hidden sm:inline t-meta text-[var(--ink-quiet)]">13:30 ώρα Κύπρου (EEST)</span>
+        
+    <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+      <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
+      <a href="index.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
+      <a href="briefings/2026-09-10-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">☀️ 13:30 Μεσημέρι</a>
+      <a href="briefings/2026-09-10-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌙 19:30 Απόγευμα</a>
+      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
+      </button>
+    </div>
+    
       </div>
       <div class="flex items-center gap-4 t-meta text-[var(--ink-quiet)]">
-        <span>📍 Λεμεσός, Κύπρος</span>
-        <span>⏱️ Ανάγνωση ~7'</span>
+        
+    <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
+      <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span> <span id="statusLON" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span> <span id="statusNYC" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span> <span id="statusTYO" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+    </div>
+    
+        <span>📍 Λεμεσός</span>
+        <span>⏱️ ~7'</span>
         <button id="themeToggle" class="px-2.5 py-1 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition t-meta" aria-pressed="false" aria-label="Εναλλαγή θέματος">
           🌓 Θέμα
         </button>
@@ -491,6 +532,25 @@
     </div>
   </div>
 
+  
+    <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
+    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] t-meta">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
+          </span>
+        </div>
+        <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
+          <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
+        </div>
+        <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
+          <span>Προβολή Όλων (50+)</span> <span>➔</span>
+        </button>
+      </div>
+    </div>
+    
+
   <!-- NAVIGATION & INSTANT SEARCH -->
   <nav id="mainNav" class="bg-[var(--paper-raised)] border-b border-[var(--rule)] sticky top-0 z-40 px-3 sm:px-4 py-2 shadow-xs backdrop-blur-md bg-opacity-95" aria-label="Κύρια πλοήγηση">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
@@ -507,19 +567,22 @@
         <a href="#deadlines" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">📅 Προθεσμίες</a>
       </div>
 
-      <!-- Search Input Container with Instant Dropdown -->
+      <!-- Search Input Container with Instant Dropdown & Actions -->
       <div class="relative flex items-center gap-1.5 flex-shrink-0 ml-auto sm:ml-0">
+        <button id="scanModeToggle" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--accent)] font-semibold transition flex items-center gap-1" title="Εναλλαγή σε 60-Second Scan">
+          <span>⚡</span> <span class="hidden md:inline">60″ Scan</span>
+        </button>
+        <button onclick="window.print()" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition flex items-center gap-1" title="Εκτύπωση ή Αποθήκευση σε Broadsheet PDF" aria-label="Εκτύπωση σελίδας">
+          <span>📄</span> <span class="hidden md:inline">PDF Broadsheet</span>
+        </button>
         <div class="relative">
           <label for="archiveSearch" class="sr-only">Αναζήτηση στο αρχείο</label>
           <input type="text" id="archiveSearch" placeholder="🔍 Αναζήτηση στο αρχείο..." 
-                 class="t-meta px-3 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] w-36 sm:w-60 focus:w-48 sm:focus:w-64 transition-all shadow-xs">
+                 class="t-meta px-3 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] w-32 sm:w-56 focus:w-44 sm:focus:w-60 transition-all shadow-xs">
           <!-- Live Search Results Dropdown -->
           <div id="searchResults" class="hidden absolute right-0 top-full mt-2 w-80 sm:w-96 max-h-96 overflow-y-auto bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl shadow-xl z-50 p-2 text-xs space-y-2">
           </div>
         </div>
-        <button onclick="window.print()" class="t-meta px-2 py-1.5 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition" title="Εκτύπωση / PDF" aria-label="Εκτύπωση σελίδας">
-          🖨️
-        </button>
         <button id="themeToggleNav" class="t-meta px-2 py-1.5 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος" aria-label="Εναλλαγή θέματος">
           🌓
         </button>
@@ -529,6 +592,32 @@
 
   <!-- MAIN CONTAINER (NEWS-FIRST HIERARCHY) -->
   <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- 🎙️ THE SOVEREIGN EXECUTIVE AUDIO BRIEFING -->
+    <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <button id="audioPlayBtn" class="w-11 h-11 rounded-full bg-[var(--accent)] text-white flex items-center justify-center shadow hover:opacity-90 transition font-bold text-lg flex-shrink-0" aria-label="Αναπαραγωγή ηχητικής σύνοψης">
+          ▶
+        </button>
+        <div>
+          <div class="t-meta font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>🎙️ Ακρόαση Πρωινής Σύνοψης (The Sovereign Audio Briefing)</span>
+            <span id="audioLiveBadge" class="hidden text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">LIVE</span>
+          </div>
+          <div id="audioStatusText" class="t-meta text-[var(--ink-quiet)]">
+            Επιτελική σύνοψη ~2 λεπτών · Πατήστε Play για φωνητική ανάγνωση
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="audioSpeedBtn" class="t-meta font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
+          1.0x
+        </button>
+        <button id="audioStopBtn" class="t-meta px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
+          ⏹ Διακοπή
+        </button>
+      </div>
+    </div>
 
     <!-- ==================== ⭐ 1. ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ (HERO NEWS) ==================== -->
     <section id="top-story" class="scroll-mt-24">
@@ -1632,8 +1721,8 @@
             <span>📊</span> <span>S&P 500</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">7.636,36</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📉 -0,48%</span>
+          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📉 -0,48% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1644,8 +1733,8 @@
             <span>🔹</span> <span>Nasdaq Composite</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">26.253,34</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📉 -0,64%</span>
+          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📉 -0,64% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1656,8 +1745,8 @@
             <span>🔹</span> <span>CBOE VIX</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">16,47%</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📈 +0,06%</span>
+          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📈 +0,06% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1668,8 +1757,8 @@
             <span>🔹</span> <span>US 10Y Yield</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">4,84%</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📈 +0,65%</span>
+          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📈 +0,65% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1680,8 +1769,8 @@
             <span>🛢️</span> <span>Brent Crude</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">$102,08</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📈 +0,86%</span>
+          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📈 +0,86% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1692,8 +1781,8 @@
             <span>🔹</span> <span>WTI Crude</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">$97,18</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📈 +1,18%</span>
+          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📈 +1,18% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1704,8 +1793,8 @@
             <span>💶</span> <span>EUR/USD</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">1,16</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📈 +0,03%</span>
+          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📈 +0,03% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1716,8 +1805,8 @@
             <span>₿</span> <span>Bitcoin (BTC)</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">$78.118,64</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📉 -0,22%</span>
+          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📉 -0,22% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1728,8 +1817,8 @@
             <span>🔹</span> <span>Ethereum (ETH)</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">$2.473,52</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📈 +0,23%</span>
+          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📈 +0,23% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">10/09/2026</td>
         </tr>
@@ -1740,8 +1829,8 @@
             <span>⚡</span> <span>Euribor 3M</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">2,670%</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📉 -0,005%</span>
+          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📉 -0,005% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">09/09/2026</td>
         </tr>
@@ -1752,8 +1841,8 @@
             <span>🔹</span> <span>Bank of Cyprus (BOCH)</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">€10,65</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📉 -0,47%</span>
+          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📉 -0,47% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">09/09/2026 (κλείσιμο ΧΑΚ)</td>
         </tr>
@@ -1764,8 +1853,8 @@
             <span>🔹</span> <span>Hellenic Bank (HB)</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">€4,52</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono">
-            <span class="inline-flex items-center gap-1">📈 +0,00%</span>
+          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">📈 +0,00% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">09/09/2026 (κλείσιμο ΧΑΚ)</td>
         </tr>
@@ -2247,15 +2336,31 @@
       fetchWeather();
     })();
 
-    // 4. Instant Archive Search
+    // 4. Instant Archive Search (Asynchronous Fetch with client-side cache)
     (function () {
       const input = document.getElementById('archiveSearch');
       const resultsContainer = document.getElementById('searchResults');
-      let searchData = [{"date": "2026-09-10", "section": "⭐ Πρώτο Θέμα", "title": "Διπλωματική σύναξη κορυφής στη Λευκωσία: Επίσημη επίσκεψη Ισαάκ Χέρτζογκ στην Κύπρο εν μέσω περιφερειακής ανάφλεξης και διευρυμένης κρίσης στη Μέση Ανατολή [Επιβεβαιωμένο]", "snippet": "Σε κατάσταση αυξημένου συναγερμού ασφαλείας τέθηκε η Λευκωσία με αφορμή την επίσημη μονοήμερη επίσκεψη του Προέδρου του Ισραήλ, Ισαάκ Χέρτζογκ, κατόπιν πρόσκλησης του Προέδρου της...", "url": "#top-story"}, {"date": "2026-09-10", "section": "🇨🇾 Κύπρος", "title": "Οικονομία & Καύσιμα: Παράταση του μειωμένου φόρου κατανάλωσης έως τις 30 Νοεμβρίου ενέκρινε το Υπουργικό", "snippet": "Το Υπουργικό Συμβούλιο, κατόπιν πρότασης του Υπουργού Οικονομικών Μάκη Κεραυνού, αποφάσισε την παράταση του μειωμένου συντελεστή φόρου κατανάλωσης στα καύσιμα κ...", "url": "#cyprus"}, {"date": "2026-09-10", "section": "🇨🇾 Κύπρος", "title": "Κυπριακό: Ακύρωση της επίσκεψης Ολγκίν σε Κύπρο και Νέα Υόρκη λόγω θεμάτων υγείας [Επιβεβαιωμένο]", "snippet": "Η Προσωπική Απεσταλμένη του Γενικού Γραμματέα των Ηνωμένων Εθνών, Μαρία Άνχελα Ολγκίν, ακύρωσε εκτάκτως τις προγραμματισμένες επισκέψεις της στην Κύπρο (όπου αν...", "url": "#cyprus"}, {"date": "2026-09-10", "section": "🇨🇾 Κύπρος", "title": "Επενδύσεις & Οικονομία: EY Cyprus Future Realized Forum 2026: Η τεχνολογία και η γεωπολιτική ως επενδυτικό πλεονέκτημα", "snippet": "Με μεγάλη συμμετοχή επιχειρηματιών, διεθνών επενδυτών και κυβερνητικών αξιωματούχων ολοκληρώθηκε στη Λευκωσία το υψηλού επιπέδου φόρουμ «EY Cyprus Future Realiz...", "url": "#cyprus"}, {"date": "2026-09-10", "section": "🇨🇾 Κύπρος", "title": "Δημόσια Διοίκηση: Σειρά διορισμών σε κομβικούς θεσμούς και οργανισμούς από το Υπουργικό Συμβούλιο", "snippet": "Σε εκτεταμένο κύκλο διορισμών προχώρησε το Υπουργικό Συμβούλιο, εγκρίνοντας τη νέα σύνθεση κρίσιμων κρατικών και εποπτικών αρχών. Συγκεκριμένα, ορίστηκε η νέα η...", "url": "#cyprus"}, {"date": "2026-09-10", "section": "🇨🇾 Κύπρος", "title": "Κοινωνική Πολιτική: Στη Βουλή η μεταρρύθμιση για το επίδομα τέκνου — Επωφελούνται 17.000 οικογένειες", "snippet": "Στην Κοινοβουλευτική Επιτροπή Εργασίας και Κοινωνικών Ασφαλίσεων κατατέθηκε το πολυαναμενόμενο νομοσχέδιο για τον εκσυγχρονισμό και την αναπροσαρμογή του επιδόμ...", "url": "#cyprus"}, {"date": "2026-09-10", "section": "🇨🇾 Κύπρος", "title": "Στέγαση & Προστασία Δανειοληπτών: Παράταση έως 30 Σεπτεμβρίου για το Σχέδιο «Ενοίκιο Έναντι Δόσης» της ΚΕΔΙΠΕΣ", "snippet": "Σε παράταση της καταληκτικής προθεσμίας υποβολής αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» μέχρι τις 30 Σεπτεμβρίου 2026 προχώρησε το Υπουργείο Οικονομικών...", "url": "#cyprus"}, {"date": "2026-09-10", "section": "🌍 Διεθνή", "title": "Διεθνής Διπλωματία & Πυρηνικά: Ιστορική παραπομπή του Ιράν στο Συμβούλιο Ασφαλείας του ΟΗΕ από τον ΔΟΑΕ μετά από 20 χρόνια", "snippet": "Σε μία κίνηση ύψιστης γεωπολιτικής βαρύτητας, το 35μελές Συμβούλιο των Διοικητών του Διεθνούς Οργανισμού Ατομικής Ενέργειας (IAEA) ενέκρινε ψήφισμα με το οποίο...", "url": "#world"}, {"date": "2026-09-10", "section": "🌍 Διεθνή", "title": "Ουκρανία & Ενέργεια: Βαθιά πλήγματα ακριβείας του Κιέβου σε εγκαταστάσεις φυσικού αερίου στην Αρκτική Σιβηρία", "snippet": "Οι ουκρανικές ένοπλες δυνάμεις επέκτειναν δραματικά την ακτίνα δράσης των στρατηγικών τους επιθέσεων, εξαπολύοντας πλήγματα ακριβείας με drones μεγάλου βεληνεκο...", "url": "#world"}, {"date": "2026-09-10", "section": "🌍 Διεθνή", "title": "Κλίμα & Περιβάλλον: Ο Αύγουστος του 2026 ανακηρύχθηκε επίσημα ο θερμότερος μήνας στα παγκόσμια χρονικά", "snippet": "Σύμφωνα με την επίσημη έκθεση του Ευρωπαϊκού Παρατηρητηρίου Copernicus Climate Change Service, ο Αύγουστος του 2026 καταγράφηκε ως ο θερμότερος μήνας στην ιστορ...", "url": "#world"}, {"date": "2026-09-10", "section": "🌍 Διεθνή", "title": "Βόρεια Αφρική & Μεσόγειος: Το Συμβούλιο Ασφαλείας του ΟΗΕ χαιρετίζει τη συμφωνία για εκλογές στη Λιβύη", "snippet": "Το Συμβούλιο Ασφαλείας των Ηνωμένων Εθνών υιοθέτησε ομόφωνη δήλωση με την οποία χαιρετίζει την πρόσφατη συμφωνία μεταξύ των αντιμαχόμενων πολιτικών και στρατιωτ...", "url": "#world"}, {"date": "2026-09-10", "section": "🌍 Διεθνή", "title": "Ασία & Ναυτιλία: Τραγωδία στις Φιλιππίνες με 5 νεκρούς και 86 αγνοούμενους μετά από ναυτική πυρκαγιά", "snippet": "Σε τραγωδία εξελίχθηκε το ναυτικό δυστύχημα στα ανοικτά της επαρχίας Παλαουάν στις Φιλιππίνες, όπου το επιβατηγό οχηματαγωγό πλοίο MV June Aster τυλίχθηκε στι...", "url": "#world"}, {"date": "2026-09-10", "section": "📅 Προθεσμίες", "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (StockWatch).", "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (StockWatch)....", "url": "#deadlines"}, {"date": "2026-09-10", "section": "📅 Προθεσμίες", "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ (€10.000 – €120.000) μέσω της πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).", "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ (€10.000 – €120.000) μέσω της πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχα...", "url": "#deadlines"}, {"date": "2026-09-10", "section": "📅 Προθεσμίες", "title": "Έως 15 Οκτωβρίου 2026: Προετοιμασία δικαιολογητικών για τη νέα ηλεκτρονική πλατφόρμα των στεγαστικών σχεδίων παραχώρησης οικοπέδων (StockWatch).", "snippet": "Έως 15 Οκτωβρίου 2026: Προετοιμασία δικαιολογητικών για τη νέα ηλεκτρονική πλατφόρμα των στεγαστικών σχεδίων παραχώρησης οικοπέδων (StockWatch)....", "url": "#deadlines"}, {"date": "2026-09-10", "section": "📅 Προθεσμίες", "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή τελών σκυβάλων και επαγγελματικής άδειας Δήμου Λεμεσού (Δήμος Λεμεσού).", "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή τελών σκυβάλων και επαγγελματικής άδειας Δήμου Λεμεσού (Δήμος Λεμεσού)....", "url": "#deadlines"}, {"date": "2026-09-09", "section": "⭐ Πρώτο Θέμα", "title": "Στρατιωτική ανάφλεξη ΗΠΑ - Ιράν στον Κόλπο του Ομάν: Πλήγματα σε δεξαμενόπλοια και εκτίναξη του Brent πάνω από τα $100 [Επιβεβαιωμένο]", "snippet": "Σε κατάσταση πολεμικού συναγερμού εισήλθε η Μέση Ανατολή μετά από συντονισμένα αμερικανικά αεροναυτικά πλήγματα εναντίον πέντε ιρανικών δεξαμενόπλοιων και πετρελαιοφόρων στον Κόλπο...", "url": "briefings/2026-09-09.html#top-story"}, {"date": "2026-09-09", "section": "🇨🇾 Κύπρος", "title": "Κυπριακό: Ολοκληρώθηκε το τετ-α-τετ Χριστοδουλίδη - Έρχιουρμαν, σε λίγες μέρες το έγγραφο συγκλίσεων", "snippet": "Ολοκληρώθηκε η συνάντηση του Προέδρου Νίκου Χριστοδουλίδη με τον Τουρκοκύπριο ηγέτη Τουφάν Έρχιουρμαν, η οποία διήρκεσε περίπου 70 λεπτά στο τραπέζι του διαλόγο...", "url": "briefings/2026-09-09.html#cyprus"}, {"date": "2026-09-09", "section": "🇨🇾 Κύπρος", "title": "Διπλωματία: Επίδοση διαπιστευτηρίων από τον νέο Πρέσβη των ΗΠΑ Τζον Μπρέσλοου", "snippet": "Ο νέος πρέσβης των Ηνωμένων Πολιτειών στην Κύπρο, Τζον Μπρέσλοου, επέδωσε τα διαπιστευτήριά του στον Πρόεδρο της Δημοκρατίας Νίκο Χριστοδουλίδη στο Προεδρικό Μέ...", "url": "briefings/2026-09-09.html#cyprus"}, {"date": "2026-09-09", "section": "🇨🇾 Κύπρος", "title": "Ναυτιλία & Οικονομία: Κοινό μέτωπο Κύπρου, Ελλάδας, Μάλτας και Ιταλίας στην ΕΕ", "snippet": "Σε κοινή παρέμβαση προχώρησαν τα τέσσερα κορυφαία ναυτιλιακά κράτη της Μεσογείου (Κύπρος, Ελλάδα, Μάλτα και Ιταλία), ζητώντας από την Ευρωπαϊκή Επιτροπή άμεσα μ...", "url": "briefings/2026-09-09.html#cyprus"}, {"date": "2026-09-09", "section": "🇨🇾 Κύπρος", "title": "Αερομεταφορές: Ταλαιπωρία για 5.000 επιβάτες στην Κύπρο λόγω βλάβης στα βρετανικά ραντάρ", "snippet": "Περίπου 5.000 ταξιδιώτες στα αεροδρόμια Λάρνακας και Πάφου επηρεάστηκαν από σοβαρές καθυστερήσεις και ματαιώσεις πτήσεων, έπειτα από σοβαρή τεχνική βλάβη στα συ...", "url": "briefings/2026-09-09.html#cyprus"}, {"date": "2026-09-09", "section": "🇨🇾 Κύπρος", "title": "Παιδεία & Καύσωνας: Αντιδράσεις για ελλείψεις κλιματιστικών στα σχολεία εν μέσω υψηλών θερμοκρασιών", "snippet": "Με την έναρξη της νέας σχολικής χρονιάς, εκπαιδευτικές οργανώσεις και σύνδεσμοι γονέων εξέφρασαν έντονες διαμαρτυρίες για τις εκκρεμότητες στην εγκατάσταση κλιμ...", "url": "briefings/2026-09-09.html#cyprus"}, {"date": "2026-09-09", "section": "🇨🇾 Κύπρος", "title": "Στέγαση: Εξαγγελία δύο νέων κρατικών σχεδίων για 570 οικόπεδα και έξτρα όροφο", "snippet": "Το Υπουργείο Εσωτερικών παρουσίασε δύο νέα στεγαστικά σχέδια κοινωνικής πολιτικής, τα οποία περιλαμβάνουν την παραχώρηση 570 οικοπέδων σε οικογένειες χαμηλών κα...", "url": "briefings/2026-09-09.html#cyprus"}, {"date": "2026-09-09", "section": "🌍 Διεθνή", "title": "Μέση Ανατολή: Πυραυλική απάντηση του Ιράν σε αμερικανική βάση στην Ιορδανία μετά τα πλήγματα στον Κόλπο", "snippet": "Η στρατιωτική αντιπαράθεση Ηνωμένων Πολιτειών και Ιράν έλαβε επικίνδυνες διαστάσεις, καθώς οι Φρουροί της Επανάστασης εκτόξευσαν ομοβροντία βαλλιστικών πυραύλων...", "url": "briefings/2026-09-09.html#world"}, {"date": "2026-09-09", "section": "🌍 Διεθνή", "title": "Ναυτιλία & Ερυθρά Θάλασσα: Εκτίναξη του κόστους μεταφοράς και ασφαλίστρων λόγω επιθέσεων σε τάνκερ", "snippet": "Η νέα ανάφλεξη στον Περσικό Κόλπο και οι παράλληλες επιθέσεις των ανταρτών Χούθι στην Ερυθρά Θάλασσα προκάλεσαν κατακόρυφη άνοδο στα ναύλα μεταφοράς εμπορευματο...", "url": "briefings/2026-09-09.html#world"}, {"date": "2026-09-09", "section": "🌍 Διεθνή", "title": "Τεχνολογία & Ενέργεια: Προειδοποίηση ΟΗΕ για απειλή στα ηλεκτρικά δίκτυα από τα data centers Τεχνητής Νοημοσύνης", "snippet": "Σε σοβαρή προειδοποίηση προχώρησαν τα Ηνωμένα Έθνη σχετικά με την εκθετική κατανάλωση ηλεκτρικής ενέργειας από τα κέντρα δεδομένων τεχνητής νοημοσύνης (AI datac...", "url": "briefings/2026-09-09.html#world"}, {"date": "2026-09-09", "section": "🌍 Διεθνή", "title": "Διεθνές Εμπόριο: Οι ΗΠΑ ανακοινώνουν απαγόρευση εισαγωγής καναδικών οινοπνευματωδών και μοτοσικλετών", "snippet": "Σε νέο γύρο εμπορικών αντιποίνων προχώρησε η κυβέρνηση των ΗΠΑ, επιβάλλοντας απαγόρευση εισαγωγών σε σειρά καναδικών προϊόντων, συμπεριλαμβανομένων επιλεγμένων...", "url": "briefings/2026-09-09.html#world"}, {"date": "2026-09-09", "section": "🌍 Διεθνή", "title": "Ανθρωπιστική κρίση: Έκκληση ΟΗΕ για ασφαλείς διαδρόμους εφοδιασμού και προστασία αμάχων", "snippet": "Τα Ηνωμένα Έθνη απηύθυναν νέα δραματική έκκληση προς τη διεθνή κοινότητα για την άμεση εξασφάλιση ασφαλών ανθρωπιστικών διαδρόμων και την απρόσκοπτη ροή ιατροφα...", "url": "briefings/2026-09-09.html#world"}, {"date": "2026-09-09", "section": "📅 Προθεσμίες", "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ (€10.000 – €120.000) μέσω της πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).", "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ (€10.000 – €120.000) μέσω της πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχα...", "url": "briefings/2026-09-09.html#deadlines"}, {"date": "2026-09-09", "section": "📅 Προθεσμίες", "title": "Έως 15 Οκτωβρίου 2026: Προετοιμασία δικαιολογητικών για τη νέα ηλεκτρονική πλατφόρμα των στεγαστικών σχεδίων παραχώρησης οικοπέδων (StockWatch).", "snippet": "Έως 15 Οκτωβρίου 2026: Προετοιμασία δικαιολογητικών για τη νέα ηλεκτρονική πλατφόρμα των στεγαστικών σχεδίων παραχώρησης οικοπέδων (StockWatch)....", "url": "briefings/2026-09-09.html#deadlines"}, {"date": "2026-09-09", "section": "📅 Προθεσμίες", "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή τελών σκυβάλων και επαγγελματικής άδειας Δήμου Λεμεσού (Δήμος Λεμεσού).", "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή τελών σκυβάλων και επαγγελματικής άδειας Δήμου Λεμεσού (Δήμος Λεμεσού)....", "url": "briefings/2026-09-09.html#deadlines"}, {"date": "2026-09-08", "section": "⭐ Πρώτο Θέμα", "title": "Τριμερής Σύνοδος Κορυφής Κύπρου, Ελλάδας και Αιγύπτου στο Ελ Αλαμέιν: Ενεργειακή στρατηγική, περιφερειακή σταθερότητα και κοινό μέτωπο στην Ανατολική Μεσόγειο", "snippet": "Στο Ελ Αλαμέιν της Αιγύπτου πραγματοποιήθηκε σήμερα η κρίσιμη άτυπη Τριμερής Σύνοδος Κορυφής μεταξύ του Προέδρου της Κυπριακής Δημοκρατίας Νίκου Χριστοδουλίδη, του Πρωθυπουργού της...", "url": "briefings/2026-09-08.html#top-story"}, {"date": "2026-09-08", "section": "🇨🇾 Κύπρος", "title": "Ενέργεια & Βουλή: Στο μικροσκόπιο το κόστος του Great Sea Interconnector — «Θα ξεπεράσει τα €1,9 δισ.» δηλώνει ο ΥΠΟΙΚ", "snippet": "Σε αναλυτική ενημέρωση της Κοινοβουλευτικής Επιτροπής Ενέργειας προχώρησαν οι Υπουργοί Οικονομικών και Ενέργειας για την ηλεκτρική διασύνδεση Κύπρου-Ελλάδας (GS...", "url": "briefings/2026-09-08.html#cyprus"}, {"date": "2026-09-08", "section": "🇨🇾 Κύπρος", "title": "Πρωτογενής Τομέας: Έκτακτο πακέτο στήριξης €1,5 εκατ. για αγροτικό πετρέλαιο και λιπάσματα εξήγγειλε ο Πρόεδρος", "snippet": "Δύο νέα σχέδια οικονομικής ενίσχυσης των γεωργών και σιτηροπαραγωγών συνολικού προϋπολογισμού €1,5 εκατ. ανακοίνωσε ο Πρόεδρος Νίκος Χριστοδουλίδης από την Αραδ...", "url": "briefings/2026-09-08.html#cyprus"}, {"date": "2026-09-08", "section": "🇨🇾 Κύπρος", "title": "Δικαιοσύνη Λεμεσού: Εξελίξεις στο Κακουργιοδικείο για σοβαρές ποινικές υποθέσεις", "snippet": "Σημαντικές δικονομικές εξελίξεις σημειώθηκαν στο Μόνιμο Κακουργιοδικείο Λεμεσού. Στη δίκη για τη δολοφονία του επιχειρηματία Σταύρου Δημοσθένους, η κατηγορούσα...", "url": "briefings/2026-09-08.html#cyprus"}, {"date": "2026-09-08", "section": "🇨🇾 Κύπρος", "title": "Πολιτισμός & Εξωστρέφεια: Η κυπριακή ταινία «Κράτα Με» στα 99α Βραβεία Όσκαρ", "snippet": "Την ταινία μυθοπλασίας «Κράτα Με» (Hold Onto Me) επέλεξε ομόφωνα η ειδική Συμβουλευτική Επιτροπή Κινηματογράφου του Υφυπουργείου Πολιτισμού ως την επίσημη πρότα...", "url": "briefings/2026-09-08.html#cyprus"}, {"date": "2026-09-08", "section": "🇨🇾 Κύπρος", "title": "Τοπική Αυτοδιοίκηση: Εντάσεις και τριβές στους νέους συνενωμένους δήμους", "snippet": "Σειρά αντιδράσεων και καταγγελιών για εργασιακές πιέσεις καταγράφεται σε περιφερειακούς δήμους μετά την εφαρμογή της νέας διοικητικής μεταρρύθμισης. Χαρακτηριστ...", "url": "briefings/2026-09-08.html#cyprus"}, {"date": "2026-09-08", "section": "🇨🇾 Κύπρος", "title": "Ακίνητα & Ενοίκια Λεμεσού: Σε ιστορικά υψηλά τα μισθώματα και ασφυκτική πίεση για φοιτητική στέγη", "snippet": "Σε επίπεδα-ρεκόρ παραμένουν τα ενοίκια διαμερισμάτων στη Λεμεσό με την έναρξη του ακαδημαϊκού έτους. Το μέσο μίσθωμα για διαμέρισμα ενός υπνοδωματίου διαμορφώνε...", "url": "briefings/2026-09-08.html#cyprus"}, {"date": "2026-09-08", "section": "🌍 Διεθνή", "title": "Ουκρανία & Ρωσία: Επανέναρξη σφοδρών επιδρομών στο Κίεβο μετά τη λήξη της τριήμερης διπλωματικής παύσης", "snippet": "Σε μαζικές αεροπορικές και πυραυλικές επιδρομές κατά του Κιέβου και άλλων μεγάλων ουκρανικών πόλεων (Χάρκοβο, Δνείπερος, Ζαπορίζια) προχώρησε η Ρωσία τις πρώτες...", "url": "briefings/2026-09-08.html#world"}, {"date": "2026-09-08", "section": "🌍 Διεθνή", "title": "Γερμανία: Πολιτικός σεισμός από τον θρίαμβο της AfD με 44% στη Σαξονία-Άνχαλτ και πίεση στον Merz", "snippet": "Πρωτοφανείς πολιτικές αναταράξεις προκαλεί στο Βερολίνο το αποτέλεσμα των κρατιδιακών εκλογών στη Σαξονία-Άνχαλτ, όπου το ακροδεξιό κόμμα «Εναλλακτική για τη Γε...", "url": "briefings/2026-09-08.html#world"}, {"date": "2026-09-08", "section": "🌍 Διεθνή", "title": "Ευρωπαϊκή Ένωση & Αρκτική: Στρατηγικό πακέτο μαμούθ €200 εκατ. για τη Γροιλανδία ανακοίνωσε η von der Leyen", "snippet": "Σε μια κίνηση υψίστης γεωπολιτικής σημασίας για την παρουσία της Ευρωπαϊκής Ένωσης στην Αρκτική, η Πρόεδρος της Κομισιόν Ursula von der Leyen ανακοίνωσε από το...", "url": "briefings/2026-09-08.html#world"}, {"date": "2026-09-08", "section": "🌍 Διεθνή", "title": "Διπλωματική Ρήξη: Η Ουγγαρία απέλασε 10 Ρώσους διπλωμάτες — Προειδοποίηση Μόσχας για σκληρά αντίποινα", "snippet": "Στην απέλαση 10 Ρώσων διπλωματών προχώρησε αιφνιδιαστικά η κυβέρνηση της Βουδαπέστης, χαρακτηρίζοντας τις δραστηριότητές τους ασύμβατες με τη Σύμβαση της Βιέννη...", "url": "briefings/2026-09-08.html#world"}, {"date": "2026-09-08", "section": "🌍 Διεθνή", "title": "Ινδονησία: Επαναλειτουργία αεροδρομίων στην Τζακάρτα μετά το χάος από το ηφαίστειο Anak Krakatau", "snippet": "Επαναλειτούργησαν σήμερα τα διεθνή αεροδρόμια Soekarno-Hatta και Halim Perdanakusuma στην ευρύτερη περιοχή της Τζακάρτα, μετά τον καθαρισμό των διαδρόμων προσγε...", "url": "briefings/2026-09-08.html#world"}, {"date": "2026-09-08", "section": "📅 Προθεσμίες", "title": "18 Σεπτεμβρίου 2026", "snippet": "18 Σεπτεμβρίου 2026 — Υποβολή αιτήσεων για το Σχέδιο De Minimis (Διεθνείς Εκθέσεις 2027): Επιχορήγηση κυπριακών επιχειρήσεων και ΜμΕ για συμμετοχή σε διεθνείς ε...", "url": "briefings/2026-09-08.html#deadlines"}, {"date": "2026-09-08", "section": "📅 Προθεσμίες", "title": "22 Σεπτεμβρίου 2026", "snippet": "22 Σεπτεμβρίου 2026 — Τράπεζα Κύπρου (Κατάργηση Επιταγών Μερισμάτων): Τελευταία ημέρα για τους μετόχους της Τράπεζας Κύπρου να δηλώσουν τραπεζικό λογαριασμό (IB...", "url": "briefings/2026-09-08.html#deadlines"}, {"date": "2026-09-08", "section": "📅 Προθεσμίες", "title": "30 Σεπτεμβρίου 2026", "snippet": "30 Σεπτεμβρίου 2026 — Πληρωμή Δημοτικού Τέλους Ακίνητης Ιδιοκτησίας Δήμου Λεμεσού: Καταληκτική προθεσμία εξόφλησης των λογαριασμών του Δήμου Λεμεσού για το 2026...", "url": "briefings/2026-09-08.html#deadlines"}, {"date": "2026-09-07", "section": "⭐ Πρώτο Θέμα", "title": "Morningstar DBRS: Αναβάθμιση της κυπριακής οικονομίας σε θετική προοπτική (Positive Outlook) με αξιολόγηση «Α» εν μέσω ισχυρής δημοσιονομικής υπεραπόδοσης", "snippet": "Σε σημαντική ψήφο εμπιστοσύνης για την κυπριακή οικονομία προχώρησε ο διεθνής οίκος αξιολόγησης Morningstar DBRS, διατηρώντας το μακροπρόθεσμο αξιόχρεο της Κυπριακής Δημοκρατίας στ...", "url": "briefings/2026-09-07.html#top-story"}, {"date": "2026-09-07", "section": "🇨🇾 Κύπρος", "title": "Υποδομές & Σχολική Στέγη Λεμεσού: Τελεσίγραφο γονέων στον Ύψωνα για άμεση ανέγερση νέου Γυμνασίου και Λυκείου", "snippet": "Σε δυναμικές κινητοποιήσεις και αυστηρό τελεσίγραφο προς το Υπουργείο Παιδείας προχώρησε ο Σύνδεσμος Γονέων του Ύψωνα στη Λεμεσό, καταγγέλλοντας οξύτατη κρίση σ...", "url": "briefings/2026-09-07.html#cyprus"}, {"date": "2026-09-07", "section": "🇨🇾 Κύπρος", "title": "Αγορά Εργασίας & Οικονομία: Στο +1,7% η συνολική απασχόληση στην Κύπρο το β' τρίμηνο 2026 με 525.167 εργαζομένους", "snippet": "Ισχυρή ανθεκτικότητα επιδεικνύει η κυπριακή αγορά εργασίας, με τα επίσημα στοιχεία της Στατιστικής Υπηρεσίας (Cystat) για το δεύτερο τρίμηνο του 2026 να καταγρά...", "url": "briefings/2026-09-07.html#cyprus"}, {"date": "2026-09-07", "section": "🇨🇾 Κύπρος", "title": "Ναυτική Τραγωδία & Έρευνες: Στους 14 οι νεκροί και 14 αγνοούμενοι από το ναυάγιο καταμαράν ανοικτά της Κερύνειας", "snippet": "Συνεχίζονται υπό αντίξοες συνθήκες οι εκτεταμένες επιχειρήσεις έρευνας και διάσωσης στη θαλάσσια περιοχή ανοικτά της κατεχόμενης Κερύνειας μετά το πολύνεκρο ναυ...", "url": "briefings/2026-09-07.html#cyprus"}, {"date": "2026-09-07", "section": "🇨🇾 Κύπρος", "title": "Πολιτικό Παρασκήνιο: Στο μικροσκόπιο της Βουλής το προεδρικό κονδύλι των €595.000 εν μέσω καταγγελιών για διαρροές", "snippet": "Στο επίκεντρο έντονων πολιτικών διαβουλεύσεων στην Κοινοβουλευτική Επιτροπή Οικονομικών παραμένει το αίτημα για αποδέσμευση €595.000 για την αγορά νέας θωρακισμ...", "url": "briefings/2026-09-07.html#cyprus"}, {"date": "2026-09-07", "section": "🇨🇾 Κύπρος", "title": "Παιδεία & Κυκλοφοριακό: Πρεμιέρα της σχολικής χρονιάς για 41.280 εφήβους και μέτρα για την οδική συμφόρηση", "snippet": "Άνοιξαν επίσημα σήμερα οι πύλες των δημόσιων Γυμνασίων, Λυκείων και Τεχνικών Σχολών σε όλη την Κύπρο, υποδεχόμενες 41.280 μαθητές για τη σχολική χρονιά 2026-27....", "url": "briefings/2026-09-07.html#cyprus"}, {"date": "2026-09-07", "section": "🇨🇾 Κύπρος", "title": "Ενοίκια & Φοιτητική Στέγη στη Λεμεσό: Σε εφαρμογή το πρόγραμμα επιδότησης ενοικίου από το ΤΕΠΑΚ", "snippet": "Ενεργοποιούνται οι αιτήσεις για το σχέδιο επιδότησης ενοικίου και διάθεσης δωματίων σε ιδιωτικές εστίες για φοιτητές στη Λεμεσό, καθώς οι μέσες τιμές μίσθωσης σ...", "url": "briefings/2026-09-07.html#cyprus"}, {"date": "2026-09-07", "section": "🌍 Διεθνή", "title": "Ουκρανικό & Διπλωματία: Κοινή συνέντευξη Τύπου Witkoff, Kushner και Zelenskyy στο Κίεβο για τριμερείς ειρηνευτικές συνομιλίες", "snippet": "Σε κρίσιμη καμπή εισέρχεται η διεθνής διπλωματία για τον τερματισμό του πολέμου στην Ουκρανία. Οι ειδικοί απεσταλμένοι της αμερικανικής ηγεσίας Steve Witkoff κα...", "url": "briefings/2026-09-07.html#world"}, {"date": "2026-09-07", "section": "🌍 Διεθνή", "title": "Γερμανία: Εκλογικός σεισμός με ιστορικό θρίαμβο 44% του AfD στη Σαξονία-Άνχαλτ και κατάρρευση CDU", "snippet": "Βαρύ πολιτικό σοκ στο Βερολίνο και τις ευρωπαϊκές πρωτεύουσες προκαλεί το εκλογικό αποτέλεσμα στο ανατολικογερμανικό κρατίδιο της Σαξονίας-Άνχαλτ. Το ακροδεξιό...", "url": "briefings/2026-09-07.html#world"}, {"date": "2026-09-07", "section": "🌍 Διεθνή", "title": "Ινδονησία: Έκρηξη του ηφαιστείου Anak Krakatau παραλύει τις πτήσεις και κλείνει 7 αεροδρόμια", "snippet": "Εκτεταμένο χάος στις αερομεταφορές της Νοτιοανατολικής Ασίας προκάλεσε η ισχυρή ηφαιστειακή έκρηξη του Anak Krakatau στα Στενά της Σούνδης. Οι αρχές πολιτικής α...", "url": "briefings/2026-09-07.html#world"}, {"date": "2026-09-07", "section": "🌍 Διεθνή", "title": "ΗΠΑ / Αεροπορική Τραγωδία: Πέντε νεκροί από συντριβή φορτηγού αεροσκάφους Boeing 767 της Amazon στο αεροδρόμιο του Μαϊάμι", "snippet": "Σοβαρή αεροπορική τραγωδία σημειώθηκε στο Διεθνές Αεροδρόμιο του Μαϊάμι στη Φλόριντα, όταν φορτηγό αεροσκάφος Boeing 767-300 της Amazon Prime Air (πτήση 7598, υ...", "url": "briefings/2026-09-07.html#world"}, {"date": "2026-09-07", "section": "🌍 Διεθνή", "title": "Διεθνής Δικαιοσύνη: Η Γερμανία ενώπιον του Διεθνούς Δικαστηρίου της Χάγης για τις εξαγωγές όπλων στο Ισραήλ", "snippet": "Ενώπιον του Διεθνούς Δικαστηρίου της Χάγης (ICJ) ξεκίνησε τετραήμερη δημόσια ακροαματική διαδικασία (7–10 Σεπτεμβρίου 2026) για την εξέταση των προκαταρκτικών ε...", "url": "briefings/2026-09-07.html#world"}, {"date": "2026-09-07", "section": "📅 Προθεσμίες", "title": "7 Σεπτεμβρίου 2026", "snippet": "7 Σεπτεμβρίου 2026 — Έναρξη υποβολής αιτήσεων για το Σχέδιο Επιδότησης Διδάκτρων Παιδιών: Άνοιγμα της ηλεκτρονικής πλατφόρμας της Υπηρεσίας Διαχείρισης Επιδομάτ...", "url": "briefings/2026-09-07.html#deadlines"}, {"date": "2026-09-07", "section": "📅 Προθεσμίες", "title": "18 Σεπτεμβρίου 2026", "snippet": "18 Σεπτεμβρίου 2026 — Υποβολή αιτήσεων για το Σχέδιο De Minimis (Διεθνείς Εκθέσεις 2027): Επιχορήγηση κυπριακών επιχειρήσεων και ΜμΕ για συμμετοχή σε διεθνείς ε...", "url": "briefings/2026-09-07.html#deadlines"}, {"date": "2026-09-07", "section": "📅 Προθεσμίες", "title": "22 Σεπτεμβρίου 2026", "snippet": "22 Σεπτεμβρίου 2026 — Τράπεζα Κύπρου (Κατάργηση Επιταγών Μερισμάτων): Τελευταία ημέρα για τους μετόχους της Τράπεζας Κύπρου να δηλώσουν τραπεζικό λογαριασμό (IB...", "url": "briefings/2026-09-07.html#deadlines"}, {"date": "2026-09-06", "section": "⭐ Πρώτο Θέμα", "title": "Great Sea Interconnector: Στην τελική ευθεία για επανέναρξη ερευνών βυθού με γαλλική ισχύ, εν μέσω ρυθμιστικών πιέσεων για τα €50 εκατ.", "snippet": "Σε κρίσιμη καμπή εισέρχεται η ηλεκτρική διασύνδεση Κύπρου–Ελλάδας–Ευρώπης (Great Sea Interconnector), καθώς επιβεβαιώθηκε ο προγραμματισμός για επανέναρξη των ερευνών βυθού εντός τ...", "url": "briefings/2026-09-06.html#top-story"}, {"date": "2026-09-06", "section": "🇨🇾 Κύπρος", "title": "Πολιτική Αντιπαράθεση: Σάλος για την αγορά προεδρικής θωρακισμένης λιμουζίνας €595.000", "snippet": "Έντονες πολιτικές αναταράξεις προκάλεσε το αίτημα του Υπουργείου Οικονομικών προς τη Βουλή για αποδέσμευση κονδυλίου €595.000 με σκοπό την αγορά νέας θωρακισμέν...", "url": "briefings/2026-09-06.html#cyprus"}, {"date": "2026-09-06", "section": "🇨🇾 Κύπρος", "title": "Κοινωνική Πρόνοια: Επέκταση του Επιδόματος Τέκνου σε 17.000 νέες οικογένειες", "snippet": "Ο Πρόεδρος της Δημοκρατίας Νίκος Χριστοδουλίδης ανακοίνωσε τη διεύρυνση των δικαιούχων του Επιδόματος Τέκνου, εντάσσοντας επιπλέον 17.000 οικογένειες στο σύστημ...", "url": "briefings/2026-09-06.html#cyprus"}, {"date": "2026-09-06", "section": "🇨🇾 Κύπρος", "title": "Θεσμοί & Ασφάλεια: Αντιδράσεις για τη διαρροή δεδομένων και το προεδρικό κονδύλι", "snippet": "Στο επίκεντρο έντονων κοινοβουλευτικών τριβών παραμένει η ασφάλεια κρατικών αξιωματούχων και οι διαδικασίες προμηθειών της Προεδρίας, μετά τη δημοσιοποίηση της...", "url": "briefings/2026-09-06.html#cyprus"}, {"date": "2026-09-06", "section": "🇨🇾 Κύπρος", "title": "Τραπεζικός Τομέας: Στο 1,27% τα καταθετικά επιτόκια παρά την υψηλή ρευστότητα", "snippet": "Σε επίπεδα μεταξύ των χαμηλότερων της Ευρωζώνης παραμένουν τα επιτόκια καταθέσεων στην Κύπρο, με τη μέση απόδοση για προθεσμιακές καταθέσεις νοικοκυριών να υποχ...", "url": "briefings/2026-09-06.html#cyprus"}, {"date": "2026-09-06", "section": "🇨🇾 Κύπρος", "title": "Δημόσια Υγεία & Επισκόπηση Τύπου: Πρώτος θάνατος από τον ιό του Δυτικού Νείλου στην Κύπρο", "snippet": "Συναγερμός σήμανε στις Ιατρικές Υπηρεσίες του Υπουργείου Υγείας μετά την επιβεβαίωση του πρώτου θανάτου ηλικιωμένου ασθενούς 90 ετών με υποκείμενα νοσήματα από...", "url": "briefings/2026-09-06.html#cyprus"}, {"date": "2026-09-06", "section": "🌍 Διεθνή", "title": "Ρωσία – Ουκρανία: Τρίωρες συνομιλίες Kushner και Witkoff με τον Putin στο Κρεμλίνο και συμφωνία εκεχειρίας σε πρωτεύουσες", "snippet": "Οι ειδικοί απεσταλμένοι της αμερικανικής ηγεσίας Jared Kushner και Steve Witkoff πραγματοποίησαν πολύωρη κρίσιμη συνάντηση στο Κρεμλίνο με τον Ρώσο Πρόεδρο Vlad...", "url": "briefings/2026-09-06.html#world"}, {"date": "2026-09-06", "section": "🌍 Διεθνή", "title": "Μέση Ανατολή: Σφοδρή κλιμάκωση ΗΠΑ–Ιράν στα Στενά του Ορμούζ και αμοιβαία στρατιωτικά αντίποινα", "snippet": "Επικίνδυνη στρατιωτική κλιμάκωση καταγράφεται στον Περσικό Κόλπο και τη στρατηγική δίοδο του Ορμούζ. Η Κεντρική Διοίκηση των ΗΠΑ (CENTCOM) ανακοίνωσε την καταστ...", "url": "briefings/2026-09-06.html#world"}, {"date": "2026-09-06", "section": "🌍 Διεθνή", "title": "Λίβανος & Περιφερειακή Ασφάλεια: Φονικά αεροπορικά πλήγματα του Ισραήλ στον Νότιο Λίβανο", "snippet": "Τουλάχιστον τέσσερις πολίτες σκοτώθηκαν και περισσότεροι από είκοσι τραυματίστηκαν, ανάμεσά τους γυναίκες και παιδιά, από σφοδρές αεροπορικές επιδρομές των ισρα...", "url": "briefings/2026-09-06.html#world"}, {"date": "2026-09-06", "section": "🌍 Διεθνή", "title": "Γερμανία: Πολιτικό σοκ στις κρατιδιακές εκλογές της Σαξονίας-Άνχαλτ και ενίσχυση της ακροδεξιάς", "snippet": "Ιστορικό πολιτικό μετασεισμό καταγράφουν τα αποτελέσματα των τοπικών εκλογών στο ομόσπονδο κρατίδιο της Σαξονίας-Άνχαλτ, όπου το ακροδεξιό κόμμα AfD πέτυχε ιστο...", "url": "briefings/2026-09-06.html#world"}, {"date": "2026-09-06", "section": "🌍 Διεθνή", "title": "Ασία & Περιβάλλον: Έκρηξη Anak Krakatau και φονικές κατολισθήσεις από τον τυφώνα Saudel", "snippet": "Διπλό κύμα φυσικών καταστροφών πλήττει την Ασία. Στην Ινδονησία, το ηφαίστειο Anak Krakatau εξερράγη εκτοξεύοντας ηφαιστειακή στάχτη σε ύψος άνω των 3.000 μέτρω...", "url": "briefings/2026-09-06.html#world"}, {"date": "2026-09-06", "section": "📅 Προθεσμίες", "title": "7 Σεπτεμβρίου 2026", "snippet": "7 Σεπτεμβρίου 2026 — Υποβολή αιτήσεων για κρατική αρωγή κακοκαιρίας: Τελευταία ημέρα κατάθεσης δικαιολογητικών στις Επαρχιακές Διοικήσεις από πληγέντες των ακρα...", "url": "briefings/2026-09-06.html#deadlines"}, {"date": "2026-09-06", "section": "📅 Προθεσμίες", "title": "18 Σεπτεμβρίου 2026", "snippet": "18 Σεπτεμβρίου 2026 — Υποβολή αιτήσεων για το Σχέδιο Χορηγιών De Minimis (Διεθνείς Εκθέσεις 2027): Επιχορήγηση συμμετοχής κυπριακών επιχειρήσεων και ΜμΕ σε διεθ...", "url": "briefings/2026-09-06.html#deadlines"}, {"date": "2026-09-06", "section": "📅 Προθεσμίες", "title": "31 Δεκεμβρίου 2026", "snippet": "31 Δεκεμβρίου 2026 — Λήξη μεταβατικής προθεσμίας ΦΠΑ 5% πρώτης κατοικίας: Ολοκλήρωση υποβολής συμπληρωματικών δικαιολογητικών στο Τμήμα Φορολογίας για οικοδομές...", "url": "briefings/2026-09-06.html#deadlines"}, {"date": "2026-09-05", "section": "⭐ Πρώτο Θέμα", "title": "Morningstar DBRS: Αναβάθμιση της Κύπρου σε «Θετική» προοπτική — Ανάπτυξη 3,5% και στρατηγικό πακέτο έργων €3,5 δισ. για το 2027", "snippet": "Ο διεθνής οίκος αξιολόγησης Morningstar DBRS επιβεβαίωσε την πιστοληπτική ικανότητα της Κυπριακής Δημοκρατίας στην επενδυτική βαθμίδα «A (low)» και αναβάθμισε την προοπτική (trend)...", "url": "briefings/2026-09-05.html#top-story"}, {"date": "2026-09-05", "section": "🇨🇾 Κύπρος", "title": "Πιστοληπτική Αξιολόγηση: Η Morningstar DBRS θέτει την Κύπρο σε τροχιά αναβάθμισης", "snippet": "Ο διεθνής οίκος Morningstar DBRS αναθεώρησε την προοπτική (trend) της Κύπρου σε θετική, επιβεβαιώνοντας τη μακροπρόθεσμη αξιολόγηση στο «A (low)» και τη βραχυπρ...", "url": "briefings/2026-09-05.html#cyprus"}, {"date": "2026-09-05", "section": "🇨🇾 Κύπρος", "title": "Οργανωμένο Έγκλημα: Εξάρθρωση διεθνούς κυκλώματος πληρωμένων εκτελεστών στην Πάφο", "snippet": "Σε συντονισμένη επιχείρηση με την Europol και τις αρχές της Δανίας, η Αστυνομία Κύπρου συνέλαβε στην Πάφο πέντε Σουηδούς υπηκόους, ανεβάζοντας τον αριθμό των συ...", "url": "briefings/2026-09-05.html#cyprus"}, {"date": "2026-09-05", "section": "🇨🇾 Κύπρος", "title": "Δημόσια Ασφάλεια: Χωρίς νόμιμη άδεια λειτουργούν 620 από τα 1.000 γυμναστήρια", "snippet": "Σοβαρές αδυναμίες ελέγχου και εποπτείας από τον ΚΟΑ καταγράφει έκθεση της Ελεγκτικής Υπηρεσίας, με τον Παγκύπριο Σύνδεσμο Αδειοδοτημένων Ιδιοκτητών Γυμναστηρίων...", "url": "briefings/2026-09-05.html#cyprus"}, {"date": "2026-09-05", "section": "🇨🇾 Κύπρος", "title": "Πολιτικές Εξελίξεις: Εκλογή της Σοφίας Χριστοδούλου Μακρή στην προεδρία της ΕΔΕΚ", "snippet": "Ιστορική καμπή για την ΕΔΕΚ σηματοδότησε η σημερινή εκλογική διαδικασία σε όλες τις επαρχίες της Κύπρου, την Αθήνα και το Λονδίνο, όπου αναδείχθηκε πρόεδρος η 2...", "url": "briefings/2026-09-05.html#cyprus"}, {"date": "2026-09-05", "section": "🇨🇾 Κύπρος", "title": "Αναπτυξιακός Σχεδιασμός: Πακέτο στρατηγικών έργων €3,5 δισ. για το 2027 εξήγγειλε ο Πρόεδρος", "snippet": "Ο Πρόεδρος Νίκος Χριστοδουλίδης απηύθυνε κάλεσμα στις τοπικές αρχές και κοινότητες της ελεύθερης Κύπρου να προχωρήσουν άμεσα στην ωρίμανση αναπτυξιακών προτάσεω...", "url": "briefings/2026-09-05.html#cyprus"}, {"date": "2026-09-05", "section": "🌍 Διεθνή", "title": "Ουκρανία & Διπλωματία: Ειρηνευτική αποστολή Kushner και Witkoff σε Μόσχα και Κίεβο — Προσωρινή παύση ουκρανικών πληγμάτων", "snippet": "Σε μια κρίσιμη διπλωματική πρωτοβουλία υψηλού ρίσκου, ο Donald Trump απέστειλε τους ειδικούς εντεταλμένους Jared Kushner και Steve Witkoff σε Μόσχα και Κίεβο, κ...", "url": "briefings/2026-09-05.html#world"}, {"date": "2026-09-05", "section": "🌍 Διεθνή", "title": "Γερμανική Βιομηχανία: Ιστορική αναδιάρθρωση στη Volkswagen με περικοπή 50.000 θέσεων και κλείσιμο εργοστασίων", "snippet": "Σε ένα πρωτοφανές σχέδιο αναδιάρθρωσης προχωρά ο γερμανικός κολοσσός της αυτοκινητοβιομηχανίας Volkswagen, ανακοινώνοντας την κατάργηση έως και 50.000 θέσεων ερ...", "url": "briefings/2026-09-05.html#world"}, {"date": "2026-09-05", "section": "🌍 Διεθνή", "title": "Ιταλία: Ιστορικό ρεκόρ μακροβιότητας για την κυβέρνηση της Giorgia Meloni με 1.413 συναπτές ημέρες", "snippet": "Η κυβέρνηση της Giorgia Meloni κατέρριψε επίσημα το ιστορικό ρεκόρ της μακροβιότερης αδιάλειπτης κυβέρνησης στη μεταπολεμική ιστορία της Ιταλίας, συμπληρώνοντας...", "url": "briefings/2026-09-05.html#world"}, {"date": "2026-09-05", "section": "🌍 Διεθνή", "title": "Φιλιππίνες: Ένταλμα σύλληψης και καταβολή εγγύησης για την Αντιπρόεδρο Sara Duterte για απειλές κατά του Προέδρου", "snippet": "Πρωτοφανής θεσμική κρίση συγκλονίζει τη Μανίλα, καθώς το Περιφερειακό Δικαστήριο του Quezon City εξέδωσε ένταλμα σύλληψης κατά της Αντιπροέδρου των Φιλιππίνων S...", "url": "briefings/2026-09-05.html#world"}, {"date": "2026-09-05", "section": "🌍 Διεθνή", "title": "Μέση Ανατολή & Περσικός Κόλπος: Νέα ιρανικά πλήγματα με drones κατά αμερικανικών βάσεων σε Κουβέιτ και ΗΑΕ", "snippet": "Σε επικίνδυνο νέο γύρο κλιμάκωσης εισέρχεται η στρατιωτική αντιπαράθεση ΗΠΑ–Ιράν, με τις ιρανικές ένοπλες δυνάμεις να εξαπολύουν σμήνη drones και πυραύλων κατά...", "url": "briefings/2026-09-05.html#world"}, {"date": "2026-09-05", "section": "📅 Προθεσμίες", "title": "7 Σεπτεμβρίου 2026", "snippet": "7 Σεπτεμβρίου 2026 — Υποβολή αιτήσεων για κρατική αρωγή κακοκαιρίας: Κατάθεση αιτήσεων και δικαιολογητικών στις Επαρχιακές Διοικήσεις από πληγέντες των ακραίων ...", "url": "briefings/2026-09-05.html#deadlines"}, {"date": "2026-09-05", "section": "📅 Προθεσμίες", "title": "18 Σεπτεμβρίου 2026", "snippet": "18 Σεπτεμβρίου 2026 — Υποβολή αιτήσεων για το Σχέδιο Χορηγιών De Minimis (Εκθέσεις 2027): Επιχορήγηση συμμετοχής κυπριακών επιχειρήσεων σε διεθνείς εμπορικές εκ...", "url": "briefings/2026-09-05.html#deadlines"}, {"date": "2026-09-05", "section": "📅 Προθεσμίες", "title": "31 Δεκεμβρίου 2026", "snippet": "31 Δεκεμβρίου 2026 — Λήξη μεταβατικής προθεσμίας ΦΠΑ 5% πρώτης κατοικίας: Ολοκλήρωση υποβολής συμπληρωματικών στοιχείων στο Τμήμα Φορολογίας για εκκρεμείς αιτήσ...", "url": "briefings/2026-09-05.html#deadlines"}, {"date": "2026-09-04", "section": "⭐ Πρώτο Θέμα", "title": "Σύνοδος Costa – Χριστοδουλίδη στη Λευκωσία: Στο τραπέζι ο νέος προϋπολογισμός της ΕΕ, η ένταξη στη ζώνη Σένγκεν και το Κυπριακό", "snippet": "Ο Πρόεδρος του Ευρωπαϊκού Συμβουλίου António Costa πραγματοποίησε σήμερα επίσημη επίσκεψη εργασίας στη Λευκωσία, εγκαινιάζοντας τον κύκλο επαφών «Tour des Capitales» για τη διαμόρφ...", "url": "briefings/2026-09-04.html#top-story"}, {"date": "2026-09-04", "section": "🇨🇾 Κύπρος", "title": "Ευρωπαϊκή Σύνοδος: Στη Λευκωσία ο António Costa για το Πολυετές Πλαίσιο και τη ζώνη Σένγκεν", "snippet": "Ο Πρόεδρος του Ευρωπαϊκού Συμβουλίου António Costa έγινε δεκτός στο Προεδρικό Μέγαρο από τον Πρόεδρο Νίκο Χριστοδουλίδη, πραγματοποιώντας κατ' ιδίαν συνομιλίες...", "url": "briefings/2026-09-04.html#cyprus"}, {"date": "2026-09-04", "section": "🇨🇾 Κύπρος", "title": "Αγορά Ακινήτων: Στα ύψη τα ενοίκια στη Λεμεσό — Πιέσεις στη φοιτητική στέγη", "snippet": "Η Λεμεσός παραμένει η ακριβότερη επαρχία της Κύπρου, με τις τιμές ενοικίασης να είναι σχεδόν διπλάσιες σε σύγκριση με τη Λευκωσία και τη Λάρνακα. Με την έναρξη...", "url": "briefings/2026-09-04.html#cyprus"}, {"date": "2026-09-04", "section": "🇨🇾 Κύπρος", "title": "Δημόσια Υγεία: Πρώτος θάνατος 90χρονου από τον Ιό του Δυτικού Νείλου στην Κύπρο", "snippet": "Το Υπουργείο Υγείας επιβεβαίωσε τον πρώτο θάνατο ασθενούς με λοίμωξη του κεντρικού νευρικού συστήματος από τον Ιό του Δυτικού Νείλου για το 2026. Πρόκειται για...", "url": "briefings/2026-09-04.html#cyprus"}, {"date": "2026-09-04", "section": "🇨🇾 Κύπρος", "title": "Φορολογία & Επιχειρήσεις: Διαβεβαιώσεις Κεραυνού για μη αποχώρηση πολυεθνικών", "snippet": "Ο Υπουργός Οικονομικών Μάκης Κεραυνός δήλωσε ότι δεν υπάρχει καμία ένδειξη πρόθεσης αποχώρησης διεθνών εταιρειών από την Κύπρο μετά τη θέσπιση του ελάχιστου ετα...", "url": "briefings/2026-09-04.html#cyprus"}, {"date": "2026-09-04", "section": "🇨🇾 Κύπρος", "title": "Ναυτική Τραγωδία: Στους 12 οι νεκροί από το ναυάγιο του καταμαράν «Filo Jet» στην Κερύνεια", "snippet": "Στους 12 ανήλθε ο αριθμός των επιβεβαιωμένων νεκρών μετά την ανάσυρση δύο ακόμη σορών από το ναυάγιο του επιβατηγού ταχύπλοου «Filo Jet» ανοιχτά της Κερύνειας,...", "url": "briefings/2026-09-04.html#cyprus"}, {"date": "2026-09-04", "section": "🌍 Διεθνή", "title": "Μέση Ανατολή & Στενά του Ορμούζ: Κατάρρευση εκεχειρίας, πολιτική αντιποίνων «τάνκερ για τάνκερ» και βουτιά 50% στις εξαγωγές", "snippet": "Η κατάσταση στα Στενά του Ορμούζ επιδεινώνεται ραγδαία μετά την κατάρρευση του μνημονίου συνεννόησης (MoU) που είχαν διαμεσολαβήσει το Κατάρ και το Πακιστάν για...", "url": "briefings/2026-09-04.html#world"}, {"date": "2026-09-04", "section": "🌍 Διεθνή", "title": "Ευρωπαϊκή Ασφάλεια: Γερμανία και Τσεχία καταγγέλλουν ρωσικό σαμποτάζ στο αεροδρόμιο της Λειψίας", "snippet": "Σοβαρό διπλωματικό επεισόδιο ξέσπασε στην Κεντρική Ευρώπη μετά την επίσημη απόδοση στη Ρωσία από τη γερμανική κυβέρνηση της απόπειρας δολιοφθοράς στο αεροδρόμιο...", "url": "briefings/2026-09-04.html#world"}, {"date": "2026-09-04", "section": "🌍 Διεθνή", "title": "Νεπάλ: Δραματική διάσωση δύο εργατών μετά από 9 ημέρες σε βάθος 170 μέτρων σε πλημμυρισμένη σήραγγα", "snippet": "Σωστικά συνεργεία ανέσυραν ζωντανούς δύο εργάτες από τη σήραγγα του υδροηλεκτρικού έργου Trishuli 3A, εννέα ημέρες μετά τις καταστροφικές πλημμύρες και κατολισθ...", "url": "briefings/2026-09-04.html#world"}, {"date": "2026-09-04", "section": "🌍 Διεθνή", "title": "Γαλλία: Πορτοκαλί συναγερμός για 40°C στα νότια μετά το θερμότερο καλοκαίρι στα χρονικά", "snippet": "Η Météo-France έθεσε πέντε νότια διαμερίσματα (Ardèche, Aude, Drôme, Gard, Hérault) σε πορτοκαλί συναγερμό για ασυνήθιστα ακραίο καύσωνα αρχών Σεπτεμβρίου, με τ...", "url": "briefings/2026-09-04.html#world"}, {"date": "2026-09-04", "section": "🌍 Διεθνή", "title": "Ηνωμένες Πολιτείες: Πρόταση άρσης φοροαπαλλαγών σε 18.000 ιδιωτικά εκπαιδευτικά ιδρύματα για προγράμματα DEI", "snippet": "Το Υπουργείο Οικονομικών των ΗΠΑ και η IRS δημοσίευσαν πρόταση κανονισμού στο Federal Register για την ανάκληση του καθεστώτος φορολογικής απαλλαγής 501(c)(3) α...", "url": "briefings/2026-09-04.html#world"}, {"date": "2026-09-04", "section": "📅 Προθεσμίες", "title": "18 Σεπτεμβρίου 2026", "snippet": "18 Σεπτεμβρίου 2026 — Υποβολή αιτήσεων για το Σχέδιο Χορηγιών De Minimis: Επιχορήγηση συμμετοχής κυπριακών επιχειρήσεων σε διεθνείς εμπορικές εκθέσεις του 2027 ...", "url": "briefings/2026-09-04.html#deadlines"}, {"date": "2026-09-04", "section": "📅 Προθεσμίες", "title": "7 Σεπτεμβρίου 2026", "snippet": "7 Σεπτεμβρίου 2026 — Υποβολή στοιχείων για κρατική βοήθεια κακοκαιρίας: Κατάθεση αιτήσεων και τεκμηρίωσης στις Επαρχιακές Διοικήσεις από πληγέντες των ακραίων φ...", "url": "briefings/2026-09-04.html#deadlines"}, {"date": "2026-09-03", "section": "⭐ Πρώτο Θέμα", "title": "Στρατηγικό σχέδιο €235 εκατ. για την υδατική ασφάλεια της Κύπρου: 4 μόνιμες μονάδες αφαλάτωσης και ακύρωση προσωρινών λύσεων", "snippet": "Το Υπουργικό Συμβούλιο ενέκρινε επικαιροποιημένο μακροπρόθεσμο σχεδιασμό υδατικής πολιτικής με ετήσιο προϋπολογισμό €235 εκατομμυρίων, αποσκοπώντας στην πλήρη απεξάρτηση της ύδρευσ...", "url": "briefings/2026-09-03.html#top-story"}, {"date": "2026-09-03", "section": "🇨🇾 Κύπρος", "title": "Υδατική Πολιτική: Επικαιροποιημένο σχέδιο €235 εκατ. με 4 μόνιμες αφαλατώσεις", "snippet": "Το Υπουργικό Συμβούλιο προχωρά σε στρατηγική αναδιάρθρωση των υδατικών έργων, εγκρίνοντας 4 μόνιμες μονάδες αφαλάτωσης (Ανατολική Λεμεσός, Δεκέλεια, Αγία Θέκλα,...", "url": "briefings/2026-09-03.html#cyprus"}, {"date": "2026-09-03", "section": "🇨🇾 Κύπρος", "title": "Ευρωπαϊκή Διπλωματία: Στην Κύπρο ο Πρόεδρος του Ευρωπαϊκού Συμβουλίου António Costa", "snippet": "Ο Πρόεδρος του Ευρωπαϊκού Συμβουλίου António Costa πραγματοποιεί επίσημη επίσκεψη εργασίας στη Λευκωσία την Παρασκευή 4 Σεπτεμβρίου 2026 για κατ' ιδίαν συνομιλί...", "url": "briefings/2026-09-03.html#cyprus"}, {"date": "2026-09-03", "section": "🇨🇾 Κύπρος", "title": "Δημόσια Υγεία: Αυξημένη επιφυλακή για τον Ιό του Δυτικού Νείλου μετά από καταγραφή κρουσμάτων", "snippet": "Οι Ιατρικές Υπηρεσίες και οι Υγειονομικές Αρχές του Υπουργείου Υγείας τέθηκαν σε αυξημένη επιφυλακή μετά την επιβεβαίωση έξι κρουσμάτων του Ιού του Δυτικού Νείλ...", "url": "briefings/2026-09-03.html#cyprus"}, {"date": "2026-09-03", "section": "🇨🇾 Κύπρος", "title": "Επικίνδυνες Οικοδομές: Στη Βουλή πρόταση για υποχρεωτικό πιστοποιητικό επιθεώρησης «ΜΟΤ»", "snippet": "Η Κοινοβουλευτική Επιτροπή Εσωτερικών εξέτασε τη θέσπιση νομοθετικού πλαισίου για υποχρεωτικό περιοδικό έλεγχο κτιρίων τύπου «ΜΟΤ», με στόχο τον εντοπισμό στατι...", "url": "briefings/2026-09-03.html#cyprus"}, {"date": "2026-09-03", "section": "🇨🇾 Κύπρος", "title": "Οικονομία: Ανάπτυξη 3,3% και διαβεβαιώσεις για διατήρηση πολυεθνικών εταιρειών", "snippet": "Ο Υπουργός Οικονομικών Μάκης Κεραυνός παρουσίασε τα στοιχεία για την ανάπτυξη της κυπριακής οικονομίας στο 3,3% κατά το δεύτερο τρίμηνο του 2026, ενώ απέρριψε κ...", "url": "briefings/2026-09-03.html#cyprus"}, {"date": "2026-09-03", "section": "🌍 Διεθνή", "title": "Μέση Ανατολή: Κλιμάκωση σύγκρουσης ΗΠΑ–Ιράν και μαύρη λίστα εμπορικών πλοίων στο Ορμούζ", "snippet": "Η ένταση στον Κόλπο κορυφώθηκε μετά από αμερικανικό πλήγμα σε εκδήλωση γάμου στο Ιράν και ανταποδοτικές επιθέσεις με drones σε Κουβέιτ και Μπαχρέιν. Η Τεχεράνη...", "url": "briefings/2026-09-03.html#world"}, {"date": "2026-09-03", "section": "🌍 Διεθνή", "title": "Γερμανία: Το Βερολίνο αποδίδει στη Μόσχα απόπειρα δολιοφθοράς στο αεροδρόμιο της Λειψίας", "snippet": "Η γερμανική κυβέρνηση επέρριψε επίσημα την ευθύνη στη Ρωσία για απόπειρα επίθεσης με drone στο αεροδρόμιο της Λειψίας, ανακοινώνοντας αυστηροποίηση των ελέγχων...", "url": "briefings/2026-09-03.html#world"}, {"date": "2026-09-03", "section": "🌍 Διεθνή", "title": "Αρκτική: Η Νορβηγία κατάσχεσε ρωσικό σκάφος για αποζημίωση $4,22 δισ. της Naftogaz", "snippet": "Οι νορβηγικές αρχές προχώρησαν στην κατάσχεση ρωσικού ερευνητικού σκάφους στα αρκτικά ύδατα, στο πλαίσιο εκτέλεσης διεθνούς διαιτητικής απόφασης ύψους $4,22 δισ...", "url": "briefings/2026-09-03.html#world"}, {"date": "2026-09-03", "section": "🌍 Διεθνή", "title": "Ευρωπαϊκή Ένωση: Πολιτικό αδιέξοδο στη σύνοδο των Υπουργών Εξωτερικών", "snippet": "Η άτυπη σύνοδος των Υπουργών Εξωτερικών της ΕΕ κατέληξε σε αδιέξοδο αναφορικά με την επιβολή εμπορικών κυρώσεων στο Ισραήλ και τη συμφωνία για κοινό ευρωπαϊκό δ...", "url": "briefings/2026-09-03.html#world"}, {"date": "2026-09-03", "section": "🌍 Διεθνή", "title": "Ουκρανία: Σφοδρή αντίδραση Ζελένσκι μετά από ένοπλη συμπλοκή μεταξύ υπηρεσιών ασφαλείας", "snippet": "Ο Πρόεδρος Volodymyr Zelenskyy παρενέβη δημόσια μετά από περιστατικό ανταλλαγής πυρών στο Κίεβο μεταξύ στελεχών αντίπαλων ουκρανικών υπηρεσιών πληροφοριών που ε...", "url": "briefings/2026-09-03.html#world"}, {"date": "2026-09-03", "section": "📅 Προθεσμίες", "title": "7 Σεπτεμβρίου 2026", "snippet": "7 Σεπτεμβρίου 2026 — Υποβολή στοιχείων για κρατική βοήθεια κακοκαιρίας: Οι πληγέντες από τα έντονα φαινόμενα της 29ης Αυγούστου καλούνται να υποβάλουν τα στοιχε...", "url": "briefings/2026-09-03.html#deadlines"}, {"date": "2026-09-03", "section": "📅 Προθεσμίες", "title": "Ενεργή προθεσμία", "snippet": "Ενεργή προθεσμία — Σχέδιο Ενίσχυσης Νέας Επιχειρηματικότητας & ΜμΕ: Ολοκλήρωση επιχειρηματικού σχεδίου και δικαιολογητικών στο σύστημα CY Login ενόψει της τρέχο...", "url": "briefings/2026-09-03.html#deadlines"}, {"date": "2026-09-02", "section": "⭐ Πρώτο Θέμα", "title": "Κλιμάκωση ΗΠΑ–Ιράν στα Στενά του Ορμούζ: Άλμα σε πετρέλαιο ($92) και ευρωπαϊκό αέριο (€75)", "snippet": "Η νέα αναζωπύρωση των στρατιωτικών συγκρούσεων μεταξύ Ηνωμένων Πολιτειών και Ιράν στον Περσικό Κόλπο έθεσε σε συναγερμό τις διεθνείς αγορές ενέργειας. Μετά από αμερικανικά αεροπορι...", "url": "briefings/2026-09-02.html#top-story"}, {"date": "2026-09-02", "section": "🇨🇾 Κύπρος", "title": "Κάβο Γκρέκο: Σε εξέλιξη η δύσκολη επιχείρηση ανέλκυσης των ναυαγίων «PERLA BIANCA» και «PETSAS I»", "snippet": "Το Υφυπουργείο Ναυτιλίας ανέθεσε σε εξειδικευμένη εταιρεία (Vasiliko Terminal Services) την επιχείρηση ανέλκυσης των συντριμμιών των δύο σκαφών αναψυχής που βυθ...", "url": "briefings/2026-09-02.html#cyprus"}, {"date": "2026-09-02", "section": "🇨🇾 Κύπρος", "title": "Υπουργικό: Κατά χάριν οικονομική βοήθεια έως €45.000 για τους πληγέντες της κακοκαιρίας της 29ης Αυγούστου", "snippet": "Το Υπουργικό Συμβούλιο ενέκρινε πλαίσιο κρατικής αρωγής για ζημιές σε νόμιμες και αδειούχες υποδομές. Για ανασφάλιστες κατοικίες παραχωρείται βοήθεια 80% της ζη...", "url": "briefings/2026-09-02.html#cyprus"}, {"date": "2026-09-02", "section": "🇨🇾 Κύπρος", "title": "Καύσιμα: Παράταση της μείωσης του φόρου κατανάλωσης έως τις 30 Νοεμβρίου εν μέσω πληθωρισμού 5,2%", "snippet": "Η κυβέρνηση και το Υπουργείο Οικονομικών προχωρούν στην επέκταση της μείωσης του φόρου κατανάλωσης καυσίμων κατά 8,33 σεντ ανά λίτρο μέχρι τις 30 Νοεμβρίου 2026...", "url": "briefings/2026-09-02.html#cyprus"}, {"date": "2026-09-02", "section": "🇨🇾 Κύπρος", "title": "Οικονομία: Στο 3,3% η ανάπτυξη της Κύπρου το β' τρίμηνο 2026 — Στα €7,87 δισ. το πραγματικό ΑΕΠ", "snippet": "Σύμφωνα με τα τελικά στοιχεία της Στατιστικής Υπηρεσίας, το κυπριακό ΑΕΠ αναπτύχθηκε με ετήσιο ρυθμό 3,3% (και +0,8% σε τριμηνιαία βάση) το δεύτερο τρίμηνο του...", "url": "briefings/2026-09-02.html#cyprus"}, {"date": "2026-09-02", "section": "🇨🇾 Κύπρος", "title": "Παιδεία: Έντονη αντιπαράθεση στη Βουλή για το σύστημα διορισμών εκπαιδευτικών", "snippet": "Σε υψηλούς τόνους διεξήχθη η συζήτηση στην Κοινοβουλευτική Επιτροπή Παιδείας, με την Υπουργό Αθηνά Μιχαηλίδου να υπεραμύνεται της μετάβασης στο σύστημα διορισίμ...", "url": "briefings/2026-09-02.html#cyprus"}, {"date": "2026-09-02", "section": "🌍 Διεθνή", "title": "Στρατιωτική ανάφλεξη ΗΠΑ–Ιράν στον Κόλπο: Επιχειρήσεις κατά των Φρουρών της Επανάστασης και αντίποινα", "snippet": "Η στρατιωτική αντιπαράθεση στον Περσικό Κόλπο κλιμακώθηκε δραματικά μετά τον τερματισμό της άτυπης εκεχειρίας του Ιουνίου. Η Κεντρική Διοίκηση των ΗΠΑ (CENTCOM)...", "url": "briefings/2026-09-02.html#world"}, {"date": "2026-09-02", "section": "🌍 Διεθνή", "title": "Γερμανία: Επίσημη απόδοση στη Ρωσία της απόπειρας δολιοφθοράς στη Λειψία & διπλωματικές απελάσεις", "snippet": "Η γερμανική ομοσπονδιακή κυβέρνηση ανακοίνωσε επίσημα ότι οι ρωσικές μυστικές υπηρεσίες βρίσκονται πίσω από την αποτυχημένη επίθεση με παγιδευμένο με εκρηκτικά...", "url": "briefings/2026-09-02.html#world"}, {"date": "2026-09-02", "section": "🌍 Διεθνή", "title": "Θάλασσα του Μαρμαρά: Βύθιση του τουρκικού φορτηγού πλοίου «Tuğberk İmamoğlu» — 10 ναυτικοί αγνοούμενοι", "snippet": "Τραγωδία σημειώθηκε στις 03:00 τα ξημερώματα στη Θάλασσα του Μαρμαρά, 18 ναυτικά μίλια νότια της Σηλυβρίας, όταν το τουρκικό φορτηγό πλοίο «Tuğberk İmamoğlu» (μ...", "url": "briefings/2026-09-02.html#world"}, {"date": "2026-09-02", "section": "🌍 Διεθνή", "title": "Ευρωπαϊκή Ενέργεια: Το φυσικό αέριο TTF έσπασε τα €75/MWh — Ιστορικό χαμηλό αποθεμάτων προ του χειμώνα", "snippet": "Η τιμή αναφοράς του ευρωπαϊκού φυσικού αερίου στον ολλανδικό κόμβο TTF κατέγραψε άλμα άνω των €75/MWh, αγγίζοντας το υψηλότερο επίπεδο από τις αρχές του 2023. Η...", "url": "briefings/2026-09-02.html#world"}, {"date": "2026-09-02", "section": "🌍 Διεθνή", "title": "Βρετανικό Κοινοβούλιο: Πρώτη εμφάνιση Andy Burnham στη Βουλή των Κοινοτήτων με άξονα τις αμυντικές δαπάνες", "snippet": "Ο νέος Πρωθυπουργός της Βρετανίας, Andy Burnham, πραγματοποίησε το ντεμπούτο του στην Ώρα του Πρωθυπουργού (PMQs), υπερασπιζόμενος τη δημοσιονομική στρατηγική τ...", "url": "briefings/2026-09-02.html#world"}, {"date": "2026-09-02", "section": "📅 Προθεσμίες", "title": "7 Σεπτεμβρίου 2026", "snippet": "7 Σεπτεμβρίου 2026 — Υποβολή στοιχείων για κρατική βοήθεια κακοκαιρίας: Οι πληγέντες από τα έντονα καιρικά φαινόμενα της 29ης Αυγούστου καλούνται να υποβάλουν τ...", "url": "briefings/2026-09-02.html#deadlines"}, {"date": "2026-09-02", "section": "📅 Προθεσμίες", "title": "Ενεργή προετοιμασία φακέλου", "snippet": "Ενεργή προετοιμασία φακέλου — Χορηγίες ΜμΕ & Νέων Επιχειρηματιών: Ολοκλήρωση επιχειρηματικού σχεδίου και προετοιμασία δικαιολογητικών στο σύστημα CY Login ενόψε...", "url": "briefings/2026-09-02.html#deadlines"}, {"date": "2026-09-01", "section": "⭐ Πρώτο Θέμα", "title": "Κλιμάκωση στον Περσικό Κόλπο: Νέες ανταλλαγές πυρών ΗΠΑ-Ιράν στο Στενό του Ορμούζ, ανοδική πίεση στο πετρέλαιο και διπλωματικός συναγερμός", "snippet": "Οι στρατιωτικές εντάσεις μεταξύ Ηνωμένων Πολιτειών και Ιράν κλιμακώθηκαν περαιτέρω τις τελευταίες ώρες, με την αμερικανική διοίκηση να εξαπολύει νέα στοχευμένα πλήγματα κατά ιρανικ...", "url": "briefings/2026-09-01.html#top-story"}, {"date": "2026-09-01", "section": "🇨🇾 Κύπρος", "title": "Πληθωρισμός στο 5,2% στην Κύπρο σύμφωνα με τα νεότερα στοιχεία της Eurostat", "snippet": "Σύμφωνα με τα προκαταρκτικά στοιχεία της Ευρωπαϊκής Στατιστικής Υπηρεσίας (Eurostat), ο ετήσιος πληθωρισμός στην Κύπρο διαμορφώθηκε στο 5,2%, καταγράφοντας αύξη...", "url": "briefings/2026-09-01.html#cyprus"}, {"date": "2026-09-01", "section": "🇨🇾 Κύπρος", "title": "Συνταξιοδοτική Μεταρρύθμιση και Ενεργειακό Κόστος στο επίκεντρο του Υπουργείου Οικονομικών", "snippet": "Το Υπουργείο Οικονομικών και η Επιτροπή Οικονομικών της Βουλής διεξάγουν διαβουλεύσεις για την ολοκλήρωση της συνταξιοδοτικής μεταρρύθμισης και την ενδεχόμενη π...", "url": "briefings/2026-09-01.html#cyprus"}, {"date": "2026-09-01", "section": "🌍 Διεθνή", "title": "Κλιμάκωση επιθέσεων σε δεξαμενόπλοια και διεθνής συναγερμός στο Στενό του Ορμούζ", "snippet": "Οι ένοπλες δυνάμεις των ΗΠΑ εξαπέλυσαν νέα κύματα αεροπορικών επιδρομών κατά ιρανικών εκτοξευτών πυραύλων και ναυτικών μέσων στο Στενό του Ορμούζ, με τους Φρουρ...", "url": "briefings/2026-09-01.html#world"}, {"date": "2026-09-01", "section": "🌍 Διεθνή", "title": "Αυστηρό μήνυμα Ουάσιγκτον για ισοπεδωτικά πλήγματα σε ιρανικές πετρελαϊκές εγκαταστάσεις", "snippet": "Η αμερικανική προεδρία διεμήνυσε ότι οι ένοπλες δυνάμεις των ΗΠΑ είναι έτοιμες να καταστρέψουν ολοσχερώς τον στρατηγικό τερματικό σταθμό εξαγωγής πετρελαίου του...", "url": "briefings/2026-09-01.html#world"}, {"date": "2026-09-01", "section": "🌍 Διεθνή", "title": "Διπλωματικός συναγερμός και πολλαπλές αναχαιτίσεις πυραύλων στην Ερυθρά Θάλασσα", "snippet": "Συμμαχική ναυτική δύναμη υπό τις ΗΠΑ και ευρωπαϊκές χώρες αναχαίτισε σμήνη μη επανδρωμένων αεροσκαφών (drones) και πυραύλων κρουζ που εκτοξεύτηκαν κατά εμπορικώ...", "url": "briefings/2026-09-01.html#world"}, {"date": "2026-09-01", "section": "🌍 Διεθνή", "title": "Ράλι πετρελαίου άνω των $90 και άλμα στις αποδόσεις των αμερικανικών κρατικών ομολόγων", "snippet": "Η αναζωπύρωση των γεωπολιτικών κινδύνων στη Μέση Ανατολή ώθησε τις τιμές του αργού πετρελαίου Brent σταθερά πάνω από τα $90 το βαρέλι, αναζωπυρώνοντας τις ανησυ...", "url": "briefings/2026-09-01.html#world"}, {"date": "2026-09-01", "section": "🌍 Διεθνή", "title": "Ευρωπαϊκή ενεργειακή επιφυλακή: Παράταση force majeure από την QatarEnergy και έλεγχοι αποθεμάτων", "snippet": "Η απόφαση της QatarEnergy να παρατείνει το καθεστώς ανωτέρας βίας (force majeure) στις παραδόσεις LNG προς ευρωπαϊκές χώρες έως τον Νοέμβριο κινητοποίησε τις Βρ...", "url": "briefings/2026-09-01.html#world"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Ανοικτή πρόσκληση υποβολής", "snippet": "Ανοικτή πρόσκληση υποβολής — Σχέδιο Ενίσχυσης Νέας Επιχειρηματικής Δραστηριότητας (Πρόγραμμα «Θ.Αλ.Ε.Ι.Α»):...", "url": "briefings/2026-09-01.html#deadlines"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Δικαιούχοι: Νέοι και νέες ηλικίας 18–29 ετών (χορηγία έως 70%), άνδρες και γυναίκες 30–55 ετών (χορηγία έως 60%).", "snippet": "Δικαιούχοι: Νέοι και νέες ηλικίας 18–29 ετών (χορηγία έως 70%), άνδρες και γυναίκες 30–55 ετών (χορηγία έως 60%)....", "url": "briefings/2026-09-01.html#deadlines"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Επιλέξιμος Προϋπολογισμός: Έως €120.000 για δραστηριότητες στους τομείς μεταποίησης, υπηρεσιών, τουρισμού και ηλεκτρονικού εμπορίου.", "snippet": "Επιλέξιμος Προϋπολογισμός: Έως €120.000 για δραστηριότητες στους τομείς μεταποίησης, υπηρεσιών, τουρισμού και ηλεκτρονικού εμπορίου....", "url": "briefings/2026-09-01.html#deadlines"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Ενέργεια: Ολοκλήρωση επιχειρηματικού σχεδίου και ηλεκτρονική υποβολή αίτησης μέσω του συστήματος CY Login στην επίσημη πύλη του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).", "snippet": "Ενέργεια: Ολοκλήρωση επιχειρηματικού σχεδίου και ηλεκτρονική υποβολή αίτησης μέσω του συστήματος CY Login στην επίσημη πύλη του Υπουργείου Ενέργειας, Εμπορίου κ...", "url": "briefings/2026-09-01.html#deadlines"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Ανοικτή πρόσκληση υποβολής", "snippet": "Ανοικτή πρόσκληση υποβολής — Σχέδιο Ενίσχυσης Νέας Επιχειρηματικής Δραστηριότητας (Πρόγραμμα «Θ.Αλ.Ε.Ι.Α»):...", "url": "briefings/2026-09-01.html#deadlines"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Δικαιούχοι: Νέοι και νέες ηλικίας 18–29 ετών (χορηγία έως 70%), άνδρες και γυναίκες 30–55 ετών (χορηγία έως 60%).", "snippet": "Δικαιούχοι: Νέοι και νέες ηλικίας 18–29 ετών (χορηγία έως 70%), άνδρες και γυναίκες 30–55 ετών (χορηγία έως 60%)....", "url": "briefings/2026-09-01.html#deadlines"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Επιλέξιμος Προϋπολογισμός: Έως €120.000 για δραστηριότητες στους τομείς μεταποίησης, υπηρεσιών, τουρισμού και ηλεκτρονικού εμπορίου.", "snippet": "Επιλέξιμος Προϋπολογισμός: Έως €120.000 για δραστηριότητες στους τομείς μεταποίησης, υπηρεσιών, τουρισμού και ηλεκτρονικού εμπορίου....", "url": "briefings/2026-09-01.html#deadlines"}, {"date": "2026-09-01", "section": "📅 Προθεσμίες", "title": "Ενέργεια: Ολοκλήρωση επιχειρηματικού σχεδίου και ηλεκτρονική υποβολή αίτησης μέσω του συστήματος CY Login στην επίσημη πύλη του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).", "snippet": "Ενέργεια: Ολοκλήρωση επιχειρηματικού σχεδίου και ηλεκτρονική υποβολή αίτησης μέσω του συστήματος CY Login στην επίσημη πύλη του Υπουργείου Ενέργειας, Εμπορίου κ...", "url": "briefings/2026-09-01.html#deadlines"}];
-
       if (!input || !resultsContainer) return;
 
-      input.addEventListener('input', (e) => {
+      let searchData = [];
+      let loadingPromise = null;
+
+      function getSearchData() {
+        if (!loadingPromise) {
+          loadingPromise = fetch('search-index.json')
+            .then(r => r.json())
+            .then(d => { searchData = d; return d; })
+            .catch(err => {
+              console.warn('Could not load search index asynchronously:', err);
+              return [];
+            });
+        }
+        return loadingPromise;
+      }
+
+      input.addEventListener('focus', getSearchData);
+
+      input.addEventListener('input', async (e) => {
         const q = e.target.value.trim().toLowerCase();
         if (q.length < 2) {
           resultsContainer.classList.add('hidden');
@@ -2263,7 +2368,8 @@
           return;
         }
 
-        const matches = searchData.filter(item => 
+        const data = searchData.length ? searchData : await getSearchData();
+        const matches = data.filter(item => 
           item.title.toLowerCase().includes(q) || 
           item.snippet.toLowerCase().includes(q) ||
           item.section.toLowerCase().includes(q)
@@ -2296,7 +2402,130 @@
       });
     })();
 
-    // 5. Smart Sticky Navigation Header (Auto-hide on scroll down, reveal on scroll up)
+    // 5. 60-Second Executive Scan Mode Toggle
+    (function () {
+      const scanBtn = document.getElementById('scanModeToggle');
+      if (!scanBtn) return;
+
+      const savedMode = localStorage.getItem('oracle-scan-mode') === '1';
+      if (savedMode) {
+        document.body.classList.add('scan-mode');
+        scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+        scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+      }
+
+      scanBtn.addEventListener('click', () => {
+        const isScan = document.body.classList.toggle('scan-mode');
+        localStorage.setItem('oracle-scan-mode', isScan ? '1' : '0');
+        if (isScan) {
+          scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+          scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+        } else {
+          scanBtn.innerHTML = '<span>⚡</span> <span class="hidden md:inline">60″ Scan</span>';
+          scanBtn.classList.remove('bg-[var(--accent)]', 'text-white');
+        }
+      });
+    })();
+
+    // 6. Sovereign Executive Audio Briefing (SpeechSynthesis)
+    (function () {
+      const playBtn = document.getElementById('audioPlayBtn');
+      const speedBtn = document.getElementById('audioSpeedBtn');
+      const stopBtn = document.getElementById('audioStopBtn');
+      const statusText = document.getElementById('audioStatusText');
+      const badge = document.getElementById('audioLiveBadge');
+
+      if (!playBtn || !('speechSynthesis' in window)) return;
+
+      const speeds = [1.0, 1.25, 1.5];
+      let speedIdx = 0;
+      let isSpeaking = false;
+
+      function getBriefingText() {
+        const titleEl = document.querySelector('#top-story h3');
+        const title = titleEl ? titleEl.innerText : '';
+        const bodyEl = document.querySelector('#top-story p');
+        const body = bodyEl ? bodyEl.innerText : '';
+        const deadlines = Array.from(document.querySelectorAll('#deadlines li')).slice(0, 3).map(li => li.innerText.split('—')[0]).join('. ');
+
+        return `The Oracle Sovereign. Ημερήσιο εμπιστευτικό briefing. Πρώτο θέμα: ${title}. ${body.slice(0, 320)}. Σημαντικές προθεσμίες και ενέργειες: ${deadlines}. Τέλος συνοπτικής ενημέρωσης.`;
+      }
+
+      function startPlayback() {
+        window.speechSynthesis.cancel();
+        const text = getBriefingText();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'el-GR';
+        utter.rate = speeds[speedIdx];
+
+        const voices = window.speechSynthesis.getVoices();
+        const elVoice = voices.find(v => v.lang.startsWith('el') || v.lang.includes('GR'));
+        if (elVoice) utter.voice = elVoice;
+
+        utter.onstart = () => {
+          isSpeaking = true;
+          playBtn.textContent = '⏸';
+          if (badge) badge.classList.remove('hidden');
+          if (stopBtn) stopBtn.classList.remove('hidden');
+          statusText.textContent = `Φωνητική ανάγνωση σε εξέλιξη (${speeds[speedIdx]}x)...`;
+        };
+
+        utter.onend = () => {
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Ολοκληρώθηκε η ηχητική σύνοψη.';
+        };
+
+        utter.onerror = () => {
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        };
+
+        window.speechSynthesis.speak(utter);
+      }
+
+      playBtn.addEventListener('click', () => {
+        if (isSpeaking) {
+          if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+            playBtn.textContent = '⏸';
+            statusText.textContent = `Συνέχιση ανάγνωσης (${speeds[speedIdx]}x)...`;
+          } else {
+            window.speechSynthesis.pause();
+            playBtn.textContent = '▶';
+            statusText.textContent = 'Σε παύση.';
+          }
+        } else {
+          startPlayback();
+        }
+      });
+
+      if (stopBtn) {
+        stopBtn.addEventListener('click', () => {
+          window.speechSynthesis.cancel();
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          stopBtn.classList.add('hidden');
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        });
+      }
+
+      if (speedBtn) {
+        speedBtn.addEventListener('click', () => {
+          speedIdx = (speedIdx + 1) % speeds.length;
+          speedBtn.textContent = `${speeds[speedIdx]}x`;
+          if (isSpeaking) startPlayback();
+        });
+      }
+    })();
+
+    // 7. Smart Sticky Navigation Header (Auto-hide on scroll down, reveal on scroll up)
     (function () {
       const nav = document.getElementById('mainNav');
       if (!nav) return;
@@ -2348,7 +2577,204 @@
         }
       }, { passive: true });
     })();
+
+    // 8. 24/7 Global Market Clocks & Live Trading Badges
+    (function () {
+      function updateClocks() {
+        const now = new Date();
+        
+        function formatTZ(tz) {
+          try {
+            return new Intl.DateTimeFormat('el-GR', {
+              timeZone: tz,
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false
+            }).format(now);
+          } catch (e) {
+            return '--:--';
+          }
+        }
+
+        function getMarketStatus(tz, openH, openM, closeH, closeM) {
+          try {
+            const parts = new Intl.DateTimeFormat('en-US', {
+              timeZone: tz,
+              weekday: 'short',
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: false
+            }).formatToParts(now);
+            
+            const p = {};
+            parts.forEach(x => p[x.type] = x.value);
+            const day = p.weekday;
+            const h = parseInt(p.hour, 10);
+            const m = parseInt(p.minute, 10);
+            
+            if (day === 'Sat' || day === 'Sun') return { open: false, label: 'CLOSED' };
+            
+            const currentMins = h * 60 + m;
+            const openMins = openH * 60 + openM;
+            const closeMins = closeH * 60 + closeM;
+            
+            const isOpen = currentMins >= openMins && currentMins < closeMins;
+            return { open: isOpen, label: isOpen ? 'OPEN' : 'CLOSED' };
+          } catch (e) {
+            return { open: false, label: '--' };
+          }
+        }
+
+        const cyEl = document.getElementById('clockCY');
+        const lonEl = document.getElementById('clockLON');
+        const nycEl = document.getElementById('clockNYC');
+        const tyoEl = document.getElementById('clockTYO');
+
+        if (cyEl) cyEl.textContent = formatTZ('Asia/Nicosia');
+        if (lonEl) lonEl.textContent = formatTZ('Europe/London');
+        if (nycEl) nycEl.textContent = formatTZ('America/New_York');
+        if (tyoEl) tyoEl.textContent = formatTZ('Asia/Tokyo');
+
+        // London: LSE 08:00 - 16:30
+        const lonSt = getMarketStatus('Europe/London', 8, 0, 16, 30);
+        const lonStEl = document.getElementById('statusLON');
+        if (lonStEl) {
+          lonStEl.textContent = lonSt.label;
+          lonStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (lonSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+
+        // NYC: NYSE 09:30 - 16:00
+        const nycSt = getMarketStatus('America/New_York', 9, 30, 16, 0);
+        const nycStEl = document.getElementById('statusNYC');
+        if (nycStEl) {
+          nycStEl.textContent = nycSt.label;
+          nycStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (nycSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+
+        // Tokyo: TSE 09:00 - 15:30
+        const tyoSt = getMarketStatus('Asia/Tokyo', 9, 0, 15, 30);
+        const tyoStEl = document.getElementById('statusTYO');
+        if (tyoStEl) {
+          tyoStEl.textContent = tyoSt.label;
+          tyoStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (tyoSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+      }
+
+      updateClocks();
+      setInterval(updateClocks, 1000);
+    })();
+
+    // 9. 24/7 Live Wire Feed Ticker & Drawer Modal
+    (function () {
+      const tickerEl = document.getElementById('liveWireTicker');
+      const drawerModal = document.getElementById('wireDrawerModal');
+      const drawerContent = document.getElementById('wireDrawerContent');
+      const openBtn = document.getElementById('openWireDrawerBtn');
+      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
+      const closeBtn = document.getElementById('closeWireDrawerBtn');
+
+      let wireItems = [];
+      let activeIndex = 0;
+      let rotatorInterval = null;
+
+      function fetchWire() {
+        return fetch('live-wire.json')
+          .catch(() => fetch('../live-wire.json'))
+          .then(r => r.json())
+          .then(data => {
+            wireItems = data;
+            renderTicker();
+            renderDrawer();
+            if (!rotatorInterval && wireItems.length > 1) {
+              rotatorInterval = setInterval(rotateTicker, 6000);
+            }
+          })
+          .catch(e => {
+            console.warn('Could not load live-wire:', e);
+          });
+      }
+
+      function renderTicker() {
+        if (!tickerEl || !wireItems.length) return;
+        const item = wireItems[activeIndex];
+        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
+        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${item.time_str || ''}]</span>`;
+        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${item.source})</span>`;
+        
+        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${breakBadge}${timeBadge}<a href="${item.link}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${item.title}</a>${srcBadge}</div>`;
+      }
+
+      function rotateTicker() {
+        if (!tickerEl || !wireItems.length) return;
+        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
+        renderTicker();
+      }
+
+      function renderDrawer() {
+        if (!drawerContent || !wireItems.length) return;
+        drawerContent.innerHTML = wireItems.map(item => {
+          const isB = item.is_breaking;
+          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
+          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
+          return `
+            <div class="p-3 rounded-lg border ${borderCls} space-y-1 text-xs">
+              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
+                <span>${item.source} · ${item.time_str || ''}</span>
+                ${isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}
+              </div>
+              <a href="${item.link}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
+                ${breakTag}${item.title}
+              </a>
+              ${item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${item.snippet}</p>` : ''}
+            </div>
+          `;
+        }).join('');
+      }
+
+      function toggleDrawer(open) {
+        if (!drawerModal) return;
+        if (open) {
+          drawerModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        } else {
+          drawerModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
+      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+      if (drawerModal) {
+        drawerModal.addEventListener('click', (e) => {
+          if (e.target === drawerModal) toggleDrawer(false);
+        });
+      }
+
+      fetchWire();
+    })();
   </script>
+
+  
+    <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
+    <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
+      <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
+        <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+            <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
+          </div>
+          <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
+        </div>
+        <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
+          Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
+        </div>
+        <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
+          <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
+        </div>
+      </div>
+    </div>
+    
 
 </body>
 </html>

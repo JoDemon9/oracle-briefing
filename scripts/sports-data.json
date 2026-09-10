@@ -14,38 +14,46 @@
     },
     "articles": [
       {
+        "title": "Ο καλός...\"Μάγια\" και ο Ακιντόλα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/o-kalosmagia-kai-o-akintola",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Τούρτα στο...γυμναστήριο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/toyrta-stogymnastirio",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "(Ομόνοια-Απόλλων)/Οι ΔΥΟ μπροστά θα είναι εκεί στο ντέρμπι...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/apollonas/omonoia-apollonoi-dyo-mprosta-tha-einai-ekei-sto-ntermpi",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "(Φώτος) Δουλειά... για Απόλλωνα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-doyleia-gia-apollona",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "(ΤΕΛΕΥΤΑΙΟ ΝΕΟ) Πάει σήμερα στο Ηράκλειο...",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/teleytaio-neo-paei-simera-sto-irakleio",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "(Βίντεο) Ακιντόλα: \"Δεν ξεχνώ την αγάπη του κόσμου-Είμαι 100% έτοιμος\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-akintola-den-xehno-tin-agapi-toy-kosmoy-eimai-100-etoimos",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "(Βίντεο) Πρωινός… Ακιντόλα",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/binteo-proinos-akintola",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Κλικς... με Ακιντόλα",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kliks-me-akintola",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Τα πακέτα εισιτηριών για την League Phase",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/ta-paketa-eisitirion-gia-tin-league-phase",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-10T09:22:44.461406+00:00"
+    "fetched_at": "2026-09-10T12:08:12.415862+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
     "sources": [
-      "The Guardian"
+      "The Guardian",
+      "BBC Sport"
     ],
+    "next_fixture": {
+      "fixture": "UEFA Champions League - League Stage: Manchester United versus Sabah — 20:00",
+      "match": "Manchester United versus Sabah — 20:00",
+      "competition": "UEFA Champions League - League Stage",
+      "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
+      "source": "BBC Sport"
+    },
     "articles": [
       {
         "title": "‘That’s how it started’: Dambrauskas’ journey from Who Wants to Be a Millionaire to Champions League",
@@ -73,13 +81,22 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-10T09:22:44.855193+00:00"
+    "fetched_at": "2026-09-10T12:08:13.202910+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
     "sources": [
-      "Marca"
+      "Marca",
+      "BBC Sport"
     ],
+    "next_fixture": {
+      "fixture": "Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)",
+      "match": "Real Madrid versus Rayo Vallecano — 20:00",
+      "competition": "Spanish La Liga",
+      "date": "Saturday 12th September",
+      "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
+      "source": "BBC Sport"
+    },
     "articles": [
       {
         "title": "Real Madrid is ruthless in the Champions League",
@@ -107,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-10T09:22:45.560358+00:00"
+    "fetched_at": "2026-09-10T12:08:14.219759+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -151,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-10T09:22:47.349021+00:00"
+    "fetched_at": "2026-09-10T12:08:15.886850+00:00"
   }
 }

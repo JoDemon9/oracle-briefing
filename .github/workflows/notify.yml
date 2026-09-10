@@ -1,19 +1,55 @@
-name: Send briefing to Telegram
+name: 24/7 Sovereign Intelligence Engine
 on:
+  schedule:
+    # 07:30 AM Cyprus Time (EEST, UTC+3) — Flagship Morning Broadsheet
+    - cron: '30 4 * * *'
+    # 13:30 PM Cyprus Time (EEST, UTC+3) — Midday Market Pulse
+    - cron: '30 10 * * *'
+    # 19:30 PM Cyprus Time (EEST, UTC+3) — Evening Debrief & Global Wrap
+    - cron: '30 16 * * *'
+    # Every 30 mins between 08:00 - 21:00 Cyprus Time — Real-time Breaking Wire Monitor
+    - cron: '*/30 5-18 * * *'
   push:
     paths: ['docs/briefings/*.md', 'briefings/*.md']
   workflow_dispatch:
+    inputs:
+      edition:
+        description: 'Edition to run (morning, midday, evening, wire)'
+        required: false
+        default: 'morning'
+
 jobs:
-  notify:
+  wire_monitor:
+    # Only run wire monitor on the 30-min cron ticks
+    if: "github.event_name == 'schedule' && github.event.schedule == '*/30 5-18 * * *'"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
-      - run: python scripts/build-html.py
+      - run: pip install beautifulsoup4
+      - name: Run 24/7 Wire Monitor
+        run: python scripts/monitor-breaking.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+  edition_dispatch:
+    # Run on scheduled edition times, git push, or manual dispatch
+    if: "github.event_name != 'schedule' || github.event.schedule != '*/30 5-18 * * *'"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install beautifulsoup4 yfinance
+      - name: Build HTML & Search Index
+        run: python scripts/build-html.py
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
-      - run: node scripts/send-briefing.mjs
+      - name: Dispatch Briefing to Telegram
+        if: "!contains(github.event.head_commit.message, '[skip-ci-dispatch]')"
+        run: node scripts/send-briefing.mjs
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

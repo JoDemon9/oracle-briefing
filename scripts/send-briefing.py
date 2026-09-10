@@ -35,7 +35,7 @@ BASE  = os.environ.get("BRIEFING_BASE_URL", "https://jodemon9.github.io/oracle-b
 arg = sys.argv[1] if len(sys.argv) > 1 else ""
 if arg and os.path.isfile(arg):
     md_path = arg
-    m = re.search(r'(\d{4}-\d{2}-\d{2})', os.path.basename(arg))
+    m = re.search(r'(\d{4}-\d{2}-\d{2}(?:-[a-zA-Z]+)?)', os.path.basename(arg))
     date = m.group(1) if m else datetime.now().strftime('%Y-%m-%d')
 else:
     date = arg if arg else datetime.now().strftime('%Y-%m-%d')
@@ -64,9 +64,10 @@ def first_heading(block):
     m = re.search(r"^##\s+(.+)$", block, re.MULTILINE)
     return m.group(1).strip() if m else ""
 
-top_story = first_heading(grab("## ⭐", "## 📊"))
+top_story_block = grab("## ⭐", "## 📊") or grab("## ⚡", "## 📊") or grab("## 🏁", "## 🔔")
+top_story = first_heading(top_story_block)
 
-dash_block = grab("## 📊", "## 🏦")
+dash_block = grab("## 📊", "## 🏦") or grab("## 📊", "## 🎯") or grab("## 🔔", "## ⚽")
 dash_rows = []
 for line in dash_block.split("\n"):
     if line.startswith("| **"):
@@ -78,11 +79,11 @@ for line in dash_block.split("\n"):
             dash_rows.append(f"• {name}: {val} ({chg})")
 dash_rows_str = "\n".join(dash_rows[:6])
 
-my_file_block = grab("## 🎯", "## 📅")
+my_file_block = grab("## 🎯", "## 📅") or grab("## 🎯", "## ⚽") or grab("## 🎯", "---")
 my_file = []
 for line in my_file_block.split("\n"):
-    if line.startswith("*   **"):
-        cleaned = re.sub(r"^\*\s+\*\*", "", line).replace("**", "").split(":")[0]
+    if line.startswith("*   **") or (line.startswith("*   ") and "**" in line):
+        cleaned = re.sub(r"^\*\s+\*\*", "", line).replace("**", "").split(":")[0].strip()
         my_file.append(f"• {cleaned}")
 my_file_str = "\n".join(my_file[:2])
 

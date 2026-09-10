@@ -41,16 +41,29 @@ TOPIC_FALLBACKS = {
     'school': 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
     'employment': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
     'economy': 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80',
+    'energy': 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80',
+    'banking': 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=800&q=80',
     'shipwreck': 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+    'shipping': 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',
     'politics': 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
     'housing': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
     'diplomacy': 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
+    'climate': 'https://images.unsplash.com/photo-1504370805625-d32c54b16100?w=800&q=80',
+    'social': 'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80',
+    'technology': 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
     'germany': 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80',
     'volcano': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
     'aviation': 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',
     'justice': 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
     'general': 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80'
 }
+
+
+def is_valid_content_image(img_url):
+    if not img_url or not img_url.startswith('http'):
+        return False
+    bad_tokens = ['googleusercontent.com', 'gstatic.com', 'default_avatar', 'placeholder', 'blank.gif', 'favicon', 'logo-white', 'logo-black']
+    return not any(b in img_url.lower() for b in bad_tokens)
 
 
 def md_to_inline_html(text):
@@ -121,7 +134,7 @@ def save_image_cache(cache):
 
 def resolve_image(url, title, default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
     cache = load_image_cache()
-    if url in cache and cache[url].get('image'):
+    if url in cache and is_valid_content_image(cache[url].get('image')):
         return cache[url]['image'], cache[url].get('category', default_category)
 
     # Keyword fallback selection
@@ -129,24 +142,42 @@ def resolve_image(url, title, default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
     fallback = TOPIC_FALLBACKS['general']
     category = default_category
 
-    if any(k in t_lower for k in ['σχολ', 'μαθητ', 'υποδομ', 'ύψωνα', 'παιδεία']):
+    if any(k in t_lower for k in ['καύσιμ', 'πετρέλαι', 'βενζίν', 'brent', 'wti', 'αέριο', 'ενέργει', 'interconnector']):
+        fallback = TOPIC_FALLBACKS['energy']
+        category = 'ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ'
+    elif any(k in t_lower for k in ['χέρτζογκ', 'ισραήλ', 'ιράν', 'μέση ανατολή', 'κόλπο', 'οηε', 'διπλωματ', 'χριστοδουλίδ', 'ολγκίν', 'κυπριακό']):
+        fallback = TOPIC_FALLBACKS['diplomacy']
+        category = 'ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
+    elif any(k in t_lower for k in ['κεφαλαιαγορ', 'τράπεζ', 'boch', 'επιτόκι', 'euribor', 'χρηματοπιστωτ', 'dbrs', 'οίκος', 'δημοσιονομ']):
+        fallback = TOPIC_FALLBACKS['banking']
+        category = 'ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ'
+    elif any(k in t_lower for k in ['κλίμα', 'θερμότερ', 'copernicus', 'καύσων', 'περιβάλλον', 'el niño']):
+        fallback = TOPIC_FALLBACKS['climate']
+        category = 'ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ'
+    elif any(k in t_lower for k in ['τέκν', 'οικογένει', 'επίδομα', 'κοινωνικ']):
+        fallback = TOPIC_FALLBACKS['social']
+        category = 'ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ'
+    elif any(k in t_lower for k in ['forum', 'future realized', 'τεχνολογ', 'επενδύσ', 'ey', 'data center']):
+        fallback = TOPIC_FALLBACKS['technology']
+        category = 'ΕΠΕΝΔΥΣΕΙΣ & TECH'
+    elif any(k in t_lower for k in ['ναυτικ', 'πλοί', 'ναυτιλ', 'σκάφος', 'ναυάγ', 'κερύνει', 'aster']):
+        fallback = TOPIC_FALLBACKS['shipping']
+        category = 'ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ'
+    elif any(k in t_lower for k in ['σχολ', 'μαθητ', 'υποδομ', 'ύψωνα', 'παιδεία']):
         fallback = TOPIC_FALLBACKS['school']
         category = 'ΠΑΙΔΕΙΑ & ΥΠΟΔΟΜΕΣ'
     elif any(k in t_lower for k in ['απασχόληση', 'εργασί', 'cystat', 'μισθ']):
         fallback = TOPIC_FALLBACKS['employment']
         category = 'ΟΙΚΟΝΟΜΙΑ'
-    elif any(k in t_lower for k in ['ναυάγ', 'νεκροί', 'σκάφος', 'κερύνει']):
-        fallback = TOPIC_FALLBACKS['shipwreck']
-        category = 'ΕΚΤΑΚΤΟ'
-    elif any(k in t_lower for k in ['λιμουζίν', 'βουλ', 'χριστοδουλίδ', 'πολιτικ']):
+    elif any(k in t_lower for k in ['λιμουζίν', 'βουλ', 'διορισμ', 'θεσμο', 'πολιτικ']):
         fallback = TOPIC_FALLBACKS['politics']
-        category = 'ΠΟΛΙΤΙΚΗ'
-    elif any(k in t_lower for k in ['ενοίκι', 'στέγη', 'τεπακ', 'ακίνητ', 'λεμεσ']):
+        category = 'ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ'
+    elif any(k in t_lower for k in ['ενοίκι', 'στέγη', 'τεπακ', 'ακίνητ', 'λεμεσ', 'κεδιπεσ']):
         fallback = TOPIC_FALLBACKS['housing']
         category = 'Ο ΦΑΚΕΛΟΣ ΜΟΥ'
-    elif any(k in t_lower for k in ['zelenskyy', 'putin', 'ουκραν', 'κίεβο', 'διπλωματ']):
+    elif any(k in t_lower for k in ['zelenskyy', 'putin', 'ουκραν', 'κίεβο', 'σιβηρία']):
         fallback = TOPIC_FALLBACKS['diplomacy']
-        category = 'ΔΙΠΛΩΜΑΤΙΑ'
+        category = 'ΔΙΕΘΝΗ'
     elif any(k in t_lower for k in ['afd', 'γερμανί', 'merz', 'σαξονία']):
         fallback = TOPIC_FALLBACKS['germany']
         category = 'ΓΕΡΜΑΝΙΑ'
@@ -156,29 +187,31 @@ def resolve_image(url, title, default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
     elif any(k in t_lower for k in ['amazon', 'boeing', 'μαϊάμι', 'αεροπορικ']):
         fallback = TOPIC_FALLBACKS['aviation']
         category = 'ΗΠΑ'
-    elif any(k in t_lower for k in ['icj', 'χάγη', 'δικαστήρι', 'ισραήλ', 'γενοκτον']):
+    elif any(k in t_lower for k in ['icj', 'χάγη', 'δικαστήρι', 'γενοκτον', 'δικαιοσύν']):
         fallback = TOPIC_FALLBACKS['justice']
         category = 'ΔΙΚΑΙΟΣΥΝΗ'
-    elif any(k in t_lower for k in ['dbrs', 'αξιολόγηση', 'οίκος', 'δημοσιονομ']):
-        fallback = TOPIC_FALLBACKS['economy']
-        category = 'ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ'
 
     # Try fetching og:image live with short timeout
     og_img = None
-    if url.startswith('http'):
+    if url.startswith('http') and 'news.google.com' not in url:
         try:
             req = urllib.request.Request(
                 url,
-                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'}
             )
-            with urllib.request.urlopen(req, timeout=3.0, context=SSL_CTX) as resp:
+            with urllib.request.urlopen(req, timeout=3.5, context=SSL_CTX) as resp:
                 html_txt = resp.read().decode('utf-8', errors='ignore')
                 m = re.search(r'<meta[^>]+(?:property|name)=[\'"]og:image[\'"][^>]+content=[\'"]([^\'"]+)[\'"]', html_txt, re.I)
                 if not m:
                     m = re.search(r'<meta[^>]+content=[\'"]([^\'"]+)[\'"][^>]+(?:property|name)=[\'"]og:image[\'"]', html_txt, re.I)
                 if m:
                     candidate = m.group(1).strip()
-                    if candidate.startswith('http'):
+                    if candidate.startswith('//'):
+                        candidate = 'https:' + candidate
+                    elif candidate.startswith('/'):
+                        from urllib.parse import urljoin
+                        candidate = urljoin(url, candidate)
+                    if is_valid_content_image(candidate):
                         og_img = candidate
         except Exception:
             pass
@@ -735,6 +768,21 @@ def build_search_index():
     return index_entries
 
 
+def generate_sparkline(change_str):
+    if not change_str:
+        return ""
+    if '+' in change_str:
+        stroke = "var(--up)"
+        pts = "1,11 10,9 19,5 28,1"
+    elif '-' in change_str:
+        stroke = "var(--down)"
+        pts = "1,1 10,5 19,9 28,11"
+    else:
+        stroke = "var(--ink-quiet)"
+        pts = "1,6 10,6 19,6 28,6"
+    return f'<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="{stroke}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="{pts}" /></svg>'
+
+
 def render_html(data, house_stats, search_index):
     date_display = data['date_str'] or '7 Σεπτεμβρίου 2026'
     time_display = data['time_str'] or '13:30'
@@ -751,7 +799,81 @@ def render_html(data, house_stats, search_index):
         ticker_spans.append(f'<span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">{d["asset"]}:</span> <span class="text-[var(--ink-body)]">{d["price"]}</span> <span class="{color_cls} font-semibold">{d["change"]}</span></span>')
     ticker_html = ' '.join(ticker_spans) + ' ' + ' '.join(ticker_spans)
 
-    # Top Story Image Resolution
+    # Detect Current Edition for Switcher
+    title_upper = (data.get('title') or '').upper()
+    current_edition = 'morning'
+    if 'ΜΕΣΗΜΒΡΙΝΟΣ' in title_upper or 'MIDDAY' in title_upper or '13:30' in time_display:
+        current_edition = 'midday'
+    elif 'ΑΠΟΓΕΥΜΑΤΙΝΗ' in title_upper or 'EVENING' in title_upper or '19:30' in time_display:
+        current_edition = 'evening'
+
+    morning_cls = "bg-[var(--accent)] text-white font-bold shadow-xs" if current_edition == 'morning' else "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
+    midday_cls = "bg-[var(--accent)] text-white font-bold shadow-xs" if current_edition == 'midday' else "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
+    evening_cls = "bg-[var(--accent)] text-white font-bold shadow-xs" if current_edition == 'evening' else "bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]"
+
+    edition_switcher_html = f'''
+    <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+      <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
+      <a href="index.html" class="px-2 py-0.5 rounded transition {morning_cls}">🌅 07:30 Πρωί</a>
+      <a href="briefings/{iso_date}-midday.html" class="px-2 py-0.5 rounded transition {midday_cls}">☀️ 13:30 Μεσημέρι</a>
+      <a href="briefings/{iso_date}-evening.html" class="px-2 py-0.5 rounded transition {evening_cls}">🌙 19:30 Απόγευμα</a>
+      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
+      </button>
+    </div>
+    '''
+
+    global_clocks_html = '''
+    <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
+      <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span> <span id="statusLON" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span> <span id="statusNYC" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span> <span id="statusTYO" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+    </div>
+    '''
+
+    live_wire_bar_html = '''
+    <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
+    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] t-meta">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
+          </span>
+        </div>
+        <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
+          <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
+        </div>
+        <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
+          <span>Προβολή Όλων (50+)</span> <span>➔</span>
+        </button>
+      </div>
+    </div>
+    '''
+
+    wire_drawer_modal_html = '''
+    <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
+    <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
+      <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
+        <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+            <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
+          </div>
+          <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
+        </div>
+        <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
+          Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
+        </div>
+        <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
+          <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
+        </div>
+      </div>
+    </div>
+    '''
     top_url = data['top_story']['sources'][0]['url'] if data['top_story'].get('sources') else ''
     top_img, top_category = resolve_image(top_url, data['top_story'].get('title', ''), 'ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ')
 
@@ -948,14 +1070,15 @@ def render_html(data, house_stats, search_index):
             if k in a_low:
                 a_icon = ico
                 break
+        spark_svg = generate_sparkline(d['change'])
         dash_rows.append(f'''
         <tr>
           <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
             <span>{a_icon}</span> <span>{d['asset']}</span>
           </td>
           <td class="py-2.5 text-[var(--ink-body)] font-mono">{d['price']}</td>
-          <td class="py-2.5 {change_cls} font-mono">
-            <span class="inline-flex items-center gap-1">{icon} {d['change']}</span>
+          <td class="py-2.5 {change_cls} font-mono whitespace-nowrap">
+            <span class="inline-flex items-center gap-1">{icon} {d['change']} {spark_svg}</span>
           </td>
           <td class="py-2.5 text-[var(--ink-quiet)] t-meta">{d['date_ref']}</td>
         </tr>
@@ -1764,6 +1887,25 @@ def render_html(data, house_stats, search_index):
     details[open] summary .expand-icon {{
       transform: rotate(180deg);
     }}
+
+    /* Executive 60-Second Scan Mode */
+    body.scan-mode article:not(:first-of-type),
+    body.scan-mode #world,
+    body.scan-mode #sports,
+    body.scan-mode #portfolio,
+    body.scan-mode #developments,
+    body.scan-mode #rates-and-tools,
+    body.scan-mode details.depth,
+    body.scan-mode #houseSearchSection,
+    body.scan-mode .ticker-wrap {{
+      display: none !important;
+    }}
+    body.scan-mode #top-story {{
+      border: 2px solid var(--accent);
+      border-radius: var(--r-md);
+      padding: 1.25rem;
+      background: var(--paper-raised);
+    }}
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -1771,7 +1913,7 @@ def render_html(data, house_stats, search_index):
   <!-- TOP BAR & STATUS -->
   <div class="bg-[var(--paper-raised)] border-b border-[var(--rule)] text-xs py-1.5 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3">
         <span id="freshness" data-generated="{gen_iso}"
               class="inline-flex items-center px-2 py-0.5 rounded t-meta font-semibold"></span>
 
@@ -1794,10 +1936,12 @@ def render_html(data, house_stats, search_index):
         <span class="t-meta text-[var(--ink-quiet)]">{date_display}</span>
         <span class="hidden sm:inline text-[var(--ink-quiet)]">·</span>
         <span class="hidden sm:inline t-meta text-[var(--ink-quiet)]">{time_display} ώρα Κύπρου (EEST)</span>
+        {edition_switcher_html}
       </div>
       <div class="flex items-center gap-4 t-meta text-[var(--ink-quiet)]">
-        <span>📍 Λεμεσός, Κύπρος</span>
-        <span>⏱️ Ανάγνωση ~{read_time}</span>
+        {global_clocks_html}
+        <span>📍 Λεμεσός</span>
+        <span>⏱️ ~{read_time}</span>
         <button id="themeToggle" class="px-2.5 py-1 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition t-meta" aria-pressed="false" aria-label="Εναλλαγή θέματος">
           🌓 Θέμα
         </button>
@@ -1842,6 +1986,8 @@ def render_html(data, house_stats, search_index):
     </div>
   </div>
 
+  {live_wire_bar_html}
+
   <!-- NAVIGATION & INSTANT SEARCH -->
   <nav id="mainNav" class="bg-[var(--paper-raised)] border-b border-[var(--rule)] sticky top-0 z-40 px-3 sm:px-4 py-2 shadow-xs backdrop-blur-md bg-opacity-95" aria-label="Κύρια πλοήγηση">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
@@ -1858,19 +2004,22 @@ def render_html(data, house_stats, search_index):
         <a href="#deadlines" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">📅 Προθεσμίες</a>
       </div>
 
-      <!-- Search Input Container with Instant Dropdown -->
+      <!-- Search Input Container with Instant Dropdown & Actions -->
       <div class="relative flex items-center gap-1.5 flex-shrink-0 ml-auto sm:ml-0">
+        <button id="scanModeToggle" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--accent)] font-semibold transition flex items-center gap-1" title="Εναλλαγή σε 60-Second Scan">
+          <span>⚡</span> <span class="hidden md:inline">60″ Scan</span>
+        </button>
+        <button onclick="window.print()" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition flex items-center gap-1" title="Εκτύπωση ή Αποθήκευση σε Broadsheet PDF" aria-label="Εκτύπωση σελίδας">
+          <span>📄</span> <span class="hidden md:inline">PDF Broadsheet</span>
+        </button>
         <div class="relative">
           <label for="archiveSearch" class="sr-only">Αναζήτηση στο αρχείο</label>
           <input type="text" id="archiveSearch" placeholder="🔍 Αναζήτηση στο αρχείο..." 
-                 class="t-meta px-3 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] w-36 sm:w-60 focus:w-48 sm:focus:w-64 transition-all shadow-xs">
+                 class="t-meta px-3 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] w-32 sm:w-56 focus:w-44 sm:focus:w-60 transition-all shadow-xs">
           <!-- Live Search Results Dropdown -->
           <div id="searchResults" class="hidden absolute right-0 top-full mt-2 w-80 sm:w-96 max-h-96 overflow-y-auto bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl shadow-xl z-50 p-2 text-xs space-y-2">
           </div>
         </div>
-        <button onclick="window.print()" class="t-meta px-2 py-1.5 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition" title="Εκτύπωση / PDF" aria-label="Εκτύπωση σελίδας">
-          🖨️
-        </button>
         <button id="themeToggleNav" class="t-meta px-2 py-1.5 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος" aria-label="Εναλλαγή θέματος">
           🌓
         </button>
@@ -1880,6 +2029,32 @@ def render_html(data, house_stats, search_index):
 
   <!-- MAIN CONTAINER (NEWS-FIRST HIERARCHY) -->
   <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- 🎙️ THE SOVEREIGN EXECUTIVE AUDIO BRIEFING -->
+    <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <button id="audioPlayBtn" class="w-11 h-11 rounded-full bg-[var(--accent)] text-white flex items-center justify-center shadow hover:opacity-90 transition font-bold text-lg flex-shrink-0" aria-label="Αναπαραγωγή ηχητικής σύνοψης">
+          ▶
+        </button>
+        <div>
+          <div class="t-meta font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>🎙️ Ακρόαση Πρωινής Σύνοψης (The Sovereign Audio Briefing)</span>
+            <span id="audioLiveBadge" class="hidden text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">LIVE</span>
+          </div>
+          <div id="audioStatusText" class="t-meta text-[var(--ink-quiet)]">
+            Επιτελική σύνοψη ~2 λεπτών · Πατήστε Play για φωνητική ανάγνωση
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="audioSpeedBtn" class="t-meta font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
+          1.0x
+        </button>
+        <button id="audioStopBtn" class="t-meta px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
+          ⏹ Διακοπή
+        </button>
+      </div>
+    </div>
 
     <!-- ==================== ⭐ 1. ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ (HERO NEWS) ==================== -->
     <section id="top-story" class="scroll-mt-24">
@@ -2469,15 +2644,31 @@ def render_html(data, house_stats, search_index):
       fetchWeather();
     }})();
 
-    // 4. Instant Archive Search
+    // 4. Instant Archive Search (Asynchronous Fetch with client-side cache)
     (function () {{
       const input = document.getElementById('archiveSearch');
       const resultsContainer = document.getElementById('searchResults');
-      let searchData = {json.dumps(search_index, ensure_ascii=False)};
-
       if (!input || !resultsContainer) return;
 
-      input.addEventListener('input', (e) => {{
+      let searchData = [];
+      let loadingPromise = null;
+
+      function getSearchData() {{
+        if (!loadingPromise) {{
+          loadingPromise = fetch('search-index.json')
+            .then(r => r.json())
+            .then(d => {{ searchData = d; return d; }})
+            .catch(err => {{
+              console.warn('Could not load search index asynchronously:', err);
+              return [];
+            }});
+        }}
+        return loadingPromise;
+      }}
+
+      input.addEventListener('focus', getSearchData);
+
+      input.addEventListener('input', async (e) => {{
         const q = e.target.value.trim().toLowerCase();
         if (q.length < 2) {{
           resultsContainer.classList.add('hidden');
@@ -2485,7 +2676,8 @@ def render_html(data, house_stats, search_index):
           return;
         }}
 
-        const matches = searchData.filter(item => 
+        const data = searchData.length ? searchData : await getSearchData();
+        const matches = data.filter(item => 
           item.title.toLowerCase().includes(q) || 
           item.snippet.toLowerCase().includes(q) ||
           item.section.toLowerCase().includes(q)
@@ -2518,7 +2710,130 @@ def render_html(data, house_stats, search_index):
       }});
     }})();
 
-    // 5. Smart Sticky Navigation Header (Auto-hide on scroll down, reveal on scroll up)
+    // 5. 60-Second Executive Scan Mode Toggle
+    (function () {{
+      const scanBtn = document.getElementById('scanModeToggle');
+      if (!scanBtn) return;
+
+      const savedMode = localStorage.getItem('oracle-scan-mode') === '1';
+      if (savedMode) {{
+        document.body.classList.add('scan-mode');
+        scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+        scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+      }}
+
+      scanBtn.addEventListener('click', () => {{
+        const isScan = document.body.classList.toggle('scan-mode');
+        localStorage.setItem('oracle-scan-mode', isScan ? '1' : '0');
+        if (isScan) {{
+          scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+          scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+        }} else {{
+          scanBtn.innerHTML = '<span>⚡</span> <span class="hidden md:inline">60″ Scan</span>';
+          scanBtn.classList.remove('bg-[var(--accent)]', 'text-white');
+        }}
+      }});
+    }})();
+
+    // 6. Sovereign Executive Audio Briefing (SpeechSynthesis)
+    (function () {{
+      const playBtn = document.getElementById('audioPlayBtn');
+      const speedBtn = document.getElementById('audioSpeedBtn');
+      const stopBtn = document.getElementById('audioStopBtn');
+      const statusText = document.getElementById('audioStatusText');
+      const badge = document.getElementById('audioLiveBadge');
+
+      if (!playBtn || !('speechSynthesis' in window)) return;
+
+      const speeds = [1.0, 1.25, 1.5];
+      let speedIdx = 0;
+      let isSpeaking = false;
+
+      function getBriefingText() {{
+        const titleEl = document.querySelector('#top-story h3');
+        const title = titleEl ? titleEl.innerText : '';
+        const bodyEl = document.querySelector('#top-story p');
+        const body = bodyEl ? bodyEl.innerText : '';
+        const deadlines = Array.from(document.querySelectorAll('#deadlines li')).slice(0, 3).map(li => li.innerText.split('—')[0]).join('. ');
+
+        return `The Oracle Sovereign. Ημερήσιο εμπιστευτικό briefing. Πρώτο θέμα: ${{title}}. ${{body.slice(0, 320)}}. Σημαντικές προθεσμίες και ενέργειες: ${{deadlines}}. Τέλος συνοπτικής ενημέρωσης.`;
+      }}
+
+      function startPlayback() {{
+        window.speechSynthesis.cancel();
+        const text = getBriefingText();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'el-GR';
+        utter.rate = speeds[speedIdx];
+
+        const voices = window.speechSynthesis.getVoices();
+        const elVoice = voices.find(v => v.lang.startsWith('el') || v.lang.includes('GR'));
+        if (elVoice) utter.voice = elVoice;
+
+        utter.onstart = () => {{
+          isSpeaking = true;
+          playBtn.textContent = '⏸';
+          if (badge) badge.classList.remove('hidden');
+          if (stopBtn) stopBtn.classList.remove('hidden');
+          statusText.textContent = `Φωνητική ανάγνωση σε εξέλιξη (${{speeds[speedIdx]}}x)...`;
+        }};
+
+        utter.onend = () => {{
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Ολοκληρώθηκε η ηχητική σύνοψη.';
+        }};
+
+        utter.onerror = () => {{
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        }};
+
+        window.speechSynthesis.speak(utter);
+      }}
+
+      playBtn.addEventListener('click', () => {{
+        if (isSpeaking) {{
+          if (window.speechSynthesis.paused) {{
+            window.speechSynthesis.resume();
+            playBtn.textContent = '⏸';
+            statusText.textContent = `Συνέχιση ανάγνωσης (${{speeds[speedIdx]}}x)...`;
+          }} else {{
+            window.speechSynthesis.pause();
+            playBtn.textContent = '▶';
+            statusText.textContent = 'Σε παύση.';
+          }}
+        }} else {{
+          startPlayback();
+        }}
+      }});
+
+      if (stopBtn) {{
+        stopBtn.addEventListener('click', () => {{
+          window.speechSynthesis.cancel();
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          stopBtn.classList.add('hidden');
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        }});
+      }}
+
+      if (speedBtn) {{
+        speedBtn.addEventListener('click', () => {{
+          speedIdx = (speedIdx + 1) % speeds.length;
+          speedBtn.textContent = `${{speeds[speedIdx]}}x`;
+          if (isSpeaking) startPlayback();
+        }});
+      }}
+    }})();
+
+    // 7. Smart Sticky Navigation Header (Auto-hide on scroll down, reveal on scroll up)
     (function () {{
       const nav = document.getElementById('mainNav');
       if (!nav) return;
@@ -2570,7 +2885,185 @@ def render_html(data, house_stats, search_index):
         }}
       }}, {{ passive: true }});
     }})();
+
+    // 8. 24/7 Global Market Clocks & Live Trading Badges
+    (function () {{
+      function updateClocks() {{
+        const now = new Date();
+        
+        function formatTZ(tz) {{
+          try {{
+            return new Intl.DateTimeFormat('el-GR', {{
+              timeZone: tz,
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false
+            }}).format(now);
+          }} catch (e) {{
+            return '--:--';
+          }}
+        }}
+
+        function getMarketStatus(tz, openH, openM, closeH, closeM) {{
+          try {{
+            const parts = new Intl.DateTimeFormat('en-US', {{
+              timeZone: tz,
+              weekday: 'short',
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: false
+            }}).formatToParts(now);
+            
+            const p = {{}};
+            parts.forEach(x => p[x.type] = x.value);
+            const day = p.weekday;
+            const h = parseInt(p.hour, 10);
+            const m = parseInt(p.minute, 10);
+            
+            if (day === 'Sat' || day === 'Sun') return {{ open: false, label: 'CLOSED' }};
+            
+            const currentMins = h * 60 + m;
+            const openMins = openH * 60 + openM;
+            const closeMins = closeH * 60 + closeM;
+            
+            const isOpen = currentMins >= openMins && currentMins < closeMins;
+            return {{ open: isOpen, label: isOpen ? 'OPEN' : 'CLOSED' }};
+          }} catch (e) {{
+            return {{ open: false, label: '--' }};
+          }}
+        }}
+
+        const cyEl = document.getElementById('clockCY');
+        const lonEl = document.getElementById('clockLON');
+        const nycEl = document.getElementById('clockNYC');
+        const tyoEl = document.getElementById('clockTYO');
+
+        if (cyEl) cyEl.textContent = formatTZ('Asia/Nicosia');
+        if (lonEl) lonEl.textContent = formatTZ('Europe/London');
+        if (nycEl) nycEl.textContent = formatTZ('America/New_York');
+        if (tyoEl) tyoEl.textContent = formatTZ('Asia/Tokyo');
+
+        // London: LSE 08:00 - 16:30
+        const lonSt = getMarketStatus('Europe/London', 8, 0, 16, 30);
+        const lonStEl = document.getElementById('statusLON');
+        if (lonStEl) {{
+          lonStEl.textContent = lonSt.label;
+          lonStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (lonSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }}
+
+        // NYC: NYSE 09:30 - 16:00
+        const nycSt = getMarketStatus('America/New_York', 9, 30, 16, 0);
+        const nycStEl = document.getElementById('statusNYC');
+        if (nycStEl) {{
+          nycStEl.textContent = nycSt.label;
+          nycStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (nycSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }}
+
+        // Tokyo: TSE 09:00 - 15:30
+        const tyoSt = getMarketStatus('Asia/Tokyo', 9, 0, 15, 30);
+        const tyoStEl = document.getElementById('statusTYO');
+        if (tyoStEl) {{
+          tyoStEl.textContent = tyoSt.label;
+          tyoStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (tyoSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }}
+      }}
+
+      updateClocks();
+      setInterval(updateClocks, 1000);
+    }})();
+
+    // 9. 24/7 Live Wire Feed Ticker & Drawer Modal
+    (function () {{
+      const tickerEl = document.getElementById('liveWireTicker');
+      const drawerModal = document.getElementById('wireDrawerModal');
+      const drawerContent = document.getElementById('wireDrawerContent');
+      const openBtn = document.getElementById('openWireDrawerBtn');
+      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
+      const closeBtn = document.getElementById('closeWireDrawerBtn');
+
+      let wireItems = [];
+      let activeIndex = 0;
+      let rotatorInterval = null;
+
+      function fetchWire() {{
+        return fetch('live-wire.json')
+          .catch(() => fetch('../live-wire.json'))
+          .then(r => r.json())
+          .then(data => {{
+            wireItems = data;
+            renderTicker();
+            renderDrawer();
+            if (!rotatorInterval && wireItems.length > 1) {{
+              rotatorInterval = setInterval(rotateTicker, 6000);
+            }}
+          }})
+          .catch(e => {{
+            console.warn('Could not load live-wire:', e);
+          }});
+      }}
+
+      function renderTicker() {{
+        if (!tickerEl || !wireItems.length) return;
+        const item = wireItems[activeIndex];
+        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
+        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${{item.time_str || ''}}]</span>`;
+        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${{item.source}})</span>`;
+        
+        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${{breakBadge}}${{timeBadge}}<a href="${{item.link}}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${{item.title}}</a>${{srcBadge}}</div>`;
+      }}
+
+      function rotateTicker() {{
+        if (!tickerEl || !wireItems.length) return;
+        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
+        renderTicker();
+      }}
+
+      function renderDrawer() {{
+        if (!drawerContent || !wireItems.length) return;
+        drawerContent.innerHTML = wireItems.map(item => {{
+          const isB = item.is_breaking;
+          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
+          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
+          return `
+            <div class="p-3 rounded-lg border ${{borderCls}} space-y-1 text-xs">
+              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
+                <span>${{item.source}} · ${{item.time_str || ''}}</span>
+                ${{isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}}
+              </div>
+              <a href="${{item.link}}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
+                ${{breakTag}}${{item.title}}
+              </a>
+              ${{item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${{item.snippet}}</p>` : ''}}
+            </div>
+          `;
+        }}).join('');
+      }}
+
+      function toggleDrawer(open) {{
+        if (!drawerModal) return;
+        if (open) {{
+          drawerModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }} else {{
+          drawerModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }}
+      }}
+
+      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
+      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+      if (drawerModal) {{
+        drawerModal.addEventListener('click', (e) => {{
+          if (e.target === drawerModal) toggleDrawer(false);
+        }});
+      }}
+
+      fetchWire();
+    }})();
   </script>
+
+  {wire_drawer_modal_html}
 
 </body>
 </html>
@@ -2597,6 +3090,9 @@ def main():
     m_date = re.search(r'(\d{4}-\d{2}-\d{2})', filename)
     date_slug = m_date.group(1) if m_date else datetime.now().strftime('%Y-%m-%d')
 
+    edition_suffix = "-midday" if "-midday" in filename else ("-evening" if "-evening" in filename else "")
+    edition_slug = f"{date_slug}{edition_suffix}"
+
     data = parse_markdown(content)
     house_stats = get_latest_house_search()
     if house_stats:
@@ -2613,19 +3109,30 @@ def main():
     os.makedirs(DOCS_BRIEFINGS_DIR, exist_ok=True)
 
     root_index = os.path.join(BASE_DIR, 'index.html')
-    briefing_html = os.path.join(BRIEFINGS_DIR, f'oracle-briefing-{date_slug}.html')
-    root_briefing_slug = os.path.join(BRIEFINGS_DIR, f'{date_slug}.html')
+    briefing_html = os.path.join(BRIEFINGS_DIR, f'oracle-briefing-{edition_slug}.html')
+    root_briefing_slug = os.path.join(BRIEFINGS_DIR, f'{edition_slug}.html')
     docs_index = os.path.join(DOCS_DIR, 'index.html')
-    docs_briefing_html = os.path.join(DOCS_BRIEFINGS_DIR, f'{date_slug}.html')
-    docs_briefing_md = os.path.join(DOCS_BRIEFINGS_DIR, f'{date_slug}.md')
+    docs_briefing_html = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.html')
+    docs_briefing_md = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.md')
 
-    for path in [root_index, briefing_html, root_briefing_slug, docs_index, docs_briefing_html]:
+    # Paths to write
+    paths_to_write = [briefing_html, root_briefing_slug, docs_briefing_html]
+    # If morning or default briefing, or if latest generated today, update index.html
+    paths_to_write.extend([root_index, docs_index])
+
+    for path in paths_to_write:
         with open(path, 'w', encoding='utf-8') as f:
             f.write(html_content)
         print(f"Generated: {path}")
 
     shutil.copy2(target_md, docs_briefing_md)
     print(f"Copied markdown to docs: {docs_briefing_md}")
+
+    # Copy live-wire.json to docs/
+    live_wire_src = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
+    if os.path.exists(live_wire_src):
+        shutil.copy2(live_wire_src, os.path.join(DOCS_DIR, 'live-wire.json'))
+        shutil.copy2(live_wire_src, os.path.join(BASE_DIR, 'live-wire.json'))
 
     print("\nSUCCESS! The Oracle Sovereign web portal and archives have been built with full news-first layout and imagery.")
 

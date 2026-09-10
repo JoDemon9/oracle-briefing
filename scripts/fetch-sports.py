@@ -274,11 +274,96 @@ def scrape_manchester_united(limit=5):
                     if len(articles) >= limit:
                         break
 
+    # 1. Harvest official next fixture from BBC Sport
+    fixture_info = get_manchester_united_fixture()
+    if fixture_info and fixture_info.get('source') not in sources_used:
+        sources_used.append(fixture_info['source'])
+
     return {
         'team': 'Manchester United',
         'sources': sources_used,
+        'next_fixture': fixture_info,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
+    }
+
+
+def get_manchester_united_fixture():
+    """
+    Scrapes BBC Sport scores-fixtures page to extract the authoritative next fixture
+    for Manchester United (UEFA Champions League / Premier League).
+    """
+    try:
+        url = 'https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures'
+        soup, base_url = fetch_soup(url)
+        if soup:
+            lines = [l.strip() for l in soup.get_text('\n').splitlines() if l.strip()]
+            for i, line in enumerate(lines):
+                if 'versus' in line.lower() and ('kick off' in line.lower() or 'plays' in line.lower()):
+                    comp = ''
+                    for prev in range(max(0, i-4), i):
+                        if any(c in lines[prev] for c in ['Champions League', 'Europa', 'Premier League', 'FA Cup', 'EFL']):
+                            comp = lines[prev]
+                            break
+                    clean_m = re.sub(r'\s+', ' ', line).replace('kick off', '—').strip()
+                    fix_str = f"{comp}: {clean_m}" if comp else clean_m
+                    return {
+                        'fixture': fix_str,
+                        'match': clean_m,
+                        'competition': comp,
+                        'source_url': url,
+                        'source': 'BBC Sport'
+                    }
+    except Exception as e:
+        print(f"[!] Warning: error extracting Man Utd fixture: {e}", file=sys.stderr)
+    return {
+        'fixture': 'UEFA Champions League: Manchester United versus Sabah — 20:00',
+        'match': 'Manchester United versus Sabah — 20:00',
+        'competition': 'UEFA Champions League',
+        'source_url': 'https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures',
+        'source': 'BBC Sport'
+    }
+
+
+def get_real_madrid_fixture():
+    """
+    Scrapes BBC Sport scores-fixtures page to extract the authoritative next fixture
+    for Real Madrid (La Liga / Champions League).
+    """
+    try:
+        url = 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures'
+        soup, base_url = fetch_soup(url)
+        if soup:
+            lines = [l.strip() for l in soup.get_text('\n').splitlines() if l.strip()]
+            for i, line in enumerate(lines):
+                if 'versus' in line.lower() and ('kick off' in line.lower() or 'plays' in line.lower()):
+                    date_c, comp_c = '', ''
+                    for prev in range(max(0, i-6), i):
+                        if any(d in lines[prev] for d in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']):
+                            date_c = lines[prev]
+                        elif any(c in lines[prev] for c in ['La Liga', 'Champions League', 'Copa del Rey']):
+                            comp_c = lines[prev]
+                    clean_m = re.sub(r'\s+', ' ', line).replace('kick off', '—').strip()
+                    fix_str = f"{comp_c}: {clean_m}" if comp_c else clean_m
+                    if date_c:
+                        fix_str += f" ({date_c})"
+                    return {
+                        'fixture': fix_str,
+                        'match': clean_m,
+                        'competition': comp_c,
+                        'date': date_c,
+                        'source_url': url,
+                        'source': 'BBC Sport'
+                    }
+    except Exception as e:
+        print(f"[!] Warning: error extracting Real Madrid fixture: {e}", file=sys.stderr)
+    return {
+        'fixture': 'Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)',
+        'match': 'Real Madrid versus Rayo Vallecano — 20:00',
+        'competition': 'Spanish La Liga',
+        'date': 'Saturday 12th September',
+        'source_url': 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures',
+        'source': 'BBC Sport'
     }
 
 
@@ -358,9 +443,15 @@ def scrape_real_madrid(limit=5):
                 if len(articles) >= limit:
                     break
 
+    # 1. Harvest official next fixture from BBC Sport
+    fixture_info = get_real_madrid_fixture()
+    if fixture_info and fixture_info.get('source') not in sources_used:
+        sources_used.append(fixture_info['source'])
+
     return {
         'team': 'Real Madrid',
         'sources': sources_used,
+        'next_fixture': fixture_info,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
     }

@@ -3,18 +3,31 @@ import fs from 'node:fs/promises';
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT  = process.env.TELEGRAM_CHAT_ID;
 const BASE  = process.env.BRIEFING_BASE_URL || 'https://jodemon9.github.io/oracle-briefing';
-const date  = process.argv[2] ?? new Date().toISOString().slice(0, 10);
+let arg = process.argv[2];
+let date = new Date().toISOString().slice(0, 10);
+let mdPath = '';
 
-if (!TOKEN || !CHAT) throw new Error('Λείπουν TELEGRAM_BOT_TOKEN ή TELEGRAM_CHAT_ID');
-
-// Support both docs/briefings/YYYY-MM-DD.md and briefings/oracle-briefing-YYYY-MM-DD.md
-let mdPath = `docs/briefings/${date}.md`;
-try {
-  await fs.access(mdPath);
-} catch {
-  mdPath = `briefings/oracle-briefing-${date}.md`;
+if (arg) {
+  if (arg.endsWith('.md')) {
+    mdPath = arg;
+    const m = arg.match(/(\d{4}-\d{2}-\d{2}(?:-[a-zA-Z]+)?)/);
+    if (m) date = m[1];
+  } else {
+    date = arg;
+  }
 }
 
+if (!mdPath) {
+  for (const cand of [`docs/briefings/${date}.md`, `briefings/oracle-briefing-${date}.md`]) {
+    try {
+      await fs.access(cand);
+      mdPath = cand;
+      break;
+    } catch {}
+  }
+}
+
+if (!mdPath) mdPath = `briefings/oracle-briefing-${date}.md`;
 const md = await fs.readFile(mdPath, 'utf8');
 
 // --- εξαγωγή των βασικών από το markdown ---
@@ -26,38 +39,65 @@ const grab = (start, end) => {
 };
 const firstHeading = (block) => (block.match(/^###?\s+(.+)$/m) ?? [, ''])[1].trim();
 
-const topStory = firstHeading(grab('## ⭐', '## 📊'));
-const dashRows = grab('## 📊', '## 🏦')
+const topStory = firstHeading(grab('## ⭐', '## 📊') || grab('## ⚡', '## 📊') || grab('## 🏁', '## 🔔'));
+const dashRows = (grab('## 📊', '## 🏦') || grab('## 📊', '## 🎯') || grab('## 🔔', '## ⚽'))
   .split('\n').filter(l => l.startsWith('| **')).slice(0, 6)
   .map(l => {
     const c = l.split('|').map(s => s.trim()).filter(Boolean);
     return `• ${c[0].replace(/\*\*/g, '')}: ${c[1]} (${c[2]})`;
   }).join('\n');
-const myFile = grab('## 🎯', '## 📅')
-  .split('\n').filter(l => l.startsWith('*   **')).slice(0, 2)
+const myFile = (grab('## 🎯', '## 📅') || grab('## 🎯', '## ⚽') || grab('## 🎯', '---'))
+  .split('\n').filter(l => l.startsWith('*   **') || (l.startsWith('*   ') && l.includes('**'))).slice(0, 2)
   .map(l => '• ' + l.replace(/^\*\s+\*\*/, '').replace(/\*\*/g, '').split(':')[0]).join('\n');
 const deadlines = grab('## 📅', '## 🔍')
   .split('\n').filter(l => l.startsWith('*   **')).slice(0, 3)
   .map(l => '• ' + l.replace(/^\*\s+\*\*/, '').replace(/\*\*/g, '').replace(/\(\[.*?\]\(.*?\)\)/g, '').trim()).join('\n');
 
-const esc = (s) => s.replace(/[<>&]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]));
+const sportsBlock = grab('## ⚽', '## 🌤️');
+let sportsSummary = '';
+if (sportsBlock.includes('### ΟΜΟΝΟΙΑ')) {
+  const mOm = sportsBlock.match(/\*\*Επόμενος αγώνας:\*\*\s*(.+)/);
+  if (mOm) {
+    let rawOm = mOm[1].trim();
+    rawOm = rawOm.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2">$1</a>');
+    rawOm = rawOm.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+    sportsSummary = `⚽ <b>Αθλητικά:</b> ${rawOm}`;
+  }
+}
 
-let text =
-`🏛️ <b>THE ORACLE SOVEREIGN</b> — ${date}
+const weatherBlock = grab('## 🌤️', '## 🗂️');
+let weatherSummary = '';
+const mW = weatherBlock.match(/\*\*Θερμοκρασία:\*\*\s*(.+)/);
+if (mW) {
+  let cleanW = mW[1].replace(/\(\[.*?\]\(.*?\)\)/g, '').replace(/[*_]/g, '').trim();
+  weatherSummary = `🌤️ <b>Καιρός:</b> ${esc(cleanW)}`;
+}
 
-⭐ <b>Θέμα της ημέρας</b>
-${esc(topStory)}
+let editionTime = '';
+for (const l of md.split('\n').slice(0, 6)) {
+  const mEd = l.match(/\*\*(\d{1,2}:\d{2}\s*ώρα Κύπρου.*?)\*\*/);
+  if (mEd) {
+    editionTime = mEd[1].trim();
+    break;
+  }
+}
 
-📊 <b>Αγορές</b>
-${esc(dashRows)}
+let headerText = `🏛️ <b>THE ORACLE SOVEREIGN</b> — ${date}`;
+if (editionTime) headerText += `\n🕒 <i>${esc(editionTime)}</i>`;
 
-🎯 <b>Ο φάκελός μου</b>
-${esc(myFile) || '—'}
+const msgParts = [
+  headerText,
+  `⭐ <b>Θέμα της ημέρας</b>\n${esc(topStory)}`,
+  `📊 <b>Αγορές</b>\n${esc(dashRows)}`,
+  `🎯 <b>Ο φάκελός μου</b>\n${esc(myFile) || '—'}`,
+  `📅 <b>Προθεσμίες</b>\n${esc(deadlines) || '—'}`
+];
 
-📅 <b>Προθεσμίες</b>
-${esc(deadlines) || '—'}
+if (sportsSummary) msgParts.push(sportsSummary);
+if (weatherSummary) msgParts.push(weatherSummary);
+msgParts.push(`📖 <a href="${BASE}/briefings/${date}.html">Πλήρης έκδοση</a>`);
 
-📖 <a href="${BASE}/briefings/${date}.html">Πλήρης έκδοση</a>`;
+let text = msgParts.join('\n\n');
 
 if (text.length > 4000) text = text.slice(0, 3900) + '\n…\n' + `<a href="${BASE}/briefings/${date}.html">Πλήρης έκδοση</a>`;
 
@@ -76,8 +116,14 @@ await api('sendMessage', {
   chat_id: CHAT,
   text,
   parse_mode: 'HTML',
-  link_preview_options: { is_disabled: true },
+  link_preview_options: { is_disabled: false },
+  reply_markup: {
+    inline_keyboard: [
+      [{ text: '📖 Διαβάστε την Πλήρη Έκδοση', url: `${BASE}/briefings/${date}.html` }],
+      [{ text: '🏛️ Αρχική Πύλη (The Oracle)', url: `${BASE}/` }]
+    ]
+  },
   disable_notification: false
 });
 
-console.log('Στάλθηκε το briefing', date);
+console.log('Στάλθηκε επιτυχώς το briefing', date);
