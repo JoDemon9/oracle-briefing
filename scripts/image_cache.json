@@ -226,5 +226,53 @@
   "https://www.stockwatch.com.cy/el/news/dyo-nea-steghastika-skhedia-570-oikopeda-kai-ekstra-orofos-poioys-afora": {
     "image": "https://www.stockwatch.com.cy/storage/cache/1200x628/6aa136ad4a156.jpg",
     "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.stockwatch.com.cy/en/news/israels-president-herzog-to-hold-one-day-visit-to-cyprus-on-thursday": {
+    "image": "https://www.stockwatch.com.cy/storage/cache/1200x628/6a9fa2bc6a065.jpg",
+    "category": "ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://news.rik.cy/article/2026/9/10/paratase-tou-meiomenou-phorou-katanaloses-sta-kausima-enekrine-to-upourgiko-sumboulio/": {
+    "image": "https://riknews-live-3b6a59f16159442b91f0247e09-b5029b8.divio-media.org/images/1789030940_TIMES_KAUSIMON_KUPROS_Photo_by_AMIR_.original.png",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.cna.org.cy/article/10850678/den-paei-oyte-nea-yorki-i-olgkin-tha-enimerosei-tilefonikos-ton-gg-oie-leei-o-ntoyzarik": {
+    "image": "https://www.cna.org.cy/temp/images/780x1200/cache_780x1200_Analog_medium_10441430_508273_12062026052746.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://inbusinessnews.reporter.com.cy/article/475400/ey-cyprus-future-realized-forum-borei-i-kypros-na-metatrepsei-ti-gopolitiki-kai-tin-technologa-se-neo-ependytiko-pleonektima": {
+    "image": "https://inbusinessnews.reporter.com.cy/images/1300x500/cache_1300x500_Analog_medium_475399_181809_26_09_09_173739.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ"
+  },
+  "https://www.alphanews.live/politics/aftous-tous-diorismous-apofasise-to-ypourgiko-symvoulio/": {
+    "image": "https://www.alphanews.live/wp-content/uploads/2026/08/neo-ypourgiko.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.sigmalive.com/news/politics/1328773/sti-boyli-i-metarrythmisi-epidomatos-teknoy-epofelountai-17000-oikogheneies": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1360888/conversions/epidomata_thumb-seo.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ"
+  },
+  "https://www.stockwatch.com.cy/el/news/paratasi-mekhri-to-telos-septemvrioy-ghia-to-skhedio-enikio-enanti-dosis": {
+    "image": "https://www.stockwatch.com.cy/storage/cache/1200x628/6a708992c395b.jpg",
+    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+  },
+  "https://www.aljazeera.com/news/2026/9/8/iaea-warns-over-iran-nuclear-access-as-western-powers-push-un-referral": {
+    "image": "https://www.aljazeera.com/wp-content/uploads/2025/09/AP25174399264874-1757921641.jpg?resize=1920%2C1440",
+    "category": "ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.theguardian.com/world/2026/sep/10/ukraine-war-briefing-arctic-missile-attack-russian-gas-siberia": {
+    "image": "https://i.guim.co.uk/img/media/08764724319d27d2156a84ec6fcbd1d0062b49db/1625_430_4903_3924/master/4903.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=0636f44c8bc4547a507a5fe6f1c9ff6b",
+    "category": "ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.dw.com/en/august-hottest-month-ever-recorded-says-eu-monitor/a-79208462": {
+    "image": "https://static.dw.com/image/78408395_6.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://news.un.org/en/story/2026/09/1168302": {
+    "image": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Production%20Library/2026/06/18-06-2026_UNP_SC_Libya_Tetteh.jpg/image770x420cropped.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.com/news/articles/cy4zd4dn9n9o": {
+    "image": "https://ichef.bbci.co.uk/news/1024/branded_news/c2bd/live/40eb11a0-acc8-11f1-950e-0d3c5642d8c0.png",
+    "category": "ΔΙΕΘΝΗ"
   }
 }

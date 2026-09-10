@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Το ΟΧΙ... του Κουλιμπαλί",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ohi-toy-koylimpali",
+        "title": "(ΤΕΛΕΥΤΑΙΟ ΝΕΟ) Πάει σήμερα στο Ηράκλειο...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/teleytaio-neo-paei-simera-sto-irakleio",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ντιονί με Άρη (βίντεο)",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ntioni-me-ari-binteo",
+        "title": "(Βίντεο) Ακιντόλα: \"Δεν ξεχνώ την αγάπη του κόσμου-Είμαι 100% έτοιμος\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-akintola-den-xehno-tin-agapi-toy-kosmoy-eimai-100-etoimos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Αποκάλυψη για Ομόνοια από την Μαρία στο kerkida OnAiR!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/apokalypsi-gia-omonoia-apo-tin-maria-sto-kerkida-onair",
+        "title": "(Βίντεο) Πρωινός… Ακιντόλα",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/binteo-proinos-akintola",
         "source": "Kerkida.net"
       },
       {
-        "title": "Eδώ είναι το (μεταγραφικό) ΚΟΥΙΖ!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/edo-einai-metagrafiko-koyiz",
+        "title": "Κλικς... με Ακιντόλα",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kliks-me-akintola",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ανάρτηση για Μπάλκοβετς",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/anartisi-gia-mpalkobets",
+        "title": "Τα πακέτα εισιτηριών για την League Phase",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/ta-paketa-eisitirion-gia-tin-league-phase",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-09T12:07:12.622436+00:00"
+    "fetched_at": "2026-09-10T09:22:44.461406+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -47,6 +47,16 @@
       "The Guardian"
     ],
     "articles": [
+      {
+        "title": "‘That’s how it started’: Dambrauskas’ journey from Who Wants to Be a Millionaire to Champions League",
+        "url": "https://www.theguardian.com/football/2026/sep/10/valdas-dambrauskas-sabah-manchester-united-arsenal-champions-league",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Carrick up for ‘magical’ Champions League but derby timing ‘not ideal’",
+        "url": "https://www.theguardian.com/football/2026/sep/09/michael-carrick-manchester-united-sabah-champions-league-old-trafford",
+        "source": "The Guardian"
+      },
       {
         "title": "Premier League: 10 talking points from the weekend’s action",
         "url": "https://www.theguardian.com/football/2026/sep/07/premier-league-10-talking-points-from-the-weekends-action",
@@ -61,19 +71,9 @@
         "title": "Manchester United’s front four show flashes but need more time to become fantastic",
         "url": "https://www.theguardian.com/football/2026/sep/06/manchester-uniteds-front-four-show-flashes-but-need-more-time-to-become-fantastic",
         "source": "The Guardian"
-      },
-      {
-        "title": "Everton 2-2 Manchester United: Premier League –as it happened",
-        "url": "https://www.theguardian.com/football/live/2026/sep/06/everton-v-manchester-united-premier-league-live",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Maitland-Niles stunner rescues late point for Everton against Manchester United",
-        "url": "https://www.theguardian.com/football/2026/sep/06/everton-manchester-united-premier-league-match-report",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-09T12:07:13.038843+00:00"
+    "fetched_at": "2026-09-10T09:22:44.855193+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -107,7 +107,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-09T12:07:13.768679+00:00"
+    "fetched_at": "2026-09-10T09:22:45.560358+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -126,6 +126,11 @@
     },
     "articles": [
       {
+        "title": "'It started as a joke, a fantasy' - F1 heads to football-obsessed Madrid",
+        "url": "https://www.bbc.com/sport/formula1/articles/cjw5n195nx8o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "McLaren talks, 'numb' cars and being 'captain of the ship' - Verstappen Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/cy4ze023nvro",
         "source": "BBC Sport F1"
@@ -136,21 +141,16 @@
         "source": "BBC Sport F1"
       },
       {
+        "title": "Kimi Raikkonen's son Robin, 11, signs for Red Bull",
+        "url": "https://www.bbc.com/sport/formula1/articles/c3v437155e3o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Russell hindered or just Antonelli brilliance? - F1 Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/c8r6e663g1lo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Ecclestone stopped by police for taking shotgun into Portugal",
-        "url": "https://www.bbc.com/sport/formula1/articles/cy9zx52xen2o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Antonelli 'walks over water' for win that will go down in F1 folklore",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm2my2z365lo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-09T12:07:15.535216+00:00"
+    "fetched_at": "2026-09-10T09:22:47.349021+00:00"
   }
 }
