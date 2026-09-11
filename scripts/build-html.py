@@ -4872,6 +4872,15 @@ def main():
     if os.path.exists(live_wire_src):
         shutil.copy2(live_wire_src, os.path.join(DOCS_DIR, 'live-wire.json'))
 
+    # Write version.json to docs/ for automatic stale-cache invalidation
+    version_info = {
+        'date': date_slug,
+        'edition': edition_suffix.replace('-', '') or 'morning',
+        'timestamp': datetime.now().isoformat()
+    }
+    with open(os.path.join(DOCS_DIR, 'version.json'), 'w', encoding='utf-8') as f:
+        json.dump(version_info, f, indent=2)
+
     print("\nSUCCESS! The Oracle Sovereign web portal and archives have been built with full news-first layout and imagery.")
 
 
