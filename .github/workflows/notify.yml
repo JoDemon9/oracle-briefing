@@ -60,7 +60,7 @@ jobs:
           BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
 
       - name: Dispatch Briefing to Telegram
-        if: "github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip-ci-dispatch]')"
+        if: "!cancelled() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip-ci-dispatch]'))"
         run: |
           python scripts/send-briefing.py --edition ${{ steps.resolve_edition.outputs.edition }} 2>&1 | tee dispatch.log
           echo "## Telegram Dispatch Output" >> $GITHUB_STEP_SUMMARY

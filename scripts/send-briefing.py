@@ -77,7 +77,7 @@ if target_file and os.path.isfile(target_file):
         edition_tag = ""
 else:
     date_only = cy_date_str
-    if explicit_edition:
+    if explicit_edition and explicit_edition != "auto":
         edition_tag = f"-{explicit_edition}" if explicit_edition != "morning" else ""
     else:
         if 5 <= cy_hour < 12:

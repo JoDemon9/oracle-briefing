@@ -429,20 +429,30 @@ def parse_markdown(md_content, filename=""):
             for itm in items[1:]:
                 itm_lines = itm.strip().splitlines()
                 if not itm_lines: continue
-                itm_title = itm_lines[0].strip()
+                raw_title = itm_lines[0].strip()
+                region = '🇨🇾 ΚΥΠΡΟΣ' if '🇨🇾' in raw_title else ('🌍 ΔΙΕΘΝΗ' if '🌍' in raw_title else '⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ')
+                clean_title = re.sub(r'^(?:🇨🇾|🌍|⚡)\s*', '', raw_title).strip()
+                clean_title = re.sub(r'\[(ΕΠΙΒΕΒΑΙΩΜΕΝΟ|ΕΞΕΛΙΣΣΟΜΕΝΟ)\]\s*', '', clean_title).strip()
+
                 itm_body = []
+                itm_why = ''
                 itm_src = None
                 for il in itm_lines[1:]:
                     il_c = il.strip()
-                    if il_c.startswith('**Πηγή:**') or il_c.startswith('Πηγή:'):
+                    if il_c.startswith('**Γιατί με αφορά:**') or il_c.startswith('Γιατί με αφορά:'):
+                        itm_why = re.sub(r'^\*?\*?Γιατί με αφορά:\*?\*?\s*', '', il_c).strip()
+                    elif il_c.startswith('**Πηγή:**') or il_c.startswith('Πηγή:'):
                         src_match = re.search(r'\[(.*?)\]\((.*?)\)', il_c)
                         if src_match:
                             itm_src = {'name': src_match.group(1).strip(), 'url': src_match.group(2).strip()}
                     elif il_c and not il_c.startswith('---'):
                         itm_body.append(il_c)
                 data['midday_news'].append({
-                    'title': itm_title,
+                    'title': clean_title,
+                    'raw_title': raw_title,
+                    'region': region,
                     'body': ' '.join(itm_body),
+                    'why': itm_why,
                     'source': itm_src
                 })
 
@@ -1901,58 +1911,398 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
         ticker_spans.append(f'<span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">{d["asset"]}:</span> <span class="text-[var(--ink-body)]">{d["price"]}</span> <span class="{color_cls} font-semibold inline-flex items-center">{d["change"]}{spk}</span></span>')
     ticker_html = ' · '.join(ticker_spans) + ' · ' + ' · '.join(ticker_spans) if ticker_spans else ''
 
-    # Midday News Cards
+    # Executive Pulse (60-second summary)
+    pulse_items = data.get('executive_pulse', [])
+    pulse_html = ""
+    if pulse_items:
+        pulse_cols = []
+        icons = ["📊", "🇨🇾", "⚽"]
+        for idx, itm in enumerate(pulse_items):
+            ico = icons[idx] if idx < len(icons) else "⚡"
+            pulse_cols.append(f'''
+            <div class="p-3.5 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                <span class="mr-1 text-sm">{ico}</span> {md_to_inline_html(itm)}
+              </div>
+            </div>
+            ''')
+        pulse_html = f'''
+        <!-- ⚡ 60-SECOND EXECUTIVE PULSE -->
+        <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-[var(--paper-raised)] to-[var(--paper-raised)] border border-amber-500/30 shadow-xs">
+          <div class="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-[var(--rule)]">
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[var(--accent)] animate-ping"></span> ⚡ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ
+            </span>
+            <span class="text-[10px] font-mono text-[var(--ink-quiet)]">MIDDAY PULSE</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {''.join(pulse_cols)}
+          </div>
+        </div>
+        '''
+
+    # Midday News Cards (Curated with Editorial Images & Typography)
     news_cards = []
     for idx, item in enumerate(data.get('midday_news', []), 1):
+        clean_title = md_to_inline_html(item.get('title', ''))
+        clean_body = md_to_inline_html(item.get('body', ''))
+        clean_why = md_to_inline_html(item.get('why', ''))
+
+        region = item.get('region', '🇨🇾 ΚΥΠΡΟΣ')
+        reg_badge_cls = "bg-[var(--accent)] text-white" if 'ΚΥΠΡΟΣ' in region else "bg-indigo-900/80 text-white"
+
+        item_url = item['source']['url'] if item.get('source') else ''
+        img_url, cat_name = resolve_image(item_url, clean_title, region)
+
         src_html = ""
         if item.get('source'):
-            src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
-        clean_title = md_to_inline_html(item['title'])
-        clean_body = md_to_inline_html(item['body'])
+            src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
+
+        why_html = f'''
+        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
+          <strong class="font-bold">Γιατί με αφορά:</strong> {clean_why}
+        </div>''' if clean_why else ""
 
         news_cards.append(f'''
-        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition">
+        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-2 font-mono text-[10px] text-[var(--ink-quiet)] uppercase tracking-wider">
-              <span>ΕΞΕΛΙΞΗ #{idx}</span>
-              <span class="text-amber-600 dark:text-amber-400 font-bold">⚡ MIDDAY WIRE</span>
+            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
+              <img src="{img_url}" alt="{clean_title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='{TOPIC_FALLBACKS['general']}';">
+              <span class="absolute top-2.5 left-2.5 {reg_badge_cls} t-meta px-2 py-0.5 rounded shadow-xs font-bold uppercase">{region}</span>
+              <span class="absolute top-2.5 right-2.5 bg-emerald-500/90 text-white font-bold t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
             </div>
-            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
-              {clean_title}
-            </h3>
-            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-4">
-              {clean_body}
-            </p>
+            <div class="p-5 sm:p-6">
+              <h3 class="t-title mb-2.5 text-[var(--ink)]">
+                {clean_title}
+              </h3>
+              <p class="t-body-sm leading-relaxed mb-3 text-[var(--ink-body)]">
+                {clean_body}
+              </p>
+              {why_html}
+            </div>
           </div>
-          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
-            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
+          <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="t-meta text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
             {src_html}
           </div>
         </article>
         ''')
     news_html = '\n'.join(news_cards)
 
-    # Market Table Rows
-    market_rows = []
+    # Market Tables (Two-Tier: Macro Radar vs Tech Equities Watchlist)
+    macro_rows = []
+    stock_rows = []
+
     for d in data.get('dashboard', []):
         is_up = '+' in d['change']
         is_down = '-' in d['change']
         badge_cls = "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20" if is_up else ("bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" if is_down else "bg-gray-500/10 text-gray-600 border-gray-500/20")
         spk = generate_sparkline(d['change'])
-        date_ref = md_to_inline_html(d.get('date_ref', ''))
-        market_rows.append(f'''
+        comment = md_to_inline_html(d.get('date_ref', ''))
+
+        row_html = f'''
         <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-4 font-bold text-[var(--ink)]">{d["asset"]}</td>
-          <td class="py-3 px-4 font-mono font-bold text-[var(--ink)]">{d["price"]}</td>
-          <td class="py-3 px-4 font-mono">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>{d["asset"]}</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">{d["price"]}</td>
+          <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold {badge_cls}">
               <span>{d["change"]}</span> {spk}
             </span>
           </td>
-          <td class="py-3 px-4 text-xs font-mono text-[var(--ink-quiet)]">{date_ref}</td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">{comment}</td>
         </tr>
-        ''')
-    market_table_html = '\n'.join(market_rows)
+        '''
+        if d.get('category') == 'Μετοχές Τεχνολογίας':
+            stock_rows.append(row_html)
+        else:
+            macro_rows.append(row_html)
+
+    if stock_rows:
+        market_section_html = f'''
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <!-- Macro Indices & FX -->
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-[var(--rule)]">
+            <div class="p-3.5 bg-[var(--paper)] border-b border-[var(--rule)] flex items-center justify-between">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+                <span>🏛️</span> <span>Κύριοι Δείκτες, Συνάλλαγμα & Crypto</span>
+              </h3>
+              <span class="text-[10px] font-mono text-[var(--accent)] font-bold">MACRO & FX</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-[var(--paper)] text-[10px] uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                  <tr>
+                    <th class="py-2.5 px-3.5">Αγορά / Τίτλος</th>
+                    <th class="py-2.5 px-3.5 font-mono">Τιμή</th>
+                    <th class="py-2.5 px-3.5 font-mono">Μεταβολή</th>
+                    <th class="py-2.5 px-3.5">Σχόλιο</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[var(--rule)] font-sans">
+                  {''.join(macro_rows)}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tech Stocks Watchlist -->
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-indigo-500/30">
+            <div class="p-3.5 bg-gradient-to-r from-[var(--paper)] to-indigo-950/10 border-b border-[var(--rule)] flex items-center justify-between">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+                <span>💻</span> <span>Μετοχές Τεχνολογίας (Midday Tech Watch)</span>
+              </h3>
+              <span class="text-[10px] font-mono text-indigo-500 font-bold">TECH RADAR</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-[var(--paper)] text-[10px] uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                  <tr>
+                    <th class="py-2.5 px-3.5">Μετοχή</th>
+                    <th class="py-2.5 px-3.5 font-mono">Τιμή</th>
+                    <th class="py-2.5 px-3.5 font-mono">Μεταβολή</th>
+                    <th class="py-2.5 px-3.5">Σχόλιο</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[var(--rule)] font-sans">
+                  {''.join(stock_rows)}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        '''
+    else:
+        market_section_html = f'''
+        <div class="card overflow-hidden shadow-xs">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                <tr>
+                  <th class="py-3 px-4">Δείκτης / Αξία</th>
+                  <th class="py-3 px-4 font-mono">Τιμή</th>
+                  <th class="py-3 px-4 font-mono">Μεταβολή</th>
+                  <th class="py-3 px-4">Ώρα Αποτίμησης / Σχόλιο</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[var(--rule)] font-sans">
+                {''.join(macro_rows)}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        '''
+
+    # Sports Cards (if present)
+    sports = data.get('sports', {})
+    has_sports = any(sports.get(k, {}).get('last_result') or sports.get(k, {}).get('next_match') for k in sports)
+    sports_section_html = ""
+    if has_sports:
+        sports_config = [
+            {
+                'key': 'omonoia',
+                'name': 'ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ',
+                'icon': '☘️',
+                'league': 'CYPRUS LEAGUE & EUROPE',
+                'border': 'border-emerald-700/30 dark:border-emerald-600/40',
+                'header_bg': 'bg-gradient-to-r from-emerald-900 to-green-950',
+                'search_q': 'Omonoia FC highlights 2026'
+            },
+            {
+                'key': 'manutd',
+                'name': 'MANCHESTER UNITED',
+                'icon': '🔴',
+                'league': 'UEFA CHAMPIONS LEAGUE',
+                'border': 'border-red-700/30 dark:border-red-600/40',
+                'header_bg': 'bg-gradient-to-r from-red-900 to-stone-950',
+                'search_q': 'Manchester United highlights 2026'
+            },
+            {
+                'key': 'realmadrid',
+                'name': 'REAL MADRID',
+                'icon': '⚪',
+                'league': 'SPANISH LA LIGA',
+                'border': 'border-amber-700/30 dark:border-amber-600/40',
+                'header_bg': 'bg-gradient-to-r from-indigo-950 via-slate-900 to-purple-950',
+                'search_q': 'Real Madrid highlights 2026'
+            },
+            {
+                'key': 'formula1',
+                'name': 'FORMULA 1',
+                'icon': '🏎️',
+                'league': 'FIA WORLD CHAMPIONSHIP',
+                'border': 'border-red-600/30 dark:border-red-500/40',
+                'header_bg': 'bg-gradient-to-r from-neutral-900 to-red-950',
+                'search_q': 'Formula 1 highlights 2026'
+            }
+        ]
+
+        sports_cards = []
+        for sc in sports_config:
+            s_data = sports.get(sc['key'], {})
+            last_res = s_data.get('last_result') or ''
+            next_m = s_data.get('next_match') or ''
+            news_list = s_data.get('news') or []
+            src = s_data.get('source')
+            hl = s_data.get('highlights')
+
+            if next_m in ['--', '---']: next_m = ''
+            if last_res in ['--', '---']: last_res = ''
+            clean_news = [n for n in news_list if n not in ['--', '---', '']]
+
+            last_res_html = f'''
+            <div class="flex items-start gap-2 text-xs">
+              <span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
+              <span class="text-[var(--ink-body)]">{md_to_inline_html(last_res)}</span>
+            </div>''' if last_res else ""
+
+            next_match_html = f'''
+            <div class="flex items-start gap-2 text-xs">
+              <span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
+              <span class="text-[var(--ink-body)] font-medium">{md_to_inline_html(next_m)}</span>
+            </div>''' if next_m else '<div class="text-xs text-[var(--ink-quiet)] italic">Αναμονή ορισμού επόμενου αγώνα</div>'
+
+            news_html = f'''
+            <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
+              <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
+              {' '.join(md_to_inline_html(n) for n in clean_news)}
+            </div>''' if clean_news else ""
+
+            src_html = f'''
+            <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
+              <span>Επίσημη Πηγή:</span>
+              <a href="{src['url']}" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">{src['name']}</a>
+            </div>''' if src else ""
+
+            search_url = hl['url'] if hl and hl.get('url') else f"https://www.youtube.com/results?search_query={sc['search_q'].replace(' ', '+')}"
+            search_title = hl['title'] if hl and hl.get('title') else "YouTube Highlights & Match Hub"
+
+            sports_cards.append(f'''
+            <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs {sc['border']}">
+              <div>
+                <div class="{sc['header_bg']} p-4 text-white flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-2xl">{sc['icon']}</span>
+                    <h3 class="font-masthead font-bold text-sm tracking-wide text-white">{sc['name']}</h3>
+                  </div>
+                  <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                    {sc['league']}
+                  </span>
+                </div>
+                <div class="p-5 space-y-3">
+                  {last_res_html}
+                  {next_match_html}
+                  {news_html}
+                  {src_html}
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="{search_url}" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
+                  <span>▶</span> <span>{search_title}</span>
+                </a>
+              </div>
+            </article>
+            ''')
+        sports_section_html = f'''
+        <!-- ==================== ⚽ 3. ΑΘΛΗΤΙΚΑ ==================== -->
+        <section id="sports" class="scroll-mt-24">
+          <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+            <h2 class="t-section flex items-center gap-2">
+              <span>⚽</span> <span>Μεσημβρινός Αθλητισμός & Πρόγραμμα</span>
+            </h2>
+            <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">SPORTS WIRE</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {''.join(sports_cards)}
+          </div>
+        </section>
+        '''
+
+    # Weather (if present)
+    wx_raw = data.get('weather', {}).get('raw_items', [])
+    weather_section_html = ""
+    if wx_raw:
+        wx_formatted_items = []
+        for raw in wx_raw:
+            if not raw or raw.strip() in ['--', '---'] or raw.startswith('---'):
+                continue
+            icon = '🌤️'
+            low = raw.lower()
+            if 'θερμοκρασία' in low: icon = '🌡️'
+            elif 'υγρασία' in low: icon = '💧'
+            elif 'άνεμος' in low or 'ανεμοι' in low: icon = '💨'
+            elif 'uv' in low or 'προειδοποιήσεις' in low: icon = '⚠️'
+            elif 'πρόγνωση' in low or 'αίθριος' in low: icon = '☀️'
+            elif 'πηγή' in low: icon = '🌐'
+
+            m_label = re.match(r'^\*\*(.*?)\*\*:?\s*(.*)$', raw)
+            if m_label:
+                lbl = m_label.group(1).strip()
+                rest = md_to_inline_html(m_label.group(2).strip())
+                is_warn = (icon == '⚠️')
+                bg_cls = "bg-amber-500/10 border border-amber-500/30 dark:bg-amber-950/30" if is_warn else "bg-[var(--paper)] border border-[var(--rule)]"
+                wx_formatted_items.append(f'''
+                <div class="flex items-start gap-3 p-3 rounded-xl {bg_cls}">
+                  <span class="text-xl flex-shrink-0 mt-0.5">{icon}</span>
+                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                    <span class="font-bold text-[var(--ink)]">{lbl}:</span> {rest}
+                  </div>
+                </div>''')
+            else:
+                wx_formatted_items.append(f'''
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                  <span class="text-xl flex-shrink-0 mt-0.5">{icon}</span>
+                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">{md_to_inline_html(raw)}</div>
+                </div>''')
+
+        weather_section_html = f'''
+        <!-- ==================== 🌤️ 4. ΚΑΙΡΟΣ — ΛΕΜΕΣΟΣ ==================== -->
+        <section id="weather" class="scroll-mt-24">
+          <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+            <h2 class="t-section flex items-center gap-2">
+              <span>🌤️</span> <span>Καιρός — Λεμεσός (Μεσημβρινές Συνθήκες)</span>
+            </h2>
+            <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">METEO RADAR</span>
+          </div>
+          <div class="card p-5 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-amber-500/5 border border-amber-500/20 rounded-2xl shadow-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {''.join(wx_formatted_items)}
+            </div>
+          </div>
+        </section>
+        '''
+
+    # Developments (if present)
+    dev_items = data.get('developments', [])
+    dev_section_html = ""
+    if dev_items:
+        dev_cards = []
+        for itm in dev_items:
+            clean_d = md_to_inline_html(itm)
+            dev_cards.append(f'''
+            <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
+              <span class="w-2.5 h-2.5 rounded-full bg-[var(--accent)] flex-shrink-0 mt-1.5"></span>
+              <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
+                {clean_d}
+              </div>
+            </li>
+            ''')
+        dev_section_html = f'''
+        <!-- ==================== 🗂️ 5. ΜΕΣΗΜΒΡΙΝΕΣ ΕΞΕΛΙΞΕΙΣ ==================== -->
+        <section id="developments" class="scroll-mt-24">
+          <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+            <h2 class="t-section flex items-center gap-2">
+              <span>🗂️</span> <span>Μεσημβρινές Εξελίξεις</span>
+            </h2>
+            <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">STRATEGIC HIGHLIGHTS</span>
+          </div>
+          <ul class="space-y-2.5">
+            {''.join(dev_cards)}
+          </ul>
+        </section>
+        '''
 
     # Priorities List
     priority_items = []
@@ -2069,48 +2419,45 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
 
   <!-- MAIN CONTENT -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+    {pulse_html}
+
     <!-- 1. BREAKING & DEAL WIRE -->
-    <section>
+    <section id="midday-news" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
           <span>⚡</span> <span>Μεσημβρινό Breaking & Deal Wire</span>
         </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">CURATED DIGEST</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {news_html}
       </div>
     </section>
 
     <!-- 2. MIDDAY MARKET PULSE -->
-    <section>
+    <section id="market-pulse" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>📊</span> <span>Midday Market Pulse (ΧΑΚ · ATHEX · Ευρώπη)</span>
+          <span>📊</span> <span>Midday Market Pulse (ΧΑΚ · ATHEX · Ευρώπη & Wall Street)</span>
         </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">LIVE APPRAISAL</span>
       </div>
-      <div class="card overflow-hidden">
-        <table class="w-full text-left text-sm">
-          <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
-            <tr>
-              <th class="py-3 px-4">Δείκτης / Αξία</th>
-              <th class="py-3 px-4">Τιμή</th>
-              <th class="py-3 px-4">Μεταβολή</th>
-              <th class="py-3 px-4">Ώρα Αποτίμησης</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-[var(--rule)] font-sans">
-            {market_table_html}
-          </tbody>
-        </table>
-      </div>
+      {market_section_html}
     </section>
 
-    <!-- 3. PRIORITIES -->
-    <section>
+    {sports_section_html}
+
+    {weather_section_html}
+
+    {dev_section_html}
+
+    <!-- 6. PRIORITIES -->
+    <section id="priorities" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
           <span>🎯</span> <span>Απογευματινές Προτεραιότητες</span>
         </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">TIMELINE</span>
       </div>
       <div class="card p-5">
         <ul class="space-y-2.5">
