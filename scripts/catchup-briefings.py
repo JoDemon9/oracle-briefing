@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 catchup-briefings.py — Failsafe Catch-Up Engine
@@ -63,11 +63,14 @@ def main():
     print(f"⚡ Catch-up check: Detected missing edition(s): {', '.join(missing_editions)}")
     for edition in missing_editions:
         print(f"\n▶ Executing catch-up dispatch for: [{edition.upper()}]...")
-        runner = os.path.join(SCRIPTS_DIR, 'agent-runner.py')
-        subprocess.run([sys.executable, runner, '--edition', edition], cwd=BASE_DIR)
-
-        dispatcher = os.path.join(SCRIPTS_DIR, 'send-briefing.py')
-        subprocess.run([sys.executable, dispatcher, '--edition', edition], cwd=BASE_DIR)
+        daily_script = os.path.join(SCRIPTS_DIR, 'daily-run.py')
+        if os.path.exists(daily_script):
+            subprocess.run([sys.executable, daily_script, '--edition', edition], cwd=BASE_DIR)
+        else:
+            runner = os.path.join(SCRIPTS_DIR, 'agent-runner.py')
+            subprocess.run([sys.executable, runner, '--edition', edition], cwd=BASE_DIR)
+            dispatcher = os.path.join(SCRIPTS_DIR, 'send-briefing.py')
+            subprocess.run([sys.executable, dispatcher, '--edition', edition], cwd=BASE_DIR)
 
     return 0
 
