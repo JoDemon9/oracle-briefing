@@ -11,5 +11,6 @@ __pycache__/
 /index.html
 /search-index.json
 /live-wire.json
+/briefings/live-wire.json
 .link-check*
 .*.json

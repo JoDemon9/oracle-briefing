@@ -403,11 +403,194 @@ def render_edition_switcher_html(urls, current_edition):
       <a href="{urls['morning']}" class="px-2 py-0.5 rounded transition {morning_cls}">🌅 07:30 Πρωί</a>
       <a href="{urls['midday']}" class="px-2 py-0.5 rounded transition {midday_cls}">☀️ 13:30 Μεσημέρι</a>
       <a href="{urls['evening']}" class="px-2 py-0.5 rounded transition {evening_cls}">🌙 19:30 Απόγευμα</a>
-      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5">
+      <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5 cursor-pointer">
         <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
       </button>
     </div>
     '''
+
+
+def get_live_wire_json_str():
+    live_wire_src = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
+    if not os.path.exists(live_wire_src):
+        live_wire_src = os.path.join(DOCS_DIR, 'live-wire.json')
+    if os.path.exists(live_wire_src):
+        try:
+            with open(live_wire_src, 'r', encoding='utf-8') as f:
+                wire_items = json.load(f)
+                if isinstance(wire_items, list):
+                    return json.dumps(wire_items, ensure_ascii=False).replace('</script>', '<\\/script>')
+        except Exception as e:
+            print(f"Warning: Could not read {live_wire_src}: {e}")
+    return "[]"
+
+
+def render_wire_drawer_modal_html():
+    initial_json = get_live_wire_json_str()
+    return f'''
+  <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
+  <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden justify-end transition-opacity duration-300">
+    <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
+      <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4 flex-shrink-0">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+          <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
+        </div>
+        <button id="closeWireDrawerBtn" type="button" aria-label="Κλείσιμο" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2 py-1 cursor-pointer">&times;</button>
+      </div>
+      <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono flex-shrink-0">
+        Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
+      </div>
+      <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
+        <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
+      </div>
+    </div>
+  </div>
+  <script id="initialWireData" type="application/json">
+{initial_json}
+  </script>
+    '''
+
+
+def render_live_wire_js(live_wire_url):
+    return f'''
+    // ⚡ 24/7 Live Wire Feed Ticker & Drawer Modal
+    (function () {{
+      let wireItems = [];
+      let activeIndex = 0;
+      let rotatorInterval = null;
+
+      function getDrawerModal() {{
+        return document.getElementById('wireDrawerModal');
+      }}
+      function getDrawerContent() {{
+        return document.getElementById('wireDrawerContent');
+      }}
+      function getTicker() {{
+        return document.getElementById('liveWireTicker');
+      }}
+
+      function renderTicker() {{
+        const tickerEl = getTicker();
+        if (!tickerEl || !wireItems.length) return;
+        const item = wireItems[activeIndex];
+        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
+        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${{item.time_str || ''}}]</span>`;
+        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${{item.source || ''}})</span>`;
+        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${{breakBadge}}${{timeBadge}}<a href="${{item.link}}" target="_blank" rel="noopener noreferrer" class="hover:underline text-[var(--ink)] font-medium">${{item.title}}</a>${{srcBadge}}</div>`;
+      }}
+
+      function rotateTicker() {{
+        const tickerEl = getTicker();
+        if (!tickerEl || !wireItems.length) return;
+        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
+        renderTicker();
+      }}
+
+      function renderDrawer() {{
+        const drawerContent = getDrawerContent();
+        if (!drawerContent || !wireItems.length) return;
+        drawerContent.innerHTML = wireItems.map(item => {{
+          const isB = item.is_breaking;
+          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
+          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
+          return `
+            <div class="p-3 rounded-lg border ${{borderCls}} space-y-1 text-xs">
+              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
+                <span>${{item.source || ''}} · ${{item.time_str || ''}}</span>
+                ${{isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}}
+              </div>
+              <a href="${{item.link}}" target="_blank" rel="noopener noreferrer" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
+                ${{breakTag}}${{item.title}}
+              </a>
+              ${{item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${{item.snippet}}</p>` : ''}}
+            </div>
+          `;
+        }}).join('');
+      }}
+
+      function toggleDrawer(open) {{
+        const drawerModal = getDrawerModal();
+        if (!drawerModal) return;
+        if (open) {{
+          drawerModal.classList.remove('hidden');
+          drawerModal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          if (wireItems.length) renderDrawer();
+        }} else {{
+          drawerModal.classList.add('hidden');
+          drawerModal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }}
+      }}
+
+      // Robust document-level event delegation
+      document.addEventListener('click', function(e) {{
+        if (e.target.closest('#openWireDrawerBtn') || e.target.closest('#openWireDrawerBtnNav')) {{
+          e.preventDefault();
+          toggleDrawer(true);
+        }} else if (e.target.closest('#closeWireDrawerBtn')) {{
+          e.preventDefault();
+          toggleDrawer(false);
+        }} else if (e.target.id === 'wireDrawerModal') {{
+          toggleDrawer(false);
+        }}
+      }});
+
+      document.addEventListener('keydown', function(e) {{
+        if (e.key === 'Escape') toggleDrawer(false);
+      }});
+
+      // 1. Instant load from embedded JSON if present
+      try {{
+        const initialEl = document.getElementById('initialWireData');
+        if (initialEl && initialEl.textContent) {{
+          const initialData = JSON.parse(initialEl.textContent);
+          if (Array.isArray(initialData) && initialData.length > 0) {{
+            wireItems = initialData;
+            renderTicker();
+            renderDrawer();
+            if (!rotatorInterval && wireItems.length > 1) {{
+              rotatorInterval = setInterval(rotateTicker, 6000);
+            }}
+          }}
+        }}
+      }} catch (e) {{
+        console.warn('Initial wire parse error:', e);
+      }}
+
+      // 2. Fetch fresh updates in background
+      async function fetchWire() {{
+        const candidates = [
+          '{live_wire_url}',
+          'live-wire.json',
+          '../live-wire.json',
+          '/oracle-briefing/live-wire.json',
+          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
+        ];
+        for (let i = 0; i < candidates.length; i++) {{
+          try {{
+            const resp = await fetch(candidates[i]);
+            if (resp && resp.ok) {{
+              const data = await resp.json();
+              if (Array.isArray(data) && data.length > 0) {{
+                wireItems = data;
+                renderTicker();
+                renderDrawer();
+                if (!rotatorInterval && wireItems.length > 1) {{
+                  rotatorInterval = setInterval(rotateTicker, 6000);
+                }}
+                return;
+              }}
+            }}
+          }} catch (e) {{}}
+        }}
+      }}
+
+      fetchWire();
+    }})();
+    '''
+
 
 def parse_markdown(md_content, filename=""):
     data = {
@@ -1105,6 +1288,8 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
     live_wire_url = urls['live_wire']
     search_index_url = urls['search_index']
     edition_switcher_html = render_edition_switcher_html(urls, 'evening')
+    wire_drawer_modal_html = render_wire_drawer_modal_html()
+    live_wire_script_html = render_live_wire_js(live_wire_url)
 
     # Ticker Items
     ticker_spans = []
@@ -1808,24 +1993,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
     </div>
   </footer>
 
-  <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
-  <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
-    <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
-      <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
-        <div class="flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
-          <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
-        </div>
-        <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
-      </div>
-      <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
-        Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
-      </div>
-      <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
-        <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
-      </div>
-    </div>
-  </div>
+  {wire_drawer_modal_html}
 
   <!-- JAVASCRIPT ENGINE -->
   <script>
@@ -1923,105 +2091,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
       }});
     }})();
 
-    // 24/7 Live Wire Fetcher & Drawer
-    (function () {{
-      const tickerEl = document.getElementById('liveWireTicker');
-      const drawerContent = document.getElementById('wireDrawerContent');
-      const drawerModal = document.getElementById('wireDrawerModal');
-      const openBtn = document.getElementById('openWireDrawerBtn');
-      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
-      const closeBtn = document.getElementById('closeWireDrawerBtn');
-
-      let wireItems = [];
-      let activeIndex = 0;
-      let rotatorInterval = null;
-
-      async function fetchWire() {{
-        const candidates = [
-          '{live_wire_url}',
-          'live-wire.json',
-          '../live-wire.json',
-          '/oracle-briefing/live-wire.json',
-          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
-        ];
-        for (let i = 0; i < candidates.length; i++) {{
-          try {{
-            const resp = await fetch(candidates[i]);
-            if (resp && resp.ok) {{
-              const data = await resp.json();
-              if (Array.isArray(data) && data.length > 0) {{
-                wireItems = data;
-                renderTicker();
-                renderDrawer();
-                if (!rotatorInterval && wireItems.length > 1) {{
-                  rotatorInterval = setInterval(rotateTicker, 6000);
-                }}
-                return;
-              }}
-            }}
-          }} catch (e) {{}}
-        }}
-        console.warn('Could not load live-wire from any candidate URL.');
-      }}
-
-      function renderTicker() {{
-        if (!tickerEl || !wireItems.length) return;
-        const item = wireItems[activeIndex];
-        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
-        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${{item.time_str || ''}}]</span>`;
-        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${{item.source}})</span>`;
-        tickerEl.innerHTML = `<div class="truncate">${{breakBadge}}${{timeBadge}}<a href="${{item.link}}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${{item.title}}</a>${{srcBadge}}</div>`;
-      }}
-
-      function rotateTicker() {{
-        if (!tickerEl || !wireItems.length) return;
-        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
-        renderTicker();
-      }}
-
-      function renderDrawer() {{
-        if (!drawerContent || !wireItems.length) return;
-        drawerContent.innerHTML = wireItems.map(item => {{
-          const isB = item.is_breaking;
-          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
-          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
-          return `
-            <div class="p-3 rounded-lg border ${{borderCls}} space-y-1 text-xs">
-              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
-                <span>${{item.source}} · ${{item.time_str || ''}}</span>
-                ${{isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}}
-              </div>
-              <a href="${{item.link}}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
-                ${{breakTag}}${{item.title}}
-              </a>
-              ${{item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${{item.snippet}}</p>` : ''}}
-            </div>
-          `;
-        }}).join('');
-      }}
-
-      function toggleDrawer(open) {{
-        if (!drawerModal) return;
-        if (open) {{
-          drawerModal.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-        }} else {{
-          drawerModal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }}
-      }}
-
-      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
-      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
-      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
-      if (drawerModal) {{
-        drawerModal.addEventListener('click', (e) => {{
-          if (e.target === drawerModal) toggleDrawer(false);
-        }});
-      }}
-
-      fetchWire();
-    }})();
+{live_wire_script_html}
   </script>
 </body>
 </html>
@@ -2050,6 +2120,8 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     live_wire_url = urls['live_wire']
     search_index_url = urls['search_index']
     edition_switcher_html = render_edition_switcher_html(urls, 'midday')
+    wire_drawer_modal_html = render_wire_drawer_modal_html()
+    live_wire_script_html = render_live_wire_js(live_wire_url)
 
     # Ticker Items
     ticker_spans = []
@@ -2482,27 +2554,6 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     </div>
     '''
 
-    wire_drawer_modal_html = '''
-    <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
-    <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
-      <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
-        <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
-          <div class="flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
-            <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
-          </div>
-          <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
-        </div>
-        <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
-          Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
-        </div>
-        <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
-          <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
-        </div>
-      </div>
-    </div>
-    '''
-
     html = f'''<!DOCTYPE html>
 <html lang="el">
 <head>
@@ -2675,6 +2726,8 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     </div>
   </main>
 
+  {wire_drawer_modal_html}
+
   <!-- SCRIPT -->
   <script>
     const themeBtn = document.getElementById('themeToggle');
@@ -2694,109 +2747,8 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     updateClocks();
     setInterval(updateClocks, 10000);
 
-    // ⚡ 24/7 Live Wire Feed Ticker & Drawer Modal (Midday)
-    (function () {{
-      const tickerEl = document.getElementById('liveWireTicker');
-      const drawerModal = document.getElementById('wireDrawerModal');
-      const drawerContent = document.getElementById('wireDrawerContent');
-      const openBtn = document.getElementById('openWireDrawerBtn');
-      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
-      const closeBtn = document.getElementById('closeWireDrawerBtn');
-
-      let wireItems = [];
-      let activeIndex = 0;
-      let rotatorInterval = null;
-
-      async function fetchWire() {{
-        const candidates = [
-          '{live_wire_url}',
-          'live-wire.json',
-          '../live-wire.json',
-          '/oracle-briefing/live-wire.json',
-          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
-        ];
-        for (let i = 0; i < candidates.length; i++) {{
-          try {{
-            const resp = await fetch(candidates[i]);
-            if (resp && resp.ok) {{
-              const data = await resp.json();
-              if (Array.isArray(data) && data.length > 0) {{
-                wireItems = data;
-                renderTicker();
-                renderDrawer();
-                if (!rotatorInterval && wireItems.length > 1) {{
-                  rotatorInterval = setInterval(rotateTicker, 6000);
-                }}
-                return;
-              }}
-            }}
-          }} catch (e) {{}}
-        }}
-        console.warn('Could not load live-wire from any candidate URL.');
-      }}
-
-      function renderTicker() {{
-        if (!tickerEl || !wireItems.length) return;
-        const item = wireItems[activeIndex];
-        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
-        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${{item.time_str || ''}}]</span>`;
-        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${{item.source}})</span>`;
-        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${{breakBadge}}${{timeBadge}}<a href="${{item.link}}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${{item.title}}</a>${{srcBadge}}</div>`;
-      }}
-
-      function rotateTicker() {{
-        if (!tickerEl || !wireItems.length) return;
-        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
-        renderTicker();
-      }}
-
-      function renderDrawer() {{
-        if (!drawerContent || !wireItems.length) return;
-        drawerContent.innerHTML = wireItems.map(item => {{
-          const isB = item.is_breaking;
-          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
-          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
-          return `
-            <div class="p-3 rounded-lg border ${{borderCls}} space-y-1 text-xs">
-              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
-                <span>${{item.source}} · ${{item.time_str || ''}}</span>
-                ${{isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}}
-              </div>
-              <a href="${{item.link}}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
-                ${{breakTag}}${{item.title}}
-              </a>
-              ${{item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${{item.snippet}}</p>` : ''}}
-            </div>
-          `;
-        }}).join('');
-      }}
-
-      function toggleDrawer(open) {{
-        if (!drawerModal) return;
-        if (open) {{
-          drawerModal.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-        }} else {{
-          drawerModal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }}
-      }}
-
-      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
-      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
-      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
-      if (drawerModal) {{
-        drawerModal.addEventListener('click', (e) => {{
-          if (e.target === drawerModal) toggleDrawer(false);
-        }});
-      }}
-
-      fetchWire();
-    }})();
+{live_wire_script_html}
   </script>
-
-  {wire_drawer_modal_html}
-
 </body>
 </html>
 '''
@@ -2842,6 +2794,8 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     live_wire_url = urls['live_wire']
     search_index_url = urls['search_index']
     edition_switcher_html = render_edition_switcher_html(urls, 'morning')
+    wire_drawer_modal_html = render_wire_drawer_modal_html()
+    live_wire_script_html = render_live_wire_js(live_wire_url)
 
     global_clocks_html = '''
     <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
@@ -2870,27 +2824,6 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
         <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
           <span>Προβολή Όλων (50+)</span> <span>➔</span>
         </button>
-      </div>
-    </div>
-    '''
-
-    wire_drawer_modal_html = '''
-    <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
-    <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
-      <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
-        <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
-          <div class="flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
-            <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
-          </div>
-          <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
-        </div>
-        <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
-          Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
-        </div>
-        <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
-          <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
-        </div>
       </div>
     </div>
     '''
@@ -4515,6 +4448,8 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
 
   </main>
 
+  {wire_drawer_modal_html}
+
   <!-- SCRIPTS: Theme Toggle, Calculator, Weather Fetch, Instant Search -->
   <script>
     // 1. Theme Toggle
@@ -5012,109 +4947,8 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
       setInterval(updateClocks, 1000);
     }})();
 
-    // 9. 24/7 Live Wire Feed Ticker & Drawer Modal
-    (function () {{
-      const tickerEl = document.getElementById('liveWireTicker');
-      const drawerModal = document.getElementById('wireDrawerModal');
-      const drawerContent = document.getElementById('wireDrawerContent');
-      const openBtn = document.getElementById('openWireDrawerBtn');
-      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
-      const closeBtn = document.getElementById('closeWireDrawerBtn');
-
-      let wireItems = [];
-      let activeIndex = 0;
-      let rotatorInterval = null;
-
-      async function fetchWire() {{
-        const candidates = [
-          '{live_wire_url}',
-          'live-wire.json',
-          '../live-wire.json',
-          '/oracle-briefing/live-wire.json',
-          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
-        ];
-        for (let i = 0; i < candidates.length; i++) {{
-          try {{
-            const resp = await fetch(candidates[i]);
-            if (resp && resp.ok) {{
-              const data = await resp.json();
-              if (Array.isArray(data) && data.length > 0) {{
-                wireItems = data;
-                renderTicker();
-                renderDrawer();
-                if (!rotatorInterval && wireItems.length > 1) {{
-                  rotatorInterval = setInterval(rotateTicker, 6000);
-                }}
-                return;
-              }}
-            }}
-          }} catch (e) {{}}
-        }}
-        console.warn('Could not load live-wire from any candidate URL.');
-      }}
-
-      function renderTicker() {{
-        if (!tickerEl || !wireItems.length) return;
-        const item = wireItems[activeIndex];
-        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
-        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${{item.time_str || ''}}]</span>`;
-        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${{item.source}})</span>`;
-        
-        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${{breakBadge}}${{timeBadge}}<a href="${{item.link}}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${{item.title}}</a>${{srcBadge}}</div>`;
-      }}
-
-      function rotateTicker() {{
-        if (!tickerEl || !wireItems.length) return;
-        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
-        renderTicker();
-      }}
-
-      function renderDrawer() {{
-        if (!drawerContent || !wireItems.length) return;
-        drawerContent.innerHTML = wireItems.map(item => {{
-          const isB = item.is_breaking;
-          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
-          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
-          return `
-            <div class="p-3 rounded-lg border ${{borderCls}} space-y-1 text-xs">
-              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
-                <span>${{item.source}} · ${{item.time_str || ''}}</span>
-                ${{isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}}
-              </div>
-              <a href="${{item.link}}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
-                ${{breakTag}}${{item.title}}
-              </a>
-              ${{item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${{item.snippet}}</p>` : ''}}
-            </div>
-          `;
-        }}).join('');
-      }}
-
-      function toggleDrawer(open) {{
-        if (!drawerModal) return;
-        if (open) {{
-          drawerModal.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-        }} else {{
-          drawerModal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }}
-      }}
-
-      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
-      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
-      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
-      if (drawerModal) {{
-        drawerModal.addEventListener('click', (e) => {{
-          if (e.target === drawerModal) toggleDrawer(false);
-        }});
-      }}
-
-      fetchWire();
-    }})();
+{live_wire_script_html}
   </script>
-
-  {wire_drawer_modal_html}
 
 </body>
 </html>
@@ -5210,11 +5044,13 @@ def main():
     shutil.copy2(target_md, docs_briefing_md)
     print(f"Copied markdown to docs: {docs_briefing_md}")
 
-    # Copy live-wire.json to docs/ and docs/briefings/
+    # Copy live-wire.json to root, briefings/, docs/, and docs/briefings/
     live_wire_src = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
     if os.path.exists(live_wire_src):
         shutil.copy2(live_wire_src, os.path.join(DOCS_DIR, 'live-wire.json'))
         shutil.copy2(live_wire_src, os.path.join(DOCS_BRIEFINGS_DIR, 'live-wire.json'))
+        shutil.copy2(live_wire_src, os.path.join(BRIEFINGS_DIR, 'live-wire.json'))
+        shutil.copy2(live_wire_src, os.path.join(BASE_DIR, 'live-wire.json'))
 
     print("\nSUCCESS! The Oracle Sovereign web portal and archives have been built with full news-first layout and imagery.")
 
