@@ -499,7 +499,15 @@ def parse_markdown(md_content, filename=""):
 
         # TOP STORY / FOOTPRINT
         if 'ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ' in sec_header or 'ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ' in sec_header:
-            top_data = {'title': '', 'body': '', 'antilogos': '', 'sources': []}
+            top_data = {
+                'title': '',
+                'body': '',
+                'why': '',
+                'reader_impact': '',
+                'next_watch': '',
+                'antilogos': '',
+                'sources': []
+            }
             h3_match = re.search(r'###\s+(.+)', sec)
             if h3_match:
                 top_data['title'] = h3_match.group(1).strip()
@@ -508,9 +516,21 @@ def parse_markdown(md_content, filename=""):
             else:
                 top_data['title'] = sec_header.replace('##', '').strip()
 
+            why_m = re.search(r'\*\*(?:Γιατί είναι πρώτο|Γιατί με αφορά):\*\*\s*(.+?)(?=\n\*\*|\n\n|\Z)', sec, re.DOTALL)
+            if why_m:
+                top_data['why'] = clean_plain(why_m.group(1).strip())
+
+            impact_m = re.search(r'\*\*Τι σημαίνει για τον αναγνώστη:\*\*\s*(.+?)(?=\n\*\*|\n\n|\Z)', sec, re.DOTALL)
+            if impact_m:
+                top_data['reader_impact'] = clean_plain(impact_m.group(1).strip())
+
+            watch_m = re.search(r'\*\*Τι να παρακολουθήσετε:\*\*\s*(.+?)(?=\n\*\*|\n\n|\Z)', sec, re.DOTALL)
+            if watch_m:
+                top_data['next_watch'] = clean_plain(watch_m.group(1).strip())
+
             anti_match = re.search(r'\*\*Αντίλογος:\*\*\s*(.+?)(?=\n\n|\n\*\*Πηγές:|\Z)', sec, re.DOTALL)
             if anti_match:
-                top_data['antilogos'] = anti_match.group(1).strip()
+                top_data['antilogos'] = clean_plain(anti_match.group(1).strip())
 
             src_match = re.search(r'\*\*Πηγές:\*\*\s*(.+)', sec)
             if src_match:
@@ -524,10 +544,10 @@ def parse_markdown(md_content, filename=""):
                 if sl_clean.startswith('### '):
                     capture = True
                     continue
-                if sl_clean.startswith('**Αντίλογος:') or sl_clean.startswith('**Πηγές:'):
+                if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', sl_clean, re.IGNORECASE) or sl_clean.startswith('---') or sl_clean.startswith('>'):
                     capture = False
                     break
-                if capture and sl_clean and not sl_clean.startswith('---'):
+                if capture and sl_clean:
                     body_parts.append(sl_clean)
             top_data['body'] = ' '.join(body_parts)
             data['top_story'] = top_data
@@ -548,7 +568,7 @@ def parse_markdown(md_content, filename=""):
                 itm_src = None
                 for il in itm_lines[1:]:
                     il_c = il.strip()
-                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', il_c, re.IGNORECASE):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', il_c, re.IGNORECASE) or il_c.startswith('---'):
                         break
                     elif il_c and not il_c.startswith('---'):
                         itm_body.append(il_c)
@@ -583,7 +603,7 @@ def parse_markdown(md_content, filename=""):
                 itm_src = None
                 for il in itm_lines[1:]:
                     il_c = il.strip()
-                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', il_c, re.IGNORECASE):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', il_c, re.IGNORECASE) or il_c.startswith('---'):
                         break
                     elif il_c and not il_c.startswith('---'):
                         itm_body.append(il_c)
@@ -723,7 +743,7 @@ def parse_markdown(md_content, filename=""):
                 c_body = []
                 for cl in ci_lines[1:]:
                     cl_c = cl.strip()
-                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', cl_c, re.IGNORECASE):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', cl_c, re.IGNORECASE) or cl_c.startswith('---'):
                         break
                     if cl_c and not cl_c.startswith('---'):
                         c_body.append(cl_c)
@@ -765,7 +785,7 @@ def parse_markdown(md_content, filename=""):
                 w_body = []
                 for wl in wi_lines[1:]:
                     wl_c = wl.strip()
-                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', wl_c, re.IGNORECASE):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', wl_c, re.IGNORECASE) or wl_c.startswith('---'):
                         break
                     if wl_c and not wl_c.startswith('---'):
                         w_body.append(wl_c)
@@ -3458,6 +3478,35 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
         top_sources.append(f'<a href="{s["url"]}" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">{s["name"]}</a>')
     top_sources_html = ' · '.join(top_sources)
 
+    # Top Story Analysis Accordion
+    top_depth_items = []
+    if data['top_story'].get('why'):
+        top_depth_items.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">💡</span><div><strong class="font-bold text-[var(--ink)]">Γιατί είναι πρώτο:</strong> {md_to_inline_html(data["top_story"]["why"])}</div></div>')
+    if data['top_story'].get('reader_impact'):
+        top_depth_items.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚡</span><div><strong class="font-bold text-[var(--ink)]">Τι σημαίνει για τον αναγνώστη:</strong> {md_to_inline_html(data["top_story"]["reader_impact"])}</div></div>')
+    if data['top_story'].get('next_watch'):
+        top_depth_items.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">👁️</span><div><strong class="font-bold text-[var(--ink)]">Τι να παρακολουθήσετε:</strong> {md_to_inline_html(data["top_story"]["next_watch"])}</div></div>')
+    if data['top_story'].get('antilogos'):
+        top_depth_items.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚖️</span><div><strong class="font-bold text-[var(--ink)]">Ο Αντίλογος:</strong> {md_to_inline_html(data["top_story"]["antilogos"])}</div></div>')
+
+    if top_depth_items:
+        top_depth_html = f'''
+              <details class="why-expandable group mt-4 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
+                <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
+                  <span class="flex items-center gap-2">
+                    <span class="text-sm leading-none">🔍</span>
+                    <span class="uppercase tracking-wider text-[11px]">Ανάλυση & Αντίλογος</span>
+                  </span>
+                  <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
+                </summary>
+                <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2.5 text-xs text-[var(--ink-body)] leading-relaxed">
+                  {''.join(top_depth_items)}
+                </div>
+              </details>
+        '''
+    else:
+        top_depth_html = ""
+
     # Full HTML Document
     html = f'''<!DOCTYPE html>
 <html lang="el">
@@ -4084,17 +4133,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
                 {md_to_inline_html(data['top_story'].get('body', ''))}
               </p>
 
-              <details class="depth mt-3 border-t border-[var(--rule)] pt-2.5">
-                <summary class="cursor-pointer flex items-center justify-between t-meta font-semibold text-[var(--accent)] hover:underline py-1">
-                  <span>Ανάλυση & Αντίλογος</span>
-                  <span class="expand-icon transition-transform duration-200 text-[10px]">▼</span>
-                </summary>
-                <div class="mt-2.5 t-meta text-[var(--ink-body)] space-y-2 bg-[var(--paper)] p-4 rounded border border-[var(--rule)] leading-relaxed">
-                  <p>
-                    <strong class="text-[var(--ink)]">Ο Αντίλογος:</strong> {md_to_inline_html(data['top_story'].get('antilogos', 'Δεν καταγράφηκε ουσιαστικός αντίλογος.'))}
-                  </p>
-                </div>
-              </details>
+              {top_depth_html}
             </div>
 
             <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--rule)] mt-4">
