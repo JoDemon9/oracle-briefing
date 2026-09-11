@@ -66,52 +66,161 @@ def is_valid_content_image(img_url):
     return not any(b in img_url.lower() for b in bad_tokens)
 
 
+def clean_plain(s):
+    if not s:
+        return ""
+    s = re.sub(r'\[(.*?)\]\((https?://[^\s)]+)\)', r'\1', str(s))
+    s = re.sub(r'\*+', '', s)
+    return s.strip()
+
+
 def md_to_inline_html(text):
     if not text:
         return ""
     # Convert markdown links [name](url)
     text = re.sub(r'\[(.*?)\]\((https?://[^\s)]+)\)', r'<a href="\2" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">\1</a>', text)
-    # Convert bold **text**
-    text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
-    # Convert italic *text*
-    text = re.sub(r'(?<!\*)\*([^*]+)\*(?!\*)', r'<em>\1</em>', text)
-    return text
+    # Convert bold **text** or __text__
+    text = re.sub(r'\*\*(.*?)\*\*', r'<strong class="font-bold text-[var(--ink)]">\1</strong>', text)
+    text = re.sub(r'__(.*?)__', r'<strong class="font-bold text-[var(--ink)]">\1</strong>', text)
+    # Convert italic *text* or _text_
+    text = re.sub(r'(?<!\*)\*([^*\n]+)\*(?!\*)', r'<em>\1</em>', text)
+    text = re.sub(r'(?<!_)\_([^_\n]+)\_(?!_)', r'<em>\1</em>', text)
+    # Remove any leftover stray bullet asterisks or rogue asterisks
+    text = re.sub(r'(?:^\s*|\s+)\*+\s*', ' ', text)
+    text = re.sub(r'\*+', '', text)
+    return text.strip()
 
 
-def render_depth_html(depth, is_world=False):
-    if not depth or len(depth) < 2:
+def extract_story_why_and_depth(raw_text):
+    """
+    Extracts 'why' and structured 'depth' from raw story markdown,
+    safely cleaning all asterisks and markdown artifacts.
+    """
+    if not raw_text:
+        return "", {}
+
+    why = ""
+    why_m = re.search(
+        r'(?:\*\*|__)?Γιατί με αφορά:(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Βάθος|Αντίλογος|Το υπόβαθρο|Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Πηγ[ήές]):|\n\n|\Z)',
+        raw_text,
+        re.DOTALL | re.IGNORECASE
+    )
+    if why_m:
+        why = why_m.group(1).strip()
+
+    depth = {}
+    
+    # Background
+    bg_m = re.search(
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Υπόβαθρο):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Αντίλογος|Πηγ[ήές]):|\n\n|\Z)',
+        raw_text,
+        re.DOTALL | re.IGNORECASE
+    )
+    if bg_m:
+        depth['background'] = bg_m.group(1).strip()
+
+    # Practical
+    pr_m = re.search(
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι σημαίνει πρακτικά|Πρακτικά):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι να παρακολουθήσω|Αντίλογος|Πηγ[ήές]):|\n\n|\Z)',
+        raw_text,
+        re.DOTALL | re.IGNORECASE
+    )
+    if pr_m:
+        depth['practical'] = pr_m.group(1).strip()
+
+    # Next watch
+    nw_m = re.search(
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι να παρακολουθήσω|Τι παρακολουθούμε):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι σημαίνει πρακτικά|Αντίλογος|Πηγ[ήές]):|\n\n|\Z)',
+        raw_text,
+        re.DOTALL | re.IGNORECASE
+    )
+    if nw_m:
+        depth['next_watch'] = nw_m.group(1).strip()
+
+    # Antilogos
+    al_m = re.search(
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Αντίλογος|Η άλλη άποψη):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Πηγ[ήές]):|\n\n|\Z)',
+        raw_text,
+        re.DOTALL | re.IGNORECASE
+    )
+    if al_m:
+        depth['antilogos'] = al_m.group(1).strip()
+
+    def clean_val(v):
+        if not v:
+            return ""
+        v = v.strip()
+        v = re.sub(r'^[*\-\s]+', '', v)
+        v = re.sub(r'\s+\*\s+', ' ', v)
+        return v.strip()
+
+    why = clean_val(why)
+    for k in list(depth.keys()):
+        cleaned = clean_val(depth[k])
+        if cleaned:
+            depth[k] = cleaned
+        else:
+            del depth[k]
+
+    return why, depth
+
+
+def render_why_and_depth_html(why_text, depth_dict=None):
+    clean_why = md_to_inline_html(why_text) if why_text else ""
+    
+    depth_rows = []
+    if depth_dict:
+        if depth_dict.get('background'):
+            bg_clean = md_to_inline_html(depth_dict['background'])
+            depth_rows.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">🏛️</span><div><strong class="font-bold text-[var(--ink)]">Το υπόβαθρο:</strong> {bg_clean}</div></div>')
+        if depth_dict.get('practical'):
+            pr_clean = md_to_inline_html(depth_dict['practical'])
+            depth_rows.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚡</span><div><strong class="font-bold text-[var(--ink)]">Τι σημαίνει πρακτικά:</strong> {pr_clean}</div></div>')
+        if depth_dict.get('next_watch'):
+            nw_clean = md_to_inline_html(depth_dict['next_watch'])
+            depth_rows.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">👁️</span><div><strong class="font-bold text-[var(--ink)]">Τι να παρακολουθήσω:</strong> {nw_clean}</div></div>')
+        if depth_dict.get('antilogos'):
+            al_clean = md_to_inline_html(depth_dict['antilogos'])
+            depth_rows.append(f'<div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚖️</span><div><strong class="font-bold text-[var(--ink)]">Αντίλογος:</strong> {al_clean}</div></div>')
+
+    if not clean_why and not depth_rows:
         return ""
 
-    rows = []
-    if depth.get('background'):
-        rows.append(f'<div><strong class="text-[var(--ink)]">Το υπόβαθρο:</strong> {md_to_inline_html(depth["background"])}</div>')
-    if depth.get('practical'):
-        rows.append(f'<div><strong class="text-[var(--ink)]">Τι σημαίνει πρακτικά:</strong> {md_to_inline_html(depth["practical"])}</div>')
+    depth_content = ""
+    if depth_rows:
+        depth_content = f'''
+        <div class="pt-2.5 mt-2 border-t border-[var(--rule)] space-y-2 text-[11px] text-[var(--ink-body)] leading-relaxed">
+          {''.join(depth_rows)}
+        </div>
+        '''
 
-    if not is_world and depth.get('next_watch'):
-        rows.append(f'<div><strong class="text-[var(--ink)]">Τι να παρακολουθήσω:</strong> {md_to_inline_html(depth["next_watch"])}</div>')
-    elif is_world and depth.get('antilogos'):
-        rows.append(f'<div><strong class="text-[var(--ink)]">Αντίλογος:</strong> {md_to_inline_html(depth["antilogos"])}</div>')
-    elif depth.get('next_watch'):
-        rows.append(f'<div><strong class="text-[var(--ink)]">Τι να παρακολουθήσω:</strong> {md_to_inline_html(depth["next_watch"])}</div>')
-    elif depth.get('antilogos'):
-        rows.append(f'<div><strong class="text-[var(--ink)]">Αντίλογος:</strong> {md_to_inline_html(depth["antilogos"])}</div>')
+    why_body = ""
+    if clean_why:
+        why_body = f'''
+        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
+          {clean_why}
+        </div>
+        '''
 
-    if len(rows) < 2:
-        return ""
-
-    content = '\n'.join(rows)
     return f'''
-    <details class="depth mt-3 border-t border-[var(--rule)] pt-2.5">
-      <summary class="cursor-pointer t-meta font-semibold text-[var(--accent)] hover:underline flex items-center justify-between py-1">
-        <span>Περισσότερα: Υπόβαθρο & Πρακτική Σημασία</span>
-        <span class="expand-icon text-[10px] transition-transform">▼</span>
+    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
+      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
+        <span class="flex items-center gap-2">
+          <span class="text-sm leading-none">💡</span>
+          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
+        </span>
+        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
       </summary>
-      <div class="mt-2.5 t-meta text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded space-y-2 border border-[var(--rule)] leading-relaxed">
-        {content}
+      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
+        {why_body}
+        {depth_content}
       </div>
     </details>
     '''
+
+
+def render_depth_html(depth, is_world=False):
+    return ""
 
 
 def load_image_cache():
@@ -434,25 +543,28 @@ def parse_markdown(md_content, filename=""):
                 clean_title = re.sub(r'^(?:🇨🇾|🌍|⚡)\s*', '', raw_title).strip()
                 clean_title = re.sub(r'\[(ΕΠΙΒΕΒΑΙΩΜΕΝΟ|ΕΞΕΛΙΣΣΟΜΕΝΟ)\]\s*', '', clean_title).strip()
 
+                itm_why, itm_depth = extract_story_why_and_depth(itm)
                 itm_body = []
-                itm_why = ''
                 itm_src = None
                 for il in itm_lines[1:]:
                     il_c = il.strip()
-                    if il_c.startswith('**Γιατί με αφορά:**') or il_c.startswith('Γιατί με αφορά:'):
-                        itm_why = re.sub(r'^\*?\*?Γιατί με αφορά:\*?\*?\s*', '', il_c).strip()
-                    elif il_c.startswith('**Πηγή:**') or il_c.startswith('Πηγή:'):
-                        src_match = re.search(r'\[(.*?)\]\((.*?)\)', il_c)
-                        if src_match:
-                            itm_src = {'name': src_match.group(1).strip(), 'url': src_match.group(2).strip()}
+                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', il_c, re.IGNORECASE):
+                        break
                     elif il_c and not il_c.startswith('---'):
                         itm_body.append(il_c)
+                src_match = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', itm)
+                if src_match:
+                    s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
+                    if s_raw:
+                        itm_src = {'name': s_raw[0][0].strip(), 'url': s_raw[0][1].strip()}
+
                 data['midday_news'].append({
                     'title': clean_title,
                     'raw_title': raw_title,
                     'region': region,
                     'body': ' '.join(itm_body),
                     'why': itm_why,
+                    'depth': itm_depth,
                     'source': itm_src
                 })
 
@@ -466,24 +578,27 @@ def parse_markdown(md_content, filename=""):
                 region = '🇨🇾 ΚΥΠΡΟΣ' if '🇨🇾' in raw_title else ('🌍 ΔΙΕΘΝΗ' if '🌍' in raw_title else '⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ')
                 clean_title = re.sub(r'^(?:🇨🇾|🌍|⚡)\s*', '', raw_title).strip()
 
+                itm_why, itm_depth = extract_story_why_and_depth(itm)
                 itm_body = []
-                itm_why = ''
                 itm_src = None
                 for il in itm_lines[1:]:
                     il_c = il.strip()
-                    if il_c.startswith('**Γιατί με αφορά:**') or il_c.startswith('Γιατί με αφορά:'):
-                        itm_why = re.sub(r'^\*?\*?Γιατί με αφορά:\*?\*?\s*', '', il_c).strip()
-                    elif il_c.startswith('**Πηγή:**') or il_c.startswith('Πηγή:'):
-                        src_match = re.search(r'\[(.*?)\]\((.*?)\)', il_c)
-                        if src_match:
-                            itm_src = {'name': src_match.group(1).strip(), 'url': src_match.group(2).strip()}
+                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', il_c, re.IGNORECASE):
+                        break
                     elif il_c and not il_c.startswith('---'):
                         itm_body.append(il_c)
+                src_match = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', itm)
+                if src_match:
+                    s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
+                    if s_raw:
+                        itm_src = {'name': s_raw[0][0].strip(), 'url': s_raw[0][1].strip()}
+
                 data['evening_news'].append({
                     'title': clean_title,
                     'region': region,
                     'body': ' '.join(itm_body),
                     'why': itm_why,
+                    'depth': itm_depth,
                     'source': itm_src
                 })
 
@@ -596,22 +711,19 @@ def parse_markdown(md_content, filename=""):
                     c_tag = 'Επιβεβαιωμένο'
                     c_title = c_title.replace('[ΕΠΙΒΕΒΑΙΩΜΕΝΟ]', '').strip()
 
-                c_why = ''
-                why_m = re.search(r'\*\*Γιατί με αφορά:\*\*\s*(.+?)(?=\n\*\*Πηγή:|\n\n|\Z)', ci, re.DOTALL)
-                if why_m:
-                    c_why = why_m.group(1).strip()
+                c_why, c_depth = extract_story_why_and_depth(ci)
 
                 c_src = None
-                src_m = re.search(r'\*\*Πηγή:\*\*\s*(.+)', ci)
+                src_m = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', ci)
                 if src_m:
                     s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_m.group(1))
                     if s_raw:
-                        c_src = {'name': s_raw[0][0], 'url': s_raw[0][1]}
+                        c_src = {'name': s_raw[0][0].strip(), 'url': s_raw[0][1].strip()}
 
                 c_body = []
                 for cl in ci_lines[1:]:
                     cl_c = cl.strip()
-                    if cl_c.startswith('**Γιατί με αφορά:') or cl_c.startswith('**Πηγή:'):
+                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', cl_c, re.IGNORECASE):
                         break
                     if cl_c and not cl_c.startswith('---'):
                         c_body.append(cl_c)
@@ -620,6 +732,7 @@ def parse_markdown(md_content, filename=""):
                     'title': c_title,
                     'tag': c_tag,
                     'why': c_why,
+                    'depth': c_depth,
                     'source': c_src,
                     'body': ' '.join(c_body),
                     'is_portfolio': False
@@ -640,22 +753,19 @@ def parse_markdown(md_content, filename=""):
                     w_tag = 'Επιβεβαιωμένο'
                     w_title = w_title.replace('[ΕΠΙΒΕΒΑΙΩΜΕΝΟ]', '').strip()
 
-                w_why = ''
-                why_m = re.search(r'\*\*Γιατί με αφορά:\*\*\s*(.+?)(?=\n\*\*Πηγή:|\n\n|\Z)', wi, re.DOTALL)
-                if why_m:
-                    w_why = why_m.group(1).strip()
+                w_why, w_depth = extract_story_why_and_depth(wi)
 
                 w_src = None
-                src_m = re.search(r'\*\*Πηγή:\*\*\s*(.+)', wi)
+                src_m = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', wi)
                 if src_m:
                     s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_m.group(1))
                     if s_raw:
-                        w_src = {'name': s_raw[0][0], 'url': s_raw[0][1]}
+                        w_src = {'name': s_raw[0][0].strip(), 'url': s_raw[0][1].strip()}
 
                 w_body = []
                 for wl in wi_lines[1:]:
                     wl_c = wl.strip()
-                    if wl_c.startswith('**Γιατί με αφορά:') or wl_c.startswith('**Πηγή:'):
+                    if re.match(r'^\*?\*?(?:Γιατί με αφορά|Βάθος|Το υπόβαθρο|Πηγ[ήές]):', wl_c, re.IGNORECASE):
                         break
                     if wl_c and not wl_c.startswith('---'):
                         w_body.append(wl_c)
@@ -664,6 +774,7 @@ def parse_markdown(md_content, filename=""):
                     'title': w_title,
                     'tag': w_tag,
                     'why': w_why,
+                    'depth': w_depth,
                     'source': w_src,
                     'body': ' '.join(w_body)
                 })
@@ -1292,10 +1403,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         if item.get('source'):
             src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
 
-        why_html = f'''
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> {clean_why}
-        </div>''' if clean_why else ""
+        why_html = render_why_and_depth_html(item.get('why', ''), item.get('depth', {}))
 
         evening_news_cards.append(f'''
         <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
@@ -1422,6 +1530,10 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
     .ticker-content {{ display: inline-block; animation: tickerAnimation 40s linear infinite; }}
     .ticker-wrap:hover .ticker-content {{ animation-play-state: paused; }}
     @keyframes tickerAnimation {{ 0% {{ transform: translateX(0); }} 100% {{ transform: translateX(-50%); }} }}
+
+    details > summary {{ list-style: none; }}
+    details > summary::-webkit-details-marker {{ display: none; }}
+    details[open] summary .expand-icon {{ transform: rotate(180deg); }}
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -1970,10 +2082,7 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
         if item.get('source'):
             src_html = f'''<a href="{item['source']['url']}" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>{item['source']['name']}</span> <span>➔</span></a>'''
 
-        why_html = f'''
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> {clean_why}
-        </div>''' if clean_why else ""
+        why_html = render_why_and_depth_html(item.get('why', ''), item.get('depth', {}))
 
         news_cards.append(f'''
         <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
@@ -2423,6 +2532,10 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     .ticker-content {{ display: inline-block; animation: tickerAnimation 40s linear infinite; }}
     .ticker-wrap:hover .ticker-content {{ animation-play-state: paused; }}
     @keyframes tickerAnimation {{ 0% {{ transform: translateX(0); }} 100% {{ transform: translateX(-50%); }} }}
+
+    details > summary {{ list-style: none; }}
+    details > summary::-webkit-details-marker {{ display: none; }}
+    details[open] summary .expand-icon {{ transform: rotate(180deg); }}
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -2809,10 +2922,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
 
         tag_cls = "bg-[var(--up)] text-white" if item['tag'] == 'Επιβεβαιωμένο' else ("bg-[var(--accent)] text-white" if item['tag'] == 'Εξελισσόμενο' else "bg-[var(--rule-strong)] text-white")
 
-        why_html = f'''
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)]">
-          <strong class="font-bold">Γιατί με αφορά:</strong> {item["why"]}
-        </div>''' if item.get('why') else ''
+        why_html = render_why_and_depth_html(item.get('why', ''), item.get('depth', {}))
 
         src_html = f'''
         <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
@@ -2822,28 +2932,25 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
           <span class="font-mono text-[var(--ink-quiet)]">{item['tag']}</span>
         </div>''' if item.get('source') else ''
 
-        depth_html = render_depth_html(item.get('depth', {}), is_world=False)
-
         cyprus_cards.append(f'''
         <article class="{card_cls}">
           <div>
             <div class="{img_h_cls} bg-[var(--paper)] relative overflow-hidden">
-              <img src="{img_url}" alt="{item['title']}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='{TOPIC_FALLBACKS['general']}';">
+              <img src="{img_url}" alt="{clean_plain(item['title'])}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='{TOPIC_FALLBACKS['general']}';">
               <span class="absolute top-2.5 left-2.5 {cat_badge_cls} t-meta px-2 py-0.5 rounded shadow-xs">{cat_name}</span>
               <span class="absolute top-2.5 right-2.5 {tag_cls} t-meta px-2 py-0.5 rounded shadow-xs">{item['tag']}</span>
             </div>
             <div class="p-5 sm:p-6">
               <h3 class="{title_cls}">
-                {item['title']}
+                {md_to_inline_html(item['title'])}
               </h3>
               <p class="{body_cls} leading-relaxed">
-                {item['body']}
+                {md_to_inline_html(item['body'])}
               </p>
               {why_html}
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0">
-            {depth_html}
             {src_html}
           </div>
         </article>
@@ -2870,6 +2977,8 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
 
         tag_cls = "bg-[var(--up)] text-white" if item['tag'] == 'Επιβεβαιωμένο' else ("bg-[var(--accent)] text-white" if item['tag'] == 'Εξελισσόμενο' else "bg-[var(--rule-strong)] text-white")
 
+        why_html = render_why_and_depth_html(item.get('why', ''), item.get('depth', {}))
+
         src_html = f'''
         <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
           <a href="{item["source"]["url"]}" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
@@ -2878,27 +2987,25 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
           <span class="font-mono text-[var(--ink-quiet)]">{item['tag']}</span>
         </div>''' if item.get('source') else ''
 
-        depth_html = render_depth_html(item.get('depth', {}), is_world=True)
-
         world_cards.append(f'''
         <article class="{card_cls}">
           <div>
             <div class="{img_h_cls} bg-[var(--paper)] relative overflow-hidden">
-              <img src="{img_url}" alt="{item['title']}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='{TOPIC_FALLBACKS['diplomacy']}';">
+              <img src="{img_url}" alt="{clean_plain(item['title'])}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='{TOPIC_FALLBACKS['diplomacy']}';">
               <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">{cat_name}</span>
               <span class="absolute top-2.5 right-2.5 {tag_cls} t-meta px-2 py-0.5 rounded shadow-xs">{item['tag']}</span>
             </div>
             <div class="p-5 sm:p-6">
               <h3 class="{title_cls}">
-                {item['title']}
+                {md_to_inline_html(item['title'])}
               </h3>
               <p class="{body_cls} leading-relaxed">
-                {item['body']}
+                {md_to_inline_html(item['body'])}
               </p>
+              {why_html}
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0">
-            {depth_html}
             {src_html}
           </div>
         </article>
@@ -3970,11 +4077,11 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
               </div>
 
               <h3 class="t-lead mb-4">
-                {data['top_story'].get('title', '')}
+                {md_to_inline_html(data['top_story'].get('title', ''))}
               </h3>
 
               <p class="t-body lead-body mb-4 leading-relaxed">
-                {data['top_story'].get('body', '')}
+                {md_to_inline_html(data['top_story'].get('body', ''))}
               </p>
 
               <details class="depth mt-3 border-t border-[var(--rule)] pt-2.5">
@@ -3984,7 +4091,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
                 </summary>
                 <div class="mt-2.5 t-meta text-[var(--ink-body)] space-y-2 bg-[var(--paper)] p-4 rounded border border-[var(--rule)] leading-relaxed">
                   <p>
-                    <strong class="text-[var(--ink)]">Ο Αντίλογος:</strong> {data['top_story'].get('antilogos', 'Δεν καταγράφηκε ουσιαστικός αντίλογος.')}
+                    <strong class="text-[var(--ink)]">Ο Αντίλογος:</strong> {md_to_inline_html(data['top_story'].get('antilogos', 'Δεν καταγράφηκε ουσιαστικός αντίλογος.'))}
                   </p>
                 </div>
               </details>

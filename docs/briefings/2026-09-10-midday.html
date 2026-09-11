@@ -51,6 +51,10 @@
     .ticker-content { display: inline-block; animation: tickerAnimation 40s linear infinite; }
     .ticker-wrap:hover .ticker-content { animation-play-state: paused; }
     @keyframes tickerAnimation { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] summary .expand-icon { transform: rotate(180deg); }
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -326,7 +330,7 @@
         <li class="flex items-start gap-3 p-3 rounded-lg bg-[var(--paper-raised)] border border-[var(--rule)]">
           <span class="text-base flex-shrink-0">🎯</span>
           <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-            <strong>15:30 ώρα Κύπρου:</strong> Άνοιγμα Wall Street (NYSE / Nasdaq).
+            <strong class="font-bold text-[var(--ink)]">15:30 ώρα Κύπρου:</strong> Άνοιγμα Wall Street (NYSE / Nasdaq).
           </div>
         </li>
         
@@ -334,7 +338,7 @@
         <li class="flex items-start gap-3 p-3 rounded-lg bg-[var(--paper-raised)] border border-[var(--rule)]">
           <span class="text-base flex-shrink-0">🎯</span>
           <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-            <strong>16:30 ώρα Κύπρου:</strong> Κλείσιμο Χρηματιστηρίου Αξιών Κύπρου (ΧΑΚ) και Χρηματιστηρίου Αθηνών.
+            <strong class="font-bold text-[var(--ink)]">16:30 ώρα Κύπρου:</strong> Κλείσιμο Χρηματιστηρίου Αξιών Κύπρου (ΧΑΚ) και Χρηματιστηρίου Αθηνών.
           </div>
         </li>
         
@@ -342,7 +346,7 @@
         <li class="flex items-start gap-3 p-3 rounded-lg bg-[var(--paper-raised)] border border-[var(--rule)]">
           <span class="text-base flex-shrink-0">🎯</span>
           <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-            <strong>18:00 ώρα Κύπρου:</strong> Εταιρικές ανακοινώσεις και συνεντεύξεις τύπου.
+            <strong class="font-bold text-[var(--ink)]">18:00 ώρα Κύπρου:</strong> Εταιρικές ανακοινώσεις και συνεντεύξεις τύπου.
           </div>
         </li>
         

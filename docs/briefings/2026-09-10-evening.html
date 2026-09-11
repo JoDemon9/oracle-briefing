@@ -64,6 +64,10 @@
     .ticker-content { display: inline-block; animation: tickerAnimation 40s linear infinite; }
     .ticker-wrap:hover .ticker-content { animation-play-state: paused; }
     @keyframes tickerAnimation { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] summary .expand-icon { transform: rotate(180deg); }
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -224,7 +228,7 @@
                 Ημερήσιο Οικονομικό & Στρατηγικό Αποτύπωμα
               </h3>
               <p id="topStoryBody" class="t-body leading-relaxed mb-4">
-                Η σημερινή ημέρα έκλεισε με αξιοσημείωτη κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των ενεργειακών δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά, ενώ οι ευρωπαϊκές κεφαλαιαγορές ολοκλήρωσαν τις συναλλαγές με θετικό πρόσημο για τις τράπεζες. > [!NOTE] > <strong>⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:</strong> > <em> <strong>Αγορές & Tech:</strong> Ήπια διόρθωση σε S&P 500 (-0,58%) & Nasdaq 100 (-1,08%). Στο Tech Radar, πιέσεις σε TSMC (-1,68%), NVIDIA (-2,37%) & Apple (-0,42%), ενώ η Micron (+1,15%), η Meta (+0,24%) και η Τράπεζα Κύπρου (+0,38%) κινήθηκαν ανοδικά. > </em> <strong>Επικαιρότητα (5 Εξελίξεις):</strong> Παράταση μείωσης φόρου καυσίμων στην Κύπρο, τετραμερής μεσογειακή συμμαχία ναυτιλίας, εδραίωση Brent άνω των $102, νέο πλαίσιο κυβερνοασφάλειας AI/Cloud σε ΕΕ/ΗΠΑ και επανασχεδιασμός εμπορικών οδών Μέσης Ανατολής. > * <strong>Αθλητικά:</strong> Πλήρης ετοιμότητα της Ομόνοιας για το ντέρμπι του ΓΣΠ και ευρωπαϊκή αναμέτρηση της Manchester United.
+                Η σημερινή ημέρα έκλεισε με αξιοσημείωτη κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των ενεργειακών δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά, ενώ οι ευρωπαϊκές κεφαλαιαγορές ολοκλήρωσαν τις συναλλαγές με θετικό πρόσημο για τις τράπεζες. > [!NOTE] > <strong class="font-bold text-[var(--ink)]">⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:</strong> > <em> <strong class="font-bold text-[var(--ink)]">Αγορές & Tech:</strong> Ήπια διόρθωση σε S&P 500 (-0,58%) & Nasdaq 100 (-1,08%). Στο Tech Radar, πιέσεις σε TSMC (-1,68%), NVIDIA (-2,37%) & Apple (-0,42%), ενώ η Micron (+1,15%), η Meta (+0,24%) και η Τράπεζα Κύπρου (+0,38%) κινήθηκαν ανοδικά. > </em> <strong class="font-bold text-[var(--ink)]">Επικαιρότητα (5 Εξελίξεις):</strong> Παράταση μείωσης φόρου καυσίμων στην Κύπρο, τετραμερής μεσογειακή συμμαχία ναυτιλίας, εδραίωση Brent άνω των $102, νέο πλαίσιο κυβερνοασφάλειας AI/Cloud σε ΕΕ/ΗΠΑ και επανασχεδιασμός εμπορικών οδών Μέσης Ανατολής. > <strong class="font-bold text-[var(--ink)]">Αθλητικά:</strong> Πλήρης ετοιμότητα της Ομόνοιας για το ντέρμπι του ΓΣΠ και ευρωπαϊκή αναμέτρηση της Manchester United.
               </p>
             </div>
             <div class="pt-4 mt-4 border-t border-[var(--rule)] flex items-center justify-between text-xs text-[var(--ink-quiet)] font-mono">
@@ -262,9 +266,24 @@
                 Η κυβέρνηση αποφάσισε την παράταση του μέτρου μείωσης των συντελεστών ειδικού φόρου κατανάλωσης στα καύσιμα κίνησης και θέρμανσης έως τα τέλη Νοεμβρίου 2026, επιδιώκοντας να αναχαιτίσει τις πληθωριστικές πιέσεις στα νοικοκυριά και στις επιχειρήσεις ενόψει της χειμερινής περιόδου.
               </p>
               
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> Άμεση συγκράτηση του λειτουργικού κόστους μετακίνησης και των εφοδιαστικών αλυσίδων στη Λεμεσό και παγκύπρια.
+    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
+      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
+        <span class="flex items-center gap-2">
+          <span class="text-sm leading-none">💡</span>
+          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
+        </span>
+        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
+      </summary>
+      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
+        
+        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
+          Άμεση συγκράτηση του λειτουργικού κόστους μετακίνησης και των εφοδιαστικών αλυσίδων στη Λεμεσό και παγκύπρια.
         </div>
+        
+        
+      </div>
+    </details>
+    
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
@@ -289,9 +308,24 @@
                 Η κοινή πρωτοβουλία ανέλαβαν τα τέσσερα μεσογειακά κράτη-μέλη της ΕΕ με στόχο την προστασία της ναυτιλιακής ανταγωνιστικότητας απέναντι στους αυστηρούς περιβαλλοντικούς κανονισμούς, ενσωματώνοντας παράλληλα κοινό πρωτόκολλο κυβερνοασφάλειας για τα λιμενικά συστήματα και τις πλατφόρμες διαχείρισης στόλου.
               </p>
               
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> Θωράκιση της θέσης της Λεμεσού ως κορυφαίου ναυτιλιακού κέντρου πλοιοδιαχείρισης και κυβερνοανθεκτικότητας στην Ευρώπη.
+    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
+      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
+        <span class="flex items-center gap-2">
+          <span class="text-sm leading-none">💡</span>
+          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
+        </span>
+        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
+      </summary>
+      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
+        
+        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
+          Θωράκιση της θέσης της Λεμεσού ως κορυφαίου ναυτιλιακού κέντρου πλοιοδιαχείρισης και κυβερνοανθεκτικότητας στην Ευρώπη.
         </div>
+        
+        
+      </div>
+    </details>
+    
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
@@ -316,9 +350,24 @@
                 Οι διεθνείς τιμές του αργού πετρελαίου διατηρήθηκαν σταθερά άνω του ορίου των 102 δολαρίων στη συνεδρίαση της Wall Street, καθώς οι επενδυτές σταθμίζουν τα γεωπολιτικά ρίσκα στη Μέση Ανατολή και την επικείμενη συνεδρίαση της Ευρωπαϊκής Κεντρικής Τράπεζας.
               </p>
               
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> Άμεση αντανάκλαση στο ενεργειακό κόστος παραγωγής της ΑΗΚ και στο ισοζύγιο τρεχουσών συναλλαγών.
+    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
+      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
+        <span class="flex items-center gap-2">
+          <span class="text-sm leading-none">💡</span>
+          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
+        </span>
+        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
+      </summary>
+      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
+        
+        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
+          Άμεση αντανάκλαση στο ενεργειακό κόστος παραγωγής της ΑΗΚ και στο ισοζύγιο τρεχουσών συναλλαγών.
         </div>
+        
+        
+      </div>
+    </details>
+    
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
@@ -343,9 +392,24 @@
                 Συντονισμένη δέσμη οδηγιών ανακοίνωσαν οι αρχές κυβερνοασφάλειας σε Βρυξέλλες και Ουάσιγκτον για την προστασία των υποδομών υπερυπολογιστών και μοντέλων τεχνητής νοημοσύνης από εξελιγμένες κρατικές κυβερνοεπιθέσεις (APTs) και διαρροές δεδομένων.
               </p>
               
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> Επιβάλλει αυστηρότερα πρότυπα ασφάλειας δεδομένων σε όλες τις επιχειρήσεις τεχνολογίας, fintech και χρηματοοικονομικών που αξιοποιούν AI συστήματα.
+    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
+      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
+        <span class="flex items-center gap-2">
+          <span class="text-sm leading-none">💡</span>
+          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
+        </span>
+        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
+      </summary>
+      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
+        
+        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
+          Επιβάλλει αυστηρότερα πρότυπα ασφάλειας δεδομένων σε όλες τις επιχειρήσεις τεχνολογίας, fintech και χρηματοοικονομικών που αξιοποιούν AI συστήματα.
         </div>
+        
+        
+      </div>
+    </details>
+    
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
@@ -370,9 +434,24 @@
                 Οι διεθνείς ναυτιλιακοί κολοσσοί εδραιώνουν εναλλακτικές ναυτιλιακές οδούς μέσω του Ακρωτηρίου της Καλής Ελπίδας, ενώ ευρωπαϊκές ναυτικές δυνάμεις ενισχύουν την αποστολή Aspides για την προστασία των εμπορικών πλοίων που προσεγγίζουν τη Μεσόγειο.
               </p>
               
-        <div class="t-meta text-[var(--accent)] bg-[var(--paper)] p-3 rounded mb-3 border-l-2 border-[var(--accent)] leading-relaxed">
-          <strong class="font-bold">Γιατί με αφορά:</strong> Επιμήκυνση χρόνων παράδοσης εισαγόμενων εμπορευμάτων και διατήρηση αυξημένων ναύλων στα λιμάνια της Ανατολικής Μεσογείου.
+    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
+      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
+        <span class="flex items-center gap-2">
+          <span class="text-sm leading-none">💡</span>
+          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
+        </span>
+        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
+      </summary>
+      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
+        
+        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
+          Επιμήκυνση χρόνων παράδοσης εισαγόμενων εμπορευμάτων και διατήρηση αυξημένων ναύλων στα λιμάνια της Ανατολικής Μεσογείου.
         </div>
+        
+        
+      </div>
+    </details>
+    
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
@@ -830,15 +909,15 @@
               <div class="flex items-center gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
                 <span class="text-2xl flex-shrink-0">☀️</span>
                 <div>
-                  <div class="font-bold text-[var(--ink)] text-sm">* <strong>Θερμοκρασία:</strong> Έως 34°C μέγιστη κατά τις μεσημβρινές ώρες (24°C ελάχιστη).</div>
-                  <div class="text-[11px] text-[var(--ink-quiet)]">* <strong>Πρόγνωση:</strong> Αίθριος καιρός, διαυγής ουρανός με ασθενείς έως μέτριους ανέμους.</div>
+                  <div class="font-bold text-[var(--ink)] text-sm"><strong class="font-bold text-[var(--ink)]">Θερμοκρασία:</strong> Έως 34°C μέγιστη κατά τις μεσημβρινές ώρες (24°C ελάχιστη).</div>
+                  <div class="text-[11px] text-[var(--ink-quiet)]"><strong class="font-bold text-[var(--ink)]">Πρόγνωση:</strong> Αίθριος καιρός, διαυγής ουρανός με ασθενείς έως μέτριους ανέμους.</div>
                 </div>
               </div>
               <div class="flex items-center gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
                 <span class="text-2xl flex-shrink-0">💨</span>
                 <div>
                   <div class="font-bold text-[var(--ink)] text-sm">Άνεμοι</div>
-                  <div class="text-[11px] text-[var(--ink-quiet)]">* <strong>Άνεμοι & Θάλασσα:</strong> Νοτιοδυτικοί 14–18 km/h, ήρεμη θάλασσα — ιδανικές συνθήκες για πρωινή κολύμβηση ή υπαίθρια δραστηριότητα.</div>
+                  <div class="text-[11px] text-[var(--ink-quiet)]"><strong class="font-bold text-[var(--ink)]">Άνεμοι & Θάλασσα:</strong> Νοτιοδυτικοί 14–18 km/h, ήρεμη θάλασσα — ιδανικές συνθήκες για πρωινή κολύμβηση ή υπαίθρια δραστηριότητα.</div>
                 </div>
               </div>
               <div class="flex items-center gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
@@ -871,7 +950,7 @@
         <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
           <span class="text-xl flex-shrink-0 mt-0.5">🌏</span>
           <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-            *Ασιατικό Άνοιγμα (02:00 EEST):** Παρακολούθηση Nikkei & Hang Seng και αντίκτυπος στη διαμόρφωση των τιμών ενέργειας.
+            Ασιατικό Άνοιγμα (02:00 EEST): Παρακολούθηση Nikkei & Hang Seng και αντίκτυπος στη διαμόρφωση των τιμών ενέργειας.
           </div>
         </li>
         
@@ -879,7 +958,7 @@
         <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
           <span class="text-xl flex-shrink-0 mt-0.5">🛡️</span>
           <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-            *Νυχτερινές Εξελίξεις Μέσης Ανατολής:** Επιφυλακή για γεωπολιτικές μεταβολές στον περιφερειακό εναέριο χώρο και τις ναυτιλιακές οδούς.
+            Νυχτερινές Εξελίξεις Μέσης Ανατολής: Επιφυλακή για γεωπολιτικές μεταβολές στον περιφερειακό εναέριο χώρο και τις ναυτιλιακές οδούς.
           </div>
         </li>
         
@@ -887,7 +966,7 @@
         <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
           <span class="text-xl flex-shrink-0 mt-0.5">🌅</span>
           <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-            *Αυριανή Ώρα Έναρξης:** Το πρωινό Sovereign Broadsheet θα εκδοθεί στις 07:30 ώρα Κύπρου.
+            Αυριανή Ώρα Έναρξης: Το πρωινό Sovereign Broadsheet θα εκδοθεί στις 07:30 ώρα Κύπρου.
           </div>
         </li>
         
