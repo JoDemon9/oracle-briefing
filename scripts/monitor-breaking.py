@@ -34,6 +34,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_FILE = os.path.join(BASE_DIR, 'scripts', 'breaking-cache.json')
 LIVE_WIRE_FILE = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
 DOCS_WIRE_FILE = os.path.join(BASE_DIR, 'docs', 'live-wire.json')
+DOCS_SUB_WIRE_FILE = os.path.join(BASE_DIR, 'docs', 'briefings', 'live-wire.json')
 
 HEADERS = {
     'User-Agent': (
@@ -208,7 +209,7 @@ def save_live_wire(items):
     balanced.extend(other_bucket)
     final_items = sorted(balanced, key=lambda x: x.get('timestamp', 0), reverse=True)[:60]
 
-    for path in [LIVE_WIRE_FILE, DOCS_WIRE_FILE]:
+    for path in [LIVE_WIRE_FILE, DOCS_WIRE_FILE, DOCS_SUB_WIRE_FILE]:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(final_items, f, indent=2, ensure_ascii=False)

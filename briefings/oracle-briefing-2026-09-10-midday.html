@@ -107,93 +107,131 @@
     <div class="ticker-content space-x-8 font-mono"><span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,49</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,87%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$103,97</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 Futures:</span> <span class="text-[var(--ink-body)]">7.636,36</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,48%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,49</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,87%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$103,97</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,20%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 Futures:</span> <span class="text-[var(--ink-body)]">7.636,36</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,48%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span></div>
   </div>
 
+  
+    <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
+    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] text-xs">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
+          </span>
+        </div>
+        <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
+          <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
+        </div>
+        <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
+          <span>Προβολή Όλων (50+)</span> <span>➔</span>
+        </button>
+      </div>
+    </div>
+    
+
   <!-- MAIN CONTENT -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+    
+
     <!-- 1. BREAKING & DEAL WIRE -->
-    <section>
+    <section id="midday-news" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
           <span>⚡</span> <span>Μεσημβρινό Breaking & Deal Wire</span>
         </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">CURATED DIGEST</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         
-        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition">
+        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-2 font-mono text-[10px] text-[var(--ink-quiet)] uppercase tracking-wider">
-              <span>ΕΞΕΛΙΞΗ #1</span>
-              <span class="text-amber-600 dark:text-amber-400 font-bold">⚡ MIDDAY WIRE</span>
+            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
+              <img src="https://cdn.politis.com.cy/thumbnails/526733/conversions/keraunos_new_size-seo.webp" alt="Παράταση έως το τέλος Νοεμβρίου στη μείωση του φόρου κατανάλωσης στα καύσιμα" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
+              <span class="absolute top-2.5 left-2.5 bg-indigo-900/80 text-white t-meta px-2 py-0.5 rounded shadow-xs font-bold uppercase">⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ</span>
+              <span class="absolute top-2.5 right-2.5 bg-emerald-500/90 text-white font-bold t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
             </div>
-            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
-              Παράταση έως το τέλος Νοεμβρίου στη μείωση του φόρου κατανάλωσης στα καύσιμα
-            </h3>
-            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-4">
-              Η κυβέρνηση ενέκρινε την πρόταση του Υπουργείου Οικονομικών για την παράταση του μέτρου μείωσης των συντελεστών ειδικού φόρου κατανάλωσης στα καύσιμα κίνησης (κατά 8,33 σεντ ανά λίτρο) έως τις 30 Νοεμβρίου 2026, επιδιώκοντας να αναχαιτίσει τις πληθωριστικές πιέσεις στα νοικοκυριά και στις επιχειρήσεις.
-            </p>
+            <div class="p-5 sm:p-6">
+              <h3 class="t-title mb-2.5 text-[var(--ink)]">
+                Παράταση έως το τέλος Νοεμβρίου στη μείωση του φόρου κατανάλωσης στα καύσιμα
+              </h3>
+              <p class="t-body-sm leading-relaxed mb-3 text-[var(--ink-body)]">
+                Η κυβέρνηση ενέκρινε την πρόταση του Υπουργείου Οικονομικών για την παράταση του μέτρου μείωσης των συντελεστών ειδικού φόρου κατανάλωσης στα καύσιμα κίνησης (κατά 8,33 σεντ ανά λίτρο) έως τις 30 Νοεμβρίου 2026, επιδιώκοντας να αναχαιτίσει τις πληθωριστικές πιέσεις στα νοικοκυριά και στις επιχειρήσεις.
+              </p>
+              
+            </div>
           </div>
-          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
-            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
-            <a href="https://www.politis.com.cy/politis-news/oikonomia/1031884/paratinetai-mekhri-tis-30-noemvrioy-i-miosi-toy-foroy-katanalosis-sta-kausima" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Politis</span> <span>➔</span></a>
+          <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="t-meta text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
+            <a href="https://www.politis.com.cy/politis-news/oikonomia/1031884/paratinetai-mekhri-tis-30-noemvrioy-i-miosi-toy-foroy-katanalosis-sta-kausima" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Politis</span> <span>➔</span></a>
           </div>
         </article>
         
 
-        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition">
+        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-2 font-mono text-[10px] text-[var(--ink-quiet)] uppercase tracking-wider">
-              <span>ΕΞΕΛΙΞΗ #2</span>
-              <span class="text-amber-600 dark:text-amber-400 font-bold">⚡ MIDDAY WIRE</span>
+            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
+              <img src="https://www.naftemporiki.gr/wp-content/uploads/2025/05/Naftilia_ploia.jpg" alt="Συμμαχία Κύπρου, Ελλάδας, Μάλτας και Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
+              <span class="absolute top-2.5 left-2.5 bg-indigo-900/80 text-white t-meta px-2 py-0.5 rounded shadow-xs font-bold uppercase">⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ</span>
+              <span class="absolute top-2.5 right-2.5 bg-emerald-500/90 text-white font-bold t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
             </div>
-            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
-              Συμμαχία Κύπρου, Ελλάδας, Μάλτας και Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα
-            </h3>
-            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-4">
-              Κοινή πρωτοβουλία ανέλαβαν τα τέσσερα μεσογειακά κράτη-μέλη της ΕΕ με στόχο την προστασία της ευρωπαϊκής ναυτιλιακής ανταγωνιστικότητας απέναντι στους αυστηρούς περιβαλλοντικούς κανονισμούς, διασφαλίζοντας παράλληλα την ανθεκτικότητα των λιμενικών υποδομών και των εφοδιαστικών αλυσίδων.
-            </p>
+            <div class="p-5 sm:p-6">
+              <h3 class="t-title mb-2.5 text-[var(--ink)]">
+                Συμμαχία Κύπρου, Ελλάδας, Μάλτας και Ιταλίας για τη ναυτιλιακή ανταγωνιστικότητα
+              </h3>
+              <p class="t-body-sm leading-relaxed mb-3 text-[var(--ink-body)]">
+                Κοινή πρωτοβουλία ανέλαβαν τα τέσσερα μεσογειακά κράτη-μέλη της ΕΕ με στόχο την προστασία της ευρωπαϊκής ναυτιλιακής ανταγωνιστικότητας απέναντι στους αυστηρούς περιβαλλοντικούς κανονισμούς, διασφαλίζοντας παράλληλα την ανθεκτικότητα των λιμενικών υποδομών και των εφοδιαστικών αλυσίδων.
+              </p>
+              
+            </div>
           </div>
-          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
-            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
-            <a href="https://www.naftemporiki.gr/maritime/2073284/eyropaiki-enosi-enonei-ton-noto-enanti-toy-vorra-i-machi-gia-ti-naytilia/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Η Ναυτεμπορική</span> <span>➔</span></a>
+          <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="t-meta text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
+            <a href="https://www.naftemporiki.gr/maritime/2073284/eyropaiki-enosi-enonei-ton-noto-enanti-toy-vorra-i-machi-gia-ti-naytilia/" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Η Ναυτεμπορική</span> <span>➔</span></a>
           </div>
         </article>
         
 
-        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition">
+        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-2 font-mono text-[10px] text-[var(--ink-quiet)] uppercase tracking-wider">
-              <span>ΕΞΕΛΙΞΗ #3</span>
-              <span class="text-amber-600 dark:text-amber-400 font-bold">⚡ MIDDAY WIRE</span>
+            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
+              <img src="https://cdn.sofokleousin.gr/sites/default/files/styles/ogimage/public/2026-09/f5927b4f-40ae-4924-82d6-a80259305303.png?itok=xSrVYV7J" alt="Συναντήσεις ασφάλειας, ενέργειας και άμυνας Χριστοδουλίδη - Χέρτσογκ στη Λευκωσία" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
+              <span class="absolute top-2.5 left-2.5 bg-indigo-900/80 text-white t-meta px-2 py-0.5 rounded shadow-xs font-bold uppercase">⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ</span>
+              <span class="absolute top-2.5 right-2.5 bg-emerald-500/90 text-white font-bold t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
             </div>
-            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
-              Συναντήσεις ασφάλειας, ενέργειας και άμυνας Χριστοδουλίδη - Χέρτσογκ στη Λευκωσία
-            </h3>
-            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-4">
-              Στο Προεδρικό Μέγαρο συναντήθηκαν ο Πρόεδρος της Κυπριακής Δημοκρατίας Νίκος Χριστοδουλίδης και ο Πρόεδρος του Ισραήλ Ισαάκ Χέρτσογκ, με την ατζέντα να επικεντρώνεται στην περιφερειακή σταθερότητα, την ενεργειακή ασφάλεια και τις διμερείς στρατηγικές σχέσεις.
-            </p>
+            <div class="p-5 sm:p-6">
+              <h3 class="t-title mb-2.5 text-[var(--ink)]">
+                Συναντήσεις ασφάλειας, ενέργειας και άμυνας Χριστοδουλίδη - Χέρτσογκ στη Λευκωσία
+              </h3>
+              <p class="t-body-sm leading-relaxed mb-3 text-[var(--ink-body)]">
+                Στο Προεδρικό Μέγαρο συναντήθηκαν ο Πρόεδρος της Κυπριακής Δημοκρατίας Νίκος Χριστοδουλίδης και ο Πρόεδρος του Ισραήλ Ισαάκ Χέρτσογκ, με την ατζέντα να επικεντρώνεται στην περιφερειακή σταθερότητα, την ενεργειακή ασφάλεια και τις διμερείς στρατηγικές σχέσεις.
+              </p>
+              
+            </div>
           </div>
-          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
-            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
-            <a href="https://www.sofokleousin.gr/epikairotita/diethni/kypros-asfaleia-energeia-kai-amyna-syzitoun-xristodoulidis-xertso" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Sofokleousin</span> <span>➔</span></a>
+          <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="t-meta text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
+            <a href="https://www.sofokleousin.gr/epikairotita/diethni/kypros-asfaleia-energeia-kai-amyna-syzitoun-xristodoulidis-xertso" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Sofokleousin</span> <span>➔</span></a>
           </div>
         </article>
         
 
-        <article class="card p-5 sm:p-6 flex flex-col justify-between hover:border-[var(--rule-strong)] transition">
+        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-2 font-mono text-[10px] text-[var(--ink-quiet)] uppercase tracking-wider">
-              <span>ΕΞΕΛΙΞΗ #4</span>
-              <span class="text-amber-600 dark:text-amber-400 font-bold">⚡ MIDDAY WIRE</span>
+            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
+              <img src="https://www.newsbeast.gr/image/s1200x762/fill/file/files/1/2026/09/Dendias-Kypros.jpg" alt="Ν. Δένδιας & Β. Πάλμας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας στην Ανατολική Μεσόγειο" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
+              <span class="absolute top-2.5 left-2.5 bg-indigo-900/80 text-white t-meta px-2 py-0.5 rounded shadow-xs font-bold uppercase">⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ</span>
+              <span class="absolute top-2.5 right-2.5 bg-emerald-500/90 text-white font-bold t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
             </div>
-            <h3 class="font-editorial text-lg sm:text-xl font-bold text-[var(--ink)] mb-2.5 leading-snug">
-              Ν. Δένδιας & Β. Πάλμας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας στην Ανατολική Μεσόγειο
-            </h3>
-            <p class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed mb-4">
-              Συνάντηση στην Αθήνα πραγματοποίησαν οι υπουργοί Άμυνας Ελλάδας και Κύπρου, επιβεβαιώνοντας τη στενή αμυντική συνεργασία, την ενίσχυση της ευρωπαϊκής αμυντικής ετοιμότητας και τον κοινό ρόλο ως πυλώνα ασφάλειας στην περιοχή.
-            </p>
+            <div class="p-5 sm:p-6">
+              <h3 class="t-title mb-2.5 text-[var(--ink)]">
+                Ν. Δένδιας & Β. Πάλμας: Κύπρος και Ελλάδα συνιστούν άξονα σταθερότητας στην Ανατολική Μεσόγειο
+              </h3>
+              <p class="t-body-sm leading-relaxed mb-3 text-[var(--ink-body)]">
+                Συνάντηση στην Αθήνα πραγματοποίησαν οι υπουργοί Άμυνας Ελλάδας και Κύπρου, επιβεβαιώνοντας τη στενή αμυντική συνεργασία, την ενίσχυση της ευρωπαϊκής αμυντικής ετοιμότητας και τον κοινό ρόλο ως πυλώνα ασφάλειας στην περιοχή.
+              </p>
+              
+            </div>
           </div>
-          <div class="pt-3 border-t border-[var(--rule)] flex items-center justify-between">
-            <span class="text-[10px] text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
-            <a href="https://www.newsbeast.gr/politiki/arthro/13348708/dendias-palmas-ellada-kypros-amyntiki-synergasia" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Newsbeast</span> <span>➔</span></a>
+          <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
+            <span class="t-meta text-[var(--ink-quiet)] font-mono">13:30 EEST</span>
+            <a href="https://www.newsbeast.gr/politiki/arthro/13348708/dendias-palmas-ellada-kypros-amyntiki-synergasia" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Newsbeast</span> <span>➔</span></a>
           </div>
         </article>
         
@@ -201,70 +239,86 @@
     </section>
 
     <!-- 2. MIDDAY MARKET PULSE -->
-    <section>
+    <section id="market-pulse" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>📊</span> <span>Midday Market Pulse (ΧΑΚ · ATHEX · Ευρώπη)</span>
+          <span>📊</span> <span>Midday Market Pulse (ΧΑΚ · ATHEX · Ευρώπη & Wall Street)</span>
         </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">LIVE APPRAISAL</span>
       </div>
-      <div class="card overflow-hidden">
-        <table class="w-full text-left text-sm">
-          <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
-            <tr>
-              <th class="py-3 px-4">Δείκτης / Αξία</th>
-              <th class="py-3 px-4">Τιμή</th>
-              <th class="py-3 px-4">Μεταβολή</th>
-              <th class="py-3 px-4">Ώρα Αποτίμησης</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-[var(--rule)] font-sans">
-            
+      
+        <div class="card overflow-hidden shadow-xs">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-[var(--paper)] text-xs uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                <tr>
+                  <th class="py-3 px-4">Δείκτης / Αξία</th>
+                  <th class="py-3 px-4 font-mono">Τιμή</th>
+                  <th class="py-3 px-4 font-mono">Μεταβολή</th>
+                  <th class="py-3 px-4">Ώρα Αποτίμησης / Σχόλιο</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[var(--rule)] font-sans">
+                
         <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-4 font-bold text-[var(--ink)]">Bank of Cyprus (BOCH)</td>
-          <td class="py-3 px-4 font-mono font-bold text-[var(--ink)]">€10,49</td>
-          <td class="py-3 px-4 font-mono">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Bank of Cyprus (BOCH)</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">€10,49</td>
+          <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
               <span>+0,87%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
             </span>
           </td>
-          <td class="py-3 px-4 text-xs font-mono text-[var(--ink-quiet)]">13:00 EEST</td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">13:00 EEST</td>
         </tr>
         
-
         <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-4 font-bold text-[var(--ink)]">Brent Crude</td>
-          <td class="py-3 px-4 font-mono font-bold text-[var(--ink)]">$103,97</td>
-          <td class="py-3 px-4 font-mono">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Brent Crude</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$103,97</td>
+          <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
               <span>+1,20%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
             </span>
           </td>
-          <td class="py-3 px-4 text-xs font-mono text-[var(--ink-quiet)]">13:00 EEST</td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">13:00 EEST</td>
         </tr>
         
-
         <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-4 font-bold text-[var(--ink)]">S&P 500 Futures</td>
-          <td class="py-3 px-4 font-mono font-bold text-[var(--ink)]">7.636,36</td>
-          <td class="py-3 px-4 font-mono">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>S&P 500 Futures</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">7.636,36</td>
+          <td class="py-3 px-3.5 font-mono">
             <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
               <span>-0,48%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
             </span>
           </td>
-          <td class="py-3 px-4 text-xs font-mono text-[var(--ink-quiet)]">Pre-Market US</td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Pre-Market US</td>
         </tr>
         
-          </tbody>
-        </table>
-      </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
     </section>
 
-    <!-- 3. PRIORITIES -->
-    <section>
+    
+
+    
+
+    
+
+    <!-- 6. PRIORITIES -->
+    <section id="priorities" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
           <span>🎯</span> <span>Απογευματινές Προτεραιότητες</span>
         </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">TIMELINE</span>
       </div>
       <div class="card p-5">
         <ul class="space-y-2.5">
@@ -328,6 +382,128 @@
     }
     updateClocks();
     setInterval(updateClocks, 10000);
+
+    // ⚡ 24/7 Live Wire Feed Ticker & Drawer Modal (Midday)
+    (function () {
+      const tickerEl = document.getElementById('liveWireTicker');
+      const drawerModal = document.getElementById('wireDrawerModal');
+      const drawerContent = document.getElementById('wireDrawerContent');
+      const openBtn = document.getElementById('openWireDrawerBtn');
+      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
+      const closeBtn = document.getElementById('closeWireDrawerBtn');
+
+      let wireItems = [];
+      let activeIndex = 0;
+      let rotatorInterval = null;
+
+      async function fetchWire() {
+        const candidates = [
+          '../live-wire.json',
+          'live-wire.json',
+          '../live-wire.json',
+          '/oracle-briefing/live-wire.json',
+          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
+        ];
+        for (let i = 0; i < candidates.length; i++) {
+          try {
+            const resp = await fetch(candidates[i]);
+            if (resp && resp.ok) {
+              const data = await resp.json();
+              if (Array.isArray(data) && data.length > 0) {
+                wireItems = data;
+                renderTicker();
+                renderDrawer();
+                if (!rotatorInterval && wireItems.length > 1) {
+                  rotatorInterval = setInterval(rotateTicker, 6000);
+                }
+                return;
+              }
+            }
+          } catch (e) {}
+        }
+        console.warn('Could not load live-wire from any candidate URL.');
+      }
+
+      function renderTicker() {
+        if (!tickerEl || !wireItems.length) return;
+        const item = wireItems[activeIndex];
+        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
+        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${item.time_str || ''}]</span>`;
+        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${item.source})</span>`;
+        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${breakBadge}${timeBadge}<a href="${item.link}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${item.title}</a>${srcBadge}</div>`;
+      }
+
+      function rotateTicker() {
+        if (!tickerEl || !wireItems.length) return;
+        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
+        renderTicker();
+      }
+
+      function renderDrawer() {
+        if (!drawerContent || !wireItems.length) return;
+        drawerContent.innerHTML = wireItems.map(item => {
+          const isB = item.is_breaking;
+          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
+          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
+          return `
+            <div class="p-3 rounded-lg border ${borderCls} space-y-1 text-xs">
+              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
+                <span>${item.source} · ${item.time_str || ''}</span>
+                ${isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}
+              </div>
+              <a href="${item.link}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
+                ${breakTag}${item.title}
+              </a>
+              ${item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${item.snippet}</p>` : ''}
+            </div>
+          `;
+        }).join('');
+      }
+
+      function toggleDrawer(open) {
+        if (!drawerModal) return;
+        if (open) {
+          drawerModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        } else {
+          drawerModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
+      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+      if (drawerModal) {
+        drawerModal.addEventListener('click', (e) => {
+          if (e.target === drawerModal) toggleDrawer(false);
+        });
+      }
+
+      fetchWire();
+    })();
   </script>
+
+  
+    <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
+    <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
+      <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
+        <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+            <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
+          </div>
+          <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
+        </div>
+        <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
+          Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
+        </div>
+        <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
+          <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
+        </div>
+      </div>
+    </div>
+    
+
 </body>
 </html>

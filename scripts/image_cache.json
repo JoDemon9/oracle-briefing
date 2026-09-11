@@ -358,5 +358,37 @@
   "https://www.bbc.co.uk/news/articles/c62jln7n2vvo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/3cb0/live/7f4afc60-ad47-11f1-ae59-91d2b63bf2a3.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.aljazeera.com/news/liveblog/2026/9/11/iran-war-live-irgc-attacks-us-unmanned-vessel-in-hormuz-two-ships-hit?traffic_source=rss": {
+    "image": "https://www.aljazeera.com/wp-content/uploads/2026/09/AFP__20260905__C7FN2G9__v3__HighRes__TopshotIranUsIsraelWar-1789077344.jpg?resize=1920%2C1440",
+    "category": "ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ"
+  },
+  "house-search/latest.html": {
+    "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80",
+    "category": "ΠΑΙΔΕΙΑ & ΥΠΟΔΟΜΕΣ"
+  },
+  "https://www.aljazeera.com/news/2026/9/11/anthropic-claims-claude-ai-used-for-missile-projects-global-espionage?traffic_source=rss": {
+    "image": "https://www.aljazeera.com/wp-content/uploads/2026/09/reuters_6aa37d4d-1789099341.jpg?resize=1920%2C1440",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.aljazeera.com/news/2026/9/11/putin-lands-in-india-for-brics-summit-shadowed-by-iran-and-ukraine-wars?traffic_source=rss": {
+    "image": "https://www.aljazeera.com/wp-content/uploads/2026/09/AFP__20260901__C6ZG6VB__v1__MidRes__KyrgyzstanRussiaIranSummitSco-1789086915.jpg?resize=1200%2C630",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108359250-1788556763771-gettyimages-2293564592-6k7a0759_ru7r5yzd.jpeg?v=1788556808&amp;w=1920&amp;h=1080",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://www.politis.com.cy/politis-news/oikonomia/1031884/paratinetai-mekhri-tis-30-noemvrioy-i-miosi-toy-foroy-katanalosis-sta-kausima": {
+    "image": "https://cdn.politis.com.cy/thumbnails/526733/conversions/keraunos_new_size-seo.webp",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.sofokleousin.gr/epikairotita/diethni/kypros-asfaleia-energeia-kai-amyna-syzitoun-xristodoulidis-xertso": {
+    "image": "https://cdn.sofokleousin.gr/sites/default/files/styles/ogimage/public/2026-09/f5927b4f-40ae-4924-82d6-a80259305303.png?itok=xSrVYV7J",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.newsbeast.gr/politiki/arthro/13348708/dendias-palmas-ellada-kypros-amyntiki-synergasia": {
+    "image": "https://www.newsbeast.gr/image/s1200x762/fill/file/files/1/2026/09/Dendias-Kypros.jpg",
+    "category": "⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ"
   }
 }

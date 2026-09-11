@@ -2575,21 +2575,32 @@
       let activeIndex = 0;
       let rotatorInterval = null;
 
-      function fetchWire() {
-        return fetch('live-wire.json')
-          .catch(() => fetch('../live-wire.json'))
-          .then(r => r.json())
-          .then(data => {
-            wireItems = data;
-            renderTicker();
-            renderDrawer();
-            if (!rotatorInterval && wireItems.length > 1) {
-              rotatorInterval = setInterval(rotateTicker, 6000);
+      async function fetchWire() {
+        const candidates = [
+          '../live-wire.json',
+          'live-wire.json',
+          '../live-wire.json',
+          '/oracle-briefing/live-wire.json',
+          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
+        ];
+        for (let i = 0; i < candidates.length; i++) {
+          try {
+            const resp = await fetch(candidates[i]);
+            if (resp && resp.ok) {
+              const data = await resp.json();
+              if (Array.isArray(data) && data.length > 0) {
+                wireItems = data;
+                renderTicker();
+                renderDrawer();
+                if (!rotatorInterval && wireItems.length > 1) {
+                  rotatorInterval = setInterval(rotateTicker, 6000);
+                }
+                return;
+              }
             }
-          })
-          .catch(e => {
-            console.warn('Could not load live-wire:', e);
-          });
+          } catch (e) {}
+        }
+        console.warn('Could not load live-wire from any candidate URL.');
       }
 
       function renderTicker() {

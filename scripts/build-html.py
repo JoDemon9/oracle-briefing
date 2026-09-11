@@ -1800,20 +1800,32 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
       let activeIndex = 0;
       let rotatorInterval = null;
 
-      function fetchWire() {{
-        return fetch('{live_wire_url}')
-          .catch(() => fetch('live-wire.json'))
-          .catch(() => fetch('../live-wire.json'))
-          .then(r => r.json())
-          .then(data => {{
-            wireItems = data;
-            renderTicker();
-            renderDrawer();
-            if (!rotatorInterval && wireItems.length > 1) {{
-              rotatorInterval = setInterval(rotateTicker, 6000);
+      async function fetchWire() {{
+        const candidates = [
+          '{live_wire_url}',
+          'live-wire.json',
+          '../live-wire.json',
+          '/oracle-briefing/live-wire.json',
+          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
+        ];
+        for (let i = 0; i < candidates.length; i++) {{
+          try {{
+            const resp = await fetch(candidates[i]);
+            if (resp && resp.ok) {{
+              const data = await resp.json();
+              if (Array.isArray(data) && data.length > 0) {{
+                wireItems = data;
+                renderTicker();
+                renderDrawer();
+                if (!rotatorInterval && wireItems.length > 1) {{
+                  rotatorInterval = setInterval(rotateTicker, 6000);
+                }}
+                return;
+              }}
             }}
-          }})
-          .catch(e => console.warn('Could not load live-wire:', e));
+          }} catch (e) {{}}
+        }}
+        console.warn('Could not load live-wire from any candidate URL.');
       }}
 
       function renderTicker() {{
@@ -2318,6 +2330,46 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
         ''')
     priorities_html = '\n'.join(priority_items)
 
+    live_wire_bar_html = '''
+    <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
+    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] text-xs">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
+          </span>
+        </div>
+        <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
+          <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
+        </div>
+        <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
+          <span>Προβολή Όλων (50+)</span> <span>➔</span>
+        </button>
+      </div>
+    </div>
+    '''
+
+    wire_drawer_modal_html = '''
+    <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
+    <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden flex justify-end transition-opacity duration-300">
+      <div class="w-full max-w-md bg-[var(--paper-raised)] h-full shadow-2xl p-5 overflow-y-auto flex flex-col border-l border-[var(--rule)]">
+        <div class="flex items-center justify-between pb-3 border-b border-[var(--rule)] mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+            <h3 class="font-bold text-sm tracking-wide uppercase text-[var(--ink)]">24/7 Live Wire Intelligence</h3>
+          </div>
+          <button id="closeWireDrawerBtn" class="text-2xl text-[var(--ink-quiet)] hover:text-[var(--ink)] leading-none px-2">&times;</button>
+        </div>
+        <div class="text-xs text-[var(--ink-quiet)] mb-3 pb-2 border-b border-[var(--rule)] font-mono">
+          Τελευταία 50 τηλεγραφήματα από CNA, InBusinessNews, Philenews, Cyprus Mail, SigmaLive & BBC.
+        </div>
+        <div id="wireDrawerContent" class="space-y-3 flex-grow overflow-y-auto pr-1">
+          <div class="text-xs text-[var(--ink-quiet)] italic text-center py-8">Φόρτωση ζωντανής ροής...</div>
+        </div>
+      </div>
+    </div>
+    '''
+
     html = f'''<!DOCTYPE html>
 <html lang="el">
 <head>
@@ -2417,6 +2469,8 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     <div class="ticker-content space-x-8 font-mono">{ticker_html}</div>
   </div>
 
+  {live_wire_bar_html}
+
   <!-- MAIN CONTENT -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
     {pulse_html}
@@ -2498,7 +2552,110 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     }}
     updateClocks();
     setInterval(updateClocks, 10000);
+
+    // ⚡ 24/7 Live Wire Feed Ticker & Drawer Modal (Midday)
+    (function () {{
+      const tickerEl = document.getElementById('liveWireTicker');
+      const drawerModal = document.getElementById('wireDrawerModal');
+      const drawerContent = document.getElementById('wireDrawerContent');
+      const openBtn = document.getElementById('openWireDrawerBtn');
+      const openBtnNav = document.getElementById('openWireDrawerBtnNav');
+      const closeBtn = document.getElementById('closeWireDrawerBtn');
+
+      let wireItems = [];
+      let activeIndex = 0;
+      let rotatorInterval = null;
+
+      async function fetchWire() {{
+        const candidates = [
+          '{live_wire_url}',
+          'live-wire.json',
+          '../live-wire.json',
+          '/oracle-briefing/live-wire.json',
+          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
+        ];
+        for (let i = 0; i < candidates.length; i++) {{
+          try {{
+            const resp = await fetch(candidates[i]);
+            if (resp && resp.ok) {{
+              const data = await resp.json();
+              if (Array.isArray(data) && data.length > 0) {{
+                wireItems = data;
+                renderTicker();
+                renderDrawer();
+                if (!rotatorInterval && wireItems.length > 1) {{
+                  rotatorInterval = setInterval(rotateTicker, 6000);
+                }}
+                return;
+              }}
+            }}
+          }} catch (e) {{}}
+        }}
+        console.warn('Could not load live-wire from any candidate URL.');
+      }}
+
+      function renderTicker() {{
+        if (!tickerEl || !wireItems.length) return;
+        const item = wireItems[activeIndex];
+        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
+        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${{item.time_str || ''}}]</span>`;
+        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${{item.source}})</span>`;
+        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${{breakBadge}}${{timeBadge}}<a href="${{item.link}}" target="_blank" class="hover:underline text-[var(--ink)] font-medium">${{item.title}}</a>${{srcBadge}}</div>`;
+      }}
+
+      function rotateTicker() {{
+        if (!tickerEl || !wireItems.length) return;
+        activeIndex = (activeIndex + 1) % Math.min(wireItems.length, 15);
+        renderTicker();
+      }}
+
+      function renderDrawer() {{
+        if (!drawerContent || !wireItems.length) return;
+        drawerContent.innerHTML = wireItems.map(item => {{
+          const isB = item.is_breaking;
+          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
+          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
+          return `
+            <div class="p-3 rounded-lg border ${{borderCls}} space-y-1 text-xs">
+              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
+                <span>${{item.source}} · ${{item.time_str || ''}}</span>
+                ${{isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}}
+              </div>
+              <a href="${{item.link}}" target="_blank" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
+                ${{breakTag}}${{item.title}}
+              </a>
+              ${{item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${{item.snippet}}</p>` : ''}}
+            </div>
+          `;
+        }}).join('');
+      }}
+
+      function toggleDrawer(open) {{
+        if (!drawerModal) return;
+        if (open) {{
+          drawerModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }} else {{
+          drawerModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }}
+      }}
+
+      if (openBtn) openBtn.addEventListener('click', () => toggleDrawer(true));
+      if (openBtnNav) openBtnNav.addEventListener('click', () => toggleDrawer(true));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+      if (drawerModal) {{
+        drawerModal.addEventListener('click', (e) => {{
+          if (e.target === drawerModal) toggleDrawer(false);
+        }});
+      }}
+
+      fetchWire();
+    }})();
   </script>
+
+  {wire_drawer_modal_html}
+
 </body>
 </html>
 '''
@@ -4708,21 +4865,32 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
       let activeIndex = 0;
       let rotatorInterval = null;
 
-      function fetchWire() {{
-        return fetch('live-wire.json')
-          .catch(() => fetch('../live-wire.json'))
-          .then(r => r.json())
-          .then(data => {{
-            wireItems = data;
-            renderTicker();
-            renderDrawer();
-            if (!rotatorInterval && wireItems.length > 1) {{
-              rotatorInterval = setInterval(rotateTicker, 6000);
+      async function fetchWire() {{
+        const candidates = [
+          '{live_wire_url}',
+          'live-wire.json',
+          '../live-wire.json',
+          '/oracle-briefing/live-wire.json',
+          'https://jodemon9.github.io/oracle-briefing/live-wire.json'
+        ];
+        for (let i = 0; i < candidates.length; i++) {{
+          try {{
+            const resp = await fetch(candidates[i]);
+            if (resp && resp.ok) {{
+              const data = await resp.json();
+              if (Array.isArray(data) && data.length > 0) {{
+                wireItems = data;
+                renderTicker();
+                renderDrawer();
+                if (!rotatorInterval && wireItems.length > 1) {{
+                  rotatorInterval = setInterval(rotateTicker, 6000);
+                }}
+                return;
+              }}
             }}
-          }})
-          .catch(e => {{
-            console.warn('Could not load live-wire:', e);
-          }});
+          }} catch (e) {{}}
+        }}
+        console.warn('Could not load live-wire from any candidate URL.');
       }}
 
       function renderTicker() {{
@@ -4855,9 +5023,24 @@ def main():
     docs_briefing_html = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.html')
     docs_briefing_md = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.md')
 
-    with open(docs_index, 'w', encoding='utf-8') as f:
-        f.write(html_root)
-    print(f"Generated root index: {docs_index}")
+    latest_overall = find_latest_briefing()
+    is_latest = os.path.abspath(target_md) == os.path.abspath(latest_overall)
+
+    if is_latest:
+        with open(docs_index, 'w', encoding='utf-8') as f:
+            f.write(html_root)
+        print(f"Generated root index (latest edition): {docs_index}")
+
+        # Write version.json to docs/ for automatic stale-cache invalidation
+        version_info = {
+            'date': date_slug,
+            'edition': edition_suffix.replace('-', '') or 'morning',
+            'timestamp': datetime.now().isoformat()
+        }
+        with open(os.path.join(DOCS_DIR, 'version.json'), 'w', encoding='utf-8') as f:
+            json.dump(version_info, f, indent=2)
+    else:
+        print(f"Notice: Root index preserved (not overwritten) because {filename} is not the latest edition ({os.path.basename(latest_overall)}).")
 
     for path in [briefing_html, docs_briefing_html]:
         with open(path, 'w', encoding='utf-8') as f:
@@ -4867,19 +5050,11 @@ def main():
     shutil.copy2(target_md, docs_briefing_md)
     print(f"Copied markdown to docs: {docs_briefing_md}")
 
-    # Copy live-wire.json to docs/
+    # Copy live-wire.json to docs/ and docs/briefings/
     live_wire_src = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
     if os.path.exists(live_wire_src):
         shutil.copy2(live_wire_src, os.path.join(DOCS_DIR, 'live-wire.json'))
-
-    # Write version.json to docs/ for automatic stale-cache invalidation
-    version_info = {
-        'date': date_slug,
-        'edition': edition_suffix.replace('-', '') or 'morning',
-        'timestamp': datetime.now().isoformat()
-    }
-    with open(os.path.join(DOCS_DIR, 'version.json'), 'w', encoding='utf-8') as f:
-        json.dump(version_info, f, indent=2)
+        shutil.copy2(live_wire_src, os.path.join(DOCS_BRIEFINGS_DIR, 'live-wire.json'))
 
     print("\nSUCCESS! The Oracle Sovereign web portal and archives have been built with full news-first layout and imagery.")
 
