@@ -410,5 +410,25 @@
   "https://www.bbc.co.uk/news/articles/cvgyvk2djk4o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c23c/live/9ec505e0-adc9-11f1-b1d1-571ed4d7ff2c.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/11/norways-princess-astrid-dies-aged-94-two-days-after-kings-funeral": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/astrid-2.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/11/fitiris-uns-velez-discuss-refugee-matters": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Justice-Minister-Fitiris-UNHCR-representative-Leslie-Esther-Velez.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/09dc/live/6dac0640-adcc-11f1-a540-61c3f7fc4e6c.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cgjq1qy98vjo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/4871/live/931f3ad0-adfb-11f1-8169-6fdea7f79791.png",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c4gl92lw8vpo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/5eb3/live/845b2920-adc7-11f1-a540-61c3f7fc4e6c.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }

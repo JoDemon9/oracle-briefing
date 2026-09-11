@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "ΠΟΙΟΣ θα παίξει με Απόλλωνα;",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/poios-tha-paixei-me-apollona",
+        "title": "Ήταν σωστός!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/itan-sostos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ντεμπούτο με Παναθηναϊκό!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ntempoyto-me-panathinaiko",
+        "title": "Η αποστολή της Ομόνοιας με Ακιντόλα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-me-akintola",
         "source": "Kerkida.net"
       },
       {
-        "title": "(ΒΙΝΤΕΟ) Η δράση στο \"Ηλίας Πούλλος\"",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/binteo-i-drasi-sto-ilias-poyllos",
+        "title": "(Βίντεο) Μπεργκ: \"Είμαι σίγουρος πως και ο προπονητής της Παρί θα πει μπορεί να είναι καλύτερη\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-mpergk-eimai-sigoyros-pos-kai-o-proponitis-tis-pari-tha-pei-mporei-na-einai-kalyteri",
         "source": "Kerkida.net"
       },
       {
-        "title": "ΤΟΠΟΘΕΤΗΣΗ/\"Αυτή είναι η πολιτική της Ομόνοιας στις μεταγραφές\"",
-        "url": "https://www.kerkida.net/super-monday/omonoia/topothetisiayti-einai-i-politiki-tis-omonoias-stis-metagrafes",
+        "title": "\"Είμαστε πολύ αισιόδοξοι για το back 2 back\" (Βίντεο)",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/eimaste-poly-aisiodoxoi-gia-back-2-back-binteo",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ανάλογη... συνέχεια",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/analogi-syneheia",
+        "title": "Υποδοχή και... πρώτη για Τάσο (Βίντεο)",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/proti-gia-taso-binteo",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-10T19:11:25.208128+00:00"
+    "fetched_at": "2026-09-11T18:39:19.010589+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -48,40 +48,40 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "UEFA Champions League: Manchester United versus Sabah — 20:00",
-      "match": "Manchester United versus Sabah — 20:00",
-      "competition": "UEFA Champions League",
+      "fixture": "Premier League: Manchester United versus Manchester City — 16:30",
+      "match": "Manchester United versus Manchester City — 16:30",
+      "competition": "Premier League",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
       {
-        "title": "Manchester United v Sabah: Champions League – live",
+        "title": "Champions League review: Irish heroics, rejected resignations and Mourinho’s return",
+        "url": "https://www.theguardian.com/football/2026/sep/11/champions-league-review-troy-parrott-jose-mourinho-michael-olise",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Maresca backs Anderson over ‘kings of Manchester’ dig before derby clash",
+        "url": "https://www.theguardian.com/football/2026/sep/11/maresca-backs-elliot-anderson-kings-of-manchester-derby",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/sep/11/premier-league-10-things-to-look-out-for-this-weekend",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Mickels miss a turning point as latest stop in Sabah’s odyssey ends with regret",
+        "url": "https://www.theguardian.com/football/2026/sep/10/manchester-united-sabah-european-odyssey-champions-league-analysis",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Manchester United 4-0 Sabah: Champions League – as it happened",
         "url": "https://www.theguardian.com/football/live/2026/sep/10/manchester-united-v-sabah-champions-league-live",
-        "source": "The Guardian"
-      },
-      {
-        "title": "‘That’s how it started’: Dambrauskas’ journey from Who Wants to Be a Millionaire to Champions League",
-        "url": "https://www.theguardian.com/football/2026/sep/10/valdas-dambrauskas-sabah-manchester-united-arsenal-champions-league",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Carrick up for ‘magical’ Champions League but derby timing ‘not ideal’",
-        "url": "https://www.theguardian.com/football/2026/sep/09/michael-carrick-manchester-united-sabah-champions-league-old-trafford",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Premier League: 10 talking points from the weekend’s action",
-        "url": "https://www.theguardian.com/football/2026/sep/07/premier-league-10-talking-points-from-the-weekends-action",
-        "source": "The Guardian"
-      },
-      {
-        "title": "‘No excuses’: Moyes says transfer troubles will not hurt Everton after United draw",
-        "url": "https://www.theguardian.com/football/2026/sep/06/david-moyes-ainsley-maitland-niles-everton-manchester-united-premier-league",
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-10T19:11:26.096538+00:00"
+    "fetched_at": "2026-09-11T18:39:20.176634+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -98,6 +98,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Kylian Mbappé fires back: Real Madrid star delivers a blazing reminder to anyone doubting his level",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/11/kylian-mbappe-fires-back-real-madrid-star-delivers-blazing-reminder-to-anyone-doubting-his-level.html",
+        "source": "Marca"
+      },
       {
         "title": "Real Madrid is ruthless in the Champions League",
         "url": "https://www.marca.com/en/football/champions-league/2026/09/08/real-madrid-is-ruthless-in-the-champions-league.html",
@@ -117,14 +122,9 @@
         "title": "Fermín vs. Bellingham: the new duel pitting Barcelona against Real Madrid",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/08/fermin-vs-bellingham-the-new-duel-pitting-barcelona-against-real-madrid.html",
         "source": "Marca"
-      },
-      {
-        "title": "The \"BMV\" stalls at the starting line: Real Madrid's star-studded offense hits a wall as Mbappé goes cold",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/05/the-bmv-stalls-at-the-starting-line-real-madrid-s-star-studded-offense-hits-wall-as-mbappe-goes-cold.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-10T19:11:26.757909+00:00"
+    "fetched_at": "2026-09-11T18:39:20.976634+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -143,6 +143,16 @@
     },
     "articles": [
       {
+        "title": "New Madrid circuit very high risk, says Russell",
+        "url": "https://www.bbc.com/sport/formula1/articles/cew9nr2kx20o",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Alonso cannot leave F1 while uncompetitive - FIA boss",
+        "url": "https://www.bbc.com/sport/formula1/articles/c9w4dz14787o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Hamilton and Leclerc 'squash' Monza controversy",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg825g59l1o",
         "source": "BBC Sport F1"
@@ -156,18 +166,8 @@
         "title": "McLaren talks, 'numb' cars and being 'captain of the ship' - Verstappen Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/cy4ze023nvro",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Ukraine federation calls for Russian sanctions by FIA",
-        "url": "https://www.bbc.com/sport/formula1/articles/c5y7k2grx1lo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Kimi Raikkonen's son Robin, 11, signs for Red Bull",
-        "url": "https://www.bbc.com/sport/formula1/articles/c3v437155e3o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-10T19:11:28.135225+00:00"
+    "fetched_at": "2026-09-11T18:39:22.104640+00:00"
   }
 }
