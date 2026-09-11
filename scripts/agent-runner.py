@@ -200,7 +200,7 @@ async def run_antigravity_agent(edition: str, target_md: str, dry_run: bool = Fa
             "   ## 🇨🇾 ΚΥΠΡΟΣ (6 stories with [Επιβεβαιωμένο], Γιατί με αφορά, and depth; 6th tagged [Ο Φάκελός μου])\n"
             "   ## 🌍 ΔΙΕΘΝΗ (5 stories with depth and antilogos)\n"
             "   ## 💰 ΑΓΟΡΕΣ: TOP MOVERS (5 assets with causes and sources)\n"
-            "   ## ⚽ ΑΘΛΗΤΙΚΑ (Omonoia, Manchester United, Real Madrid, Formula 1)\n"
+            "   ## ⚽ ΑΘΛΗΤΙΚΑ (Include all 4: Omonoia, Manchester United, Real Madrid, Formula 1. For each, provide rich cards with: exact last match results & goalscorers, next match fixture/time/venue, squad/tactical news bullets, player/coach quotes, and official source links. Never summarize or omit details!)\n"
             "   ## 🌤️ ΚΑΙΡΟΣ — ΛΕΜΕΣΟΣ\n"
             "   ## 🗂️ ΕΞΕΛΙΞΕΙΣ, ## 🎯 Ο ΦΑΚΕΛΟΣ ΜΟΥ, ## 📅 ΤΙ ΝΑ ΚΑΝΩ, ## 🔍 ΓΙΑ ΑΥΡΙΟ\n"
         ),

@@ -1507,6 +1507,10 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
+    html {{
+      font-size: 15px;
+    }}
+
     :root {{
       --paper: #f6f3ec;
       --paper-raised: #fffdf8;
@@ -1542,8 +1546,8 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
 
     .font-masthead {{ font-family: 'Cinzel', serif; }}
     .font-editorial {{ font-family: 'Newsreader', serif; }}
-    .t-masthead {{ font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }}
-    .t-section {{ font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }}
+    .t-masthead {{ font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 4.5vw, 2.85rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }}
+    .t-section {{ font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }}
     .card {{ background-color: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--r-md); }}
 
     .ticker-wrap {{ overflow: hidden; white-space: nowrap; }}
@@ -2517,6 +2521,10 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap');
+    html {{
+      font-size: 15px;
+    }}
+
     :root {{
       --paper: #f6f3ec;
       --paper-raised: #fffdf8;
@@ -2545,8 +2553,8 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
     body {{ background-color: var(--paper); color: var(--ink-body); font-family: 'Inter', system-ui, sans-serif; }}
     .font-masthead {{ font-family: 'Cinzel', serif; }}
     .font-editorial {{ font-family: 'Newsreader', serif; }}
-    .t-masthead {{ font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }}
-    .t-section {{ font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }}
+    .t-masthead {{ font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 4.5vw, 2.85rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }}
+    .t-section {{ font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }}
     .card {{ background-color: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--r-md); }}
     .ticker-wrap {{ overflow: hidden; white-space: nowrap; }}
     .ticker-content {{ display: inline-block; animation: tickerAnimation 40s linear infinite; }}
@@ -3182,8 +3190,10 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
                 score_m = re.search(r'\b(\d+)\s*[-–]\s*(\d+)\b', last_res)
                 score_str = f"{score_m.group(1)} – {score_m.group(2)}" if score_m else "FT"
                 first_part = last_res.split('(')[0].replace('**', '').strip()
-                fixture = re.sub(r'\s*\b\d+\s*[-–]\s*\d+\b\s*', '', first_part).strip(' –-')
+                fixture = re.sub(r'\s*\b\d+\s*[-–]\s*\d+\b\s*', ' ', first_part).strip(' –-')
                 fixture = re.sub(r'\s*–\s*', ' vs ', fixture)
+                if not fixture or len(fixture) < 3:
+                    fixture = meta.get('name', 'ΤΕΛΕΥΤΑΙΟΣ ΑΓΩΝΑΣ')
                 scoreboard_html = f'''
                 <div class="bg-[var(--paper)] border border-[var(--rule)] rounded-2xl p-5 mb-6 shadow-xs">
                   <div class="flex items-center justify-between text-xs font-mono text-[var(--ink-quiet)] uppercase mb-2.5">
@@ -3531,6 +3541,10 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
+    html {{
+      font-size: 15px;
+    }}
+
     :root {{
       --paper: #f6f3ec;
       --paper-raised: #fffdf8;
@@ -3596,18 +3610,18 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
       transition: background-color 0.2s ease, color 0.2s ease;
     }}
 
-    /* Typographical scale */
+    /* Typographical scale (compact & elegant executive sizing) */
     .t-masthead {{
       font-family: 'Cinzel', serif;
       font-weight: 900;
-      font-size: clamp(2.4rem, 7vw, 4.4rem);
-      line-height: 0.95;
-      letter-spacing: .06em;
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
+      line-height: 0.98;
+      letter-spacing: .05em;
     }}
     .t-section {{
       font-family: 'Newsreader', Georgia, serif;
       font-weight: 700;
-      font-size: 1.55rem;
+      font-size: 1.35rem;
       line-height: 1.15;
       letter-spacing: -.01em;
       color: var(--ink);
@@ -3615,38 +3629,38 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     .t-lead {{
       font-family: 'Newsreader', Georgia, serif;
       font-weight: 700;
-      font-size: clamp(1.6rem, 3vw, 2.3rem);
-      line-height: 1.18;
+      font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+      line-height: 1.2;
       letter-spacing: -.02em;
       color: var(--ink);
     }}
     .t-title {{
       font-family: 'Newsreader', Georgia, serif;
       font-weight: 700;
-      font-size: 1.2rem;
-      line-height: 1.28;
+      font-size: 1.08rem;
+      line-height: 1.3;
       letter-spacing: -.01em;
       color: var(--ink);
     }}
     .t-body {{
       font-family: 'Newsreader', Georgia, serif;
       font-weight: 400;
-      font-size: 1.0625rem;
-      line-height: 1.62;
+      font-size: 0.985rem;
+      line-height: 1.6;
       color: var(--ink-body);
       max-width: 68ch;
     }}
     .t-body-sm {{
       font-family: 'Newsreader', Georgia, serif;
       font-weight: 400;
-      font-size: .95rem;
-      line-height: 1.6;
+      font-size: 0.885rem;
+      line-height: 1.58;
       color: var(--ink-body);
     }}
     .t-meta {{
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 500;
-      font-size: .75rem;
+      font-size: .72rem;
       line-height: 1.4;
       color: var(--ink-quiet);
     }}

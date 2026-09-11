@@ -185,32 +185,36 @@
 ## ⚽ ΑΘΛΗΤΙΚΑ
 
 ### ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ
-*   **Τελευταίο αποτέλεσμα:** Εντυπωσιακή νίκη 3-1 στην πρεμιέρα του πρωταθλήματος.
-*   **Επόμενος αγώνας:** Ομόνοια vs Απόλλων Λεμεσού — Σάββατο, 12 Σεπτεμβρίου 2026, 20:00, Στάδιο ΓΣΠ (Cyprus League by Stoiximan).
-*   **Ρεπορτάζ & Νέα:** Σε ρυθμούς ντέρμπι κινείται το «τριφύλλι». Ο προπονητής καταστρώνει τα πλάνα του χωρίς προβλήματα τραυματισμών, με τον κόσμο της ομάδας να έχει ήδη εξαντλήσει τα διαθέσιμα εισιτήρια στις κεντρικές κερκίδες.
+*   **Τελευταίο αποτέλεσμα:** **Άρης Λεμεσού – Ομόνοια** **1-4** (Cyprus League by Stoiximan, 2η αγωνιστική, Στάδιο «Άλφαμεγα»). Μεγάλος θρίαμβος με επιβλητική ανατροπή για το «τριφύλλι». Ο Άρης προηγήθηκε προσωρινά με πέναλτι του Efaghe (53'), αλλά η Ομόνοια κυριάρχησε απόλυτα με σκόρερ τους Loïs Diony (5', 49'), Ľubomír Šatka (58') και τον νεοαποκτηθέντα Luuk Brouwers (74') που σκόραρε στο ντεμπούτο του.
+*   **Επόμενος αγώνας:** **Ομόνοια – Απόλλων Λεμεσού**, **Σάββατο, 12 Σεπτεμβρίου 2026**, **20:00** ώρα Κύπρου, Στάδιο ΓΣΠ (Cyprus League by Stoiximan, 3η αγωνιστική — [Πρόγραμμα ΚΟΠ](https://www.cfa.com.cy/Gr/news/53637)).
+*   **Ρεπορτάζ & Νέα:** Σε κατάσταση απόλυτης ετοιμότητας βρίσκεται ο Μπάμπικα Ακιντόλα, ο οποίος σε επίσημες δηλώσεις του τόνισε ότι δεν ξεχνά την αγάπη του κόσμου της Ομόνοιας και δήλωσε 100% έτοιμος να βοηθήσει την ομάδα στο κλασικό ντέρμπι του Σαββάτου με τον Απόλλωνα. Παράλληλα, εξαιρετικά ικανοποιητική είναι η κίνηση των πακέτων εισιτηρίων για τους αγώνες της League Phase του Conference League, με τον κόσμο να ετοιμάζει θερμή υποδοχή για την πρεμιέρα με τη Celta Vigo.
+*   **Αγωνιστικά νέα:** Ο προπονητής καταστρώνει τα τακτικά του πλάνα με πλήρη απαρτία χωρίς προβλήματα τραυματισμών, ενώ ο Λοΐζος Λοΐζου επέστρεψε σε άριστη φυσική κατάσταση από τις υποχρεώσεις της Εθνικής Κύπρου.
 *   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026)
-*   **Πηγή:** [ΚΟΠ / CFA](https://www.cfa.com.cy/Gr/news/53637)
+*   **Πηγές:** [Kerkida.net](https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-akintola-den-xehno-tin-agapi-toy-kosmoy-eimai-100-etoimos) · [Πρόγραμμα ΚΟΠ](https://www.cfa.com.cy/Gr/news/53637)
 
 ### MANCHESTER UNITED
-*   **Τελευταίο αποτέλεσμα:** Ισοπαλία 1-1 στην Premier League.
-*   **Επόμενος αγώνας:** Southampton vs Manchester United — Σάββατο, 13 Σεπτεμβρίου 2026, 14:30 EEST.
-*   **Ρεπορτάζ & Νέα:** Εντατική προετοιμασία στο Carrington με έμφαση στη δημιουργία ευκαιριών και την τακτική συνοχή της μεσαίας γραμμής.
-*   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights+2026)
-*   **Πηγή:** [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)
+*   **Τελευταίο αποτέλεσμα:** **Manchester United – Sabah** **4-0** (UEFA Champions League, League Phase, Old Trafford). Επιβλητική ευρωπαϊκή πρεμιέρα με πρωταγωνιστή τον Benjamin Šeško (δύο γκολ) και τέρματα από τους Bruno Fernandes και Marcus Rashford. Προηγήθηκε η ισοπαλία 2-2 με την Everton στο Hill Dickinson Stadium (Premier League).
+*   **Επόμενος αγώνας:** **Manchester United – Manchester City**, **Κυριακή, 13 Σεπτεμβρίου 2026**, **18:30** ώρα Κύπρου (16:30 BST), Old Trafford (Premier League, 4η αγωνιστική — [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)).
+*   **Ρεπορτάζ & Νέα:** Ο Michael Carrick εξήρε την αγωνιστική ωριμότητα του Benjamin Šeško μετά το ευρωπαϊκό του ξέσπασμα, υπογραμμίζοντας ότι η ομάδα πρέπει να διατηρήσει την ίδια ένταση στο επερχόμενο τοπικό ντέρμπι του Μάντσεστερ απέναντι στη Σίτι.
+*   **Αγωνιστικά νέα:** Στο ιατρικό δελτίο, ο Lisandro Martínez επέστρεψε σε πλήρη ρυθμό προπονήσεων στο Carrington μετά από μικροενόχληση, ενισχύοντας τα μετόπισθεν ενόψει του ντέρμπι.
+*   **Highlights:** [Highlights Manchester United vs Sabah στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+vs+Sabah+Champions+League+2026+highlights)
+*   **Πηγές:** [The Guardian](https://www.theguardian.com/football/2026/sep/10/manchester-united-sabah-champions-league-match-report) · [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)
 
 ### REAL MADRID
-*   **Τελευταίο αποτέλεσμα:** Νίκη 2-0 στη La Liga.
-*   **Επόμενος αγώνας:** Real Sociedad vs Real Madrid — Σάββατο, 13 Σεπτεμβρίου 2026, 22:00 EEST.
-*   **Ρεπορτάζ & Νέα:** Ολοκληρώθηκε η αποθεραπεία των διεθνών ποδοσφαιριστών στη Μαδρίτη ενόψει της δύσκολης εξόδου στο Σαν Σεμπαστιάν.
-*   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026)
-*   **Πηγή:** [Marca / BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)
+*   **Τελευταίο αποτέλεσμα:** **Real Madrid – Inter Milan** **2-1** (UEFA Champions League, League Phase, 1η αγωνιστική, Estadio Santiago Bernabéu). Ιδανική πρεμιέρα για τη «Βασίλισσα» με γκολ του Kylian Mbappé μόλις στο 14ο λεπτό (το 71ο του τέρμα στην κορυφαία διασυλλογική διοργάνωση) και καθοριστικές επεμβάσεις του Thibaut Courtois που σφράγισαν τη νίκη απέναντι στην πίεση των Ιταλών.
+*   **Επόμενος αγώνας:** **Real Sociedad – Real Madrid**, **Σάββατο, 12 Σεπτεμβρίου 2026**, **22:00** ώρα Κύπρου (21:00 CEST), Reale Arena (La Liga, 5η αγωνιστική — [Marca](https://www.marca.com/en/football/spanish-football/2026/09/11/kylian-mbappe-fires-back-real-madrid-star-delivers-blazing-reminder-to-anyone-doubting-his-level.html)).
+*   **Ρεπορτάζ & Νέα:** Ο Kylian Mbappé απάντησε δυναμικά στους επικριτές του σε δηλώσεις στη Marca, υπογραμμίζοντας την απόλυτη προσήλωσή του στην κατάκτηση τίτλων. Η ισπανική εφημερίδα εξάρει την κυνικότητα και την αποτελεσματικότητα της ομάδας του José Mourinho στο Champions League.
+*   **Αγωνιστικά νέα:** Ολοκληρώθηκε η αποθεραπεία των διεθνών στη Μαδρίτη, με τους Jude Bellingham και Vinícius Júnior να προπονούνται σε φουλ ρυθμό και να τίθενται στη διάθεση της τεχνικής ηγεσίας.
+*   **Highlights:** [Highlights Real Madrid vs Inter Milan στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+vs+Inter+Milan+Champions+League+2026+highlights)
+*   **Πηγές:** [Marca](https://www.marca.com/en/football/spanish-football/2026/09/11/kylian-mbappe-fires-back-real-madrid-star-delivers-blazing-reminder-to-anyone-doubting-his-level.html) · [BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)
 
 ### FORMULA 1
-*   **Τελευταίο αποτέλεσμα:** Νίκη Verstappen στο προηγούμενο Grand Prix.
-*   **Επόμενος αγώνας:** Formula 1 Spanish Grand Prix — 11–13 Σεπτεμβρίου 2026 (Circuit de Barcelona-Catalunya).
-*   **Πρόγραμμα Σαββατοκύριακου:** Σήμερα Παρασκευή 11/09 διεξάγονται οι ελεύθερες δοκιμές (FP1 14:30 / FP2 18:00 ώρα Κύπρου). Κατατακτήριες το Σάββατο στις 17:00, Αγώνας την Κυριακή στις 16:00.
-*   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights+2026)
-*   **Πηγή:** [Formula1.com](https://www.formula1.com/en/racing/2026/spain.html)
+*   **Τελευταίο αποτέλεσμα:** **Italian Grand Prix 2026 (Monza)** — Ιστορικός θρίαμβος του 20χρονου Ιταλού Kimi Antonelli με Mercedes ξεκινώντας από τη 19η θέση του grid (1-2 για τη Mercedes με τον George Russell, 3ος ο Max Verstappen).
+*   **Επόμενος αγώνας:** **Spanish Grand Prix 2026 (Gran Premio de España, Madrid / Catalunya)**, **Κυριακή, 13 Σεπτεμβρίου 2026**, **16:00** ώρα Κύπρου (15:00 CEST) — 14ος γύρος του Παγκοσμίου Πρωταθλήματος ([Πρόγραμμα Formula1.com](https://www.formula1.com/en/racing/2026/spain.html)).
+*   **Πρόγραμμα Σαββατοκύριακου:** Σήμερα Παρασκευή 11/09 διεξάγονται οι ελεύθερες δοκιμές (FP1 14:30 / FP2 18:00 ώρα Κύπρου). Κατατακτήριες το Σάββατο στις 17:00, ο μεγάλος Αγώνας την Κυριακή στις 16:00.
+*   **Ρεπορτάζ & Νέα:** Lewis Hamilton και Charles Leclerc έβαλαν τέλος στις παρεξηγήσεις της Monza, δηλώνοντας πλήρη συνεργασία στη Ferrari. Παράλληλα, ο Max Verstappen σε συνέντευξή του στο BBC Sport σχολίασε τη μάχη με τις McLaren και το ρόλο του ως «καπετάνιος» της Red Bull, ενώ ο 11χρονος γιος του Kimi Räikkönen, Robin, υπέγραψε στο πρόγραμμα νέων οδηγών της Red Bull.
+*   **Highlights:** [Highlights Italian Grand Prix Monza στο YouTube](https://www.youtube.com/results?search_query=Formula+1+Italian+Grand+Prix+2026+Monza+highlights)
+*   **Πηγές:** [BBC Sport F1](https://www.bbc.com/sport/formula1/articles/ckg825g59l1o) · [Formula1.com](https://www.formula1.com/en/racing/2026/spain.html)
 
 ---
 
