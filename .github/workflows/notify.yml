@@ -1,12 +1,19 @@
 name: 24/7 Sovereign Intelligence Engine (Editions)
 on:
   schedule:
-    # 07:30 AM Cyprus Time (EEST, UTC+3) — Flagship Morning Broadsheet
-    - cron: '30 4 * * *'
-    # 13:30 PM Cyprus Time (EEST, UTC+3) — Midday Market Pulse
-    - cron: '30 10 * * *'
-    # 19:30 PM Cyprus Time (EEST, UTC+3) — Evening Debrief & Global Wrap
-    - cron: '30 16 * * *'
+    # --- Flagship Scheduled Editions (Cyprus EEST, UTC+3) ---
+    # 07:25 AM Cyprus Time (EEST, UTC+3) — Morning Broadsheet (Primary)
+    - cron: '25 4 * * *'
+    # 07:40 AM Cyprus Time (EEST, UTC+3) — Morning Broadsheet (Safety Net)
+    - cron: '40 4 * * *'
+    # 13:25 PM Cyprus Time (EEST, UTC+3) — Midday Market Pulse (Primary)
+    - cron: '25 10 * * *'
+    # 13:40 PM Cyprus Time (EEST, UTC+3) — Midday Market Pulse (Safety Net)
+    - cron: '40 10 * * *'
+    # 19:25 PM Cyprus Time (EEST, UTC+3) — Evening Debrief (Primary)
+    - cron: '25 16 * * *'
+    # 19:40 PM Cyprus Time (EEST, UTC+3) — Evening Debrief (Safety Net)
+    - cron: '40 16 * * *'
   push:
     paths: ['docs/briefings/**', 'briefings/**', '.github/workflows/notify.yml']
   workflow_dispatch:
@@ -39,14 +46,16 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.edition }}" ] && [ "${{ github.event.inputs.edition }}" != "auto" ]; then
             EDITION="${{ github.event.inputs.edition }}"
-          elif [ "${{ github.event.schedule }}" = "30 4 * * *" ]; then
-            EDITION="morning"
-          elif [ "${{ github.event.schedule }}" = "30 10 * * *" ]; then
-            EDITION="midday"
-          elif [ "${{ github.event.schedule }}" = "30 16 * * *" ]; then
-            EDITION="evening"
           else
-            EDITION="auto"
+            # Dynamically resolve edition using Cyprus local time (UTC+3)
+            CY_HOUR=$(python -c "from datetime import datetime, timezone, timedelta; print((datetime.now(timezone(timedelta(hours=3)))).hour)")
+            if [ "$CY_HOUR" -ge 5 ] && [ "$CY_HOUR" -lt 12 ]; then
+              EDITION="morning"
+            elif [ "$CY_HOUR" -ge 12 ] && [ "$CY_HOUR" -lt 18 ]; then
+              EDITION="midday"
+            else
+              EDITION="evening"
+            fi
           fi
           echo "edition=$EDITION" >> $GITHUB_OUTPUT
           echo "Resolved edition: $EDITION"

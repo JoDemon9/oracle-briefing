@@ -1,8 +1,8 @@
 name: 24/7 Breaking Wire Monitor
 on:
   schedule:
-    # Every 30 mins around the clock 24/7 (00:00 - 24:00 UTC)
-    - cron: '*/30 * * * *'
+    # Off-peak 30-min cadence (minutes 15 and 45) to avoid top-of-hour scheduler congestion
+    - cron: '15,45 * * * *'
   workflow_dispatch:
 
 concurrency:

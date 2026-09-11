@@ -98,6 +98,19 @@ else:
 edition_slug = f"{date_only}{edition_tag}"
 print(f"ℹ Targeting briefing markdown: {md_path} (Edition slug: {edition_slug})")
 
+DISPATCH_LOG = os.path.join(SCRIPTS_DIR, 'dispatched-editions.json')
+force_send = '--force' in sys.argv
+
+if not force_send and os.path.exists(DISPATCH_LOG):
+    try:
+        with open(DISPATCH_LOG, 'r', encoding='utf-8') as f:
+            dispatched = json.load(f)
+            if edition_slug in dispatched:
+                print(f"✔ [SendBriefing] Edition '{edition_slug}' was ALREADY dispatched at {dispatched[edition_slug]}. Skipping duplicate Telegram alert.")
+                sys.exit(0)
+    except Exception as e:
+        print(f"Warning: Could not read dispatch log: {e}")
+
 if not TOKEN or not CHAT:
     if os.environ.get("GITHUB_ACTIONS"):
         print("❌ CRITICAL: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is NOT set in GitHub Repository Secrets!")
@@ -376,6 +389,16 @@ if TOKEN and CHAT:
             res = json.loads(resp.read().decode("utf-8"))
             if res.get("ok"):
                 print(f"✔ Στάλθηκε επιτυχώς το briefing {edition_slug} στο Telegram!")
+                try:
+                    dispatched = {}
+                    if os.path.exists(DISPATCH_LOG):
+                        with open(DISPATCH_LOG, 'r', encoding='utf-8') as lf:
+                            dispatched = json.load(lf)
+                    dispatched[edition_slug] = datetime.now().isoformat()
+                    with open(DISPATCH_LOG, 'w', encoding='utf-8') as lf:
+                        json.dump(dispatched, lf, indent=2)
+                except Exception as de:
+                    print(f"Note: Could not save dispatch log: {de}")
             else:
                 print("Error from Telegram API:", res)
                 sys.exit(1)
