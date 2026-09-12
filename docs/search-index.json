@@ -1,94 +1,178 @@
 [
   {
+    "date": "2026-09-12",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "€68m tender launched for new legal service building",
+    "snippet": "The transport ministry on Thursday announced a €68 million tender for the new Legal Service building, with construction scheduled to begin in April 2027. According to the ministry,...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Hotel guests evacuated after fire breaks out in Protaras [Επικαιρότητα]",
+    "snippet": "A fire that broke out in the basement of a hotel in the Pernara area of Protaras has prompted the precautionary evacuation of hotel guests on Friday night. Acco...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. This year’s tourism decline to close worse than 2024 [Επικαιρότητα]",
+    "snippet": "Tourism arrivals fell some 8 per cent in the first seven months of this year, Deputy Tourism Minister Costas Koumis announced on Friday. The year is expected to...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. The travel tricks every Cyprus holidaymaker should know [Επικαιρότητα]",
+    "snippet": "Few things please a Cyprus traveller quite like a €39 airfare. Unfortunately, we are also rather good at spending the saving before the airplane has left the gr...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Cyprus sees fewer bounced cheques overall despite August surge [Επικαιρότητα]",
+    "snippet": "The number of bounced cheques fell by 20.5 per cent in the first eight months of 2026 compared with the same period a year earlier, while their total value also...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Cyprus Business Now: interest rates, Eurobank, Keve, BoC, technology ecosystem [Ο Φάκελός μου]",
+    "snippet": "Business &#38; economy wrap-up from the day before Cypriot economists have warned that the European Central Bank (ECB) could raise interest rates further if the...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🌍 Διεθνή",
+    "title": "1. Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq [Διεθνή]",
+    "snippet": "Iraq removes a military commander and opens investigations into the attack that came from an area bordering Iran....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🌍 Διεθνή",
+    "title": "2. Tragic death of woman who testified against father in notorious mafia murder of mother [Διεθνή]",
+    "snippet": "Denise Cosco testified against the powerful 'Ndrangheta clan and her own father over the murder of her mother in Italy....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🌍 Διεθνή",
+    "title": "3. Death toll from Philippines ferry fire climbs to 35, with dozens still missing [Διεθνή]",
+    "snippet": "Access to the burnt-out boat has been slowed by toxic fumes and lingering heat, the country's coast guard says....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🌍 Διεθνή",
+    "title": "4. Passenger train derails in France leaving at least 44 injured [Διεθνή]",
+    "snippet": "France's transport minister says 180 passengers were on board the train operating the Rouen-Caen route in Normandy....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "🌍 Διεθνή",
+    "title": "5. Arrest made over the death of black woman found hanged from tree in Mississippi [Διεθνή]",
+    "snippet": "Tasia Fortune's body was found  in the lot of an abandoned home in Mississippi in August....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-12",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-11",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Κλιμάκωση στο Στενό του Ορμούζ: Επίθεση των Φρουρών της Επανάστασης σε μη επανδρωμένο σκάφος των ΗΠΑ και εκτίναξη του πετρελαίου άνω των $108 [Επιβεβαιωμένο]",
     "snippet": "Σε κατάσταση υψίστης επιφυλακής τέθηκαν οι διεθνείς ναυτιλιακές αγορές και τα επιτελεία ασφαλείας, καθώς το ναυτικό των Φρουρών της Ισλαμικής Επανάστασης (IRGC) εξαπέλυσε στοχευμέν...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-11.html#top-story"
   },
   {
     "date": "2026-09-11",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Επιχειρηματικότητα & Ταμεία ΕΕ: Πακέτο-μαμούθ €500 εκατ. για τον πράσινο και ψηφιακό εκσυγχρονισμό των κυπριακών επιχειρήσεων [Επιβεβαιωμένο]",
     "snippet": "Η επιχειρηματική ανταγωνιστικότητα της Κύπρου εξαρτάται άμεσα από τη δίδυμη πράσινη και ψηφιακή μετάβαση, διεμήνυσε ο Υπουργός Ενέργειας, Εμπορίου και Βιομηχανί...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-11.html#cyprus"
   },
   {
     "date": "2026-09-11",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Νεανική Επιχειρηματικότητα: €200.000 στο τραπέζι από τον Στέλιο Χατζηιωάννου για νέους ιδρυτές στην Κύπρο [Επιβεβαιωμένο]",
     "snippet": "Σε μια σημαντική τονωτική ένεση για το εγχώριο startup οικοσύστημα, το Φιλανθρωπικό Ίδρυμα Στέλιος Χατζηιωάννου ανακοίνωσε τη διάθεση €200.000 σε χρηματικά έπαθ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-11.html#cyprus"
   },
   {
     "date": "2026-09-11",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Εποπτεία & Δημόσιο Χρήμα: Έρευνα Ελεγκτικής Υπηρεσίας για απώλεια άνω των €5 εκατ. από αναξιοποίητες άδειες αγκυροβολίων [Επιβεβαιωμένο]",
     "snippet": "Έκθεση-καταπέλτη δημοσιοποίησε η Ελεγκτική Υπηρεσία της Δημοκρατίας, αποκαλύπτοντας ότι το κράτος απώλεσε έσοδα άνω των €5 εκατομμυρίων από έξι θαλάσσιες ζώνες...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-11.html#cyprus"
   },
   {
     "date": "2026-09-11",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Δανειολήπτες & Τράπεζες: Πιέσεις στις δόσεις κυμαινομένων δανείων μετά τις αποφάσεις της ΕΚΤ και στρατηγική αναχρηματοδότησης [Ο Φάκελός μου]",
     "snippet": "Παρά την πρόσφατη μικρή αποκλιμάκωση των διατραπεζικών επιτοκίων, οι Κύπριοι δανειολήπτες εξακολουθούν να καταβάλλουν σημαντικά αυξημένες μηνιαίες δόσεις συγκρι...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-11.html#cyprus"
   },
   {
     "date": "2026-09-11",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Ασφάλεια & Νεκρή Ζώνη: Αίτημα της κοινότητας Δένειας προς την UNFICYP για ενίσχυση της αποτρεπτικής παρουσίας [Επιβεβαιωμένο]",
     "snippet": "Ο κοινοτάρχης της ακριτικής Δένειας Χαράλαμπος Αλεξάνδρου απηύθυνε επίσημη έκκληση προς την ειρηνευτική δύναμη των Ηνωμένων Εθνών (UNFICYP), ζητώντας «πιο ορατή...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-11.html#cyprus"
   },
   {
     "date": "2026-09-11",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Real Estate Λεμεσού & Ενοίκια: Νέα δυναμική στον άξονα Ζακακίου και Ύψωνα μετά τα πρόσφατα πολεοδομικά κίνητρα [Ο Φάκελός μου]",
     "snippet": "Σταθερή άνοδο καταγράφει η ζήτηση για σύγχρονα διαμερίσματα 1 και 2 υπνοδωματίων στη δυτική Λεμεσό (Ζακάκι, Άγιος Αθανάσιος, Ύψωνας), σύμφωνα με τα συγκεντρωτικ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-11.html#cyprus"
   },
   {
     "date": "2026-09-11",
     "section": "🌍 Διεθνή",
     "title": "1. Περσικός Κόλπος & Ενέργεια: Συναγερμός στο Στενό του Ορμούζ μετά από επίθεση σε δύο πλοία ανοικτά του Ομάν [Επιβεβαιωμένο]",
     "snippet": "Δραματική επιδείνωση καταγράφεται στις θαλάσσιες οδούς της Μέσης Ανατολής, καθώς η βρετανική υπηρεσία UKMTO ανέφερε ότι δύο εμπορικά δεξαμενόπλοια επλήγησαν από...",
-    "url": "#world"
+    "url": "briefings/2026-09-11.html#world"
   },
   {
     "date": "2026-09-11",
     "section": "🌍 Διεθνή",
     "title": "2. Τεχνητή Νοημοσύνη & Άμυνα: Έκθεση της Anthropic καταγγέλλει χρήση μοντέλων AI σε καθοδήγηση πυραύλων και κυβερνοκατασκοπεία στην Υεμένη [Επιβεβαιωμένο]",
     "snippet": "Σε μια ασυνήθιστα αποκαλυπτική κίνηση, η κορυφαία εταιρεία τεχνητής νοημοσύνης Anthropic δημοσίευσε τεχνική έκθεση ασφαλείας, σύμφωνα με την οποία κακόβουλοι δρ...",
-    "url": "#world"
+    "url": "briefings/2026-09-11.html#world"
   },
   {
     "date": "2026-09-11",
     "section": "🌍 Διεθνή",
     "title": "3. Διπλωματία BRICS: Προσγείωση Πούτιν στο Νέο Δελχί υπό τη σκιά των πολεμικών μετώπων σε Ουκρανία και Μέση Ανατολή [Επιβεβαιωμένο]",
     "snippet": "Ο Ρώσος Πρόεδρος Βλαντιμίρ Πούτιν έφθασε στην ινδική πρωτεύουσα για τη σύνοδο κορυφής των ηγετών των BRICS, όπου αναμένεται να έχει κατ' ιδίαν συνομιλίες με τον...",
-    "url": "#world"
+    "url": "briefings/2026-09-11.html#world"
   },
   {
     "date": "2026-09-11",
     "section": "🌍 Διεθνή",
     "title": "4. Πληθωρισμός ΗΠΑ: Άλμα του δείκτη τιμών παραγωγού στο 0,4% ενισχύει τις προσδοκίες για παρατεταμένα υψηλά επιτόκια Fed [Επιβεβαιωμένο]",
     "snippet": "Ο αμερικανικός δείκτης τιμών παραγωγού (PPI) για τον μήνα Αύγουστο αυξήθηκε κατά 0,4%, επιβεβαιώνοντας την επιμονή των πληθωριστικών πιέσεων στην πηγή παραγωγής...",
-    "url": "#world"
+    "url": "briefings/2026-09-11.html#world"
   },
   {
     "date": "2026-09-11",
     "section": "🌍 Διεθνή",
     "title": "5. Ευρωπαϊκή Ασφάλεια & Ουκρανία: Πολύνεκρο ρωσικό πλήγμα σε εμπορικό κέντρο στο Παβλογκράντ εντείνει τις πιέσεις για συμμαχική αντιαεροπορική συνδρομή [Επιβεβαιωμένο]",
     "snippet": "Σφοδρό πλήγμα με τουλάχιστον πέντε νεκρούς και άνω των 60 τραυματιών σημειώθηκε στην πόλη Παβλογκράντ της ανατολικής Ουκρανίας, όταν ρωσικός πύραυλος έπληξε πολ...",
-    "url": "#world"
+    "url": "briefings/2026-09-11.html#world"
   },
   {
     "date": "2026-09-11",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Η σημερινή ημέρα έκλεισε με κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυρι...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-11.html#top-story"
   },
   {
     "date": "2026-09-10",

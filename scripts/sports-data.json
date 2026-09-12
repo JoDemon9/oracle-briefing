@@ -14,6 +14,11 @@
     },
     "articles": [
       {
+        "title": "Για το πρώτο στο... ΓΣΠ",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gia-proto-sto-gsp",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Ήταν σωστός!",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/itan-sostos",
         "source": "Kerkida.net"
@@ -32,14 +37,9 @@
         "title": "\"Είμαστε πολύ αισιόδοξοι για το back 2 back\" (Βίντεο)",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/eimaste-poly-aisiodoxoi-gia-back-2-back-binteo",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Υποδοχή και... πρώτη για Τάσο (Βίντεο)",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/proti-gia-taso-binteo",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-11T18:39:19.010589+00:00"
+    "fetched_at": "2026-09-12T06:32:25.702448+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -56,6 +56,16 @@
     },
     "articles": [
       {
+        "title": "Premier League news: Iraola values Wirtz’s work ethic; Moyes backs ‘senior citizen’ Grealish",
+        "url": "https://www.theguardian.com/football/2026/sep/11/premier-league-news-iraola-values-wirtzs-work-ethic-moyes-backs-senior-citizen-grealish",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Kobbie Mainoo moves from outsider to main man after summer of hurt",
+        "url": "https://www.theguardian.com/football/2026/sep/11/kobbie-mainoo-outsider-main-man-summer-of-hurt-derby",
+        "source": "The Guardian"
+      },
+      {
         "title": "Champions League review: Irish heroics, rejected resignations and Mourinho’s return",
         "url": "https://www.theguardian.com/football/2026/sep/11/champions-league-review-troy-parrott-jose-mourinho-michael-olise",
         "source": "The Guardian"
@@ -69,19 +79,9 @@
         "title": "Premier League: 10 things to look out for this weekend",
         "url": "https://www.theguardian.com/football/2026/sep/11/premier-league-10-things-to-look-out-for-this-weekend",
         "source": "The Guardian"
-      },
-      {
-        "title": "Mickels miss a turning point as latest stop in Sabah’s odyssey ends with regret",
-        "url": "https://www.theguardian.com/football/2026/sep/10/manchester-united-sabah-european-odyssey-champions-league-analysis",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United 4-0 Sabah: Champions League – as it happened",
-        "url": "https://www.theguardian.com/football/live/2026/sep/10/manchester-united-v-sabah-champions-league-live",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-11T18:39:20.176634+00:00"
+    "fetched_at": "2026-09-12T06:32:26.841203+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,14 +90,19 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)",
+      "fixture": "Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00",
       "match": "Real Madrid versus Rayo Vallecano — 20:00",
       "competition": "Spanish La Liga",
-      "date": "Saturday 12th September",
+      "date": "",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "“No player was better than me last season”",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/11/player-was-better-than-me-last-season.html",
+        "source": "Marca"
+      },
       {
         "title": "Kylian Mbappé fires back: Real Madrid star delivers a blazing reminder to anyone doubting his level",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/11/kylian-mbappe-fires-back-real-madrid-star-delivers-blazing-reminder-to-anyone-doubting-his-level.html",
@@ -117,14 +122,9 @@
         "title": "Mourinho's Champions League with Real Madrid: The Final Chapter",
         "url": "https://www.marca.com/en/football/champions-league/2026/09/08/mourinho-s-champions-league-with-real-madrid-the-final-chapter.html",
         "source": "Marca"
-      },
-      {
-        "title": "Fermín vs. Bellingham: the new duel pitting Barcelona against Real Madrid",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/08/fermin-vs-bellingham-the-new-duel-pitting-barcelona-against-real-madrid.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-11T18:39:20.976634+00:00"
+    "fetched_at": "2026-09-12T06:32:27.622031+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-11T18:39:22.104640+00:00"
+    "fetched_at": "2026-09-12T06:32:28.781093+00:00"
   }
 }
