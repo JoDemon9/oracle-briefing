@@ -81,7 +81,7 @@ def main():
         print(f"Briefing markdown already present: {today_md}")
 
     # 2. Execute Daily Pipeline (Build HTML, Quality Check, Git Push to GitHub Pages, Telegram Dispatch)
-    if not run_command(f'python "{DAILY_RUN_SCRIPT}" "{today_md}"', "Running Daily Pipeline"):
+    if not run_command(f'python "{DAILY_RUN_SCRIPT}" "{today_md}" --edition morning', "Running Daily Pipeline"):
         print("Daily pipeline encountered an issue.")
         sys.exit(1)
 
