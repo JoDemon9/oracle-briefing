@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Γκολ και... αφιέρωση σε Μασούρα (Φώτο)",
-        "url": "https://www.kerkida.net/eidiseis/diethni/eyropi/omonoia/omorfi-afierosi-ton-paikton-tis-nyrembergis-ston-masoyra-foto",
+        "title": "Θέλει... ΚΑΙ στο ΓΣΠ",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/thelei-proto-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "Θα πάρει... γεύση;",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tha-parei-geysi",
+        "title": "Χαιρέτησε... Kerkida o Ακιντόλα!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hairetise-kerkida-o-akintola",
         "source": "Kerkida.net"
       },
       {
-        "title": "Αρχή... με το πρώτο",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/arhi-me-proto",
+        "title": "(Φώτος kerkida) Η άφιξη της Ομόνοιας",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-kerkida-i-afixi-tis-omonoias-13",
         "source": "Kerkida.net"
       },
       {
-        "title": "Για το πρώτο στο... ΓΣΠ",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gia-proto-sto-gsp",
+        "title": "Η ενδεκάδα του Μπεργκ",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-endekada-toy-mpergk-9",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ήταν σωστός!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/itan-sostos",
+        "title": "Το αντίο του Τάσου: \"Είχα την τιμή να είμαι μέρος μιας πραγματικά ξεχωριστής ομάδας\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/eiha-tin-timi-na-eimai-meros-mias-pragmatika-xehoristis-omadas",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-12T11:17:27.679662+00:00"
+    "fetched_at": "2026-09-12T17:27:23.547938+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-12T11:17:28.754171+00:00"
+    "fetched_at": "2026-09-12T17:27:25.214290+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,6 +99,16 @@
     },
     "articles": [
       {
+        "title": "Kylian Mbappé or Lamine Yamal: Who will win a second World Cup first?",
+        "url": "https://www.marca.com/en/football/international-football/2026/09/12/kylian-mbappe-or-lamine-yamal-who-will-win-second-world-cup-first.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Real Madrid makes Lautaro Martinez walk past its European Cups before kickoff",
+        "url": "https://www.marca.com/en/football/nations-league/2026/09/11/real-madrid-makes-lautaro-martinez-walk-past-its-european-cups-before-kickoff-video.html",
+        "source": "Marca"
+      },
+      {
         "title": "“No player was better than me last season”",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/11/player-was-better-than-me-last-season.html",
         "source": "Marca"
@@ -112,19 +122,9 @@
         "title": "Real Madrid is ruthless in the Champions League",
         "url": "https://www.marca.com/en/football/champions-league/2026/09/08/real-madrid-is-ruthless-in-the-champions-league.html",
         "source": "Marca"
-      },
-      {
-        "title": "Lamine Yamal sends a message to Mbappé: \"I won't beg for the Ballon d'Or\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/08/lamine-yamal-sends-a-message-to-mbappe-i-won-t-beg-for-the-ballon-d-or.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Mourinho's Champions League with Real Madrid: The Final Chapter",
-        "url": "https://www.marca.com/en/football/champions-league/2026/09/08/mourinho-s-champions-league-with-real-madrid-the-final-chapter.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-12T11:17:29.656844+00:00"
+    "fetched_at": "2026-09-12T17:27:26.254763+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Norris takes Madrid pole with 'gorgeous' lap",
+        "url": "https://www.bbc.com/sport/formula1/articles/c8r60g7nrn6o",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "New Madrid circuit very high risk, says Russell",
         "url": "https://www.bbc.com/sport/formula1/articles/cew9nr2kx20o",
@@ -161,13 +166,8 @@
         "title": "Hamilton and Leclerc 'squash' Monza controversy",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg825g59l1o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "McLaren talks, 'numb' cars and being 'captain of the ship' - Verstappen Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/cy4ze023nvro",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-12T11:17:30.772099+00:00"
+    "fetched_at": "2026-09-12T17:27:28.228026+00:00"
   }
 }
