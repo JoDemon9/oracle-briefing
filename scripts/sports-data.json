@@ -14,6 +14,21 @@
     },
     "articles": [
       {
+        "title": "Γκολ και... αφιέρωση σε Μασούρα (Φώτο)",
+        "url": "https://www.kerkida.net/eidiseis/diethni/eyropi/omonoia/omorfi-afierosi-ton-paikton-tis-nyrembergis-ston-masoyra-foto",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Θα πάρει... γεύση;",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tha-parei-geysi",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Αρχή... με το πρώτο",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/arhi-me-proto",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Για το πρώτο στο... ΓΣΠ",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gia-proto-sto-gsp",
         "source": "Kerkida.net"
@@ -22,24 +37,9 @@
         "title": "Ήταν σωστός!",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/itan-sostos",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Η αποστολή της Ομόνοιας με Ακιντόλα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-me-akintola",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "(Βίντεο) Μπεργκ: \"Είμαι σίγουρος πως και ο προπονητής της Παρί θα πει μπορεί να είναι καλύτερη\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-mpergk-eimai-sigoyros-pos-kai-o-proponitis-tis-pari-tha-pei-mporei-na-einai-kalyteri",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "\"Είμαστε πολύ αισιόδοξοι για το back 2 back\" (Βίντεο)",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/eimaste-poly-aisiodoxoi-gia-back-2-back-binteo",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-12T06:32:25.702448+00:00"
+    "fetched_at": "2026-09-12T11:17:27.679662+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Febrile Manchester derby awaits amid growing rift between United fans and club",
+        "url": "https://www.theguardian.com/football/2026/sep/12/febrile-manchester-derby-awaits-amid-growing-rift-between-united-fans-and-club",
+        "source": "The Guardian"
+      },
       {
         "title": "Premier League news: Iraola values Wirtz’s work ethic; Moyes backs ‘senior citizen’ Grealish",
         "url": "https://www.theguardian.com/football/2026/sep/11/premier-league-news-iraola-values-wirtzs-work-ethic-moyes-backs-senior-citizen-grealish",
@@ -74,14 +79,9 @@
         "title": "Maresca backs Anderson over ‘kings of Manchester’ dig before derby clash",
         "url": "https://www.theguardian.com/football/2026/sep/11/maresca-backs-elliot-anderson-kings-of-manchester-derby",
         "source": "The Guardian"
-      },
-      {
-        "title": "Premier League: 10 things to look out for this weekend",
-        "url": "https://www.theguardian.com/football/2026/sep/11/premier-league-10-things-to-look-out-for-this-weekend",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-12T06:32:26.841203+00:00"
+    "fetched_at": "2026-09-12T11:17:28.754171+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-12T06:32:27.622031+00:00"
+    "fetched_at": "2026-09-12T11:17:29.656844+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -153,13 +153,13 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "Hamilton and Leclerc 'squash' Monza controversy",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckg825g59l1o",
+        "title": "'It started as a joke, a fantasy' - F1 heads to football-obsessed Madrid",
+        "url": "https://www.bbc.com/sport/formula1/articles/cjw5n195nx8o",
         "source": "BBC Sport F1"
       },
       {
-        "title": "'It started as a joke, a fantasy' - F1 heads to football-obsessed Madrid",
-        "url": "https://www.bbc.com/sport/formula1/articles/cjw5n195nx8o",
+        "title": "Hamilton and Leclerc 'squash' Monza controversy",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg825g59l1o",
         "source": "BBC Sport F1"
       },
       {
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-12T06:32:28.781093+00:00"
+    "fetched_at": "2026-09-12T11:17:30.772099+00:00"
   }
 }

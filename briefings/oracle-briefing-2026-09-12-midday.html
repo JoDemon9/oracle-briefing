@@ -72,9 +72,9 @@
 
     <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
       <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-      <a href="briefings/2026-09-12.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
-      <a href="briefings/2026-09-12-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">☀️ 13:30 Μεσημέρι</a>
-      <a href="briefings/2026-09-12-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌙 19:30 Απόγευμα</a>
+      <a href="2026-09-12.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
+      <a href="2026-09-12-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">☀️ 13:30 Μεσημέρι</a>
+      <a href="2026-09-12-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌙 19:30 Απόγευμα</a>
       <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5 cursor-pointer">
         <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
       </button>
@@ -712,8 +712,8 @@
         <p class="text-xs text-[var(--ink-body)]">Συνεχής κάλυψη καθ' όλη τη διάρκεια της ημέρας με πλήρη ανάλυση, επιτόκια και closing bell.</p>
       </div>
       <div class="flex items-center gap-3">
-        <a href="briefings/2026-09-12.html" class="px-3 py-2 rounded-lg bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] text-xs font-bold">Πρωινό 07:30</a>
-        <a href="briefings/2026-09-12-evening.html" class="px-3 py-2 rounded-lg bg-[var(--accent)] text-white text-xs font-bold hover:opacity-90">Απόγευμα 19:30 ➔</a>
+        <a href="2026-09-12.html" class="px-3 py-2 rounded-lg bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] text-xs font-bold">Πρωινό 07:30</a>
+        <a href="2026-09-12-evening.html" class="px-3 py-2 rounded-lg bg-[var(--accent)] text-white text-xs font-bold hover:opacity-90">Απόγευμα 19:30 ➔</a>
       </div>
     </div>
   </main>
@@ -870,7 +870,7 @@
       // 2. Fetch fresh updates in background
       async function fetchWire() {
         const candidates = [
-          'live-wire.json',
+          '../live-wire.json',
           'live-wire.json',
           '../live-wire.json',
           '/oracle-briefing/live-wire.json',
