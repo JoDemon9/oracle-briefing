@@ -5017,8 +5017,9 @@ def main():
     docs_briefing_html = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.html')
     docs_briefing_md = os.path.join(DOCS_BRIEFINGS_DIR, f'{edition_slug}.md')
 
+    force_root = '--root' in sys.argv or '--force-root' in sys.argv
     latest_overall = find_latest_briefing()
-    is_latest = os.path.abspath(target_md) == os.path.abspath(latest_overall)
+    is_latest = force_root or (os.path.abspath(target_md) == os.path.abspath(latest_overall))
 
     if is_latest:
         with open(docs_index, 'w', encoding='utf-8') as f:

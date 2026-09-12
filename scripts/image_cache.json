@@ -490,5 +490,25 @@
   "https://www.bbc.co.uk/news/articles/cy0zvx15rywo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/381d/live/31f31f20-ae8b-11f1-b92e-1f49080ec3cb.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/12/taxpayer-foots-e5-4-million-bill-for-state-double-pensions": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/president-nikos-christodoulides-4.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.sigmalive.com/news/local/1329033/anastelletai-i-kinitopiisi-stin-koilada-xrisokhous-paremvasi-ptd": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361170/conversions/aghrotis-seo.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://cyprus-mail.com/2026/09/12/man-critical-after-sotira-warehouse-explosion": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/nnks.webp",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.dw.com/en/why-germany-s-gas-storage-levels-are-so-low/a-78440677?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/61615034_6.jpg",
+    "category": "ΓΕΡΜΑΝΙΑ"
+  },
+  "https://www.dw.com/en/evergrande-founder-hui-ka-yan-sentenced-to-life-in-prison/a-78439153?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/66959261_6.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }
