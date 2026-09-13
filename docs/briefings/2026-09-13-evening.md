@@ -25,7 +25,7 @@
 | :--- | :--- | :--- | :--- |
 | **S&P 500 (SPX)** | 7.656,98 | +0,86% | Ήπια διόρθωση εν αναμονή στοιχείων πληθωρισμού |
 | **Nasdaq 100 (NDQ)** | 29.368,44 | +0,91% | Πιέσεις στους τεχνολογικούς τίτλους υψηλού beta |
-| **Bitcoin (BTC/USD)** | $77.234,97 | -0,05% | Συσσώρευση στην περιοχή των $77k |
+| **Bitcoin (BTC/USD)** | $77.321,44 | +0,07% | Συσσώρευση στην περιοχή των $77k |
 | **EUR/USD** | 1,16 | -0,10% | Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ |
 | **EUR/GBP** | 0,86 | -0,14% | Σταθεροποίηση εντός στενού εύρους διακύμανσης |
 | **Bank of Cyprus (BOCH)** | €10,75 | +2,38% | Ισχυρό κλείσιμο σε υψηλό ημέρας στο ΧΑΚ/ΧΑ |
@@ -46,30 +46,30 @@
 
 ## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ
 
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Prison crisis: why improved capacity cannot wait
+In your Sunday newspaper you have mentioned the appalling state of our prisons. Unfortunately, when our government buys a €600 thousand armoured car to wander around our little isl
+**Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/13/prison-crisis-why-improved-capacity-cannot-wait)
+
 ### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] 39 illegal immigrants arrested in nationwide police sweep
 Police arrested 39 people on Sunday found to have been residing illegally in Cyprus, following a nationwide operation. Deportation proceedings have already been scheduled for twelv
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
 **Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/13/39-illegal-immigrants-arrested-in-nationwide-police-sweep)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Lithuania says drone sighting turns out to be flock of birds, after NATO summons jets
-Lithuania said that a perceived drone sighting in its airspace earlier on Sunday that prompted authorities to close Vilnius airport and NATO to summon at least one fighter jet, tur
-**Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/13/lithuania-closes-vilnius-airport-nato-summons-jets-in-response-to-possible-drone)
-
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Russia struck train near Poland border shortly after Boris Johnson and top European officials passed through
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station
 The former UK PM said "I don't know what warped logic drove Putin to blow up a stationary Ukrainian locomotive on the Polish border this morning".
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
 **Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cy5zg41dkqwo?at_medium=RSS&at_campaign=rss)
 
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Trump downplays AI risks after dire expert warnings and calls to slow development down
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Trump downplays warnings of AI risks, citing rivalry with China
 The US President said "negative forces" were airing concerns about "things that won't happen".
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
 **Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/c7v48vp31mdo?at_medium=RSS&at_campaign=rss)
 
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Six dead, 130 missing after Indonesian ferry capsizes in Java Sea
-Ships and helicopters are searching for those missing from the Virgo Transport 8 ship, which had encountered bad weather.
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Questions mount over what an AI 'slowdown' would look like
+While pacing AI development might sound like a quick fix, it is far from an easy solution.
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
-**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cvgykzgljlyo?at_medium=RSS&at_campaign=rss)
+**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cwyzp47py48o?at_medium=RSS&at_campaign=rss)
 
 
 ---
@@ -86,7 +86,7 @@ Ships and helicopters are searching for those missing from the Virgo Transport 8
 ### Manchester United
 *   **Τελευταίο αποτέλεσμα:** Ισοπαλία 1-1 στην Premier League
 *   **Επόμενος αγώνας:** UEFA Champions League: Manchester United versus Sabah — 20:00
-*   **Ρεπορτάζ & Νέα:** Manchester United v Manchester City: Premier League – live
+*   **Ρεπορτάζ & Νέα:** Manchester United 0-1 Manchester City: Premier League – as it happened
 *   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights+2026)
 *   **Πηγή:** [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)
 
