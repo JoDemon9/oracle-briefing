@@ -522,5 +522,41 @@
   "https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9256/live/a1802a30-aeb9-11f1-b1d1-571ed4d7ff2c.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/12/fashion-science-ahead-of-availability": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/fashion-main-Science-alone-doesnt-put-a-new-material-into-peoples-wardrobes.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/09/12/root-takes-charge-guiding-england-to-series-whitewash-over-pakistan": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/CRICKET-TEST-ENG-PAK.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/12/norris-produces-a-masterpiece-to-take-spanish-gp-pole": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/3-amigos.jpg",
+    "category": "ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ"
+  },
+  "https://cyprus-mail.com/2026/09/12/ethnomusicologist-presents-traditional-cyprus-poetry-workshop": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Story-tsiatista-flyer.png",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.philenews.com/politismos/article/1769349/vaso-ise-athanatos-pleon/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/082A930-PETROS-scaled.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.philenews.com/oikonomia/apopsis-ikonomia/article/1769141/metarrithmisi-dimosiou-me-balomata-aporrithmisi-stin-praxi/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/dimosio-ektaktoi.webp",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cj06jgl9qzlo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/1233/live/5647ef90-aeb3-11f1-ae38-d350b022f499.png",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.bbc.co.uk/news/articles/cwyzppd1d5lo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9948/live/1ffb4fe0-919e-11f1-b6b0-d5690aa17db0.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cy4zpp20w77o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/0a76/live/dfbc28f0-aeda-11f1-91ea-91f4a2a08fa4.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }

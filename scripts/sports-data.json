@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Θέλει... ΚΑΙ στο ΓΣΠ",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/thelei-proto-0",
+        "title": "Ομόνοια/Οι αριθμοί δεν βγαίνουν…",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/omonoiaoi-arithmoi-den-bgainoyn",
         "source": "Kerkida.net"
       },
       {
-        "title": "Χαιρέτησε... Kerkida o Ακιντόλα!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hairetise-kerkida-o-akintola",
+        "title": "To Fan club του \"Ταλιμπάν\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/fan-club-toy-talimpan",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Φώτος kerkida) Η άφιξη της Ομόνοιας",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-kerkida-i-afixi-tis-omonoias-13",
+        "title": "(Βίντεο Kerkida) Ακιντόλα: \"Είναι ωραίο που επέστρεψα, είμαι πολύ χαρούμενος!\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-kerkida-akintola-einai-oraio-poy-epestrepsa-eimai-poly-haroymenos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Η ενδεκάδα του Μπεργκ",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-endekada-toy-mpergk-9",
+        "title": "Μπεργκ για την αποβολή του: \"Τον ρώτησα γιατί έβαλε μόνο τρία λεπτά και με απέβαλε\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/topothetithike-gia-tin-apoboli-toy-o-mpergk",
         "source": "Kerkida.net"
       },
       {
-        "title": "Το αντίο του Τάσου: \"Είχα την τιμή να είμαι μέρος μιας πραγματικά ξεχωριστής ομάδας\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/eiha-tin-timi-na-eimai-meros-mias-pragmatika-xehoristis-omadas",
+        "title": "Μπεργκ: \"Κυριαρχήσαμε και θα μπορούσαμε να κερδίσουμε\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/mpergk-kyriarhisame-kai-tha-mporoysame-na-kerdisoyme",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-12T17:27:23.547938+00:00"
+    "fetched_at": "2026-09-13T06:48:07.945522+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-12T17:27:25.214290+00:00"
+    "fetched_at": "2026-09-13T06:48:09.369381+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,14 +90,19 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00",
-      "match": "Real Madrid versus Rayo Vallecano — 20:00",
+      "fixture": "Spanish La Liga: Elche versus Real Madrid — 20:30 (Tuesday 15th September)",
+      "match": "Elche versus Real Madrid — 20:30",
       "competition": "Spanish La Liga",
-      "date": "",
+      "date": "Tuesday 15th September",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Mbappé leads Real Madrid to victory with a two-goal performance",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/12/mbappe-leads-real-madrid-to-victory-with-two-goal-performance.html",
+        "source": "Marca"
+      },
       {
         "title": "Kylian Mbappé or Lamine Yamal: Who will win a second World Cup first?",
         "url": "https://www.marca.com/en/football/international-football/2026/09/12/kylian-mbappe-or-lamine-yamal-who-will-win-second-world-cup-first.html",
@@ -117,14 +122,9 @@
         "title": "Kylian Mbappé fires back: Real Madrid star delivers a blazing reminder to anyone doubting his level",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/11/kylian-mbappe-fires-back-real-madrid-star-delivers-blazing-reminder-to-anyone-doubting-his-level.html",
         "source": "Marca"
-      },
-      {
-        "title": "Real Madrid is ruthless in the Champions League",
-        "url": "https://www.marca.com/en/football/champions-league/2026/09/08/real-madrid-is-ruthless-in-the-champions-league.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-12T17:27:26.254763+00:00"
+    "fetched_at": "2026-09-13T06:48:10.152832+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Norris' real opportunity after coming from nowhere with 'masterpiece' lap",
+        "url": "https://www.bbc.com/sport/formula1/articles/c5yeljnxyvdo",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "Norris takes Madrid pole with 'gorgeous' lap",
         "url": "https://www.bbc.com/sport/formula1/articles/c8r60g7nrn6o",
@@ -161,13 +166,8 @@
         "title": "'It started as a joke, a fantasy' - F1 heads to football-obsessed Madrid",
         "url": "https://www.bbc.com/sport/formula1/articles/cjw5n195nx8o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Hamilton and Leclerc 'squash' Monza controversy",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckg825g59l1o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-12T17:27:28.228026+00:00"
+    "fetched_at": "2026-09-13T06:48:11.656042+00:00"
   }
 }
