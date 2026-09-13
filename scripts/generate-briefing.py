@@ -691,6 +691,13 @@ def generate_midday_edition(cy_items, world_items, wx_info, today_str, markets_d
 
 def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_data, sports_data):
     greek_date = get_greek_date_str(today_str)
+    try:
+        from datetime import timedelta
+        dt_today = datetime.strptime(today_str, '%Y-%m-%d')
+        dt_tomorrow = dt_today + timedelta(days=1)
+        tomorrow_greek = f"{dt_tomorrow.day} {GREEK_MONTHS.get(dt_tomorrow.month, '')}"
+    except Exception:
+        tomorrow_greek = "ΑΥΡΙΟ"
     quotes = markets_data.get('quotes', {}) if isinstance(markets_data, dict) else {}
     get_q = lambda name, dp, dc, dn: get_quote_data(quotes, name, dp, dc, dn)
 
@@ -869,7 +876,7 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 
 ---
 
-## 🌤️ ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ (11 ΣΕΠΤΕΜΒΡΙΟΥ)
+## 🌤️ ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ ({tomorrow_greek.upper()})
 
 * **Πρόγνωση:** Αίθριος καιρός, διαυγής ουρανός με ασθενείς έως μέτριους ανέμους.
 * **Θερμοκρασία:** Έως 34°C μέγιστη κατά τις μεσημβρινές ώρες (24°C ελάχιστη).
