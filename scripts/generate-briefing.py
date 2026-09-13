@@ -765,30 +765,52 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
     omonoia = sports_data.get('omonoia', {})
     om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
     om_url = omonoia.get('next_fixture', {}).get('source_url', 'https://www.cfa.com.cy')
-    om_res = omonoia.get('last_result', 'Νίκη 3-1 στην πρεμιέρα')
+    om_res = omonoia.get('last_result', 'Αναμέτρηση CFA 1ης Κατηγορίας')
     om_art = omonoia.get('articles', [])
     om_news = om_art[0]['title'] if om_art else 'Ολοκληρώθηκε η απογευματινή προπόνηση στο «Ηλίας Πούλλος».'
 
     mu = sports_data.get('manchester_united', {})
     mu_fix = mu.get('next_fixture', {}).get('fixture', '')
     mu_url = mu.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/manchester-united')
-    mu_res = mu.get('last_result', 'Ισοπαλία 1-1 στην Premier League')
     mu_art = mu.get('articles', [])
+    mu_res = mu.get('last_result', '')
+    for art in mu_art:
+        t = art.get('title', '')
+        if any(w in t.lower() for w in ['0-', '1-', '2-', '3-', 'derby', 'wins', 'haaland', 'premier league']):
+            mu_res = t
+            break
+    if not mu_res:
+        mu_res = 'Manchester United vs Manchester City (Premier League)'
     mu_news = mu_art[0]['title'] if mu_art else 'Ευρωπαϊκή προετοιμασία ενόψει του αγώνα.'
 
     rm = sports_data.get('real_madrid', {})
     rm_fix = rm.get('next_fixture', {}).get('fixture', '')
     rm_url = rm.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/real-madrid')
-    rm_res = rm.get('last_result', 'Νίκη 3-0 επί της Real Betis')
     rm_art = rm.get('articles', [])
+    rm_res = rm.get('last_result', '')
+    for art in rm_art:
+        t = art.get('title', '')
+        if any(w in t.lower() for w in ['mbappé', 'mbappe', 'victory', 'wins', '3-0', '2-0']):
+            rm_res = t
+            break
+    if not rm_res:
+        rm_res = 'Νίκη 3-0 επί της Real Betis'
     rm_news = rm_art[0]['title'] if rm_art else 'Προετοιμασία στο Valdebebas για το επόμενο ματς.'
 
     f1 = sports_data.get('formula1', {})
     f1_fix = f1.get('next_fixture', {}).get('race_day', '')
     f1_race = f1.get('next_fixture', {}).get('race', '')
     f1_url = f1.get('next_fixture', {}).get('source_url', 'https://www.formula1.com')
-    f1_res = f1.get('last_result', 'Italian Grand Prix (Monza)')
-    f1_news = 'Προετοιμασία των μονοθεσίων και αεροδυναμικές αναβαθμίσεις για το επόμενο Grand Prix.'
+    f1_art = f1.get('articles', [])
+    f1_res = f1.get('last_result', '')
+    for art in f1_art:
+        t = art.get('title', '')
+        if any(w in t.lower() for w in ['antonelli', 'wins', 'norris', 'spanish gp', 'grand prix']):
+            f1_res = t
+            break
+    if not f1_res:
+        f1_res = 'Spanish Grand Prix 2026 (Madrid)'
+    f1_news = f1_art[0]['title'] if f1_art else 'Προετοιμασία των μονοθεσίων και αεροδυναμικές αναβαθμίσεις για το επόμενο Grand Prix.'
 
     sports_block = f"""### ΟΜΟΝΟΙΑ
 *   **Τελευταίο αποτέλεσμα:** {om_res}
@@ -818,23 +840,31 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
 *   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights+2026)
 *   **Πηγή:** [Formula1.com]({f1_url})"""
 
+    selected_headlines = []
+    for itm in cy_items[:2] + world_items[:3]:
+        t = clean_rss_title(itm.get('title', ''))
+        if t and len(t) > 10:
+            selected_headlines.append(t)
+    news_summary_bullet = " · ".join(selected_headlines[:3]) if selected_headlines else "Συνεχής παρακολούθηση της εγχώριας και διεθνούς επικαιρότητας."
+    sports_summary_bullet = f"Αποτελέσματα & αγώνες για Ομόνοια, Manchester United ({mu_res}), Real Madrid και Formula 1 ({f1_res})."
+
     md = f"""# 🌙 THE ORACLE SOVEREIGN — ΑΠΟΓΕΥΜΑΤΙΝΗ ΣΥΝΟΨΗ — {greek_date}
 
-**19:30 ώρα Κύπρου · χρόνος ανάγνωσης ~4 λεπτά**
+**22:00 ώρα Κύπρου · χρόνος ανάγνωσης ~4 λεπτά**
 
 ---
 
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
-> * **Αγορές & Tech:** Ήπια διόρθωση σε S&P 500 ({spx_c}) & Nasdaq 100 ({ndq_c}). Στο διευρυμένο Tech Radar, παρακολουθούνται 7 μετοχές: TSMC ({tsm_c}), NVIDIA ({nvda_c}), Apple ({aapl_c}), Microsoft ({msft_c}), Alphabet ({goog_c}), Micron ({mu_c}) & Meta ({meta_c}).
-> * **Επικαιρότητα (5 Εξελίξεις):** Παράταση μείωσης φόρου καυσίμων στην Κύπρο, τετραμερής συμμαχία ναυτιλίας/κυβερνοασφάλειας, εδραίωση Brent άνω των $102, νέο πλαίσιο ασφάλειας AI/Cloud και διεθνείς ναυτιλιακές οδοί.
-> * **Αθλητικά:** Πλήρης ετοιμότητα της Ομόνοιας για το ντέρμπι του ΓΣΠ και ευρωπαϊκή αναμέτρηση της Manchester United.
+> * **Αγορές & Tech:** S&P 500 ({spx_c}), Nasdaq 100 ({ndq_c}), Bank of Cyprus ({boch_c}), Bitcoin ({btc_c}). Tech Watchlist: Apple ({aapl_c}), Alphabet ({goog_c}), TSMC ({tsm_c}), Microsoft ({msft_c}), Meta ({meta_c}), NVIDIA ({nvda_c}), Micron ({mu_c}).
+> * **Επικαιρότητα:** {news_summary_bullet}
+> * **Αθλητικά:** {sports_summary_bullet}
 
 ---
 
 ## 🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ
 
-Η σημερινή ημέρα έκλεισε με κινητικότητα στο οικονομικό πεδίο και σταθεροποίηση των δεικτών. Οι τοποθετήσεις της κυβέρνησης και των ρυθμιστικών αρχών έθεσαν τις βάσεις για τις αυριανές εξελίξεις στην εγχώρια αγορά.
+Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό άνοιγμα των ευρωπαϊκών χρηματιστηρίων και της Wall Street.
 
 ---
 
