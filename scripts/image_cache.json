@@ -558,5 +558,45 @@
   "https://www.bbc.co.uk/news/articles/cy4zpp20w77o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/0a76/live/dfbc28f0-aeda-11f1-91ea-91f4a2a08fa4.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/13/christodoulides-unveils-two-new-housing-schemes-for-young-families": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/08/preznik-1.jpg",
+    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+  },
+  "https://cyprus-mail.com/2026/09/13/four-held-in-limassol-drug-raid-after-police-seize-126kg-of-ketamine": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/ΥΚΑΝ-Κατάσχεση-100kg-Κοκαΐνης-12.09.2026-Φώτο-2-2.webp",
+    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+  },
+  "https://www.sigmalive.com/news/oikonomia/1329133/ep-perivallontos-sta-skaria-dio-nea-skhedia-ghia-gheorghous-ypsoys-eur15-ekat": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361274/conversions/97236bccb152aa3a628800a8425013f6-seo.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/13/corporate-artificial-intelligence-bills-rise-despite-falling-token-prices": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/06/ai-artificial-intelligence.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.sigmalive.com/news/politics/1329131/anaghnoristikes-ripes-ghia-tis-proedrikes-toy-2028": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361271/conversions/mett_ouk5yoyoriginal-seo.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.bbc.co.uk/news/articles/c14dpgm0rg4o": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9256/live/a1802a30-aeb9-11f1-b1d1-571ed4d7ff2c.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.dw.com/en/why-germany-s-gas-storage-levels-are-so-low/a-78440677": {
+    "image": "https://static.dw.com/image/61615034_6.jpg",
+    "category": "ΓΕΡΜΑΝΙΑ"
+  },
+  "https://www.bbc.co.uk/news/articles/c62ene9kr71o": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/d027/live/be384650-ae03-11f1-a8b6-3d61421c71fa.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.dw.com/en/norway-s-new-king-haakon-viii-takes-oath-in-parliament/a-78606923": {
+    "image": "https://static.dw.com/image/78608530_6.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.cnbc.com/2026/09/12/housing-shortage-home-construction-robots.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108208386-17597761832025-10-06t184130z_1342918111_rc2g6haq2z4o_rtrmadp_0_usa-economy.jpeg?v=1789155801&amp;w=1920&amp;h=1080",
+    "category": "ΔΙΕΘΝΗ"
   }
 }

@@ -14,6 +14,11 @@
     },
     "articles": [
       {
+        "title": "Ακόμη την...ψάχνει",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/akomi-tinpsahnei",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Ομόνοια/Οι αριθμοί δεν βγαίνουν…",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/omonoiaoi-arithmoi-den-bgainoyn",
         "source": "Kerkida.net"
@@ -32,14 +37,9 @@
         "title": "Μπεργκ για την αποβολή του: \"Τον ρώτησα γιατί έβαλε μόνο τρία λεπτά και με απέβαλε\"",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/topothetithike-gia-tin-apoboli-toy-o-mpergk",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Μπεργκ: \"Κυριαρχήσαμε και θα μπορούσαμε να κερδίσουμε\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/mpergk-kyriarhisame-kai-tha-mporoysame-na-kerdisoyme",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-13T06:48:07.945522+00:00"
+    "fetched_at": "2026-09-13T08:46:05.412304+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-13T06:48:09.369381+00:00"
+    "fetched_at": "2026-09-13T08:46:07.128381+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-13T06:48:10.152832+00:00"
+    "fetched_at": "2026-09-13T08:46:08.649522+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-13T06:48:11.656042+00:00"
+    "fetched_at": "2026-09-13T08:46:10.330367+00:00"
   }
 }
