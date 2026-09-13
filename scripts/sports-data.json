@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Ακόμη την...ψάχνει",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/akomi-tinpsahnei",
+        "title": "Τα... μαθηματικά του Αθανασίου",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/refinio/omonoia/ta-mathimatika-toy-athanasioy",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ομόνοια/Οι αριθμοί δεν βγαίνουν…",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/omonoiaoi-arithmoi-den-bgainoyn",
+        "title": "Ισοπαλία πριν την Ομόνοια",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/isopalia-prin-tin-omonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "To Fan club του \"Ταλιμπάν\"",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/fan-club-toy-talimpan",
+        "title": "Θα ήταν...ονειρικό",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tha-itanoneiriko",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Βίντεο Kerkida) Ακιντόλα: \"Είναι ωραίο που επέστρεψα, είμαι πολύ χαρούμενος!\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-kerkida-akintola-einai-oraio-poy-epestrepsa-eimai-poly-haroymenos",
+        "title": "ΔΙΠΛΟ με... 90λεπτο για Παναγιώτου",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/diplo-me-90lepto-gia-panagiotoy",
         "source": "Kerkida.net"
       },
       {
-        "title": "Μπεργκ για την αποβολή του: \"Τον ρώτησα γιατί έβαλε μόνο τρία λεπτά και με απέβαλε\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/topothetithike-gia-tin-apoboli-toy-o-mpergk",
+        "title": "ΔΗΛΩΣΗ Loïs Diony στο kerkida (Βίντεο)",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/dilosi-lois-diony-sto-kerkida-binteo",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-13T09:39:06.021490+00:00"
+    "fetched_at": "2026-09-13T16:40:23.299959+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -48,13 +48,23 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Premier League: Manchester United versus Manchester City — 16:30",
-      "match": "Manchester United versus Manchester City — 16:30",
-      "competition": "Premier League",
+      "fixture": "UEFA Champions League: Manchester United versus Sabah — 20:00",
+      "match": "Manchester United versus Sabah — 20:00",
+      "competition": "UEFA Champions League",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Manchester United v Manchester City: Premier League – live",
+        "url": "https://www.theguardian.com/football/live/2026/sep/13/manchester-united-v-manchester-city-premier-league-live",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Premier League today: How to watch Manchester United v Manchester City, TV channels & live stream Sunday 13 September",
+        "url": "https://www.theguardian.com/football/2026/sep/13/how-to-watch-premier-league-manchester-united-manchester-city",
+        "source": "The Guardian"
+      },
       {
         "title": "Febrile Manchester derby awaits amid growing rift between United fans and club",
         "url": "https://www.theguardian.com/football/2026/sep/12/febrile-manchester-derby-awaits-amid-growing-rift-between-united-fans-and-club",
@@ -69,19 +79,9 @@
         "title": "Kobbie Mainoo moves from outsider to main man after summer of hurt",
         "url": "https://www.theguardian.com/football/2026/sep/11/kobbie-mainoo-outsider-main-man-summer-of-hurt-derby",
         "source": "The Guardian"
-      },
-      {
-        "title": "Champions League review: Irish heroics, rejected resignations and Mourinho’s return",
-        "url": "https://www.theguardian.com/football/2026/sep/11/champions-league-review-troy-parrott-jose-mourinho-michael-olise",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Maresca backs Anderson over ‘kings of Manchester’ dig before derby clash",
-        "url": "https://www.theguardian.com/football/2026/sep/11/maresca-backs-elliot-anderson-kings-of-manchester-derby",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-13T09:39:07.815961+00:00"
+    "fetched_at": "2026-09-13T16:40:24.434985+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,32 +99,32 @@
     },
     "articles": [
       {
+        "title": "Endrick is still not in Mourinho's plans at Real Madrid and Roma are coming for him",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/endrick-is-still-not-in-mourinho-s-plans-at-real-madrid-and-roma-are-coming-for-him.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Virginia Fonseca stuns everyone alongside Vinicius at the Madrid GP",
+        "url": "https://www.marca.com/en/f1/2026/09/13/virginia-fonseca-stuns-everyone-alongside-vinicius-at-the-madrid-gp.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Former Real Madrid player exposes the team's problems: \"One looks at the other and says if he doesn't move, neither do I\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/former-real-madrid-player-exposes-the-team-s-problems-one-looks-at-the-other-and-says-if-he-doesn-t-move-neither-do-i.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Diomande raises the first suspicions: \"His technical precision is far too poor\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/diomande-raises-the-first-suspicions-his-technical-precision-is-far-too-poor.html",
+        "source": "Marca"
+      },
+      {
         "title": "Mbappé leads Real Madrid to victory with a two-goal performance",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/12/mbappe-leads-real-madrid-to-victory-with-two-goal-performance.html",
         "source": "Marca"
-      },
-      {
-        "title": "Kylian Mbappé or Lamine Yamal: Who will win a second World Cup first?",
-        "url": "https://www.marca.com/en/football/international-football/2026/09/12/kylian-mbappe-or-lamine-yamal-who-will-win-second-world-cup-first.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Real Madrid makes Lautaro Martinez walk past its European Cups before kickoff",
-        "url": "https://www.marca.com/en/football/nations-league/2026/09/11/real-madrid-makes-lautaro-martinez-walk-past-its-european-cups-before-kickoff-video.html",
-        "source": "Marca"
-      },
-      {
-        "title": "“No player was better than me last season”",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/11/player-was-better-than-me-last-season.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Kylian Mbappé fires back: Real Madrid star delivers a blazing reminder to anyone doubting his level",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/11/kylian-mbappe-fires-back-real-madrid-star-delivers-blazing-reminder-to-anyone-doubting-his-level.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-13T09:39:09.353672+00:00"
+    "fetched_at": "2026-09-13T16:40:25.414678+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -143,6 +143,16 @@
     },
     "articles": [
       {
+        "title": "Antonelli wins as Norris loses out under virtual safety car",
+        "url": "https://www.bbc.com/sport/formula1/articles/c5yeln1j175o",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Norris' real opportunity after coming from nowhere with 'masterpiece' lap",
         "url": "https://www.bbc.com/sport/formula1/articles/c5yeljnxyvdo",
         "source": "BBC Sport F1"
@@ -156,18 +166,8 @@
         "title": "New Madrid circuit very high risk, says Russell",
         "url": "https://www.bbc.com/sport/formula1/articles/cew9nr2kx20o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Alonso cannot leave F1 while uncompetitive - FIA boss",
-        "url": "https://www.bbc.com/sport/formula1/articles/c9w4dz14787o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "'It started as a joke, a fantasy' - F1 heads to football-obsessed Madrid",
-        "url": "https://www.bbc.com/sport/formula1/articles/cjw5n195nx8o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-13T09:39:10.331174+00:00"
+    "fetched_at": "2026-09-13T16:40:26.587654+00:00"
   }
 }
