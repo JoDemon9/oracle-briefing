@@ -1,122 +1,199 @@
 [
   {
+    "date": "2026-09-14",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "EU market production falls in June as construction and services weaken",
+    "snippet": "EU market production fell in June, with construction and services driving a monthly decline despite a modest increase in trade, according to figures released by Eurostat. Compared...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Businesses face rising risks from fragmented tax rules [Επικαιρότητα]",
+    "snippet": "Global tax cooperation is becoming increasingly fragmented, with businesses facing greater uncertainty as negotiations at the OECD and United Nations progress a...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Zverev banishes US Open demons with victory over Shelton [Επικαιρότητα]",
+    "snippet": "Top seed Alexander Zverev banished bitter U.S. Open memories to beat American Ben Shelton 6-3 7-6(2) 5-7 6-2 in the final on Sunday, capturing the title six yea...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Indonesia rescuers battle turbulent seas in search for 129 people after passenger ship capsizes [Επικαιρότητα]",
+    "snippet": "Hundreds of Indonesian rescuers including the coastguard and the navy raced on Monday to board a passenger ship that capsized in the Java Sea over the weekend a...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Cyprus banks recover from loan crisis, but borrowers still suffer [Επικαιρότητα]",
+    "snippet": "Banks clear non-performing loans but private debt remains a problem, CBC analyst says Cyprus has largely cleaned up its banking sector’s non-performing loans (N...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🌍 Διεθνή",
+    "title": "1. Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station [Διεθνή]",
+    "snippet": "The former UK PM said: \"I don't know what warped logic drove Putin to blow up a stationary Ukrainian locomotive on the Polish border this morning\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🌍 Διεθνή",
+    "title": "2. Trump downplays warnings of AI risks, citing rivalry with China [Διεθνή]",
+    "snippet": "The US president said \"negative forces\" were airing concerns about \"things that won't happen\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🌍 Διεθνή",
+    "title": "3. Questions mount over what an AI 'slowdown' would look like [Διεθνή]",
+    "snippet": "While pacing AI development might sound like a quick fix, it is far from an easy solution....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🌍 Διεθνή",
+    "title": "4. Swedish left-wing bloc narrowly ahead with election too close to call [Διεθνή]",
+    "snippet": "A preliminary count by Sweden's election authority projected that left-wing opposition bloc would win a three-seat majority....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "🌍 Διεθνή",
+    "title": "5. Six dead, 130 missing after Indonesian ferry capsizes in Java Sea [Διεθνή]",
+    "snippet": "Ships and helicopters are searching for those missing from the Virgo Transport 8 ship, which had encountered bad weather....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-14",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-13",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Στεγαστική Μεταρρύθμιση: Εγκρίθηκαν από το Υπουργικό Συμβούλιο τα δύο νέα στεγαστικά σχέδια — 570 κρατικά οικόπεδα στο 25% της αξίας και κίνητρα προσθηκών σε οικογενειακά ακίνητα [Επιβεβαιωμένο]",
     "snippet": "Σε μια κομβική πρωτοβουλία με άμεσο κοινωνικό και οικονομικό αντίκτυπο προχώρησε η κυβέρνηση, ανακοινώνοντας την έγκριση από το Υπουργικό Συμβούλιο δύο νέων στεγαστικών σχεδίων που...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-13.html#top-story"
   },
   {
     "date": "2026-09-13",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Στεγαστική Πολιτική: Εγκρίθηκαν από το Υπουργικό δύο νέα σχέδια στήριξης νέων οικογενειών με 570 οικόπεδα [Επιβεβαιωμένο]",
     "snippet": "Σε δραστικά μέτρα για τη στήριξη νέων ζευγαριών και οικογενειών προχωρά η κυβέρνηση με δύο νέα στεγαστικά σχέδια, όπως ανακοίνωσε ο Πρόεδρος Νίκος Χριστοδουλίδη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-13.html#cyprus"
   },
   {
     "date": "2026-09-13",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Δημόσια Ασφάλεια & Μαρίνες: Μεγάλη επιχείρηση στη Λεμεσό — Κατάσχεση 126 κιλών κεταμίνης από πολυτελή σκάφη [Επιβεβαιωμένο]",
     "snippet": "Σε μία από τις μεγαλύτερες επιτυχίες των διωκτικών αρχών εξελίχθηκε ευρείας κλίμακας επιχείρηση της ΥΚΑΝ στη Λεμεσό, όπου κατασχέθηκαν περισσότερα από 126 κιλά...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-13.html#cyprus"
   },
   {
     "date": "2026-09-13",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Πρωτογενής Τομέας: Στα «σκαριά» δύο νέα σχέδια στήριξης γεωργών ύψους €1,5 εκατ. και τραπεζικές διευκολύνσεις [Επιβεβαιωμένο]",
     "snippet": "Δύο νέα προγράμματα οικονομικής στήριξης των γεωργών συνολικού προϋπολογισμού €1,5 εκατομμυρίου προετοιμάζει το Υπουργείο Γεωργίας για την αντιμετώπιση του κόστ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-13.html#cyprus"
   },
   {
     "date": "2026-09-13",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Επιχειρηματικότητα & AI: Αύξηση εταιρικών δαπανών Τεχνητής Νοημοσύνης παρά την πτώση τιμών στα tokens [Επιβεβαιωμένο]",
     "snippet": "Σημαντική αύξηση στους εταιρικούς προϋπολογισμούς για υποδομές Τεχνητής Νοημοσύνης καταγράφουν οι διεθνείς και τοπικές τεχνολογικές εταιρείες στην Κύπρο, παρά τ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-13.html#cyprus"
   },
   {
     "date": "2026-09-13",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Πολιτικό Σκηνικό: Πρώτες αναγνωριστικές κινήσεις και παρασκήνιο για τις Προεδρικές Εκλογές του 2028 [Επιβεβαιωμένο]",
     "snippet": "Έντονη κινητικότητα και ανεπίσημες παρασκηνιακές διαβουλεύσεις καταγράφονται ήδη στους κομματικούς μηχανισμούς και στις κοινοβουλευτικές ομάδες, ενόψει των Προε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-13.html#cyprus"
   },
   {
     "date": "2026-09-13",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Στέγαση & Προστασία Δανειοληπτών: Τελική ευθεία για το Σχέδιο «Ενοίκιο Έναντι Δόσης» της ΚΕΔΙΠΕΣ — Προθεσμία 30ής Σεπτεμβρίου [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Στην τελική ευθεία εισέρχεται η καταληκτική προθεσμία της 30ής Σεπτεμβρίου 2026 για την κατάθεση αιτήσεων στο κυβερνητικό Σχέδιο «Ενοίκιο Έναντι Δόσης» μέσω της...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-13.html#cyprus"
   },
   {
     "date": "2026-09-13",
     "section": "🌍 Διεθνή",
     "title": "1. Τεχνητή Νοημοσύνη & Ρυθμιστικό Πλαίσιο: Έκκληση του CEO της Anthropic Dario Amodei για επιβράδυνση της ανάπτυξης AI [Επιβεβαιωμένο]",
     "snippet": "Σε μια ασυνήθιστη και βαρυσήμαντη παρέμβαση προχώρησε ο διευθύνων σύμβουλος της κορυφαίας εταιρείας τεχνητής νοημοσύνης Anthropic, Dario Amodei, καλώντας τη διε...",
-    "url": "#world"
+    "url": "briefings/2026-09-13.html#world"
   },
   {
     "date": "2026-09-13",
     "section": "🌍 Διεθνή",
     "title": "2. Ευρωπαϊκή Ενεργειακή Ασφάλεια: Στο 50% τα αποθέματα φυσικού αερίου της Γερμανίας ενόψει χειμώνα [Μονή πηγή]",
     "snippet": "Σε επίπεδα αισθητά χαμηλότερα από τα αναμενόμενα βρίσκονται τα αποθέματα φυσικού αερίου στις υπόγειες αποθήκες της Γερμανίας, καθώς η πληρότητα κινείται μόλις σ...",
-    "url": "#world"
+    "url": "briefings/2026-09-13.html#world"
   },
   {
     "date": "2026-09-13",
     "section": "🌍 Διεθνή",
     "title": "3. Πόλεμος στην Ουκρανία: Ερωτήματα στη Ρωσία για εκατοντάδες αγνοούμενους από την ουκρανική προέλαση [Επιβεβαιωμένο]",
     "snippet": "Εντείνονται οι πιέσεις και η κοινωνική αγωνία στο εσωτερικό της Ρωσίας, καθώς συγγενείς εκατοντάδων στρατιωτών και πολιτών αναζητούν επίσημες απαντήσεις για την...",
-    "url": "#world"
+    "url": "briefings/2026-09-13.html#world"
   },
   {
     "date": "2026-09-13",
     "section": "🌍 Διεθνή",
     "title": "4. Σκανδιναβία & Ευρωπαϊκοί Θεσμοί: Ορκωμοσία του νέου Βασιλιά της Νορβηγίας Χάακον Η' στο Storting [Επιβεβαιωμένο]",
     "snippet": "Σε κλίμα ιστορικής συνέχειας και θεσμικής σταθερότητας πραγματοποιήθηκε στο νορβηγικό κοινοβούλιο (Storting) στο Όσλο η επίσημη ορκωμοσία του νέου μονάρχη της χ...",
-    "url": "#world"
+    "url": "briefings/2026-09-13.html#world"
   },
   {
     "date": "2026-09-13",
     "section": "🌍 Διεθνή",
     "title": "5. Κατασκευές & Ρομποτική: Η άνοδος των κατασκευαστικών ρομπότ στην αντιμετώπιση της παγκόσμιας στεγαστικής κρίσης [Επιβεβαιωμένο]",
     "snippet": "Στη μαζική υιοθέτηση εξειδικευμένων ρομποτικών συστημάτων και αυτοματοποιημένων μηχανημάτων δόμησης στρέφονται οι κατασκευαστικές εταιρείες διεθνώς, επιχειρώντα...",
-    "url": "#world"
+    "url": "briefings/2026-09-13.html#world"
   },
   {
     "date": "2026-09-13",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή πλήρων φακέλων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (StockWatch).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή πλήρων φακέλων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (StockWatch)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-13.html#deadlines"
   },
   {
     "date": "2026-09-13",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ (€10.000 – €120.000) μέσω της ηλεκτρονικής πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ (€10.000 – €120.000) μέσω της ηλεκτρονικής πύλης του Υπουργείου Ενέργειας, Εμπορίο...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-13.html#deadlines"
   },
   {
     "date": "2026-09-13",
     "section": "📅 Προθεσμίες",
     "title": "Έως 15 Οκτωβρίου 2026: Υποβολή προτάσεων στον διεθνή διαγωνισμό AI Challenge του DCO για καινοτόμες startups στον τομέα των υδάτινων πόρων (Cyprus Mail).",
     "snippet": "Έως 15 Οκτωβρίου 2026: Υποβολή προτάσεων στον διεθνή διαγωνισμό AI Challenge του DCO για καινοτόμες startups στον τομέα των υδάτινων πόρων (Cyprus Mail)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-13.html#deadlines"
   },
   {
     "date": "2026-09-13",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης πληρωμών του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης πληρωμών του Δήμου Λεμεσού (Δήμος Λεμεσού)...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-13.html#deadlines"
   },
   {
     "date": "2026-09-13",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Η Κυριακή, 13 Σεπτεμβρίου 2026, σημαδεύτηκε από καθοριστικές εξελίξεις στην εγχώρια κοινωνική πολιτική και έντονη δραστηριότητα στα διεθνή μέτωπα. Στην Κύπρο, η επίσημη εξαγγελία τ...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-13.html#top-story"
   },
   {
     "date": "2026-09-12",

@@ -1,89 +1,89 @@
 {
-  "fetched_at": "2026-09-13T22:01:43.440069",
+  "fetched_at": "2026-09-14T07:12:20.465203",
   "quotes": {
     "S&P 500 (SPX)": {
       "symbol": "^GSPC",
       "price": 7656.98,
       "change": 0.859886454944212,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Nasdaq 100 (NDQ)": {
       "symbol": "^NDX",
       "price": 29368.44,
       "change": 0.9103372446612905,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Bitcoin (BTC/USD)": {
       "symbol": "BTC-USD",
-      "price": 77321.44,
-      "change": 0.06628685669589289,
-      "date": "13/09/2026"
+      "price": 77613.3,
+      "change": 1.0508397825748168,
+      "date": "14/09/2026"
     },
     "EUR/USD": {
       "symbol": "EURUSD=X",
-      "price": 1.1601,
-      "change": -0.10333247222940584,
-      "date": "13/09/2026"
+      "price": 1.1559,
+      "change": -0.36203775536591515,
+      "date": "14/09/2026"
     },
     "EUR/GBP": {
       "symbol": "EURGBP=X",
-      "price": 0.8579,
-      "change": -0.13968106157606552,
-      "date": "13/09/2026"
+      "price": 0.8564,
+      "change": -0.11663167716351772,
+      "date": "14/09/2026"
     },
     "Bank of Cyprus (BOCH)": {
       "symbol": "BOCHGR.AT",
       "price": 10.75,
       "change": 2.380952380952381,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Brent Crude": {
       "symbol": "BZ=F",
-      "price": 104.61,
-      "change": -2.8059091331413137,
-      "date": "13/09/2026"
+      "price": 107.59,
+      "change": 2.848676034795912,
+      "date": "14/09/2026"
     },
     "TSMC (TSM)": {
       "symbol": "TSM",
       "price": 433.24,
       "change": 1.217204401560647,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "NVIDIA (NVDA)": {
       "symbol": "NVDA",
       "price": 218.29,
       "change": -0.03205715332479465,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Alphabet (GOOG)": {
       "symbol": "GOOG",
       "price": 335.45,
       "change": 1.5315233511910176,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Apple (AAPL)": {
       "symbol": "AAPL",
       "price": 332.27,
       "change": 1.7454144593808336,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Microsoft (MSFT)": {
       "symbol": "MSFT",
       "price": 495.63,
       "change": 0.6477946551864182,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Micron (MU)": {
       "symbol": "MU",
       "price": 975.26,
       "change": -0.21996910201450542,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     },
     "Meta (META)": {
       "symbol": "META",
       "price": 648.03,
       "change": 0.5664359539402181,
-      "date": "13/09/2026"
+      "date": "14/09/2026"
     }
   },
   "euribor": {
@@ -91,7 +91,7 @@
     "3m": "2,647%",
     "6m": "2,820%",
     "12m": "3,160%",
-    "date": "13/09/2026",
+    "date": "14/09/2026",
     "source": "euribor-rates.eu"
   }
 }
