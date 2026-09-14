@@ -14,32 +14,32 @@
     },
     "articles": [
       {
+        "title": "Με... 0-4-2",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/me-0-4-2",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "H Ομόνοια για τα μεμονομένα εισιτήρια με Θέλτα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/h-omonoia-gia-ta-memonomena-eisitiria-me-thelta",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Εβδομάδα... προκλήσεων",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/ebdomada-prokliseon",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Oμόνοια/Πακέτο ευρωπαϊκών αγώνων",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoiapaketo-eyropaikon-agonon",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Τα... μαθηματικά του Αθανασίου",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/refinio/omonoia/ta-mathimatika-toy-athanasioy",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Ισοπαλία πριν την Ομόνοια",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/isopalia-prin-tin-omonoia",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Θα ήταν...ονειρικό",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tha-itanoneiriko",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "ΔΙΠΛΟ με... 90λεπτο για Παναγιώτου",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/diplo-me-90lepto-gia-panagiotoy",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "ΔΗΛΩΣΗ Loïs Diony στο kerkida (Βίντεο)",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/dilosi-lois-diony-sto-kerkida-binteo",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-13T19:01:45.081825+00:00"
+    "fetched_at": "2026-09-14T09:10:56.615838+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -48,13 +48,28 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "UEFA Champions League: Manchester United versus Sabah — 20:00",
-      "match": "Manchester United versus Sabah — 20:00",
-      "competition": "UEFA Champions League",
+      "fixture": "Manchester United versus Brighton & Hove Albion — 20:00",
+      "match": "Manchester United versus Brighton & Hove Albion — 20:00",
+      "competition": "",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Premier League: 10 talking points from the weekend’s action",
+        "url": "https://www.theguardian.com/football/2026/sep/14/premier-league-10-talking-points-from-the-weekends-action",
+        "source": "The Guardian"
+      },
+      {
+        "title": "‘An error of judgement’: Pro Ref admits mistake in awarding Haaland’s derby winner",
+        "url": "https://www.theguardian.com/football/2026/sep/13/michael-carrick-var-erling-haaland-manchester-derby",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Enzo Fernández’s fortitude shows Maresca was right to crave City reunion",
+        "url": "https://www.theguardian.com/football/2026/sep/13/enzo-fernandez-enzo-maresca-manchester-city-reunion-united-derby",
+        "source": "The Guardian"
+      },
       {
         "title": "Manchester United 0-1 Manchester City: Premier League – as it happened",
         "url": "https://www.theguardian.com/football/live/2026/sep/13/manchester-united-v-manchester-city-premier-league-live",
@@ -64,24 +79,9 @@
         "title": "Manchester City recover from Foden red card as Haaland wins derby at United",
         "url": "https://www.theguardian.com/football/2026/sep/13/manchester-united-manchester-city-premier-league-match-report",
         "source": "The Guardian"
-      },
-      {
-        "title": "Premier League today: How to watch Manchester United v Manchester City, TV channels & live stream Sunday 13 September",
-        "url": "https://www.theguardian.com/football/2026/sep/13/how-to-watch-premier-league-manchester-united-manchester-city",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Febrile Manchester derby awaits amid growing rift between United fans and club",
-        "url": "https://www.theguardian.com/football/2026/sep/12/febrile-manchester-derby-awaits-amid-growing-rift-between-united-fans-and-club",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Premier League news: Iraola values Wirtz’s work ethic; Moyes backs ‘senior citizen’ Grealish",
-        "url": "https://www.theguardian.com/football/2026/sep/11/premier-league-news-iraola-values-wirtzs-work-ethic-moyes-backs-senior-citizen-grealish",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-13T19:01:46.369944+00:00"
+    "fetched_at": "2026-09-14T09:10:58.207953+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-13T19:01:47.825227+00:00"
+    "fetched_at": "2026-09-14T09:10:59.993992+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -143,6 +143,16 @@
     },
     "articles": [
       {
+        "title": "How virtual safety car cost Norris win - and should F1 change rules?",
+        "url": "https://www.bbc.com/sport/formula1/articles/cvgyjwxv7y3o",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Honda changes F1 design boss after slow start to return",
+        "url": "https://www.bbc.com/sport/formula1/articles/cpved014n83o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Antonelli wins as Norris loses out under virtual safety car",
         "url": "https://www.bbc.com/sport/formula1/articles/c5yeln1j175o",
         "source": "BBC Sport F1"
@@ -156,18 +166,8 @@
         "title": "Norris' real opportunity after coming from nowhere with 'masterpiece' lap",
         "url": "https://www.bbc.com/sport/formula1/articles/c5yeljnxyvdo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Norris takes Madrid pole with 'gorgeous' lap",
-        "url": "https://www.bbc.com/sport/formula1/articles/c8r60g7nrn6o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "New Madrid circuit very high risk, says Russell",
-        "url": "https://www.bbc.com/sport/formula1/articles/cew9nr2kx20o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-13T19:01:49.537619+00:00"
+    "fetched_at": "2026-09-14T09:11:02.728415+00:00"
   }
 }

@@ -618,5 +618,57 @@
   "https://www.bbc.co.uk/news/articles/cwyzp47py48o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b55d/live/2989a230-afa0-11f1-b88f-8308bd3510af.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/14/beonix-festival-reveals-international-line-up": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/beonix-2-copy.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/09/14/swedish-centre-left-opposition-in-pole-position-to-take-power-after-tight-election": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/2026-09-13T231027Z_848591466_RC2MINALNBMI_RTRMADP_3_SWEDEN-ELECTION.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/14/us-arms-embargo-waiver-extension-a-clear-message-christodoulides-says": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/05/Christodoulides-Greek-parliament-4.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/14/cypriot-investment-firm-continues-buyback-programme": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/03/trading-finance-investing-stockmarket-cysec-hedge-fund-2.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/14/gap-vassilopoulos-sees-robust-profit-rise-despite-modest-revenue-growth": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/07/financial-results-1.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/14/anti-corruption-authority-ends-spy-van-investigation": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2024/04/van-768x484-1.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/d7e0/live/f8b9f5b0-afa4-11f1-a27d-17e2480354ed.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cvgykzgljlyo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/77d4/live/bb287020-af75-11f1-a540-61c3f7fc4e6c.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.sigmalive.com/news/kypriako/1329231/israilinos-nomikos-dikhnei-bretanous-ghia-ek-perioysies-sta-katekhomena": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361377/conversions/8581816c_f6ac_4ad9_a85f_aadac7eb5fd3-seo.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cy5zg41dkqwo": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/715d/live/e93baec0-afff-11f1-9713-5de61387c384.png",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c7v48vp31mdo": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/05d0/live/2a71c0a0-af92-11f1-bc1f-3f186ca4140c.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.bbc.co.uk/news/articles/cwyzp47py48o": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/99cd/live/76ef92d0-b015-11f1-b1d1-571ed4d7ff2c.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.bbc.co.uk/news/articles/cvgykzgljlyo": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/77d4/live/bb287020-af75-11f1-a540-61c3f7fc4e6c.jpg",
+    "category": "ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ"
   }
 }
