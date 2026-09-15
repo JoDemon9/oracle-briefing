@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Με... 0-4-2",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/me-0-4-2",
+        "title": "Θέλει να μπει με το... δεξί",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/thelei-na-mpei-me-dexi",
         "source": "Kerkida.net"
       },
       {
-        "title": "H Ομόνοια για τα μεμονομένα εισιτήρια με Θέλτα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/h-omonoia-gia-ta-memonomena-eisitiria-me-thelta",
+        "title": "Στην Κύπρο για... Ομόνοια, 25 ώρες πριν!!!",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/stin-kypro-gia-omonoia-25-ores-prin",
         "source": "Kerkida.net"
       },
       {
-        "title": "Εβδομάδα... προκλήσεων",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/ebdomada-prokliseon",
+        "title": "Ευστοχία...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/eystohia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Oμόνοια/Πακέτο ευρωπαϊκών αγώνων",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoiapaketo-eyropaikon-agonon",
+        "title": "Άσχημο ΝΕΟ/Τραυματίστηκε ο Κούσουλος",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ashimo-neotraymatistike-o-koysoylos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τα... μαθηματικά του Αθανασίου",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/refinio/omonoia/ta-mathimatika-toy-athanasioy",
+        "title": "Παπασταύρου: \"Η Ομόνοια με την κοινωνική επιρροή που έχει στοχεύει να βοηθήσει τη νεολαία μας\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/papastayroy-i-omonoia-me-tin-koinoniki-epirroi-poy-ehei-stoheyei-na-boithisei-ti-neolaia-mas",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-14T10:01:32.303230+00:00"
+    "fetched_at": "2026-09-15T06:46:22.776544+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -56,32 +56,32 @@
     },
     "articles": [
       {
+        "title": "Haaland goal should not have stood but VAR made the right call with Sunderland penalty",
+        "url": "https://www.theguardian.com/football/2026/sep/14/var-referee-matt-donohue-erling-haaland-goal-manchester-derby",
+        "source": "The Guardian"
+      },
+      {
+        "title": "VARs who wrongly confirmed Haaland’s goal at Manchester United are stood down",
+        "url": "https://www.theguardian.com/football/2026/sep/14/vars-erling-haaland-goal-manchester-united-stood-down-wrongly-allowed",
+        "source": "The Guardian"
+      },
+      {
+        "title": "In Manchester, Premier League superiority is now separated by Haaland’s cutting edge",
+        "url": "https://www.theguardian.com/football/2026/sep/14/haalands-cutting-edge-separates-the-manchester-clubs",
+        "source": "The Guardian"
+      },
+      {
+        "title": "VAR controversy decides Manchester derby as City keep pace with Arsenal – Football Weekly",
+        "url": "https://www.theguardian.com/football/audio/2026/sep/14/football-weekly-podcast-manchester-derby-var-controversy-city-united-arsenal",
+        "source": "The Guardian"
+      },
+      {
         "title": "Premier League: 10 talking points from the weekend’s action",
         "url": "https://www.theguardian.com/football/2026/sep/14/premier-league-10-talking-points-from-the-weekends-action",
         "source": "The Guardian"
-      },
-      {
-        "title": "‘An error of judgement’: Pro Ref admits mistake in awarding Haaland’s derby winner",
-        "url": "https://www.theguardian.com/football/2026/sep/13/michael-carrick-var-erling-haaland-manchester-derby",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Enzo Fernández’s fortitude shows Maresca was right to crave City reunion",
-        "url": "https://www.theguardian.com/football/2026/sep/13/enzo-fernandez-enzo-maresca-manchester-city-reunion-united-derby",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United 0-1 Manchester City: Premier League – as it happened",
-        "url": "https://www.theguardian.com/football/live/2026/sep/13/manchester-united-v-manchester-city-premier-league-live",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Manchester City recover from Foden red card as Haaland wins derby at United",
-        "url": "https://www.theguardian.com/football/2026/sep/13/manchester-united-manchester-city-premier-league-match-report",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-14T10:01:33.468615+00:00"
+    "fetched_at": "2026-09-15T06:46:24.112841+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,14 +90,19 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Elche versus Real Madrid — 20:30 (Tuesday 15th September)",
+      "fixture": "Spanish La Liga: Elche versus Real Madrid — 20:30",
       "match": "Elche versus Real Madrid — 20:30",
       "competition": "Spanish La Liga",
-      "date": "Tuesday 15th September",
+      "date": "",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Mourinho's fantastic five",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/14/mourinho-s-fantastic-five.html",
+        "source": "Marca"
+      },
       {
         "title": "Endrick is still not in Mourinho's plans at Real Madrid and Roma are coming for him",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/endrick-is-still-not-in-mourinho-s-plans-at-real-madrid-and-roma-are-coming-for-him.html",
@@ -117,14 +122,9 @@
         "title": "Diomande raises the first suspicions: \"His technical precision is far too poor\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/diomande-raises-the-first-suspicions-his-technical-precision-is-far-too-poor.html",
         "source": "Marca"
-      },
-      {
-        "title": "Mbappé leads Real Madrid to victory with a two-goal performance",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/12/mbappe-leads-real-madrid-to-victory-with-two-goal-performance.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-14T10:01:34.183707+00:00"
+    "fetched_at": "2026-09-15T06:46:25.034860+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Madrid F1 circuit set for changes after criticism",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckwyzllzdq43o",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "How virtual safety car cost Norris win - and should F1 change rules?",
         "url": "https://www.bbc.com/sport/formula1/articles/cvgyjwxv7y3o",
@@ -161,13 +166,8 @@
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Norris' real opportunity after coming from nowhere with 'masterpiece' lap",
-        "url": "https://www.bbc.com/sport/formula1/articles/c5yeljnxyvdo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-14T10:01:35.542349+00:00"
+    "fetched_at": "2026-09-15T06:46:26.065341+00:00"
   }
 }
