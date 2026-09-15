@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <title>THE ORACLE SOVEREIGN — 15 Σεπτεμβρίου 2026</title>
+  <title>THE ORACLE SOVEREIGN — ☀️ Midday Pulse — 15 Σεπτεμβρίου 2026</title>
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>tailwind.config = { darkMode: 'class' };</script>
   <script>
@@ -68,33 +66,14 @@
   <div class="bg-[var(--paper-raised)] border-b border-[var(--rule)] text-xs py-1.5 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex flex-wrap items-center gap-3">
-        <span id="freshness" data-generated="2026-09-15T07:30:00+03:00"
-              class="inline-flex items-center px-2 py-0.5 rounded t-meta font-semibold"></span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded font-mono font-semibold text-[11px] bg-amber-500/10 text-amber-800 dark:text-amber-300">
+          ☀️ 13:30 · 15 Σεπτεμβρίου 2026
+        </span>
 
-        <script>
-        (function () {
-          const el = document.getElementById('freshness');
-          const gen = new Date(el.dataset.generated);
-          const paint = () => {
-            const mins = Math.round((Date.now() - gen) / 60000);
-            let txt, cls;
-            if (mins < 90) { txt = `● ΦΡΕΣΚΟ · πριν ${mins}′`; cls = 'bg-[var(--up)]/15 text-[var(--up)] border border-[var(--up)]/30'; }
-            else if (mins < 720) { txt = `◐ πριν ${Math.round(mins / 60)} ώρες`; cls = 'bg-[var(--accent)]/15 text-[var(--accent)] border border-[var(--accent)]/30'; }
-            else { txt = `○ ΑΡΧΕΙΟ · ${gen.toLocaleDateString('el-CY')}`; cls = 'bg-[var(--rule)]/50 text-[var(--ink-quiet)]'; }
-            el.textContent = txt;
-            el.className = 'inline-flex items-center px-2 py-0.5 rounded t-meta font-semibold ' + cls;
-          };
-          paint(); setInterval(paint, 60000);
-        })();
-        </script>
-        <span class="t-meta text-[var(--ink-quiet)]">15 Σεπτεμβρίου 2026</span>
-        <span class="hidden sm:inline text-[var(--ink-quiet)]">·</span>
-        <span class="hidden sm:inline t-meta text-[var(--ink-quiet)]">07:30 ώρα Κύπρου (EEST)</span>
-        
     <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
       <span class="text-[var(--ink-quiet)] uppercase text-[10px] tracking-wider hidden sm:inline mr-0.5">ΕΚΔΟΣΗ:</span>
-      <a href="briefings/2026-09-15.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">🌅 07:30 Πρωί</a>
-      <a href="briefings/2026-09-15-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">☀️ 13:30 Μεσημέρι</a>
+      <a href="briefings/2026-09-15.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌅 07:30 Πρωί</a>
+      <a href="briefings/2026-09-15-midday.html" class="px-2 py-0.5 rounded transition bg-[var(--accent)] text-white font-bold shadow-xs">☀️ 13:30 Μεσημέρι</a>
       <a href="briefings/2026-09-15-evening.html" class="px-2 py-0.5 rounded transition bg-[var(--paper)] text-[var(--ink-body)] border border-[var(--rule)] hover:border-[var(--accent)]">🌙 19:30 Απόγευμα</a>
       <button id="openWireDrawerBtnNav" class="px-2 py-0.5 rounded border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold hover:bg-red-500/20 transition flex items-center gap-1.5 cursor-pointer">
         <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span> ⚡ Live Wire
@@ -131,11 +110,9 @@
     </div>
   </header>
 
-  <!-- LIVE MARKET TICKER -->
-  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] t-meta ticker-wrap">
-    <div class="ticker-content space-x-8 font-mono">
-      <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.619,98</span> <span class="text-[var(--ink-quiet)] font-semibold">0,48%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">29.127,16</span> <span class="text-[var(--ink-quiet)] font-semibold">0,82%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$76.857,98</span> <span class="text-[var(--down)] font-semibold">-1,69%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,15</span> <span class="text-[var(--ink-quiet)] font-semibold">0,10%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,86</span> <span class="text-[var(--up)] font-semibold">+0,05%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,61</span> <span class="text-[var(--up)] font-semibold">+0,86%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$101,28</span> <span class="text-[var(--up)] font-semibold">+0,29%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">418,01</span> <span class="text-[var(--down)] font-semibold">-3,52%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">210,96</span> <span class="text-[var(--down)] font-semibold">-3,36%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">345,71</span> <span class="text-[var(--up)] font-semibold">+3,06%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">333,08</span> <span class="text-[var(--up)] font-semibold">+0,24%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">505,41</span> <span class="text-[var(--up)] font-semibold">+1,97%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">924,03</span> <span class="text-[var(--down)] font-semibold">-5,25%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">665,60</span> <span class="text-[var(--up)] font-semibold">+2,71%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.619,98</span> <span class="text-[var(--ink-quiet)] font-semibold">0,48%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">29.127,16</span> <span class="text-[var(--ink-quiet)] font-semibold">0,82%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$76.857,98</span> <span class="text-[var(--down)] font-semibold">-1,69%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,15</span> <span class="text-[var(--ink-quiet)] font-semibold">0,10%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,86</span> <span class="text-[var(--up)] font-semibold">+0,05%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,61</span> <span class="text-[var(--up)] font-semibold">+0,86%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$101,28</span> <span class="text-[var(--up)] font-semibold">+0,29%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">418,01</span> <span class="text-[var(--down)] font-semibold">-3,52%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">210,96</span> <span class="text-[var(--down)] font-semibold">-3,36%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">345,71</span> <span class="text-[var(--up)] font-semibold">+3,06%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">333,08</span> <span class="text-[var(--up)] font-semibold">+0,24%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">505,41</span> <span class="text-[var(--up)] font-semibold">+1,97%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">924,03</span> <span class="text-[var(--down)] font-semibold">-5,25%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">665,60</span> <span class="text-[var(--up)] font-semibold">+2,71%</span></span>
-    </div>
+  <!-- TICKER -->
+  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
+    <div class="ticker-content space-x-8 font-mono"><span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,52</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-2,14%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$107,56</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,78%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 Futures:</span> <span class="text-[var(--ink-body)]">7.619,98</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,48%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 Futures:</span> <span class="text-[var(--ink-body)]">29.127,16</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,82%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$77.380,01</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,02%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,15</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,22%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,86</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$418,01</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-3,52%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$210,96</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-3,36%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$345,71</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+3,06%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$333,08</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,24%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$505,41</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,97%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$924,03</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-5,25%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$665,60</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+2,71%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,52</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-2,14%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$107,56</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,78%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 Futures:</span> <span class="text-[var(--ink-body)]">7.619,98</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,48%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 Futures:</span> <span class="text-[var(--ink-body)]">29.127,16</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,82%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$77.380,01</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,02%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,15</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,22%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,86</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,08%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$418,01</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-3,52%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$210,96</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-3,36%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$345,71</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+3,06%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$333,08</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,24%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$505,41</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+1,97%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$924,03</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-5,25%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$665,60</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+2,71%<svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span></span></div>
   </div>
 
   
@@ -167,7 +144,7 @@
         <h2 class="t-section flex items-center gap-2">
           <span>⚡</span> <span>Μεσημβρινό Breaking & Deal Wire</span>
         </h2>
-        <span class="t-meta ml-auto uppercase">ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ</span>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">CURATED DIGEST</span>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         
@@ -178,32 +155,137 @@
       </div>
     </section>
 
-      <div class="card--hero overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
-          
-          <!-- Image Column -->
-          <div class="lg:col-span-6 relative min-h-[340px] bg-[var(--paper)]">
-            <img src="https://cyprus-mail.com/wp-content/uploads/2026/09/storozhevik-fregat-admiral-essen-chernoe-more-vmf.jpg" 
-                 alt="Russian frigate fires flares towards Danish military helicopter, Denmark says" 
-                 class="w-full h-full object-cover object-center"
-                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80';">
-            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-4 text-white">
-              <span class="bg-[var(--accent)] font-semibold px-2 py-0.5 rounded t-meta uppercase tracking-wider text-white">ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ</span>
-              <p class="mt-1 font-medium leading-snug t-meta">Russian frigate fires flares towards Danish military helicopter, Denmark says</p>
+    <!-- 2. MIDDAY MARKET PULSE -->
+    <section id="market-pulse" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>📊</span> <span>Midday Market Pulse (ΧΑΚ · ATHEX · Ευρώπη & Wall Street)</span>
+        </h2>
+        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">LIVE APPRAISAL</span>
+      </div>
+      
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <!-- Macro Indices & FX -->
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-[var(--rule)]">
+            <div class="p-3.5 bg-[var(--paper)] border-b border-[var(--rule)] flex items-center justify-between">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+                <span>🏛️</span> <span>Κύριοι Δείκτες, Συνάλλαγμα & Crypto</span>
+              </h3>
+              <span class="text-[10px] font-mono text-[var(--accent)] font-bold">MACRO & FX</span>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-[var(--paper)] text-[10px] uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
+                  <tr>
+                    <th class="py-2.5 px-3.5">Αγορά / Τίτλος</th>
+                    <th class="py-2.5 px-3.5 font-mono">Τιμή</th>
+                    <th class="py-2.5 px-3.5 font-mono">Μεταβολή</th>
+                    <th class="py-2.5 px-3.5">Σχόλιο</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[var(--rule)] font-sans">
+                  
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Bank of Cyprus (BOCH)</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">€10,52</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-2,14%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Σταθερή ζήτηση στο ΧΑΚ/ΧΑ</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Brent Crude</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$107,56</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
+              <span>+1,78%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Εδραίωση πάνω από τα $100/βαρέλι</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>S&P 500 Futures</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">7.619,98</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-0,48%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Εν αναμονή έναρξης Wall Street</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Nasdaq 100 Futures</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">29.127,16</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-0,82%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Συσσώρευση στα tech futures</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>Bitcoin (BTC/USD)</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$77.380,01</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-1,02%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Σταθεροποίηση στη ζώνη $77k</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>EUR/USD</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">1,15</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
+              <span>-0,22%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Στενό εύρος διακύμανσης</td>
+        </tr>
+        
+        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
+          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
+            <span>EUR/GBP</span>
+          </td>
+          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">0,86</td>
+          <td class="py-3 px-3.5 font-mono">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
+              <span>+0,08%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
+            </span>
+          </td>
+          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Σταθερότητα στις ευρωπαϊκές ισοτιμίες</td>
+        </tr>
+        
+                </tbody>
+              </table>
             </div>
           </div>
 
-          <!-- Text Column -->
-          <div class="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2 t-meta uppercase tracking-wider mb-2 text-[var(--accent)] font-semibold">
-                <span>Κορυφαία Εξέλιξη</span>
-                <span>·</span>
-                <span class="text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-              </div>
-
-              <h3 class="t-lead mb-4">
-                Russian frigate fires flares towards Danish military helicopter, Denmark says
+          <!-- Tech Stocks Watchlist -->
+          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-indigo-500/30">
+            <div class="p-3.5 bg-gradient-to-r from-[var(--paper)] to-indigo-950/10 border-b border-[var(--rule)] flex items-center justify-between">
+              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+                <span>💻</span> <span>Μετοχές Τεχνολογίας (Midday Tech Watch)</span>
               </h3>
               <span class="text-[10px] font-mono text-indigo-500 font-bold">TECH RADAR</span>
             </div>
@@ -318,775 +400,60 @@
         
     </section>
 
-              <p class="t-body lead-body mb-4 leading-relaxed">
-                A Russian frigate fired two flares towards a Danish military helicopter in international waters off the coast of Denmark, narrowly missing the aircraft on Monday, the Nordic NATO m
-              </p>
-
-              
-            </div>
-
-            <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--rule)] mt-4">
-              <div class="flex items-center gap-2 t-meta">
-                <span class="text-[var(--ink-quiet)]">Πηγές:</span>
-                <a href="https://cyprus-mail.com/2026/09/15/russian-frigate-fires-flares-towards-danish-military-helicopter-denmark-says" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">Ενημέρωση</a>
-              </div>
-              <span class="t-meta text-[var(--ink-quiet)] font-mono">15 Σεπτεμβρίου 2026</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 🇨🇾 2. ΚΥΠΡΟΣ (NEWS LEAD) ==================== -->
-    <section id="cyprus" class="scroll-mt-24">
-      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🇨🇾</span> <span>Κύπρος</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <article class="card md:col-span-2 overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-64 sm:h-72 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://cyprus-mail.com/wp-content/uploads/2026/07/LIMASSOL-1.jpg" alt="1. Limassol municipality takes square redevelopment plans to the public [Επικαιρότητα]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΚΥΠΡΟΣ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-lead mb-3">
-                1. Limassol municipality takes square redevelopment plans to the public [Επικαιρότητα]
-              </h3>
-              <p class="t-body mb-4 leading-relaxed">
-                Limassol municipality returned to residents with new proposals for the redevelopment of public squares across the city. At a meeting on Monday planners presented revised designs fo
-              </p>
-              
-    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
-      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
-        <span class="flex items-center gap-2">
-          <span class="text-sm leading-none">💡</span>
-          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
-        </span>
-        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
-      </summary>
-      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
-        
-        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
-          Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.
-        </div>
-        
-        
-      </div>
-    </details>
     
-            </div>
+        <!-- ==================== ⚽ 3. ΑΘΛΗΤΙΚΑ ==================== -->
+        <section id="sports" class="scroll-mt-24">
+          <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+            <h2 class="t-section flex items-center gap-2">
+              <span>⚽</span> <span>Μεσημβρινός Αθλητισμός & Πρόγραμμα</span>
+            </h2>
+            <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">SPORTS WIRE</span>
           </div>
-          <div class="p-5 sm:p-6 pt-0">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://cyprus-mail.com/2026/09/15/limassol-municipality-takes-square-redevelopment-plans-to-the-public" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Cyprus Mail
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card  overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://cyprus-mail.com/wp-content/uploads/2019/05/imddddagew-16.jpg" alt="2. Anti-corruption authority insists Angelides was included in black van probe [Επικαιρότητα]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΚΥΠΡΟΣ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
+            <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-emerald-700/30 dark:border-emerald-600/40">
+              <div>
+                <div class="bg-gradient-to-r from-emerald-900 to-green-950 p-4 text-white flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-2xl">☘️</span>
+                    <h3 class="font-masthead font-bold text-sm tracking-wide text-white">ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ</h3>
+                  </div>
+                  <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                    CYPRUS LEAGUE & EUROPE
+                  </span>
+                </div>
+                <div class="p-5 space-y-3">
+                  
+            <div class="flex items-start gap-2 text-xs">
+              <span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
+              <span class="text-[var(--ink-body)]">Νίκη 3-1 στην πρεμιέρα</span>
             </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                2. Anti-corruption authority insists Angelides was included in black van probe [Επικαιρότητα]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                The anti-corruption authority said on Tuesday that deputy attorney-general Savvas Angelides had always been within the scope of its expanded investigation into the “black van” surv
-              </p>
-              
-    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
-      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
-        <span class="flex items-center gap-2">
-          <span class="text-sm leading-none">💡</span>
-          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
-        </span>
-        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
-      </summary>
-      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
-        
-        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
-          Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.
-        </div>
-        
-        
-      </div>
-    </details>
-    
+                  
+            <div class="flex items-start gap-2 text-xs">
+              <span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
+              <span class="text-[var(--ink-body)] font-medium">20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026)</span>
             </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://cyprus-mail.com/2026/09/15/anti-corruption-authority-insists-angelides-was-included-in-black-van-probe" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Cyprus Mail
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card  overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://cyprus-mail.com/wp-content/uploads/2026/09/payabl.-BEONIX-cover.png" alt="3. payabl. renews BEONIX Festival payments partnership for second year, extending support across ETKO [Επικαιρότητα]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΚΥΠΡΟΣ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
+                  
+            <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
+              <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
+              Θέλει να μπει με το... δεξί
             </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                3. payabl. renews BEONIX Festival payments partnership for second year, extending support across ETKO [Επικαιρότητα]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                15th September, Limassol – payabl., a European financial technology provider, has renewed its partnership with Kaspinas Group, the events and venue management company behind BEONIX
-              </p>
-              
-    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
-      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
-        <span class="flex items-center gap-2">
-          <span class="text-sm leading-none">💡</span>
-          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
-        </span>
-        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
-      </summary>
-      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
-        
-        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
-          Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.
-        </div>
-        
-        
-      </div>
-    </details>
-    
+                  
+            <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
+              <span>Επίσημη Πηγή:</span>
+              <a href="https://www.cfa.com.cy/Gr/news/53637" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">ΚΟΠ / CFA</a>
             </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://cyprus-mail.com/2026/09/15/payabl-renews-beonix-festival-payments-partnership-for-second-year-extending-support-across-etko" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Cyprus Mail
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card  overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://cyprus-mail.com/wp-content/uploads/2025/07/comment-alper-Deputy-attorney-general-Savvas-Angelides.jpg" alt="4. Three complaints against deputy AG rejected in secret [Επικαιρότητα]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΚΥΠΡΟΣ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                4. Three complaints against deputy AG rejected in secret [Επικαιρότητα]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                Three separate complaints against deputy attorney-general Savvas Angelides were rejected by the anti-corruption authority without any public announcement. According to news outlet
-              </p>
-              
-    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
-      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
-        <span class="flex items-center gap-2">
-          <span class="text-sm leading-none">💡</span>
-          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
-        </span>
-        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
-      </summary>
-      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
-        
-        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
-          Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.
-        </div>
-        
-        
-      </div>
-    </details>
-    
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://cyprus-mail.com/2026/09/15/three-complaints-against-deputy-ag-rejected-in-secret" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Cyprus Mail
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card  overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://cyprus-mail.com/wp-content/uploads/2026/09/Depositphotos_606316976_L.jpg" alt="5. Suspected sabotage disrupts Dutch train services [Ο Φάκελός μου]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΚΥΠΡΟΣ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                5. Suspected sabotage disrupts Dutch train services [Ο Φάκελός μου]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                Train services were disrupted across the central and northern Netherlands during Tuesday’s morning rush hour by pipes deliberately attached torails, the infrastructure operator Pro
-              </p>
-              
-    <details class="why-expandable group mt-3.5 rounded-lg border border-[var(--rule)] bg-[var(--paper)] overflow-hidden transition-all duration-200">
-      <summary class="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between text-xs font-bold text-[var(--accent)] hover:bg-[var(--paper-raised)] transition">
-        <span class="flex items-center gap-2">
-          <span class="text-sm leading-none">💡</span>
-          <span class="uppercase tracking-wider text-[11px]">Γιατί με αφορά</span>
-        </span>
-        <span class="expand-icon text-[10px] text-[var(--ink-quiet)] transition-transform duration-200">▼</span>
-      </summary>
-      <div class="p-3.5 pt-2.5 border-t border-[var(--rule)] bg-[var(--paper-raised)] space-y-2">
-        
-        <div class="text-xs text-[var(--ink)] leading-relaxed font-medium">
-          Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.
-        </div>
-        
-        
-      </div>
-    </details>
-    
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://cyprus-mail.com/2026/09/15/suspected-sabotage-disrupts-dutch-train-services" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Cyprus Mail
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-      </div>
-    </section>
-
-    <!-- ==================== 🌍 3. ΔΙΕΘΝΗ ==================== -->
-    <section id="world" class="scroll-mt-24">
-      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🌍</span> <span>Διεθνή</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <article class="card md:col-span-2 overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-64 sm:h-72 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/38af/live/0a4981c0-b0fd-11f1-b1d1-571ed4d7ff2c.jpg" alt="1. Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards [Διεθνή]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΔΙΕΘΝΗ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-lead mb-3">
-                1. Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards [Διεθνή]
-              </h3>
-              <p class="t-body mb-4 leading-relaxed">
-                The US president's comments come after Anthropic co-founder Jack Clark told the BBC an AI "kill switch" may need to be mandatory.
-              </p>
-              
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://www.bbc.co.uk/news/articles/cw980n0nd0qjo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Διεθνή
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9cc0/live/aa535ba0-b0a8-11f1-bc1f-3f186ca4140c.jpg" alt="2. AI regulation faces political deadlock as calls grow for Congress to act [Διεθνή]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΔΙΕΘΝΗ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                2. AI regulation faces political deadlock as calls grow for Congress to act [Διεθνή]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                With Trump opposed and Congress divided, new safety legislation on AI is unlikely to pass anytime soon despite mounting pressure.
-              </p>
-              
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://www.bbc.co.uk/news/articles/ck20989806e9o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Διεθνή
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/663f/live/010ff400-b0e8-11f1-ae0d-6f5ba3aa85ac.jpg" alt="3. Denmark says Russian warship fired flares at military helicopter [Διεθνή]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΔΙΕΘΝΗ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                3. Denmark says Russian warship fired flares at military helicopter [Διεθνή]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                The Danish prime minister has accused Russia of "reckless" behaviour, while the Kremlin is yet to comment.
-              </p>
-              
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://www.bbc.co.uk/news/articles/cwn8mjl31p5yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Διεθνή
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/4e1b/live/15051b70-b0ed-11f1-a540-61c3f7fc4e6c.jpg" alt="4. Welsh actor Matthew Rhys makes Emmy Awards history with double win [Διεθνή]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΔΙΕΘΝΗ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                4. Welsh actor Matthew Rhys makes Emmy Awards history with double win [Διεθνή]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                He becomes the first person to win two lead acting prizes in one night at the prestigious TV ceremony.
-              </p>
-              
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://www.bbc.co.uk/news/articles/cqlykdx48xrpo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Διεθνή
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between">
-          <div>
-            <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
-              <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/eda4/live/dbe5e120-b0de-11f1-b1d1-571ed4d7ff2c.jpg" alt="5. Suspected sabotage causes major Netherlands rail disruption [Διεθνή]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80';">
-              <span class="absolute top-2.5 left-2.5 bg-[var(--ink)]/85 text-white t-meta px-2 py-0.5 rounded shadow-xs">ΔΙΕΘΝΗ</span>
-              <span class="absolute top-2.5 right-2.5 bg-[var(--up)] text-white t-meta px-2 py-0.5 rounded shadow-xs">Επιβεβαιωμένο</span>
-            </div>
-            <div class="p-5 sm:p-6">
-              <h3 class="t-title mb-2.5">
-                5. Suspected sabotage causes major Netherlands rail disruption [Διεθνή]
-              </h3>
-              <p class="t-body-sm mb-3 leading-relaxed">
-                Trains were cancelled or delayed on Tuesday after objects were found on tracks at multiple locations.
-              </p>
-              
-            </div>
-          </div>
-          <div class="p-5 sm:p-6 pt-0">
-            
-        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
-          <a href="https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Διεθνή
-          </a>
-          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
-        </div>
-          </div>
-        </article>
-        
-      </div>
-    </section>
-
-    <!-- ==================== ⚽ 4. ΑΘΛΗΤΙΚΑ & FORMULA 1 ==================== -->
-    <section id="sports" class="scroll-mt-24 my-8 sm:my-12">
-      <div class="flex items-center gap-2 mb-6 pb-3 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🏆</span> <span>Αθλητικός Παλμός & Formula 1</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8">
-        
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-emerald-800/40 dark:border-emerald-700/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-emerald-900 via-green-900 to-emerald-950 p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">☘️</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ</h3>
                 </div>
               </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
+              <div class="p-4 pt-0">
+                <a href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
+                  <span>▶</span> <span>Highlights Ομόνοιας στο YouTube</span>
+                </a>
               </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Highlights Ομόνοιας στο YouTube
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-            <div class="p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] mb-6 shadow-xs">
-              <div class="text-xs font-mono text-[var(--ink-quiet)] uppercase tracking-wider mb-2 flex items-center gap-1.5 font-bold">
-                📅 ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ
-              </div>
-              <div class="text-sm sm:text-base font-semibold text-[var(--ink)] leading-relaxed">
-                20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026) (<a href="https://www.cfa.com.cy/Gr/news/53637" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">Πρόγραμμα ΚΟΠ</a>)
-              </div>
-            </div>
-              
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
+            </article>
             
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.cfa.com.cy/Gr/news/53637" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            ΚΟΠ / CFA
-          </a>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-red-900/40 dark:border-red-800/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-red-950 via-zinc-950 to-black p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">🔴</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">MANCHESTER UNITED</h3>
-                </div>
-                <span class="t-meta uppercase tracking-wider px-3 py-1 rounded-full text-xs bg-red-950/70 text-red-200 border border-red-500/30">
-                  PREMIER LEAGUE
-                </span>
-              </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Manchester+United+highlights" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
-              </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Highlights Manchester United στο YouTube
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-            <div class="p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] mb-6 shadow-xs">
-              <div class="text-xs font-mono text-[var(--ink-quiet)] uppercase tracking-wider mb-2 flex items-center gap-1.5 font-bold">
-                📅 ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ
-              </div>
-              <div class="text-sm sm:text-base font-semibold text-[var(--ink)] leading-relaxed">
-                Manchester United versus Brighton & Hove Albion — 20:00 (<a href="https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">BBC Sport</a>)
-              </div>
-            </div>
-              
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
-            
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            BBC Sport
-          </a>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-blue-900/40 dark:border-blue-800/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-slate-950 via-blue-950 to-indigo-950 p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">👑</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">REAL MADRID</h3>
-                </div>
-                <span class="t-meta uppercase tracking-wider px-3 py-1 rounded-full text-xs bg-blue-950/70 text-blue-200 border border-blue-500/30">
-                  LA LIGA & CHAMPIONS LEAGUE
-                </span>
-              </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Real+Madrid+highlights" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
-              </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Highlights Real Madrid στο YouTube
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-            <div class="p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] mb-6 shadow-xs">
-              <div class="text-xs font-mono text-[var(--ink-quiet)] uppercase tracking-wider mb-2 flex items-center gap-1.5 font-bold">
-                📅 ΕΠΟΜΕΝΟΣ ΑΓΩΝΑΣ
-              </div>
-              <div class="text-sm sm:text-base font-semibold text-[var(--ink)] leading-relaxed">
-                Spanish La Liga: Elche versus Real Madrid — 20:30 (<a href="https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">BBC Sport</a>)
-              </div>
-            </div>
-              
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
-            
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            BBC Sport
-          </a>
-        </div>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-sm border-red-900/40 dark:border-red-800/50">
-          <div>
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-neutral-950 via-zinc-900 to-red-950 p-5 sm:p-6 text-white">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="text-3xl sm:text-4xl">🏎️</span>
-                  <h3 class="font-masthead font-bold text-base sm:text-lg tracking-wide text-white">FORMULA 1</h3>
-                </div>
-                <span class="t-meta uppercase tracking-wider px-3 py-1 rounded-full text-xs bg-red-950/70 text-red-200 border border-red-500/30">
-                  FIA WORLD CHAMPIONSHIP
-                </span>
-              </div>
-            </div>
-
-            <!-- Content with generous spacing -->
-            <div class="p-6 sm:p-7 lg:p-8">
-              
-              
-        <a href="https://www.youtube.com/results?search_query=Formula+1+highlights" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-red-600/10 via-red-600/5 to-transparent hover:from-red-600/20 hover:to-red-600/15 border border-red-500/30 hover:border-red-500/50 transition-all duration-200 mb-6 shadow-xs">
-          <div class="flex items-center gap-3.5 min-w-0 flex-1">
-            <span class="w-10 h-10 flex-shrink-0 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-110 transition-transform">
-              ▶
-            </span>
-            <div class="min-w-0 flex-1">
-              <div class="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-bold flex items-center gap-1.5">
-                <span>🎬 YOUTUBE HIGHLIGHTS</span>
-                <span class="text-[9px] px-1.5 py-0.2 rounded bg-red-600 text-white font-semibold">HD</span>
-              </div>
-              <div class="text-sm font-semibold text-[var(--ink)] group-hover:text-red-600 dark:group-hover:text-red-400 mt-1 break-words">
-                Highlights Formula 1 στο YouTube
-              </div>
-            </div>
-          </div>
-          <span class="text-base text-red-600 dark:text-red-400 font-bold group-hover:translate-x-1.5 transition-transform ml-3 flex-shrink-0">↗</span>
-        </a>
-              
-            <div class="p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] mb-6 shadow-xs">
-              <div class="text-xs font-mono text-[var(--ink-quiet)] uppercase tracking-wider mb-2 flex items-center gap-1.5 font-bold">
-                🏁 ΕΠΟΜΕΝΟ GRAND PRIX
-              </div>
-              <div class="text-sm sm:text-base font-semibold text-[var(--ink)] leading-relaxed">
-                Spanish Grand Prix 2026 (Gran Premio de España) — Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου (<a href="https://www.formula1.com/en/racing/2026/spain.html" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">Formula1.com</a>)
-              </div>
-            </div>
-              
-            <div class="mb-6">
-              <div class="text-xs font-mono text-[var(--ink-quiet)] uppercase tracking-wider mb-3 font-bold flex items-center gap-2">
-                <span>📋</span> <span>ΑΓΩΝΙΣΤΙΚΑ ΝΕΑ & ΡΕΠΟΡΤΑΖ</span>
-              </div>
-              <ul class="text-sm text-[var(--ink-body)] space-y-3 list-disc list-inside leading-relaxed">
-                
-              </ul>
-            </div>
-              
-            </div>
-          </div>
-
-          <div class="p-6 sm:p-7 lg:p-8 pt-0">
-            
-        <div class="pt-4 border-t border-[var(--rule)] mt-auto flex items-center justify-between t-meta">
-          <span class="text-[var(--ink-quiet)] font-mono flex items-center gap-1.5">
-            <span>🌐</span> <span>Επίσημο Κανάλι:</span>
-          </span>
-          <a href="https://www.formula1.com/en/racing/2026/spain.html" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
-            Formula1.com
-          </a>
-        </div>
-          </div>
-        </article>
-        
-      </div>
-    </section>
-
-    <!-- ==================== 💰 5. ΑΓΟΡΕΣ: TOP MOVERS ==================== -->
-    <section id="markets" class="scroll-mt-24">
-      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>💰</span> <span>Αγορές & Top Movers</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        
-      </div>
-    </section>
-
-    <!-- ==================== 🏦 5. ΕΠΙΤΟΚΙΑ, ΥΠΟΛΟΓΙΣΤΗΣ ΔΟΣΗΣ & DASHBOARD ==================== -->
-    <section id="rates-and-tools" class="scroll-mt-24 space-y-8 bg-[var(--paper-raised)] p-6 rounded border border-[var(--rule)]">
-      
-      <!-- Rates Header -->
-      <div class="flex items-center gap-2 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>🏦</span> <span>Χρηματοοικονομικά Εργαλεία & Επιτόκια</span>
-        </h2>
-      </div>
-
-      <!-- Euribor & Mortgage Calculator Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
-        <!-- Euribor Table -->
-        <div class="lg:col-span-6 card p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-3 border-b border-[var(--rule)] pb-2">
-              <h3 class="t-title font-bold text-[var(--ink)]">Διατραπεζικά Επιτόκια Euribor</h3>
-              <span class="t-meta font-mono text-[var(--ink-quiet)]">euribor-rates.eu</span>
-            </div>
-            <table class="w-full text-left t-meta mb-4">
-              <thead>
-                <tr class="border-b border-[var(--rule)] text-[var(--ink-quiet)] font-mono uppercase t-meta">
-                  <th class="pb-2 font-medium">Περίοδος</th>
-                  <th class="pb-2 font-medium text-center">1M</th>
-                  <th class="pb-2 font-medium text-center">3M</th>
-                  <th class="pb-2 font-medium text-center">6M</th>
-                  <th class="pb-2 font-medium text-center">12M</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-[var(--rule)] font-mono t-num">
-                
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans">Τρέχον</td>
-          <td class="py-2.5 text-center text-[var(--ink-body)]">2,394%</td>
-          <td class="py-2.5 text-center font-bold text-[var(--accent)]">2,664%</td>
-          <td class="py-2.5 text-center text-[var(--ink-body)]">2,936%</td>
-          <td class="py-2.5 text-center text-[var(--ink-body)]">3,312%</td>
-        </tr>
-        
-              </tbody>
-            </table>
-            <div class="t-meta text-[var(--ink-body)] space-y-1 bg-[var(--paper)] p-3 rounded border border-[var(--rule)]">
-              <div>• <strong class="text-[var(--ink)]">Επιτόκιο ΕΚΤ (deposit facility):</strong> — (Επόμενη συνεδρίαση: —)</div>
-              <div>• <strong class="text-[var(--ink)]">Μέσο επιτόκιο νέων στεγαστικών Κύπρου:</strong> — (στοιχεία ΚΤΚ)</div>
-              <div>• <strong class="text-[var(--ink)]">Ενδεικτική δόση έκδοσης:</strong> — (—)</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive Mortgage Calculator -->
-        <div class="lg:col-span-6 card p-5 flex flex-col justify-between no-print">
-          <div>
-            <div class="flex items-center justify-between mb-3 border-b border-[var(--rule)] pb-2">
-              <h3 class="t-title font-bold text-[var(--ink)]">Υπολογιστής Στεγαστικής Δόσης</h3>
-              <span class="t-meta font-mono text-[var(--accent)] font-bold">ΔΙΑΔΡΑΣΤΙΚΟ</span>
-            </div>
-            
-            <div class="space-y-4 t-meta">
+            <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-700/30 dark:border-red-600/40">
               <div>
                 <div class="bg-gradient-to-r from-red-900 to-stone-950 p-4 text-white flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
@@ -1228,188 +595,37 @@
           <div class="card p-5 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-amber-500/5 border border-amber-500/20 rounded-2xl shadow-xs">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>📊</span> <span>S&P 500 (SPX)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">7.619,98</td>
-          <td class="py-2.5 text-[var(--ink-quiet)] font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">⏺️ 0,48% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--ink-quiet)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,6 10,6 19,6 28,6" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>Nasdaq 100 (NDQ)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">29.127,16</td>
-          <td class="py-2.5 text-[var(--ink-quiet)] font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">⏺️ 0,82% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--ink-quiet)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,6 10,6 19,6 28,6" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>₿</span> <span>Bitcoin (BTC/USD)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">$76.857,98</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📉 -1,69% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>💶</span> <span>EUR/USD</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">1,15</td>
-          <td class="py-2.5 text-[var(--ink-quiet)] font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">⏺️ 0,10% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--ink-quiet)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,6 10,6 19,6 28,6" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>EUR/GBP</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">0,86</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📈 +0,05% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>Bank of Cyprus (BOCH)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">€10,61</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📈 +0,86% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🛢️</span> <span>Brent Crude</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">$101,28</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📈 +0,29% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>TSMC (TSM)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">418,01</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📉 -3,52% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>NVIDIA (NVDA)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">210,96</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📉 -3,36% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>Alphabet (GOOG)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">345,71</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📈 +3,06% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>Apple (AAPL)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">333,08</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📈 +0,24% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>Microsoft (MSFT)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">505,41</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📈 +1,97% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>Micron (MU)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">924,03</td>
-          <td class="py-2.5 text-[var(--down)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📉 -5,25% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-
-        <tr>
-          <td class="py-2.5 font-semibold text-[var(--ink)] font-sans flex items-center gap-2">
-            <span>🔹</span> <span>Meta (META)</span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-body)] font-mono">665,60</td>
-          <td class="py-2.5 text-[var(--up)] font-bold font-mono whitespace-nowrap">
-            <span class="inline-flex items-center gap-1">📈 +2,71% <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg></span>
-          </td>
-          <td class="py-2.5 text-[var(--ink-quiet)] t-meta">15/09/2026</td>
-        </tr>
-        
-            </tbody>
-          </table>
-        </div>
-
-        <div class="lg:col-span-4 flex flex-col justify-between gap-4">
-          <div class="card p-6 bg-[var(--paper)] border border-[var(--rule)] flex-1 flex flex-col justify-center">
-            <span class="t-meta uppercase tracking-widest text-[var(--accent)] font-bold mb-1">
-              Ο Αριθμός της Ημέρας
-            </span>
-            <div class="font-masthead text-4xl sm:text-5xl font-black text-[var(--ink)] my-2">
-              —
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                  <span class="text-xl flex-shrink-0 mt-0.5">🌡️</span>
+                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                    <span class="font-bold text-[var(--ink)]">Θερμοκρασία::</span> 31°C (Μέγιστη ημέρας)
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                  <span class="text-xl flex-shrink-0 mt-0.5">💧</span>
+                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                    <span class="font-bold text-[var(--ink)]">Υγρασία::</span> 50%
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                  <span class="text-xl flex-shrink-0 mt-0.5">💨</span>
+                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                    <span class="font-bold text-[var(--ink)]">Άνεμος::</span> 17 km/h (Νοτιοδυτικός)
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 dark:bg-amber-950/30">
+                  <span class="text-xl flex-shrink-0 mt-0.5">⚠️</span>
+                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                    <span class="font-bold text-[var(--ink)]">Προειδοποιήσεις::</span> Δείκτης UV: 7 (Υψηλός — συνιστάται αποφυγή παρατεταμένης έκθεσης)
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
+                  <span class="text-xl flex-shrink-0 mt-0.5">☀️</span>
+                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+                    <span class="font-bold text-[var(--ink)]">Πρόγνωση υπόλοιπης ημέρας::</span> Γενικά αίθριος καιρός με τοπικές θαλάσσιες αύρες στην παραλιακή ζώνη.
+                  </div>
+                </div>
             </div>
-            <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">
-              
-            </p>
           </div>
         </section>
         
@@ -1476,19 +692,15 @@
           </div>
         </li>
         
-            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] transition-all shadow-2xs">
-              <div class="font-bold text-sm sm:text-base text-[var(--ink)] mb-2 flex items-center gap-2">
-                <span>🎯</span> <span>Ακίνητα & Ενοίκια Λεμεσού:</span>
-              </div>
-              <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">Παρακολούθηση τιμών και αδειοδοτήσεων στο εβδομαδιαίο Real Estate Radar.</p>
-            </div>
 
-            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] transition-all shadow-2xs">
-              <div class="font-bold text-sm sm:text-base text-[var(--ink)] mb-2 flex items-center gap-2">
-                <span>🎯</span> <span>Επιτόκια & Δάνεια:</span>
-              </div>
-              <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">Εξέλιξη Euribor και συνεδριάσεων ΕΚΤ.</p>
-            </div>
+        <li class="flex items-start gap-3 p-3 rounded-lg bg-[var(--paper-raised)] border border-[var(--rule)]">
+          <span class="text-base flex-shrink-0">🎯</span>
+          <div class="text-xs text-[var(--ink-body)] leading-relaxed">
+            <strong class="font-bold text-[var(--ink)]">18:00 ώρα Κύπρου:</strong> Εταιρικές ανακοινώσεις, διεθνείς ενημερώσεις και απογευματινή προετοιμασία.
+          </div>
+        </li>
+        
+        </ul>
       </div>
     </section>
 
@@ -1499,191 +711,11 @@
         <h3 class="font-editorial text-lg font-bold text-[var(--ink)]">Πρωινό Broadsheet & Απογευματινή Σύνοψη</h3>
         <p class="text-xs text-[var(--ink-body)]">Συνεχής κάλυψη καθ' όλη τη διάρκεια της ημέρας με πλήρη ανάλυση, επιτόκια και closing bell.</p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8">
-        <div class="lg:col-span-7 card p-5 sm:p-6 shadow-xs">
-          <div class="flex items-center justify-between mb-4 border-b border-[var(--rule)] pb-2.5">
-            <h3 class="t-title font-bold text-[var(--ink)] flex items-center gap-2">
-              <span>📡</span> <span>Ζωντανή Πρόγνωση Πόλεων (Open-Meteo)</span>
-            </h3>
-            <span class="t-meta font-mono text-[var(--up)] font-bold flex items-center gap-1">● LIVE API</span>
-          </div>
-          <div id="wx-live" class="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 text-center">
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🌊</span> <span>Λεμεσός</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">☀️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">35°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Αίθριος</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🏛️</span> <span>Λευκωσία</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">☀️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">38°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Θερμός</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>✈️</span> <span>Λάρνακα</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">☀️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">34°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Αίθριος</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🪨</span> <span>Πάφος</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">🌤️</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">32°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Αίθριος</div>
-            </div>
-            <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition col-span-2 sm:col-span-1">
-              <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
-                <span>🌲</span> <span>Τρόοδος</span>
-              </div>
-              <div class="text-3xl sm:text-4xl my-2">⛅</div>
-              <div class="text-2xl font-black text-[var(--accent)] t-num">26°C</div>
-              <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">Ήπιος</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-5 card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4 border-b border-[var(--rule)] pb-2.5">
-              <h3 class="t-title font-bold text-[var(--ink)] flex items-center gap-2">
-                <span>📋</span> <span>Ανάλυση & Προειδοποιήσεις</span>
-              </h3>
-              <span class="t-meta font-mono text-[var(--ink-quiet)]">KITASWEATHER</span>
-            </div>
-            <div class="space-y-2.5">
-              
-            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
-              <span class="text-xl flex-shrink-0 mt-0.5">🌡️</span>
-              <div class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed">
-                <span class="font-bold text-[var(--ink)]">Θερμοκρασία::</span> 31°C (Μέγιστη) / 24°C (Ελάχιστη)
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
-              <span class="text-xl flex-shrink-0 mt-0.5">💧</span>
-              <div class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed">
-                <span class="font-bold text-[var(--ink)]">Υγρασία::</span> 55%
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
-              <span class="text-xl flex-shrink-0 mt-0.5">💨</span>
-              <div class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed">
-                <span class="font-bold text-[var(--ink)]">Άνεμος::</span> 21 km/h
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
-              <span class="text-xl flex-shrink-0 mt-0.5">☀️</span>
-              <div class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed">
-                <span class="font-bold text-[var(--ink)]">Πρόγνωση υπόλοιπης ημέρας::</span> Γενικά αίθριος καιρός.
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 dark:bg-amber-950/30 shadow-2xs">
-              <span class="text-xl flex-shrink-0 mt-0.5">⚠️</span>
-              <div class="text-xs sm:text-sm text-[var(--ink-body)] leading-relaxed">
-                <span class="font-bold text-[var(--ink)]">Προειδοποιήσεις::</span> Δείκτης UV: 6
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
+      <div class="flex items-center gap-3">
+        <a href="briefings/2026-09-15.html" class="px-3 py-2 rounded-lg bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] text-xs font-bold">Πρωινό 07:30</a>
+        <a href="briefings/2026-09-15-evening.html" class="px-3 py-2 rounded-lg bg-[var(--accent)] text-white text-xs font-bold hover:opacity-90">Απόγευμα 19:30 ➔</a>
       </div>
-    </section>
-
-    <!-- ==================== 🗂️ 9 & 10. ΕΞΕΛΙΞΕΙΣ & ΠΡΟΘΕΣΜΙΕΣ ==================== -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8 my-8 sm:my-10">
-      <section id="developments" class="card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
-        <div>
-          <h3 class="t-section mb-4 border-b border-[var(--rule)] pb-2.5 flex items-center gap-2">
-            <span>🗂️</span> <span>Εξελίξεις & Συνέχεια</span>
-          </h3>
-          <div class="space-y-3.5">
-            
-            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] transition-all shadow-2xs">
-              <div class="font-bold text-sm sm:text-base text-[var(--ink)] mb-2 flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-[var(--accent)] flex-shrink-0"></span>
-                <span>Αγορά Ενέργειας & ΑΠΕ:</span>
-              </div>
-              <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">Ενίσχυση επενδύσεων σε φωτοβολταϊκά και αποθήκευση ενέργειας.</p>
-            </div>
-
-            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] transition-all shadow-2xs">
-              <div class="font-bold text-sm sm:text-base text-[var(--ink)] mb-2 flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-[var(--accent)] flex-shrink-0"></span>
-                <span>Τραπεζικός Τομέας:</span>
-              </div>
-              <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">Σταθεροποίηση κεφαλαιακών δεικτών και πιστωτική επέκταση.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="deadlines" class="card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
-        <div>
-          <h3 class="t-section mb-4 border-b border-[var(--rule)] pb-2.5 flex items-center gap-2">
-            <span>📅</span> <span>Προθεσμίες & Δράσεις</span>
-          </h3>
-          <div class="space-y-3.5">
-            
-            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
-              <div class="t-body-sm text-[var(--ink-body)] leading-relaxed"><strong class="font-bold text-[var(--ink)]">Τραπεζικές Ρυθμίσεις:</strong> Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.</div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
-
-    <!-- ==================== 🔍 11. ΓΙΑ ΑΥΡΙΟ ==================== -->
-    <section id="tomorrow" class="card p-6 sm:p-7 shadow-xs border-t-4 border-[var(--accent)] my-8 sm:my-10">
-      <h3 class="t-section mb-4 border-b border-[var(--rule)] pb-2.5 flex items-center gap-2">
-        <span>🔍</span> <span>Για Αύριο — Θέματα προς Παρακολούθηση</span>
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        
-            <div class="flex items-start gap-4 p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] transition-all shadow-2xs">
-              <div class="w-9 h-9 rounded-xl bg-[var(--accent)]/15 border border-[var(--accent)]/30 text-[var(--accent)] flex items-center justify-center font-mono font-black text-sm flex-shrink-0">
-                01
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="font-bold text-sm sm:text-base text-[var(--ink)] mb-1">Πρωινό Sovereign Broadsheet:</div>
-                <div class="t-body-sm text-[var(--ink-body)] leading-relaxed">Έκδοση στις 07:30 ώρα Κύπρου.</div>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4 p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] hover:border-[var(--accent)] transition-all shadow-2xs">
-              <div class="w-9 h-9 rounded-xl bg-[var(--accent)]/15 border border-[var(--accent)]/30 text-[var(--accent)] flex items-center justify-center font-mono font-black text-sm flex-shrink-0">
-                02
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="font-bold text-sm sm:text-base text-[var(--ink)] mb-1">Παρακολούθηση Αγορών:</div>
-                <div class="t-body-sm text-[var(--ink-body)] leading-relaxed">Εξέλιξη πετρελαίου Brent και ισοτιμίας EUR/USD.</div>
-              </div>
-            </div>
-      </div>
-    </section>
-
-    <!-- ==================== 12. FOOTNOTES ==================== -->
-    <footer class="border-t-2 border-[var(--rule-strong)] pt-6 t-meta text-[var(--ink-quiet)] space-y-2 font-mono">
-      <div class="font-bold text-[var(--ink)] uppercase">Υποσημειώσεις & Τεκμηρίωση:</div>
-      <ul class="space-y-1 list-disc list-inside">
-        
-      </ul>
-      <div class="pt-4 text-center t-meta text-[var(--ink-quiet)]">
-        THE ORACLE SOVEREIGN © 2026 · One-Reader Executive Intelligence System
-      </div>
-    </footer>
-
   </main>
 
   
@@ -1706,7 +738,7 @@
     </div>
   </div>
   <script id="initialWireData" type="application/json">
-[{"id": "4739b9cfb06b41d487a885233458026034cdbeb9dc28bf307c72a1f5e1704121", "title": "Can the cool north handle a surge in climate tourism?", "link": "https://www.dw.com/en/can-the-cool-north-handle-a-surge-in-climate-tourism/a-78362462?maca=en-rss-en-all-1573-rdf", "snippet": "With heat records continually being broken and southern summers getting hotter, travelers are heading north. Fragile ecosystems are paying the price.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "1d1d4ece9782e81adb0838ac8b3c8780fb55922efa79a9d2a1aefe3bb08b0d82", "title": "Norway wealth fund sounds alarm on AI stock market bubble", "link": "https://www.dw.com/en/norway-wealth-fund-sounds-alarm-on-ai-stock-market-bubble/a-78351371?maca=en-rss-en-all-1573-rdf", "snippet": "The head of Norway's sovereign wealth fund has warned that soaring AI-driven stock valuations could trigger a sharp correction. How exposed is the world's largest sovereign wealth ", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f30b7e337f6cc3872c1e8ec67b8ead8134afbfffe3a06bf35c354f4710a2e76a", "title": "Will Germany's drought push up food prices?", "link": "https://www.dw.com/en/will-germany-s-drought-push-up-food-prices/a-78408203?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's main farmers' association has warned of a below-average harvest after drought and crops damaged by extreme heat. DW looks into what lower yields could mean for food price", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "2be0388a9eaa9f856e0c2d542321e2ad286bc2373b4cfc4193046c1368aa3f29", "title": "Why Germany's gas storage levels are so low", "link": "https://www.dw.com/en/why-germany-s-gas-storage-levels-are-so-low/a-78440677?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's gas storage facilities are only 50% full as traders bet that wholesale prices will fall if the Iran war ends. With around three months until winter, DW asks whether the c", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "065f17a36e567967f5abdf116466452775e11b54270cacc5e48f1b27be3eefe0", "title": "Ronaldinho to make football comeback aged 46", "link": "https://www.dw.com/en/ronaldinho-to-make-football-comeback-aged-46/a-78453950?maca=en-rss-en-all-1573-rdf", "snippet": "More than a decade after his last professional appearance, Brazilian superstar Ronaldinho is set for a comeback. The former world player of the year is to play in Italy’s third tie", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "d3f7863bc78d5283903db177b83b3079f76ce764523429cbf7e3629dbd55eda5", "title": "'Masha and the Bear': Ukraine sanctions Russian cartoon", "link": "https://www.dw.com/en/masha-and-the-bear-ukraine-sanctions-russian-cartoon/a-78464406?maca=en-rss-en-all-1573-rdf", "snippet": "Ukraine has imposed sanctions on the hit Russian children's cartoon \"Masha and the Bear,\" a step towards banning it. The culture minister called the show propaganda. Russia said th", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["sanctions"]}, {"id": "a2a8d0671f3bba49c119c1452e4d9cb079dab75d5e757397c030134c3ade49e6", "title": "Sydney Marathon medal wrongly shows German landmark", "link": "https://www.dw.com/en/sydney-marathon-medal-wrongly-shows-german-landmark/a-78473705?maca=en-rss-en-all-1573-rdf", "snippet": "A medal minted for finishers in the Sydney Marathon features a skyline of the city — with one landmark from rather far away. Organizers say the muddle only makes the medal \"a littl", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "7568d614b1c6d3acb8da20faaa789bae9c57bb09fe845e26fc0a0572723766a4", "title": "Scientists discover new 'immune hubs' in skull bone marrow", "link": "https://www.dw.com/en/scientists-discover-new-immune-hubs-in-skull-bone-marrow/a-78460417?maca=en-rss-en-all-1573-rdf", "snippet": "\"Immune hubs\" that actively defend the brain have been discovered in mouse skull marrow. Similar cells exist in human skulls, but their role remains unclear.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "3b1c0fc0828e2220ba2b732df190cf1770a603f00a6debc59c145f07b6f07f02", "title": "The new Bundesliga season is here, but has the glow gone?", "link": "https://www.dw.com/en/the-new-bundesliga-season-is-here-but-has-the-glow-gone/a-78062032?maca=en-rss-en-all-1573-rdf", "snippet": "Another Bundesliga season arrives, but are the golden years of Germany's top football league already over, and what can it do to change its course?", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "e228fc765d7155c6f78b38e10080e640df84fd15c29f6717f55c9d92f5efcb33", "title": "Trees are vital for cooler cities, but they need help too", "link": "https://www.dw.com/en/trees-are-vital-for-cooler-cities-but-they-need-help-too/a-78488665?maca=en-rss-en-all-1573-rdf", "snippet": "Record-breaking heat and drought are putting urban trees at risk. Experts explain how to protect these essential assets and build city forests that can withstand the climate challe", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["breaking"]}, {"id": "b7a1d64a7c2025c980c4b9495b03b049d32feba1a23fc53861e0b2af2e201f2b", "title": "Remembering Dolly Parton: 8 facts about the icon", "link": "https://www.dw.com/en/remembering-dolly-parton-8-facts-about-the-icon/a-75503168?maca=en-rss-en-all-1573-rdf", "snippet": "Dolly Parton, one of the world's most successful artists, has died at the age of 80. Here are some important and extraordinary facts about the country music superstar.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "45dfe728dfa0dcf44950c843c869cb840b3e066a57b2d263d14c0552fb815d8b", "title": "Reports: UEFA backs off FIFA boycott threat", "link": "https://www.dw.com/en/reports-uefa-backs-off-fifa-boycott-threat/a-78511519?maca=en-rss-en-all-1573-rdf", "snippet": "UEFA is reportedly set to withdraw a threat to boycott FIFA tournaments over a plan to partially privatize football tournaments. The Under-20 Women's World Cup is to be hosted by P", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "19e881cf2c69acd3d600829694957521c266f228c79f1d212f0f8dc19bff2c06", "title": "Tim Curry, of 'The Rocky Horror Picture Show,' dies at 80", "link": "https://www.dw.com/en/tim-curry-of-the-rocky-horror-picture-show-dies-at-80/a-78514945?maca=en-rss-en-all-1573-rdf", "snippet": "The gender-bending role as Dr. Frank-N-Furter put Curry on the map in 1975. He then went on to play a number of villainous roles like Gomez Addams, Pennywise and Bill Sikes, but al", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "47ee9270c4c6227755bd9112d5eb0fcde12bbc0ab860f7111b25f739dc2f1c06", "title": "Japanese artist Yayoi Kusama dies at 97", "link": "https://www.dw.com/en/japanese-artist-yayoi-kusama-dies-at-97/a-78518473?maca=en-rss-en-all-1573-rdf", "snippet": "From works of \"self-obliteration\" to polka dotted nudes, the pioneering artist developed a unique body of work likely to be relevant for years to come.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "1e2365a069ae6d96aaf160e9f801f7a24005c509d6dd0af422fcf93a20be9fad", "title": "Why social media addiction is so hard to regulate", "link": "https://www.dw.com/en/why-social-media-addiction-is-so-hard-to-regulate/a-78482023?maca=en-rss-en-all-1573-rdf", "snippet": "Facebook, Instagram and other social media platforms are accused of deliberately fostering addictive behavior among young users. Yet regulators continue to struggle to rein in thei", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "054938e8c10dab9510ff24668fda4d6f33456cd4b38823dab2feb6200b00c9d3", "title": "New study shows German football remains male-dominated", "link": "https://www.dw.com/en/new-study-shows-german-football-remains-male-dominated/a-78532569?maca=en-rss-en-all-1573-rdf", "snippet": "The top leagues of German football remain a largely male environment. A new study reveals that only seven clubs have women in upper management levels.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "c6869d65c9ef6a7184a05790ae3984d5c30bdfa13331c315022851844171a88b", "title": "Tragedy in Nepal: How do flash floods happen?", "link": "https://www.dw.com/en/tragedy-in-nepal-how-do-flash-floods-happen/a-78526421?maca=en-rss-en-all-1573-rdf", "snippet": "When flash floods sweep through the Himalayas, there is often little time to react. Scientists are working to understand the risks and improve early warning systems.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "faf1c0f95835e884f938448fffcf1b27e2918b007a1925baebcce8e57653bf3e", "title": "Spain: Thieves steal Bronze Age gold in lightning raid on Villena Museum", "link": "https://www.dw.com/en/spain-thieves-steal-bronze-age-gold-in-lightning-raid-on-villena-museum/a-78538027?maca=en-rss-en-all-1573-rdf", "snippet": "One of the world's greatest Bronze Age gold collections has been swiped, almost in its entirety, from Villena Museum. A highly professional group of thieves were in and out in four", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "63bf9dc4030910ef535b2759fdfa60415e03bfe0967f5869d4fb3d5e2fe07a0a", "title": "Germany's military wants to recruit tech-savvy gamers", "link": "https://www.dw.com/en/germany-s-military-wants-to-recruit-tech-savvy-gamers/a-78536462?maca=en-rss-en-all-1573-rdf", "snippet": "The Bundeswehr has been a fixture at Gamescom, Cologne's video game trade fair, for years. But critics say military recruitment does not belong at an entertainment convention.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "32e11a6ef3c04bc1ded225e8206557888c88e6643f70256d3e21717ae44cd627", "title": "EU wants drones to spray pesticides, but it could backfire", "link": "https://www.dw.com/en/eu-wants-drones-to-spray-pesticides-but-it-could-backfire/a-78557154?maca=en-rss-en-all-1573-rdf", "snippet": "The EU wants to lift a decades-old ban on spraying pesticides from the air, allowing drones to be used for greater precision. But experts warn the plan could lead to even more pest", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "ae9d9fd2285b4cb59dfe8ae163993b360eb9a44e828b9a6cabcd9027ce22c193", "title": "Canada's Carney holds firm against Trump tariffs", "link": "https://www.dw.com/en/canada-s-carney-holds-firm-against-trump-tariffs/a-78542754?maca=en-rss-en-all-1573-rdf", "snippet": "Canada is facing new US import penalties after Prime Minister Mark Carney refused to match US tariffs on China. Other countries are watching as the Trump trade clash turns into a f", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "346bc0816fb1193fa8a3abc53cdad423fd36e29d88d2fc586d38771c7f8e4ca1", "title": "Can communities be protected from melting glaciers?", "link": "https://www.dw.com/en/can-communities-be-protected-from-melting-glaciers/a-78615775?maca=en-rss-en-all-1573-rdf", "snippet": "Rising temperatures are increasing the risk of floods and avalanches in mountain regions. The disaster in Nepal and Tibet shows the urgent need for solutions, and the tools that co", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["urgent"]}, {"id": "e993224ffee4ca992b71db372d45c59888597eb11f89e502e42228762a6a989c", "title": "Women's football: Anyomi, London City and the German exodus", "link": "https://www.dw.com/en/women-s-football-anyomi-london-city-and-the-german-exodus/a-78446131?maca=en-rss-en-all-1573-rdf", "snippet": "Nicole Anyomi has joined Alexia Putellas and other star names in signing for the ambitious English club London City Lionesses. The Germany winger told DW England is a better place ", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "549eb15c2773deab3228caef84a5eaf387e03ab786d9294822f340183c066609", "title": "EU summons Russian envoy over failed Leipzig drone attack", "link": "https://www.dw.com/en/eu-summons-russian-envoy-over-failed-leipzig-drone-attack/a-78687280?maca=en-rss-en-all-1573-rdf", "snippet": "The EU's foreign policy chief Kaja Kallas said the attempted attack had \"all the hallmarks of state-sponsored terrorism.\" She said the EU was summoning a Russian envoy, with France", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "ccc3d1e4f859bd868970e94dd4ff4233023914b8b5769d82e8768773cc9dc52e", "title": "Macron visits Bayeux Tapestry with King Charles, PM Andy Burnham", "link": "https://www.dw.com/en/macron-visits-bayeux-tapestry-with-king-charles-pm-andy-burnham/a-78772317?maca=en-rss-en-all-1573-rdf", "snippet": "French President Emmanuel Macron is on a shorter-term visit to the UK than the renowned on-loan 11th century tapestry. He viewed the ancient artwork with the UK monarch and relativ", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "1c0700491adc11494df6e4757aeef453fbeb4da054ca865cb4fa76f7dc95f6dc", "title": "Norway seizes Russian ship in Svalbard to compensate Ukraine", "link": "https://www.dw.com/en/norway-seizes-russian-ship-in-svalbard-to-compensate-ukraine/a-78889005?maca=en-rss-en-all-1573-rdf", "snippet": "Authorities in Norway have seized a Russian ship, the Professor Molchanov, on a court order sought and obtained by Naftogaz in Ukraine. Russia has protested the move, which stems f", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bd1e7ed87bdb9488a2e654a7e243709f7909eca57715db06967aa094b860ad85", "title": "Which matters more to stocks: the bond market or AI risks? The volatility gauge might offer an answer", "link": "https://www.cnbc.com/2026/09/14/which-matters-more-to-stocks-the-bond-market-or-ai-risks-the-volatility-gauge-might-offer-an-answer.html", "snippet": "Volatility measured by the Cboe VIX Index jumped to 18 Monday.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f0d7c69024c04679ebb38e7cc20b620de13c9b924f119961e629efa1301edc53", "title": "CNBC Daily Open: Beware AI naysayers, the 'Hoax Buster' is here", "link": "https://www.cnbc.com/2026/09/15/cnbc-daily-open-ai-trump-hoax-buster-nvidia.html", "snippet": "Trump unleashed a barrage of posts on social media, slamming any regulation related to the sector and calling it a \"hoax.\"", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "35e0f02fac4164dd894674b840b1d437e3e4839ef3e37b4bb271c51e3f091603", "title": "Cadbury cut two months off its supply chain lead time for a key chocolate-bar ingredient in one move", "link": "https://www.cnbc.com/2026/09/14/cadbury-supply-chain-lead-time-key-ingredient-chocolate-crumble-malaysia.html", "snippet": "Mondelez is expanding its chocolate manufacturing operations in Malaysia, with the company also seeing further room for growth across Southeast Asia.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "c1a8b6be510b32adb6ca18eb32d8b8324a3e0b77bf169de63a78727705afb03b", "title": "CNBC's The China Connection newsletter: Tech controls expand to employees", "link": "https://www.cnbc.com/2026/09/14/cnbcs-the-china-connection-newsletter-tech-controls-employees.html", "snippet": "As the U.S.-China tech rivalry simmers, Beijing is increasing restrictions on how its companies can deploy their tech talent overseas.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "b9744638bfa7678fed9a2abc7c47831d3321d208610c1249cd20cda3c5904201", "title": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation", "link": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html", "snippet": "The Trump administration has encouraged AI's rapid growth and the development of data centers as it seeks an insurmountable tech edge over China.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bd66c29c75ec48107717c2d35d39bc285e65d9232fff60af11926b7db6906edd", "title": "Baker Hughes sees no slowdown in energy projects despite higher rates as AI buildouts stoke LNG demand", "link": "https://www.cnbc.com/2026/09/14/baker-hughes-ceo-no-slowdown-in-energy-projects-despite-higher-rates-.html", "snippet": "Baker Hughes has yet to see higher borrowing costs slow investment in major energy projects.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "d10196dcbfee358222ba8804cc87d4806e7b51a09f7dcdcfd24b3ccdae14a76b", "title": "Wealthy Chinese, tech talent confront tighter borders as Beijing widens exit controls", "link": "https://www.cnbc.com/2026/09/15/china-rich-talent-immigration-capital-outflows-border-control-.html", "snippet": "China's new border-control regulations are designed to keep two of its most valuable assets from leaving the country: money and talent.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "833f8a660c505d97e1fd5a0e10eebc057b042402c0ea55334f54b6e2e28ec6bb", "title": "The stock market could do something strange this week after the Fed decision", "link": "https://www.cnbc.com/2026/09/14/the-stock-market-could-do-something-strange-this-week-after-the-fed-decision.html", "snippet": "Odds of more interest rate hikes coming this year have grown.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["fed", "rate hike"]}, {"id": "e8685c8712c6f519fc3cc02bc30e8bb992168e15c17e1372447b94d672cca5f9", "title": "Trump phones Nvidia’s Huang at All-In Summit, calls data center opposition a ‘hoax’", "link": "https://www.cnbc.com/2026/09/14/trump-phones-nvidia-huang-all-in-calls-data-center-opposition-hoax.html", "snippet": "President Trump has been using his social media site to sound off on Anthropic CEO Dario Amodei's suggestion that the AI industry slow its pace of development.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "dabd09c0e8b1a3b72decbfd3f829cdbf675c3f1232e378cfed6e18b9cf29ba3a", "title": "Trump-linked super PAC reports roughly $21 million in spending across key midterm races", "link": "https://www.cnbc.com/2026/09/14/trump-super-pac-midterms-no-going-back-pac.html", "snippet": "President Donald Trump's political wartiest has spent much of the 2026 midterm election campaign cycle on the sidelines despite pleas from Republicans.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "cda5435ae1adc35074e1bc8d79291563f192e11c06e34d33a1dfa3bdd30ce3c6", "title": "Treasury hits Russia's VTB Bank with new sanctions over Iran ties", "link": "https://www.cnbc.com/2026/09/14/treasury-bessent-russia-vtb-bank-iran-sanctions.html", "snippet": "The new Russian bank sanctions follow a small handful of other actions that the Trump administration has taken since vowing to inflict \"economic D-Day\" on Iran.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["sanctions"]}, {"id": "e2ca22c56078f6124565a65f9096eff883a71f3aa92a6347895c8a508bf0785e", "title": "Broadcom CEO addresses Anthropic's slowdown push, says AI revenue targets haven't changed", "link": "https://www.cnbc.com/2026/09/14/broadcom-ceo-on-anthropics-slowdown-push-ai-revenue-targets-havent-changed.html", "snippet": "Broadcom CEO Hock Tan said demand for AI infrastructure remains strong despite growing concerns about increasingly powerful models.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "5ecaed53ea5bfeb9fe845ea05152e683441edb8c54dfc8c1eff19747b442352e", "title": "Oil extends gains, Brent crude nears $108 following Houthi strikes on Saudi Arabia", "link": "https://www.cnbc.com/2026/09/15/oil-extends-gains-following-houthi-strikes-on-saudi-arabia.html", "snippet": "Oil extended gains amid reports of fresh Houthi strikes on Saudi Arabia and attacks by Iran on ships in the Gulf.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "32c47e9cc67940715e035255ba1cdf4b333d5a2b969f00bacbcbd364f72ecf9f", "title": "Not all tech is under fire in Monday's selling, while investors seek refuge in defensive stocks", "link": "https://www.cnbc.com/2026/09/14/not-all-tech-is-under-fire-in-monday-selling-investors-seek-out-defensives.html", "snippet": "Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "85c2a9620029bfe829a80ac8c013a936ace8f17220d08aa81da66ba5ca34decf", "title": "Anti-corruption authority insists Angelides was included in black van probe", "link": "https://cyprus-mail.com/2026/09/15/anti-corruption-authority-insists-angelides-was-included-in-black-van-probe", "snippet": "The anti-corruption authority said on Tuesday that deputy attorney-general Savvas Angelides had always been within the scope of its expanded investigation into the “black van” surv", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "b4917225618c8af01f32a80e40717631e65fb93d470c9e13cb2ce5484a74a49d", "title": "payabl. renews BEONIX Festival payments partnership for second year, extending support across ETKO", "link": "https://cyprus-mail.com/2026/09/15/payabl-renews-beonix-festival-payments-partnership-for-second-year-extending-support-across-etko", "snippet": "15th September, Limassol – payabl., a European financial technology provider, has renewed its partnership with Kaspinas Group, the events and venue management company behind BEONIX", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bfcfb05b4077ab35f3d833f22246a4390bae5e8f653dae41d1e018286a471e27", "title": "Three complaints against deputy AG rejected in secret", "link": "https://cyprus-mail.com/2026/09/15/three-complaints-against-deputy-ag-rejected-in-secret", "snippet": "Three separate complaints against deputy attorney-general Savvas Angelides were rejected by the anti-corruption authority without any public announcement. According to news outlet ", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "d9059ce87bcf64b22f6ea2ff169fdb2a9df22fec9810c35b0bb4a255e3a6c6ae", "title": "Suspected sabotage disrupts Dutch train services", "link": "https://cyprus-mail.com/2026/09/15/suspected-sabotage-disrupts-dutch-train-services", "snippet": "Train services were disrupted across the central and northern Netherlands during Tuesday’s morning rush hour by pipes deliberately attached torails, the infrastructure operator Pro", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bb15cca7a1d050f0508e4c60101647e098ac1a496188631412f1b62066ad21dd", "title": "Supreme Court to rule on police access to telecoms data", "link": "https://cyprus-mail.com/2026/09/15/supreme-court-to-rule-on-police-access-to-telecoms-data", "snippet": "The Supreme Court will examine whether police can access telecommunications data held by providers for commercial or billing purposes when investigating and prosecuting serious cri", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f40baa20beb420794eb1e825ee604aac8aa588ee461aa3c1f8a97234cfd47e2d", "title": "Cyprus IT body aligns with Temu to accelerate digital business growth", "link": "https://cyprus-mail.com/2026/09/15/cyprus-it-body-aligns-with-temu-to-accelerate-digital-business-growth", "snippet": "Global e-commerce platform Temu has partnered with the Cyprus Information Technology Enterprises Association (CITEA) in a move aimed at creating new opportunities for Cypriot techn", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "9ad4c285e404d3357d785123bf64fbe73544f09e71c73f228a1549bbdfd2bc03", "title": "Man arrested near Kouklia archaeological site", "link": "https://cyprus-mail.com/2026/09/15/man-arrested-near-kouklia-archaeological-site", "snippet": "A 41-year-old man was arrested on Monday after he was found in possession of a metal detector and pickaxe near an archaeological site in Kouklia, Paphos. According to the police, i", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "5424b5ffa7793caddab4a304bdf020f1d657f2140303dd55417c843327c356b1", "title": "Teens remanded over Paphos burglaries", "link": "https://cyprus-mail.com/2026/09/15/teens-remanded-over-paphos-burglaries", "snippet": "The Paphos district court has ordered the eight-day detention of four 17-year-olds in connection with ten cases involving shoplifting, theft and property damage, authorities said o", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "9ff315a161ddbb6a69f3d78982ad02c43b2153d11817666a72642f0cbb22b584", "title": "Nairobi to host 2029 World Athletics Championships in African first", "link": "https://cyprus-mail.com/2026/09/15/nairobi-to-host-2029-world-athletics-championships-in-african-first", "snippet": "Nairobi has been selected to host the 2029 World Athletics Championships, with the Kenyan capital becoming the first African city to stage the event. World Athletics announced the ", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "b821a34607ee685746c0cbdc1dde2dfb1db97f49d9b1e438a519c2d17a9dea8d", "title": "Turkish authorities detain at least 150 at protest over LGBTQ+ arrests", "link": "https://cyprus-mail.com/2026/09/15/turkish-authorities-detain-at-least-150-at-protest-over-lgbtq-arrests", "snippet": "Turkish authorities detained at least 150 people on Tuesday after police intervened at a gathering outside Istanbul’s Caglayan courthouse, where demonstrators had planned to protes", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "38411126786d0b0ca2689b3fa14d06477c59161c0eb01a3ce0ba910d015de129", "title": "Third complaint filed against Larnaca medical centre", "link": "https://cyprus-mail.com/2026/09/15/third-complaint-filed-against-larnaca-medical-centre", "snippet": "A third complaint against a Larnaca medical centre offering plasmapheresis treatment was filed by the health ministry on Tuesday following an on-site inspection on Friday. Speaking", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "e62b5a350e5f040ad4f4537428d53209279df8eb5b31d9df64bf47e247c16685", "title": "Ο Υπατος Αρμοστής του ΟΗΕ ζητά πρόσβαση στη Γάζα για εγκλήματα πολέμου", "link": "https://www.sigmalive.com/news/international/1329419/o-ypatos-armostis-toy-ohe-zita-prosvasi-sti-gaza-ghia-eghklimata-polemoy", "snippet": "Ο Ύπατος Αρμοστής του ΟΗΕ για τα Ανθρώπινα Δικαιώματα ζήτησε σήμερα να επιτραπεί σε διεθνείς ερευνητές η πρόσβαση στη Λωρίδα της Γάζας «για να συνδράμουν στη συγκέντρωση αποδεικτικ", "source": "Sigmalive", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "883d6f0b63772e8b5f618373513face9d1a4a713d878faab76b05b37f0dbf501", "title": "Θλίψη για τον Ατανά Ντράμοφ", "link": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thlipsi-gia-ton-atana-ntramof", "snippet": "Θλίψη για τον Ατανά Ντράμοφ Channel A' Κατηγορία onisiforos.stavrou 12/10/2024 - 12:26", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "62081d6caf83383507cf8e67788e75a9e2020199922438d8dd91e58b1b015eeb", "title": "Mobile App Advert", "link": "https://www.kerkida.net/node/1722401", "snippet": "Mobile App Advert admin 17/10/2024 - 18:15 https://rfaam0.short.gy/h27KIF", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f087883670b145b86ab7a96ab1c87cdfd7f82e2ac853e14a675ace050addc99e", "title": "Βαθμολογία Α' Κατηγορίας 2021-2022", "link": "https://www.kerkida.net/league-table/bathmologia-a-katigorias-2021-2022", "snippet": "Βαθμολογία Α' Κατηγορίας 2021-2022 rokopos 21/07/2021 - 22:31", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f7724a0eb48499089be750bc6fb61c667d38f8267eebdc33558586b0a18c9578", "title": "4η αγωνιστική", "link": "https://www.kerkida.net/championship-round/4i-agonistiki-26", "snippet": "4η αγωνιστική vanaliv 04/09/2026 - 15:35 Παρασκευή 18/09/2026 Ομόνοια 29M - ΑΕΚ 20:00 -- Πάφος FC - ΑΕΛ 20:00 -- Τετάρτη 19/08/2026 Ν. Σαλαμίνα - Ανόρθωση 19:00 -- Απόλλωνας - ΑΠΟΕ", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "99c364bd50c05a516f0176bac662baf2ec830d56ac67f8fba525c9302a95110e", "title": "Tennis scores: WTA Sao Paulo and Guadalajara Open", "link": "https://www.skysports.com/tennis/scores-schedule", "snippet": "", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "31fbdc67a96e8807ac305a9c61315d7f4112131bad1a93f4e2d37dacaa8e0e34", "title": "Wolff issues title warning despite Antonelli's growing lead", "link": "https://www.skysports.com/f1/news/12040/13585813/mercedes-boss-toto-wolff-issues-formula-1-title-race-caution-despite-kimi-antonellis-big-points-lead", "snippet": "Mercedes boss Toto Wolff says Kimi Antonelli must remain wary about the potential of unexpected \"black swan events\" derailing his championship bid despite the Italian driver's larg", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "cb927cc7003793fd3fafcf5ef6db30fee5ffcc4ad70b4f4781f8e6d65ca11df9", "title": "Today on Sky Sports Racing: Yarmouth's Eastern Festival kicks off", "link": "https://www.skysports.com/racing/news/12040/13585885/today-on-sky-sports-racing-yarmouths-eastern-festival-kicks-off-with-exciting-novice-action", "snippet": "Day one of the Eastern Festival at Yarmouth begins on Tuesday, featuring some exciting novices, plus action from Uttoxeter and Wolverhampton all live on Sky Sports Racing.", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "4ca02bf4135c82fe959036660799d68bcc475ddfc911f8b0f73b28a3b054a671", "title": "Mahomes back in business as Chiefs brush past Broncos", "link": "https://www.skysports.com/watch/video/13586033/denver-broncos-kansas-city-chiefs-nfl-highlights", "snippet": "Highlights of Denver Broncos at the Kansas City Chiefs in the NFL.", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}]
+[{"id": "7800fa5947167ccbee8a62855165cb6745c15cfafa6b03bfed02b8e776e2283f", "title": "Fatty food raises risk of colorectal cancer", "link": "https://www.dw.com/en/fatty-food-raises-risk-of-colorectal-cancer/a-78284704?maca=en-rss-en-all-1573-rdf", "snippet": "Did you know fatty foods can increase production of an acid in your gut that promotes tumor growth? That's on top of all the other health risks linked to fatty foods, like fries an", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "1d1d4ece9782e81adb0838ac8b3c8780fb55922efa79a9d2a1aefe3bb08b0d82", "title": "Norway wealth fund sounds alarm on AI stock market bubble", "link": "https://www.dw.com/en/norway-wealth-fund-sounds-alarm-on-ai-stock-market-bubble/a-78351371?maca=en-rss-en-all-1573-rdf", "snippet": "The head of Norway's sovereign wealth fund has warned that soaring AI-driven stock valuations could trigger a sharp correction. How exposed is the world's largest sovereign wealth ", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f30b7e337f6cc3872c1e8ec67b8ead8134afbfffe3a06bf35c354f4710a2e76a", "title": "Will Germany's drought push up food prices?", "link": "https://www.dw.com/en/will-germany-s-drought-push-up-food-prices/a-78408203?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's main farmers' association has warned of a below-average harvest after drought and crops damaged by extreme heat. DW looks into what lower yields could mean for food price", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "2be0388a9eaa9f856e0c2d542321e2ad286bc2373b4cfc4193046c1368aa3f29", "title": "Why Germany's gas storage levels are so low", "link": "https://www.dw.com/en/why-germany-s-gas-storage-levels-are-so-low/a-78440677?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's gas storage facilities are only 50% full as traders bet that wholesale prices will fall if the Iran war ends. With around three months until winter, DW asks whether the c", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "065f17a36e567967f5abdf116466452775e11b54270cacc5e48f1b27be3eefe0", "title": "Ronaldinho to make football comeback aged 46", "link": "https://www.dw.com/en/ronaldinho-to-make-football-comeback-aged-46/a-78453950?maca=en-rss-en-all-1573-rdf", "snippet": "More than a decade after his last professional appearance, Brazilian superstar Ronaldinho is set for a comeback. The former world player of the year is to play in Italy’s third tie", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "d3f7863bc78d5283903db177b83b3079f76ce764523429cbf7e3629dbd55eda5", "title": "'Masha and the Bear': Ukraine sanctions Russian cartoon", "link": "https://www.dw.com/en/masha-and-the-bear-ukraine-sanctions-russian-cartoon/a-78464406?maca=en-rss-en-all-1573-rdf", "snippet": "Ukraine has imposed sanctions on the hit Russian children's cartoon \"Masha and the Bear,\" a step towards banning it. The culture minister called the show propaganda. Russia said th", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["sanctions"]}, {"id": "a2a8d0671f3bba49c119c1452e4d9cb079dab75d5e757397c030134c3ade49e6", "title": "Sydney Marathon medal wrongly shows German landmark", "link": "https://www.dw.com/en/sydney-marathon-medal-wrongly-shows-german-landmark/a-78473705?maca=en-rss-en-all-1573-rdf", "snippet": "A medal minted for finishers in the Sydney Marathon features a skyline of the city — with one landmark from rather far away. Organizers say the muddle only makes the medal \"a littl", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "ee9b2c1fbeb76aba3fd6c4810a90ac73db9eb59a05949d835903ca4dc28d523f", "title": "Can new US sanctions cripple Iran's shadow economy?", "link": "https://www.dw.com/en/can-new-us-sanctions-cripple-iran-s-shadow-economy/a-78494630?maca=en-rss-en-all-1573-rdf", "snippet": "The US is expanding sanctions on Iran's financial networks, targeting crypto, gold, aviation and shipping. DW spoke with analysts about what could change.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "3b1c0fc0828e2220ba2b732df190cf1770a603f00a6debc59c145f07b6f07f02", "title": "The new Bundesliga season is here, but has the glow gone?", "link": "https://www.dw.com/en/the-new-bundesliga-season-is-here-but-has-the-glow-gone/a-78062032?maca=en-rss-en-all-1573-rdf", "snippet": "Another Bundesliga season arrives, but are the golden years of Germany's top football league already over, and what can it do to change its course?", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "e228fc765d7155c6f78b38e10080e640df84fd15c29f6717f55c9d92f5efcb33", "title": "Trees are vital for cooler cities, but they need help too", "link": "https://www.dw.com/en/trees-are-vital-for-cooler-cities-but-they-need-help-too/a-78488665?maca=en-rss-en-all-1573-rdf", "snippet": "Record-breaking heat and drought are putting urban trees at risk. Experts explain how to protect these essential assets and build city forests that can withstand the climate challe", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["sanctions"]}, {"id": "b7a1d64a7c2025c980c4b9495b03b049d32feba1a23fc53861e0b2af2e201f2b", "title": "Remembering Dolly Parton: 8 facts about the icon", "link": "https://www.dw.com/en/remembering-dolly-parton-8-facts-about-the-icon/a-75503168?maca=en-rss-en-all-1573-rdf", "snippet": "Dolly Parton, one of the world's most successful artists, has died at the age of 80. Here are some important and extraordinary facts about the country music superstar.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "45dfe728dfa0dcf44950c843c869cb840b3e066a57b2d263d14c0552fb815d8b", "title": "Reports: UEFA backs off FIFA boycott threat", "link": "https://www.dw.com/en/reports-uefa-backs-off-fifa-boycott-threat/a-78511519?maca=en-rss-en-all-1573-rdf", "snippet": "UEFA is reportedly set to withdraw a threat to boycott FIFA tournaments over a plan to partially privatize football tournaments. The Under-20 Women's World Cup is to be hosted by P", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "94b80f99031ed3d5420b5c90521ac32b68d38172114c7caf51ac2d59885b0540", "title": "Can new Apple CEO John Ternus fix the tech giant's AI woes?", "link": "https://www.dw.com/en/can-new-apple-ceo-john-ternus-fix-the-tech-giant-s-ai-woes/a-78575898?maca=en-rss-en-all-1573-rdf", "snippet": "John Ternus is just the third Apple CEO in 30 years. His primary challenge is to correct the company's faltering AI strategy to preserve its position as a big tech leader.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "47ee9270c4c6227755bd9112d5eb0fcde12bbc0ab860f7111b25f739dc2f1c06", "title": "Japanese artist Yayoi Kusama dies at 97", "link": "https://www.dw.com/en/japanese-artist-yayoi-kusama-dies-at-97/a-78518473?maca=en-rss-en-all-1573-rdf", "snippet": "From works of \"self-obliteration\" to polka dotted nudes, the pioneering artist developed a unique body of work likely to be relevant for years to come.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "1e2365a069ae6d96aaf160e9f801f7a24005c509d6dd0af422fcf93a20be9fad", "title": "Why social media addiction is so hard to regulate", "link": "https://www.dw.com/en/why-social-media-addiction-is-so-hard-to-regulate/a-78482023?maca=en-rss-en-all-1573-rdf", "snippet": "Facebook, Instagram and other social media platforms are accused of deliberately fostering addictive behavior among young users. Yet regulators continue to struggle to rein in thei", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "054938e8c10dab9510ff24668fda4d6f33456cd4b38823dab2feb6200b00c9d3", "title": "New study shows German football remains male-dominated", "link": "https://www.dw.com/en/new-study-shows-german-football-remains-male-dominated/a-78532569?maca=en-rss-en-all-1573-rdf", "snippet": "The top leagues of German football remain a largely male environment. A new study reveals that only seven clubs have women in upper management levels.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "c6869d65c9ef6a7184a05790ae3984d5c30bdfa13331c315022851844171a88b", "title": "Tragedy in Nepal: How do flash floods happen?", "link": "https://www.dw.com/en/tragedy-in-nepal-how-do-flash-floods-happen/a-78526421?maca=en-rss-en-all-1573-rdf", "snippet": "When flash floods sweep through the Himalayas, there is often little time to react. Scientists are working to understand the risks and improve early warning systems.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "faf1c0f95835e884f938448fffcf1b27e2918b007a1925baebcce8e57653bf3e", "title": "Spain: Thieves steal Bronze Age gold in lightning raid on Villena Museum", "link": "https://www.dw.com/en/spain-thieves-steal-bronze-age-gold-in-lightning-raid-on-villena-museum/a-78538027?maca=en-rss-en-all-1573-rdf", "snippet": "One of the world's greatest Bronze Age gold collections has been swiped, almost in its entirety, from Villena Museum. A highly professional group of thieves were in and out in four", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "63bf9dc4030910ef535b2759fdfa60415e03bfe0967f5869d4fb3d5e2fe07a0a", "title": "Germany's military wants to recruit tech-savvy gamers", "link": "https://www.dw.com/en/germany-s-military-wants-to-recruit-tech-savvy-gamers/a-78536462?maca=en-rss-en-all-1573-rdf", "snippet": "The Bundeswehr has been a fixture at Gamescom, Cologne's video game trade fair, for years. But critics say military recruitment does not belong at an entertainment convention.", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "32e11a6ef3c04bc1ded225e8206557888c88e6643f70256d3e21717ae44cd627", "title": "EU wants drones to spray pesticides, but it could backfire", "link": "https://www.dw.com/en/eu-wants-drones-to-spray-pesticides-but-it-could-backfire/a-78557154?maca=en-rss-en-all-1573-rdf", "snippet": "The EU wants to lift a decades-old ban on spraying pesticides from the air, allowing drones to be used for greater precision. But experts warn the plan could lead to even more pest", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "ae9d9fd2285b4cb59dfe8ae163993b360eb9a44e828b9a6cabcd9027ce22c193", "title": "Canada's Carney holds firm against Trump tariffs", "link": "https://www.dw.com/en/canada-s-carney-holds-firm-against-trump-tariffs/a-78542754?maca=en-rss-en-all-1573-rdf", "snippet": "Canada is facing new US import penalties after Prime Minister Mark Carney refused to match US tariffs on China. Other countries are watching as the Trump trade clash turns into a f", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "346bc0816fb1193fa8a3abc53cdad423fd36e29d88d2fc586d38771c7f8e4ca1", "title": "Can communities be protected from melting glaciers?", "link": "https://www.dw.com/en/can-communities-be-protected-from-melting-glaciers/a-78615775?maca=en-rss-en-all-1573-rdf", "snippet": "Rising temperatures are increasing the risk of floods and avalanches in mountain regions. The disaster in Nepal and Tibet shows the urgent need for solutions, and the tools that co", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["urgent"]}, {"id": "e993224ffee4ca992b71db372d45c59888597eb11f89e502e42228762a6a989c", "title": "Women's football: Anyomi, London City and the German exodus", "link": "https://www.dw.com/en/women-s-football-anyomi-london-city-and-the-german-exodus/a-78446131?maca=en-rss-en-all-1573-rdf", "snippet": "Nicole Anyomi has joined Alexia Putellas and other star names in signing for the ambitious English club London City Lionesses. The Germany winger told DW England is a better place ", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "549eb15c2773deab3228caef84a5eaf387e03ab786d9294822f340183c066609", "title": "EU summons Russian envoy over failed Leipzig drone attack", "link": "https://www.dw.com/en/eu-summons-russian-envoy-over-failed-leipzig-drone-attack/a-78687280?maca=en-rss-en-all-1573-rdf", "snippet": "The EU's foreign policy chief Kaja Kallas said the attempted attack had \"all the hallmarks of state-sponsored terrorism.\" She said the EU was summoning a Russian envoy, with France", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "ccc3d1e4f859bd868970e94dd4ff4233023914b8b5769d82e8768773cc9dc52e", "title": "Macron visits Bayeux Tapestry with King Charles, PM Andy Burnham", "link": "https://www.dw.com/en/macron-visits-bayeux-tapestry-with-king-charles-pm-andy-burnham/a-78772317?maca=en-rss-en-all-1573-rdf", "snippet": "French President Emmanuel Macron is on a shorter-term visit to the UK than the renowned on-loan 11th century tapestry. He viewed the ancient artwork with the UK monarch and relativ", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "1c0700491adc11494df6e4757aeef453fbeb4da054ca865cb4fa76f7dc95f6dc", "title": "Norway seizes Russian ship in Svalbard to compensate Ukraine", "link": "https://www.dw.com/en/norway-seizes-russian-ship-in-svalbard-to-compensate-ukraine/a-78889005?maca=en-rss-en-all-1573-rdf", "snippet": "Authorities in Norway have seized a Russian ship, the Professor Molchanov, on a court order sought and obtained by Naftogaz in Ukraine. Russia has protested the move, which stems f", "source": "DW World", "category": "international", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bd1e7ed87bdb9488a2e654a7e243709f7909eca57715db06967aa094b860ad85", "title": "Which matters more to stocks: the bond market or AI risks? The volatility gauge might offer an answer", "link": "https://www.cnbc.com/2026/09/14/which-matters-more-to-stocks-the-bond-market-or-ai-risks-the-volatility-gauge-might-offer-an-answer.html", "snippet": "Volatility measured by the Cboe VIX Index jumped to 18 Monday.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f0d7c69024c04679ebb38e7cc20b620de13c9b924f119961e629efa1301edc53", "title": "CNBC Daily Open: Beware AI naysayers, the 'Hoax Buster' is here", "link": "https://www.cnbc.com/2026/09/15/cnbc-daily-open-ai-trump-hoax-buster-nvidia.html", "snippet": "Trump unleashed a barrage of posts on social media, slamming any regulation related to the sector and calling it a \"hoax.\"", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "35e0f02fac4164dd894674b840b1d437e3e4839ef3e37b4bb271c51e3f091603", "title": "Cadbury cut two months off its supply chain lead time for a key chocolate-bar ingredient in one move", "link": "https://www.cnbc.com/2026/09/14/cadbury-supply-chain-lead-time-key-ingredient-chocolate-crumble-malaysia.html", "snippet": "Mondelez is expanding its chocolate manufacturing operations in Malaysia, with the company also seeing further room for growth across Southeast Asia.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "c1a8b6be510b32adb6ca18eb32d8b8324a3e0b77bf169de63a78727705afb03b", "title": "CNBC's The China Connection newsletter: Tech controls expand to employees", "link": "https://www.cnbc.com/2026/09/14/cnbcs-the-china-connection-newsletter-tech-controls-employees.html", "snippet": "As the U.S.-China tech rivalry simmers, Beijing is increasing restrictions on how its companies can deploy their tech talent overseas.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "b9744638bfa7678fed9a2abc7c47831d3321d208610c1249cd20cda3c5904201", "title": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation", "link": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html", "snippet": "The Trump administration has encouraged AI's rapid growth and the development of data centers as it seeks an insurmountable tech edge over China.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bd66c29c75ec48107717c2d35d39bc285e65d9232fff60af11926b7db6906edd", "title": "Baker Hughes sees no slowdown in energy projects despite higher rates as AI buildouts stoke LNG demand", "link": "https://www.cnbc.com/2026/09/14/baker-hughes-ceo-no-slowdown-in-energy-projects-despite-higher-rates-.html", "snippet": "Baker Hughes has yet to see higher borrowing costs slow investment in major energy projects.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "d10196dcbfee358222ba8804cc87d4806e7b51a09f7dcdcfd24b3ccdae14a76b", "title": "Wealthy Chinese, tech talent confront tighter borders as Beijing widens exit controls", "link": "https://www.cnbc.com/2026/09/15/china-rich-talent-immigration-capital-outflows-border-control-.html", "snippet": "China's new border-control regulations are designed to keep two of its most valuable assets from leaving the country: money and talent.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "833f8a660c505d97e1fd5a0e10eebc057b042402c0ea55334f54b6e2e28ec6bb", "title": "The stock market could do something strange this week after the Fed decision", "link": "https://www.cnbc.com/2026/09/14/the-stock-market-could-do-something-strange-this-week-after-the-fed-decision.html", "snippet": "Odds of more interest rate hikes coming this year have grown.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["fed", "rate hike"]}, {"id": "e8685c8712c6f519fc3cc02bc30e8bb992168e15c17e1372447b94d672cca5f9", "title": "Trump phones Nvidia’s Huang at All-In Summit, calls data center opposition a ‘hoax’", "link": "https://www.cnbc.com/2026/09/14/trump-phones-nvidia-huang-all-in-calls-data-center-opposition-hoax.html", "snippet": "President Trump has been using his social media site to sound off on Anthropic CEO Dario Amodei's suggestion that the AI industry slow its pace of development.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "dabd09c0e8b1a3b72decbfd3f829cdbf675c3f1232e378cfed6e18b9cf29ba3a", "title": "Trump-linked super PAC reports roughly $21 million in spending across key midterm races", "link": "https://www.cnbc.com/2026/09/14/trump-super-pac-midterms-no-going-back-pac.html", "snippet": "President Donald Trump's political wartiest has spent much of the 2026 midterm election campaign cycle on the sidelines despite pleas from Republicans.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "cda5435ae1adc35074e1bc8d79291563f192e11c06e34d33a1dfa3bdd30ce3c6", "title": "Treasury hits Russia's VTB Bank with new sanctions over Iran ties", "link": "https://www.cnbc.com/2026/09/14/treasury-bessent-russia-vtb-bank-iran-sanctions.html", "snippet": "The new Russian bank sanctions follow a small handful of other actions that the Trump administration has taken since vowing to inflict \"economic D-Day\" on Iran.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": true, "tags": ["sanctions"]}, {"id": "e2ca22c56078f6124565a65f9096eff883a71f3aa92a6347895c8a508bf0785e", "title": "Broadcom CEO addresses Anthropic's slowdown push, says AI revenue targets haven't changed", "link": "https://www.cnbc.com/2026/09/14/broadcom-ceo-on-anthropics-slowdown-push-ai-revenue-targets-havent-changed.html", "snippet": "Broadcom CEO Hock Tan said demand for AI infrastructure remains strong despite growing concerns about increasingly powerful models.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "5ecaed53ea5bfeb9fe845ea05152e683441edb8c54dfc8c1eff19747b442352e", "title": "Oil extends gains, Brent crude nears $108 following Houthi strikes on Saudi Arabia", "link": "https://www.cnbc.com/2026/09/15/oil-extends-gains-following-houthi-strikes-on-saudi-arabia.html", "snippet": "Oil extended gains amid reports of fresh Houthi strikes on Saudi Arabia and attacks by Iran on ships in the Gulf.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "32c47e9cc67940715e035255ba1cdf4b333d5a2b969f00bacbcbd364f72ecf9f", "title": "Not all tech is under fire in Monday's selling, while investors seek refuge in defensive stocks", "link": "https://www.cnbc.com/2026/09/14/not-all-tech-is-under-fire-in-monday-selling-investors-seek-out-defensives.html", "snippet": "Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour of trading.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "85c2a9620029bfe829a80ac8c013a936ace8f17220d08aa81da66ba5ca34decf", "title": "Anti-corruption authority insists Angelides was included in black van probe", "link": "https://cyprus-mail.com/2026/09/15/anti-corruption-authority-insists-angelides-was-included-in-black-van-probe", "snippet": "The anti-corruption authority said on Tuesday that deputy attorney-general Savvas Angelides had always been within the scope of its expanded investigation into the “black van” surv", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "b4917225618c8af01f32a80e40717631e65fb93d470c9e13cb2ce5484a74a49d", "title": "payabl. renews BEONIX Festival payments partnership for second year, extending support across ETKO", "link": "https://cyprus-mail.com/2026/09/15/payabl-renews-beonix-festival-payments-partnership-for-second-year-extending-support-across-etko", "snippet": "15th September, Limassol – payabl., a European financial technology provider, has renewed its partnership with Kaspinas Group, the events and venue management company behind BEONIX", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bfcfb05b4077ab35f3d833f22246a4390bae5e8f653dae41d1e018286a471e27", "title": "Three complaints against deputy AG rejected in secret", "link": "https://cyprus-mail.com/2026/09/15/three-complaints-against-deputy-ag-rejected-in-secret", "snippet": "Three separate complaints against deputy attorney-general Savvas Angelides were rejected by the anti-corruption authority without any public announcement. According to news outlet ", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "d9059ce87bcf64b22f6ea2ff169fdb2a9df22fec9810c35b0bb4a255e3a6c6ae", "title": "Suspected sabotage disrupts Dutch train services", "link": "https://cyprus-mail.com/2026/09/15/suspected-sabotage-disrupts-dutch-train-services", "snippet": "Train services were disrupted across the central and northern Netherlands during Tuesday’s morning rush hour by pipes deliberately attached torails, the infrastructure operator Pro", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "bb15cca7a1d050f0508e4c60101647e098ac1a496188631412f1b62066ad21dd", "title": "Supreme Court to rule on police access to telecoms data", "link": "https://cyprus-mail.com/2026/09/15/supreme-court-to-rule-on-police-access-to-telecoms-data", "snippet": "The Supreme Court will examine whether police can access telecommunications data held by providers for commercial or billing purposes when investigating and prosecuting serious cri", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f40baa20beb420794eb1e825ee604aac8aa588ee461aa3c1f8a97234cfd47e2d", "title": "Cyprus IT body aligns with Temu to accelerate digital business growth", "link": "https://cyprus-mail.com/2026/09/15/cyprus-it-body-aligns-with-temu-to-accelerate-digital-business-growth", "snippet": "Global e-commerce platform Temu has partnered with the Cyprus Information Technology Enterprises Association (CITEA) in a move aimed at creating new opportunities for Cypriot techn", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "9ad4c285e404d3357d785123bf64fbe73544f09e71c73f228a1549bbdfd2bc03", "title": "Man arrested near Kouklia archaeological site", "link": "https://cyprus-mail.com/2026/09/15/man-arrested-near-kouklia-archaeological-site", "snippet": "A 41-year-old man was arrested on Monday after he was found in possession of a metal detector and pickaxe near an archaeological site in Kouklia, Paphos. According to the police, i", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "5424b5ffa7793caddab4a304bdf020f1d657f2140303dd55417c843327c356b1", "title": "Teens remanded over Paphos burglaries", "link": "https://cyprus-mail.com/2026/09/15/teens-remanded-over-paphos-burglaries", "snippet": "The Paphos district court has ordered the eight-day detention of four 17-year-olds in connection with ten cases involving shoplifting, theft and property damage, authorities said o", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "9ff315a161ddbb6a69f3d78982ad02c43b2153d11817666a72642f0cbb22b584", "title": "Nairobi to host 2029 World Athletics Championships in African first", "link": "https://cyprus-mail.com/2026/09/15/nairobi-to-host-2029-world-athletics-championships-in-african-first", "snippet": "Nairobi has been selected to host the 2029 World Athletics Championships, with the Kenyan capital becoming the first African city to stage the event. World Athletics announced the ", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "b821a34607ee685746c0cbdc1dde2dfb1db97f49d9b1e438a519c2d17a9dea8d", "title": "Turkish authorities detain at least 150 at protest over LGBTQ+ arrests", "link": "https://cyprus-mail.com/2026/09/15/turkish-authorities-detain-at-least-150-at-protest-over-lgbtq-arrests", "snippet": "Turkish authorities detained at least 150 people on Tuesday after police intervened at a gathering outside Istanbul’s Caglayan courthouse, where demonstrators had planned to protes", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "38411126786d0b0ca2689b3fa14d06477c59161c0eb01a3ce0ba910d015de129", "title": "Third complaint filed against Larnaca medical centre", "link": "https://cyprus-mail.com/2026/09/15/third-complaint-filed-against-larnaca-medical-centre", "snippet": "A third complaint against a Larnaca medical centre offering plasmapheresis treatment was filed by the health ministry on Tuesday following an on-site inspection on Friday. Speaking", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "e62b5a350e5f040ad4f4537428d53209279df8eb5b31d9df64bf47e247c16685", "title": "Ο Υπατος Αρμοστής του ΟΗΕ ζητά πρόσβαση στη Γάζα για εγκλήματα πολέμου", "link": "https://www.sigmalive.com/news/international/1329419/o-ypatos-armostis-toy-ohe-zita-prosvasi-sti-gaza-ghia-eghklimata-polemoy", "snippet": "Ο Ύπατος Αρμοστής του ΟΗΕ για τα Ανθρώπινα Δικαιώματα ζήτησε σήμερα να επιτραπεί σε διεθνείς ερευνητές η πρόσβαση στη Λωρίδα της Γάζας «για να συνδράμουν στη συγκέντρωση αποδεικτικ", "source": "Sigmalive", "category": "cyprus", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "883d6f0b63772e8b5f618373513face9d1a4a713d878faab76b05b37f0dbf501", "title": "Θλίψη για τον Ατανά Ντράμοφ", "link": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thlipsi-gia-ton-atana-ntramof", "snippet": "Θλίψη για τον Ατανά Ντράμοφ Channel A' Κατηγορία onisiforos.stavrou 12/10/2024 - 12:26", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "62081d6caf83383507cf8e67788e75a9e2020199922438d8dd91e58b1b015eeb", "title": "Mobile App Advert", "link": "https://www.kerkida.net/node/1722401", "snippet": "Mobile App Advert admin 17/10/2024 - 18:15 https://rfaam0.short.gy/h27KIF", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f087883670b145b86ab7a96ab1c87cdfd7f82e2ac853e14a675ace050addc99e", "title": "Βαθμολογία Α' Κατηγορίας 2021-2022", "link": "https://www.kerkida.net/league-table/bathmologia-a-katigorias-2021-2022", "snippet": "Βαθμολογία Α' Κατηγορίας 2021-2022 rokopos 21/07/2021 - 22:31", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "f7724a0eb48499089be750bc6fb61c667d38f8267eebdc33558586b0a18c9578", "title": "4η αγωνιστική", "link": "https://www.kerkida.net/championship-round/4i-agonistiki-26", "snippet": "4η αγωνιστική vanaliv 04/09/2026 - 15:35 Παρασκευή 18/09/2026 Ομόνοια 29M - ΑΕΚ 20:00 -- Πάφος FC - ΑΕΛ 20:00 -- Τετάρτη 19/08/2026 Ν. Σαλαμίνα - Ανόρθωση 19:00 -- Απόλλωνας - ΑΠΟΕ", "source": "Kerkida", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "99c364bd50c05a516f0176bac662baf2ec830d56ac67f8fba525c9302a95110e", "title": "Tennis scores: WTA Sao Paulo and Guadalajara Open", "link": "https://www.skysports.com/tennis/scores-schedule", "snippet": "", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "31fbdc67a96e8807ac305a9c61315d7f4112131bad1a93f4e2d37dacaa8e0e34", "title": "Wolff issues title warning despite Antonelli's growing lead", "link": "https://www.skysports.com/f1/news/12040/13585813/mercedes-boss-toto-wolff-issues-formula-1-title-race-caution-despite-kimi-antonellis-big-points-lead", "snippet": "Mercedes boss Toto Wolff says Kimi Antonelli must remain wary about the potential of unexpected \"black swan events\" derailing his championship bid despite the Italian driver's larg", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "cb927cc7003793fd3fafcf5ef6db30fee5ffcc4ad70b4f4781f8e6d65ca11df9", "title": "Today on Sky Sports Racing: Yarmouth's Eastern Festival kicks off", "link": "https://www.skysports.com/racing/news/12040/13585885/today-on-sky-sports-racing-yarmouths-eastern-festival-kicks-off-with-exciting-novice-action", "snippet": "Day one of the Eastern Festival at Yarmouth begins on Tuesday, featuring some exciting novices, plus action from Uttoxeter and Wolverhampton all live on Sky Sports Racing.", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}, {"id": "4ca02bf4135c82fe959036660799d68bcc475ddfc911f8b0f73b28a3b054a671", "title": "Mahomes back in business as Chiefs brush past Broncos", "link": "https://www.skysports.com/watch/video/13586033/denver-broncos-kansas-city-chiefs-nfl-highlights", "snippet": "Highlights of Denver Broncos at the Kansas City Chiefs in the NFL.", "source": "Sky Sports", "category": "sports", "timestamp": 1789474287, "time_str": "12:11 UTC", "is_breaking": false}]
   </script>
     
 
