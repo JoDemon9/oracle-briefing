@@ -1,108 +1,192 @@
 [
   {
+    "date": "2026-09-15",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Russian frigate fires flares towards Danish military helicopter, Denmark says",
+    "snippet": "A Russian frigate fired two flares towards a Danish military helicopter in international waters off the coast of Denmark, narrowly missing the aircraft on Monday, the Nordic NATO m...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Limassol municipality takes square redevelopment plans to the public [Επικαιρότητα]",
+    "snippet": "Limassol municipality returned to residents with new proposals for the redevelopment of public squares across the city. At a meeting on Monday planners presente...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Anti-corruption authority insists Angelides was included in black van probe [Επικαιρότητα]",
+    "snippet": "The anti-corruption authority said on Tuesday that deputy attorney-general Savvas Angelides had always been within the scope of its expanded investigation into...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. payabl. renews BEONIX Festival payments partnership for second year, extending support across ETKO [Επικαιρότητα]",
+    "snippet": "15th September, Limassol – payabl., a European financial technology provider, has renewed its partnership with Kaspinas Group, the events and venue management c...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Three complaints against deputy AG rejected in secret [Επικαιρότητα]",
+    "snippet": "Three separate complaints against deputy attorney-general Savvas Angelides were rejected by the anti-corruption authority without any public announcement. Accor...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Suspected sabotage disrupts Dutch train services [Ο Φάκελός μου]",
+    "snippet": "Train services were disrupted across the central and northern Netherlands during Tuesday’s morning rush hour by pipes deliberately attached torails, the infrast...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🌍 Διεθνή",
+    "title": "1. Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards [Διεθνή]",
+    "snippet": "The US president's comments come after Anthropic co-founder Jack Clark told the BBC an AI \"kill switch\" may need to be mandatory....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🌍 Διεθνή",
+    "title": "2. AI regulation faces political deadlock as calls grow for Congress to act [Διεθνή]",
+    "snippet": "With Trump opposed and Congress divided, new safety legislation on AI is unlikely to pass anytime soon despite mounting pressure....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🌍 Διεθνή",
+    "title": "3. Denmark says Russian warship fired flares at military helicopter [Διεθνή]",
+    "snippet": "The Danish prime minister has accused Russia of \"reckless\" behaviour, while the Kremlin is yet to comment....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🌍 Διεθνή",
+    "title": "4. Welsh actor Matthew Rhys makes Emmy Awards history with double win [Διεθνή]",
+    "snippet": "He becomes the first person to win two lead acting prizes in one night at the prestigious TV ceremony....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "🌍 Διεθνή",
+    "title": "5. Suspected sabotage causes major Netherlands rail disruption [Διεθνή]",
+    "snippet": "Trains were cancelled or delayed on Tuesday after objects were found on tracks at multiple locations....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-15",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-14",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Γεωστρατηγική Αναβάθμιση: Ετήσια παράταση της άρσης του αμερικανικού εμπάργκο όπλων για την Κύπρο — «Ξεκάθαρο μήνυμα» δηλώνει ο Πρόεδρος Χριστοδουλίδης [Επιβεβαιωμένο]",
     "snippet": "Σε μια κομβικής σημασίας γεωπολιτική απόφαση προχώρησε η Ουάσιγκτον, ανακοινώνοντας την ανανέωση της πλήρους άρσης του εμπάργκο πώλησης αμυντικού υλικού προς την Κυπριακή Δημοκρατί...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-14.html#top-story"
   },
   {
     "date": "2026-09-14",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Γεωστρατηγική & Άμυνα: Ετήσια επέκταση της άρσης του αμερικανικού εμπάργκο όπλων — Θωράκιση της Εθνικής Φρουράς [Επιβεβαιωμένο]",
     "snippet": "Ισχυρό πολιτικό και διπλωματικό μήνυμα συνιστά η απόφαση του State Department για ανανέωση της άρσης του εμπάργκο όπλων προς την Κύπρο για το 2027. Ο Πρόεδρος Χ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-14.html#cyprus"
   },
   {
     "date": "2026-09-14",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Διαφάνεια & Κράτος Δικαίου: Τέλος στην πολύκροτη έρευνα για το «μαύρο βαν» παρακολουθήσεων από την Αρχή κατά της Διαφθοράς [Επιβεβαιωμένο]",
     "snippet": "Η Ανεξάρτητη Αρχή κατά της Διαφθοράς ανακοίνωσε επίσημα τη λήξη των ερευνών της γύρω από την πολύκροτη υπόθεση του κατασκοπευτικού οχήματος («spy van»). Η διερε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-14.html#cyprus"
   },
   {
     "date": "2026-09-14",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Ελληνοκυπριακές Περιουσίες: Ισραηλινός νομικός καταγγέλλει εμπλοκή Βρετανών υπηκόων στον σφετερισμό γης στα κατεχόμενα [Επιβεβαιωμένο]",
     "snippet": "Σε αποκαλύψεις για τη δράση δικτύου μεσιτών και επενδυτών που εκμεταλλεύονται ελληνοκυπριακές περιουσίες στα κατεχόμενα προέβη Ισραηλινός νομικός. Σύμφωνα με τα...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-14.html#cyprus"
   },
   {
     "date": "2026-09-14",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Εταιρικά Αποτελέσματα & Logistics: Άλμα καθαρής κερδοφορίας 81,1% για τον όμιλο GAP Vassilopoulos [Επιβεβαιωμένο]",
     "snippet": "Εντυπωσιακή αύξηση κερδών κατά 81,1% κατέγραψε η GAP Vassilopoulos Public Ltd για το πρώτο εξάμηνο του 2025, παρά την οριακή μόνο αύξηση στον κύκλο εργασιών. Η...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-14.html#cyprus"
   },
   {
     "date": "2026-09-14",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Κεφαλαιαγορά & ΧΑΚ: Νέα επαναγορά 3.005 ιδίων μετοχών από τη Demetra Holdings Plc [Επιβεβαιωμένο]",
     "snippet": "Σε νέα συναλλαγή επαναγοράς 3.005 ιδίων μετοχών προχώρησε η Demetra Holdings Plc κατά τη συνεδρίαση της 11ης Σεπτεμβρίου 2026, υλοποιώντας την εγκεκριμένη απόφα...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-14.html#cyprus"
   },
   {
     "date": "2026-09-14",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Πολιτισμός & Τουρισμός Λεμεσού: Ανακοινώθηκε το διεθνές line-up του φεστιβάλ BEONIX στον χώρο της ΕΤΚΟ [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Το κορυφαίο διεθνές φεστιβάλ ηλεκτρονικής μουσικής BEONIX επιστρέφει στη Λεμεσό από τις 25 έως τις 27 Σεπτεμβρίου 2026, φιλοξενούμενο στον ιστορικό βιομηχανικό...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-14.html#cyprus"
   },
   {
     "date": "2026-09-14",
     "section": "🌍 Διεθνή",
     "title": "1. Σκανδιναβικές Κάλπες: Θρίλερ στη Σουηδία με οριακό προβάδισμα της κεντροαριστεράς στις γενικές εκλογές [Επιβεβαιωμένο]",
     "snippet": "Σε εκλογικό θρίλερ εξελίσσεται η καταμέτρηση των ψήφων στη Σουηδία, καθώς τα προκαταρκτικά αποτελέσματα της εκλογικής αρχής δίνουν στην κεντροαριστερή αντιπολίτ...",
-    "url": "#world"
+    "url": "briefings/2026-09-14.html#world"
   },
   {
     "date": "2026-09-14",
     "section": "🌍 Διεθνή",
     "title": "2. Πόλεμος στην Ουκρανία: Ρωσικό πλήγμα σε σιδηροδρομικό σταθμό στα σύνορα με την Πολωνία μετά την αναχώρηση Boris Johnson [Επιβεβαιωμένο]",
     "snippet": "Ρωσικός πύραυλος έπληξε σταθμευμένη ουκρανική αμαξοστοιχία σε σιδηροδρομικό κόμβο πλησίον των πολωνικών συνόρων, μόλις λίγη ώρα μετά την αναχώρηση από το σημείο...",
-    "url": "#world"
+    "url": "briefings/2026-09-14.html#world"
   },
   {
     "date": "2026-09-14",
     "section": "🌍 Διεθνή",
     "title": "3. Τεχνητή Νοημοσύνη & Πολιτική: Ο Donald Trump απορρίπτει τις εκκλήσεις για AI Slowdown επικαλούμενος τον ανταγωνισμό με την Κίνα [Επιβεβαιωμένο]",
     "snippet": "Την κατηγορηματική αντίθεσή του σε οποιαδήποτε κυβερνητική παρέμβαση για επιβράδυνση της ανάπτυξης της προηγμένης τεχνητής νοημοσύνης εξέφρασε ο Donald Trump. Χ...",
-    "url": "#world"
+    "url": "briefings/2026-09-14.html#world"
   },
   {
     "date": "2026-09-14",
     "section": "🌍 Διεθνή",
     "title": "4. Τεχνολογική Βιομηχανία: Εντείνονται τα ερωτήματα για το πώς θα εφαρμοστεί μια πιθανή επιβράδυνση των μοντέλων AI [Επιβεβαιωμένο]",
     "snippet": "Εν μέσω έντονων διεργασιών στη Silicon Valley, αναλυτές και ειδικοί του κλάδου διερευνούν τη σκοπιμότητα και τους μηχανισμούς μιας πιθανής «επιβράδυνσης» (pacin...",
-    "url": "#world"
+    "url": "briefings/2026-09-14.html#world"
   },
   {
     "date": "2026-09-14",
     "section": "🌍 Διεθνή",
     "title": "5. Ναυτική Τραγωδία στην Ασία: Τουλάχιστον 6 νεκροί και 130 αγνοούμενοι από ανατροπή πορθμείου στη Θάλασσα της Ιάβας [Επιβεβαιωμένο]",
     "snippet": "Σε εξέλιξη βρίσκεται εκτεταμένη επιχείρηση έρευνας και διάσωσης στην Ινδονησία, μετά τη βύθιση επιβατηγού πλοίου ανοικτά των ακτών της Ιάβας υπό δυσμενείς καιρι...",
-    "url": "#world"
+    "url": "briefings/2026-09-14.html#world"
   },
   {
     "date": "2026-09-14",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή φακέλων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (StockWatch).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή φακέλων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (StockWatch)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-14.html#deadlines"
   },
   {
     "date": "2026-09-14",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ μέσω της πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση αιτήσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ μέσω της πύλης του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding A...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-14.html#deadlines"
   },
   {
     "date": "2026-09-14",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-14.html#deadlines"
   },
   {
     "date": "2026-09-13",
