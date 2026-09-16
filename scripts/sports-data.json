@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Με παλμό και φωνή!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/me-palmo-kai-foni",
+        "title": "Όλα δείχνουν...\"Φάμπι\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ola-deihnoynfampi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Θέλει γκολ...ο El Toro",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thelei-gkolo-el-toro",
+        "title": "Άκης Ιωακείμ",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/akis-ioakeim-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "Επιτροπή/Επανασύσταση",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/epitropiepanasystasi",
+        "title": "Giráldez για Ομόνοια: \"Παρακολούθησα πολλούς αγώνες τους/Είναι κυρίαρχοι\"",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/giraldez-gia-omonoia-parakoloythisa-polloys-agoneseinai-kyriarhoi",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Δεν θα πω ονόματα\"!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/den-tha-po-onomata",
+        "title": "Η αποστολή για Celta Vigo",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-gia-celta-vigo",
         "source": "Kerkida.net"
       },
       {
-        "title": "Χωρίς... υπονοούμενα",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/horis-yponooymena",
+        "title": "Ψυχολογία και χαμόγελα!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/psyhologia-kai-hamogela",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:33.682734+00:00"
+    "fetched_at": "2026-09-16T06:49:52.796694+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Manchester United shocked as talented youngster JJ Gabriel asks to leave",
+        "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-jj-gabriel-asks-to-leave",
+        "source": "The Guardian"
+      },
       {
         "title": "Are Manchester United as poor as the early Premier League table suggests?",
         "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-premier-league-analysis",
@@ -74,14 +79,9 @@
         "title": "In Manchester, Premier League superiority is now separated by Haaland’s cutting edge",
         "url": "https://www.theguardian.com/football/2026/sep/14/haalands-cutting-edge-separates-the-manchester-clubs",
         "source": "The Guardian"
-      },
-      {
-        "title": "VAR controversy decides Manchester derby as City keep pace with Arsenal – Football Weekly",
-        "url": "https://www.theguardian.com/football/audio/2026/sep/14/football-weekly-podcast-manchester-derby-var-controversy-city-united-arsenal",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:34.671972+00:00"
+    "fetched_at": "2026-09-16T06:49:54.043776+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,14 +90,19 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Elche versus Real Madrid — 20:30",
-      "match": "Elche versus Real Madrid — 20:30",
+      "fixture": "Spanish La Liga: Atletico Madrid versus Real Madrid — 15:15 (Sunday 20th September)",
+      "match": "Atletico Madrid versus Real Madrid — 15:15",
       "competition": "Spanish La Liga",
-      "date": "",
+      "date": "Sunday 20th September",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Espí saves Real Madrid once again in stoppage time",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html",
+        "source": "Marca"
+      },
       {
         "title": "Mourinho's fantastic five",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/14/mourinho-s-fantastic-five.html",
@@ -117,14 +122,9 @@
         "title": "Former Real Madrid player exposes the team's problems: \"One looks at the other and says if he doesn't move, neither do I\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/former-real-madrid-player-exposes-the-team-s-problems-one-looks-at-the-other-and-says-if-he-doesn-t-move-neither-do-i.html",
         "source": "Marca"
-      },
-      {
-        "title": "Diomande raises the first suspicions: \"His technical precision is far too poor\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/diomande-raises-the-first-suspicions-his-technical-precision-is-far-too-poor.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:35.765650+00:00"
+    "fetched_at": "2026-09-16T06:49:54.732141+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:37.011794+00:00"
+    "fetched_at": "2026-09-16T06:49:55.459090+00:00"
   }
 }

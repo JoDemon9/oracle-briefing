@@ -1,115 +1,199 @@
 [
   {
+    "date": "2026-09-16",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "True number of 1974 child evacuees ‘may exceed 5,000’",
+    "snippet": "The number of unaccompanied children evacuated to Greece between 1974 and 1979 may have exceeded 5,000, more than double the 2,000 officially recorded, the House refugee committee...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Hajioannou invests €10m in Safe Bulkers as share count rises [Επικαιρότητα]",
+    "snippet": "Safe Bulkers chief executive Polys Hajioannou invested €10.05 million in the dry-bulk shipowner’s latest share issue through Moutoulas Shipping Corporation, as...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Cyprus Business Now: banking, shipping, credit scoring, ICT, Greece [Επικαιρότητα]",
+    "snippet": "Cyprus’ new credit scoring system reached two months of operation today, with 986 individuals and legal entities having accessed their data, according to Artemi...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Saudi Arabia destroys Houthi drone near Mecca [Επικαιρότητα]",
+    "snippet": "Saudi Arabia’s air defences destroyed a Houthi drone south of Mecca before it entered prohibited airspace over the holy city, a spokesperson for the Saudi-led m...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Ed Sheeran support acts quit tour after Macklemore dropped over Gazan support [Επικαιρότητα]",
+    "snippet": "Pop star Ed Sheeran said dropping American rapper Macklemore from his U.S. concert tour was not Sheeran’s decision but that of the tour’s promoter, even as Shee...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Turkey jails 31 in LGBTQ+ crackdown, detains 126 protesters [Ο Φάκελός μου]",
+    "snippet": "Turkish authorities arrested at least 31 people pending trial on Tuesday as part of a government campaign targeting LGBTQ+ groups, while police detained at leas...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🌍 Διεθνή",
+    "title": "1. All support acts on Ed Sheeran's US tour quit after Macklemore dropped [Διεθνή]",
+    "snippet": "The star said he was not responsible for Macklemore being dropped from the line-up after he made pro-Palestinian statements on stage....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🌍 Διεθνή",
+    "title": "2. Denmark says Russian warship fired flares at military helicopter [Διεθνή]",
+    "snippet": "The Danish prime minister has accused Russia of \"reckless\" behaviour, while the Kremlin is yet to comment....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🌍 Διεθνή",
+    "title": "3. US limits visas for South African officials over alleged anti-white discrimination [Διεθνή]",
+    "snippet": "Secretary of State Marco Rubio says South Africa has not addressed US concerns over racial inequality....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🌍 Διεθνή",
+    "title": "4. What weapon could the US have put into space? [Διεθνή]",
+    "snippet": "The announcement by the US points to a developing field of modern warfare in the Earth's orbit....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "🌍 Διεθνή",
+    "title": "5. Two sailors missing after tanker attacked in Strait of Hormuz, Oman says [Διεθνή]",
+    "snippet": "Iran says El Gaia caught fire after hitting mines, but the US says the oil tanker was struck by a missile and then a drone....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-16",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-15",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Συναγερμός στο ΝΑΤΟ & τη Βαλτική: Ρωσική φρεγάτα εκτόξευσε φωτοβολίδες κατά δανικού στρατιωτικού ελικοπτέρου σε διεθνή ύδατα — «Απερίσκεπτη κλιμάκωση» καταγγέλλει η Κοπεγχάγη [Επιβεβαιωμένο]",
     "snippet": "Σε κατάσταση αυξημένης επιφυλακής τέθηκαν οι αμυντικές δυνάμεις της Βόρειας Ευρώπης και της Βορειοατλαντικής Συμμαχίας μετά από επικίνδυνο στρατιωτικό επεισόδιο στη Βαλτική Θάλασσα...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-15.html#top-story"
   },
   {
     "date": "2026-09-15",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Διαφάνεια & Κράτος Δικαίου: Στη Νομική Υπηρεσία φάκελος πρώην Υπουργού για παράλειψη δήλωσης €2,4 εκατ. στο Πόθεν Έσχες [Επιβεβαιωμένο]",
     "snippet": "Σε μείζον θεσμικό ζήτημα εξελίσσεται η υπόθεση πρώην υπουργού της κυβέρνησης Χριστοδουλίδη, ο οποίος παρέλειψε να συμπεριλάβει στις αρχικές δηλώσεις περιουσιακή...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-15.html#cyprus"
   },
   {
     "date": "2026-09-15",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Οικονομική Διπλωματία & Επενδύσεις: Σύμπραξη Κύπρου και Ελλάδας για προσέλκυση διεθνών κεφαλαίων και κοινές δράσεις σε τρίτες αγορές [Επιβεβαιωμένο]",
     "snippet": "Την εμβάθυνση της οικονομικής συνεργασίας και τον συντονισμό των μηχανισμών εξωτερικού εμπορίου συμφώνησαν Λευκωσία και Αθήνα κατά την ολοκλήρωση της διήμερης ε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-15.html#cyprus"
   },
   {
     "date": "2026-09-15",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Υδατική Ασφάλεια & Υποδομές: Σχέδιο για τέσσερις νέες μονάδες αφαλάτωσης 180.000 κ.μ. ημερησίως και ενίσχυση αγροτών [Μονή πηγή]",
     "snippet": "Ενώπιον του Υπουργικού Συμβουλίου κατατέθηκε από τον Υπουργό Γεωργίας ολοκληρωμένη πρόταση διαχείρισης υδάτινων πόρων, η οποία προβλέπει την προώθηση τεσσάρων ν...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-15.html#cyprus"
   },
   {
     "date": "2026-09-15",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Εργασιακά & Δημόσια Διοίκηση: Προειδοποιητική 24ωρη απεργία των ωρομισθίων του δημοσίου την Πέμπτη με προοπτική κλιμάκωσης [Μονή πηγή]",
     "snippet": "Σε 24ωρη παγκύπρια απεργία κατέρχονται την Πέμπτη 17 Σεπτεμβρίου οι ωρομίσθιοι εργαζόμενοι στον δημόσιο τομέα, αντιδρώντας στο τέλμα των διαπραγματεύσεων για τη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-15.html#cyprus"
   },
   {
     "date": "2026-09-15",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Αρχαιοκαπηλία & Πολιτισμός: Σύλληψη 41χρονου στην Κούκλια για παράνομη ανασκαφή με ανιχνευτή μετάλλων [Μονή πηγή]",
     "snippet": "Στη σύλληψη 41χρονου προχώρησε η Αστυνομία Πάφου, όταν εντοπίστηκε σε αρχαιολογική ζώνη στην Κούκλια να διενεργεί παράνομη ανασκαφή με αξίνα και μη αδειοδοτημέν...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-15.html#cyprus"
   },
   {
     "date": "2026-09-15",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Στεγαστική Πολιτική & Λεμεσός: Ξεπέρασε τα €300 εκατ. η κρατική επένδυση για 5.500 κατοικίες και νέα κίνητρα σε οικογενειακά οικόπεδα [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Την υπέρβαση των €300 εκατομμυρίων στις συνολικές κρατικές δαπάνες για στεγαστικά προγράμματα ανακοίνωσε η κυβέρνηση, θέτοντας ως στρατηγικό στόχο την προσθήκη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-15.html#cyprus"
   },
   {
     "date": "2026-09-15",
     "section": "🌍 Διεθνή",
     "title": "1. Παγκόσμια Κεφαλαιαγορά: Καμπανάκι από το Νορβηγικό Κρατικό Ταμείο (,7 τρισ.) για φούσκα AI στις μετοχές και κίνδυνο διόρθωσης [Επιβεβαιωμένο]",
     "snippet": "Σε ηχηρή προειδοποίηση για τις αποτιμήσεις των τεχνολογικών κολοσσών προχώρησε ο Nicolai Tangen, επικεφαλής του κρατικού επενδυτικού ταμείου της Νορβηγίας (Norg...",
-    "url": "#world"
+    "url": "briefings/2026-09-15.html#world"
   },
   {
     "date": "2026-09-15",
     "section": "🌍 Διεθνή",
     "title": "2. Ευρωπαϊκές Υποδομές: Υποψίες δολιοφθοράς στο ολλανδικό σιδηροδρομικό δίκτυο — Παράλυση μετακινήσεων στο πρωινό rush hour [Επιβεβαιωμένο]",
     "snippet": "Εκτεταμένο χάος επικράτησε στο σιδηροδρομικό δίκτυο της κεντρικής και βόρειας Ολλανδίας, καθώς δεκάδες δρομολόγια τρένων ακυρώθηκαν κατά την πρωινή ώρα αιχμής μ...",
-    "url": "#world"
+    "url": "briefings/2026-09-15.html#world"
   },
   {
     "date": "2026-09-15",
     "section": "🌍 Διεθνή",
     "title": "3. Μέση Ανατολή & Ενέργεια: Κατάληψη στρατηγικών νησιών στο Bab al-Mandab από τους Χούθι — Σε συναγερμό οι πετρελαϊκές οδοί [Επιβεβαιωμένο]",
     "snippet": "Δραματική κλιμάκωση καταγράφεται στην Ερυθρά Θάλασσα μετά την κατάληψη των στρατηγικών νήσων Hanish και Perim, καθώς και του λιμένα Mokha, από τις δυνάμεις των...",
-    "url": "#world"
+    "url": "briefings/2026-09-15.html#world"
   },
   {
     "date": "2026-09-15",
     "section": "🌍 Διεθνή",
     "title": "4. Αφρική & Διπλωματία: Κρίσιμες ειρηνευτικές συνομιλίες Ρουάντας και ΛΔ Κονγκό στη Γενεύη υπό τη σκιά νέων συγκρούσεων [Επιβεβαιωμένο]",
     "snippet": "Στη Γενεύη μεταφέρεται το διπλωματικό ενδιαφέρον για την κατάπαυση των αιματηρών συγκρούσεων στην ανατολική Λαϊκή Δημοκρατία του Κονγκό, με αξιωματούχους από τη...",
-    "url": "#world"
+    "url": "briefings/2026-09-15.html#world"
   },
   {
     "date": "2026-09-15",
     "section": "🌍 Διεθνή",
     "title": "5. Ευρωπαϊκή Ένωση: Πρεμιέρα στο Στρασβούργο ενόψει της ομιλίας SOTEU της von der Leyen και του σχεδίου €600 δισ. [Μονή πηγή]",
     "snippet": "Ξεκίνησε στο Στρασβούργο η τετραήμερη σύνοδος της Ολομέλειας του Ευρωπαϊκού Κοινοβουλίου, με επίκεντρο την προετοιμασία για την ετήσια ομιλία της Προέδρου της Κ...",
-    "url": "#world"
+    "url": "briefings/2026-09-15.html#world"
   },
   {
     "date": "2026-09-15",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-15.html#deadlines"
   },
   {
     "date": "2026-09-15",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-15.html#deadlines"
   },
   {
     "date": "2026-09-15",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη πληρωμή δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-15.html#deadlines"
   },
   {
     "date": "2026-09-15",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-15.html#top-story"
   },
   {
     "date": "2026-09-14",
