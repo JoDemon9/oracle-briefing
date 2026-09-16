@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Κάλεσμα και επίσκεψη στην πρώην ομάδα του!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kalesma-kai-episkepsi-stin-proin-omada-toy",
+        "title": "Το Kerkida.net στο Ομόνοια - Celta",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/kerkidanet-sto-omonoia-celta",
         "source": "Kerkida.net"
       },
       {
-        "title": "Celta/Ανάλυση στο Kerkida OnAiR: Το στατιστικό... κορυφής και αυτό που της λείπει",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/analysi-gia-celta-statistiko-koryfis-kai-ayto-poy-tis-leipei",
+        "title": "Τα ΚΛΙΚΣ που επέλεξαν οι Ισπανοί",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ta-kliks-poy-epelexan-oi-ispanoi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Φιλική ήττα από Αραράτ",
-        "url": "https://www.kerkida.net/eidiseis/alla-spor/futsal/omonoia/filiki-itta-apo-ararat",
+        "title": "Αν είναι εύστοχη... μπορεί",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/einai-eystohi-mporei",
         "source": "Kerkida.net"
       },
       {
-        "title": "Για τους... πρώτους",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/gia-toys-protoys",
+        "title": "Τελευταίες... πινελιές (Φώτος)",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/teleytaies-pinelies-fotos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Έρχεται... ανάλυση της Celta Vigo στο \"Kerkida OnAiR\"!",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/erhetai-analysi-tis-celta-vigo-sto-kerkida-onair",
+        "title": "ΤΟΠΟΘΕΤΗΣΗ προπονητή που αντιμετώπισε την Ομόνοια",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/topothetisi-proponiti-poy-antimetopise-tin-omonoia",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-16T11:27:35.811821+00:00"
+    "fetched_at": "2026-09-16T15:07:11.891549+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-16T11:27:37.254151+00:00"
+    "fetched_at": "2026-09-16T15:07:13.061806+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-16T11:27:38.821320+00:00"
+    "fetched_at": "2026-09-16T15:07:14.020275+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-16T11:27:40.948839+00:00"
+    "fetched_at": "2026-09-16T15:07:14.823374+00:00"
   }
 }
