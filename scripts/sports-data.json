@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Με παλμό και φωνή!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/me-palmo-kai-foni",
+        "title": "Κάλεσμα και επίσκεψη στην πρώην ομάδα του!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kalesma-kai-episkepsi-stin-proin-omada-toy",
         "source": "Kerkida.net"
       },
       {
-        "title": "Θέλει γκολ...ο El Toro",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thelei-gkolo-el-toro",
+        "title": "Celta/Ανάλυση στο Kerkida OnAiR: Το στατιστικό... κορυφής και αυτό που της λείπει",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/analysi-gia-celta-statistiko-koryfis-kai-ayto-poy-tis-leipei",
         "source": "Kerkida.net"
       },
       {
-        "title": "Επιτροπή/Επανασύσταση",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/epitropiepanasystasi",
+        "title": "Φιλική ήττα από Αραράτ",
+        "url": "https://www.kerkida.net/eidiseis/alla-spor/futsal/omonoia/filiki-itta-apo-ararat",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Δεν θα πω ονόματα\"!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/den-tha-po-onomata",
+        "title": "Για τους... πρώτους",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/gia-toys-protoys",
         "source": "Kerkida.net"
       },
       {
-        "title": "Χωρίς... υπονοούμενα",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/horis-yponooymena",
+        "title": "Έρχεται... ανάλυση της Celta Vigo στο \"Kerkida OnAiR\"!",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/erhetai-analysi-tis-celta-vigo-sto-kerkida-onair",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:33.682734+00:00"
+    "fetched_at": "2026-09-16T11:27:35.811821+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Manchester United shocked as talented youngster JJ Gabriel asks to leave",
+        "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-jj-gabriel-asks-to-leave",
+        "source": "The Guardian"
+      },
       {
         "title": "Are Manchester United as poor as the early Premier League table suggests?",
         "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-premier-league-analysis",
@@ -74,14 +79,9 @@
         "title": "In Manchester, Premier League superiority is now separated by Haaland’s cutting edge",
         "url": "https://www.theguardian.com/football/2026/sep/14/haalands-cutting-edge-separates-the-manchester-clubs",
         "source": "The Guardian"
-      },
-      {
-        "title": "VAR controversy decides Manchester derby as City keep pace with Arsenal – Football Weekly",
-        "url": "https://www.theguardian.com/football/audio/2026/sep/14/football-weekly-podcast-manchester-derby-var-controversy-city-united-arsenal",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:34.671972+00:00"
+    "fetched_at": "2026-09-16T11:27:37.254151+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,14 +90,19 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Elche versus Real Madrid — 20:30",
-      "match": "Elche versus Real Madrid — 20:30",
+      "fixture": "Spanish La Liga: Atletico Madrid versus Real Madrid — 15:15 (Sunday 20th September)",
+      "match": "Atletico Madrid versus Real Madrid — 15:15",
       "competition": "Spanish La Liga",
-      "date": "",
+      "date": "Sunday 20th September",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Espí saves Real Madrid once again in stoppage time",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html",
+        "source": "Marca"
+      },
       {
         "title": "Mourinho's fantastic five",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/14/mourinho-s-fantastic-five.html",
@@ -117,14 +122,9 @@
         "title": "Former Real Madrid player exposes the team's problems: \"One looks at the other and says if he doesn't move, neither do I\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/former-real-madrid-player-exposes-the-team-s-problems-one-looks-at-the-other-and-says-if-he-doesn-t-move-neither-do-i.html",
         "source": "Marca"
-      },
-      {
-        "title": "Diomande raises the first suspicions: \"His technical precision is far too poor\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/diomande-raises-the-first-suspicions-his-technical-precision-is-far-too-poor.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:35.765650+00:00"
+    "fetched_at": "2026-09-16T11:27:38.821320+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "F1 to have 10 sprint races in 2027, including Monaco",
+        "url": "https://www.bbc.com/sport/formula1/articles/crz9zvn5lzzpo",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "How did they get the Madring track so wrong? - F1 Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/c4g7pljy4neo",
@@ -161,13 +166,8 @@
         "title": "Honda changes F1 design boss after slow start to return",
         "url": "https://www.bbc.com/sport/formula1/articles/cpved014n83o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Antonelli wins as Norris loses out under virtual safety car",
-        "url": "https://www.bbc.com/sport/formula1/articles/c5yeln1j175o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-15T12:11:37.011794+00:00"
+    "fetched_at": "2026-09-16T11:27:40.948839+00:00"
   }
 }

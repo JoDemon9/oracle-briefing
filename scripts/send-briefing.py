@@ -204,7 +204,7 @@ for l in md.splitlines()[:6]:
 sports_block = grab("## ⚽", "## 🌤️") or grab("## ⚽", "## 🌌") or grab("## ⚽", "---")
 sports_summary = ""
 if sports_block:
-    m_om = re.search(r'\*\*ΟΜΟΝΟΙΑ:\*\*\s*(.+)', sports_block) or re.search(r'###\s+ΟΜΟΝΟΙΑ.*?\n\*\*Επόμενος αγώνας:\*\*\s*(.+)', sports_block)
+    m_om = re.search(r'\*\*ΟΜΟΝΟΙΑ:\*\*\s*(.+)', sports_block) or re.search(r'###\s+ΟΜΟΝΟΙΑ[\s\S]*?\*\*Επόμενος αγώνας:\*\*\s*([^\n\r]+)', sports_block)
     if m_om:
         raw_om = m_om.group(1).strip()
         # Convert markdown links to HTML

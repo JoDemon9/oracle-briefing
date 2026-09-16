@@ -738,5 +738,45 @@
   "https://www.politico.eu": {
     "image": "https://www.politico.eu/wp-content/themes/politico/assets/images/politico-billboard.png",
     "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.cnbc.com/2026/09/16/treasury-yield-bond-market-fed-decision.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108363128-17894885332026-09-15t160320z_883427878_rc2pjnai9xue_rtrmadp_0_usa-stocks.jpeg?v=1789488721&amp;w=1920&amp;h=1080",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://www.philenews.com/oikonomia/epicheiriseis/article/1771055/theocharis-ellada-ke-kipros-os-enieos-ikonomikos-choros-sto-ipsilotero-simio-i-ependitikes-schesis/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/CHA_7006-scaled.jpg",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://cyprus-mail.com/2026/09/16/cyprus-building-boom-rolls-on-as-permits-top-e2-1bn": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2024/02/Cyprus-Business-Now-property-real-estate-construction-3.jpg",
+    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+  },
+  "https://cyprus-mail.com/2026/09/16/cyprus-wage-growth-outpaces-euro-area-and-eu-averages": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/10/cash-money-euro-notes-finance-banking-1-wages-salary-3.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ"
+  },
+  "https://cyprus-mail.com/2026/09/16/ai-should-serve-people-not-replace-them-says-cypriot-deputy-minister": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/nicodemos.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://cyprus-mail.com/2026/09/16/cabinet-adopts-social-media-action-plan-to-protect-the-young": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/05/social-media.jpg",
+    "category": "ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqx2zpj4y525o": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b490/live/dc850210-b1b4-11f1-b1d1-571ed4d7ff2c.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.cnbc.com/2026/09/16/intel-sk-hynix-us-memory-chips.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108315138-17804039612026-06-02t070118z_913331550_rc2jllarvolb_rtrmadp_0_computex-intel.jpeg?v=1780403995&amp;w=1920&amp;h=1080",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.dw.com/en/magyar-vs-moscow-hungary-toughens-stance-toward-russia/a-79223424": {
+    "image": "https://static.dw.com/image/78450950_6.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.cnbc.com/2026/09/15/scott-bessent-house-hearing-economy-midterms.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108363045-17894826952026-09-15t142819z_1921749020_rc2qjnay5tj4_rtrmadp_0_usa-treasury-bessent.jpeg?v=1789482723&amp;w=1920&amp;h=1080",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
   }
 }
