@@ -8,7 +8,9 @@
   <meta http-equiv="Expires" content="0">
   <title>THE ORACLE SOVEREIGN — Τετάρτη, 16 Σεπτεμβρίου 2026</title>
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>tailwind.config = { darkMode: 'class' };</script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
   <script>
     (function () {
       var s = localStorage.getItem('oracle-theme');
@@ -18,6 +20,7 @@
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
     html {
       font-size: 15px;
     }
@@ -33,38 +36,411 @@
       --accent: #8a5320;
       --up: #1f6b3f;
       --down: #a3282b;
+      --s1: 4px;
+      --s2: 8px;
+      --s3: 12px;
+      --s4: 16px;
+      --s5: 24px;
+      --s6: 32px;
+      --s7: 48px;
+      --s8: 64px;
+      --r-sm: 4px;
       --r-md: 8px;
+
+      /* Compatible fallbacks */
+      --paper-bg: var(--paper);
+      --paper-card: var(--paper-raised);
+      --paper-border: var(--rule);
+      --ink-dark: var(--ink);
+      --ink-muted: var(--ink-quiet);
+      --accent-gold: var(--accent);
+      --accent-blue: var(--accent);
+      --accent-red: var(--down);
+      --accent-green: var(--up);
     }
+
     .dark {
       --paper: #14120e;
       --paper-raised: #1c1a15;
-      --rule: #2e2920;
-      --rule-strong: #4a4233;
-      --ink: #ede8dc;
-      --ink-body: #cfc8ba;
-      --ink-quiet: #8c8373;
-      --accent: #d4954b;
-      --up: #43a047;
-      --down: #e53935;
-    }
-    body { background-color: var(--paper); color: var(--ink-body); font-family: 'Inter', system-ui, sans-serif; }
-    .font-masthead { font-family: 'Cinzel', serif; }
-    .font-editorial { font-family: 'Newsreader', serif; }
-    .t-masthead { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 4.5vw, 2.85rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }
-    .t-section { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }
-    .card { background-color: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--r-md); }
-    .ticker-wrap { overflow: hidden; white-space: nowrap; }
-    .ticker-content { display: inline-block; animation: tickerAnimation 40s linear infinite; }
-    .ticker-wrap:hover .ticker-content { animation-play-state: paused; }
-    @keyframes tickerAnimation { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      --rule: #33302a;
+      --rule-strong: #4a463d;
+      --ink: #f4f1e8;
+      --ink-body: #ddd8cc;
+      --ink-quiet: #948d7e;
+      --accent: #d69a5c;
+      --up: #56b37c;
+      --down: #e0736f;
 
-    details > summary { list-style: none; }
-    details > summary::-webkit-details-marker { display: none; }
-    details[open] summary .expand-icon { transform: rotate(180deg); }
+      /* Compatible fallbacks */
+      --paper-bg: var(--paper);
+      --paper-card: var(--paper-raised);
+      --paper-border: var(--rule);
+      --ink-dark: var(--ink);
+      --ink-muted: var(--ink-quiet);
+      --accent-gold: var(--accent);
+      --accent-blue: var(--accent);
+      --accent-red: var(--down);
+      --accent-green: var(--up);
+    }
+
+    body {
+      font-family: 'Newsreader', Georgia, serif;
+      background-color: var(--paper);
+      color: var(--ink-body);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    /* Typographical scale (compact & elegant executive sizing) */
+    .t-masthead {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
+      line-height: 0.98;
+      letter-spacing: .05em;
+    }
+    .t-section {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    .t-lead {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+      color: var(--ink);
+    }
+    .t-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.08rem;
+      line-height: 1.3;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    .t-body {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 400;
+      font-size: 0.985rem;
+      line-height: 1.6;
+      color: var(--ink-body);
+      max-width: 68ch;
+    }
+    .t-body-sm {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 400;
+      font-size: 0.885rem;
+      line-height: 1.58;
+      color: var(--ink-body);
+    }
+    .t-meta {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 500;
+      font-size: .72rem;
+      line-height: 1.4;
+      color: var(--ink-quiet);
+    }
+    .t-num {
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum";
+    }
+
+    /* Cards */
+    .card, .editorial-card {
+      background-color: var(--paper-raised);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-md);
+      transition: border-color 0.2s ease;
+    }
+    .card:hover, .editorial-card:hover {
+      border-color: var(--rule-strong);
+    }
+    .card--hero {
+      background-color: var(--paper-raised);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-md);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Drop cap for lead story */
+    .lead-body::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 3.4rem;
+      line-height: 0.8;
+      float: left;
+      margin-top: 0.12em;
+      margin-right: 0.18em;
+      margin-bottom: -0.05em;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Focus & Accessibility */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* ============================================== */
+    /* BESPOKE BROADSHEET PRINT / PDF EXPORT          */
+    /* Financial Times / NYT quality broadsheet layout */
+    /* ============================================== */
+    @media print {
+      @page {
+        size: A4;
+        margin: 1.2cm 1.5cm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        background-color: #ffffff !important;
+        color: #0a0a0a !important;
+        font-size: 9.5pt !important;
+        line-height: 1.45 !important;
+        font-family: 'Newsreader', 'Georgia', 'Times New Roman', serif !important;
+      }
+
+      /* Hide all interactive / digital-only elements */
+      .ticker-wrap,
+      nav,
+      #mainNav,
+      #themeToggle,
+      #themeToggleNav,
+      #archiveSearch,
+      #searchResults,
+      button,
+      input[type="range"],
+      a[href*="youtube.com"],
+      .print\:hidden,
+      .no-print,
+      footer {
+        display: none !important;
+      }
+
+      /* Force show all expandable content */
+      details {
+        display: block !important;
+      }
+      details summary {
+        display: none !important;
+      }
+      details > div {
+        display: block !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-top: 0.3em !important;
+      }
+
+      /* Broadsheet masthead */
+      .font-masthead {
+        font-size: 28pt !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.02em !important;
+        border-bottom: 3pt double #000 !important;
+        padding-bottom: 0.3em !important;
+        margin-bottom: 0.5em !important;
+        text-align: center !important;
+      }
+
+      /* Section headers — broadsheet rules */
+      .t-section {
+        font-size: 13pt !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        border-bottom: 2pt solid #000 !important;
+        padding-bottom: 0.15em !important;
+        margin-bottom: 0.6em !important;
+        page-break-after: avoid !important;
+      }
+
+      /* Card layout — clean flat broadsheet panels */
+      .card, .card--hero, .editorial-card {
+        border: none !important;
+        border-bottom: 0.5pt solid #ccc !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0.4em 0 !important;
+        margin-bottom: 0.5em !important;
+        page-break-inside: avoid !important;
+        background: transparent !important;
+      }
+
+      /* Headlines in print */
+      .t-lead {
+        font-size: 16pt !important;
+        font-weight: 800 !important;
+        line-height: 1.15 !important;
+      }
+      .t-title {
+        font-size: 12pt !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+      }
+
+      /* Body text — newspaper column style */
+      .t-body, .t-body-sm {
+        font-size: 9pt !important;
+        line-height: 1.4 !important;
+        text-align: justify !important;
+        hyphens: auto !important;
+      }
+
+      /* Meta / source lines */
+      .t-meta {
+        font-size: 7.5pt !important;
+        color: #666 !important;
+      }
+
+      /* Links — print as black, no decoration */
+      a {
+        text-decoration: none !important;
+        color: #0a0a0a !important;
+      }
+
+      /* Grid columns → stacked for print */
+      .grid {
+        display: block !important;
+      }
+
+      /* Images — constrained, captioned */
+      img {
+        max-height: 160px !important;
+        width: auto !important;
+        margin: 0 auto 0.3em !important;
+        display: block !important;
+        border: 0.5pt solid #ddd !important;
+      }
+
+      /* Dashboard table compact */
+      table {
+        font-size: 8pt !important;
+        border-collapse: collapse !important;
+      }
+      th, td {
+        padding: 2pt 4pt !important;
+        border-bottom: 0.5pt solid #ddd !important;
+      }
+
+      /* Sports cards — compact inline */
+      .bg-gradient-to-br {
+        background: transparent !important;
+        color: #000 !important;
+      }
+
+      /* Weather — inline compact */
+      #weatherGrid {
+        display: block !important;
+      }
+
+      /* Page breaks */
+      h2 {
+        page-break-after: avoid !important;
+      }
+      article {
+        page-break-inside: avoid !important;
+      }
+
+      /* Add print footer with branding */
+      body::after {
+        content: "THE ORACLE SOVEREIGN — Confidential Executive Briefing — © 2026";
+        display: block;
+        text-align: center;
+        font-size: 7pt;
+        color: #999;
+        margin-top: 1cm;
+        border-top: 0.5pt solid #ccc;
+        padding-top: 0.3em;
+      }
+    }
+
+    .ticker-wrap {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-content {
+      display: inline-block;
+      animation: tickerAnimation 40s linear infinite;
+    }
+
+    .ticker-wrap:hover .ticker-content {
+      animation-play-state: paused;
+    }
+
+    @keyframes tickerAnimation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-content { animation: none; }
+      body { transition: none; }
+    }
+    [id] { scroll-margin-top: 5rem; }
+    @media (max-width: 640px) { [id] { scroll-margin-top: 5rem; } }
+
+    /* Smart Navigation Header (Headroom Auto-hide) */
+    #mainNav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+      will-change: transform;
+    }
+    #mainNav.nav-hidden {
+      transform: translateY(-100%);
+      box-shadow: none !important;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary .expand-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Executive 60-Second Scan Mode */
+    body.scan-mode article:not(:first-of-type),
+    body.scan-mode #world,
+    body.scan-mode #sports,
+    body.scan-mode #portfolio,
+    body.scan-mode #developments,
+    body.scan-mode #rates-and-tools,
+    body.scan-mode details.depth,
+    body.scan-mode #houseSearchSection,
+    body.scan-mode .ticker-wrap {
+      display: none !important;
+    }
+    body.scan-mode #top-story {
+      border: 2px solid var(--accent);
+      border-radius: var(--r-md);
+      padding: 1.25rem;
+      background: var(--paper-raised);
+    }
   </style>
 </head>
 <body class="antialiased min-h-screen">
-  <!-- TOP BAR -->
+
+  <!-- TOP BAR & STATUS -->
   <div class="bg-[var(--paper-raised)] border-b border-[var(--rule)] text-xs py-1.5 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex flex-wrap items-center gap-3">
@@ -102,31 +478,53 @@
     </div>
     
       </div>
-      <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
-        <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
-        <span>·</span>
-        <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span></span>
-        <span>·</span>
-        <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span></span>
+      <div class="flex items-center gap-4 t-meta text-[var(--ink-quiet)]">
+        
+    <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
+      <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span> <span id="statusLON" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span> <span id="statusNYC" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span> <span id="statusTYO" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+    </div>
+    
+        <span>📍 Λεμεσός</span>
+        <span>⏱️ ~7'</span>
+        <button id="themeToggle" class="px-2.5 py-1 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition t-meta" aria-pressed="false" aria-label="Εναλλαγή θέματος">
+          🌓 Θέμα
+        </button>
       </div>
-      <button id="themeToggle" class="px-2 py-1 rounded border border-[var(--rule)] text-xs hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος">🌓</button>
     </div>
   </div>
 
   <!-- MASTHEAD -->
-  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 bg-[var(--paper-raised)] text-center">
-    <div class="max-w-5xl mx-auto">
-      <div class="flex justify-between items-center text-xs uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
+  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 text-center bg-[var(--paper-raised)]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex justify-between items-center t-meta uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
         <div>ΕΤΟΣ 2026 · DAILY BRIEFING</div>
-        <div class="font-bold text-[var(--accent)]">☀️ MIDDAY EXECUTIVE PULSE</div>
+        <div class="font-bold text-[var(--accent)]">ΕΜΠΙΣΤΕΥΤΙΚΟ BRIEFING</div>
         <div>ONE-READER EDITION</div>
       </div>
-      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase">THE ORACLE SOVEREIGN</h1>
-      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto">
-        Μεσημβρινός Παλμός Ειδήσεων, Deal Wire, Ενδιάμεσες Τιμές Αγορών & Απογευματινές Προτεραιότητες
+
+      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase text-center">
+        THE ORACLE SOVEREIGN
+      </h1>
+      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto text-center">
+        Ημερήσια Εφημερίδα Στρατηγικής, Αγορών, Κυπριακής Οικονομίας & Διεθνών Εξελίξεων
       </p>
-      <div class="flex flex-wrap justify-center items-center gap-3 mt-4 pt-3 border-t border-[var(--rule)] text-xs text-[var(--ink-quiet)] font-mono">
-        <span>📅 16 Σεπτεμβρίου 2026</span> <span>·</span> <span>⏰ 13:30 ώρα Κύπρου</span> <span>·</span> <span>⏱️ 4' ανάγνωση</span>
+
+      <div class="flex flex-wrap justify-center items-center gap-3 mt-5 pt-3 border-t border-[var(--rule)] t-meta text-[var(--ink-quiet)]">
+        <span>🇨🇾 Κύπρος & Ακίνητα</span>
+        <span>·</span>
+        <span>🌍 Γεωπολιτική</span>
+        <span>·</span>
+        <span>📊 Αγορές & Euribor</span>
+        <span>·</span>
+        <span>⚽ Ομόνοια, Clubs & Formula 1</span>
+        <span>·</span>
+        <span>🌤️ Καιρός Λεμεσού</span>
       </div>
     </div>
   </header>
@@ -140,7 +538,7 @@
 
   
     <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
-    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] text-xs">
+    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] t-meta">
       <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
         <div class="flex items-center gap-2 flex-shrink-0">
           <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
@@ -173,11 +571,63 @@
         <a href="#deadlines" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">📅 Προθεσμίες</a>
       </div>
 
-    <!-- 1. BREAKING & DEAL WIRE -->
-    <section id="midday-news" class="scroll-mt-24">
+      <!-- Search Input Container with Instant Dropdown & Actions -->
+      <div class="relative flex items-center gap-1.5 flex-shrink-0 ml-auto sm:ml-0">
+        <button id="scanModeToggle" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--accent)] font-semibold transition flex items-center gap-1" title="Εναλλαγή σε 60-Second Scan">
+          <span>⚡</span> <span class="hidden md:inline">60″ Scan</span>
+        </button>
+        <button onclick="window.print()" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition flex items-center gap-1" title="Εκτύπωση ή Αποθήκευση σε Broadsheet PDF" aria-label="Εκτύπωση σελίδας">
+          <span>📄</span> <span class="hidden md:inline">PDF Broadsheet</span>
+        </button>
+        <div class="relative">
+          <label for="archiveSearch" class="sr-only">Αναζήτηση στο αρχείο</label>
+          <input type="text" id="archiveSearch" placeholder="🔍 Αναζήτηση στο αρχείο..." 
+                 class="t-meta px-3 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] w-32 sm:w-56 focus:w-44 sm:focus:w-60 transition-all shadow-xs">
+          <!-- Live Search Results Dropdown -->
+          <div id="searchResults" class="hidden absolute right-0 top-full mt-2 w-80 sm:w-96 max-h-96 overflow-y-auto bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl shadow-xl z-50 p-2 text-xs space-y-2">
+          </div>
+        </div>
+        <button id="themeToggleNav" class="t-meta px-2 py-1.5 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος" aria-label="Εναλλαγή θέματος">
+          🌓
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER (NEWS-FIRST HIERARCHY) -->
+  <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- 🎙️ THE SOVEREIGN EXECUTIVE AUDIO BRIEFING -->
+    <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
+      <div class="flex items-center gap-3.5">
+        <button id="audioPlayBtn" class="w-11 h-11 rounded-full bg-[var(--accent)] text-white flex items-center justify-center shadow hover:opacity-90 transition font-bold text-lg flex-shrink-0" aria-label="Αναπαραγωγή ηχητικής σύνοψης">
+          ▶
+        </button>
+        <div>
+          <div class="t-meta font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>🎙️ Ακρόαση Πρωινής Σύνοψης (The Sovereign Audio Briefing)</span>
+            <span id="audioLiveBadge" class="hidden text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">LIVE</span>
+          </div>
+          <div id="audioStatusText" class="t-meta text-[var(--ink-quiet)]">
+            Επιτελική σύνοψη ~2 λεπτών · Πατήστε Play για φωνητική ανάγνωση
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="audioSpeedBtn" class="t-meta font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
+          1.0x
+        </button>
+        <button id="audioStopBtn" class="t-meta px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
+          ⏹ Διακοπή
+        </button>
+      </div>
+    </div>
+
+    <!-- ==================== ⭐ 1. ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ (HERO NEWS) ==================== -->
+    <section id="top-story" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>⚡</span> <span>Μεσημβρινό Breaking & Deal Wire</span>
+          <span>⭐</span> <span>Το Θέμα της Ημέρας</span>
         </h2>
         <span class="t-meta ml-auto uppercase">ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ</span>
       </div>
@@ -228,9 +678,6 @@
                 </div>
               </details>
         
-            <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-              <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
-              Προετοιμασία των μονοθεσίων και αεροδυναμικές αναβαθμίσεις για το επόμενο Grand Prix.
             </div>
 
             <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--rule)] mt-4">
@@ -246,13 +693,12 @@
       </div>
     </section>
 
-    <!-- 2. MIDDAY MARKET PULSE -->
-    <section id="market-pulse" class="scroll-mt-24">
+    <!-- ==================== 🇨🇾 2. ΚΥΠΡΟΣ (NEWS LEAD) ==================== -->
+    <section id="cyprus" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>📊</span> <span>Midday Market Pulse (ΧΑΚ · ATHEX · Ευρώπη & Wall Street)</span>
+          <span>🇨🇾</span> <span>Κύπρος</span>
         </h2>
-        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">LIVE APPRAISAL</span>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
@@ -294,25 +740,8 @@
     </details>
     
             </div>
-                  
-            <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-              <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
-              Όλα δείχνουν..."Φάμπι"
-            </div>
-                  
-            <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-              <span>Επίσημη Πηγή:</span>
-              <a href="https://www.cfa.com.cy/Gr/news/53637" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">ΚΟΠ / CFA</a>
-            </div>
-                </div>
-              </div>
-              <div class="p-4 pt-0">
-                <a href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
-                  <span>▶</span> <span>Highlights Ομόνοιας στο YouTube</span>
-                </a>
-              </div>
-            </article>
+          </div>
+          <div class="p-5 sm:p-6 pt-0">
             
         <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
           <a href="https://www.philenews.com/oikonomia/epicheiriseis/article/1771055/theocharis-ellada-ke-kipros-os-enieos-ikonomikos-choros-sto-ipsilotero-simio-i-ependitikes-schesis/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
@@ -362,25 +791,8 @@
     </details>
     
             </div>
-                  
-            <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-              <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
-              Προετοιμασία των μονοθεσίων και αεροδυναμικές αναβαθμίσεις για το επόμενο Grand Prix.
-            </div>
-                  
-            <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-              <span>Επίσημη Πηγή:</span>
-              <a href="https://www.formula1.com/en/racing/2026/spain.html" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">Formula1.com</a>
-            </div>
-                </div>
-              </div>
-              <div class="p-4 pt-0">
-                <a href="https://www.youtube.com/results?search_query=Formula+1+highlights+2026" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
-                  <span>▶</span> <span>Highlights Formula 1 στο YouTube</span>
-                </a>
-              </div>
-            </article>
+          </div>
+          <div class="p-5 sm:p-6 pt-0">
             
         <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
           <a href="https://cyprus-mail.com/2026/09/16/cyprus-building-boom-rolls-on-as-permits-top-e2-1bn" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
@@ -537,7 +949,7 @@
           <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
         </div>
           </div>
-        </section>
+        </article>
         
 
         <article class="card border-l-4 border-[var(--accent)] overflow-hidden flex flex-col justify-between">
@@ -577,47 +989,6 @@
       </div>
     </details>
     
-        <!-- ==================== 🌤️ 4. ΚΑΙΡΟΣ — ΛΕΜΕΣΟΣ ==================== -->
-        <section id="weather" class="scroll-mt-24">
-          <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-            <h2 class="t-section flex items-center gap-2">
-              <span>🌤️</span> <span>Καιρός — Λεμεσός (Μεσημβρινές Συνθήκες)</span>
-            </h2>
-            <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">METEO RADAR</span>
-          </div>
-          <div class="card p-5 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-amber-500/5 border border-amber-500/20 rounded-2xl shadow-xs">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
-                  <span class="text-xl flex-shrink-0 mt-0.5">🌡️</span>
-                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-                    <span class="font-bold text-[var(--ink)]">Θερμοκρασία::</span> 29°C (Μέγιστη ημέρας)
-                  </div>
-                </div>
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
-                  <span class="text-xl flex-shrink-0 mt-0.5">💧</span>
-                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-                    <span class="font-bold text-[var(--ink)]">Υγρασία::</span> 66%
-                  </div>
-                </div>
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
-                  <span class="text-xl flex-shrink-0 mt-0.5">💨</span>
-                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-                    <span class="font-bold text-[var(--ink)]">Άνεμος::</span> 11 km/h (Νοτιοδυτικός)
-                  </div>
-                </div>
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 dark:bg-amber-950/30">
-                  <span class="text-xl flex-shrink-0 mt-0.5">⚠️</span>
-                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-                    <span class="font-bold text-[var(--ink)]">Προειδοποιήσεις::</span> Δείκτης UV: 7 (Υψηλός — συνιστάται αποφυγή παρατεταμένης έκθεσης)
-                  </div>
-                </div>
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-[var(--paper)] border border-[var(--rule)]">
-                  <span class="text-xl flex-shrink-0 mt-0.5">☀️</span>
-                  <div class="text-xs text-[var(--ink-body)] leading-relaxed">
-                    <span class="font-bold text-[var(--ink)]">Πρόγνωση υπόλοιπης ημέρας::</span> Γενικά αίθριος καιρός με τοπικές θαλάσσιες αύρες στην παραλιακή ζώνη.
-                  </div>
-                </div>
             </div>
           </div>
           <div class="p-5 sm:p-6 pt-0">
@@ -631,50 +1002,15 @@
           </div>
         </article>
         
+      </div>
+    </section>
 
-    
-        <!-- ==================== 🗂️ 5. ΜΕΣΗΜΒΡΙΝΕΣ ΕΞΕΛΙΞΕΙΣ ==================== -->
-        <section id="developments" class="scroll-mt-24">
-          <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-            <h2 class="t-section flex items-center gap-2">
-              <span>🗂️</span> <span>Μεσημβρινές Εξελίξεις</span>
-            </h2>
-            <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">STRATEGIC HIGHLIGHTS</span>
-          </div>
-          <ul class="space-y-2.5">
-            
-            <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
-              <span class="w-2.5 h-2.5 rounded-full bg-[var(--accent)] flex-shrink-0 mt-1.5"></span>
-              <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-                <strong class="font-bold text-[var(--ink)]">Τραπεζικός Τομέας & ΧΑΚ:</strong> Αυξημένη δραστηριότητα στους τραπεζικούς τίτλους εν μέσω ευρωπαϊκών ανακατατάξεων και σταθερής κεφαλαιακής επάρκειας.
-              </div>
-            </li>
-            
-            <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
-              <span class="w-2.5 h-2.5 rounded-full bg-[var(--accent)] flex-shrink-0 mt-1.5"></span>
-              <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-                <strong class="font-bold text-[var(--ink)]">Ενέργεια & Καύσιμα:</strong> Σταθεροποίηση των διεθνών τιμών του αργού πετρελαίου και παρακολούθηση των εφοδιαστικών αλυσίδων.
-              </div>
-            </li>
-            
-            <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
-              <span class="w-2.5 h-2.5 rounded-full bg-[var(--accent)] flex-shrink-0 mt-1.5"></span>
-              <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-                <strong class="font-bold text-[var(--ink)]">Γεωπολιτικές Εξελίξεις:</strong> Διπλωματική κινητικότητα στη Λευκωσία και συντονισμός με περιφερειακούς εταίρους στην Ανατολική Μεσόγειο.
-              </div>
-            </li>
-            
-          </ul>
-        </section>
-        
-
-    <!-- 6. PRIORITIES -->
-    <section id="priorities" class="scroll-mt-24">
+    <!-- ==================== 🌍 3. ΔΙΕΘΝΗ ==================== -->
+    <section id="world" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>🎯</span> <span>Απογευματινές Προτεραιότητες</span>
+          <span>🌍</span> <span>Διεθνή</span>
         </h2>
-        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">TIMELINE</span>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
@@ -907,16 +1243,15 @@
           </div>
         </article>
         
-        </ul>
       </div>
     </section>
 
-    <!-- CALLOUT TO MORNING & EVENING -->
-    <div class="card p-6 bg-gradient-to-r from-amber-500/5 to-[var(--paper-raised)] border-l-4 border-[var(--accent)] flex flex-wrap items-center justify-between gap-4">
-      <div>
-        <div class="text-xs font-mono font-bold uppercase text-[var(--accent)] mb-1">🏛️ ΟΛΕΣ ΟΙ ΕΚΔΟΣΕΙΣ ΤΗΣ ΗΜΕΡΑΣ</div>
-        <h3 class="font-editorial text-lg font-bold text-[var(--ink)]">Πρωινό Broadsheet & Απογευματινή Σύνοψη</h3>
-        <p class="text-xs text-[var(--ink-body)]">Συνεχής κάλυψη καθ' όλη τη διάρκεια της ημέρας με πλήρη ανάλυση, επιτόκια και closing bell.</p>
+    <!-- ==================== ⚽ 4. ΑΘΛΗΤΙΚΑ & FORMULA 1 ==================== -->
+    <section id="sports" class="scroll-mt-24 my-8 sm:my-12">
+      <div class="flex items-center gap-2 mb-6 pb-3 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🏆</span> <span>Αθλητικός Παλμός & Formula 1</span>
+        </h2>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8">
         
@@ -1911,28 +2246,506 @@
     </div>
   </div>
   <script id="initialWireData" type="application/json">
-[{"id": "df5f50e4d6626b3ceeb7812be4206f2faa492762b27e6f4a47a3394fbc3e4546", "title": "Do not inhale! How wildfire smoke 'affects the whole body'", "link": "https://www.dw.com/en/do-not-inhale-how-wildfire-smoke-affects-the-whole-body/a-76039654?maca=en-rss-en-all-1573-rdf", "snippet": "Wildfires destroy lives and livelihoods. But survivors and firefighters also suffer long-term harm to their health. A growing body of research suggests particulate matter (PM2.5) i", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "77525a818f2ee93f9713c18ac7eaed036351fcc05b853d69415c25deacdcc4cf", "title": "In drought-stricken France, tankers supply drinking water", "link": "https://www.dw.com/en/in-drought-stricken-france-tankers-supply-drinking-water/a-78420016?maca=en-rss-en-all-1573-rdf", "snippet": "France is seeing water shortages in regions that usually have plenty of supply. This summer's extreme heat is exposing how unprepared much of the country, and Europe, is for increa", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "4f655ef108c54e3dbe3352a17fc9cc72b77a756ab043c6e013425886f554250c", "title": "Evergrande founder Hui Ka Yan sentenced to life in prison", "link": "https://www.dw.com/en/evergrande-founder-hui-ka-yan-sentenced-to-life-in-prison/a-78439153?maca=en-rss-en-all-1573-rdf", "snippet": "A Chinese court ordered the former billionaire's assets to be confiscated and fined Evergrande-related companies billions of dollars.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "2be0388a9eaa9f856e0c2d542321e2ad286bc2373b4cfc4193046c1368aa3f29", "title": "Why Germany's gas storage levels are so low", "link": "https://www.dw.com/en/why-germany-s-gas-storage-levels-are-so-low/a-78440677?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's gas storage facilities are only 50% full as traders bet that wholesale prices will fall if the Iran war ends. With around three months until winter, DW asks whether the c", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "a2a8d0671f3bba49c119c1452e4d9cb079dab75d5e757397c030134c3ade49e6", "title": "Sydney Marathon medal wrongly shows German landmark", "link": "https://www.dw.com/en/sydney-marathon-medal-wrongly-shows-german-landmark/a-78473705?maca=en-rss-en-all-1573-rdf", "snippet": "A medal minted for finishers in the Sydney Marathon features a skyline of the city — with one landmark from rather far away. Organizers say the muddle only makes the medal \"a littl", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "19e881cf2c69acd3d600829694957521c266f228c79f1d212f0f8dc19bff2c06", "title": "Tim Curry, of 'The Rocky Horror Picture Show,' dies at 80", "link": "https://www.dw.com/en/tim-curry-of-the-rocky-horror-picture-show-dies-at-80/a-78514945?maca=en-rss-en-all-1573-rdf", "snippet": "The gender-bending role as Dr. Frank-N-Furter put Curry on the map in 1975. He then went on to play a number of villainous roles like Gomez Addams, Pennywise and Bill Sikes, but al", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "26f21b03911a928944de39184417c82495d367905cad4dd52d51ec18b6d456d1", "title": "Was the heat of this summer really 'normal?'", "link": "https://www.dw.com/en/was-the-heat-of-this-summer-really-normal/a-78513682?maca=en-rss-en-all-1573-rdf", "snippet": "Some political messaging denies the role of human-caused climate change in this summer's extreme heat. The science tells a different story.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c6869d65c9ef6a7184a05790ae3984d5c30bdfa13331c315022851844171a88b", "title": "Tragedy in Nepal: How do flash floods happen?", "link": "https://www.dw.com/en/tragedy-in-nepal-how-do-flash-floods-happen/a-78526421?maca=en-rss-en-all-1573-rdf", "snippet": "When flash floods sweep through the Himalayas, there is often little time to react. Scientists are working to understand the risks and improve early warning systems.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "ae9d9fd2285b4cb59dfe8ae163993b360eb9a44e828b9a6cabcd9027ce22c193", "title": "Canada's Carney holds firm against Trump tariffs", "link": "https://www.dw.com/en/canada-s-carney-holds-firm-against-trump-tariffs/a-78542754?maca=en-rss-en-all-1573-rdf", "snippet": "Canada is facing new US import penalties after Prime Minister Mark Carney refused to match US tariffs on China. Other countries are watching as the Trump trade clash turns into a f", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "94b80f99031ed3d5420b5c90521ac32b68d38172114c7caf51ac2d59885b0540", "title": "Can new Apple CEO John Ternus fix the tech giant's AI woes?", "link": "https://www.dw.com/en/can-new-apple-ceo-john-ternus-fix-the-tech-giant-s-ai-woes/a-78575898?maca=en-rss-en-all-1573-rdf", "snippet": "John Ternus is just the third Apple CEO in 30 years. His primary challenge is to correct the company's faltering AI strategy to preserve its position as a big tech leader.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "57dc591df6b1f102daa2dbb9215ed1027a77191d169e422fc3c16f063150e18f", "title": "Austria women ice hockey team fight for future generations", "link": "https://www.dw.com/en/austria-women-ice-hockey-team-fight-for-future-generations/a-78771578?maca=en-rss-en-all-1573-rdf", "snippet": "Austria are getting ready for their first Women's Ice Hockey World Championship. But preparations have been overshadowed by a dispute about conditions, pay and getting men's cast-o", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "1fa09d2cf5393baf3bb58fb752d1ccaa1d5b3358b7637b7a4d8b2729cdc78664", "title": "Is Germany's economic slump finally over?", "link": "https://www.dw.com/en/is-germany-s-economic-slump-finally-over/a-78815447?maca=en-rss-en-all-1573-rdf", "snippet": "Despite a slew of negative headlines, the German economy has posted its best figures in years. There are reasons for optimism, but structural issues remain.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "1c0ff3041c2f09e92bc5a5c5599632cec8e5d8e8eed33c03aa85d1b2230cac0d", "title": "2026 Beethoven Festival evokes a sense of home", "link": "https://www.dw.com/en/2026-beethoven-festival-evokes-a-sense-of-home/a-78892997?maca=en-rss-en-all-1573-rdf", "snippet": "The motto of this year's classical music festival in Bonn is \"Home/At Home,\" featuring musicians from diverse cultures presenting pieces from their homelands.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "e8a36f319a0edb653177e5bde7d6ad510397ac85b22c97af1a8ed7cc320d75a6", "title": "Why North Korea's women's football team is so good", "link": "https://www.dw.com/en/why-north-korea-s-women-s-football-team-is-so-good/a-70313505?maca=en-rss-en-all-1573-rdf", "snippet": "North Korea's young footballers enter the U-20 World Cup in Poland as defending champions — the 2024 title was their third. Why is the isolated state so good at the game?", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "4d32bfcd44bc185bedc0e70e893d8475877fbfb59cb73347651ab54e96ef9eed", "title": "Croatia: Toxic waste protest draws tens of thousands", "link": "https://www.dw.com/en/croatia-toxic-waste-protest-draws-tens-of-thousands/a-79049228?maca=en-rss-en-all-1573-rdf", "snippet": "The Zagreb demonstrators demanded that the government come up with a plan to clear illegal toxic waste in 20 days. Prime Minister Plenkovic has promised to tackle the issue.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "db1b7183dbfb19e879b958a593b19593351d3b6d43b0556f45c631ec3f77cd93", "title": "Hungary begins hunt for corrupt regime's billions", "link": "https://www.dw.com/en/hungary-begins-hunt-for-corrupt-regime-s-billions/a-79047176?maca=en-rss-en-all-1573-rdf", "snippet": "Hungary's new prime minister promised he would recover billions stolen or diverted by the previous administration. A new \"super authority\" is about to begin that work. Its success ", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "ade7846cb707fa4b52fdb3f0712e78974ee4498bf6810b7770cebbfbdfaaa045", "title": "Germany, Kosovo unite against ticks carrying deadly virus", "link": "https://www.dw.com/en/germany-kosovo-unite-against-ticks-carrying-deadly-virus/a-78655223?maca=en-rss-en-all-1573-rdf", "snippet": "Germany has high-security labs while Kosovo has Hyalomma ticks and experience with the deadly Crimean-Congo hemorrhagic fever. Working together, German and Kosovar scientists are f", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "7c4b8fee285798fc241c51ff40993f6a4ef9b3339eef28179633f73dfd2f8158", "title": "Nicaragua challenges German arms exports to Israel at ICJ", "link": "https://www.dw.com/en/nicaragua-challenges-german-arms-exports-to-israel-at-icj/a-79148044?maca=en-rss-en-all-1573-rdf", "snippet": "Germany has asked the International Court of Justice to dismiss the case on jurisdiction grounds. It also said its arms exports to Israel were documented, published, and subject to", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "6d1537c09754c3befc3a15e0fb769ceef464bf3abfa47303850072852f584867", "title": "Egg freezing in women's football: Choice or pressure?", "link": "https://www.dw.com/en/egg-freezing-in-women-s-football-choice-or-pressure/a-79145259?maca=en-rss-en-all-1573-rdf", "snippet": "Spain's football federation is set to join a handful of clubs in paying for female players to freeze their eggs. Experts have welfare concerns.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "4e164148e8e7f207d563f4329fa81b6171b430e457be939071480cd8fc1b1bd9", "title": "BSW and AfD – a political love-hate relationship in Germany", "link": "https://www.dw.com/en/bsw-and-afd-a-political-love-hate-relationship-in-germany/a-79185782?maca=en-rss-en-all-1573-rdf", "snippet": "The Sahra Wagenknecht Alliance (BSW) could help the Alternative for Germany (AfD) into power in Saxony-Anhalt. But the BSW is riddled with infighting", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "50f4c0a04c96bab0723b868dc02fe0d391a6af8fa3ae28c0713d7c3f49e22473", "title": "Putin rejects mobilization rumors, many Russians unconvinced", "link": "https://www.dw.com/en/putin-rejects-mobilization-rumors-many-russians-unconvinced/a-79193386?maca=en-rss-en-all-1573-rdf", "snippet": "Russia’s President Vladimir Putin has dismissed rumors about military mobilization. But many Russians, including many DW users, say they are preparing for the possibility.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "47341d564dfc160a1b4c37b8cea06ce1104b68c561c32c4c21c932054114a1e3", "title": "The Bayeux Tapestry in London: What's behind the hype?", "link": "https://www.dw.com/en/the-bayeux-tapestry-in-london-what-s-behind-the-hype/a-78488629?maca=en-rss-en-all-1573-rdf", "snippet": "The exhibition of the Bayeux Tapestry at the British Museum is eagerly anticipated across the UK, as the medieval masterpiece is considered by many to be a symbol of the country's ", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c4dc902b0129ad46494725a6c05a29da01074b65b633c6d9fbc26acdf5a77c8f", "title": "Why we're still looking for dark matter", "link": "https://www.dw.com/en/why-we-re-still-looking-for-dark-matter/a-79189395?maca=en-rss-en-all-1573-rdf", "snippet": "When physicists said they may have spotted evidence of dark matter almost 100 years after it was proposed as a theory, the internet lit up. Here's why we're searching for the thing", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "b23c710eb0a0a39b19ec540dcc37d57ef929f72dfb23bae05c7f17ade6253a70", "title": "How Belarusians still find hope in a silenced country", "link": "https://www.dw.com/en/how-belarusians-still-find-hope-in-a-silenced-country/a-79127285?maca=en-rss-en-all-1573-rdf", "snippet": "The documentary \"Letters from the Silenced Country\" depicts the ongoing repression under the authoritarian regime. Director Andrei Kutsila talked to DW ahead of the film's Venice p", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "ae09093be6970bd388b194c806e732dbba0c8cca418654c4570299810deb9a48", "title": "Serbia, the conflicted EU candidate", "link": "https://www.dw.com/en/serbia-the-conflicted-eu-candidate/a-79203774?maca=en-rss-en-all-1573-rdf", "snippet": "On paper, Belgrade has pursued EU membership for years. But accession has long been stalled. The hero's farewell given to war criminal Mladic exposed just how far Serbia has aliena", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "a95bf77fca0be28e92b65a2659b96ce107d686b76977faff80caac3c02a54a3c", "title": "Magyar vs. Moscow: Hungary toughens stance toward Russia", "link": "https://www.dw.com/en/magyar-vs-moscow-hungary-toughens-stance-toward-russia/a-79223424?maca=en-rss-en-all-1573-rdf", "snippet": "Prime Minister Peter Magyar has abruptly ended the era of his predecessor's warm relations with Russia: Hungary has expelled 10 Russian diplomats. The Kremlin is considering haltin", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "3ce5ce0e86edd52ef46472297e9946717edb9014e78a59c3ab3ee35bd510a506", "title": "Scott Bessent defends Treasury intervention, Trump economy in contentious House hearing", "link": "https://www.cnbc.com/2026/09/15/scott-bessent-house-hearing-economy-midterms.html", "snippet": "Bessent defended the administration's Treasury-market intervention, economic record and AI policy while lawmakers tried to pin him down on borrowing and energy.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c1a8b6be510b32adb6ca18eb32d8b8324a3e0b77bf169de63a78727705afb03b", "title": "CNBC's The China Connection newsletter: Tech controls expand to employees", "link": "https://www.cnbc.com/2026/09/14/cnbcs-the-china-connection-newsletter-tech-controls-employees.html", "snippet": "As the U.S.-China tech rivalry simmers, Beijing is increasing restrictions on how its companies can deploy their tech talent overseas.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "6d3f504797eca716810239ff40ca394088f258461530bc44c93a412d2c538b67", "title": "Why de-dollarization discussions are more talk, less action", "link": "https://www.cnbc.com/2026/09/16/de-dollarization-brics-china-russia-trump.html", "snippet": "BRICS leaders have asserted the need to use local currencies in intra-BRICS trade to cut dependency on dollar.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "e0208d19638d915a5bf63ca3651c95b3a1ad609e13b40db737a0d4e0b5a5a8e9", "title": "Saudi pipeline closure is a brief interruption that will last days, U.S. Energy secretary tells CNBC", "link": "https://www.cnbc.com/2026/09/15/saud-arabia-east-west-pipeline-iran-war-chris-wright.html", "snippet": "The Saudis closed the East-West pipeline after it sustained damage in a drone attack launched from Iraq.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "86f26883696943b3930bcbbcd8032a69066b08bbdccf3e2a9c4aef9e7b43677f", "title": "10-year Treasury yield hits highest level since 2007 as traders bet a Fed rate hike is coming", "link": "https://www.cnbc.com/2026/09/15/10-year-treasury-yield-rises-to-highest-since-2007.html", "snippet": "The sell-off in U.S. government debt is deepening as investors price in an interest rate hike this week.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": true, "tags": ["fed", "rate hike"]}, {"id": "711d87fb9c140044ee18028f875a80b59c6148f4b1b93687ecf475440b6e6951", "title": "CNBC Daily Open: Is AI safe? Industry leaders and Trump disagree", "link": "https://www.cnbc.com/2026/09/16/cnbc-daily-open-is-ai-safe-industry-leaders-and-trump-disagree.html", "snippet": "OpenAI, Anthropic and Google unite for AI safety talks after warnings that the technology could pose an existential risk to humanity.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c2bae83a52d5d084d599d06229d7d96308073d43d5ef1b6a82e253afeacc7b33", "title": "Indonesia's new finance minister faces an uphill battle on fiscal credibility", "link": "https://www.cnbc.com/2026/09/16/indonesia-finance-minister-msci-prabowo-.html", "snippet": "Nazara, sworn in hours after Purbaya's dismissal, spent seven years as deputy finance minister and led the ministry's fiscal policy agency from 2015 to 2019.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "39975c04bdd31e7d803bcd635727072bb7edfa19eadc064a03f8ea16df3d34d4", "title": "Treasury yields hitting 5% may not break markets now — but the clock is ticking", "link": "https://www.cnbc.com/2026/09/16/10-year-treasury-yeilds-rise-impact-markets.html", "snippet": "The 10-year Treasury yield hit its highest since 2007, pushing borrowing costs deeper into territory that could expose some of the financial system's weakest links.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "ed04bd1084d02517bf8294be5da7dc9d65ba34c24ca10d90506bbb52882331da", "title": "Bond yields are spiking, oil is up — but investors aren’t giving up on stocks", "link": "https://www.cnbc.com/2026/09/16/investors-bullish-stocks-oil-yields-ai.html", "snippet": "Rising Treasury yields, geopolitical risk and fresh AI safety concerns are hitting markets, but many investors remain bullish on AI spending and earnings.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "a330fc6e80e4f89ac6ad5eba24cef0a42a21e51bdd27fe41cede886a6ac69096", "title": "Two camps have emerged in the debate over AI safety and regulation", "link": "https://www.cnbc.com/2026/09/15/ai-regulation-trump-nvidia-openai-anthropic.html", "snippet": "Two opposing camps are emerging in the AI regulation debate, with Trump and Huang on one side and Amodei. Altman and Musk on the other.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "134e1f58de14f6d8889bad4f6c22935992f02daddfc8e2430ca96bd9c0b18e14", "title": "Will AI really destroy humanity? Pioneers who created the tech weigh in", "link": "https://www.cnbc.com/2026/09/15/ai-destroy-humanity-extinction-risks.html", "snippet": "AI pioneers and \"godfathers\" have weighed in on Anthropic and OpenAI researcher concerns over existential safety risks around the technology.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "e0cb2001c2dcca274b1aa55b26b30073cff5ce0ccadef212f339a0175dc9144f", "title": "House to vote on bill to rein in AI data center utility costs", "link": "https://www.cnbc.com/2026/09/15/congress-ai-data-center-utility-costs.html", "snippet": "The bipartisan legislation would create a regulatory framework states could adopt to prevent data center-related energy costs from being passed on to consumers.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "9fcbba0ca5408125c3de63c33fb4a332e98c9a1a6cadc8e4d38000d5d84f839b", "title": "Inside South Korea’s university programs offering a direct route to Samsung and SK Hynix", "link": "https://www.cnbc.com/2026/09/16/samsung-sk-hynix-ai-boom-students-university-programs.html", "snippet": "Companies are helping universities develop courses, provide financial support and create pathways through which qualifying students can join them.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "5a0acaa9f60f9034a5561bdbb00cc3aaec1d13bfd1e0f5cc96375a814af46dcc", "title": "Beaten-up bond market may be nearing 'escape velocity.' Here's what that means", "link": "https://www.cnbc.com/2026/09/15/bonds-yield-10year-treasury-rates.html", "snippet": "Rising yields across the bond market have spooked investors, but the surge from zero interest rates since Covid suggests fixed-income risk-reward has improved.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "f591b43908a8d982f1c5dd98f78769cf19f2487df5a33c451930638f5826e327", "title": "53-year-old man arrested in Cyprus over Polish fraud case", "link": "https://cyprus-mail.com/2026/09/16/53-year-old-man-arrested-in-cyprus-over-polish-fraud-case", "snippet": "A 53-year-old man wanted by Polish authorities in connection with a fraud investigation was arrested at Paphos airport, police said on Wednesday. The man was arrested after arrivin", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "6a220a980101afa26319b564c5303b3e2d9cd9f7b34b0a6a7e2666ed8191c946", "title": "A lifetime of grassroots activism", "link": "https://cyprus-mail.com/2026/09/16/a-lifetime-of-grassroots-activism", "snippet": "By Sharon Crozier-De Rosa Known almost as much for her trademark mid-parted hair and large aviator sunglasses as for her acute intelligence, courage and wit, feminist activist Glor", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "f5c4c5967aefee5d7c723417e998bf7e93bfdcd7c74104a51d536cd31a1eaa0b", "title": "Cyprus businesses urged to treat cyber risk as boardroom priority", "link": "https://cyprus-mail.com/2026/09/16/cyprus-businesses-urged-to-treat-cyber-risk-as-boardroom-priority", "snippet": "Cyprus businesses are being pushed to treat cyber risk as a boardroom matter rather than an IT problem, as AI-driven attacks, growing dependence on outside technology providers and", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "68003b4dd03689f540e6f3fda556210f12da6a2338de4efb016789cce6994325", "title": "Commissioner insists on microchipping hunting dogs", "link": "https://cyprus-mail.com/2026/09/16/commissioner-insists-on-microchipping-hunting-dogs", "snippet": "Microchipping hunting dogs and the capture of strays were the focus of talks between Environment Commissioner Elias Myrianthos and the game and fauna service on Wednesday. The meet", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "9646ee47dc195df923d888a6285fd4e64f04aafd45c8ed48b6c03e07d7933843", "title": "Former Kosovo president Thaci sentenced to 25 years in prison for war crimes", "link": "https://cyprus-mail.com/2026/09/16/former-kosovo-president-thaci-sentenced-to-25-years-in-prison-for-war-crimes", "snippet": "Former Kosovo President Hashim Thaci was found guilty of war crimes including murder, torture and illegal detention by the Kosovo war crimes tribunal in The Hague on Wednesday. Tha", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c99cb9b22b7f792bd945fe446ac35aab3ea42010a0cb087ff36a956e7adfa0c8", "title": "Cabinet adopts social media action plan to protect the young", "link": "https://cyprus-mail.com/2026/09/16/cabinet-adopts-social-media-action-plan-to-protect-the-young", "snippet": "An action plan for the protection of minors using social media was approved on Wednesday by the cabinet, following an “urgent challenge” created by the fact that 98 per cent of you", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": true, "tags": ["urgent"]}, {"id": "3fce7478cacfd07024641cacac160063066bcb096416226d900dd0bd9e468e30", "title": "AI should serve people, not replace them, says Cypriot deputy minister", "link": "https://cyprus-mail.com/2026/09/16/ai-should-serve-people-not-replace-them-says-cypriot-deputy-minister", "snippet": "Deputy Minister of Research, Innovation and Digital Policy Nicodemos Damianou said that artificial intelligence should be treated as an opportunity rather than an inherent threat, ", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "373061fbddc91b1c76de2514c59a1c4a6d8c164f236b324c9836ce77114e319a", "title": "Culture ministry staff stage walkout over budget control dispute", "link": "https://cyprus-mail.com/2026/09/16/culture-ministry-staff-stage-walkout-over-budget-control-dispute", "snippet": "Staff at the culture ministry staged a one-hour spontaneous work stoppage on Wednesday morning, protesting against what Pasydy described as repeated attempts by the ministry’s dire", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "b737a0a19c790ce8b6b5f3de5e74bbe718295387aa5683d4aef3071088b37376", "title": "Court hears how man killed wife with rotary saw", "link": "https://cyprus-mail.com/2026/09/16/court-hears-how-man-killed-wife-with-rotary-saw", "snippet": "The 41-year-old man who killed his wife in a field next to the motorway which links Nicosia and Morphou appeared in court for the second time on Wednesday, with a police representa", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "3f7e4e986cef71bdddb0fb4744ea1c53d3df3bfd991057881693e762538cc911", "title": "Cyprus Public Transport enters new digital era with revamped Pame app, enhanced website", "link": "https://cyprus-mail.com/2026/09/16/cyprus-public-transport-enters-new-digital-era-with-revamped-pame-app-enhanced-website", "snippet": "On the occasion of European Mobility Week 2026, a press presentation of the Cyprus Public Transport’s (CPT) new digital tools took place on September 15, 2026, at the University of", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "74c8896c38db605277cfd38646e2946733e71f22e37f08aad24cf4cdc00c2916", "title": "Cyprus wage growth outpaces euro area and EU averages", "link": "https://cyprus-mail.com/2026/09/16/cyprus-wage-growth-outpaces-euro-area-and-eu-averages", "snippet": "Cyprus employers confront persistent domestic cost pressures Cyprus recorded a 3.8 per cent annual increase in hourly labour costs in the second quarter of 2026, as wage growth acc", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "8af3f85e7eb11dec5fecdb923ac15f3ad88563930562caaf86930e1cb3eec3b9", "title": "Cyprus building boom rolls on as permits top €2.1bn", "link": "https://cyprus-mail.com/2026/09/16/cyprus-building-boom-rolls-on-as-permits-top-e2-1bn", "snippet": "Cyprus recorded a further rise in building activity in May 2026, with the statistical service (Cystat) reporting that 735 building permits were authorised, up 21.1 per cent compare", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "29cf1098735d79dae19e11a5ddbb4934d7bebbca30c8d05eb605fc1f22fc49e6", "title": "Brook, Buttler go berserk again as England thrash Sri Lanka in first T20", "link": "https://www.skysports.com/cricket/news/12040/13586234/england-vs-sri-lanka-harry-brook-hits-42-ball-hundred-and-jos-buttler-slams-80-as-hosts-win-first-t20-by-119-runs-in-southampton", "snippet": "&#8203;&#8203;Harry Brook and Jos Buttler went berserk in a T20 at Southampton for the second time this summer as England smoked 254-4 against Sri Lanka during a 119-run win in the", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "21d93dac8644771359daa3a56d7e8f4b158d522cff42d5a6ce255ba04b77b91c", "title": "Could F1 change rules to prevent Alonso retirement?", "link": "https://www.skysports.com/f1/news/12040/13586010/fernando-alonso-whats-the-latest-on-aston-martin-drivers-future-as-he-weighs-up-retirement-or-new-contract-to-stay-in-f1-in-2027", "snippet": "Fernando Alonso's future in Formula 1 is up in the air after he revealed news about whether he will remain at Aston Martin will \"not come soon\".", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "7433d0e477883d5d0950b5d44a9eeadc7f06ecf0901661e9c78e441ddd8e2260", "title": "Dubois expects undisputed fight with 'jealous' Baumgardner", "link": "https://www.skysports.com/boxing/news/12040/13586275/caroline-dubois-sets-course-for-undisputed-championship-fight-with-jealous-threatened-alycia-baumgardner", "snippet": "Caroline Dubois is looking to fight her way to an undisputed showdown with American rival Alycia Baumgardner next year.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "8815b1c539f0b9bbdb3fc5d671616e31e999b08f795965e32f63952d9a2cfc44", "title": "What next for Arsenal prodigy Dowman after latest statement display?", "link": "https://www.skysports.com/football/news/12040/13586419/max-dowman-arsenal-prodigy-delivers-latest-statement-performance-as-mikel-arteta-urges-caution-over-16-year-old", "snippet": "Max Dowman has waited patiently for opportunities in Arsenal's first team, but when he gets them, he delivers.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "5853b0740605ee0dd17c462b68da9c1015c84d6a4c9251ffbcfda99cc0db2647", "title": "Tipped to be the best ever - but is Herbert the NFL's best underachiever?", "link": "https://www.skysports.com/nfl/news/12040/13586129/justin-herbert-the-nfls-most-talented-underachiever-los-angeles-chargers-quarterback-tipped-for-greatness-but-facing-more-questions", "snippet": "The kids call it glazing. NFL folk might call it Jim Harbaughing. Either way, gushing praise of Justin Herbert is generating heightened and unavoidable attention around one of foot", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "b4972e722a4013d11c79003867356f9e11e71186b647f8cd86bedcb85837f697", "title": "Inside Europe's early Ryder Cup team trip to 'immaculate' Adare Manor", "link": "https://www.skysports.com/golf/news/12040/13586083/ryder-cup-2027-team-europe-stars-give-verdict-on-early-trip-to-adare-manor-and-fresh-energy-for-luke-donalds-side", "snippet": "It may still be a year to go until Team Europe's bid for a historic Ryder Cup threepeat, but Luke Donald has already had many of his prospective line-up together at Adare Manor.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "3ead2d2dcf780d3f8c5279d072b083ce9136dd8f83db24d9db32aad23f24850d", "title": "Fairy Glen well fancied in John Musker feature at Yarmouth", "link": "https://www.skysports.com/racing/news/12040/13586154/today-on-sky-sports-racing-fairy-glen-well-fancied-in-john-musker-fillies-stakes-feature-at-yarmouth", "snippet": "The Listed John Musker Fillies&#8217; Stakes takes centre stage on day two of Yarmouth&#8217;s Eastern Festival on Wednesday, all live on Sky Sports Racing.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "bb7284acd5022cb4e426a90317407fa66502b348760b4de7d8dc799d52725243", "title": "'Absolutely blanked him!' | Broad fails to get attention of Brook!", "link": "https://www.skysports.com/watch/video/13586312/stuart-broad-fails-to-get-attention-of-former-teammate-harry-brook-during-england-vs-sri-lanka-first-t20", "snippet": "Watch Stuart Broad's unfortunate failed attempt to get an interview of former team-mate Harry Brook.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}]
+[{"id": "df5f50e4d6626b3ceeb7812be4206f2faa492762b27e6f4a47a3394fbc3e4546", "title": "Do not inhale! How wildfire smoke 'affects the whole body'", "link": "https://www.dw.com/en/do-not-inhale-how-wildfire-smoke-affects-the-whole-body/a-76039654?maca=en-rss-en-all-1573-rdf", "snippet": "Wildfires destroy lives and livelihoods. But survivors and firefighters also suffer long-term harm to their health. A growing body of research suggests particulate matter (PM2.5) i", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "77525a818f2ee93f9713c18ac7eaed036351fcc05b853d69415c25deacdcc4cf", "title": "In drought-stricken France, tankers supply drinking water", "link": "https://www.dw.com/en/in-drought-stricken-france-tankers-supply-drinking-water/a-78420016?maca=en-rss-en-all-1573-rdf", "snippet": "France is seeing water shortages in regions that usually have plenty of supply. This summer's extreme heat is exposing how unprepared much of the country, and Europe, is for increa", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "4f655ef108c54e3dbe3352a17fc9cc72b77a756ab043c6e013425886f554250c", "title": "Evergrande founder Hui Ka Yan sentenced to life in prison", "link": "https://www.dw.com/en/evergrande-founder-hui-ka-yan-sentenced-to-life-in-prison/a-78439153?maca=en-rss-en-all-1573-rdf", "snippet": "A Chinese court ordered the former billionaire's assets to be confiscated and fined Evergrande-related companies billions of dollars.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "2be0388a9eaa9f856e0c2d542321e2ad286bc2373b4cfc4193046c1368aa3f29", "title": "Why Germany's gas storage levels are so low", "link": "https://www.dw.com/en/why-germany-s-gas-storage-levels-are-so-low/a-78440677?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's gas storage facilities are only 50% full as traders bet that wholesale prices will fall if the Iran war ends. With around three months until winter, DW asks whether the c", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "a2a8d0671f3bba49c119c1452e4d9cb079dab75d5e757397c030134c3ade49e6", "title": "Sydney Marathon medal wrongly shows German landmark", "link": "https://www.dw.com/en/sydney-marathon-medal-wrongly-shows-german-landmark/a-78473705?maca=en-rss-en-all-1573-rdf", "snippet": "A medal minted for finishers in the Sydney Marathon features a skyline of the city — with one landmark from rather far away. Organizers say the muddle only makes the medal \"a littl", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "19e881cf2c69acd3d600829694957521c266f228c79f1d212f0f8dc19bff2c06", "title": "Tim Curry, of 'The Rocky Horror Picture Show,' dies at 80", "link": "https://www.dw.com/en/tim-curry-of-the-rocky-horror-picture-show-dies-at-80/a-78514945?maca=en-rss-en-all-1573-rdf", "snippet": "The gender-bending role as Dr. Frank-N-Furter put Curry on the map in 1975. He then went on to play a number of villainous roles like Gomez Addams, Pennywise and Bill Sikes, but al", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "26f21b03911a928944de39184417c82495d367905cad4dd52d51ec18b6d456d1", "title": "Was the heat of this summer really 'normal?'", "link": "https://www.dw.com/en/was-the-heat-of-this-summer-really-normal/a-78513682?maca=en-rss-en-all-1573-rdf", "snippet": "Some political messaging denies the role of human-caused climate change in this summer's extreme heat. The science tells a different story.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c6869d65c9ef6a7184a05790ae3984d5c30bdfa13331c315022851844171a88b", "title": "Tragedy in Nepal: How do flash floods happen?", "link": "https://www.dw.com/en/tragedy-in-nepal-how-do-flash-floods-happen/a-78526421?maca=en-rss-en-all-1573-rdf", "snippet": "When flash floods sweep through the Himalayas, there is often little time to react. Scientists are working to understand the risks and improve early warning systems.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "26c2085c11192f16e656a9dacb9a23a5bdb039393c73db0649d441bc58157ef8", "title": "This extremely successful author polarizes German readers", "link": "https://www.dw.com/en/this-extremely-successful-author-polarizes-german-readers/a-78500452?maca=en-rss-en-all-1573-rdf", "snippet": "She's young and she says what she thinks: Caroline Wahl is topping Germany's bestseller lists with her novels. But she has also faced a public backlash.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "94b80f99031ed3d5420b5c90521ac32b68d38172114c7caf51ac2d59885b0540", "title": "Can new Apple CEO John Ternus fix the tech giant's AI woes?", "link": "https://www.dw.com/en/can-new-apple-ceo-john-ternus-fix-the-tech-giant-s-ai-woes/a-78575898?maca=en-rss-en-all-1573-rdf", "snippet": "John Ternus is just the third Apple CEO in 30 years. His primary challenge is to correct the company's faltering AI strategy to preserve its position as a big tech leader.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "57dc591df6b1f102daa2dbb9215ed1027a77191d169e422fc3c16f063150e18f", "title": "Austria women ice hockey team fight for future generations", "link": "https://www.dw.com/en/austria-women-ice-hockey-team-fight-for-future-generations/a-78771578?maca=en-rss-en-all-1573-rdf", "snippet": "Austria are getting ready for their first Women's Ice Hockey World Championship. But preparations have been overshadowed by a dispute about conditions, pay and getting men's cast-o", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "1fa09d2cf5393baf3bb58fb752d1ccaa1d5b3358b7637b7a4d8b2729cdc78664", "title": "Is Germany's economic slump finally over?", "link": "https://www.dw.com/en/is-germany-s-economic-slump-finally-over/a-78815447?maca=en-rss-en-all-1573-rdf", "snippet": "Despite a slew of negative headlines, the German economy has posted its best figures in years. There are reasons for optimism, but structural issues remain.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "1c0ff3041c2f09e92bc5a5c5599632cec8e5d8e8eed33c03aa85d1b2230cac0d", "title": "2026 Beethoven Festival evokes a sense of home", "link": "https://www.dw.com/en/2026-beethoven-festival-evokes-a-sense-of-home/a-78892997?maca=en-rss-en-all-1573-rdf", "snippet": "The motto of this year's classical music festival in Bonn is \"Home/At Home,\" featuring musicians from diverse cultures presenting pieces from their homelands.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "e8a36f319a0edb653177e5bde7d6ad510397ac85b22c97af1a8ed7cc320d75a6", "title": "Why North Korea's women's football team is so good", "link": "https://www.dw.com/en/why-north-korea-s-women-s-football-team-is-so-good/a-70313505?maca=en-rss-en-all-1573-rdf", "snippet": "North Korea's young footballers enter the U-20 World Cup in Poland as defending champions — the 2024 title was their third. Why is the isolated state so good at the game?", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "4d32bfcd44bc185bedc0e70e893d8475877fbfb59cb73347651ab54e96ef9eed", "title": "Croatia: Toxic waste protest draws tens of thousands", "link": "https://www.dw.com/en/croatia-toxic-waste-protest-draws-tens-of-thousands/a-79049228?maca=en-rss-en-all-1573-rdf", "snippet": "The Zagreb demonstrators demanded that the government come up with a plan to clear illegal toxic waste in 20 days. Prime Minister Plenkovic has promised to tackle the issue.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "db1b7183dbfb19e879b958a593b19593351d3b6d43b0556f45c631ec3f77cd93", "title": "Hungary begins hunt for corrupt regime's billions", "link": "https://www.dw.com/en/hungary-begins-hunt-for-corrupt-regime-s-billions/a-79047176?maca=en-rss-en-all-1573-rdf", "snippet": "Hungary's new prime minister promised he would recover billions stolen or diverted by the previous administration. A new \"super authority\" is about to begin that work. Its success ", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "ade7846cb707fa4b52fdb3f0712e78974ee4498bf6810b7770cebbfbdfaaa045", "title": "Germany, Kosovo unite against ticks carrying deadly virus", "link": "https://www.dw.com/en/germany-kosovo-unite-against-ticks-carrying-deadly-virus/a-78655223?maca=en-rss-en-all-1573-rdf", "snippet": "Germany has high-security labs while Kosovo has Hyalomma ticks and experience with the deadly Crimean-Congo hemorrhagic fever. Working together, German and Kosovar scientists are f", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "7c4b8fee285798fc241c51ff40993f6a4ef9b3339eef28179633f73dfd2f8158", "title": "Nicaragua challenges German arms exports to Israel at ICJ", "link": "https://www.dw.com/en/nicaragua-challenges-german-arms-exports-to-israel-at-icj/a-79148044?maca=en-rss-en-all-1573-rdf", "snippet": "Germany has asked the International Court of Justice to dismiss the case on jurisdiction grounds. It also said its arms exports to Israel were documented, published, and subject to", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "6d1537c09754c3befc3a15e0fb769ceef464bf3abfa47303850072852f584867", "title": "Egg freezing in women's football: Choice or pressure?", "link": "https://www.dw.com/en/egg-freezing-in-women-s-football-choice-or-pressure/a-79145259?maca=en-rss-en-all-1573-rdf", "snippet": "Spain's football federation is set to join a handful of clubs in paying for female players to freeze their eggs. Experts have welfare concerns.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "4e164148e8e7f207d563f4329fa81b6171b430e457be939071480cd8fc1b1bd9", "title": "BSW and AfD – a political love-hate relationship in Germany", "link": "https://www.dw.com/en/bsw-and-afd-a-political-love-hate-relationship-in-germany/a-79185782?maca=en-rss-en-all-1573-rdf", "snippet": "The Sahra Wagenknecht Alliance (BSW) could help the Alternative for Germany (AfD) into power in Saxony-Anhalt. But the BSW is riddled with infighting", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "50f4c0a04c96bab0723b868dc02fe0d391a6af8fa3ae28c0713d7c3f49e22473", "title": "Putin rejects mobilization rumors, many Russians unconvinced", "link": "https://www.dw.com/en/putin-rejects-mobilization-rumors-many-russians-unconvinced/a-79193386?maca=en-rss-en-all-1573-rdf", "snippet": "Russia’s President Vladimir Putin has dismissed rumors about military mobilization. But many Russians, including many DW users, say they are preparing for the possibility.", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "47341d564dfc160a1b4c37b8cea06ce1104b68c561c32c4c21c932054114a1e3", "title": "The Bayeux Tapestry in London: What's behind the hype?", "link": "https://www.dw.com/en/the-bayeux-tapestry-in-london-what-s-behind-the-hype/a-78488629?maca=en-rss-en-all-1573-rdf", "snippet": "The exhibition of the Bayeux Tapestry at the British Museum is eagerly anticipated across the UK, as the medieval masterpiece is considered by many to be a symbol of the country's ", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c4dc902b0129ad46494725a6c05a29da01074b65b633c6d9fbc26acdf5a77c8f", "title": "Why we're still looking for dark matter", "link": "https://www.dw.com/en/why-we-re-still-looking-for-dark-matter/a-79189395?maca=en-rss-en-all-1573-rdf", "snippet": "When physicists said they may have spotted evidence of dark matter almost 100 years after it was proposed as a theory, the internet lit up. Here's why we're searching for the thing", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "b23c710eb0a0a39b19ec540dcc37d57ef929f72dfb23bae05c7f17ade6253a70", "title": "How Belarusians still find hope in a silenced country", "link": "https://www.dw.com/en/how-belarusians-still-find-hope-in-a-silenced-country/a-79127285?maca=en-rss-en-all-1573-rdf", "snippet": "The documentary \"Letters from the Silenced Country\" depicts the ongoing repression under the authoritarian regime. Director Andrei Kutsila talked to DW ahead of the film's Venice p", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "ae09093be6970bd388b194c806e732dbba0c8cca418654c4570299810deb9a48", "title": "Serbia, the conflicted EU candidate", "link": "https://www.dw.com/en/serbia-the-conflicted-eu-candidate/a-79203774?maca=en-rss-en-all-1573-rdf", "snippet": "On paper, Belgrade has pursued EU membership for years. But accession has long been stalled. The hero's farewell given to war criminal Mladic exposed just how far Serbia has aliena", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "a95bf77fca0be28e92b65a2659b96ce107d686b76977faff80caac3c02a54a3c", "title": "Magyar vs. Moscow: Hungary toughens stance toward Russia", "link": "https://www.dw.com/en/magyar-vs-moscow-hungary-toughens-stance-toward-russia/a-79223424?maca=en-rss-en-all-1573-rdf", "snippet": "Prime Minister Peter Magyar has abruptly ended the era of his predecessor's warm relations with Russia: Hungary has expelled 10 Russian diplomats. The Kremlin is considering haltin", "source": "DW World", "category": "international", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "3ce5ce0e86edd52ef46472297e9946717edb9014e78a59c3ab3ee35bd510a506", "title": "Scott Bessent defends Treasury intervention, Trump economy in contentious House hearing", "link": "https://www.cnbc.com/2026/09/15/scott-bessent-house-hearing-economy-midterms.html", "snippet": "Bessent defended the administration's Treasury-market intervention, economic record and AI policy while lawmakers tried to pin him down on borrowing and energy.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c1a8b6be510b32adb6ca18eb32d8b8324a3e0b77bf169de63a78727705afb03b", "title": "CNBC's The China Connection newsletter: Tech controls expand to employees", "link": "https://www.cnbc.com/2026/09/14/cnbcs-the-china-connection-newsletter-tech-controls-employees.html", "snippet": "As the U.S.-China tech rivalry simmers, Beijing is increasing restrictions on how its companies can deploy their tech talent overseas.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "6d3f504797eca716810239ff40ca394088f258461530bc44c93a412d2c538b67", "title": "Why de-dollarization discussions are more talk, less action", "link": "https://www.cnbc.com/2026/09/16/de-dollarization-brics-china-russia-trump.html", "snippet": "BRICS leaders have asserted the need to use local currencies in intra-BRICS trade to cut dependency on dollar.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "e0208d19638d915a5bf63ca3651c95b3a1ad609e13b40db737a0d4e0b5a5a8e9", "title": "Saudi pipeline closure is a brief interruption that will last days, U.S. Energy secretary tells CNBC", "link": "https://www.cnbc.com/2026/09/15/saud-arabia-east-west-pipeline-iran-war-chris-wright.html", "snippet": "The Saudis closed the East-West pipeline after it sustained damage in a drone attack launched from Iraq.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "86f26883696943b3930bcbbcd8032a69066b08bbdccf3e2a9c4aef9e7b43677f", "title": "10-year Treasury yield hits highest level since 2007 as traders bet a Fed rate hike is coming", "link": "https://www.cnbc.com/2026/09/15/10-year-treasury-yield-rises-to-highest-since-2007.html", "snippet": "The sell-off in U.S. government debt is deepening as investors price in an interest rate hike this week.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": true, "tags": ["fed", "rate hike"]}, {"id": "711d87fb9c140044ee18028f875a80b59c6148f4b1b93687ecf475440b6e6951", "title": "CNBC Daily Open: Is AI safe? Industry leaders and Trump disagree", "link": "https://www.cnbc.com/2026/09/16/cnbc-daily-open-is-ai-safe-industry-leaders-and-trump-disagree.html", "snippet": "OpenAI, Anthropic and Google unite for AI safety talks after warnings that the technology could pose an existential risk to humanity.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c2bae83a52d5d084d599d06229d7d96308073d43d5ef1b6a82e253afeacc7b33", "title": "Indonesia's new finance minister faces an uphill battle on fiscal credibility", "link": "https://www.cnbc.com/2026/09/16/indonesia-finance-minister-msci-prabowo-.html", "snippet": "Nazara, sworn in hours after Purbaya's dismissal, spent seven years as deputy finance minister and led the ministry's fiscal policy agency from 2015 to 2019.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "39975c04bdd31e7d803bcd635727072bb7edfa19eadc064a03f8ea16df3d34d4", "title": "Treasury yields hitting 5% may not break markets now — but the clock is ticking", "link": "https://www.cnbc.com/2026/09/16/10-year-treasury-yeilds-rise-impact-markets.html", "snippet": "The 10-year Treasury yield hit its highest since 2007, pushing borrowing costs deeper into territory that could expose some of the financial system's weakest links.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "ed04bd1084d02517bf8294be5da7dc9d65ba34c24ca10d90506bbb52882331da", "title": "Bond yields are spiking, oil is up — but investors aren’t giving up on stocks", "link": "https://www.cnbc.com/2026/09/16/investors-bullish-stocks-oil-yields-ai.html", "snippet": "Rising Treasury yields, geopolitical risk and fresh AI safety concerns are hitting markets, but many investors remain bullish on AI spending and earnings.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "a330fc6e80e4f89ac6ad5eba24cef0a42a21e51bdd27fe41cede886a6ac69096", "title": "Two camps have emerged in the debate over AI safety and regulation", "link": "https://www.cnbc.com/2026/09/15/ai-regulation-trump-nvidia-openai-anthropic.html", "snippet": "Two opposing camps are emerging in the AI regulation debate, with Trump and Huang on one side and Amodei. Altman and Musk on the other.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "134e1f58de14f6d8889bad4f6c22935992f02daddfc8e2430ca96bd9c0b18e14", "title": "Will AI really destroy humanity? Pioneers who created the tech weigh in", "link": "https://www.cnbc.com/2026/09/15/ai-destroy-humanity-extinction-risks.html", "snippet": "AI pioneers and \"godfathers\" have weighed in on Anthropic and OpenAI researcher concerns over existential safety risks around the technology.", "source": "CNBC Markets", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "e0cb2001c2dcca274b1aa55b26b30073cff5ce0ccadef212f339a0175dc9144f", "title": "House to vote on bill to rein in AI data center utility costs", "link": "https://www.cnbc.com/2026/09/15/congress-ai-data-center-utility-costs.html", "snippet": "The bipartisan legislation would create a regulatory framework states could adopt to prevent data center-related energy costs from being passed on to consumers.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "9fcbba0ca5408125c3de63c33fb4a332e98c9a1a6cadc8e4d38000d5d84f839b", "title": "Inside South Korea’s university programs offering a direct route to Samsung and SK Hynix", "link": "https://www.cnbc.com/2026/09/16/samsung-sk-hynix-ai-boom-students-university-programs.html", "snippet": "Companies are helping universities develop courses, provide financial support and create pathways through which qualifying students can join them.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "5a0acaa9f60f9034a5561bdbb00cc3aaec1d13bfd1e0f5cc96375a814af46dcc", "title": "Beaten-up bond market may be nearing 'escape velocity.' Here's what that means", "link": "https://www.cnbc.com/2026/09/15/bonds-yield-10year-treasury-rates.html", "snippet": "Rising yields across the bond market have spooked investors, but the surge from zero interest rates since Covid suggests fixed-income risk-reward has improved.", "source": "CNBC Top News", "category": "finance", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "f591b43908a8d982f1c5dd98f78769cf19f2487df5a33c451930638f5826e327", "title": "53-year-old man arrested in Cyprus over Polish fraud case", "link": "https://cyprus-mail.com/2026/09/16/53-year-old-man-arrested-in-cyprus-over-polish-fraud-case", "snippet": "A 53-year-old man wanted by Polish authorities in connection with a fraud investigation was arrested at Paphos airport, police said on Wednesday. The man was arrested after arrivin", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "6a220a980101afa26319b564c5303b3e2d9cd9f7b34b0a6a7e2666ed8191c946", "title": "A lifetime of grassroots activism", "link": "https://cyprus-mail.com/2026/09/16/a-lifetime-of-grassroots-activism", "snippet": "By Sharon Crozier-De Rosa Known almost as much for her trademark mid-parted hair and large aviator sunglasses as for her acute intelligence, courage and wit, feminist activist Glor", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "f5c4c5967aefee5d7c723417e998bf7e93bfdcd7c74104a51d536cd31a1eaa0b", "title": "Cyprus businesses urged to treat cyber risk as boardroom priority", "link": "https://cyprus-mail.com/2026/09/16/cyprus-businesses-urged-to-treat-cyber-risk-as-boardroom-priority", "snippet": "Cyprus businesses are being pushed to treat cyber risk as a boardroom matter rather than an IT problem, as AI-driven attacks, growing dependence on outside technology providers and", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "68003b4dd03689f540e6f3fda556210f12da6a2338de4efb016789cce6994325", "title": "Commissioner insists on microchipping hunting dogs", "link": "https://cyprus-mail.com/2026/09/16/commissioner-insists-on-microchipping-hunting-dogs", "snippet": "Microchipping hunting dogs and the capture of strays were the focus of talks between Environment Commissioner Elias Myrianthos and the game and fauna service on Wednesday. The meet", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "9646ee47dc195df923d888a6285fd4e64f04aafd45c8ed48b6c03e07d7933843", "title": "Former Kosovo president Thaci sentenced to 25 years in prison for war crimes", "link": "https://cyprus-mail.com/2026/09/16/former-kosovo-president-thaci-sentenced-to-25-years-in-prison-for-war-crimes", "snippet": "Former Kosovo President Hashim Thaci was found guilty of war crimes including murder, torture and illegal detention by the Kosovo war crimes tribunal in The Hague on Wednesday. Tha", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "c99cb9b22b7f792bd945fe446ac35aab3ea42010a0cb087ff36a956e7adfa0c8", "title": "Cabinet adopts social media action plan to protect the young", "link": "https://cyprus-mail.com/2026/09/16/cabinet-adopts-social-media-action-plan-to-protect-the-young", "snippet": "An action plan for the protection of minors using social media was approved on Wednesday by the cabinet, following an “urgent challenge” created by the fact that 98 per cent of you", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": true, "tags": ["urgent"]}, {"id": "3fce7478cacfd07024641cacac160063066bcb096416226d900dd0bd9e468e30", "title": "AI should serve people, not replace them, says Cypriot deputy minister", "link": "https://cyprus-mail.com/2026/09/16/ai-should-serve-people-not-replace-them-says-cypriot-deputy-minister", "snippet": "Deputy Minister of Research, Innovation and Digital Policy Nicodemos Damianou said that artificial intelligence should be treated as an opportunity rather than an inherent threat, ", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "373061fbddc91b1c76de2514c59a1c4a6d8c164f236b324c9836ce77114e319a", "title": "Culture ministry staff stage walkout over budget control dispute", "link": "https://cyprus-mail.com/2026/09/16/culture-ministry-staff-stage-walkout-over-budget-control-dispute", "snippet": "Staff at the culture ministry staged a one-hour spontaneous work stoppage on Wednesday morning, protesting against what Pasydy described as repeated attempts by the ministry’s dire", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "b737a0a19c790ce8b6b5f3de5e74bbe718295387aa5683d4aef3071088b37376", "title": "Court hears how man killed wife with rotary saw", "link": "https://cyprus-mail.com/2026/09/16/court-hears-how-man-killed-wife-with-rotary-saw", "snippet": "The 41-year-old man who killed his wife in a field next to the motorway which links Nicosia and Morphou appeared in court for the second time on Wednesday, with a police representa", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "3f7e4e986cef71bdddb0fb4744ea1c53d3df3bfd991057881693e762538cc911", "title": "Cyprus Public Transport enters new digital era with revamped Pame app, enhanced website", "link": "https://cyprus-mail.com/2026/09/16/cyprus-public-transport-enters-new-digital-era-with-revamped-pame-app-enhanced-website", "snippet": "On the occasion of European Mobility Week 2026, a press presentation of the Cyprus Public Transport’s (CPT) new digital tools took place on September 15, 2026, at the University of", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "74c8896c38db605277cfd38646e2946733e71f22e37f08aad24cf4cdc00c2916", "title": "Cyprus wage growth outpaces euro area and EU averages", "link": "https://cyprus-mail.com/2026/09/16/cyprus-wage-growth-outpaces-euro-area-and-eu-averages", "snippet": "Cyprus employers confront persistent domestic cost pressures Cyprus recorded a 3.8 per cent annual increase in hourly labour costs in the second quarter of 2026, as wage growth acc", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "8af3f85e7eb11dec5fecdb923ac15f3ad88563930562caaf86930e1cb3eec3b9", "title": "Cyprus building boom rolls on as permits top €2.1bn", "link": "https://cyprus-mail.com/2026/09/16/cyprus-building-boom-rolls-on-as-permits-top-e2-1bn", "snippet": "Cyprus recorded a further rise in building activity in May 2026, with the statistical service (Cystat) reporting that 735 building permits were authorised, up 21.1 per cent compare", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "29cf1098735d79dae19e11a5ddbb4934d7bebbca30c8d05eb605fc1f22fc49e6", "title": "Brook, Buttler go berserk again as England thrash Sri Lanka in first T20", "link": "https://www.skysports.com/cricket/news/12040/13586234/england-vs-sri-lanka-harry-brook-hits-42-ball-hundred-and-jos-buttler-slams-80-as-hosts-win-first-t20-by-119-runs-in-southampton", "snippet": "&#8203;&#8203;Harry Brook and Jos Buttler went berserk in a T20 at Southampton for the second time this summer as England smoked 254-4 against Sri Lanka during a 119-run win in the", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "21d93dac8644771359daa3a56d7e8f4b158d522cff42d5a6ce255ba04b77b91c", "title": "Could F1 change rules to prevent Alonso retirement?", "link": "https://www.skysports.com/f1/news/12040/13586010/fernando-alonso-whats-the-latest-on-aston-martin-drivers-future-as-he-weighs-up-retirement-or-new-contract-to-stay-in-f1-in-2027", "snippet": "Fernando Alonso's future in Formula 1 is up in the air after he revealed news about whether he will remain at Aston Martin will \"not come soon\".", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "7433d0e477883d5d0950b5d44a9eeadc7f06ecf0901661e9c78e441ddd8e2260", "title": "Dubois expects undisputed fight with 'jealous' Baumgardner", "link": "https://www.skysports.com/boxing/news/12040/13586275/caroline-dubois-sets-course-for-undisputed-championship-fight-with-jealous-threatened-alycia-baumgardner", "snippet": "Caroline Dubois is looking to fight her way to an undisputed showdown with American rival Alycia Baumgardner next year.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "8815b1c539f0b9bbdb3fc5d671616e31e999b08f795965e32f63952d9a2cfc44", "title": "What next for Arsenal prodigy Dowman after latest statement display?", "link": "https://www.skysports.com/football/news/12040/13586419/max-dowman-arsenal-prodigy-delivers-latest-statement-performance-as-mikel-arteta-urges-caution-over-16-year-old", "snippet": "Max Dowman has waited patiently for opportunities in Arsenal's first team, but when he gets them, he delivers.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "5853b0740605ee0dd17c462b68da9c1015c84d6a4c9251ffbcfda99cc0db2647", "title": "Tipped to be the best ever - but is Herbert the NFL's best underachiever?", "link": "https://www.skysports.com/nfl/news/12040/13586129/justin-herbert-the-nfls-most-talented-underachiever-los-angeles-chargers-quarterback-tipped-for-greatness-but-facing-more-questions", "snippet": "The kids call it glazing. NFL folk might call it Jim Harbaughing. Either way, gushing praise of Justin Herbert is generating heightened and unavoidable attention around one of foot", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "b4972e722a4013d11c79003867356f9e11e71186b647f8cd86bedcb85837f697", "title": "Inside Europe's early Ryder Cup team trip to 'immaculate' Adare Manor", "link": "https://www.skysports.com/golf/news/12040/13586083/ryder-cup-2027-team-europe-stars-give-verdict-on-early-trip-to-adare-manor-and-fresh-energy-for-luke-donalds-side", "snippet": "It may still be a year to go until Team Europe's bid for a historic Ryder Cup threepeat, but Luke Donald has already had many of his prospective line-up together at Adare Manor.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "3ead2d2dcf780d3f8c5279d072b083ce9136dd8f83db24d9db32aad23f24850d", "title": "Fairy Glen well fancied in John Musker feature at Yarmouth", "link": "https://www.skysports.com/racing/news/12040/13586154/today-on-sky-sports-racing-fairy-glen-well-fancied-in-john-musker-fillies-stakes-feature-at-yarmouth", "snippet": "The Listed John Musker Fillies&#8217; Stakes takes centre stage on day two of Yarmouth&#8217;s Eastern Festival on Wednesday, all live on Sky Sports Racing.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}, {"id": "bb7284acd5022cb4e426a90317407fa66502b348760b4de7d8dc799d52725243", "title": "'Absolutely blanked him!' | Broad fails to get attention of Brook!", "link": "https://www.skysports.com/watch/video/13586312/stuart-broad-fails-to-get-attention-of-former-teammate-harry-brook-during-england-vs-sri-lanka-first-t20", "snippet": "Watch Stuart Broad's unfortunate failed attempt to get an interview of former team-mate Harry Brook.", "source": "Sky Sports", "category": "sports", "timestamp": 1789558069, "time_str": "11:27 UTC", "is_breaking": false}]
   </script>
     
 
-  <!-- SCRIPT -->
+  <!-- SCRIPTS: Theme Toggle, Calculator, Weather Fetch, Instant Search -->
   <script>
-    const themeBtn = document.getElementById('themeToggle');
-    if (themeBtn) {
-      themeBtn.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('oracle-theme', isDark ? 'dark' : 'light');
+    // 1. Theme Toggle
+    (function () {
+      const btn = document.getElementById('themeToggle');
+      const btnNav = document.getElementById('themeToggleNav');
+      const updateThemeButtons = (isDark) => {
+        if (btn) btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        if (btnNav) btnNav.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      };
+      const isDarkInit = document.documentElement.classList.contains('dark');
+      updateThemeButtons(isDarkInit);
+
+      const toggleTheme = () => {
+        const darkNow = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('oracle-theme', darkNow ? 'dark' : 'light');
+        updateThemeButtons(darkNow);
+      };
+
+      if (btn) btn.addEventListener('click', toggleTheme);
+      if (btnNav) btnNav.addEventListener('click', toggleTheme);
+    })();
+
+    // 2. Interactive Mortgage Calculator (Enhanced with Euribor comparison)
+    (function () {
+      const amountEl = document.getElementById('calcAmount');
+      const yearsEl = document.getElementById('calcYears');
+      const rateEl = document.getElementById('calcRate');
+
+      const amountVal = document.getElementById('amountVal');
+      const yearsVal = document.getElementById('yearsVal');
+      const rateVal = document.getElementById('rateVal');
+      const monthlyInstallment = document.getElementById('monthlyInstallment');
+      const totalInterest = document.getElementById('totalInterest');
+      const totalRepayment = document.getElementById('totalRepayment');
+      const costOfCredit = document.getElementById('costOfCredit');
+      const principalBar = document.getElementById('principalBar');
+      const interestBar = document.getElementById('interestBar');
+      const euriborPayment = document.getElementById('euriborPayment');
+      const euriborDiff = document.getElementById('euriborDiff');
+
+      const EURIBOR_3M = 2.670;  // Current Euribor 3M rate
+      const SPREAD = 1.10;       // Typical Cyprus bank spread
+
+      function calcMonthly(P, r, n) {
+        if (r > 0) return (P * r) / (1 - Math.pow(1 + r, -n));
+        return P / n;
+      }
+
+      function calculate() {
+        if (!amountEl || !yearsEl || !rateEl) return;
+        const P = parseFloat(amountEl.value);
+        const y = parseFloat(yearsEl.value);
+        const annualRate = parseFloat(rateEl.value);
+
+        amountVal.textContent = '€' + P.toLocaleString('el-CY');
+        yearsVal.textContent = y + ' έτη';
+        rateVal.textContent = annualRate.toFixed(2).replace('.', ',') + '%';
+
+        const r = (annualRate / 100) / 12;
+        const n = y * 12;
+
+        const m = calcMonthly(P, r, n);
+        const totalPay = m * n;
+        const interest = totalPay - P;
+
+        // Core results
+        monthlyInstallment.textContent = '€' + Math.round(m).toLocaleString('el-CY');
+        totalInterest.textContent = '€' + Math.round(interest).toLocaleString('el-CY');
+
+        // Total repayment
+        if (totalRepayment) totalRepayment.textContent = '€' + Math.round(totalPay).toLocaleString('el-CY');
+
+        // Cost of credit %
+        if (costOfCredit) {
+          const pct = ((interest / P) * 100).toFixed(1).replace('.', ',');
+          costOfCredit.textContent = pct + '%';
+        }
+
+        // Visual breakdown bar
+        if (principalBar && interestBar) {
+          const principalPct = (P / totalPay) * 100;
+          const interestPct = (interest / totalPay) * 100;
+          principalBar.style.width = principalPct.toFixed(1) + '%';
+          interestBar.style.width = interestPct.toFixed(1) + '%';
+        }
+
+        // Euribor 3M comparison
+        if (euriborPayment && euriborDiff) {
+          const euriborRate = ((EURIBOR_3M + SPREAD) / 100) / 12;
+          const euriborM = calcMonthly(P, euriborRate, n);
+          const diff = Math.round(euriborM) - Math.round(m);
+          euriborPayment.textContent = '€' + Math.round(euriborM).toLocaleString('el-CY');
+          if (diff <= 0) {
+            euriborDiff.textContent = '(−€' + Math.abs(diff).toLocaleString('el-CY') + '/μήνα)';
+            euriborDiff.className = 't-meta font-mono text-[var(--up)]';
+          } else {
+            euriborDiff.textContent = '(+€' + diff.toLocaleString('el-CY') + '/μήνα)';
+            euriborDiff.className = 't-meta font-mono text-[var(--down)]';
+          }
+        }
+      }
+
+      if (amountEl && yearsEl && rateEl) {
+        amountEl.addEventListener('input', calculate);
+        yearsEl.addEventListener('input', calculate);
+        rateEl.addEventListener('input', calculate);
+        calculate();
+      }
+    })();
+
+    // 3. Open-Meteo Live Client Weather Fetch
+    (function () {
+      const cities = [
+        { name: 'Λεμεσός', icon: '🌊', lat: 34.68, lon: 33.04 },
+        { name: 'Λευκωσία', icon: '🏛️', lat: 35.17, lon: 33.36 },
+        { name: 'Λάρνακα', icon: '✈️', lat: 34.92, lon: 33.63 },
+        { name: 'Πάφος', icon: '🪨', lat: 34.77, lon: 32.42 },
+        { name: 'Τρόοδος', icon: '🌲', lat: 34.92, lon: 32.88 }
+      ];
+
+      const wmoText = {
+        0: 'Αίθριος', 1: 'Κυρίως αίθριος', 2: 'Μερικώς νεφελώδης', 3: 'Συννεφιασμένος',
+        45: 'Ομίχλη', 51: 'Ψεκάδες', 61: 'Ασθενής βροχή', 63: 'Βροχή', 65: 'Ισχυρή βροχή',
+        80: 'Μπόρες', 95: 'Καταιγίδα'
+      };
+
+      const wmoIcons = {
+        0: '☀️', 1: '🌤️', 2: '⛅', 3: '☁️',
+        45: '🌫️', 51: '🌦️', 61: '🌧️', 63: '🌧️', 65: '⛈️',
+        80: '🌦️', 95: '⛈️'
+      };
+
+      async function fetchWeather() {
+        try {
+          const container = document.getElementById('wx-live');
+          if (!container) return;
+          const fetches = cities.map(c =>
+            fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,weather_code&timezone=auto`)
+              .then(r => r.json())
+              .then(d => ({ name: c.name, cityIcon: c.icon, temp: Math.round(d.current.temperature_2m), code: d.current.weather_code }))
+              .catch(() => null)
+          );
+
+          const results = await Promise.all(fetches);
+          if (results.some(r => r !== null)) {
+            container.innerHTML = results.map(r => {
+              if (!r) return '';
+              const desc = wmoText[r.code] || 'Ήπιος';
+              const icon = wmoIcons[r.code] || '🌤️';
+              return `
+                <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
+                  <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
+                    <span>${r.cityIcon}</span> <span>${r.name}</span>
+                  </div>
+                  <div class="text-3xl sm:text-4xl my-2">${icon}</div>
+                  <div class="text-2xl font-black text-[var(--accent)] t-num">${r.temp}°C</div>
+                  <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">${desc}</div>
+                </div>
+              `;
+            }).join('');
+          }
+        } catch (e) {
+          console.warn('Open-Meteo live weather fetch fallback maintained.', e);
+        }
+      }
+      fetchWeather();
+    })();
+
+    // 4. Instant Archive Search (Asynchronous Fetch with client-side cache)
+    (function () {
+      const input = document.getElementById('archiveSearch');
+      const resultsContainer = document.getElementById('searchResults');
+      if (!input || !resultsContainer) return;
+
+      let searchData = [];
+      let loadingPromise = null;
+
+      function getSearchData() {
+        if (!loadingPromise) {
+          loadingPromise = fetch('search-index.json').catch(() => fetch('../search-index.json'))
+            .then(r => r.json())
+            .then(d => { searchData = d; return d; })
+            .catch(err => {
+              console.warn('Could not load search index asynchronously:', err);
+              return [];
+            });
+        }
+        return loadingPromise;
+      }
+
+      input.addEventListener('focus', getSearchData);
+
+      input.addEventListener('input', async (e) => {
+        const q = e.target.value.trim().toLowerCase();
+        if (q.length < 2) {
+          resultsContainer.classList.add('hidden');
+          resultsContainer.innerHTML = '';
+          return;
+        }
+
+        const data = searchData.length ? searchData : await getSearchData();
+        const matches = data.filter(item => 
+          item.title.toLowerCase().includes(q) || 
+          item.snippet.toLowerCase().includes(q) ||
+          item.section.toLowerCase().includes(q)
+        ).slice(0, 8);
+
+        if (matches.length === 0) {
+          resultsContainer.innerHTML = '<div class="p-3 text-center t-meta text-[var(--ink-quiet)]">Δεν βρέθηκαν αποτελέσματα.</div>';
+          resultsContainer.classList.remove('hidden');
+          return;
+        }
+
+        resultsContainer.innerHTML = matches.map(m => `
+          <a href="${m.url}" class="block p-2.5 rounded hover:bg-[var(--paper)] transition border-b border-[var(--rule)] last:border-0">
+            <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)] mb-1">
+              <span>${m.section}</span>
+              <span>📅 ${m.date}</span>
+            </div>
+            <div class="font-bold text-[var(--ink)] leading-snug mb-1">${m.title}</div>
+            <div class="t-meta text-[var(--ink-quiet)] line-clamp-2">${m.snippet}</div>
+          </a>
+        `).join('');
+
+        resultsContainer.classList.remove('hidden');
       });
-    }
-    function updateClocks() {
-      const now = new Date();
-      const fmt = (tz) => new Intl.DateTimeFormat('el-GR', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
-      const cy = document.getElementById('clockCY'); if (cy) cy.textContent = fmt('Asia/Nicosia');
-      const lon = document.getElementById('clockLON'); if (lon) lon.textContent = fmt('Europe/London');
-      const nyc = document.getElementById('clockNYC'); if (nyc) nyc.textContent = fmt('America/New_York');
-    }
-    updateClocks();
-    setInterval(updateClocks, 10000);
+
+      document.addEventListener('click', (e) => {
+        if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
+          resultsContainer.classList.add('hidden');
+        }
+      });
+    })();
+
+    // 5. 60-Second Executive Scan Mode Toggle
+    (function () {
+      const scanBtn = document.getElementById('scanModeToggle');
+      if (!scanBtn) return;
+
+      const savedMode = localStorage.getItem('oracle-scan-mode') === '1';
+      if (savedMode) {
+        document.body.classList.add('scan-mode');
+        scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+        scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+      }
+
+      scanBtn.addEventListener('click', () => {
+        const isScan = document.body.classList.toggle('scan-mode');
+        localStorage.setItem('oracle-scan-mode', isScan ? '1' : '0');
+        if (isScan) {
+          scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+          scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+        } else {
+          scanBtn.innerHTML = '<span>⚡</span> <span class="hidden md:inline">60″ Scan</span>';
+          scanBtn.classList.remove('bg-[var(--accent)]', 'text-white');
+        }
+      });
+    })();
+
+    // 6. Sovereign Executive Audio Briefing (SpeechSynthesis)
+    (function () {
+      const playBtn = document.getElementById('audioPlayBtn');
+      const speedBtn = document.getElementById('audioSpeedBtn');
+      const stopBtn = document.getElementById('audioStopBtn');
+      const statusText = document.getElementById('audioStatusText');
+      const badge = document.getElementById('audioLiveBadge');
+
+      if (!playBtn || !('speechSynthesis' in window)) return;
+
+      const speeds = [1.0, 1.25, 1.5];
+      let speedIdx = 0;
+      let isSpeaking = false;
+
+      function getBriefingText() {
+        const titleEl = document.querySelector('#top-story h3');
+        const title = titleEl ? titleEl.innerText : '';
+        const bodyEl = document.querySelector('#top-story p');
+        const body = bodyEl ? bodyEl.innerText : '';
+        const deadlines = Array.from(document.querySelectorAll('#deadlines li')).slice(0, 3).map(li => li.innerText.split('—')[0]).join('. ');
+
+        return `The Oracle Sovereign. Ημερήσιο εμπιστευτικό briefing. Πρώτο θέμα: ${title}. ${body.slice(0, 320)}. Σημαντικές προθεσμίες και ενέργειες: ${deadlines}. Τέλος συνοπτικής ενημέρωσης.`;
+      }
+
+      function startPlayback() {
+        window.speechSynthesis.cancel();
+        const text = getBriefingText();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'el-GR';
+        utter.rate = speeds[speedIdx];
+
+        const voices = window.speechSynthesis.getVoices();
+        const elVoice = voices.find(v => v.lang.startsWith('el') || v.lang.includes('GR'));
+        if (elVoice) utter.voice = elVoice;
+
+        utter.onstart = () => {
+          isSpeaking = true;
+          playBtn.textContent = '⏸';
+          if (badge) badge.classList.remove('hidden');
+          if (stopBtn) stopBtn.classList.remove('hidden');
+          statusText.textContent = `Φωνητική ανάγνωση σε εξέλιξη (${speeds[speedIdx]}x)...`;
+        };
+
+        utter.onend = () => {
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Ολοκληρώθηκε η ηχητική σύνοψη.';
+        };
+
+        utter.onerror = () => {
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        };
+
+        window.speechSynthesis.speak(utter);
+      }
+
+      playBtn.addEventListener('click', () => {
+        if (isSpeaking) {
+          if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+            playBtn.textContent = '⏸';
+            statusText.textContent = `Συνέχιση ανάγνωσης (${speeds[speedIdx]}x)...`;
+          } else {
+            window.speechSynthesis.pause();
+            playBtn.textContent = '▶';
+            statusText.textContent = 'Σε παύση.';
+          }
+        } else {
+          startPlayback();
+        }
+      });
+
+      if (stopBtn) {
+        stopBtn.addEventListener('click', () => {
+          window.speechSynthesis.cancel();
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          stopBtn.classList.add('hidden');
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        });
+      }
+
+      if (speedBtn) {
+        speedBtn.addEventListener('click', () => {
+          speedIdx = (speedIdx + 1) % speeds.length;
+          speedBtn.textContent = `${speeds[speedIdx]}x`;
+          if (isSpeaking) startPlayback();
+        });
+      }
+    })();
+
+    // 7. Smart Sticky Navigation Header (Auto-hide on scroll down, reveal on scroll up)
+    (function () {
+      const nav = document.getElementById('mainNav');
+      if (!nav) return;
+
+      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      let ticking = false;
+      const threshold = 8;
+      const minScrollToHide = 100;
+
+      function onScroll() {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Near top of the page: always keep visible
+        if (currentScrollY <= minScrollToHide) {
+          nav.classList.remove('nav-hidden');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        // Prevent triggering on iOS rubber-band overscroll at bottom of document
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        if (currentScrollY >= maxScroll - 20) {
+          ticking = false;
+          return;
+        }
+
+        const delta = currentScrollY - lastScrollY;
+
+        if (Math.abs(delta) > threshold) {
+          if (delta > 0) {
+            // Scrolling down -> hide nav
+            nav.classList.add('nav-hidden');
+            const sr = document.getElementById('searchResults');
+            if (sr && !sr.classList.contains('hidden')) sr.classList.add('hidden');
+          } else {
+            // Scrolling up -> show nav
+            nav.classList.remove('nav-hidden');
+          }
+          lastScrollY = currentScrollY;
+        }
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // 8. 24/7 Global Market Clocks & Live Trading Badges
+    (function () {
+      function updateClocks() {
+        const now = new Date();
+        
+        function formatTZ(tz) {
+          try {
+            return new Intl.DateTimeFormat('el-GR', {
+              timeZone: tz,
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false
+            }).format(now);
+          } catch (e) {
+            return '--:--';
+          }
+        }
+
+        function getMarketStatus(tz, openH, openM, closeH, closeM) {
+          try {
+            const parts = new Intl.DateTimeFormat('en-US', {
+              timeZone: tz,
+              weekday: 'short',
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: false
+            }).formatToParts(now);
+            
+            const p = {};
+            parts.forEach(x => p[x.type] = x.value);
+            const day = p.weekday;
+            const h = parseInt(p.hour, 10);
+            const m = parseInt(p.minute, 10);
+            
+            if (day === 'Sat' || day === 'Sun') return { open: false, label: 'CLOSED' };
+            
+            const currentMins = h * 60 + m;
+            const openMins = openH * 60 + openM;
+            const closeMins = closeH * 60 + closeM;
+            
+            const isOpen = currentMins >= openMins && currentMins < closeMins;
+            return { open: isOpen, label: isOpen ? 'OPEN' : 'CLOSED' };
+          } catch (e) {
+            return { open: false, label: '--' };
+          }
+        }
+
+        const cyEl = document.getElementById('clockCY');
+        const lonEl = document.getElementById('clockLON');
+        const nycEl = document.getElementById('clockNYC');
+        const tyoEl = document.getElementById('clockTYO');
+
+        if (cyEl) cyEl.textContent = formatTZ('Asia/Nicosia');
+        if (lonEl) lonEl.textContent = formatTZ('Europe/London');
+        if (nycEl) nycEl.textContent = formatTZ('America/New_York');
+        if (tyoEl) tyoEl.textContent = formatTZ('Asia/Tokyo');
+
+        // London: LSE 08:00 - 16:30
+        const lonSt = getMarketStatus('Europe/London', 8, 0, 16, 30);
+        const lonStEl = document.getElementById('statusLON');
+        if (lonStEl) {
+          lonStEl.textContent = lonSt.label;
+          lonStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (lonSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+
+        // NYC: NYSE 09:30 - 16:00
+        const nycSt = getMarketStatus('America/New_York', 9, 30, 16, 0);
+        const nycStEl = document.getElementById('statusNYC');
+        if (nycStEl) {
+          nycStEl.textContent = nycSt.label;
+          nycStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (nycSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+
+        // Tokyo: TSE 09:00 - 15:30
+        const tyoSt = getMarketStatus('Asia/Tokyo', 9, 0, 15, 30);
+        const tyoStEl = document.getElementById('statusTYO');
+        if (tyoStEl) {
+          tyoStEl.textContent = tyoSt.label;
+          tyoStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (tyoSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+      }
+
+      updateClocks();
+      setInterval(updateClocks, 1000);
+    })();
 
 
     // ⚡ 24/7 Live Wire Feed Ticker & Drawer Modal
@@ -2072,5 +2885,6 @@
     })();
     
   </script>
+
 </body>
 </html>
