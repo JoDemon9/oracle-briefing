@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Προαγγελία από Μαρία για... \"Ταλιμπάν\"!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/proaggelia-apo-maria-gia-talimpan",
+        "title": "Με... χαμογελάρες!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-hamogelares",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ένα και να... καίει!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ena-kai-na-kaiei",
+        "title": "Γρηγόρη... μετά την παραίτηση",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/grigori-meta-tin-paraitisi",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Όταν το ΓΣΠ ξεσπά\" (βίντεο)",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/otan-gsp-xespa-binteo",
+        "title": "Ακραία μπακ: “Στην άμυνα λιοντάρια, επίθεση κανόνια”",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/akraia-mpak-stin-amyna-liontaria-epithesi-kanonia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Απογοητευμένος/Claudio Giráldez",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apogoiteymenosclaudio-giraldez",
+        "title": "\"Παίξε για το σήμα, για τους οπαδούς\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/paixe-gia-sima-gia-toys-opadoys",
         "source": "Kerkida.net"
       },
       {
-        "title": "Oμόνοια 1,2,3",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-123",
+        "title": "\"Τέλεια αρχή, ευχαριστούμε τον κόσμο μας\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/teleia-arhi-eyharistoyme-ton-kosmo-mas",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-17T09:34:14.136372+00:00"
+    "fetched_at": "2026-09-17T15:08:34.184392+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Real Madrid leading race to sign JJ Gabriel from Manchester United",
+        "url": "https://www.theguardian.com/football/2026/sep/17/real-madrid-leading-race-sign-jj-gabriel-manchester-united",
+        "source": "The Guardian"
+      },
       {
         "title": "‘We can’t accept that’: Carrick urges Manchester United to respond after cup collapse",
         "url": "https://www.theguardian.com/football/2026/sep/16/michael-carrick-manchester-united-carabao-cup-third-round-defeat-brighton",
@@ -74,14 +79,9 @@
         "title": "Are Manchester United as poor as the early Premier League table suggests?",
         "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-premier-league-analysis",
         "source": "The Guardian"
-      },
-      {
-        "title": "Haaland goal should not have stood but VAR made the right call with Sunderland penalty",
-        "url": "https://www.theguardian.com/football/2026/sep/14/var-referee-matt-donohue-erling-haaland-goal-manchester-derby",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-17T09:34:15.066366+00:00"
+    "fetched_at": "2026-09-17T15:08:35.728463+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-17T09:34:15.735545+00:00"
+    "fetched_at": "2026-09-17T15:08:36.584233+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Former Mercedes design boss Elliott joins Alpine",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckeq8vj28149o",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "Verstappen passes 100 amateur karters in 14 laps in exhibition race",
         "url": "https://www.bbc.com/sport/formula1/articles/c50m3k7jk82jo",
@@ -161,13 +166,8 @@
         "title": "Madrid F1 circuit set for changes after criticism",
         "url": "https://www.bbc.com/sport/formula1/articles/ckwyzllzdq43o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "How virtual safety car cost Norris win - and should F1 change rules?",
-        "url": "https://www.bbc.com/sport/formula1/articles/cvgyjwxv7y3o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-17T09:34:16.655627+00:00"
+    "fetched_at": "2026-09-17T15:08:37.928601+00:00"
   }
 }
