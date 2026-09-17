@@ -842,5 +842,49 @@
   "https://www.bbc.co.uk/news/articles/c8g49e0gwxeno?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/506d/live/98661900-b1de-11f1-a430-4d16ee157c41.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.cnbc.com/2026/09/16/fed-delivers-its-first-hike-in-3-years-plus-whats-moving-starbucks-and-ge-vernova.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108323500-1781724301709-gettyimages-2281465238-WARSH_FOMC.jpeg?v=1781724364&amp;w=1920&amp;h=1080",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://www.sigmalive.com/news/energia/1329733/h-xezmpolakh-zita-eksighiseis-ghia-senaria-aghoghou-fa-israil-kyproy-elladas": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361924/conversions/eekshekse-seo.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.sigmalive.com/news/politics/1329731/sto-doyvlino-o-keraunos-ghia-atipa-simvoulia-eurogroup-kai-ecofin-irlandias": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361922/conversions/cache_1300x500_analog_medium_450664_289168_25_12_31_130204-seo.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/17/cyprus-leaders-to-meet-again-ahead-of-un-general-assembly": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/erhurman-christodoulides.jpeg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://cyprus-mail.com/2026/09/17/star-bulk-makes-euronext-athens-debut-with-e107-8m-offering": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/950x405-best-investment-bank.jpg",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://www.sigmalive.com/news/local/1329734/nees-filakes-meros-tis-periokhis-se-natura-gheitniazei-me-ti-nekri-zwni-vid": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361925/conversions/chatgpt_image_sep_17_2026_09_49_12_am-seo.jpg",
+    "category": "ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ"
+  },
+  "https://www.cnbc.com/2026/09/17/bank-of-england-interest-rate-decision-fed-rate-hike-uk-inflation.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108355817-1787935170986-108355817-1787932538588-_05A6238-1.jpg?v=1787943832&amp;w=1920&amp;h=1080",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://www.cnbc.com/2026/09/16/anthropic-policy-chief-says-ai-companies-cant-operate-on-honor-code.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108363769-1789576513126-gettyimages-2173285508-AFP_36H26AA.jpeg?v=1789576568&amp;w=1920&amp;h=1080",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.sigmalive.com/news/international/1329730/saoydiki-aravia-kovei-petrelaio-stin-efrwpi-meta-epithesi-se-aghogho": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1361921/conversions/photo_2026_09_15_22_41_30-seo.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.dw.com/en/why-are-european-banks-moving-gold-out-of-united-states/a-79213013": {
+    "image": "https://static.dw.com/image/78104138_6.jpg",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://www.dw.com/en/trump-seeks-halt-to-energy-attacks-by-both-russia-ukraine/a-79265774": {
+    "image": "https://static.dw.com/image/78294107_6.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
   }
 }
