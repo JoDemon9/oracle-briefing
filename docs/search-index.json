@@ -1,115 +1,199 @@
 [
   {
+    "date": "2026-09-17",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Cyprus industrial output bucks EU trend with July increase",
+    "snippet": "Cyprus’ industrial production rebounded by 1.1 per cent in July 2026, contrasting with declines across the European Union and euro area, according to a report from Eurostat. The in...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. What’s on this weekend [Επικαιρότητα]",
+    "snippet": "City events This week, the capital welcomes the return of the beloved Fork Food Market. Happening on September 18 at the Municipal Gardens of Nicosia, dozens of...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. MHV secures stock exchange approval for 101.4m additional shares [Επικαιρότητα]",
+    "snippet": "MHV Mediterranean Hospitality Venture has secured approval to list 101.41 million additional shares on the Cyprus Stock Exchange’s (CSE) Emerging Companies Mark...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Cyprus Business Now: state budget, AI, shipping, banks, pay transparency [Επικαιρότητα]",
+    "snippet": "Cyprus’ cabinet approved the €11.1 billion state budget for 2027 on Wednesday, with Finance Minister Makis Keravnos forecasting continued economic growth, a lar...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Oev and TechIsland to sign cooperation deal on technology and skills [Επικαιρότητα]",
+    "snippet": "The Employers and Industrialists Federation (Oev) and TechIsland will sign a memorandum of cooperation on September 18, 2026, aimed at strengthening collaborati...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Trump hopes Iran war nearing end as Saudi-Houthi fighting escalates [Ο Φάκελός μου]",
+    "snippet": "President Donald Trump said he hoped an end to the war against Iran was near, as the conflict, in its seventh month, escalated with Saudi aircraft pounding Yeme...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🌍 Διεθνή",
+    "title": "1. Assad regime planned US journalist's kidnap for weeks, BBC finds [Διεθνή]",
+    "snippet": "Austin Tice’s abduction was approved by Syria’s former leader Bashar al-Assad, a source claims....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🌍 Διεθνή",
+    "title": "2. US interest rates raised for first time in three years [Διεθνή]",
+    "snippet": "Rates were hiked in a unanimous decision despite fierce opposition from President Donald Trump, who had called for a cut....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🌍 Διεθνή",
+    "title": "3. Snapchat open to putting time limits on teens, boss tells BBC [Διεθνή]",
+    "snippet": "Evan Spiegel says it would be \"an important step forward for the industry\" in an interview with the BBC....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🌍 Διεθνή",
+    "title": "4. Rosenberg: Russia's elections will have few surprises, but for the Kremlin they matter [Διεθνή]",
+    "snippet": "There is no doubt over the outcome of this vote, but for the Kremlin they are still an important moment....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "🌍 Διεθνή",
+    "title": "5. Photos show widespread damage at US sites from Iranian attacks [Διεθνή]",
+    "snippet": "A wrecked air force plane and destroyed buildings are among the images obtained by the BBC's partner CBS News....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-17",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-16",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Παγκόσμιο σοκ στις αγορές ομολόγων: Το αμερικανικό 10ετές έσπασε το 5% ενόψει της κρίσιμης απόφασης της Fed — Στο 3,1% εκτινάχθηκε ο πληθωρισμός στη Βρετανία [Επιβεβαιωμένο]",
     "snippet": "Σε κατάσταση ακραίας μεταβλητότητας εισέρχονται οι διεθνείς κεφαλαιαγορές, καθώς η απόδοση του αμερικανικού 10ετούς κρατικού ομολόγου ξεπέρασε το ψυχολογικό και μακροοικονομικό όρι...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-16.html#top-story"
   },
   {
     "date": "2026-09-16",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Δημοσιονομική Στρατηγική: Ιστορικός προϋπολογισμός €11,16 δισ. για το 2027 ενέκρινε το Υπουργικό — Ανάπτυξη 2,9% και βουτιά του δημόσιου χρέους στο 46,6% [Επιβεβαιωμένο]",
     "snippet": "Ενώπιον του Υπουργικού Συμβουλίου παρουσιάστηκε και εγκρίθηκε ο κρατικός προϋπολογισμός της Κυπριακής Δημοκρατίας για το 2027 από τον Υπουργό Οικονομικών Μάκη Κ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-16.html#cyprus"
   },
   {
     "date": "2026-09-16",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Κατασκευαστικός Τομέας: Έκρηξη αδειών οικοδομής άνω των €2,1 δισ. στην Κύπρο με ατμομηχανή τη Λεμεσό [Επιβεβαιωμένο]",
     "snippet": "Σε ιστορικά υψηλά επίπεδα κινείται η οικοδομική δραστηριότητα στην Κύπρο, με τη συνολική αξία των εκδοθεισών αδειών οικοδομής να υπερβαίνει τα €2,1 δισεκατομμύρ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-16.html#cyprus"
   },
   {
     "date": "2026-09-16",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Αγορά Εργασίας & Εισοδήματα: Στο υψηλότερο σημείο της Ευρωζώνης η αύξηση των μισθών στην Κύπρο [Επιβεβαιωμένο]",
     "snippet": "Τον ταχύτερο ρυθμό αύξησης των ονομαστικών και πραγματικών αποδοχών στην Ευρωζώνη κατέγραψε η Κύπρος, ξεπερνώντας αισθητά τον ευρωπαϊκό μέσο όρο σύμφωνα με στοι...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-16.html#cyprus"
   },
   {
     "date": "2026-09-16",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Δημόσια Υγεία & ΓεΣΥ: Πράσινο φως για το πρώτο Διοικητικό Συμβούλιο του Εθνικού Κέντρου Κλινικής Τεκμηρίωσης [Επιβεβαιωμένο]",
     "snippet": "Ιστορική θεσμική τομή για τη λειτουργία και τον ποιοτικό έλεγχο του Γενικού Συστήματος Υγείας (ΓεΣΥ) συνιστά η απόφαση του Υπουργικού Συμβουλίου να ανάψει το «π...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-16.html#cyprus"
   },
   {
     "date": "2026-09-16",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Τεχνολογική Πολιτική: «Η Τεχνητή Νοημοσύνη πρέπει να υπηρετεί τον άνθρωπο, όχι να τον αντικαθιστά» — Στρατηγική παρέμβαση Δαμιανού [Μονή πηγή]",
     "snippet": "Την κυβερνητική φιλοσοφία για την ενσωμάτωση της Τεχνητής Νοημοσύνης στη δημόσια διοίκηση και την οικονομία διατύπωσε ο Υφυπουργός Έρευνας, Καινοτομίας και Ψηφι...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-16.html#cyprus"
   },
   {
     "date": "2026-09-16",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ψηφιακή Προστασία & Κοινωνική Πολιτική: Εθνικό σχέδιο δράσης του Υπουργικού Συμβουλίου για την προστασία ανηλίκων στα social media [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Ολοκληρωμένο εθνικό σχέδιο δράσης για την προστασία παιδιών και εφήβων από τους κινδύνους των κοινωνικών δικτύων και του διαδικτύου υιοθέτησε το Υπουργικό Συμβο...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-16.html#cyprus"
   },
   {
     "date": "2026-09-16",
     "section": "🌍 Διεθνή",
     "title": "1. Ευρωπαϊκή Ένωση & Εμπόριο: Ιστορική στήριξη von der Leyen στην πρόταση για ένταξη του Καναδά ως «Συνδεδεμένου Μέλους» της ΕΕ [Επιβεβαιωμένο]",
     "snippet": "Σε μια γεωπολιτική πρωτοβουλία ιστορικών διαστάσεων, η Πρόεδρος της Ευρωπαϊκής Επιτροπής Ursula von der Leyen εξέφρασε την πλήρη στήριξή της στο σχέδιο απόδοσης...",
-    "url": "#world"
+    "url": "briefings/2026-09-16.html#world"
   },
   {
     "date": "2026-09-16",
     "section": "🌍 Διεθνή",
     "title": "2. Τεχνητή Νοημοσύνη & Ασφάλεια: Sam Altman: «Ο κόσμος έχει δίκιο να φοβάται την AI, αλλά πρέπει να εμπιστευτεί τις εταιρείες ανάπτυξης» [Επιβεβαιωμένο]",
     "snippet": "Σε συνέντευξή του στο BBC, ο διευθύνων σύμβουλος της OpenAI Sam Altman παραδέχθηκε ότι η κοινωνία έχει «απολύτως δίκιο να αισθάνεται φόβο» μπροστά στις ασύλληπτ...",
-    "url": "#world"
+    "url": "briefings/2026-09-16.html#world"
   },
   {
     "date": "2026-09-16",
     "section": "🌍 Διεθνή",
     "title": "3. Βιομηχανία Ημιαγωγών: Άλμα μετοχών Intel και SK Hynix μετά από πληροφορίες για κοινή παραγωγή memory chips στις ΗΠΑ [Επιβεβαιωμένο]",
     "snippet": "Ανοδικό ράλι κατέγραψαν οι μετοχές της Intel και της νοτιοκορεατικής SK Hynix, έπειτα από αποκαλυπτικό δημοσίευμα που φέρει τους δύο κολοσσούς να διεξάγουν προχ...",
-    "url": "#world"
+    "url": "briefings/2026-09-16.html#world"
   },
   {
     "date": "2026-09-16",
     "section": "🌍 Διεθνή",
     "title": "4. Ευρωπαϊκή Διπλωματία & Ενέργεια: Στροφή Magyar στη Βουδαπέστη: Η Ουγγαρία σκληραίνει τη στάση της απέναντι στη Μόσχα [Επιβεβαιωμένο]",
     "snippet": "Σημαντική αλλαγή πολιτικής πλεύσης καταγράφεται στην Ουγγαρία, με τον ηγέτη της αντιπολίτευσης Péter Magyar να ασκεί ισχυρότατη πίεση στην κυβέρνηση Orbán, απαι...",
-    "url": "#world"
+    "url": "briefings/2026-09-16.html#world"
   },
   {
     "date": "2026-09-16",
     "section": "🌍 Διεθνή",
     "title": "5. Αμερικανική Οικονομία: Ο Scott Bessent υπερασπίζεται στο Κογκρέσο τις κρατικές παρεμβάσεις και την εμπορική πολιτική [Μονή πηγή]",
     "snippet": "Ενώπιον της αρμόδιας Επιτροπής της Βουλής των Αντιπροσώπων κατέθεσε ο Υπουργός Οικονομικών των ΗΠΑ Scott Bessent, υπεραμυνόμενος των κυβερνητικών παρεμβάσεων στ...",
-    "url": "#world"
+    "url": "briefings/2026-09-16.html#world"
   },
   {
     "date": "2026-09-16",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-16.html#deadlines"
   },
   {
     "date": "2026-09-16",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-16.html#deadlines"
   },
   {
     "date": "2026-09-16",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-16.html#deadlines"
   },
   {
     "date": "2026-09-16",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-16.html#top-story"
   },
   {
     "date": "2026-09-15",
