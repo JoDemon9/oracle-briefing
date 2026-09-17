@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "(Βίντεο) Μπράουερς στο kerkida/\"Είμαστε περήφανοι-Παίξαμε με καρδιά\"",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/binteo-mpraoyers-sto-kerkidaeimaste-perifanoi-paixame-me-kardia",
+        "title": "Προαγγελία από Μαρία για... \"Ταλιμπάν\"!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/proaggelia-apo-maria-gia-talimpan",
         "source": "Kerkida.net"
       },
       {
-        "title": "Kerkida... ο Αλόνσο",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kerkida-o-alonso",
+        "title": "Ένα και να... καίει!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ena-kai-na-kaiei",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τα εισιτήρια με Krasava ΕΝΥ",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ta-eisitiria-me-krasava-eny-0",
+        "title": "\"Όταν το ΓΣΠ ξεσπά\" (βίντεο)",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/otan-gsp-xespa-binteo",
         "source": "Kerkida.net"
       },
       {
-        "title": "Είχε \"Σια λα λα\" αντί...φλαμένγκο",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/eihe-sia-la-la-antiflamengko",
+        "title": "Απογοητευμένος/Claudio Giráldez",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apogoiteymenosclaudio-giraldez",
         "source": "Kerkida.net"
       },
       {
-        "title": "Europa League/ΑΠΟΤΕΛΕΣΜΑΤΑ πρεμιέρας στη League Phase (Βαθμολογία)",
-        "url": "https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/europa-leagueapotelesmata-premieras-sti-league-phase",
+        "title": "Oμόνοια 1,2,3",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-123",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:40.216788+00:00"
+    "fetched_at": "2026-09-17T09:34:14.136372+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -61,11 +61,6 @@
         "source": "The Guardian"
       },
       {
-        "title": "Manchester United 2-3 Brighton, Coventry 1-3 Aston Villa and more: Carabao Cup clockwatch – as it happened",
-        "url": "https://www.theguardian.com/football/live/2026/sep/16/manchester-united-v-brighton-coventry-v-aston-villa-and-more-carabao-cup-clockwatch-live",
-        "source": "The Guardian"
-      },
-      {
         "title": "De Cuyper and Brighton pile on pain for Manchester United with comeback",
         "url": "https://www.theguardian.com/football/2026/sep/16/manchester-united-brighton-carabao-cup-third-round-match-report",
         "source": "The Guardian"
@@ -79,9 +74,14 @@
         "title": "Are Manchester United as poor as the early Premier League table suggests?",
         "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-premier-league-analysis",
         "source": "The Guardian"
+      },
+      {
+        "title": "Haaland goal should not have stood but VAR made the right call with Sunderland penalty",
+        "url": "https://www.theguardian.com/football/2026/sep/14/var-referee-matt-donohue-erling-haaland-goal-manchester-derby",
+        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:41.242175+00:00"
+    "fetched_at": "2026-09-17T09:34:15.066366+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:42.679497+00:00"
+    "fetched_at": "2026-09-17T09:34:15.735545+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:44.933117+00:00"
+    "fetched_at": "2026-09-17T09:34:16.655627+00:00"
   }
 }
