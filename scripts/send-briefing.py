@@ -355,11 +355,11 @@ else:
     if weather_summary:
         msg_parts.append(weather_summary)
 
-msg_parts.append(f'📖 <a href="{full_edition_url}">Πλήρης έκδοση</a>')
+msg_parts.append(f'📖 <b>Πλήρης Έκδοση:</b>\n{full_edition_url}')
 text = "\n\n".join(msg_parts)
 
 if len(text) > 4000:
-    text = text[:3900] + "\n…\n" + f'<a href="{full_edition_url}">Πλήρης έκδοση</a>'
+    text = text[:3900] + "\n…\n\n" + f'📖 <b>Πλήρης Έκδοση:</b>\n{full_edition_url}'
 
 print("=" * 60)
 print("FORMATTED TELEGRAM MESSAGE PREVIEW:")
@@ -392,8 +392,11 @@ if TOKEN and CHAT:
                 try:
                     dispatched = {}
                     if os.path.exists(DISPATCH_LOG):
-                        with open(DISPATCH_LOG, 'r', encoding='utf-8') as lf:
-                            dispatched = json.load(lf)
+                        try:
+                            with open(DISPATCH_LOG, 'r', encoding='utf-8') as lf:
+                                dispatched = json.load(lf)
+                        except Exception:
+                            dispatched = {}
                     dispatched[edition_slug] = datetime.now().isoformat()
                     with open(DISPATCH_LOG, 'w', encoding='utf-8') as lf:
                         json.dump(dispatched, lf, indent=2)
