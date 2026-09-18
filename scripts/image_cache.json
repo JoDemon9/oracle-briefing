@@ -954,5 +954,25 @@
   "https://www.bbc.co.uk/news/articles/cwly7vkke4jxo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/0c28/live/475f83b0-b2b6-11f1-a430-4d16ee157c41.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.dw.com/en/can-new-us-sanctions-cripple-iran-s-shadow-economy/a-78494630?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/78485712_6.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.dw.com/en/canada-s-carney-holds-firm-against-trump-tariffs/a-78542754?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/78500420_6.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.dw.com/en/chancellor-merz-says-afd-result-changes-all-of-germany/a-79150560?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/79146627_6.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.dw.com/en/why-social-media-addiction-is-so-hard-to-regulate/a-78482023?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/77572589_6.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.dw.com/en/japanese-artist-yayoi-kusama-dies-at-97/a-78518473?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/65636669_6.jpg",
+    "category": "⚡ ΕΠΙΚΑΙΡΟΤΗΤΑ"
   }
 }

@@ -14,6 +14,11 @@
     },
     "articles": [
       {
+        "title": "Στο τρέξιμο ο...Ολλανδός",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sto-treximo-oollandos",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Γυρνάει...σελίδα",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gyrnaeiselida",
         "source": "Kerkida.net"
@@ -32,14 +37,9 @@
         "title": "Ανεβάζει ρυθμούς ο Κίτσος",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kitsosantistrofi-metrisi",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "(Φώτος) Δουλειά... για Krasava",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-doyleia-sto-gymnastirio-1",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:42.829357+00:00"
+    "fetched_at": "2026-09-18T19:05:38.916634+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:44.129418+00:00"
+    "fetched_at": "2026-09-18T19:05:39.726771+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:45.469206+00:00"
+    "fetched_at": "2026-09-18T19:05:40.328957+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:47.030018+00:00"
+    "fetched_at": "2026-09-18T19:05:41.425089+00:00"
   }
 }
