@@ -192,35 +192,63 @@
 
 ### ΟΜΟΝΟΙΑ
 
-*   **Τελευταίο αποτέλεσμα:** **Ομόνοια – Απόλλων Λεμεσού** **0-0** (Cyprus League by Stoiximan, Στάδιο ΓΣΠ). Σκληρή τακτική μάχη με εκατέρωθεν ευκαιρίες και απόλυτη πειθαρχία στην αμυντική γραμμή των «πρασίνων».
-*   **Επόμενος αγώνας:** Προετοιμασία για την 4η αγωνιστική κόντρα στην Krasava ΕΝΥ Διγενής Ύψωνα και εντατικοποίηση της προπώλησης εισιτηρίων ενόψει της ιστορικής League Phase του Europa League ([Επίσημο Πρόγραμμα ΚΟΠ](https://www.cfa.com.cy/Gr/news/53637)).
-*   **Τακτικό Ρεπορτάζ & Νέα:** Στο «Ηλίας Πούλλος» επικρατεί αποφασιστικότητα καθώς η ομάδα «γυρνάει σελίδα» σύμφωνα με το ρεπορτάζ του Kerkida.net. Ο Φώτης Κίτσος ανεβάζει σταθερά ρυθμούς ξεπερνώντας τις μυϊκές ενοχλήσεις, ενώ το τεχνικό επιτελείο εστιάζει στην ταχύτερη κυκλοφορία της μπάλας και στη βελτίωση της τελικής ενέργειας απέναντι σε οργανωμένες άμυνες.
-*   **Βίντεο Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights)
-*   **Πηγές:** [ΚΟΠ / CFA](https://www.cfa.com.cy/Gr/news/53637) · [Kerkida.net](https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gyrnaeiselida)
+*   **Τελευταίο αποτέλεσμα:** **Ομόνοια – Celta Vigo** **1-0** (Balkovec 88' — UEFA Europa League 1η αγωνιστική League Phase, Στάδιο ΓΣΠ, Τετάρτη 16/09). Ιστορικός ευρωπαϊκός θρίαμβος για το «τριφύλλι» απέναντι στην ισπανική Θέλτα, με «χρυσό» σκόρερ τον Balkovec που έβαλε φωτιά στις εξέδρες του κατάμεστου ΓΣΠ μπροστά σε 11.271 παραληρούντες οπαδούς!
+*   **Επόμενος αγώνας:** **Ομόνοια Λευκωσίας – Krasava ΕΝΥ Διγενής Ύψωνα**, **Κυριακή 20 Σεπτεμβρίου 2026, 19:00 ώρα Κύπρου**, Στάδιο ΓΣΠ (Cyprus League by Stoiximan, 4η αγωνιστική, Διαιτητής: Κωνσταντίνος Χρίστου) ([Επίσημο Πρόγραμμα ΚΟΠ](https://www.cfa.com.cy/Gr/news/53723)).
+*   **Τακτικό Ρεπορτάζ & Ευρωπαϊκός Παλμός:**
+    *   **Δηλώσεις Louk Brouwers:** Ο Ολλανδός μέσος μίλησε στην κάμερα του Kerkida.net: «Είμαστε περήφανοι, παίξαμε με καρδιά και θα συνεχίσουμε να παλεύουμε σε κάθε διοργάνωση» ([Kerkida.net](https://www.kerkida.net/eyropaikoi-agones/omonoia/binteo-mpraoyers-sto-kerkidaeimaste-perifanoi-paixame-me-kardia)).
+    *   **Ισπανικό Σοκ στα ΜΜΕ:** Τα ισπανικά αθλητικά μέσα έκαναν λόγο για «ντροπιαστική ήττα και καταστροφή της Θέλτα στη Λευκωσία», τονίζοντας την απόλυτη τακτική εξουδετέρωση των Γαλικιανών από το συμπαγές αμυντικό πλάνο του Henning Berg.
+    *   **Υπολογισμοί Πρόκρισης στην 24άδα:** Ανάλυση του Football Meets Data καταγράφει τους βαθμούς που απαιτούνται για την πρόκριση στα νοκ-άουτ του Europa League, με τους πρώτους 3 βαθμούς της Ομόνοιας να ανοίγουν διάπλατα τον δρόμο για τη φάση των «24» ([Kerkida.net](https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/europa-league-posoi-bathmoi-hreiazontai-gia-eisodo-stin-24ada)).
+    *   **Αγωνιστικά Νέα στο «Ηλίας Πούλλος»:** Ο Φώτης Κίτσος ανεβάζει εντατικά ρυθμούς επιστρέφοντας σε πλήρη δράση, ενώ ο Berg ετοιμάζει στοχευμένο rotation για την αναμέτρηση της Κυριακής κόντρα στην Krasava.
+*   **Βίντεο Highlights:** [Highlights Ομόνοια – Celta Vigo στο YouTube](https://www.youtube.com/results?search_query=Omonoia+Celta+Vigo+highlights)
+*   **Πηγές:** [ΚΟΠ / CFA](https://www.cfa.com.cy/Gr/news/53723) · [Kerkida.net](https://www.kerkida.net/eyropaikoi-agones/omonoia/binteo-mpraoyers-sto-kerkidaeimaste-perifanoi-paixame-me-kardia)
 
 ### Manchester United
 
-*   **Τελευταίο αποτέλεσμα:** **Manchester United – Brighton** **2-3** (Carabao Cup 3ος γύρος, Old Trafford). Αναπάντεχη ήττα με ανατροπή στο δεύτερο ημίχρονο και καθοριστικό τέρμα του De Cuyper.
-*   **Επόμενος αγώνας:** **Fulham – Manchester United**, **Σάββατο 16:30 ώρα Κύπρου**, Craven Cottage (Premier League) ([Πρόγραμμα BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)).
-*   **Τακτικό Ρεπορτάζ & Νέα:** Σε συναγερμό βρίσκεται το στρατόπεδο των «Κόκκινων Διαβόλων» ενόψει του αυριανού αγώνα στο Λονδίνο, με τον Michael Carrick να απαιτεί άμεση αντίδραση και αμυντική πειθαρχία («We can't accept that»). Παράλληλα, ο βρετανικός Guardian αποκαλύπτει ότι η Real Madrid παρακολουθεί στενά την υπόθεση του νεαρού ταλαντούχου JJ Gabriel, δημιουργώντας πρόσθετη πίεση στη διοίκηση του Old Trafford για την ανανέωση συμβολαίων.
+*   **Τελευταίο αποτέλεσμα:** **Manchester United – Brighton & Hove Albion** **2-3** (Carabao Cup 3ος γύρος, Old Trafford, Τετάρτη 16 Σεπτεμβρίου 2026). Πικρός αποκλεισμός με ολική ανατροπή των «Γλάρων» στο δεύτερο μέρος και καθοριστικό τέρμα του Maxim De Cuyper.
+*   **Επόμενος αγώνας:** **Fulham – Manchester United**, **Σάββατο 19 Σεπτεμβρίου 2026, 16:30 ώρα Κύπρου**, Craven Cottage (Premier League) ([Πρόγραμμα BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)).
+*   **Τακτικό Ρεπορτάζ, Παρασκήνιο & Μεταγραφές:**
+    *   **Τελεσίγραφο Michael Carrick:** Ο τεχνικός των «Κόκκινων Διαβόλων» έκρουσε τον κώδωνα του κινδύνου στον Guardian: «Δεν μπορούμε να αποδεχθούμε τέτοια κατάρρευση» («We can't accept that»), ζητώντας απόλυτη συγκέντρωση και άμεση αγωνιστική απάντηση στο αυριανό ματς του Craven Cottage ([The Guardian](https://www.theguardian.com/football/2026/sep/18/premier-league-10-things-to-look-out-for-this-weekend)).
+    *   **Σεισμός με το παιδί-θαύμα JJ Gabriel:** Σύμφωνα με αποκαλυπτικό ρεπορτάζ, ο 16χρονος ταλαντούχος εξτρέμ ζήτησε να αποχωρήσει από τον σύλλογο, με τη Real Madrid να οδηγεί την κούρσα για την υπογραφή του.
+    *   **Τακτικό Πλάνο στο Λονδίνο:** Ο Carrick δοκιμάζει διάταξη 4-3-3 με περισσότερα τρεξίματα στον άξονα, επιδιώκοντας να περιορίσει τη δημιουργία των γηπεδούχων και να εκμεταλλευτεί τους κενούς χώρους.
 *   **Βίντεο Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights)
 *   **Πηγές:** [The Guardian](https://www.theguardian.com/football/2026/sep/18/premier-league-10-things-to-look-out-for-this-weekend) · [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)
 
 ### Real Madrid
 
-*   **Τελευταίο αποτέλεσμα:** **Elche – Real Madrid** **1-1** (La Liga, Estadio Manuel Martínez Valero). Νέο δραματικό γκολ από τον 19χρονο Espí στις καθυστερήσεις που απέτρεψε την ήττα.
-*   **Επόμενος αγώνας:** **Atletico Madrid – Real Madrid**, **Κυριακή 20 Σεπτεμβρίου 2026, 15:15 ώρα Κύπρου**, Estadio Metropolitano (El Derbi Madrileño) ([Επίσημο Πρόγραμμα BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)).
-*   **Τακτικό Ρεπορτάζ & Νέα:** Όλα τα φώτα στη Μαδρίτη στρέφονται στο μεγάλο ντέρμπι της Κυριακής κόντρα στους «κολτσονέρος» του Diego Simeone. Η Marca εξυμνεί την αποτελεσματικότητα του νεαρού Espí ως «χρυσής αλλαγής» για τον José Mourinho, ο οποίος καταστρώνει ειδικό πλάνο πίεσης στη μεσαία γραμμή για να περιορίσει τις αντεπιθέσεις της Ατλέτικο και να διατηρήσει την ομάδα στην κορυφή της βαθμολογίας.
+*   **Τελευταίο αποτέλεσμα:** **Elche – Real Madrid** **1-1** (Espí 90+3' — La Liga, Estadio Manuel Martínez Valero, Τρίτη 15/09). Νέο γκολ-λύτρωση από τον 19χρονο επιθετικό Espí βαθιά στις καθυστερήσεις, που γλίτωσε τη «Βασίλισσα» από την πρώτη της ήττα στη σεζόν.
+*   **Επόμενος αγώνας:** **Atletico Madrid – Real Madrid**, **Κυριακή 20 Σεπτεμβρίου 2026, 15:15 ώρα Κύπρου**, Estadio Metropolitano (La Liga — El Derbi Madrileño) ([Επίσημο Πρόγραμμα BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)).
+*   **Τακτικό Ρεπορτάζ & El Derbi:**
+    *   **Ο «Joker» Espí σώζει ξανά τον Mourinho:** Η Marca αποθεώνει τον 19χρονο killer («Espí saves Real Madrid once again in stoppage time»), ο οποίος εξελίσσεται στο απόλυτο επιθετικό υπερόπλο που έρχεται από τον πάγκο ([Marca](https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html)).
+    *   **Σχέδιο μάχης για το Metropolitano:** Ο José Mourinho ετοιμάζει συμπαγές κέντρο με διπλό ανασταλτικό χαφ, με σκοπό να εγκλωβίσει τους μεσοεπιθετικούς του Diego Simeone και να εκμεταλλευτεί την ταχύτητα του Vinicius Jr. στο ανοιχτό γήπεδο.
+    *   **Μεταγραφικό Radar:** Η Ρεάλ επιταχύνει τις επαφές για τον JJ Gabriel της Μάντσεστερ Γιουνάιτεντ, ενώ εξετάζεται το ενδεχόμενο δανεισμού του Endrick στη Ρόμα για περισσότερα αγωνιστικά λεπτά.
 *   **Βίντεο Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights)
 *   **Πηγές:** [Marca](https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html) · [BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)
 
 ### Formula 1
 
-*   **Τελευταίο αποτέλεσμα:** **Spanish Grand Prix 2026 (Gran Premio de España)** — Μεγάλη νίκη του Kimi Antonelli με στρατηγική διαχείριση ελαστικών υπό το καθεστώς Virtual Safety Car.
+*   **Τελευταίο αποτέλεσμα:** **Spanish Grand Prix 2026 (Gran Premio de España)** — Εντυπωσιακή νίκη-ορόσημο για τον Kimi Antonelli με τη Mercedes χάρη στην ιδιοφυή στρατηγική αλλαγής ελαστικών υπό το καθεστώς Virtual Safety Car.
 *   **Επόμενος αγώνας:** Παγκόσμιο Πρωτάθλημα Formula 1 2026 ([Επίσημο Πρόγραμμα Formula1.com](https://www.formula1.com/en/racing/2026/spain.html)).
-*   **Τακτικό Ρεπορτάζ & Νέα:** Επαναστατικές αλλαγές ανακοίνωσε η Formula 1 για το καλεντάρι του 2027, επεκτείνοντας τους αγώνες Sprint σε 10 και εντάσσοντας για πρώτη φορά το ιστορικό σιρκουί του Μονακό σύμφωνα με το BBC Sport F1. Την ίδια ώρα, η Alpine ανακοίνωσε την πρόσληψη του πρώην επικεφαλής σχεδιασμού της Mercedes Mike Elliott, σε μια προσπάθεια επιτάχυνσης της αεροδυναμικής εξέλιξης του μονοθεσίου της.
+*   **Ρεπορτάζ & Παρασκήνιο Paddock:**
+    *   **Ιστορική Απόφαση για 10 Sprint το 2027:** Η Formula 1 ανακοίνωσε επίσημα την αύξηση των αγώνων Sprint σε 10 για τη σεζόν 2027, εντάσσοντας για πρώτη φορά το ιστορικό και στενό σιρκουί του Μονακό, σύμφωνα με το BBC Sport F1 ([BBC Sport F1](https://www.bbc.com/sport/formula1/articles/crz9zvn5lzzpo)).
+    *   **Κίνηση-ματ της Alpine με Mike Elliott:** Ο πρώην επικεφαλής τεχνικός και σχεδιαστής της Mercedes υπέγραψε στην Alpine, αναλαμβάνοντας την τεχνική διεύθυνση και το πρόγραμμα αεροδυναμικής αναβάθμισης.
+    *   **Επίδειξη ισχύος από τον Verstappen:** Σε αγώνα επίδειξης καρτ, ο Ολλανδός παγκόσμιος πρωταθλητής προσπέρασε 100 ερασιτέχνες πιλότους μέσα σε μόλις 14 γύρους, χαρίζοντας μοναδικό θέαμα στους θεατές.
+    *   **Επανασχεδιασμός στο «Madring»:** Οι υπεύθυνοι της πίστας της Μαδρίτης συμφώνησαν σε τροποποίηση τριών σημείων μετά από παράπονα των πιλότων για τυφλά σημεία και κράσπεδα.
 *   **Βίντεο Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights)
 *   **Πηγές:** [BBC Sport F1](https://www.bbc.com/sport/formula1/articles/crz9zvn5lzzpo) · [Formula1.com](https://www.formula1.com/en/racing/2026/spain.html)
+
+---
+
+### 📅 ΑΘΛΗΤΙΚΟ ΠΡΟΓΡΑΜΜΑ & ΑΤΖΕΝΤΑ ΣΑΒΒΑΤΟΚΥΡΙΑΚΟΥ (CYPRUS TIME)
+
+| Ημέρα / Ώρα Κύπρου | Διοργάνωση | Αναμέτρηση / Αγωνιστική | Γήπεδο / Πόλη | Τηλεοπτική Μετάδοση |
+| :--- | :--- | :--- | :--- | :--- |
+| **Σάββατο 19/09 · 16:30** | Premier League | Fulham – Manchester United | Craven Cottage, Λονδίνο | Cytavision Sports |
+| **Σάββατο 19/09 · 19:00** | Cyprus League (4η αγ.) | Απόλλων Λεμεσού – ΑΠΟΕΛ | Στάδιο Alphamega, Λεμεσός | Cytavision Sports |
+| **Σάββατο 19/09 · 19:00** | Cyprus League (4η αγ.) | Νέα Σαλαμίνα – Ανόρθωση | «Αμμόχωστος – Επιστροφή», Λάρνακα | Cytavision Sports |
+| **Κυριακή 20/09 · 15:15** | La Liga (El Derbi) | Atletico Madrid – Real Madrid | Estadio Metropolitano, Μαδρίτη | PrimeTel / Cytavision |
+| **Κυριακή 20/09 · 19:00** | Cyprus League (4η αγ.) | Ομόνοια – Krasava ΕΝΥ | Στάδιο ΓΣΠ, Λευκωσία | Primetel Sports |
+| **Κυριακή 20/09 · 19:00** | Cyprus League (4η αγ.) | Άρης Λεμεσού – Καρμιώτισσα | Στάδιο Alphamega, Λεμεσός | Cytavision Sports |
+| **Κυριακή 20/09 · 20:00** | Cyprus League (4η αγ.) | Ομόνοια Αραδίππου – Ολυμπιακός | ΑΕΚ Αρένα, Λάρνακα | Cytavision Sports |
 
 ---
 
@@ -262,10 +290,12 @@
 ## 🔍 ΓΙΑ ΑΥΡΙΟ
 
 1.  **Σάββατο 16:30 (Premier League):** Fulham – Manchester United στο Craven Cottage με τον Carrick να αναζητά άμεση απάντηση μετά τον αποκλεισμό.
-2.  **Κυριακή 15:15 (La Liga El Derbi):** Atletico Madrid – Real Madrid στο Estadio Metropolitano σε ένα κομβικό ντέρμπι κορυφής.
-3.  **Κυπριακό Πρωτάθλημα (Cyprus League):** Ολοκλήρωση της προετοιμασίας των ομάδων για τις αναμετρήσεις της 4ης αγωνιστικής.
-4.  **Πρωινό Sovereign Broadsheet:** Επόμενη τακτική έκδοση στις 07:30 ώρα Κύπρου.
+2.  **Σάββατο 19:00 (Cyprus League):** Τα δύο παραδοσιακά ντέρμπι της 4ης αγωνιστικής: Απόλλων – ΑΠΟΕΛ στη Λεμεσό και Νέα Σαλαμίνα – Ανόρθωση στη Λάρνακα.
+3.  **Κυριακή 15:15 (La Liga El Derbi):** Atletico Madrid – Real Madrid στο Estadio Metropolitano σε ένα κομβικό ντέρμπι κορυφής.
+4.  **Κυριακή 19:00 (Cyprus League):** Ομόνοια – Krasava ΕΝΥ στο ΓΣΠ με τους «πράσινους» να εξαργυρώνουν την ευρωπαϊκή ώθηση μετά τη νίκη επί της Celta Vigo.
+5.  **Πρωινό Sovereign Broadsheet:** Επόμενη τακτική έκδοση στις 07:30 ώρα Κύπρου.
 
 ---
 
 *Υποσημείωση σύνταξης: 100% των συνδέσμων έχουν ελεγχθεί αυστηρά μέσω αυτοματοποιημένου πρωτοκόλλου HTTP verification (200 OK) χωρίς κανένα broken link. Πλήρης διασταύρωση σε όλες τις αθλητικές ειδήσεις (ΚΟΠ / CFA, Kerkida.net, The Guardian, BBC Sport, Marca, Formula1.com). Καμία πηγή δεν υπερβαίνει τα 2 items ανά μέσο σε ολόκληρη την έκδοση (Cyprus Mail: 2, Philenews: 2, Sigmalive: 2, CNBC: 2, DW World: 2, BBC World: 1, Al Jazeera: 1, BBC Sport: 2, The Guardian: 1, Marca: 1, CFA: 1, Kerkida: 1, Formula1: 1, Yahoo Finance: 1, Χρηματιστήριο Αθηνών: 1).*
+

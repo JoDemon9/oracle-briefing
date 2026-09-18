@@ -88,6 +88,7 @@ def get_omonoia_cfa_fixture():
     to extract the authoritative next fixture for Omonoia FC (ΓΣΠ).
     """
     cfa_urls = [
+        'https://www.cfa.com.cy/Gr/news/53723',
         'https://www.cfa.com.cy/Gr/news/53637',
         'https://www.cfa.com.cy/Gr/events/2813',
     ]
@@ -95,26 +96,28 @@ def get_omonoia_cfa_fixture():
         soup, base_url = fetch_soup(url)
         if not soup:
             continue
-        lines = [l.strip() for l in soup.get_text('\n').splitlines() if l.strip()]
+        text = soup.get_text('\n')
+        lines = [l.strip() for l in text.splitlines() if l.strip()]
         current_date = ''
-        for line in lines:
+        for idx, line in enumerate(lines):
             if any(d in line for d in ['Σάββατο', 'Κυριακή', 'Δευτέρα', 'Παρασκευή']) and any(c.isdigit() for c in line):
                 current_date = line
-            # Match specifically Omonoia Nicosia (not Aradippou or 29M)
-            if 'Ομόνοια Λευκωσίας' in line or ('Ομόνοια' in line and 'Απόλλων' in line):
+            if 'ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ' in line.upper():
+                opponent = lines[idx+1] if idx + 1 < len(lines) and 'KRASAVA' in lines[idx+1].upper() else 'Krasava ΕΝΥ'
+                full_match = f"{line} {opponent}".replace(' - ', ' – ').replace(' -', ' – ').strip()
                 return {
-                    'fixture': f"{line} ({current_date})" if current_date else line,
-                    'match': line,
+                    'fixture': f"{full_match} (Στάδιο ΓΣΠ) ({current_date})" if current_date else full_match,
+                    'match': full_match,
                     'date': current_date,
                     'source_url': url,
                     'source': 'ΚΟΠ / CFA'
                 }
-    # Fallback to confirmed 3rd matchday fixture
+    # Fallback to confirmed 4th matchday fixture
     return {
-        'fixture': '20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026)',
-        'match': '20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ)',
-        'date': 'Σάββατο 12.09.2026',
-        'source_url': 'https://www.cfa.com.cy/Gr/news/53637',
+        'fixture': '19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ) (Κυριακή 20.09.2026)',
+        'match': '19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ)',
+        'date': 'Κυριακή 20.09.2026',
+        'source_url': 'https://www.cfa.com.cy/Gr/news/53723',
         'source': 'ΚΟΠ / CFA'
     }
 

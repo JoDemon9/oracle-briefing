@@ -180,7 +180,7 @@ for line in my_file_block.split("\n"):
         my_file.append(f"• {cleaned}")
 my_file_str = "\n".join(my_file[:2])
 
-deadlines_block = grab("## 📅", "## 🔍")
+deadlines_block = grab("\n## 📅", "\n## 🔍") or grab("## 📅 ΤΙ ΝΑ ΚΑΝΩ", "## 🔍") or grab("## 📅", "## 🔍")
 deadlines = []
 for line in deadlines_block.split("\n"):
     if line.startswith("*   **"):
@@ -203,14 +203,87 @@ for l in md.splitlines()[:6]:
 
 sports_block = grab("## ⚽", "## 🌤️") or grab("## ⚽", "## 🌌") or grab("## ⚽", "---")
 sports_summary = ""
+sports_program_summary = ""
 if sports_block:
-    m_om = re.search(r'\*\*ΟΜΟΝΟΙΑ:\*\*\s*(.+)', sports_block) or re.search(r'###\s+ΟΜΟΝΟΙΑ[\s\S]*?\*\*Επόμενος αγώνας:\*\*\s*([^\n\r]+)', sports_block)
+    sp_bullets = []
+    
+    def compact_team_summary(text):
+        res_m = re.search(r'\*\*Τελευταίο αποτέλεσμα:\*\*\s*(.+)', text)
+        nxt_m = re.search(r'\*\*Επόμενος αγώνας:\*\*\s*(.+)', text)
+        parts = []
+        if res_m:
+            r_str = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', res_m.group(1).strip())
+            first_s = r_str.split('.')[0].strip()
+            first_s = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', first_s)
+            parts.append(first_s)
+        if nxt_m:
+            n_str = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', nxt_m.group(1).strip())
+            first_s = n_str.split('(')[0].strip() if '(' in n_str else n_str.split('.')[0].strip()
+            first_s = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', first_s)
+            parts.append(f"Επόμενο: {first_s}")
+        return " · ".join(parts)
+
+    # 1. Omonoia
+    m_om = re.search(r'###\s+.*?ΟΜΟΝΟΙΑ.*?\n([\s\S]*?)(?=###|\Z|##)', sports_block, re.I)
     if m_om:
-        raw_om = m_om.group(1).strip()
-        # Convert markdown links to HTML
-        raw_om = re.sub(r'\[([^\]]+)\]\((https?://[^\)]+)\)', r'<a href="\2">\1</a>', raw_om)
-        raw_om = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', raw_om)
-        sports_summary = f"⚽ <b>Αθλητικά:</b> {raw_om}"
+        s = compact_team_summary(m_om.group(1))
+        if s:
+            sp_bullets.append(f"• ☘️ <b>Ομόνοια:</b> {s}")
+
+    # 2. Manchester United
+    m_mu = re.search(r'###\s+.*?MANCHESTER UNITED.*?\n([\s\S]*?)(?=###|\Z|##)', sports_block, re.I)
+    if m_mu:
+        s = compact_team_summary(m_mu.group(1))
+        if s:
+            sp_bullets.append(f"• 🔴 <b>Man Utd:</b> {s}")
+
+    # 3. Real Madrid
+    m_rm = re.search(r'###\s+.*?REAL MADRID.*?\n([\s\S]*?)(?=###|\Z|##)', sports_block, re.I)
+    if m_rm:
+        s = compact_team_summary(m_rm.group(1))
+        if s:
+            sp_bullets.append(f"• ⚪ <b>Real Madrid:</b> {s}")
+
+    # 4. Formula 1
+    m_f1 = re.search(r'###\s+.*?FORMULA 1.*?\n([\s\S]*?)(?=###|\Z|##)', sports_block, re.I)
+    if m_f1:
+        f1_text = m_f1.group(1)
+        f1_res = re.search(r'\*\*Τελευταίο αποτέλεσμα:\*\*\s*(.+)', f1_text)
+        f1_sp = re.search(r'\*\*Ιστορική Απόφαση.*?:\*\*\s*([^\n\r]+)', f1_text)
+        parts = []
+        if f1_res:
+            r_str = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', f1_res.group(1).strip())
+            first_s = r_str.split('—')[0].strip()
+            first_s = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', first_s)
+            parts.append(first_s)
+        if f1_sp:
+            sp_str = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', f1_sp.group(1).strip())
+            first_sp = sp_str.split(',')[0].strip()
+            parts.append(f"2027: {first_sp} με Μονακό")
+        if parts:
+            sp_bullets.append(f"• 🏎️ <b>Formula 1:</b> {' · '.join(parts)}")
+
+    if sp_bullets:
+        sports_summary = "⚽ <b>Αθλητικός Παλμός:</b>\n" + "\n".join(sp_bullets[:4])
+
+    # 5. Dedicated Weekend Sports Schedule / Agenda
+    prog_m = re.search(r'###\s+[^\n]*?ΑΘΛΗΤΙΚΟ ΠΡΟΓΡΑΜΜΑ[^\n]*\n([\s\S]*?)(?=\n###|\Z|\n##|\n---)', md, re.I)
+    if prog_m:
+        prog_lines = []
+        for l in prog_m.group(1).strip().splitlines():
+            ls = l.strip()
+            if ls.startswith('| **') and not any(h in ls for h in [':---', 'Ημέρα', 'Διοργάνωση']):
+                cols = [c.strip() for c in ls.split('|') if c.strip()]
+                if len(cols) >= 3:
+                    time_part = cols[0].replace('**', '')
+                    match_part = cols[2]
+                    comp_part = cols[1] if len(cols) > 1 else ""
+                    prog_lines.append(f"• {time_part}: {match_part} ({comp_part})")
+            elif ls.startswith('*   **') or ls.startswith('- **'):
+                cleaned = re.sub(r'^[*\-]\s+\*\*', '', ls).replace('**', '')
+                prog_lines.append(f"• {esc(cleaned)}")
+        if prog_lines:
+            sports_program_summary = "📅 <b>Αθλητικό Πρόγραμμα Σαββατοκύριακου (Ώρα Κύπρου):</b>\n" + "\n".join(prog_lines[:7])
 
 weather_block = grab("## 🌤️", "## 🗂️")
 weather_summary = ""
@@ -352,6 +425,8 @@ else:
     ]
     if sports_summary:
         msg_parts.append(sports_summary)
+    if sports_program_summary:
+        msg_parts.append(sports_program_summary)
     if weather_summary:
         msg_parts.append(weather_summary)
 

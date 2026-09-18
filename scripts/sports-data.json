@@ -6,10 +6,10 @@
       "Kerkida.net"
     ],
     "next_fixture": {
-      "fixture": "20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ) (Σάββατο 12.09.2026)",
-      "match": "20:00 Ομόνοια Λευκωσίας – Απόλλων (Στάδιο ΓΣΠ)",
-      "date": "Σάββατο 12.09.2026",
-      "source_url": "https://www.cfa.com.cy/Gr/news/53637",
+      "fixture": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA (Στάδιο ΓΣΠ) (Κυριακή, 20.09.2026 / 19:00)",
+      "match": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA",
+      "date": "Κυριακή, 20.09.2026 / 19:00",
+      "source_url": "https://www.cfa.com.cy/Gr/news/53723",
       "source": "ΚΟΠ / CFA"
     },
     "articles": [
@@ -39,7 +39,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-18T12:16:08.176084+00:00"
+    "fetched_at": "2026-09-18T13:20:42.829357+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-18T12:16:09.033951+00:00"
+    "fetched_at": "2026-09-18T13:20:44.129418+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-18T12:16:10.055888+00:00"
+    "fetched_at": "2026-09-18T13:20:45.469206+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-18T12:16:11.582464+00:00"
+    "fetched_at": "2026-09-18T13:20:47.030018+00:00"
   }
 }
