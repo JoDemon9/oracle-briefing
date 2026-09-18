@@ -14,6 +14,21 @@
     },
     "articles": [
       {
+        "title": "(Φώτος) Δουλειά στο γυμναστήριο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-doyleia-sto-gymnastirio-1",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Φαμπιάνο/100 clean sheets",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/fampiano100-clean-sheets",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Η φράση του Σταύρου που κρατήσαμε…",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-frasi-toy-stayroy-poy-kratisame",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "UEFA/Κορυφαία η Ομόνοια;",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/uefakoryfaia-i-omonoia",
         "source": "Kerkida.net"
@@ -22,24 +37,9 @@
         "title": "ΑΠΟΤΕΛΕΣΜΑΤΑ Europa League",
         "url": "https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/apotelesmata-europa-league",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "(Βίντεο) \"Χρυσό\" γκολ ο Λοΐζου",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hryso-gkol-o-loizoy",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Aποκλειστικά/Παπασταύρου",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/apokleistikapapastayroy",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Παπασταύρου στο kerkida: \"Μεγάλη νίκη -Χρειάζεται δουλειά στην ΚΟΠ αλλά θα το... δουλέψουν\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/papastayroy-sto-kerkidamegali-niki-kai-dikaioymaste-na-elpizoyme-hreiazetai-poly-doyleia-na-ginei",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-18T06:42:28.248167+00:00"
+    "fetched_at": "2026-09-18T09:07:30.449212+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-18T06:42:30.292182+00:00"
+    "fetched_at": "2026-09-18T09:07:32.551637+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-18T06:42:31.930021+00:00"
+    "fetched_at": "2026-09-18T09:07:34.231146+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-18T06:42:34.307749+00:00"
+    "fetched_at": "2026-09-18T09:07:36.302774+00:00"
   }
 }
