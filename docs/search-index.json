@@ -1,115 +1,192 @@
 [
   {
+    "date": "2026-09-18",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Our View: Labour disputes are not the president’s business",
+    "snippet": "President Nikos Christodoulides appears to have acquired a new expertise – mediator in labour disputes. On Wednesday morning he called the representatives of unions representing go...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Limassol moves ‘Laou Laou’ this week [Επικαιρότητα]",
+    "snippet": "By Sara Mariza Vryonidi For one week in September, Limassol is being asked to do something that does not always come naturally to a fast-growing city: slow down...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. University of Cyprus renews €20,000 scholarship agreement [Επικαιρότητα]",
+    "snippet": "The University of Cyprus and the Sievert Larsson Scholarship Foundation have renewed an agreement providing 20 scholarships worth a total of €20,000 to students...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Cyprus Business Now: AI, tourism, shipping, banks, inflation, CySEC [Επικαιρότητα]",
+    "snippet": "Cypriot Finance Minister Makis Keravnos travelled to Dublin on Thursday for the Eurogroup and informal meeting of EU finance ministers, where discussions are se...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Cyprus Cement executes share buyback [Επικαιρότητα]",
+    "snippet": "Cyprus Cement Public Company Ltd has announced that it bought back 600 of its own shares on September 16, 2026, in line with a decision approved by shareholders...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🌍 Διεθνή",
+    "title": "1. Canada welcomes EU proposal to become 'associate member' [Διεθνή]",
+    "snippet": "Canadian Prime Minister Mark Carney said a Canada-EU alliance would create a \"beacon for other democracies\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🌍 Διεθνή",
+    "title": "2. Ninth woman's body found as South African police investigate string of deaths [Διεθνή]",
+    "snippet": "South Africa police have cautioned against assuming that all the killings are linked but many women are afraid....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🌍 Διεθνή",
+    "title": "3. UN experts say grounds to believe US committed war crimes in Iran strikes [Διεθνή]",
+    "snippet": "The US has not acknowledged carrying out February's deadly strikes on a primary school in Minab and a sports complex in Lamerd....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🌍 Διεθνή",
+    "title": "4. US to allow Iran delegation to attend UN meetings in New York as war passes half-year mark [Διεθνή]",
+    "snippet": "The BBC understands Iranian President Masoud Pezeshkian and Foreign Minister Abbas Araghchi are among the delegates allowed to enter the US....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "🌍 Διεθνή",
+    "title": "5. Wife of US scholar jailed in China asks Trump to raise arrest at Xi meeting [Διεθνή]",
+    "snippet": "Sylvia Zin is among the family members of people imprisoned in China who are seeking Trump's help when he hosts the country's leader next week....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-17",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Ιστορική πρώτη αύξηση επιτοκίων από τη Federal Reserve μετά από 3 χρόνια: Σφοδρή σύγκρουση με τον Λευκό Οίκο καθώς ο Τραμπ επιτίθεται στον Warsh — Αναταράξεις σε δολάριο, ομόλογα και παγκόσμιες αγορές [Επιβεβαιωμένο]",
     "snippet": "Σε μια κίνηση-ορόσημο που αναδιατάσσει τη διεθνή νομισματική σκακιέρα, η Ομοσπονδιακή Τράπεζα των ΗΠΑ (Federal Reserve) προχώρησε στην πρώτη αύξηση του βασικού της επιτοκίου μετά α...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-17.html#top-story"
   },
   {
     "date": "2026-09-17",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Βιομηχανία & Ανάπτυξη: Άλμα 1,1% στη βιομηχανική παραγωγή της Κύπρου κόντρα στην ευρωπαϊκή κάμψη — Στοιχεία Eurostat [Επιβεβαιωμένο]",
     "snippet": "Θεαματική ανάκαμψη κατέγραψε η βιομηχανική παραγωγή στην Κύπρο τον Ιούλιο 2026, σημειώνοντας μηνιαία αύξηση 1,1% σύμφωνα με τα επίσημα δεδομένα της Eurostat. Η...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-17.html#cyprus"
   },
   {
     "date": "2026-09-17",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Ενέργεια & Γεωπολιτική: Η Χεζμπολάχ ζητά εξηγήσεις για τα σχέδια αγωγού φυσικού αερίου Ισραήλ–Κύπρου–Ελλάδας [Επιβεβαιωμένο]",
     "snippet": "Σε προειδοποιητικές δηλώσεις προχώρησε η ηγεσία της Χεζμπολάχ, ζητώντας διευκρινίσεις για τις διαβουλεύσεις που αφορούν τη δημιουργία διασυνδετήριου αγωγού φυσι...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-17.html#cyprus"
   },
   {
     "date": "2026-09-17",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Ευρωπαϊκή Οικονομία: Στο Δουβλίνο ο Μάκης Κεραυνός για τα Άτυπα Συμβούλια Eurogroup και Ecofin — Στο επίκεντρο η έκθεση Draghi [Επιβεβαιωμένο]",
     "snippet": "Στην ιρλανδική πρωτεύουσα μεταβαίνει ο Υπουργός Οικονομικών Μάκης Κεραυνός προκειμένου να συμμετάσχει στις άτυπες συνεδριάσεις του Eurogroup και του Ecofin. Στη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-17.html#cyprus"
   },
   {
     "date": "2026-09-17",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Διπλωματία & Κυπριακό: Νέα συνάντηση Χριστοδουλίδη – Τατάρ στη Λευκωσία ενόψει της Γενικής Συνέλευσης του ΟΗΕ [Επιβεβαιωμένο]",
     "snippet": "Τετ-α-τετ συνάντηση προγραμματίζουν ο Πρόεδρος της Δημοκρατίας Νίκος Χριστοδουλίδης και ο Τουρκοκύπριος ηγέτης Ερσίν Τατάρ, υπό την αιγίδα των Ηνωμένων Εθνών στ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-17.html#cyprus"
   },
   {
     "date": "2026-09-17",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Ναυτιλία & Κεφαλαιαγορά: Ντεμπούτο της Star Bulk στο Euronext Αθηνών με έκδοση €107,8 εκατ. — Ισχυρή συμμαχία Ελλάδας-Κύπρου [Επιβεβαιωμένο]",
     "snippet": "Πανηγυρική έναρξη διαπραγμάτευσης πραγματοποίησε η ναυτιλιακή εταιρεία Star Bulk Carriers, αντλώντας €107,8 εκατομμύρια μέσω της διπλής εισαγωγής της στην ελλην...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-17.html#cyprus"
   },
   {
     "date": "2026-09-17",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Σωφρονιστικό Σύστημα & Περιβάλλον: Χωροθέτηση νέων κεντρικών φυλακών — Ζώνη Natura και γειτνίαση με τη νεκρή ζώνη στο μικροσκόπιο [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Στο επίκεντρο έντονων συζητήσεων βρίσκεται ο σχεδιασμός για την ανέγερση του νέου σωφρονιστικού συγκροτήματος της Κύπρου, καθώς τμήμα της προτεινόμενης κρατικής...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-17.html#cyprus"
   },
   {
     "date": "2026-09-17",
     "section": "🌍 Διεθνή",
     "title": "1. Κεντρικές Τράπεζες: Η Τράπεζα της Αγγλίας αρνείται να ακολουθήσει την αύξηση της Fed παρά το άλμα του πληθωρισμού στο 3,1% [Επιβεβαιωμένο]",
     "snippet": "Σε τροχιά απόκλισης από την Ουάσιγκτον κινείται η Τράπεζα της Αγγλίας (BoE), με το συμβούλιο νομισματικής πολιτικής να διατηρεί στάση αναμονής και να απορρίπτει...",
-    "url": "#world"
+    "url": "briefings/2026-09-17.html#world"
   },
   {
     "date": "2026-09-17",
     "section": "🌍 Διεθνή",
     "title": "2. Τεχνητή Νοημοσύνη & Ρύθμιση: Επικεφαλής Πολιτικής Anthropic: «Οι εταιρείες AI δεν μπορούν να λειτουργούν με απλό \"κώδικα τιμής\" — Απαιτείται ρυθμιστικό πλαίσιο» [Επιβεβαιωμένο]",
     "snippet": "Σε μια βαρυσήμαντη τοποθέτηση για το μέλλον της τεχνολογίας, ο επικεφαλής πολιτικής της εταιρείας Anthropic δήλωσε στο CNBC ότι η αυτορρύθμιση των τεχνολογικών...",
-    "url": "#world"
+    "url": "briefings/2026-09-17.html#world"
   },
   {
     "date": "2026-09-17",
     "section": "🌍 Διεθνή",
     "title": "3. Ενεργειακή Κρίση & Μέση Ανατολή: Η Σαουδική Αραβία περικόπτει παραδόσεις αργού προς την Ευρώπη μετά το πλήγμα στον αγωγό East-West [Επιβεβαιωμένο]",
     "snippet": "Σε προσωρινή μείωση των φορτίων πετρελαίου προς τα ευρωπαϊκά διυλιστήρια προχωρά η Saudi Aramco, ως συνέπεια των ζημιών που προκάλεσε η επίθεση με drones στον σ...",
-    "url": "#world"
+    "url": "briefings/2026-09-17.html#world"
   },
   {
     "date": "2026-09-17",
     "section": "🌍 Διεθνή",
     "title": "4. Παγκόσμια Χρηματοπιστωτικά: Γιατί οι ευρωπαϊκές κεντρικές τράπεζες επαναπατρίζουν μαζικά τα αποθέματα χρυσού από τις ΗΠΑ [Επιβεβαιωμένο]",
     "snippet": "Σε μια αξιοπρόσεκτη κίνηση ενίσχυσης της εθνικής τους νομισματικής κυριαρχίας, αρκετές κεντρικές τράπεζες ευρωπαϊκών κρατών επιταχύνουν τον επαναπατρισμό των ρά...",
-    "url": "#world"
+    "url": "briefings/2026-09-17.html#world"
   },
   {
     "date": "2026-09-17",
     "section": "🌍 Διεθνή",
     "title": "5. Γεωπολιτική & Ενέργεια: Ο Τραμπ ζητά άμεση παύση των εκατέρωθεν επιθέσεων σε ενεργειακές υποδομές μεταξύ Ρωσίας και Ουκρανίας [Μονή πηγή]",
     "snippet": "Διπλωματική παρέμβαση πραγματοποίησε ο Donald Trump, καλώντας τη Μόσχα και το Κίεβο να τερματίσουν αμοιβαία τα πλήγματα εναντίον ενεργειακών εγκαταστάσεων, διυλ...",
-    "url": "#world"
+    "url": "briefings/2026-09-17.html#world"
   },
   {
     "date": "2026-09-17",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-17.html#deadlines"
   },
   {
     "date": "2026-09-17",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-17.html#deadlines"
   },
   {
     "date": "2026-09-17",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-17.html#deadlines"
   },
   {
     "date": "2026-09-17",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-17.html#top-story"
   },
   {
     "date": "2026-09-16",

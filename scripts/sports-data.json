@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Με... χαμογελάρες!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-hamogelares",
+        "title": "UEFA/Κορυφαία η Ομόνοια;",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/uefakoryfaia-i-omonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Γρηγόρη... μετά την παραίτηση",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/grigori-meta-tin-paraitisi",
+        "title": "ΑΠΟΤΕΛΕΣΜΑΤΑ Europa League",
+        "url": "https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/apotelesmata-europa-league",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ακραία μπακ: “Στην άμυνα λιοντάρια, επίθεση κανόνια”",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/akraia-mpak-stin-amyna-liontaria-epithesi-kanonia",
+        "title": "(Βίντεο) \"Χρυσό\" γκολ ο Λοΐζου",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hryso-gkol-o-loizoy",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Παίξε για το σήμα, για τους οπαδούς\"",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/paixe-gia-sima-gia-toys-opadoys",
+        "title": "Aποκλειστικά/Παπασταύρου",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/apokleistikapapastayroy",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Τέλεια αρχή, ευχαριστούμε τον κόσμο μας\"",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/teleia-arhi-eyharistoyme-ton-kosmo-mas",
+        "title": "Παπασταύρου στο kerkida: \"Μεγάλη νίκη -Χρειάζεται δουλειά στην ΚΟΠ αλλά θα το... δουλέψουν\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/papastayroy-sto-kerkidamegali-niki-kai-dikaioymaste-na-elpizoyme-hreiazetai-poly-doyleia-na-ginei",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-17T15:08:34.184392+00:00"
+    "fetched_at": "2026-09-18T06:42:28.248167+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-10-things-to-look-out-for-this-weekend",
+        "source": "The Guardian"
+      },
       {
         "title": "Real Madrid leading race to sign JJ Gabriel from Manchester United",
         "url": "https://www.theguardian.com/football/2026/sep/17/real-madrid-leading-race-sign-jj-gabriel-manchester-united",
@@ -74,14 +79,9 @@
         "title": "Manchester United shocked as talented youngster JJ Gabriel asks to leave",
         "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-jj-gabriel-asks-to-leave",
         "source": "The Guardian"
-      },
-      {
-        "title": "Are Manchester United as poor as the early Premier League table suggests?",
-        "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-premier-league-analysis",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-17T15:08:35.728463+00:00"
+    "fetched_at": "2026-09-18T06:42:30.292182+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -98,6 +98,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Meet Virginia Fonseca: The Connecticut-born millionaire influencer and mom of 3 who won over Vinicius Jr.",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/17/meet-virginia-fonseca-the-connecticut-born-millionaire-influencer-and-mom-of-3-who-won-over-vinicius-jr.html",
+        "source": "Marca"
+      },
       {
         "title": "Espí saves Real Madrid once again in stoppage time",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html",
@@ -117,14 +122,9 @@
         "title": "Virginia Fonseca stuns everyone alongside Vinicius at the Madrid GP",
         "url": "https://www.marca.com/en/f1/2026/09/13/virginia-fonseca-stuns-everyone-alongside-vinicius-at-the-madrid-gp.html",
         "source": "Marca"
-      },
-      {
-        "title": "Former Real Madrid player exposes the team's problems: \"One looks at the other and says if he doesn't move, neither do I\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/former-real-madrid-player-exposes-the-team-s-problems-one-looks-at-the-other-and-says-if-he-doesn-t-move-neither-do-i.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-17T15:08:36.584233+00:00"
+    "fetched_at": "2026-09-18T06:42:31.930021+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -158,16 +158,16 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "How did they get the Madring track so wrong? - F1 Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/c4g7pljy4neo",
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
       },
       {
-        "title": "Madrid F1 circuit set for changes after criticism",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckwyzllzdq43o",
+        "title": "How did they get the Madring track so wrong? - F1 Q&A",
+        "url": "https://www.bbc.com/sport/formula1/articles/c4g7pljy4neo",
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-17T15:08:37.928601+00:00"
+    "fetched_at": "2026-09-18T06:42:34.307749+00:00"
   }
 }
