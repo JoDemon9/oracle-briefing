@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "(Βίντεο) Μπράουερς στο kerkida/\"Είμαστε περήφανοι-Παίξαμε με καρδιά\"",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/binteo-mpraoyers-sto-kerkidaeimaste-perifanoi-paixame-me-kardia",
+        "title": "Γυρνάει...σελίδα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gyrnaeiselida",
         "source": "Kerkida.net"
       },
       {
-        "title": "Kerkida... ο Αλόνσο",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kerkida-o-alonso",
+        "title": "Europa League: Πόσοι βαθμοί χρειάζονται για είσοδο στην 24άδα",
+        "url": "https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/europa-league-posoi-bathmoi-hreiazontai-gia-eisodo-stin-24ada",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τα εισιτήρια με Krasava ΕΝΥ",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ta-eisitiria-me-krasava-eny-0",
+        "title": "Κεφάτος... περιμένει!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kefatos-perimenei",
         "source": "Kerkida.net"
       },
       {
-        "title": "Είχε \"Σια λα λα\" αντί...φλαμένγκο",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/eihe-sia-la-la-antiflamengko",
+        "title": "Ανεβάζει ρυθμούς ο Κίτσος",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kitsosantistrofi-metrisi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Europa League/ΑΠΟΤΕΛΕΣΜΑΤΑ πρεμιέρας στη League Phase (Βαθμολογία)",
-        "url": "https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/europa-leagueapotelesmata-premieras-sti-league-phase",
+        "title": "(Φώτος) Δουλειά... για Krasava",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-doyleia-sto-gymnastirio-1",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:40.216788+00:00"
+    "fetched_at": "2026-09-18T12:16:08.176084+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -56,13 +56,18 @@
     },
     "articles": [
       {
-        "title": "‘We can’t accept that’: Carrick urges Manchester United to respond after cup collapse",
-        "url": "https://www.theguardian.com/football/2026/sep/16/michael-carrick-manchester-united-carabao-cup-third-round-defeat-brighton",
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-10-things-to-look-out-for-this-weekend",
         "source": "The Guardian"
       },
       {
-        "title": "Manchester United 2-3 Brighton, Coventry 1-3 Aston Villa and more: Carabao Cup clockwatch – as it happened",
-        "url": "https://www.theguardian.com/football/live/2026/sep/16/manchester-united-v-brighton-coventry-v-aston-villa-and-more-carabao-cup-clockwatch-live",
+        "title": "Real Madrid leading race to sign JJ Gabriel from Manchester United",
+        "url": "https://www.theguardian.com/football/2026/sep/17/real-madrid-leading-race-sign-jj-gabriel-manchester-united",
+        "source": "The Guardian"
+      },
+      {
+        "title": "‘We can’t accept that’: Carrick urges Manchester United to respond after cup collapse",
+        "url": "https://www.theguardian.com/football/2026/sep/16/michael-carrick-manchester-united-carabao-cup-third-round-defeat-brighton",
         "source": "The Guardian"
       },
       {
@@ -74,14 +79,9 @@
         "title": "Manchester United shocked as talented youngster JJ Gabriel asks to leave",
         "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-jj-gabriel-asks-to-leave",
         "source": "The Guardian"
-      },
-      {
-        "title": "Are Manchester United as poor as the early Premier League table suggests?",
-        "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-premier-league-analysis",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:41.242175+00:00"
+    "fetched_at": "2026-09-18T12:16:09.033951+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -98,6 +98,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Meet Virginia Fonseca: The Connecticut-born millionaire influencer and mom of 3 who won over Vinicius Jr.",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/17/meet-virginia-fonseca-the-connecticut-born-millionaire-influencer-and-mom-of-3-who-won-over-vinicius-jr.html",
+        "source": "Marca"
+      },
       {
         "title": "Espí saves Real Madrid once again in stoppage time",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html",
@@ -117,14 +122,9 @@
         "title": "Virginia Fonseca stuns everyone alongside Vinicius at the Madrid GP",
         "url": "https://www.marca.com/en/f1/2026/09/13/virginia-fonseca-stuns-everyone-alongside-vinicius-at-the-madrid-gp.html",
         "source": "Marca"
-      },
-      {
-        "title": "Former Real Madrid player exposes the team's problems: \"One looks at the other and says if he doesn't move, neither do I\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/former-real-madrid-player-exposes-the-team-s-problems-one-looks-at-the-other-and-says-if-he-doesn-t-move-neither-do-i.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:42.679497+00:00"
+    "fetched_at": "2026-09-18T12:16:10.055888+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -143,6 +143,11 @@
     },
     "articles": [
       {
+        "title": "Former Mercedes design boss Elliott joins Alpine",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckeq8vj28149o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Verstappen passes 100 amateur karters in 14 laps in exhibition race",
         "url": "https://www.bbc.com/sport/formula1/articles/c50m3k7jk82jo",
         "source": "BBC Sport F1"
@@ -153,21 +158,16 @@
         "source": "BBC Sport F1"
       },
       {
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "How did they get the Madring track so wrong? - F1 Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/c4g7pljy4neo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Madrid F1 circuit set for changes after criticism",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckwyzllzdq43o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "How virtual safety car cost Norris win - and should F1 change rules?",
-        "url": "https://www.bbc.com/sport/formula1/articles/cvgyjwxv7y3o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-17T06:56:44.933117+00:00"
+    "fetched_at": "2026-09-18T12:16:11.582464+00:00"
   }
 }

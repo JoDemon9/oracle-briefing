@@ -886,5 +886,53 @@
   "https://www.dw.com/en/trump-seeks-halt-to-energy-attacks-by-both-russia-ukraine/a-79265774": {
     "image": "https://static.dw.com/image/78294107_6.jpg",
     "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.cnbc.com/2026/09/18/buffett-stepping-down-as-berkshire-chairman.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108335257-1784117182377-OEZO09jg.jpg?v=1784127953&amp;w=1920&amp;h=1080",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/09/18/transport-minister-briefed-on-eurogates-limassol-port-operations": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Εurogate_Eπίσκεψη-Υπ.-Μεταφορών-2.jpeg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.philenews.com/oikonomia/kypros/article/1771969/ape-sto-368-i-paragogi-ilektrikis-energias-stin-kipro-ton-iounio/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/07/renewable-ape.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.sigmalive.com/news/kypriako/1329975/ptb-to-kipriako-den-prosferetai-ghia-mikropolitikes-skopimotites": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1362178/conversions/annita_1-seo.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://cyprus-mail.com/2026/09/18/nine-christmas-villages-to-operate-across-cyprus-this-festive-season": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2022/12/feature-gina-Dherynia-Christmas-village.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.philenews.com/politiki/article/1771949/mavrogiannis-dimoskopisis-me-emfanizoun-stin-proti-thesi-apo-pious-den-epithimi-stirixi-giati-theori-ton-averof-exeretiko-antipalo/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/mavrogiannhs.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.sigmalive.com/news/politics/1329966/damianou-oikodomoume-oikonomia-ghnwsis-kainotomias-kai-tekhnologhias": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1362169/conversions/doc202609181090229820260918_103419-seo.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.cnbc.com/2026/09/18/trump-saudi-arabia-f-35-houthis-iran-war.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108364758-1789714447322-gettyimages-2247337124-wm021156_xapknpsq.jpeg?v=1789714534&amp;w=1920&amp;h=1080",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.dw.com/en/evergrande-founder-hui-ka-yan-sentenced-to-life-in-prison/a-78439153": {
+    "image": "https://static.dw.com/image/66959261_6.jpg",
+    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/9/18/09-18-26-pakistan-blast?traffic_source=rss": {
+    "image": "https://www.aljazeera.com/wp-content/uploads/2026/09/image-1789730081.jpg?resize=1908%2C1080&amp;quality=80",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.com/news/articles/c6x2z4dlzyr0o": {
+    "image": "https://ichef.bbci.co.uk/news/1024/branded_news/770e/live/22d1bd20-b337-11f1-910c-69bc1dc40919.jpg",
+    "category": "ΠΑΙΔΕΙΑ & ΥΠΟΔΟΜΕΣ"
+  },
+  "https://www.dw.com/en/how-europe-can-better-protect-against-extreme-wildfires/a-78435243": {
+    "image": "https://static.dw.com/image/78213595_6.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }
