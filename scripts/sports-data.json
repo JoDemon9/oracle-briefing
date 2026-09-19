@@ -39,7 +39,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-18T19:05:38.916634+00:00"
+    "fetched_at": "2026-09-19T06:40:46.398692+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Premier League news: Carrick brushes aside questions over future, Arteta salutes ‘extraordinary’ Dowman",
+        "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-news-carrick-brushes-aside-questions-over-future-arteta-salutes-extraordinary-dowman",
+        "source": "The Guardian"
+      },
       {
         "title": "Premier League: 10 things to look out for this weekend",
         "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-10-things-to-look-out-for-this-weekend",
@@ -74,14 +79,9 @@
         "title": "De Cuyper and Brighton pile on pain for Manchester United with comeback",
         "url": "https://www.theguardian.com/football/2026/sep/16/manchester-united-brighton-carabao-cup-third-round-match-report",
         "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United shocked as talented youngster JJ Gabriel asks to leave",
-        "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-jj-gabriel-asks-to-leave",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-18T19:05:39.726771+00:00"
+    "fetched_at": "2026-09-19T06:40:47.775400+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-18T19:05:40.328957+00:00"
+    "fetched_at": "2026-09-19T06:40:48.700434+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-18T19:05:41.425089+00:00"
+    "fetched_at": "2026-09-19T06:40:50.807149+00:00"
   }
 }
