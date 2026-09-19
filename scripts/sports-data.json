@@ -6,13 +6,28 @@
       "Kerkida.net"
     ],
     "next_fixture": {
-      "fixture": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA (Στάδιο ΓΣΠ) (Κυριακή, 20.09.2026 / 19:00)",
-      "match": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA",
-      "date": "Κυριακή, 20.09.2026 / 19:00",
+      "fixture": "19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ) (Κυριακή 20.09.2026)",
+      "match": "19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ)",
+      "date": "Κυριακή 20.09.2026",
       "source_url": "https://www.cfa.com.cy/Gr/news/53723",
       "source": "ΚΟΠ / CFA"
     },
     "articles": [
+      {
+        "title": "Με οδηγό την...άμυνα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-odigo-tinamyna",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Κίνδυνος για τον προπονητή της Θέλτα μετά την ήττα από την Ομόνοια",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kindynos-gia-ton-proponiti-tis-thelta-meta-tin-itta-apo-tin-omonoia",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Σειρά του...",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/seira-toy",
+        "source": "Kerkida.net"
+      },
       {
         "title": "Στο τρέξιμο ο...Ολλανδός",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sto-treximo-oollandos",
@@ -22,24 +37,9 @@
         "title": "Γυρνάει...σελίδα",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gyrnaeiselida",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Europa League: Πόσοι βαθμοί χρειάζονται για είσοδο στην 24άδα",
-        "url": "https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/europa-league-posoi-bathmoi-hreiazontai-gia-eisodo-stin-24ada",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Κεφάτος... περιμένει!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kefatos-perimenei",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Ανεβάζει ρυθμούς ο Κίτσος",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kitsosantistrofi-metrisi",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-19T06:40:46.398692+00:00"
+    "fetched_at": "2026-09-19T11:37:08.148490+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Heat is on Carrick but Wilcox must share blame for Manchester United’s woes",
+        "url": "https://www.theguardian.com/football/2026/sep/19/michael-carrick-jason-wilcox-blame-manchester-united-woes",
+        "source": "The Guardian"
+      },
       {
         "title": "Premier League news: Carrick brushes aside questions over future, Arteta salutes ‘extraordinary’ Dowman",
         "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-news-carrick-brushes-aside-questions-over-future-arteta-salutes-extraordinary-dowman",
@@ -74,14 +79,9 @@
         "title": "‘We can’t accept that’: Carrick urges Manchester United to respond after cup collapse",
         "url": "https://www.theguardian.com/football/2026/sep/16/michael-carrick-manchester-united-carabao-cup-third-round-defeat-brighton",
         "source": "The Guardian"
-      },
-      {
-        "title": "De Cuyper and Brighton pile on pain for Manchester United with comeback",
-        "url": "https://www.theguardian.com/football/2026/sep/16/manchester-united-brighton-carabao-cup-third-round-match-report",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-19T06:40:47.775400+00:00"
+    "fetched_at": "2026-09-19T11:37:09.667222+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,6 +99,16 @@
     },
     "articles": [
       {
+        "title": "Nike suffers a significant 2.3% drop at the close of the markets: this is how Mbappé's departure to On affects it after nearly 20 years of relationship",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/nike-suffers-a-significant-2-3-drop-at-the-close-of-the-markets-this-is-how-mbappe-s-departure-to-on-affects-it-after-nearly-20-years-of-relationship.html",
+        "source": "Marca"
+      },
+      {
+        "title": "A message from Kylian Mbappé's girlfriend, Ester Exposito, \"goes viral\" after she lashes out against the rumors targeting her",
+        "url": "https://www.marca.com/en/lifestyle/celebrities/2026/09/19/a-message-from-kylian-mbappe-s-girlfriend-ester-exposito-goes-viral-after-she-lashes-out-against-the-rumors-targeting-her.html",
+        "source": "Marca"
+      },
+      {
         "title": "Meet Virginia Fonseca: The Connecticut-born millionaire influencer and mom of 3 who won over Vinicius Jr.",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/17/meet-virginia-fonseca-the-connecticut-born-millionaire-influencer-and-mom-of-3-who-won-over-vinicius-jr.html",
         "source": "Marca"
@@ -112,19 +122,9 @@
         "title": "Mourinho's fantastic five",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/14/mourinho-s-fantastic-five.html",
         "source": "Marca"
-      },
-      {
-        "title": "Endrick is still not in Mourinho's plans at Real Madrid and Roma are coming for him",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/endrick-is-still-not-in-mourinho-s-plans-at-real-madrid-and-roma-are-coming-for-him.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Virginia Fonseca stuns everyone alongside Vinicius at the Madrid GP",
-        "url": "https://www.marca.com/en/f1/2026/09/13/virginia-fonseca-stuns-everyone-alongside-vinicius-at-the-madrid-gp.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-19T06:40:48.700434+00:00"
+    "fetched_at": "2026-09-19T11:37:10.426477+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-19T06:40:50.807149+00:00"
+    "fetched_at": "2026-09-19T11:37:11.495000+00:00"
   }
 }
