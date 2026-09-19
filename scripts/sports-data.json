@@ -14,6 +14,21 @@
     },
     "articles": [
       {
+        "title": "Η αποστολή της Ομόνοιας",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-13",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "\"Δεν ξέρω ειλικρινά ποιοι είναι ακριβώς οι κανόνες\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/den-xero-eilikrina-poioi-einai-akribos-oi-kanones",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Καμίνσκι: \"Sky is the limit\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kaminski-sky-limit",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Με οδηγό την...άμυνα",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-odigo-tinamyna",
         "source": "Kerkida.net"
@@ -22,24 +37,9 @@
         "title": "Κίνδυνος για τον προπονητή της Θέλτα μετά την ήττα από την Ομόνοια",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kindynos-gia-ton-proponiti-tis-thelta-meta-tin-itta-apo-tin-omonoia",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Σειρά του...",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/seira-toy",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Στο τρέξιμο ο...Ολλανδός",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sto-treximo-oollandos",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Γυρνάει...σελίδα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gyrnaeiselida",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-19T11:37:08.148490+00:00"
+    "fetched_at": "2026-09-19T18:04:30.428801+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-19T11:37:09.667222+00:00"
+    "fetched_at": "2026-09-19T18:04:31.978286+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,6 +99,21 @@
     },
     "articles": [
       {
+        "title": "Kylian Mbappé went from childhood dreamer to world champion with Nike, now he takes a risk to build something unprecedented in soccer",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-went-from-childhood-dreamer-to-world-champion-with-nike-now-he-takes-risk-to-build-something-unprecedented-in-soccer.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Kylian Mbappé steps inside On’s factory and Thierry Henry turns the visit into a soccer challenge",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-steps-inside-on-s-factory-and-thierry-henry-turns-the-visit-into-soccer-challeng-video.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Mourinho fires several barbs and an ode to derbies",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/mourinho-fires-several-barbs-and-an-ode-to-derbies.html",
+        "source": "Marca"
+      },
+      {
         "title": "Nike suffers a significant 2.3% drop at the close of the markets: this is how Mbappé's departure to On affects it after nearly 20 years of relationship",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/nike-suffers-a-significant-2-3-drop-at-the-close-of-the-markets-this-is-how-mbappe-s-departure-to-on-affects-it-after-nearly-20-years-of-relationship.html",
         "source": "Marca"
@@ -107,24 +122,9 @@
         "title": "A message from Kylian Mbappé's girlfriend, Ester Exposito, \"goes viral\" after she lashes out against the rumors targeting her",
         "url": "https://www.marca.com/en/lifestyle/celebrities/2026/09/19/a-message-from-kylian-mbappe-s-girlfriend-ester-exposito-goes-viral-after-she-lashes-out-against-the-rumors-targeting-her.html",
         "source": "Marca"
-      },
-      {
-        "title": "Meet Virginia Fonseca: The Connecticut-born millionaire influencer and mom of 3 who won over Vinicius Jr.",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/17/meet-virginia-fonseca-the-connecticut-born-millionaire-influencer-and-mom-of-3-who-won-over-vinicius-jr.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Espí saves Real Madrid once again in stoppage time",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Mourinho's fantastic five",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/14/mourinho-s-fantastic-five.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-19T11:37:10.426477+00:00"
+    "fetched_at": "2026-09-19T18:04:32.899106+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-19T11:37:11.495000+00:00"
+    "fetched_at": "2026-09-19T18:04:33.968396+00:00"
   }
 }
