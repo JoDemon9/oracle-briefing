@@ -14,6 +14,11 @@
     },
     "articles": [
       {
+        "title": "Ρήξη χιαστού ο Γκραμπάρα!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/rixi-hiastoy-o-gkrampara",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Η αποστολή της Ομόνοιας",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-13",
         "source": "Kerkida.net"
@@ -32,14 +37,9 @@
         "title": "Με οδηγό την...άμυνα",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-odigo-tinamyna",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Κίνδυνος για τον προπονητή της Θέλτα μετά την ήττα από την Ομόνοια",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kindynos-gia-ton-proponiti-tis-thelta-meta-tin-itta-apo-tin-omonoia",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-19T18:04:30.428801+00:00"
+    "fetched_at": "2026-09-20T05:27:44.671524+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-19T18:04:31.978286+00:00"
+    "fetched_at": "2026-09-20T05:27:45.574711+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,14 +90,24 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Atletico Madrid versus Real Madrid — 15:15 (Sunday 20th September)",
+      "fixture": "Spanish La Liga: Atletico Madrid versus Real Madrid — 15:15",
       "match": "Atletico Madrid versus Real Madrid — 15:15",
       "competition": "Spanish La Liga",
-      "date": "Sunday 20th September",
+      "date": "",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Real Madrid legends reunite as Gareth Bale debuts eye-catching new look",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/real-madrid-legends-reunite-as-gareth-bale-debuts-eye-catching-new-look.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Gareth Bale’s new look has fans doing a double take at Real Madrid game",
+        "url": "https://www.marca.com/en/football/2026/09/19/gareth-bale-s-new-look-has-fans-doing-double-take-at-real-madrid-gam-video.html",
+        "source": "Marca"
+      },
       {
         "title": "Kylian Mbappé went from childhood dreamer to world champion with Nike, now he takes a risk to build something unprecedented in soccer",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-went-from-childhood-dreamer-to-world-champion-with-nike-now-he-takes-risk-to-build-something-unprecedented-in-soccer.html",
@@ -112,19 +122,9 @@
         "title": "Mourinho fires several barbs and an ode to derbies",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/mourinho-fires-several-barbs-and-an-ode-to-derbies.html",
         "source": "Marca"
-      },
-      {
-        "title": "Nike suffers a significant 2.3% drop at the close of the markets: this is how Mbappé's departure to On affects it after nearly 20 years of relationship",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/nike-suffers-a-significant-2-3-drop-at-the-close-of-the-markets-this-is-how-mbappe-s-departure-to-on-affects-it-after-nearly-20-years-of-relationship.html",
-        "source": "Marca"
-      },
-      {
-        "title": "A message from Kylian Mbappé's girlfriend, Ester Exposito, \"goes viral\" after she lashes out against the rumors targeting her",
-        "url": "https://www.marca.com/en/lifestyle/celebrities/2026/09/19/a-message-from-kylian-mbappe-s-girlfriend-ester-exposito-goes-viral-after-she-lashes-out-against-the-rumors-targeting-her.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-19T18:04:32.899106+00:00"
+    "fetched_at": "2026-09-20T05:27:46.199212+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-19T18:04:33.968396+00:00"
+    "fetched_at": "2026-09-20T05:27:47.407089+00:00"
   }
 }
