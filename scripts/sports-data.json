@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Κι άλλα λεπτά ο...Ρουμάνος",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ki-alla-lepta-oroymanos",
+        "title": "(LIVE) Ομόνοια 2-1 Krasava ΕΝΥ Ύψωνα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/live-omonoia-2-1-krasava-eny-upsona",
         "source": "Kerkida.net"
       },
       {
-        "title": "Σε καλά...χέρια",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/se-kalaheria",
+        "title": "Για τον Παύλο Φύσσα...",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/gia-ton-paylo-fyssa",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ομόνοια για… Krasava",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-gia-krasava",
+        "title": "Άνοιξε... λογαριασμό ο Τανάσε!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/anoixe-logariasmo-o-tanase",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ρήξη χιαστού ο Γκραμπάρα!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/rixi-hiastoy-o-gkrampara",
+        "title": "Στα ίσα... με Μπούντνικ!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sta-isa-me-mpoyntnik",
         "source": "Kerkida.net"
       },
       {
-        "title": "Η αποστολή της Ομόνοιας",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-13",
+        "title": "Με το... πρώτο!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/me-proto",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-20T09:23:13.019459+00:00"
+    "fetched_at": "2026-09-20T17:31:26.819708+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -48,13 +48,18 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Premier League: Fulham versus Manchester United — 16:30",
-      "match": "Fulham versus Manchester United — 16:30",
-      "competition": "Premier League",
+      "fixture": "UEFA Champions League: Manchester United versus Sabah — 20:00",
+      "match": "Manchester United versus Sabah — 20:00",
+      "competition": "UEFA Champions League",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Fulham 1-1 Manchester United: Premier League – live reaction",
+        "url": "https://www.theguardian.com/football/live/2026/sep/20/fulham-v-manchester-united-premier-league-live",
+        "source": "The Guardian"
+      },
       {
         "title": "Heat is on Carrick but Wilcox must share blame for Manchester United’s woes",
         "url": "https://www.theguardian.com/football/2026/sep/19/michael-carrick-jason-wilcox-blame-manchester-united-woes",
@@ -74,14 +79,9 @@
         "title": "Real Madrid leading race to sign JJ Gabriel from Manchester United",
         "url": "https://www.theguardian.com/football/2026/sep/17/real-madrid-leading-race-sign-jj-gabriel-manchester-united",
         "source": "The Guardian"
-      },
-      {
-        "title": "‘We can’t accept that’: Carrick urges Manchester United to respond after cup collapse",
-        "url": "https://www.theguardian.com/football/2026/sep/16/michael-carrick-manchester-united-carabao-cup-third-round-defeat-brighton",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-20T09:23:13.927027+00:00"
+    "fetched_at": "2026-09-20T17:31:28.139066+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,14 +90,19 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Atletico Madrid versus Real Madrid — 15:15",
-      "match": "Atletico Madrid versus Real Madrid — 15:15",
+      "fixture": "Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)",
+      "match": "Real Madrid versus Rayo Vallecano — 20:00",
       "competition": "Spanish La Liga",
-      "date": "",
+      "date": "Saturday 12th September",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Atlético wins the derby and plunges Mourinho's Real Madrid into crisis",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/atletico-wins-the-derby-and-plunges-mourinho-s-real-madrid-into-crisis.html",
+        "source": "Marca"
+      },
       {
         "title": "Real Madrid legends reunite as Gareth Bale debuts eye-catching new look",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/real-madrid-legends-reunite-as-gareth-bale-debuts-eye-catching-new-look.html",
@@ -117,14 +122,9 @@
         "title": "Kylian Mbappé steps inside On’s factory and Thierry Henry turns the visit into a soccer challenge",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-steps-inside-on-s-factory-and-thierry-henry-turns-the-visit-into-soccer-challeng-video.html",
         "source": "Marca"
-      },
-      {
-        "title": "Mourinho fires several barbs and an ode to derbies",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/mourinho-fires-several-barbs-and-an-ode-to-derbies.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-20T09:23:14.496401+00:00"
+    "fetched_at": "2026-09-20T17:31:28.847192+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-20T09:23:15.570564+00:00"
+    "fetched_at": "2026-09-20T17:31:30.372105+00:00"
   }
 }
