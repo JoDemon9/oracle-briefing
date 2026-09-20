@@ -88,28 +88,98 @@
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "briefings/2026-09-18.html#deadlines"
+    "url": "#deadlines"
   },
   {
     "date": "2026-09-20",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "briefings/2026-09-18.html#deadlines"
+    "url": "#deadlines"
   },
   {
     "date": "2026-09-20",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμε...",
-    "url": "briefings/2026-09-18.html#deadlines"
+    "url": "#deadlines"
   },
   {
-    "date": "2026-09-18",
+    "date": "2026-09-19",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Akel accuses govt of bypassing local authorities over prison site",
+    "snippet": "Akel called on Friday for the justice ministry to carry out proper studies and consult with local authorities before proceeding with its decision to locate the new central prisons...",
+    "url": "briefings/2026-09-19.html#top-story"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Trump bans media outlets CNN, MS NOW, Politico from White House [Επικαιρότητα]",
+    "snippet": "US President Donald Trump banned news outlets CNN, MS NOW and Politico from the White House on Friday, complaining about their coverage in a social media post....",
+    "url": "briefings/2026-09-19.html#cyprus"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. UK rate rise bets grow as Bank of England warns on energy prices [Επικαιρότητα]",
+    "snippet": "The Bank of England held its key interest rate at 3.75 per cent on Thursday, but signalled a more cautious approach to monetary policy as higher energy prices p...",
+    "url": "briefings/2026-09-19.html#cyprus"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Streamlined state aid rules targeted to accelerate support for Cyprus SMEs [Επικαιρότητα]",
+    "snippet": "The Office of the Commissioner for State Aid Control and the Research and Innovation Foundation (RIF) discussed strengthening their institutional cooperation du...",
+    "url": "briefings/2026-09-19.html#cyprus"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🌍 Διεθνή",
+    "title": "1. US and Denmark reach deal over Greenland after Trump annexation threats [Διεθνή]",
+    "snippet": "Trump says the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics have not been confirmed by Dani...",
+    "url": "briefings/2026-09-19.html#world"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🌍 Διεθνή",
+    "title": "2. Trump says he is banning CNN and Politico from White House [Διεθνή]",
+    "snippet": "The US president has had a tense and fiery relationship with the US media throughout his political career....",
+    "url": "briefings/2026-09-19.html#world"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🌍 Διεθνή",
+    "title": "3. Google's Gemini AI hacked three companies in security test [Διεθνή]",
+    "snippet": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC....",
+    "url": "briefings/2026-09-19.html#world"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🌍 Διεθνή",
+    "title": "4. Trump signs sweeping Russia sanctions bill [Διεθνή]",
+    "snippet": "The bill is named after the late Senator Lindsey Graham, a staunch advocate of aid for Ukraine....",
+    "url": "briefings/2026-09-19.html#world"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "🌍 Διεθνή",
+    "title": "5. Russian hybrid attacks against Europe intensifying, says Macron [Διεθνή]",
+    "snippet": "The French president says he has tasked the government with protecting critical infrastructure and defence industry sites....",
+    "url": "briefings/2026-09-19.html#world"
+  },
+  {
+    "date": "2026-09-19",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "briefings/2026-09-19.html#deadlines"
+  },
+  {
+    "date": "2026-09-19",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
-    "snippet": "Η Παρασκευή 18 Σεπτεμβρίου 2026 επισφραγίζει μια εβδομάδα έντονων ανακατατάξεων. Στις κεφαλαιαγορές, η επιφυλακτικότητα των μετοχικών δεικτών αντισταθμίστηκε από την εκρηκτική ρευσ...",
-    "url": "briefings/2026-09-18.html#top-story"
+    "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
+    "url": "briefings/2026-09-19.html#top-story"
   },
   {
     "date": "2026-09-18",
@@ -215,6 +285,13 @@
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμε...",
     "url": "briefings/2026-09-18.html#deadlines"
+  },
+  {
+    "date": "2026-09-18",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
+    "snippet": "Η Παρασκευή 18 Σεπτεμβρίου 2026 επισφραγίζει μια εβδομάδα έντονων ανακατατάξεων. Στις κεφαλαιαγορές, η επιφυλακτικότητα των μετοχικών δεικτών αντισταθμίστηκε από την εκρηκτική ρευσ...",
+    "url": "briefings/2026-09-18.html#top-story"
   },
   {
     "date": "2026-09-17",
