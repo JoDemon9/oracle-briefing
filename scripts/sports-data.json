@@ -6,13 +6,18 @@
       "Kerkida.net"
     ],
     "next_fixture": {
-      "fixture": "19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ) (Κυριακή 20.09.2026)",
-      "match": "19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ)",
-      "date": "Κυριακή 20.09.2026",
+      "fixture": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA (Στάδιο ΓΣΠ) (Κυριακή, 20.09.2026 / 19:00)",
+      "match": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA",
+      "date": "Κυριακή, 20.09.2026 / 19:00",
       "source_url": "https://www.cfa.com.cy/Gr/news/53723",
       "source": "ΚΟΠ / CFA"
     },
     "articles": [
+      {
+        "title": "Κι άλλα λεπτά ο...Ρουμάνος",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ki-alla-lepta-oroymanos",
+        "source": "Kerkida.net"
+      },
       {
         "title": "Σε καλά...χέρια",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/se-kalaheria",
@@ -32,14 +37,9 @@
         "title": "Η αποστολή της Ομόνοιας",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-13",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "\"Δεν ξέρω ειλικρινά ποιοι είναι ακριβώς οι κανόνες\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/den-xero-eilikrina-poioi-einai-akribos-oi-kanones",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-20T08:03:37.408760+00:00"
+    "fetched_at": "2026-09-20T09:23:13.019459+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-20T08:03:38.371208+00:00"
+    "fetched_at": "2026-09-20T09:23:13.927027+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-20T08:03:39.527568+00:00"
+    "fetched_at": "2026-09-20T09:23:14.496401+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-20T08:03:41.411196+00:00"
+    "fetched_at": "2026-09-20T09:23:15.570564+00:00"
   }
 }
