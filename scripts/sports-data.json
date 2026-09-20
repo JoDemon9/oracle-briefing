@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Γυρνάει...σελίδα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gyrnaeiselida",
+        "title": "Σε καλά...χέρια",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/se-kalaheria",
         "source": "Kerkida.net"
       },
       {
-        "title": "Europa League: Πόσοι βαθμοί χρειάζονται για είσοδο στην 24άδα",
-        "url": "https://www.kerkida.net/eidiseis/diethni/europa-league/omonoia/europa-league-posoi-bathmoi-hreiazontai-gia-eisodo-stin-24ada",
+        "title": "Ομόνοια για… Krasava",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-gia-krasava",
         "source": "Kerkida.net"
       },
       {
-        "title": "Κεφάτος... περιμένει!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kefatos-perimenei",
+        "title": "Ρήξη χιαστού ο Γκραμπάρα!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/rixi-hiastoy-o-gkrampara",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ανεβάζει ρυθμούς ο Κίτσος",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kitsosantistrofi-metrisi",
+        "title": "Η αποστολή της Ομόνοιας",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-13",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Φώτος) Δουλειά... για Krasava",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fotos-doyleia-sto-gymnastirio-1",
+        "title": "\"Δεν ξέρω ειλικρινά ποιοι είναι ακριβώς οι κανόνες\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/den-xero-eilikrina-poioi-einai-akribos-oi-kanones",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:42.829357+00:00"
+    "fetched_at": "2026-09-20T08:03:37.408760+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -56,6 +56,16 @@
     },
     "articles": [
       {
+        "title": "Heat is on Carrick but Wilcox must share blame for Manchester United’s woes",
+        "url": "https://www.theguardian.com/football/2026/sep/19/michael-carrick-jason-wilcox-blame-manchester-united-woes",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Premier League news: Carrick brushes aside questions over future, Arteta salutes ‘extraordinary’ Dowman",
+        "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-news-carrick-brushes-aside-questions-over-future-arteta-salutes-extraordinary-dowman",
+        "source": "The Guardian"
+      },
+      {
         "title": "Premier League: 10 things to look out for this weekend",
         "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-10-things-to-look-out-for-this-weekend",
         "source": "The Guardian"
@@ -69,19 +79,9 @@
         "title": "‘We can’t accept that’: Carrick urges Manchester United to respond after cup collapse",
         "url": "https://www.theguardian.com/football/2026/sep/16/michael-carrick-manchester-united-carabao-cup-third-round-defeat-brighton",
         "source": "The Guardian"
-      },
-      {
-        "title": "De Cuyper and Brighton pile on pain for Manchester United with comeback",
-        "url": "https://www.theguardian.com/football/2026/sep/16/manchester-united-brighton-carabao-cup-third-round-match-report",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United shocked as talented youngster JJ Gabriel asks to leave",
-        "url": "https://www.theguardian.com/football/2026/sep/15/manchester-united-jj-gabriel-asks-to-leave",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:44.129418+00:00"
+    "fetched_at": "2026-09-20T08:03:38.371208+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -90,41 +90,41 @@
       "BBC Sport"
     ],
     "next_fixture": {
-      "fixture": "Spanish La Liga: Atletico Madrid versus Real Madrid — 15:15 (Sunday 20th September)",
+      "fixture": "Spanish La Liga: Atletico Madrid versus Real Madrid — 15:15",
       "match": "Atletico Madrid versus Real Madrid — 15:15",
       "competition": "Spanish La Liga",
-      "date": "Sunday 20th September",
+      "date": "",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
       {
-        "title": "Meet Virginia Fonseca: The Connecticut-born millionaire influencer and mom of 3 who won over Vinicius Jr.",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/17/meet-virginia-fonseca-the-connecticut-born-millionaire-influencer-and-mom-of-3-who-won-over-vinicius-jr.html",
+        "title": "Real Madrid legends reunite as Gareth Bale debuts eye-catching new look",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/real-madrid-legends-reunite-as-gareth-bale-debuts-eye-catching-new-look.html",
         "source": "Marca"
       },
       {
-        "title": "Espí saves Real Madrid once again in stoppage time",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/16/espi-saves-real-madrid-once-again-in-stoppage-time.html",
+        "title": "Gareth Bale’s new look has fans doing a double take at Real Madrid game",
+        "url": "https://www.marca.com/en/football/2026/09/19/gareth-bale-s-new-look-has-fans-doing-double-take-at-real-madrid-gam-video.html",
         "source": "Marca"
       },
       {
-        "title": "Mourinho's fantastic five",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/14/mourinho-s-fantastic-five.html",
+        "title": "Kylian Mbappé went from childhood dreamer to world champion with Nike, now he takes a risk to build something unprecedented in soccer",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-went-from-childhood-dreamer-to-world-champion-with-nike-now-he-takes-risk-to-build-something-unprecedented-in-soccer.html",
         "source": "Marca"
       },
       {
-        "title": "Endrick is still not in Mourinho's plans at Real Madrid and Roma are coming for him",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/13/endrick-is-still-not-in-mourinho-s-plans-at-real-madrid-and-roma-are-coming-for-him.html",
+        "title": "Kylian Mbappé steps inside On’s factory and Thierry Henry turns the visit into a soccer challenge",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-steps-inside-on-s-factory-and-thierry-henry-turns-the-visit-into-soccer-challeng-video.html",
         "source": "Marca"
       },
       {
-        "title": "Virginia Fonseca stuns everyone alongside Vinicius at the Madrid GP",
-        "url": "https://www.marca.com/en/f1/2026/09/13/virginia-fonseca-stuns-everyone-alongside-vinicius-at-the-madrid-gp.html",
+        "title": "Mourinho fires several barbs and an ode to derbies",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/mourinho-fires-several-barbs-and-an-ode-to-derbies.html",
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:45.469206+00:00"
+    "fetched_at": "2026-09-20T08:03:39.527568+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-18T13:20:47.030018+00:00"
+    "fetched_at": "2026-09-20T08:03:41.411196+00:00"
   }
 }

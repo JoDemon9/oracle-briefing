@@ -954,5 +954,53 @@
   "https://www.bbc.co.uk/news/articles/cwly7vkke4jxo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/0c28/live/475f83b0-b2b6-11f1-a430-4d16ee157c41.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.com/news/articles/c63d7lexyym1o": {
+    "image": "https://ichef.bbci.co.uk/news/1024/branded_news/f1ad/live/fd353880-b421-11f1-8a8e-d9778c1036bb.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.philenews.com/kipros/koinonia/article/1772469/pano-apo-570-kratika-ikopeda-se-ikogenies-me-25-tis-agoreas-axias-i-vasikes-pronies-i-dikeouchi-ke-ta-kritiria-tou-neou-schediou/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2025/02/oikopeda-genika.jpg",
+    "category": "ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ"
+  },
+  "https://www.philenews.com/kipros/koinonia/article/1772472/ston-charti-tis-diastimikis-kenotomias-i-kipros-kathieronomaste-os-axiopistos-eteros-lei-o-damianou/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2024/04/damianou.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.sigmalive.com/news/politics/1330108/h-atzenta-xristodoylidi-sti-nea-yorki-oles-oi-epafes-kai-i-omilia-ston-ohe": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1362325/conversions/prundiner-seo.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://cyprus-mail.com/2026/09/20/can-cyprus-turn-its-defence-ties-into-a-defence-industry": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Defence-Minister-Palmas-Dimitra.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://cyprus-mail.com/2026/09/20/our-view-budget-optimism-requires-a-dose-of-caution": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/05/finance-minister-makis-keravnos-1.jpg",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://www.sigmalive.com/news/politics/1330103/ypoyrghiko-oikonomiki-anasa-eur15-ek-ghia-gheorghous-me-nero-ghia-ardefsi": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1362319/conversions/gheorghoi-seo.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.com/news/articles/c34gdjk1ne8yo": {
+    "image": "https://ichef.bbci.co.uk/news/1024/branded_news/15c3/live/41153930-b4bb-11f1-b1d1-571ed4d7ff2c.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.bbc.com/news/articles/cwly5d9v7r43o": {
+    "image": "https://ichef.bbci.co.uk/news/1024/branded_news/39c5/live/a0844fe0-b45d-11f1-b213-1db858c3e27c.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.cnbc.com/2026/09/20/france-wine-production-70-year-low-heatwaves-drought.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108364821-1789729084385-gettyimages-2250164110-HL_LESTREBOOU_2980386.jpeg?v=1789729162&amp;w=1920&amp;h=1080",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.cnbc.com/2026/09/19/goldman-sachs-happiness-struggling-consumer-sentiment.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108335581-1784143828335-gettyimages-2285147627-dsc00382_rlur3yod.jpeg?v=1784143896&amp;w=1920&amp;h=1080",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.dw.com/en/can-new-us-sanctions-cripple-iran-s-shadow-economy/a-78494630": {
+    "image": "https://static.dw.com/image/78485712_6.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
   }
 }
