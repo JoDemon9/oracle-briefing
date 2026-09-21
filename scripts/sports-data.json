@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "(LIVE) Ομόνοια 2-1 Krasava ΕΝΥ Ύψωνα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/live-omonoia-2-1-krasava-eny-upsona",
+        "title": "(Βίντεο) Μπάλκοβετς στο Kerkida: \"Τα παιχνίδια δίνουν πρωτάθλημα-Το πρωτάθλημα δίνει Ευρώπη\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-mpalkobets-sto-kerkida-ta-paihnidia-dinoyn-protathlima-protathlima-dinei-eyropi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Για τον Παύλο Φύσσα...",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/gia-ton-paylo-fyssa",
+        "title": "Το είχε... ανάγκη!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/eihe-anagki-9",
         "source": "Kerkida.net"
       },
       {
-        "title": "Άνοιξε... λογαριασμό ο Τανάσε!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/anoixe-logariasmo-o-tanase",
+        "title": "(Βίντεο Kerkida) Αντάλλαξαν χειροκρότημα... για την πρώτη",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-kerkida-antallaxan-heirokrotima-gia-tin-proti",
         "source": "Kerkida.net"
       },
       {
-        "title": "Στα ίσα... με Μπούντνικ!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sta-isa-me-mpoyntnik",
+        "title": "Γκονζάλεθ: \"Οι αλλαγές έδωσαν φρεσκάδα/Αυτό λειτούργησε ως αφύπνιση για εμάς\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gkonzaleth-oi-allages-edosan-freskadaayto-leitoyrgise-os-afypnisi-gia-emas",
         "source": "Kerkida.net"
       },
       {
-        "title": "Με το... πρώτο!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/me-proto",
+        "title": "(ΣΤΙΓΜΙΟΤΥΠΑ) Ομόνοια - Krasava ENY Ύψωνα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/stigmiotypa-omonoia-krasava-eny-upsona",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-20T17:31:26.819708+00:00"
+    "fetched_at": "2026-09-21T05:32:33.819609+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -56,32 +56,32 @@
     },
     "articles": [
       {
-        "title": "Fulham 1-1 Manchester United: Premier League – live reaction",
+        "title": "Carrick disputes Cunha’s claim that Manchester United lacked energy in Fulham draw",
+        "url": "https://www.theguardian.com/football/2026/sep/20/michael-carrick-matheus-cunha-fulham-manchester-united-premier-league",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Manchester United’s engine room runs out of steam as fans voice frustration",
+        "url": "https://www.theguardian.com/football/2026/sep/20/manchester-uniteds-engine-room-runs-out-of-puff-as-fans-begin-to-voice-frustration",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Fulham 1-1 Manchester United: Premier League – as it happened",
         "url": "https://www.theguardian.com/football/live/2026/sep/20/fulham-v-manchester-united-premier-league-live",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Cunha strikes late to deny Fulham and salvage point for Manchester United",
+        "url": "https://www.theguardian.com/football/2026/sep/20/fulham-manchester-united-premier-league-match-report",
         "source": "The Guardian"
       },
       {
         "title": "Heat is on Carrick but Wilcox must share blame for Manchester United’s woes",
         "url": "https://www.theguardian.com/football/2026/sep/19/michael-carrick-jason-wilcox-blame-manchester-united-woes",
         "source": "The Guardian"
-      },
-      {
-        "title": "Premier League news: Carrick brushes aside questions over future, Arteta salutes ‘extraordinary’ Dowman",
-        "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-news-carrick-brushes-aside-questions-over-future-arteta-salutes-extraordinary-dowman",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Premier League: 10 things to look out for this weekend",
-        "url": "https://www.theguardian.com/football/2026/sep/18/premier-league-10-things-to-look-out-for-this-weekend",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Real Madrid leading race to sign JJ Gabriel from Manchester United",
-        "url": "https://www.theguardian.com/football/2026/sep/17/real-madrid-leading-race-sign-jj-gabriel-manchester-united",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-20T17:31:28.139066+00:00"
+    "fetched_at": "2026-09-21T05:32:34.957898+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,6 +99,16 @@
     },
     "articles": [
       {
+        "title": "Simeone: \"No matter whether your name is Mourinho, Simeone or Flick, not everything goes\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/simeone-matter-whether-your-name-is-mourinho-simeone-or-flick-not-everything-goes.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Mourinho's huge rant: \"I thought I was going to find a different league, but they already explained to me that I wasn't\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/mourinho-s-huge-rant-i-thought-i-was-going-to-find-different-league-but-they-already-explained-to-me-that-i-wasn-t.html",
+        "source": "Marca"
+      },
+      {
         "title": "Atlético wins the derby and plunges Mourinho's Real Madrid into crisis",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/atletico-wins-the-derby-and-plunges-mourinho-s-real-madrid-into-crisis.html",
         "source": "Marca"
@@ -112,19 +122,9 @@
         "title": "Gareth Bale’s new look has fans doing a double take at Real Madrid game",
         "url": "https://www.marca.com/en/football/2026/09/19/gareth-bale-s-new-look-has-fans-doing-double-take-at-real-madrid-gam-video.html",
         "source": "Marca"
-      },
-      {
-        "title": "Kylian Mbappé went from childhood dreamer to world champion with Nike, now he takes a risk to build something unprecedented in soccer",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-went-from-childhood-dreamer-to-world-champion-with-nike-now-he-takes-risk-to-build-something-unprecedented-in-soccer.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Kylian Mbappé steps inside On’s factory and Thierry Henry turns the visit into a soccer challenge",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/kylian-mbappe-steps-inside-on-s-factory-and-thierry-henry-turns-the-visit-into-soccer-challeng-video.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-20T17:31:28.847192+00:00"
+    "fetched_at": "2026-09-21T05:32:35.600206+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-20T17:31:30.372105+00:00"
+    "fetched_at": "2026-09-21T05:32:36.697651+00:00"
   }
 }

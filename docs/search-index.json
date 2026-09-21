@@ -1,115 +1,199 @@
 [
   {
+    "date": "2026-09-21",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "The ‘Limassolisation’ of everything: setting a dangerous precedent",
+    "snippet": "By George Neocleous For the past 15 years, the soundtrack of Limassol has been characterised by the rumbling of high-end luxury cars, foreign accents negotiating multi-million-euro...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Late Cunha leveller spares Man Utd third defeat in a week [Επικαιρότητα]",
+    "snippet": "Matheus Cunha spared Manchester United a third defeat of the week as his deflected effort in the 89th minute earned his side a 1-1 draw in the Premier League at...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Mourinho fumes at referee, Simeone urges respect after fiery Madrid derby [Επικαιρότητα]",
+    "snippet": "Jose Mourinho needed only a sheet of paper to deliver his verdict on Sunday’s Madrid derby, waving images of two first-half tackles as he accused the officials...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Hormuz shipping slows to a trickle as Gulf tensions persist [Επικαιρότητα]",
+    "snippet": "A dozen commodity vessels transited the Strait of Hormuz on the weekend, down from 35 the prior weekend, shipping data showed on Monday, as tension in the Gulf...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Teen killed in motorcycle crash [Επικαιρότητα]",
+    "snippet": "A 16-year-old died in an accident on Sunday afternoon in Argaka, Paphos, when he lost control of his motorcycle, hit the pavement and crashed into an electricit...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Nine arrested in overnight police operations, 185 booked for speeding [Ο Φάκελός μου]",
+    "snippet": "The police arrested nine individuals overnight in the framework of operations to combat crime and boost public safety. The arrests were made in connection with...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🌍 Διεθνή",
+    "title": "1. German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on [Διεθνή]",
+    "snippet": "Exit polls show damaging losses for Merz's centre-right CDU party in the state of Mecklenburg-Vorpommern and Berlin....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🌍 Διεθνή",
+    "title": "2. Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says [Διεθνή]",
+    "snippet": "Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🌍 Διεθνή",
+    "title": "3. Ed Sheeran admits 'mistakes' at first show since Macklemore controversy [Διεθνή]",
+    "snippet": "The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🌍 Διεθνή",
+    "title": "4. Trump says triumphal arch will be military complex with drones and snipers [Διεθνή]",
+    "snippet": "Trump said the updated plans were at the request of the US military and for national security purposes....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "🌍 Διεθνή",
+    "title": "5. Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece [Διεθνή]",
+    "snippet": "One eyewitness said the scene was so chaotic that screaming could be heard from the other end of the beach....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-21",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-20",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Ιστορική συμφωνία ΗΠΑ – Δανίας για την ασφάλεια της Γροιλανδίας: Ο Donald Trump ανακοινώνει «μόνιμο έλεγχο ασφαλείας» στην Αρκτική — Γεωπολιτικός σεισμός στις σχέσεις Ουάσιγκτον, Κοπεγχάγης και ΝΑΤΟ [Επιβεβαιωμένο]",
     "snippet": "Σε μια καθοριστική διπλωματική εξέλιξη μείζονος γεωστρατηγικής σημασίας, οι κυβερνήσεις των Ηνωμένων Πολιτειών και της Δανίας κατέληξαν σε επίσημη συμφωνία-πλαίσιο για το καθεστώς...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-20.html#top-story"
   },
   {
     "date": "2026-09-20",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Στεγαστική Πολιτική & Ακίνητα: Πάνω από 570 κρατικά οικόπεδα σε οικογένειες με το 25% της αγοραίας αξίας — Ανακοινώθηκαν οι πρόνοιες και τα κριτήρια [Επιβεβαιωμένο]",
     "snippet": "Σε μια εκτεταμένη παρέμβαση κοινωνικής και στεγαστικής μέριμνας προχωρά το Υπουργείο Εσωτερικών, ανακοινώνοντας τη διάθεση άνω των 570 κρατικών οικοπέδων σε νεα...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-20.html#cyprus"
   },
   {
     "date": "2026-09-20",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Έρευνα & Διαστημική Τεχνολογία: Στον διεθνή χάρτη διαστημικής καινοτομίας η Κύπρος — «Καθιερωνόμαστε ως αξιόπιστος τεχνολογικός εταίρος», δηλώνει ο Νικόδημος Δαμιανού [Επιβεβαιωμένο]",
     "snippet": "Την επιτυχή τοποθέτηση της Κύπρου στο ευρωπαϊκό οικοσύστημα διαστημικών εφαρμογών και δορυφορικής τηλεπισκόπησης υπογράμμισε ο Υφυπουργός Έρευνας, Καινοτομίας κ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-20.html#cyprus"
   },
   {
     "date": "2026-09-20",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Διπλωματία & Κυπριακό: Έναρξη επαφών Προέδρου Χριστοδουλίδη στη Νέα Υόρκη — Συναντήσεις με ομογένεια, Αντόνιο Γκουτέρες και ηγέτες κρατών [Επιβεβαιωμένο]",
     "snippet": "Στη Νέα Υόρκη βρίσκεται ο Πρόεδρος της Δημοκρατίας Νίκος Χριστοδουλίδης για τις εργασίες της 81ης Γενικής Συνέλευσης των Ηνωμένων Εθνών. Το πρόγραμμα των επαφών...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-20.html#cyprus"
   },
   {
     "date": "2026-09-20",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Αμυντική Βιομηχανία & Τεχνολογία: Μπορεί η Κύπρος να μετατρέψει τις διεθνείς αμυντικές σχέσεις σε εγχώρια παραγωγική βιομηχανία; [Επιβεβαιωμένο]",
     "snippet": "Σε εκτενή ανάλυσή της η εφημερίδα Cyprus Mail εξετάζει τη δυνατότητα της Κύπρου να κεφαλαιοποιήσει τις διευρυνόμενες διμερείς αμυντικές συμφωνίες με τη Γαλλία,...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-20.html#cyprus"
   },
   {
     "date": "2026-09-20",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Δημοσιονομική Πολιτική & Προϋπολογισμός 2027: Η δημοσιονομική αισιοδοξία απαιτεί δόση επιφυλακής και έλεγχο ανελαστικών δαπανών [Επιβεβαιωμένο]",
     "snippet": "Παρέμβαση για την πορεία των δημοσίων οικονομικών και την κατάρτιση του κρατικού προϋπολογισμού για το 2027 φιλοξενεί η Cyprus Mail, επισημαίνοντας ότι τα πλεον...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-20.html#cyprus"
   },
   {
     "date": "2026-09-20",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Πρωτογενής Τομέας & Υδατικό: Έκτακτη στήριξη €1,5 εκατ. σε γεωργούς για άρδευση εν μέσω λειψυδρίας από το Υπουργικό Συμβούλιο [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Δέσμη άμεσων οικονομικών μέτρων ύψους 1,5 εκατομμυρίου ευρώ ενέκρινε το Υπουργικό Συμβούλιο για τη στήριξη των Κυπρίων γεωργών και παραγωγών που πλήττονται από...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-20.html#cyprus"
   },
   {
     "date": "2026-09-20",
     "section": "🌍 Διεθνή",
     "title": "1. Ρωσοουκρανικός Πόλεμος & Ενέργεια: Μαζική επιδρομή ουκρανικών drones στην περιφέρεια Μόσχας — Δύο νεκροί και πλήγμα σε μεγάλο διυλιστήριο πετρελαίου [Επιβεβαιωμένο]",
     "snippet": "Τουλάχιστον δύο άνθρωποι έχασαν τη ζωή τους και σοβαρές ζημιές προκλήθηκαν σε διυλιστήριο πετρελαίου στην περιφέρεια της Μόσχας μετά από μαζική επίθεση με περισ...",
-    "url": "#world"
+    "url": "briefings/2026-09-20.html#world"
   },
   {
     "date": "2026-09-20",
     "section": "🌍 Διεθνή",
     "title": "2. Μέση Ανατολή & Ενεργειακές Οδοί: Βαλλιστικό πλήγμα των Χούθι προς το Ριάντ και προειδοποιήσεις Τεχεράνης για τα Στενά του Ορμούζ [Επιβεβαιωμένο]",
     "snippet": "Σε επικίνδυνη κλιμάκωση οδηγείται η κρίση στην ευρύτερη Μέση Ανατολή, καθώς οι αντάρτες Χούθι της Υεμένης ανακοίνωσαν ότι εξαπέλυσαν υπερηχητικούς βαλλιστικούς...",
-    "url": "#world"
+    "url": "briefings/2026-09-20.html#world"
   },
   {
     "date": "2026-09-20",
     "section": "🌍 Διεθνή",
     "title": "3. Κλιματική Κρίση & Ευρωπαϊκή Παραγωγή: Σε χαμηλό 70 ετών κατακρημνίζεται η γαλλική οινοπαραγωγή λόγω ακραίων καυσώνων και ξηρασίας [Επιβεβαιωμένο]",
     "snippet": "Σε ιστορικό χαμηλό επτά δεκαετιών κατακρημνίζεται η παραγωγή κρασιού στη Γαλλία, σύμφωνα με επίσημη έκθεση του γαλλικού υπουργείου Γεωργίας, καθώς οι διαδοχικοί...",
-    "url": "#world"
+    "url": "briefings/2026-09-20.html#world"
   },
   {
     "date": "2026-09-20",
     "section": "🌍 Διεθνή",
     "title": "4. Καταναλωτική Εμπιστοσύνη & Οικονομία: Στο ναδίρ η καταναλωτική διάθεση στις ΗΠΑ παρά τη θετική ανάπτυξη — Έρευνα Goldman Sachs [Επιβεβαιωμένο]",
     "snippet": "Έντονο προβληματισμό προκαλεί στη Wall Street το παράδοξο χάσμα ανάμεσα στους θετικούς μακροοικονομικούς δείκτες των ΗΠΑ και στη βαθιά απαισιοδοξία των καταναλω...",
-    "url": "#world"
+    "url": "briefings/2026-09-20.html#world"
   },
   {
     "date": "2026-09-20",
     "section": "🌍 Διεθνή",
     "title": "5. Κυρώσεις & Σκιώδης Οικονομία: Μπορούν οι νέες αυστηρότερες κυρώσεις των ΗΠΑ να περιορίσουν το δίκτυο κεφαλαίων του Ιράν; [Μονή πηγή]",
     "snippet": "Στη διεύρυνση των οικονομικών κυρώσεων κατά της Τεχεράνης προχώρησε το αμερικανικό υπουργείο Οικονομικών, στοχεύοντας για πρώτη φορά συντονισμένα τα δίκτυα κρυπ...",
-    "url": "#world"
+    "url": "briefings/2026-09-20.html#world"
   },
   {
     "date": "2026-09-20",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-20.html#deadlines"
   },
   {
     "date": "2026-09-20",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-20.html#deadlines"
   },
   {
     "date": "2026-09-20",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμε...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-20.html#deadlines"
   },
   {
     "date": "2026-09-20",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-20.html#top-story"
   },
   {
     "date": "2026-09-19",
