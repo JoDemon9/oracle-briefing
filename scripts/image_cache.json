@@ -1062,5 +1062,45 @@
   "https://www.bbc.co.uk/news/articles/cqm27pnyd294o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ba6d/live/1888a050-b534-11f1-8269-df0566d86672.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.sigmalive.com/news/energia/1330225/gsi-galliko-plio-ksekina-erefnes-anakinosi-alla-okhi-adeia-apo-toyrkia": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1362450/conversions/60b684cd_cb98_4a86_890e_3911f8738f5c-seo.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.sigmalive.com/news/politics/1330223/ypam-ellada-israil-kai-kypros-ekhoyn-to-idio-amintiko-systima": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1362448/conversions/dptminister_vasilispalmas-seo.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://cyprus-mail.com/2026/09/21/pension-reform-bill-to-go-before-parliament-by-end-of-month": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Mousiouttas-Labour-Advisory-Council-pensions.jpg",
+    "category": "ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ"
+  },
+  "https://cyprus-mail.com/2026/09/21/real-estate-agents-highlight-challenges-facing-cyprus-property-market": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/NIC_7135.jpg",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://www.philenews.com/kipros/koinonia/article/1772730/sti-vouli-tris-protasis-nomou-gia-ta-stichia-stis-taftotites-ti-isigounte-vouleftes-apo-disi-elam-ke-amesi-dimokratia-gia-patronimo-mitronimo-filo-ke-topo-gennisis/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/tautotita-1-1-1068x549-1.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.sigmalive.com/news/local/1330226/ekpaideftikes-orghanwseis-prokhoroun-se-kinitopiisi-ekso-apo-to-proedriko": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1362451/conversions/69f844d64824b-seo.jpg",
+    "category": "ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ"
+  },
+  "https://www.philenews.com/oikonomia/epicheiriseis/article/1772726/i-ey-kiprou-anakirissete-eteria-tis-chronias-ston-tomea-tis-endoomilikis-timologisis-gia-ogdoi-sinechi-fora/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/ey.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.bbc.com/news/articles/cvwyz29n0nn2o": {
+    "image": "https://ichef.bbci.co.uk/news/1024/branded_news/93f5/live/3af71800-b571-11f1-9877-152b2e8b38a0.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.bbc.com/news/articles/cx4gqv239043o": {
+    "image": "https://ichef.bbci.co.uk/news/1024/branded_news/acbc/live/b0aa9520-b54b-11f1-bc1f-3f186ca4140c.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/21/kazakos-tells-un-shipping-must-not-be-held-to-ransom-as-hormuz-disruption-deepens": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/kazakos-1.jpeg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
   }
 }
