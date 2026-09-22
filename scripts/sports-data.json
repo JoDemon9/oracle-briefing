@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "(Βίντεο) Μπάλκοβετς στο Kerkida: \"Τα παιχνίδια δίνουν πρωτάθλημα-Το πρωτάθλημα δίνει Ευρώπη\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-mpalkobets-sto-kerkida-ta-paihnidia-dinoyn-protathlima-protathlima-dinei-eyropi",
+        "title": "Τανάσε, καλή εμφάνιση με ΓΚΟΛ",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tanase-kali-emfanisi-me-gkol-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "Το είχε... ανάγκη!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/eihe-anagki-9",
+        "title": "Η παρακάμερα... της τεσσάρας",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/i-parakamera-tis-tessaras",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Βίντεο Kerkida) Αντάλλαξαν χειροκρότημα... για την πρώτη",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-kerkida-antallaxan-heirokrotima-gia-tin-proti",
+        "title": "Σε κέφια η... 5άδα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/se-kefia-i-5ada",
         "source": "Kerkida.net"
       },
       {
-        "title": "Γκονζάλεθ: \"Οι αλλαγές έδωσαν φρεσκάδα/Αυτό λειτούργησε ως αφύπνιση για εμάς\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/gkonzaleth-oi-allages-edosan-freskadaayto-leitoyrgise-os-afypnisi-gia-emas",
+        "title": "Δικαιούται να χαμογελάει!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/dikaioytai-na-hamogelaei",
         "source": "Kerkida.net"
       },
       {
-        "title": "(ΣΤΙΓΜΙΟΤΥΠΑ) Ομόνοια - Krasava ENY Ύψωνα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/stigmiotypa-omonoia-krasava-eny-upsona",
+        "title": "Ήρθαν τα γκολ...ήρθε και η πρώτη",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/irthan-ta-gkolirthe-kai-i-proti",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-21T05:32:33.819609+00:00"
+    "fetched_at": "2026-09-22T05:01:43.696265+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -55,6 +55,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Premier League: 10 talking points from the weekend’s action",
+        "url": "https://www.theguardian.com/football/2026/sep/21/premier-league-10-talking-points-from-the-weekends-action",
+        "source": "The Guardian"
+      },
       {
         "title": "Carrick disputes Cunha’s claim that Manchester United lacked energy in Fulham draw",
         "url": "https://www.theguardian.com/football/2026/sep/20/michael-carrick-matheus-cunha-fulham-manchester-united-premier-league",
@@ -74,14 +79,9 @@
         "title": "Cunha strikes late to deny Fulham and salvage point for Manchester United",
         "url": "https://www.theguardian.com/football/2026/sep/20/fulham-manchester-united-premier-league-match-report",
         "source": "The Guardian"
-      },
-      {
-        "title": "Heat is on Carrick but Wilcox must share blame for Manchester United’s woes",
-        "url": "https://www.theguardian.com/football/2026/sep/19/michael-carrick-jason-wilcox-blame-manchester-united-woes",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-21T05:32:34.957898+00:00"
+    "fetched_at": "2026-09-22T05:01:45.208338+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,6 +99,21 @@
     },
     "articles": [
       {
+        "title": "The devastating statistic that sums up Real Madrid",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/21/the-devastating-statistic-that-sums-up-real-madrid.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Atlético responds: \"Stop referee harassment now\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/21/atletico-responds-stop-referee-harassment-now.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Jude Bellingham erupts at referee after fiery Madrid Derby defeat",
+        "url": "https://www.marca.com/en/football/2026/09/21/jude-bellingham-erupts-at-referee-after-fiery-madrid-derby-defeat-video.html",
+        "source": "Marca"
+      },
+      {
         "title": "Simeone: \"No matter whether your name is Mourinho, Simeone or Flick, not everything goes\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/simeone-matter-whether-your-name-is-mourinho-simeone-or-flick-not-everything-goes.html",
         "source": "Marca"
@@ -107,24 +122,9 @@
         "title": "Mourinho's huge rant: \"I thought I was going to find a different league, but they already explained to me that I wasn't\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/mourinho-s-huge-rant-i-thought-i-was-going-to-find-different-league-but-they-already-explained-to-me-that-i-wasn-t.html",
         "source": "Marca"
-      },
-      {
-        "title": "Atlético wins the derby and plunges Mourinho's Real Madrid into crisis",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/atletico-wins-the-derby-and-plunges-mourinho-s-real-madrid-into-crisis.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Real Madrid legends reunite as Gareth Bale debuts eye-catching new look",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/19/real-madrid-legends-reunite-as-gareth-bale-debuts-eye-catching-new-look.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Gareth Bale’s new look has fans doing a double take at Real Madrid game",
-        "url": "https://www.marca.com/en/football/2026/09/19/gareth-bale-s-new-look-has-fans-doing-double-take-at-real-madrid-gam-video.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-21T05:32:35.600206+00:00"
+    "fetched_at": "2026-09-22T05:01:46.058609+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "F1 reduces maximum distance of races by 15km",
+        "url": "https://www.bbc.com/sport/formula1/articles/cr15822d9vgxo",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "Former Mercedes design boss Elliott joins Alpine",
         "url": "https://www.bbc.com/sport/formula1/articles/ckeq8vj28149o",
@@ -161,13 +166,8 @@
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "How did they get the Madring track so wrong? - F1 Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/c4g7pljy4neo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-21T05:32:36.697651+00:00"
+    "fetched_at": "2026-09-22T05:01:47.145778+00:00"
   }
 }
