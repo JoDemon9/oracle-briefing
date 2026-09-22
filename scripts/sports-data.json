@@ -14,6 +14,16 @@
     },
     "articles": [
       {
+        "title": "Δείχνουν την ποιότητα τους",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/deihnoyn-tin-poiotita-toys",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Ευχές σε Καϊάφα",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/eyhes-se-kaiafa",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Τανάσε, καλή εμφάνιση με ΓΚΟΛ",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tanase-kali-emfanisi-me-gkol-0",
         "source": "Kerkida.net"
@@ -27,19 +37,9 @@
         "title": "Σε κέφια η... 5άδα",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/se-kefia-i-5ada",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Δικαιούται να χαμογελάει!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/dikaioytai-na-hamogelaei",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Ήρθαν τα γκολ...ήρθε και η πρώτη",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/irthan-ta-gkolirthe-kai-i-proti",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-22T05:01:43.696265+00:00"
+    "fetched_at": "2026-09-22T08:11:58.571463+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-22T05:01:45.208338+00:00"
+    "fetched_at": "2026-09-22T08:11:59.727761+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-22T05:01:46.058609+00:00"
+    "fetched_at": "2026-09-22T08:12:01.246410+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Why is Monaco staging a sprint race? F1 Q&A",
+        "url": "https://www.bbc.com/sport/formula1/articles/c9vgyzm2xv3do",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "F1 reduces maximum distance of races by 15km",
         "url": "https://www.bbc.com/sport/formula1/articles/cr15822d9vgxo",
@@ -161,13 +166,8 @@
         "title": "F1 to have 10 sprint races in 2027, including Monaco",
         "url": "https://www.bbc.com/sport/formula1/articles/crz9zvn5lzzpo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Andrew Benson Q&A: Send us your questions",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-22T05:01:47.145778+00:00"
+    "fetched_at": "2026-09-22T08:12:02.797599+00:00"
   }
 }
