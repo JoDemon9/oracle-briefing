@@ -34,12 +34,12 @@
         "source": "Kerkida.net"
       },
       {
-        "title": "Σε κέφια η... 5άδα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/se-kefia-i-5ada",
+        "title": "Το συγκινητικό \"αντίο\" στον Καλλή",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/sygkinitiko-antio-ston-kalli",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-22T08:11:58.571463+00:00"
+    "fetched_at": "2026-09-22T09:24:47.428027+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-22T08:11:59.727761+00:00"
+    "fetched_at": "2026-09-22T09:24:49.490700+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-22T08:12:01.246410+00:00"
+    "fetched_at": "2026-09-22T09:24:50.341660+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Red Bull's Hadjar to return at Azerbaijan Grand Prix",
+        "url": "https://www.bbc.com/sport/formula1/articles/cwkgx8vkd572o",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "Why is Monaco staging a sprint race? F1 Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/c9vgyzm2xv3do",
@@ -161,13 +166,8 @@
         "title": "Verstappen passes 100 amateur karters in 14 laps in exhibition race",
         "url": "https://www.bbc.com/sport/formula1/articles/c50m3k7jk82jo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "F1 to have 10 sprint races in 2027, including Monaco",
-        "url": "https://www.bbc.com/sport/formula1/articles/crz9zvn5lzzpo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-22T08:12:02.797599+00:00"
+    "fetched_at": "2026-09-22T09:24:51.692419+00:00"
   }
 }

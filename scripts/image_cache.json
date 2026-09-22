@@ -1150,5 +1150,25 @@
   "https://www.bbc.com/news/articles/cm0e32rwvrryo": {
     "image": "https://ichef.bbci.co.uk/news/1024/branded_news/5aa1/live/5ce86ed0-b60e-11f1-a054-8fb9a369004b.jpg",
     "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://cyprus-mail.com/2026/09/22/renowned-guitarist-dominic-miller-in-nicosia-for-concert": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/DOMINIC-MILLER-2WEB.png",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/22/investment-firm-repurchases-own-shares-on-cse": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/03/trading-finance-investing-stockmarket-cysec-hedge-fund-2.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/22/vycgroup-reviews-a-truly-convenient-broker": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Picture2.png",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cje3rezd92y3o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/d479/live/8996c1b0-b655-11f1-8d77-eb0cf812c06a.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/ck5yw8npxzrlo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/4e66/live/e66f3610-b646-11f1-bc1f-3f186ca4140c.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
