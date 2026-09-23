@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "Δείχνουν την ποιότητα τους",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/deihnoyn-tin-poiotita-toys",
+        "title": "Μπήκε και... έγραψε ο Τάνκοβιτς",
+        "url": "https://www.kerkida.net/super-monday/omonoia/mpike-kai-egrapse-o-tankobits",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ευχές σε Καϊάφα",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/eyhes-se-kaiafa",
+        "title": "Ομονοιάτικο... reunion",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoiatiko-reunion-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τανάσε, καλή εμφάνιση με ΓΚΟΛ",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tanase-kali-emfanisi-me-gkol-0",
+        "title": "Δεν...βγαίνει",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/denbgainei-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "Η παρακάμερα... της τεσσάρας",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/i-parakamera-tis-tessaras",
+        "title": "Από δύο ίδια... μένει το πέμπτο!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/apo-dyo-idia-menei-pempto",
         "source": "Kerkida.net"
       },
       {
-        "title": "Το συγκινητικό \"αντίο\" στον Καλλή",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/sygkinitiko-antio-ston-kalli",
+        "title": "5+4... διεθνείς",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/54-diethneis",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-22T09:24:47.428027+00:00"
+    "fetched_at": "2026-09-23T05:15:00.557417+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-22T09:24:49.490700+00:00"
+    "fetched_at": "2026-09-23T05:15:01.610516+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-22T09:24:50.341660+00:00"
+    "fetched_at": "2026-09-23T05:15:02.506718+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-22T09:24:51.692419+00:00"
+    "fetched_at": "2026-09-23T05:15:03.504268+00:00"
   }
 }

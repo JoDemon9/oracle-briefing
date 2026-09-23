@@ -1186,5 +1186,45 @@
   "https://www.bbc.co.uk/weather/articles/cmvgy4nv9d62o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_weather/1200/cpsprodpb/d0c8/live/a2ab36e0-b673-11f1-b711-df5e4d50c2fd.jpg",
     "category": "ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ"
+  },
+  "https://cyprus-mail.com/2026/09/22/guterres-erdogan-exchange-views-on-cyprus-problem": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/c5bb064b-52cd-4f4f-9bec-d4b8f7a0e31c.jpeg",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/09/23/un-continuing-its-efforts-on-cyprus-problem-holguin-says": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/07/Holguin-Christodoulides-presidential-palace-3.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/23/iran-war-oil-shock-accelerates-global-electric-vehicle-market": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/07/EV-electric-car-vehicle-EVs-2-Copy.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/23/rain-and-thunderstorms-with-a-short-respite-on-friday": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2024/10/Depositphotos_229318360_XL.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/23/cyprus-business-now-petrol-gender-cyber-seafarers-cbc-invest-cyprus": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/10/Cyprus-Business-Now-limassol-real-estate-property-2.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/23/moodys-raises-outlook-for-national-bank-of-greece-deposits": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/11/ethinki-trapeza-national-bank-of-greece-cyprus-nbg-2.jpeg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/c52e0ywl9pr7o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/2ce7/live/a35e4ee0-b6a2-11f1-ba3d-1d5c8a47f823.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqevwpmvpekeo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9db6/live/f0a69f40-b670-11f1-b711-df5e4d50c2fd.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c9dr74g32g8go?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ad23/live/08b181f0-b6b6-11f1-8448-334c53ba4316.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c8r4v7n6py97o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ea6d/live/eb5cde20-b6af-11f1-bc1f-3f186ca4140c.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }

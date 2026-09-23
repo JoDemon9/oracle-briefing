@@ -1,115 +1,199 @@
 [
   {
+    "date": "2026-09-23",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Guterres, Erdogan ‘exchange views’ on Cyprus problem",
+    "snippet": "United Nations Secretary-General Antonio Guterres and Turkish President Recep Tayyip Erdogan on Tuesday “exchanged views on the Cyprus problem” when they met on the sidelines of th...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. UN ‘continuing its efforts’ on Cyprus problem, Holguin says [Επικαιρότητα]",
+    "snippet": "The United Nations is “continuing its efforts” on the Cyprus problem, its envoy Maria Angela Holguin said, after she met President Nikos Christodoulides on the...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Iran war oil shock accelerates global electric vehicle market [Επικαιρότητα]",
+    "snippet": "The oil shock caused by the Iran war is re-charging the electric vehicle (EV) market as high gasoline and diesel prices stimulate consumer demand for alternativ...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Rain and thunderstorms with a short respite on Friday [Επικαιρότητα]",
+    "snippet": "Wednesday starts off mainly fine with scattered clouds along the west coast. From noon onwards, clouds will gather over the mountains and to the east, bringing...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Cyprus Business Now: petrol, gender, cyber, seafarers, CBC, Invest Cyprus [Επικαιρότητα]",
+    "snippet": "Cyprus recorded one of the EU’s sharpest monthly increases in petrol prices in August, while fuel costs across the bloc continued to climb sharply on an annual...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Moody’s raises outlook for National Bank of Greece deposits [Ο Φάκελός μου]",
+    "snippet": "Moody’s Ratings has raised the outlook on the National Bank of Greece’s long-term deposits to positive from stable, while confirming the lender’s long-term depo...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🌍 Διεθνή",
+    "title": "1. Trump threatens to 'annihilate' Iran in UN speech as officials from both countries meet on sidelines [Διεθνή]",
+    "snippet": "In his address, the US president pondered whether a peace deal would be agreed or whether he would have to take extreme action against Iran....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🌍 Διεθνή",
+    "title": "2. Burnham expects to find 'common ground' with Trump in first meeting [Διεθνή]",
+    "snippet": "In New York, the prime minister will also deliver a speech to the UN General Assembly expected to be focused on AI....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🌍 Διεθνή",
+    "title": "3. US to build two military bases in Greenland under new deal with Denmark [Διεθνή]",
+    "snippet": "The defence deal signed at the UN General Assembly also re-affirms Denmark's sovereignty over its semi-autonomous Arctic territory....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🌍 Διεθνή",
+    "title": "4. How Ceuta, football and Israel are shaping Morocco's election [Διεθνή]",
+    "snippet": "Young voters are being courted with football slogans, promises of jobs and anti-Israel rallying calls....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "🌍 Διεθνή",
+    "title": "5. Sri Lanka court convicts 15 men over deadly Easter Sunday bombings [Διεθνή]",
+    "snippet": "Three churches and three luxury hotels were targeted in the 2019 attacks which killed 270....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-23",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-22",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Κεντρική Τράπεζα Κύπρου: Το θεσμικό πλαίσιο εκποιήσεων θωρακίζει τη χρηματοπιστωτική σταθερότητα — Ρεκόρ συναινετικών αναδιαρθρώσεων και απόλυτη προστασία της πρώτης κατοικίας [Επιβεβαιωμένο]",
     "snippet": "Σε μια βαρύνουσας σημασίας θεσμική ανάλυση που δημοσιοποίησε η Κεντρική Τράπεζα της Κύπρου (ΚΤΚ), διαπιστώνεται επίσημα ότι το ισχύον νομικό πλαίσιο εκποιήσεων έχει διαδραματίσει κ...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-22.html#top-story"
   },
   {
     "date": "2026-09-22",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Ναυτιλία & Εργασία: Ελλάδα και Κύπρος στο επίκεντρο του διεθνούς διαλόγου για την κόπωση και τα ωράρια των ναυτικών [Επιβεβαιωμένο]",
     "snippet": "Είκοσι χρόνια μετά την υιοθέτηση της Σύμβασης Ναυτικής Εργασίας (Maritime Labour Convention - MLC), η Κύπρος και η Ελλάδα ένωσαν τις δυνάμεις τους σε μια κοινή...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-22.html#cyprus"
   },
   {
     "date": "2026-09-22",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Επιχειρηματικότητα & Επενδύσεις: Η Λεμεσός υποδέχεται το επίσημο roadshow της ελεύθερης ζώνης ANCFZ των ΗΑΕ [Επιβεβαιωμένο]",
     "snippet": "Σε επενδυτικό κόμβο υψηλού επιπέδου μετατρέπεται σήμερα η Λεμεσός, καθώς η Ajman NuVentures Centre Free Zone (ANCFZ), μία από τις ταχύτερα αναπτυσσόμενες ελεύθε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-22.html#cyprus"
   },
   {
     "date": "2026-09-22",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Γεωπολιτική & Διπλωματία: Το Κυπριακό στη Γενική Συνέλευση του ΟΗΕ — Ολοκληρωμένη στρατηγική Χριστοδουλίδη στη Νέα Υόρκη [Επιβεβαιωμένο]",
     "snippet": "Στην τελική ευθεία για την ομιλία του στην 81η Γενική Συνέλευση του ΟΗΕ στη Νέα Υόρκη βρίσκεται ο Πρόεδρος της Δημοκρατίας Νίκος Χριστοδουλίδης, ολοκληρώνοντας...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-22.html#cyprus"
   },
   {
     "date": "2026-09-22",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Δικαστική Επικαιρότητα: Συνέχιση της δίκης Φαίδωνα Φαίδωνος με καταθέσεις βασικών μαρτύρων κατηγορίας [Επιβεβαιωμένο]",
     "snippet": "Ενώπιον του Κακουργιοδικείου Πάφου συνεχίζεται σήμερα η ακροαματική διαδικασία στη δίκη του υπό αναστολή δημάρχου Πάφου, Φαίδωνα Φαίδωνος, με τις καταθέσεις κομ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-22.html#cyprus"
   },
   {
     "date": "2026-09-22",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Δικαιοσύνη & Προστασία Ανηλίκων: Στο δικαστήριο ο Βρετανός πατέρας για την τραγική πτώση του τρίχρονου γιου του σε ξενοδοχείο της Πάφου [Επιβεβαιωμένο]",
     "snippet": "Ενώπιον του Επαρχιακού Δικαστηρίου Πάφου οδηγείται σήμερα το πρωί ο 37χρονος Βρετανός υπήκοος, προκειμένου να απαντήσει στις κατηγορίες που αντιμετωπίζει σχετικ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-22.html#cyprus"
   },
   {
     "date": "2026-09-22",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Αθλητισμός & Κοινωνική Ζωή Λεμεσού: Το Open Sports Festival 2026 επιστρέφει στη Λεμεσό στις 24 Οκτωβρίου — Πόλος έλξης για οικογένειες και αθλητές [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Στη δυναμική επιστροφή της μεγαλύτερης πολυαθλητικής γιορτής της Κύπρου ετοιμάζεται η Λεμεσός, με το Open Sports Festival 2026 να ανοίγει τις πύλες του στις 24...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-22.html#cyprus"
   },
   {
     "date": "2026-09-22",
     "section": "🌍 Διεθνή",
     "title": "1. Γερμανική Οικονομία & Βιομηχανία: Σαρωτικό σχέδιο περικοπής έως 100.000 θέσεων εργασίας στη Volkswagen — Πώς η υπεράριθμη απασχόληση έγινε δυσβάστακτο βάρος [Επιβεβαιωμένο]",
     "snippet": "Σε μια από τις πιο δραματικές κινήσεις στην ιστορία της ευρωπαϊκής αυτοκινητοβιομηχανίας, ο κολοσσός της Volkswagen επεξεργάζεται σχέδιο κατάργησης έως και 100....",
-    "url": "#world"
+    "url": "briefings/2026-09-22.html#world"
   },
   {
     "date": "2026-09-22",
     "section": "🌍 Διεθνή",
     "title": "2. Γεωπολιτική Ασφάλεια & Βαλτική: Η Λιθουανία έτοιμη να αντισταθεί σε ρωσικές απειλές με παράλληλα σχέδια εκκένωσης αμάχων — Δηλώσεις Πρωθυπουργού στο BBC [Επιβεβαιωμένο]",
     "snippet": "Την αποφασιστικότητα της Λιθουανίας να πολεμήσει και να υπερασπιστεί κάθε σπιθαμή της επικράτειάς της απέναντι σε ενδεχόμενη ρωσική επιθετικότητα εξέφρασε σε απ...",
-    "url": "#world"
+    "url": "briefings/2026-09-22.html#world"
   },
   {
     "date": "2026-09-22",
     "section": "🌍 Διεθνή",
     "title": "3. Μέση Ανατολή & Ερυθρά Θάλασσα: Τελεσίγραφο G7 στην Τεχεράνη να διακόψει τον εξοπλισμό των Χούθι ενόψει της Γενικής Συνέλευσης του ΟΗΕ [Επιβεβαιωμένο]",
     "snippet": "Αυστηρή κοινή προειδοποίηση προς το Ιράν απηύθυναν οι υπουργοί Εξωτερικών της ομάδας των G7, απαιτώντας τον άμεσο τερματισμό της παροχής βαλλιστικών πυραύλων κα...",
-    "url": "#world"
+    "url": "briefings/2026-09-22.html#world"
   },
   {
     "date": "2026-09-22",
     "section": "🌍 Διεθνή",
     "title": "4. Παγκόσμια Εκπαίδευση & Δεξιότητες: Έκθεση PISA 2025 — Κατακόρυφη πτώση σε ανάγνωση και μαθηματικά παγκοσμίως εν μέσω ψηφιακών αποσπάσεων και AI [Επιβεβαιωμένο]",
     "snippet": "Σοκ στις κυβερνήσεις των χωρών του ΟΟΣΑ προκαλούν τα αποτελέσματα της διεθνούς αξιολόγησης μαθητών PISA 2025, τα οποία καταγράφουν ιστορικό χαμηλό στις επιδόσει...",
-    "url": "#world"
+    "url": "briefings/2026-09-22.html#world"
   },
   {
     "date": "2026-09-22",
     "section": "🌍 Διεθνή",
     "title": "5. Μίντια & Αμερικανική Πολιτική: Αγωγή CNN, MS NOW και Politico κατά Τραμπ για τον αποκλεισμό από τον Λευκό Οίκο — Αναστολή του Press Pool [Επιβεβαιωμένο]",
     "snippet": "Σε πρωτοφανή δικαστική και θεσμική σύγκρουση εισέρχεται η αμερικανική πολιτική σκηνή, καθώς κορυφαίοι ειδησεογραφικοί οργανισμοί — το CNN, το MS NOW και το Poli...",
-    "url": "#world"
+    "url": "briefings/2026-09-22.html#world"
   },
   {
     "date": "2026-09-22",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-22.html#deadlines"
   },
   {
     "date": "2026-09-22",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-22.html#deadlines"
   },
   {
     "date": "2026-09-22",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμε...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-22.html#deadlines"
   },
   {
     "date": "2026-09-22",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-22.html#top-story"
   },
   {
     "date": "2026-09-21",
