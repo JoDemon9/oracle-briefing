@@ -1278,5 +1278,21 @@
   "https://www.bbc.co.uk/news/articles/cqgmrk7187lzo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/29a1/live/7d0fe1c0-b7c1-11f1-a430-4d16ee157c41.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/24/unic-takes-part-in-international-study-on-bat-evolution-biology-published-in-nature": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/UNIC_bat_biology.png",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/24/halloumi-brings-in-e364m-but-another-cyprus-product-sells-even-more": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/halloumi.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/706e/live/5280a470-b821-11f1-9173-8b6ede38f022.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cw24jm9rryy3o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c694/live/dc86c7a0-a870-11f1-bbad-43eaf67b94b6.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
