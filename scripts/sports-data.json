@@ -14,32 +14,32 @@
     },
     "articles": [
       {
-        "title": "ΣΧΟΛΙΟ/\"Ακόμη μια δικαίωση για τον Μπεργκ, όσους τον αμφισβητούν τους έκανε να σιωπήσουν\"",
-        "url": "https://www.kerkida.net/super-monday/omonoia/sholioakomi-mia-dikaiosi-gia-ton-mpergk-osoys-ton-amfisbitoyn-toys-ekane-na-siopisoyn",
+        "title": "ΣΧΟΛΙΟ Μαρτίδη για την Ομόνοια",
+        "url": "https://www.kerkida.net/super-monday/omonoia/sholio-martidi-gia-tin-omonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Όταν έρχεται... νωρίς",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/otan-erhetai-noris",
+        "title": "Οκτώβριος με 4+2",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oktobrios-me-42",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Πολλαπλάσιο μπάτζετ, οι αναπληρωματικοί της θα ξεχώριζαν στην Κύπρο\"",
-        "url": "https://www.kerkida.net/super-monday/omonoia/pollaplasio-mpatzet-oi-anapliromatikoi-tis-tha-xehorizan-stin-kypro",
+        "title": "Συνάντηση... Τάσου με Ομονοιάτες! (Φώτος)",
+        "url": "https://www.kerkida.net/eidiseis/kop-ethniki/omonoia/synantisi-tasoy-me-omonoiates-fotos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Επιβεβαίωση... Ντουβέρν",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/epibebaiosi-ntoybern",
+        "title": "\"Λίρα εκατό\" ο Σλοβάκος!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/lira-ekato-o-slobakos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Μπήκε και... έγραψε ο Τάνκοβιτς",
-        "url": "https://www.kerkida.net/super-monday/omonoia/mpike-kai-egrapse-o-tankobits",
+        "title": "Ανακοίνωσε Domen Crnigoj",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-29is-maioy/anakoinose-domen-crnigoj",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-23T09:25:26.748361+00:00"
+    "fetched_at": "2026-09-24T06:12:48.248462+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -56,6 +56,16 @@
     },
     "articles": [
       {
+        "title": "Manchester United report seventh straight annual loss and sell fans £125 grass clumps",
+        "url": "https://www.theguardian.com/football/2026/sep/23/manchester-united-seventh-straight-annual-loss-record-revenue-financial-results",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Slip sliding away: football season-ticket holders fear falling down pecking order",
+        "url": "https://www.theguardian.com/football/2026/sep/23/premier-league-season-ticket-holders-pecking-order-new-fans-football-tourists",
+        "source": "The Guardian"
+      },
+      {
         "title": "Premier League: 10 talking points from the weekend’s action",
         "url": "https://www.theguardian.com/football/2026/sep/21/premier-league-10-talking-points-from-the-weekends-action",
         "source": "The Guardian"
@@ -69,19 +79,9 @@
         "title": "Manchester United’s engine room runs out of steam as fans voice frustration",
         "url": "https://www.theguardian.com/football/2026/sep/20/manchester-uniteds-engine-room-runs-out-of-puff-as-fans-begin-to-voice-frustration",
         "source": "The Guardian"
-      },
-      {
-        "title": "Fulham 1-1 Manchester United: Premier League – as it happened",
-        "url": "https://www.theguardian.com/football/live/2026/sep/20/fulham-v-manchester-united-premier-league-live",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Cunha strikes late to deny Fulham and salvage point for Manchester United",
-        "url": "https://www.theguardian.com/football/2026/sep/20/fulham-manchester-united-premier-league-match-report",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-23T09:25:27.580324+00:00"
+    "fetched_at": "2026-09-24T06:12:49.422748+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -99,6 +99,21 @@
     },
     "articles": [
       {
+        "title": "Diomande threatens Vinicius's reign",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/23/diomande-threatens-vinicius-s-reign.html",
+        "source": "Marca"
+      },
+      {
+        "title": "'Rodri: \"Real Madrid went all out to sign me\"'",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/23/rodri-real-madrid-went-all-out-to-sign-me.html",
+        "source": "Marca"
+      },
+      {
+        "title": "AI Already Knows Who Will Win LaLiga: Here’s How Real Madrid and Barcelona Stand After Seven Matchdays",
+        "url": "https://www.marca.com/en/football/2026/09/23/ai-already-knows-who-will-win-laliga-here-s-how-real-madrid-and-barcelona-stand-after-seven-matchdays.html",
+        "source": "Marca"
+      },
+      {
         "title": "The devastating statistic that sums up Real Madrid",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/21/the-devastating-statistic-that-sums-up-real-madrid.html",
         "source": "Marca"
@@ -107,24 +122,9 @@
         "title": "Atlético responds: \"Stop referee harassment now\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/21/atletico-responds-stop-referee-harassment-now.html",
         "source": "Marca"
-      },
-      {
-        "title": "Jude Bellingham erupts at referee after fiery Madrid Derby defeat",
-        "url": "https://www.marca.com/en/football/2026/09/21/jude-bellingham-erupts-at-referee-after-fiery-madrid-derby-defeat-video.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Simeone: \"No matter whether your name is Mourinho, Simeone or Flick, not everything goes\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/simeone-matter-whether-your-name-is-mourinho-simeone-or-flick-not-everything-goes.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Mourinho's huge rant: \"I thought I was going to find a different league, but they already explained to me that I wasn't\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/20/mourinho-s-huge-rant-i-thought-i-was-going-to-find-different-league-but-they-already-explained-to-me-that-i-wasn-t.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-23T09:25:28.245264+00:00"
+    "fetched_at": "2026-09-24T06:12:50.288399+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "The moment Antonelli knew he had been transformed as an F1 driver",
+        "url": "https://www.bbc.com/sport/formula1/articles/cmpq03x9x27ro",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "Red Bull retain Hadjar for 2027 season",
         "url": "https://www.bbc.com/sport/formula1/articles/cmde0j53zz90o",
@@ -161,13 +166,8 @@
         "title": "F1 reduces maximum distance of races by 15km",
         "url": "https://www.bbc.com/sport/formula1/articles/cr15822d9vgxo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Former Mercedes design boss Elliott joins Alpine",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckeq8vj28149o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-23T09:25:29.462318+00:00"
+    "fetched_at": "2026-09-24T06:12:51.693840+00:00"
   }
 }

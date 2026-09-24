@@ -1,122 +1,192 @@
 [
   {
+    "date": "2026-09-24",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Our View: Tax cuts are no cure for inflation",
+    "snippet": "High prices, understandably, have been the main public issue in the last eight months. People are not happy when their standard of living is steadily falling because their disposab...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. From smart glasses to AI pins, privacy fears challenge tech’s next big bet [Επικαιρότητα]",
+    "snippet": "Companies betting AI devices will usher in a post-smartphone era are fueling privacy fears around the globe that could slow adoption of the emerging technology....",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Cyprus Business Now: AI, housing, shipping, tourism, Keo, Keve [Επικαιρότητα]",
+    "snippet": "The AI Cyprus Expo will return to Limassol in April of next year, with its organisers aiming to turn the event into a regional platform for applied artificial i...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Judge blocks Trump media ban, orders White House access restored [Επικαιρότητα]",
+    "snippet": "A federal judge ordered US President Donald Trump on Thursday to restore White House access for journalists from CNN, MS NOW and Politico, saying his ban on the...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🌍 Διεθνή",
+    "title": "1. OpenAI agent 'infiltrated' Australian government website, PM says [Διεθνή]",
+    "snippet": "Albanese said he expressed \"concern\" to OpenAI founder Sam Altman, after authorities were informed three months after the breach in June....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🌍 Διεθνή",
+    "title": "2. AI superpower ambitions take centre stage as Trump and Xi meet [Διεθνή]",
+    "snippet": "The US and China are vying for AI supremacy while seeking to keep it under human control....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🌍 Διεθνή",
+    "title": "3. Iran's president tells Trump it will never 'bend the knee' [Διεθνή]",
+    "snippet": "Masoud Pezeshkian's defiant speech to the UN comes after the US president threatened to \"annihilate\" Iran if a peace deal is not agreed soon....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🌍 Διεθνή",
+    "title": "4. Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war [Διεθνή]",
+    "snippet": "The local authorities reportedly seize Tigray's airports following reports of recent drone strikes....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "🌍 Διεθνή",
+    "title": "5. Trump's Board of Peace unveils $2.45bn plan to begin Gaza's reconstruction [Διεθνή]",
+    "snippet": "The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-24",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-23",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Ομιλία Χριστοδουλίδη στον ΟΗΕ: Πλήρης επαναφορά των συνομιλιών για το Κυπριακό εντός του πλαισίου Ασφαλείας — Η Κύπρος ως ευρωπαϊκός πυλώνας σταθερότητας στη Μέση Ανατολή [Επιβεβαιωμένο]",
     "snippet": "Στο βήμα της 81ης Γενικής Συνέλευσης των Ηνωμένων Εθνών στη Νέα Υόρκη ανέρχεται σήμερα ο Πρόεδρος της Κυπριακής Δημοκρατίας Νίκος Χριστοδουλίδης, παρουσιάζοντας μια ολοκληρωμένη κα...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-23.html#top-story"
   },
   {
     "date": "2026-09-23",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Οικονομία & Εξωτερικό Εμπόριο: Κύπρος και Βόρεια Ελλάδα εξερευνούν κοινές επενδυτικές ευκαιρίες στη Θεσσαλονίκη [Επιβεβαιωμένο]",
     "snippet": "Σε τροχιά ουσιαστικής εμβάθυνσης εισέρχονται οι οικονομικές και εμπορικές σχέσεις Κύπρου και Ελλάδας, καθώς επιχειρηματική αποστολή υψηλού επιπέδου του Κυπριακο...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-23.html#cyprus"
   },
   {
     "date": "2026-09-23",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Φορολογική Μεταρρύθμιση & Ψηφιοποίηση: Ψηφιοποιούνται οι επιστροφές φόρου με απευθείας καταχώριση IBAN στο Tax For All [Επιβεβαιωμένο]",
     "snippet": "Σε ένα καθοριστικό βήμα εκσυγχρονισμού και πάταξης της γραφειοκρατίας προχωρά το Τμήμα Φορολογίας, ανακοινώνοντας ότι όλες οι αλλαγές και επιβεβαιώσεις τραπεζικ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-23.html#cyprus"
   },
   {
     "date": "2026-09-23",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Περιβάλλον & Ανάπτυξη: Αρχίζει η υποβολή αιτήσεων για τα αντισταθμιστικά μέτρα προς ιδιοκτήτες γης στον Ακάμα [Επιβεβαιωμένο]",
     "snippet": "Ανοίγει επισήμως από σήμερα η πλατφόρμα υποβολής αιτήσεων για το πολυαναμενόμενο κυβερνητικό σχέδιο αντισταθμιστικών μέτρων που αφορά τους ιδιοκτήτες ιδιωτικής...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-23.html#cyprus"
   },
   {
     "date": "2026-09-23",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Ενέργεια & Αγορά Καυσίμων: Πτωτική αποκλιμάκωση στις διεθνείς τιμές πετρελαίου και αντίκτυπος στην κυπριακή αγορά [Επιβεβαιωμένο]",
     "snippet": "Σε τροχιά σταθερής αποκλιμάκωσης κινούνται οι διεθνείς αγορές ενέργειας, με το αργό πετρέλαιο Brent να υποχωρεί στα $95,25 το βαρέλι, καταγράφοντας πτώση μετά τ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-23.html#cyprus"
   },
   {
     "date": "2026-09-23",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Δημόσια Ασφάλεια & Αστυνόμευση: Καταδίωξη και πυροβολισμοί σε επιχείρηση σύλληψης καταζητούμενου προσώπου [Επιβεβαιωμένο]",
     "snippet": "Σε κινηματογραφική καταδίωξη με ανταλλαγή πυροβολισμών εξελίχθηκε συντονισμένη επιχείρηση της Αστυνομίας Κύπρου, όταν καταζητούμενο πρόσωπο επιχείρησε να διαφύγ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-23.html#cyprus"
   },
   {
     "date": "2026-09-23",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Κοινωνική Υπευθυνότητα & Αθλητισμός: Η XM στηρίζει το ιστορικό εγχείρημα υπερμαραθώνιας κολύμβησης Παραολυμπιονίκη υπέρ του ΠΑΣΥΚΑΦ [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Σε μια αξιοσημείωτη πρωτοβουλία εταιρικής κοινωνικής ευθύνης, ο διεθνής χρηματοοικονομικός κολοσσός XM με έδρα τη Λεμεσό ανακοίνωσε την πλήρη στήριξη του Παραολ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-23.html#cyprus"
   },
   {
     "date": "2026-09-23",
     "section": "🌍 Διεθνή",
     "title": "1. Διπλωματία & Μέση Ανατολή: Πρώτες απευθείας επαφές ΗΠΑ και Ιράν μετά τις απειλές Τραμπ — Διπλωματικό άνοιγμα στη Νέα Υόρκη [Επιβεβαιωμένο]",
     "snippet": "Σε μια απρόσμενη και βαρύνουσας σημασίας διπλωματική εξέλιξη, αντιπροσωπείες των Ηνωμένων Πολιτειών και του Ιράν πραγματοποίησαν στη Νέα Υόρκη τις πρώτες επίσημ...",
-    "url": "#world"
+    "url": "briefings/2026-09-23.html#world"
   },
   {
     "date": "2026-09-23",
     "section": "🌍 Διεθνή",
     "title": "2. Αρκτική Στρατηγική & Άμυνα: Συμφωνία ΗΠΑ-Δανίας για κατασκευή δύο νέων αμερικανικών στρατιωτικών βάσεων στη Γροιλανδία [Επιβεβαιωμένο]",
     "snippet": "Σε στρατηγική συμφωνία ιστορικών διαστάσεων κατέληξαν οι Ηνωμένες Πολιτείες, η Δανία και η τοπική κυβέρνηση της Γροιλανδίας, προβλέποντας τη δημιουργία δύο νέων...",
-    "url": "#world"
+    "url": "briefings/2026-09-23.html#world"
   },
   {
     "date": "2026-09-23",
     "section": "🌍 Διεθνή",
     "title": "3. Ευρωπαϊκές Κυρώσεις & Δικαιοσύνη: Η ΕΕ αποσύρει τις κυρώσεις κατά των Ρώσων ολιγαρχών Ουσμάνοφ και Φρίντμαν μετά από δικαστικές αποφάσεις [Επιβεβαιωμένο]",
     "snippet": "Σε μια απόφαση μείζονος πολιτικής και νομικής σημασίας, η Ευρωπαϊκή Ένωση προχώρησε στην αφαίρεση των Ρώσων μεγιστάνων Αλισέρ Ουσμάνοφ και Μιχαήλ Φρίντμαν από τ...",
-    "url": "#world"
+    "url": "briefings/2026-09-23.html#world"
   },
   {
     "date": "2026-09-23",
     "section": "🌍 Διεθνή",
     "title": "4. Ενεργειακή Πολιτική Γερμανίας: Πρωτοβουλία για κατάργηση των αυξήσεων στις τιμές βενζίνης και φυσικού αερίου [Επιβεβαιωμένο]",
     "snippet": "Νομοθετική πρωτοβουλία για τον δραστικό περιορισμό των καθημερινών ανατιμήσεων στα πρατήρια καυσίμων και στο φυσικό αέριο προωθεί η γερμανική κυβέρνηση, σε μια...",
-    "url": "#world"
+    "url": "briefings/2026-09-23.html#world"
   },
   {
     "date": "2026-09-23",
     "section": "🌍 Διεθνή",
     "title": "5. Τεχνολογία & AI Cloud: Άλμα για τη μετοχή της Alibaba μετά την παρουσίαση του νέου AI chip Zhenwu v900 και παγκόσμιας επέκτασης data centers [Επιβεβαιωμένο]",
     "snippet": "Σε δυναμικό ανοδικό ράλι άνω του 3% στο Χονγκ Κονγκ εισήλθε η μετοχή του κινεζικού τεχνολογικού γίγαντα Alibaba, καθώς η εταιρεία αποκάλυψε επίσημα τον νέο της...",
-    "url": "#world"
+    "url": "briefings/2026-09-23.html#world"
   },
   {
     "date": "2026-09-23",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-23.html#deadlines"
   },
   {
     "date": "2026-09-23",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-23.html#deadlines"
   },
   {
     "date": "2026-09-23",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμε...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-23.html#deadlines"
   },
   {
     "date": "2026-09-23",
     "section": "📅 Προθεσμίες",
     "title": "Άμεσα: Σύνδεση στην πύλη Tax For All (TFA) του Τμήματος Φορολογίας για επιβεβαίωση και καταχώριση τραπεζικού λογαριασμού IBAN για άμεση πίστωση επιστροφών φόρου.",
     "snippet": "Άμεσα: Σύνδεση στην πύλη Tax For All (TFA) του Τμήματος Φορολογίας για επιβεβαίωση και καταχώριση τραπεζικού λογαριασμού IBAN για άμεση πίστωση επιστροφών φόρου...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-23.html#deadlines"
   },
   {
     "date": "2026-09-23",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-23.html#top-story"
   },
   {
     "date": "2026-09-22",
