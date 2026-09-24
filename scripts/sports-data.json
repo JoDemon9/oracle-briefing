@@ -14,6 +14,11 @@
     },
     "articles": [
       {
+        "title": "Με την... επιστροφή",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-tin-epistrofi",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "ΣΧΟΛΙΟ Μαρτίδη για την Ομόνοια",
         "url": "https://www.kerkida.net/super-monday/omonoia/sholio-martidi-gia-tin-omonoia",
         "source": "Kerkida.net"
@@ -22,24 +27,9 @@
         "title": "Οκτώβριος με 4+2",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oktobrios-me-42",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Συνάντηση... Τάσου με Ομονοιάτες! (Φώτος)",
-        "url": "https://www.kerkida.net/eidiseis/kop-ethniki/omonoia/synantisi-tasoy-me-omonoiates-fotos",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "\"Λίρα εκατό\" ο Σλοβάκος!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/lira-ekato-o-slobakos",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Ανακοίνωσε Domen Crnigoj",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-29is-maioy/anakoinose-domen-crnigoj",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-24T06:12:48.248462+00:00"
+    "fetched_at": "2026-09-24T09:25:58.479808+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +71,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-24T06:12:49.422748+00:00"
+    "fetched_at": "2026-09-24T09:25:59.418934+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +114,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-24T06:12:50.288399+00:00"
+    "fetched_at": "2026-09-24T09:26:00.232223+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +158,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-24T06:12:51.693840+00:00"
+    "fetched_at": "2026-09-24T09:26:01.367377+00:00"
   }
 }
