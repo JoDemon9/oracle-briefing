@@ -1334,5 +1334,53 @@
   "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/5f2b/live/edd87070-b8a7-11f1-b1d1-571ed4d7ff2c.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/602f/live/4a515750-b8a7-11f1-a430-4d16ee157c41.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://cyprus-mail.com/2026/09/25/logicom-reshuffles-top-team-as-papachristoforou-takes-ceo-role": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/02/logicom.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://www.philenews.com/oikonomia/kypros/article/1774447/ntizel-istoriko-rekor-sta-e1997-pano-apo-e2-se-perissotera-apo-100-pratiria/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2025/08/kavsima1.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.sigmalive.com/news/local/1330845/me-ptd-xertzoghk-kai-adoni-georghiadi-ta-eghkainia-toy-hadassah-sti-lemeso": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1363123/conversions/enscape_2024_12_19_17_27_08_scaled-seo.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.sigmalive.com/news/local/1330856/kampanaki-meta-tin-ptwsi-mpalkoniou-sti-lemeso-60-oikodomes-khrizoyn-ekkenosis": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1363134/conversions/pszkhps-seo.jpg",
+    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+  },
+  "https://www.philenews.com/oikonomia/kosmos-ikonomia/article/1774462/exxonmobil-geotrisi-sto-ionio-stis-arches-tou-2027/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/exxon_.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/25/university-of-limassol-strengthens-international-academic-collaboration-with-symbiosis-international-university": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/1-3.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ"
+  },
+  "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ef68/live/531a99b0-b851-11f1-b1d1-571ed4d7ff2c.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.cnbc.com/2026/09/24/france-budget-debt-deficit-government.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108367272-1790230736064-gettyimages-2295254910-2c9a0408.jpeg?v=1790230761&amp;w=1920&amp;h=1080",
+    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://www.cnbc.com/2026/09/23/mark-zuckerberg-1299-meta-vr-glasses-ai-agent.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108367520-1790264014969-gettyimages-2296209074-META_CONNECT.jpeg?v=1790264039&amp;w=1920&amp;h=1080",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.dw.com/en/why-are-european-banks-moving-gold-out-of-united-states/a-79213013?maca=en-rss-en-all-1573-rdf": {
+    "image": "https://static.dw.com/image/78104138_6.jpg",
+    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
+  },
+  "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/50c6/live/2164cc30-b804-11f1-97e1-83bf52ec4acd.jpg",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
   }
 }
