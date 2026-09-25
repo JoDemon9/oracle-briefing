@@ -14,22 +14,27 @@
     },
     "articles": [
       {
-        "title": "Με την... επιστροφή",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-tin-epistrofi",
+        "title": "Τους έστειλε πανέτοιμους και...περιμένει",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/toys-esteile-panetoimoys-kaiperimenei",
         "source": "Kerkida.net"
       },
       {
-        "title": "ΣΧΟΛΙΟ Μαρτίδη για την Ομόνοια",
-        "url": "https://www.kerkida.net/super-monday/omonoia/sholio-martidi-gia-tin-omonoia",
+        "title": "Φώναξαν παρών οι...\"παλιοί\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fonaxan-paron-oipalioi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Οκτώβριος με 4+2",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oktobrios-me-42",
+        "title": "Με την επανέναρξη... ΠΡΕΠΕΙ",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-tin-epanenarxi-prepei",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Ευκαιρία για... Μπεργκ",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/eykairia-gia-mpergk-0",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-24T09:25:58.479808+00:00"
+    "fetched_at": "2026-09-25T07:53:19.682420+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -71,7 +76,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-24T09:25:59.418934+00:00"
+    "fetched_at": "2026-09-25T07:53:21.927062+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -114,7 +119,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-24T09:26:00.232223+00:00"
+    "fetched_at": "2026-09-25T07:53:23.709604+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -133,31 +138,31 @@
     },
     "articles": [
       {
+        "title": "McLaren miles off pace in Baku practice - Norris",
+        "url": "https://www.bbc.com/sport/formula1/articles/cmwyzqn4w20qo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "The moment Antonelli knew he had been transformed as an F1 driver",
         "url": "https://www.bbc.com/sport/formula1/articles/cmpq03x9x27ro",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Why is Azerbaijan Grand Prix taking place on a Saturday?",
+        "url": "https://www.bbc.com/sport/formula1/articles/c3y0z7wvdel1o",
         "source": "BBC Sport F1"
       },
       {
         "title": "Red Bull retain Hadjar for 2027 season",
         "url": "https://www.bbc.com/sport/formula1/articles/cmde0j53zz90o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Why is Monaco staging a sprint race? F1 Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/c9vgyzm2xv3do",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Red Bull's Hadjar to return at Azerbaijan Grand Prix",
-        "url": "https://www.bbc.com/sport/formula1/articles/cwkgx8vkd572o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "F1 reduces maximum distance of races by 15km",
-        "url": "https://www.bbc.com/sport/formula1/articles/cr15822d9vgxo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-24T09:26:01.367377+00:00"
+    "fetched_at": "2026-09-25T07:53:25.930100+00:00"
   }
 }
