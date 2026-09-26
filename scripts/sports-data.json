@@ -14,6 +14,11 @@
     },
     "articles": [
       {
+        "title": "Παίρνουν σειρά οι άλλοι... δύο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/pairnoyn-seira-oi-alloi-dyo",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "(Bίντεο) Κωνσταντίνου στο Kerkida.net: \"Θέλω να τα δίνω όλα για την ομάδα μου\"",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/binteo-konstantinoy-sto-kerkidanet-thelo-na-ta-dino-ola-gia-tin-omada-moy",
         "source": "Kerkida.net"
@@ -29,17 +34,12 @@
         "source": "Kerkida.net"
       },
       {
-        "title": "Αλλαγή οι Τανάσε-Ντράγκομιρ",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/allagi-oi-tanase-ntragkomir",
-        "source": "Kerkida.net"
-      },
-      {
         "title": "Περισσότερες λύσεις με την επανέναρξη",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/perissoteres-lyseis-me-tin-epanenarxi",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-26T09:27:28.079483+00:00"
+    "fetched_at": "2026-09-26T12:54:31.045984+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-26T09:27:29.241399+00:00"
+    "fetched_at": "2026-09-26T12:54:32.161101+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -98,6 +98,11 @@
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Mbappé eases concerns over his knee: laughs with Arda Güler and no sign of bandages",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/26/mbappe-eases-concerns-over-his-knee-laughs-with-arda-gueler-and-no-sign-of-bandages.html",
+        "source": "Marca"
+      },
       {
         "title": "Zinedine Zidane sounds the alarm for Real Madrid with Kylian Mbappe update: \"It's not looking good\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/26/zinedine-zidane-sounds-the-alarm-for-real-madrid-with-kylian-mbappe-update-it-s-not-looking-good.html",
@@ -117,14 +122,9 @@
         "title": "Diomande threatens Vinicius's reign",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/23/diomande-threatens-vinicius-s-reign.html",
         "source": "Marca"
-      },
-      {
-        "title": "'Rodri: \"Real Madrid went all out to sign me\"'",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/23/rodri-real-madrid-went-all-out-to-sign-me.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-26T09:27:30.089497+00:00"
+    "fetched_at": "2026-09-26T12:54:33.616097+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -142,6 +142,11 @@
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "Russell wins despite late Verstappen challenge",
+        "url": "https://www.bbc.com/sport/formula1/articles/ck8d33760j63o",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "Antonelli 'comes back to earth' with qualifying crash",
         "url": "https://www.bbc.com/sport/formula1/articles/cqd0885k3d28o",
@@ -161,13 +166,8 @@
         "title": "The moment Antonelli knew he had been transformed as an F1 driver",
         "url": "https://www.bbc.com/sport/formula1/articles/cmpq03x9x27ro",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Andrew Benson Q&A: Send us your questions",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-26T09:27:31.120118+00:00"
+    "fetched_at": "2026-09-26T12:54:35.550750+00:00"
   }
 }
