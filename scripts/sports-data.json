@@ -14,22 +14,27 @@
     },
     "articles": [
       {
-        "title": "Καμίνσκι με 2+2",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kaminski-me-22",
+        "title": "Η ευκαιρία...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-eykairia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τους έστειλε πανέτοιμους και...περιμένει",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/toys-esteile-panetoimoys-kaiperimenei",
+        "title": "Αλλαγή οι Τανάσε-Ντράγκομιρ",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/allagi-oi-tanase-ntragkomir",
         "source": "Kerkida.net"
       },
       {
-        "title": "Φώναξαν παρών οι...\"παλιοί\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/fonaxan-paron-oipalioi",
+        "title": "Περισσότερες λύσεις με την επανέναρξη",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/perissoteres-lyseis-me-tin-epanenarxi",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Ομόνοια/Μετά τον Μαυρουδή, ο Βίκτωρος",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/omonoiameta-ton-mayroydi-o-biktoros",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-25T15:23:49.357128+00:00"
+    "fetched_at": "2026-09-26T05:33:40.799834+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -71,7 +76,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-25T15:23:51.409081+00:00"
+    "fetched_at": "2026-09-26T05:33:42.481345+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -89,6 +94,16 @@
     },
     "articles": [
       {
+        "title": "Zinedine Zidane sounds the alarm for Real Madrid with Kylian Mbappe update: \"It's not looking good\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/26/zinedine-zidane-sounds-the-alarm-for-real-madrid-with-kylian-mbappe-update-it-s-not-looking-good.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Mbappé scores the first goal of the Zidane era... and leaves injured",
+        "url": "https://www.marca.com/en/football/2026/09/25/mbappe-scores-the-first-goal-of-the-zidane-and-leaves-injured.html",
+        "source": "Marca"
+      },
+      {
         "title": "Roberto Carlos explains his ruin: \"They left my account at zero... I lost 99% of what I earned in football\"",
         "url": "https://www.marca.com/en/football/2026/09/25/roberto-carlos-explains-his-ruin-they-left-my-account-at-zero-i-lost-99-of-what-i-earned-in-football.html",
         "source": "Marca"
@@ -102,19 +117,9 @@
         "title": "'Rodri: \"Real Madrid went all out to sign me\"'",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/23/rodri-real-madrid-went-all-out-to-sign-me.html",
         "source": "Marca"
-      },
-      {
-        "title": "AI Already Knows Who Will Win LaLiga: Here’s How Real Madrid and Barcelona Stand After Seven Matchdays",
-        "url": "https://www.marca.com/en/football/2026/09/23/ai-already-knows-who-will-win-laliga-here-s-how-real-madrid-and-barcelona-stand-after-seven-matchdays.html",
-        "source": "Marca"
-      },
-      {
-        "title": "The devastating statistic that sums up Real Madrid",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/21/the-devastating-statistic-that-sums-up-real-madrid.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-25T15:23:52.244028+00:00"
+    "fetched_at": "2026-09-26T05:33:43.411990+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -133,13 +138,13 @@
     },
     "articles": [
       {
-        "title": "Russell takes pole in Baku as Antonelli hits wall",
-        "url": "https://www.bbc.com/sport/formula1/articles/cmde0wl6rk0ko",
+        "title": "Antonelli 'comes back to earth' with qualifying crash",
+        "url": "https://www.bbc.com/sport/formula1/articles/cqd0885k3d28o",
         "source": "BBC Sport F1"
       },
       {
-        "title": "McLaren miles off pace in Baku practice - Norris",
-        "url": "https://www.bbc.com/sport/formula1/articles/cmwyzqn4w20qo",
+        "title": "Russell takes pole in Baku as Antonelli hits wall",
+        "url": "https://www.bbc.com/sport/formula1/articles/cmde0wl6rk0ko",
         "source": "BBC Sport F1"
       },
       {
@@ -153,11 +158,11 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "Why is Azerbaijan Grand Prix taking place on a Saturday?",
-        "url": "https://www.bbc.com/sport/formula1/articles/c3y0z7wvdel1o",
+        "title": "McLaren miles off pace in Baku practice - Norris",
+        "url": "https://www.bbc.com/sport/formula1/articles/cmwyzqn4w20qo",
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-25T15:23:53.141100+00:00"
+    "fetched_at": "2026-09-26T05:33:44.597012+00:00"
   }
 }

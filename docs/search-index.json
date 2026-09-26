@@ -1,122 +1,206 @@
 [
   {
+    "date": "2026-09-26",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Harmanci thanks Prountzos for Cyprus Forum solidarity",
+    "snippet": "Mehmet Harmanci on Friday thanked Nicosia Mayor Charalambos Prountzos for withdrawing from next week’s Cyprus Forum in solidarity with him, saying it was Prountzos’ decision, rathe...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Cyprus Olympic House marks 20 years since opening [Επικαιρότητα]",
+    "snippet": "Cyprus’ Olympic House marks 20 years since its official opening on Saturday, two decades after the building was inaugurated as a permanent home for the island’s...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Man, 79, dies after Nicosia road collision [Επικαιρότητα]",
+    "snippet": "A 79-year-old man who was critically injured in a road collision in Nicosia earlier this month died from his injuries on Friday. The victim was named by police...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. AMD joins the trillion-dollar club as AI demand fuels rally [Επικαιρότητα]",
+    "snippet": "Advanced Micro Devices (AMD) made financial history earlier this week when its market capitalisation soared past $1 trillion for the first time on Monday, firml...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Το PSI Foundation βρίσκει τον δρόμο του για τη Λευκωσία, αλλάζοντας τον τρόπο που συναντάμε την τέχνη [Επικαιρότητα]",
+    "snippet": "Το PSI Foundation κάνει για πρώτη φορά στάση στην πρωτεύουσα και επιλέγει να συστηθεί, όχι μέσα από έναν ακόμη εκθεσιακό χώρο, αλλά μέσα στην ίδια την πόλη. Μπο...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Κοινοί βηματισμοί και δράσεις με την Αίγυπτο [Ο Φάκελός μου]",
+    "snippet": "ΜΙΑ σημαντική αναφορά γίνεται στην κοινή δήλωση, που υπέγραψαν την περασμένη Τρίτη οι υπουργοί Αμυνας Κυπριακής Δημοκρατίας, Ελλάδος και Αιγύπτου και δεν πρέπει...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🌍 Διεθνή",
+    "title": "1. OpenAI bots meddled with multiple US government agency sites [Διεθνή]",
+    "snippet": "OpenAI said its bots accessed public data from the US Census and the Securities and Exchange Commission, which regulates US stock markets....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🌍 Διεθνή",
+    "title": "2. Iran offers US deal to reopen Strait of Hormuz in seven days [Διεθνή]",
+    "snippet": "Asked about the Iranian proposal, a US official told the BBC \"constructive discussions\" were taking place through mediators....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🌍 Διεθνή",
+    "title": "3. Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says [Διεθνή]",
+    "snippet": "Such strikes aim to disrupt \"people's ability to stay connected, study, work\", says Ukraine's president....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🌍 Διεθνή",
+    "title": "4. South African white genocide does not exist, new ambassador to US tells BBC [Διεθνή]",
+    "snippet": "Roelf Meyer tells the BBC that being a white Afrikaner gives him legitimacy to challenge Trump's claim of a genocide....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "🌍 Διεθνή",
+    "title": "5. Inside the FBI hack: Agents fearful and angry after 'dangerous' data breach [Διεθνή]",
+    "snippet": "Current and former agents speak to the BBC about the devastating impact of the FBI hack....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-26",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-25",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Σύνοδος Κορυφής Τραμπ - Σι Τζινπίνγκ στον Λευκό Οίκο: Στρατηγική αποκλιμάκωσης σε δασμούς και τεχνολογία — Εύθραυστη ισορροπία μεταξύ ΗΠΑ και Κίνας εν μέσω παγκόσμιων αναταράξεων [Επιβεβαιωμένο]",
     "snippet": "Σε μια από τις πιο κρίσιμες γεωπολιτικές συναντήσεις της δεκαετίας, ο Πρόεδρος των Ηνωμένων Πολιτειών Ντόναλντ Τραμπ και ο Πρόεδρος της Κίνας Σι Τζινπίνγκ ολοκλήρωσαν στον Λευκό Οί...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-25.html#top-story"
   },
   {
     "date": "2026-09-25",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Επιχειρηματικότητα & Τεχνολογία: Η Logicom αναδιαρθρώνει την κορυφαία ηγετική της ομάδα — Ο κ. Παπαχριστοφόρου αναλαμβάνει νέος CEO [Επιβεβαιωμένο]",
     "snippet": "Σε μια στρατηγική κίνηση ενίσχυσης της διοικητικής της πυραμίδας προχωρά ο κυπριακός τεχνολογικός όμιλος Logicom, ανακοινώνοντας ότι ο κ. Ανθούλης Παπαχριστοφόρ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-25.html#cyprus"
   },
   {
     "date": "2026-09-25",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Ενέργεια & Ακρίβεια: Ιστορικό ρεκόρ στα καύσιμα κίνησης στην Κύπρο — Το ντίζελ αγγίζει τα €1,997 με πάνω από 100 πρατήρια να υπερβαίνουν τα €2 [Επιβεβαιωμένο]",
     "snippet": "Σε επίπεδα ιστορικού ρεκόρ εκτινάχθηκαν οι τιμές λιανικής του πετρελαίου κίνησης στην κυπριακή αγορά, με τη μέση τιμή να διαμορφώνεται στα €1,997 το λίτρο και π...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-25.html#cyprus"
   },
   {
     "date": "2026-09-25",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Υγεία & Στρατηγικές Επενδύσεις: Εγκαίνια του Hadassah στη Λεμεσό παρουσία του Προέδρου Χριστοδουλίδη, του Ισαάκ Χέρτζογκ και του Άδωνη Γεωργιάδη [Επιβεβαιωμένο]",
     "snippet": "Παρουσία κορυφαίων πολιτειακών αξιωματούχων πραγματοποιήθηκαν τα επίσημα εγκαίνια του νέου υπερσύγχρονου ιατρικού κέντρου Hadassah Health Park στη Λεμεσό. Στην...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-25.html#cyprus"
   },
   {
     "date": "2026-09-25",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Πολεοδομική Ασφάλεια: Συναγερμός στη Λεμεσό μετά από νέα κατάρρευση μπαλκονιού — Στο μικροσκόπιο 60 επικίνδυνες οικοδομές που χρήζουν εκκένωσης [Επιβεβαιωμένο]",
     "snippet": "Έκτακτο καμπανάκι κινδύνου κρούουν οι δημοτικές και τεχνικές αρχές της Λεμεσού μετά από νέο περιστατικό αποκόλλησης και πτώσης μπαλκονιού σε παλαιά πολυκατοικία...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-25.html#cyprus"
   },
   {
     "date": "2026-09-25",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Ενεργειακός Σχεδιασμός: Η ExxonMobil προγραμματίζει ερευνητική γεώτρηση στο Ιόνιο στις αρχές του 2027 ενισχύοντας τη στρατηγική αυτάρκειας [Επιβεβαιωμένο]",
     "snippet": "Στην οριστικοποίηση του χρονοδιαγράμματος για την πρώτη της ερευνητική γεώτρηση υδρογονανθράκων στο Ιόνιο Πέλαγος προχωρά ο αμερικανικός ενεργειακός κολοσσός Ex...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-25.html#cyprus"
   },
   {
     "date": "2026-09-25",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ανώτατη Εκπαίδευση & Καινοτομία: Το Πανεπιστήμιο Λεμεσού ενισχύει τη διεθνή ακαδημαϊκή συνεργασία με το Symbiosis International University [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Σε στρατηγική συμφωνία ακαδημαϊκής και ερευνητικής συνεργασίας προχώρησε το Πανεπιστήμιο Λεμεσού (University of Limassol - UoL) με το διακεκριμένο ινδικό πανεπι...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-25.html#cyprus"
   },
   {
     "date": "2026-09-25",
     "section": "🌍 Διεθνή",
     "title": "1. Διπλωματία & Μέση Ανατολή: Δραματική ένταση στη Γενική Συνέλευση του ΟΗΕ — Μαζική αποχώρηση διπλωματών κατά την ομιλία Νετανιάχου [Επιβεβαιωμένο]",
     "snippet": "Σε κλίμα ακραίας πόλωσης και διπλωματικής έντασης πραγματοποιήθηκε η ομιλία του Πρωθυπουργού του Ισραήλ Μπενιαμίν Νετανιάχου στην 81η Γενική Συνέλευση των Ηνωμέ...",
-    "url": "#world"
+    "url": "briefings/2026-09-25.html#world"
   },
   {
     "date": "2026-09-25",
     "section": "🌍 Διεθνή",
     "title": "2. Ευρωπαϊκή Οικονομία & Πολιτική: Νέα πολιτική κρίση στη Γαλλία — Η μάχη του προϋπολογισμού απειλεί με πτώση την κυβέρνηση [Επιβεβαιωμένο]",
     "snippet": "Σε τροχιά μείζονος πολιτικής και δημοσιονομικής δοκιμασίας εισέρχεται η Γαλλία, καθώς η κοινοβουλευτική αναμέτρηση για τον αυστηρό προϋπολογισμό λιτότητας απειλ...",
-    "url": "#world"
+    "url": "briefings/2026-09-25.html#world"
   },
   {
     "date": "2026-09-25",
     "section": "🌍 Διεθνή",
     "title": "3. Τεχνητή Νοημοσύνη & Hardware: Η Meta αποκαλύπτει τα VR/AR Glasses των $1.299 και το έξυπνο μενταγιόν Muse Charm [Επιβεβαιωμένο]",
     "snippet": "Σε μια τολμηρή κίνηση αναδιαμόρφωσης του τοπίου των καταναλωτικών συσκευών τεχνητής νοημοσύνης, ο Mark Zuckerberg ανακοίνωσε το επίσημο λανσάρισμα των νέων έξυπ...",
-    "url": "#world"
+    "url": "briefings/2026-09-25.html#world"
   },
   {
     "date": "2026-09-25",
     "section": "🌍 Διεθνή",
     "title": "4. Κεντρικές Τράπεζες & Αποθεματικά: Ευρωπαϊκές τράπεζες αποσύρουν τα αποθέματα χρυσού τους από τις ΗΠΑ [Επιβεβαιωμένο]",
     "snippet": "Σε μια αξιοσημείωτη στροφή διαχείρισης στρατηγικού ρίσκου, ευρωπαϊκές κεντρικές και εμπορικές τράπεζες επιταχύνουν τον επαναπατρισμό σημαντικών ποσοτήτων αποθεμ...",
-    "url": "#world"
+    "url": "briefings/2026-09-25.html#world"
   },
   {
     "date": "2026-09-25",
     "section": "🌍 Διεθνή",
     "title": "5. Κυβερνοασφάλεια & Διπλωματία: Η Αυστραλία αποκαλύπτει κυβερνοεπίθεση στην OpenAI στο βήμα του ΟΗΕ [Επιβεβαιωμένο]",
     "snippet": "Σε μια άνευ προηγουμένου διπλωματική κίνηση, η κυβέρνηση της Αυστραλίας επέλεξε το ανώτατο βήμα των Ηνωμένων Εθνών για να αποκαλύψει λεπτομέρειες εξελιγμένης κυ...",
-    "url": "#world"
+    "url": "briefings/2026-09-25.html#world"
   },
   {
     "date": "2026-09-25",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-25.html#deadlines"
   },
   {
     "date": "2026-09-25",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026: Κατάθεση προτάσεων στο Σχέδιο Ψηφιακής Αναβάθμισης ΜμΕ του Υπουργείου Ενέργειας, Εμπορίου και Βιομηχανίας (MECI Funding Apps)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-25.html#deadlines"
   },
   {
     "date": "2026-09-25",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμεσού).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Εμπρόθεσμη εξόφληση δημοτικών τελών σκυβάλων και επαγγελματικής άδειας μέσω της επίσημης διαδικτυακής πύλης του Δήμου Λεμεσού (Δήμος Λεμε...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-25.html#deadlines"
   },
   {
     "date": "2026-09-25",
     "section": "📅 Προθεσμίες",
     "title": "Άμεσα: Σύνδεση στην πύλη Tax For All (TFA) του Τμήματος Φορολογίας (Tax For All) για επιβεβαίωση και καταχώριση τραπεζικού λογαριασμού IBAN για άμεση πίστωση επιστροφών φόρου.",
     "snippet": "Άμεσα: Σύνδεση στην πύλη Tax For All (TFA) του Τμήματος Φορολογίας (Tax For All) για επιβεβαίωση και καταχώριση τραπεζικού λογαριασμού IBAN για άμεση πίστωση επ...",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-25.html#deadlines"
   },
   {
     "date": "2026-09-25",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-25.html#top-story"
   },
   {
     "date": "2026-09-24",
