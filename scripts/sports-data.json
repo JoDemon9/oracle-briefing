@@ -14,6 +14,16 @@
     },
     "articles": [
       {
+        "title": "(Bίντεο) Κωνσταντίνου στο Kerkida.net: \"Θέλω να τα δίνω όλα για την ομάδα μου\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/binteo-konstantinoy-sto-kerkidanet-thelo-na-ta-dino-ola-gia-tin-omada-moy",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Κοντά στον...περσινό",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/konta-stonpersino",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Η ευκαιρία...",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-eykairia",
         "source": "Kerkida.net"
@@ -27,14 +37,9 @@
         "title": "Περισσότερες λύσεις με την επανέναρξη",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/perissoteres-lyseis-me-tin-epanenarxi",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Ομόνοια/Μετά τον Μαυρουδή, ο Βίκτωρος",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/omonoiameta-ton-mayroydi-o-biktoros",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-26T05:33:40.799834+00:00"
+    "fetched_at": "2026-09-26T09:27:28.079483+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -76,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-26T05:33:42.481345+00:00"
+    "fetched_at": "2026-09-26T09:27:29.241399+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -119,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-26T05:33:43.411990+00:00"
+    "fetched_at": "2026-09-26T09:27:30.089497+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -148,6 +153,11 @@
         "source": "BBC Sport F1"
       },
       {
+        "title": "Chadwick says driving F1 car 'top of bucket list'",
+        "url": "https://www.bbc.com/sport/formula1/articles/ck5ywrn20z3vo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "The moment Antonelli knew he had been transformed as an F1 driver",
         "url": "https://www.bbc.com/sport/formula1/articles/cmpq03x9x27ro",
         "source": "BBC Sport F1"
@@ -156,13 +166,8 @@
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "McLaren miles off pace in Baku practice - Norris",
-        "url": "https://www.bbc.com/sport/formula1/articles/cmwyzqn4w20qo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-26T05:33:44.597012+00:00"
+    "fetched_at": "2026-09-26T09:27:31.120118+00:00"
   }
 }
