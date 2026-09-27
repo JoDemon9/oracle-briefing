@@ -14,6 +14,16 @@
     },
     "articles": [
       {
+        "title": "Ξεχώρισε...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xehorise-1",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Θα χρειαστεί...διαχείριση",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tha-hreiasteidiaheirisi",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Αλλαγή ο Μπάλκοβετς",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/allagi-o-mpalkobets",
         "source": "Kerkida.net"
@@ -27,19 +37,9 @@
         "title": "Βίκτωρος... τριφύλλι!",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/biktoros-trifylli",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Επίσημο/Στα \"πράσινα\" ο Βίκτωρος!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/episimosta-prasina-o-biktoros",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Παίρνουν σειρά οι άλλοι... δύο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/pairnoyn-seira-oi-alloi-dyo",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-26T18:05:38.076869+00:00"
+    "fetched_at": "2026-09-27T08:15:01.875425+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -81,7 +81,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-26T18:05:39.570181+00:00"
+    "fetched_at": "2026-09-27T08:15:02.909151+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -124,7 +124,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-26T18:05:40.783007+00:00"
+    "fetched_at": "2026-09-27T08:15:03.551011+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -168,6 +168,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-26T18:05:42.168093+00:00"
+    "fetched_at": "2026-09-27T08:15:04.581985+00:00"
   }
 }

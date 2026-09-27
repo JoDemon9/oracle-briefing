@@ -1486,5 +1486,41 @@
   "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c8e5/live/83c97ed0-b9ac-11f1-8a1a-0176f978c211.png",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/26/trump-rejects-iranian-proposal-to-open-hormuz-and-end-fighting": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/iran-web.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/09/26/erhurman-meets-guterres-denies-rejecting-tripartite-meeting": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/3238dc35-814d-4a55-8237-63c8029bde83.jpeg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/27/ecb-connects-payment-system-to-blockchain-with-launch-of-pontes-platform": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/07/euro-cash-digital-euro-ecb-economy-banking.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/27/our-view-candidates-already-eyeing-the-presidency": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/annita-1.jpg",
+    "category": "ΕΠΕΝΔΥΣΕΙΣ & TECH"
+  },
+  "https://cyprus-mail.com/2026/09/27/tales-from-the-coffeeshop-such-ingratitude-to-diko-and-the-papadopoulos-clan": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/The-president-bids-farewell-to-yet-another-UN-secretary-general-defated-by-the-Cyprus-problem.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/27/five-arrested-in-overnight-police-operations-6": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2024/06/police-car-02.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c2f6/live/86e0e040-ba15-11f1-851b-7de4b36a82e3.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c6pwl9g9ne1lo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6c63/live/9ec92970-b8de-11f1-b1d1-571ed4d7ff2c.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c3grvv7p81lqo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/d390/live/1c1bd500-ba1d-11f1-9108-e745779fe632.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }
