@@ -27,6 +27,21 @@
     },
     "articles": [
       {
+        "title": "Η \"αποκάλυψη\" του...καλοκαιριού",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apokalypsi-toykalokairioy",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Το \"αντίο\" του Βίκτωρος: \"'Όμορφες αναμνήσεις και σημαντικές εμπειρίες\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/antio-toy-biktoros-omorfes-anamniseis-kai-simantikes-empeiries",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Παναγιώτης-Μουαμέρ!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/panagiotis-moyamer",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Ξεχώρισε...",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xehorise-1",
         "source": "Kerkida.net"
@@ -35,24 +50,9 @@
         "title": "Θα χρειαστεί...διαχείριση",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tha-hreiasteidiaheirisi",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Αλλαγή ο Μπάλκοβετς",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/allagi-o-mpalkobets",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "\"Δεν μπορούσα να κοιμηθώ όταν έμαθα για το ενδιαφέρον της Ομόνοιας, θέλω το πρώτο μου πρωτάθλημα\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/den-mporoysa-na-koimitho-thelo-proto-moy-protathlima",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Βίκτωρος... τριφύλλι!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/biktoros-trifylli",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-27T09:14:02.762226+00:00"
+    "fetched_at": "2026-09-27T15:13:54.630989+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -107,7 +107,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-27T09:14:03.826111+00:00"
+    "fetched_at": "2026-09-27T15:13:56.237951+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -162,7 +162,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-27T09:14:04.948792+00:00"
+    "fetched_at": "2026-09-27T15:13:58.013651+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -191,6 +191,11 @@
     },
     "articles": [
       {
+        "title": "Horner a distraction for Ferrari says Vasseur",
+        "url": "https://www.bbc.com/sport/formula1/articles/cvwyz791096jo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "'Mr Saturday' Russell 'comes through other side after real tough period'",
         "url": "https://www.bbc.com/sport/formula1/articles/ckly558q6jeqo",
         "source": "BBC Sport F1"
@@ -209,13 +214,8 @@
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Antonelli 'comes back to earth' with qualifying crash",
-        "url": "https://www.bbc.com/sport/formula1/articles/cqd0885k3d28o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-27T09:14:06.289733+00:00"
+    "fetched_at": "2026-09-27T15:14:02.849699+00:00"
   }
 }
