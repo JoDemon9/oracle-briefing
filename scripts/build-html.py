@@ -38,16 +38,30 @@ CACHE_FILE = os.path.join(os.path.dirname(__file__), 'image_cache.json')
 SSL_CTX = ssl._create_unverified_context()
 
 TOPIC_FALLBACKS = {
+    'shipping_tanker': 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',
+    'interconnector_grid': 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80',
+    'un_diplomacy_flags': 'https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=800&q=80',
+    'un_assembly': 'https://images.unsplash.com/photo-1575320181282-9afab399332c?w=800&q=80',
+    'bilateral_handshake': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
+    'diplomacy_capitol': 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
+    'police_patrol_night': 'https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?w=800&q=80',
+    'sports_running': 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80',
+    'real_estate_modern': 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
+    'housing_protest': 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=800&q=80',
+    'ai_defense': 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
+    'vatican_pope': 'https://images.unsplash.com/photo-1520645521318-f03a712f0e67?w=800&q=80',
+    'cuba_havana': 'https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80',
+    'oil_gas_commodities': 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80',
     'school': 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
     'employment': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
     'economy': 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80',
-    'energy': 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80',
+    'energy': 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80',
     'banking': 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=800&q=80',
     'shipwreck': 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
     'shipping': 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',
     'politics': 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
-    'housing': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
-    'diplomacy': 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
+    'housing': 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
+    'diplomacy': 'https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=800&q=80',
     'climate': 'https://images.unsplash.com/photo-1504370805625-d32c54b16100?w=800&q=80',
     'social': 'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80',
     'technology': 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
@@ -58,12 +72,50 @@ TOPIC_FALLBACKS = {
     'general': 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80'
 }
 
+BAD_IMAGE_TOKENS = [
+    'googleusercontent.com', 'gstatic.com', 'default_avatar', 'placeholder',
+    'blank.gif', 'favicon', 'logo-white', 'logo-black', 'defaultshare',
+    'shareimage', 'share.jpg', 'meta-photo', 'meta_img', 'meta_photo',
+    'euronews-og', 'bazaraki.a', 'cnbc_versant_share', 'versant_share',
+    'apple-touch-icon', 'site-icon', 'ximonas', 'sm_ec_logo', 'io-default-img',
+    'the-ap-default-image', 'meta-image', 'default_image', 'default-image',
+    'logo-who', 'tc-logo'
+]
+
 
 def is_valid_content_image(img_url):
     if not img_url or not img_url.startswith('http'):
         return False
-    bad_tokens = ['googleusercontent.com', 'gstatic.com', 'default_avatar', 'placeholder', 'blank.gif', 'favicon', 'logo-white', 'logo-black']
-    return not any(b in img_url.lower() for b in bad_tokens)
+    url_lower = img_url.lower()
+    if any(b in url_lower for b in BAD_IMAGE_TOKENS):
+        return False
+    if re.search(r'[/_\-\.]logo[s]?[\.0-9_\-]', url_lower) or url_lower.endswith('logo.png') or url_lower.endswith('logo.jpg'):
+        return False
+    return True
+
+
+def is_generic_or_section_url(url):
+    if not url or not url.startswith('http'):
+        return True
+    try:
+        from urllib.parse import urlparse
+        p = urlparse(url)
+        path = p.path.strip('/')
+        if not path:
+            return True
+        parts = [seg.lower() for seg in path.split('/') if seg]
+        generic_single_parts = {
+            'news', 'world', 'business', 'energy', 'economy', 'politics',
+            'kipros', 'cyprus', 'en', 'el', 'gr', 'opinion', 'top-stories',
+            'latest'
+        }
+        if len(parts) == 1 and (parts[0] in generic_single_parts or not re.search(r'(\d+|\.html?)$', parts[0])):
+            return True
+        if parts in (['en', 'world'], ['en', 'news'], ['category', 'security'], ['studies', 'student-welfare', 'housing']):
+            return True
+    except Exception:
+        pass
+    return False
 
 
 def clean_plain(s):
@@ -241,66 +293,126 @@ def save_image_cache(cache):
         pass
 
 
-def resolve_image(url, title, default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
+def match_topic_fallback(title, content_text='', default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
+    # Check title first (headline is primary topic), then text if title didn't match specific topic
+    for text_to_check in [title.lower(), (title + ' ' + content_text).lower()]:
+        # 1. Strait of Hormuz / Tankers / Persian Gulf
+        if any(k in text_to_check for k in ['ορμούζ', 'στενά', 'δεξαμενόπλοι', 'τάνκερ', 'περσικ', 'hormuz']):
+            return TOPIC_FALLBACKS['shipping_tanker'], 'ΓΕΩΠΟΛΙΤΙΚΗ & ΕΝΕΡΓΕΙΑ'
+
+        # 2. Interconnector / Power cables
+        if any(k in text_to_check for k in ['interconnector', 'καλώδι', 'διασύνδεσ', 'υποθαλάσσι', 'βυθομετρ']):
+            return TOPIC_FALLBACKS['interconnector_grid'], 'ΕΝΕΡΓΕΙΑ & ΥΠΟΔΟΜΕΣ'
+
+        # 3. Running / Marathon / Coastal athletics
+        if any(k in text_to_check for k in ['αγώνα δρόμου', 'δρομείς', 'κοεας', 'αμαθούντα', 'μαραθώνι', 'αθλητισμ']):
+            return TOPIC_FALLBACKS['sports_running'], 'ΚΟΙΝΩΝΙΑ & ΑΘΛΗΤΙΣΜΟΣ'
+
+        # 4. Police / Night operations / Traffic checks
+        if any(k in text_to_check for k in ['αστυνομ', 'εξώδικ', 'τροχαί', 'μπλόκ', 'αλκοόλ', 'ναρκωτικ', 'narcotest', 'πρόστιμ']):
+            return TOPIC_FALLBACKS['police_patrol_night'], 'ΔΗΜΟΣΙΑ ΤΑΞΗ'
+
+        # 5. Housing protests / Evictions / Madrid / Vultures
+        if any(k in text_to_check for k in ['vultures', 'maricarmen', 'διαδηλώσ', 'διαμαρτυρ', 'έξωση', 'εξώσεις', 'μαδρίτη', 'funds ακινήτων']):
+            return TOPIC_FALLBACKS['housing_protest'], 'ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ'
+
+        # 6. Real estate / Limassol apartments / Bazaraki radar
+        if any(k in text_to_check for k in ['ακίνητ', 'ενοίκι', 'διαμέρισμ', 'κατοικί', 'στεγαστικ', 'αγορά ακινήτων', 'αγία φύλα', 'κάψαλος', 'νεάπολη', 'ύψωνα', 'bazaraki', '2υ/δ']):
+            return TOPIC_FALLBACKS['real_estate_modern'], 'Ο ΦΑΚΕΛΟΣ ΜΟΥ'
+
+        # 7. AI & Defense / Anthropic / Pentagon / Military AI
+        if any(k in text_to_check for k in ['anthropic', 'πεντάγων', 'τεχνητή νοημοσύνη', 'claude', 'στρατιωτική χρήση ai', 'ai safety']):
+            return TOPIC_FALLBACKS['ai_defense'], 'ΤΕΧΝΟΛΟΓΙΑ & ΑΜΥΝΑ'
+
+        # 8. Pope / Catholic church / Paris mass / Vatican
+        if any(k in text_to_check for k in ['πάπας', 'πάπα', 'λειτουργία', 'πιστοί', 'λούρδη', 'βατικαν', 'αποστολική']):
+            return TOPIC_FALLBACKS['vatican_pope'], 'ΔΙΕΘΝΗ & ΚΟΙΝΩΝΙΑ'
+
+        # 9. Cuba / Havana / Latin America
+        if any(k in text_to_check for k in ['κούβα', 'κουβαν', 'αβάνα', 'λατινική αμερική', 'cuba', 'ροδρίγκες']):
+            return TOPIC_FALLBACKS['cuba_havana'], 'ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ'
+
+        # 10. Cyprus Problem / Holguin / Guterres / Erhurman
+        if any(k in text_to_check for k in ['ολγκίν', 'holguin', 'κυπριακό', 'έρχιουρμαν', 'γκουτέρες', 'τατάρ', 'νεκρή ζώνη']):
+            return TOPIC_FALLBACKS['diplomacy_capitol'], 'ΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
+
+        # 11. UN General Assembly Speech / Lavrov
+        if any(k in text_to_check for k in ['λαβρόφ', 'lavrov', 'ομιλία λαβρόφ']):
+            return TOPIC_FALLBACKS['un_assembly'], 'ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
+
+        # 12. UN Bilateral contacts / Kombos / India / Indonesia
+        if any(k in text_to_check for k in ['κόμπος', 'ινδία', 'ινδονησία', 'διμερείς συμφωνίες', 'επαφών του υπεξ']):
+            return TOPIC_FALLBACKS['bilateral_handshake'], 'ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ & ΟΗΕ'
+
+        # 13. General UN / Diplomacy
+        if any(k in text_to_check for k in ['γενική συνέλευση', 'οηε', 'διπλωματ', 'χριστοδουλίδ']):
+            return TOPIC_FALLBACKS['un_diplomacy_flags'], 'ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
+
+        # 14. Energy & Oil markets
+        if any(k in text_to_check for k in ['καύσιμ', 'πετρέλαι', 'βενζίν', 'brent', 'wti', 'αέριο', 'ενέργει', 'οπεκ']):
+            return TOPIC_FALLBACKS['oil_gas_commodities'], 'ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ'
+
+        # 15. Banking & Financial markets
+        if any(k in text_to_check for k in ['κεφαλαιαγορ', 'τράπεζ', 'boch', 'επιτόκι', 'euribor', 'χρηματοπιστωτ', 'dbrs', 'δημοσιονομ']):
+            return TOPIC_FALLBACKS['banking'], 'ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ'
+
+        # 16. Education / Schools
+        if any(k in text_to_check for k in ['σχολ', 'μαθητ', 'υποδομ', 'ύψωνα', 'παιδεία', 'εκπαίδευσ']):
+            return TOPIC_FALLBACKS['school'], 'ΠΑΙΔΕΙΑ & ΥΠΟΔΟΜΕΣ'
+
+        # 17. General shipping / maritime
+        if any(k in text_to_check for k in ['ναυτικ', 'πλοί', 'ναυτιλ', 'σκάφος', 'ναυάγ', 'λιμάν']):
+            return TOPIC_FALLBACKS['shipping_tanker'], 'ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ'
+
+        # 18. Justice / Legal / ICJ
+        if any(k in text_to_check for k in ['icj', 'χάγη', 'δικαστήρι', 'γενοκτον', 'δικαιοσύν']):
+            return TOPIC_FALLBACKS['justice'], 'ΔΙΚΑΙΟΣΥΝΗ'
+
+        # 19. Aviation
+        if any(k in text_to_check for k in ['amazon', 'boeing', 'μαϊάμι', 'αεροπορικ', 'αεροδρόμι', 'πτήσ']):
+            return TOPIC_FALLBACKS['aviation'], 'ΑΕΡΟΠΟΡΙΑ'
+
+        # 20. Climate
+        if any(k in text_to_check for k in ['κλίμα', 'θερμότερ', 'copernicus', 'καύσων', 'περιβάλλον', 'el niño']):
+            return TOPIC_FALLBACKS['climate'], 'ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ'
+
+        # 21. Social / Family policy
+        if any(k in text_to_check for k in ['τέκν', 'οικογένει', 'επίδομα', 'κοινωνικ']):
+            return TOPIC_FALLBACKS['social'], 'ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ'
+
+        # 22. Germany
+        if any(k in text_to_check for k in ['afd', 'γερμανί', 'merz', 'σαξονία']):
+            return TOPIC_FALLBACKS['germany'], 'ΓΕΡΜΑΝΙΑ'
+
+        # 23. Volcano
+        if any(k in text_to_check for k in ['krakatau', 'ηφαίστει', 'ινδονησία']):
+            return TOPIC_FALLBACKS['volcano'], 'ΑΣΙΑ'
+
+        # 24. Employment
+        if any(k in text_to_check for k in ['απασχόληση', 'εργασί', 'cystat', 'μισθ']):
+            return TOPIC_FALLBACKS['employment'], 'ΟΙΚΟΝΟΜΙΑ'
+
+        # 25. Politics & Institutions
+        if any(k in text_to_check for k in ['λιμουζίν', 'βουλ', 'διορισμ', 'θεσμο', 'πολιτικ']):
+            return TOPIC_FALLBACKS['politics'], 'ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ'
+
+    return TOPIC_FALLBACKS['general'], default_category
+
+
+def resolve_image(url, title, default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ', content_text=''):
+    fallback_img, matched_cat = match_topic_fallback(title, content_text, default_category)
+    category = matched_cat or default_category
+
+    # If the URL is generic or section level, DO NOT use cached domain images and DO NOT scrape root og:image
+    if is_generic_or_section_url(url):
+        return fallback_img, category
+
+    # Specific deep article URL: check cache
     cache = load_image_cache()
     if url in cache and is_valid_content_image(cache[url].get('image')):
-        return cache[url]['image'], cache[url].get('category', default_category)
+        return cache[url]['image'], cache[url].get('category', category)
 
-    # Keyword fallback selection
-    t_lower = (title + ' ' + url).lower()
-    fallback = TOPIC_FALLBACKS['general']
-    category = default_category
-
-    if any(k in t_lower for k in ['καύσιμ', 'πετρέλαι', 'βενζίν', 'brent', 'wti', 'αέριο', 'ενέργει', 'interconnector']):
-        fallback = TOPIC_FALLBACKS['energy']
-        category = 'ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ'
-    elif any(k in t_lower for k in ['χέρτζογκ', 'ισραήλ', 'ιράν', 'μέση ανατολή', 'κόλπο', 'οηε', 'διπλωματ', 'χριστοδουλίδ', 'ολγκίν', 'κυπριακό']):
-        fallback = TOPIC_FALLBACKS['diplomacy']
-        category = 'ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
-    elif any(k in t_lower for k in ['κεφαλαιαγορ', 'τράπεζ', 'boch', 'επιτόκι', 'euribor', 'χρηματοπιστωτ', 'dbrs', 'οίκος', 'δημοσιονομ']):
-        fallback = TOPIC_FALLBACKS['banking']
-        category = 'ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ'
-    elif any(k in t_lower for k in ['κλίμα', 'θερμότερ', 'copernicus', 'καύσων', 'περιβάλλον', 'el niño']):
-        fallback = TOPIC_FALLBACKS['climate']
-        category = 'ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ'
-    elif any(k in t_lower for k in ['τέκν', 'οικογένει', 'επίδομα', 'κοινωνικ']):
-        fallback = TOPIC_FALLBACKS['social']
-        category = 'ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ'
-    elif any(k in t_lower for k in ['forum', 'future realized', 'τεχνολογ', 'επενδύσ', 'ey', 'data center']):
-        fallback = TOPIC_FALLBACKS['technology']
-        category = 'ΕΠΕΝΔΥΣΕΙΣ & TECH'
-    elif any(k in t_lower for k in ['ναυτικ', 'πλοί', 'ναυτιλ', 'σκάφος', 'ναυάγ', 'κερύνει', 'aster']):
-        fallback = TOPIC_FALLBACKS['shipping']
-        category = 'ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ'
-    elif any(k in t_lower for k in ['σχολ', 'μαθητ', 'υποδομ', 'ύψωνα', 'παιδεία']):
-        fallback = TOPIC_FALLBACKS['school']
-        category = 'ΠΑΙΔΕΙΑ & ΥΠΟΔΟΜΕΣ'
-    elif any(k in t_lower for k in ['απασχόληση', 'εργασί', 'cystat', 'μισθ']):
-        fallback = TOPIC_FALLBACKS['employment']
-        category = 'ΟΙΚΟΝΟΜΙΑ'
-    elif any(k in t_lower for k in ['λιμουζίν', 'βουλ', 'διορισμ', 'θεσμο', 'πολιτικ']):
-        fallback = TOPIC_FALLBACKS['politics']
-        category = 'ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ'
-    elif any(k in t_lower for k in ['ενοίκι', 'στέγη', 'τεπακ', 'ακίνητ', 'λεμεσ', 'κεδιπεσ']):
-        fallback = TOPIC_FALLBACKS['housing']
-        category = 'Ο ΦΑΚΕΛΟΣ ΜΟΥ'
-    elif any(k in t_lower for k in ['zelenskyy', 'putin', 'ουκραν', 'κίεβο', 'σιβηρία']):
-        fallback = TOPIC_FALLBACKS['diplomacy']
-        category = 'ΔΙΕΘΝΗ'
-    elif any(k in t_lower for k in ['afd', 'γερμανί', 'merz', 'σαξονία']):
-        fallback = TOPIC_FALLBACKS['germany']
-        category = 'ΓΕΡΜΑΝΙΑ'
-    elif any(k in t_lower for k in ['krakatau', 'ηφαίστει', 'ινδονησία']):
-        fallback = TOPIC_FALLBACKS['volcano']
-        category = 'ΑΣΙΑ'
-    elif any(k in t_lower for k in ['amazon', 'boeing', 'μαϊάμι', 'αεροπορικ']):
-        fallback = TOPIC_FALLBACKS['aviation']
-        category = 'ΗΠΑ'
-    elif any(k in t_lower for k in ['icj', 'χάγη', 'δικαστήρι', 'γενοκτον', 'δικαιοσύν']):
-        fallback = TOPIC_FALLBACKS['justice']
-        category = 'ΔΙΚΑΙΟΣΥΝΗ'
-
-    # Try fetching og:image live with short timeout
+    # Try fetching og:image from specific article page
     og_img = None
     if url.startswith('http') and 'news.google.com' not in url:
         try:
@@ -325,9 +437,12 @@ def resolve_image(url, title, default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
         except Exception:
             pass
 
-    final_img = og_img if og_img else fallback
-    cache[url] = {'image': final_img, 'category': category}
-    save_image_cache(cache)
+    final_img = og_img if og_img else fallback_img
+    # Cache only for specific, non-generic URLs with valid images
+    if not is_generic_or_section_url(url) and is_valid_content_image(final_img):
+        cache[url] = {'image': final_img, 'category': category}
+        save_image_cache(cache)
+
     return final_img, category
 
 
@@ -1602,7 +1717,7 @@ def render_evening_html(data, house_stats, search_index, is_subfolder=False, dat
         reg_badge_cls = "bg-[var(--accent)] text-white" if 'ΚΥΠΡΟΣ' in region else "bg-indigo-900/80 text-white"
 
         item_url = item['source']['url'] if item.get('source') else ''
-        img_url, cat_name = resolve_image(item_url, clean_title, region)
+        img_url, cat_name = resolve_image(item_url, clean_title, region, item.get('body', ''))
 
         src_html = ""
         if item.get('source'):
@@ -2172,7 +2287,7 @@ def render_midday_html(data, house_stats, search_index, is_subfolder=False, date
         reg_badge_cls = "bg-[var(--accent)] text-white" if 'ΚΥΠΡΟΣ' in region else "bg-indigo-900/80 text-white"
 
         item_url = item['source']['url'] if item.get('source') else ''
-        img_url, cat_name = resolve_image(item_url, clean_title, region)
+        img_url, cat_name = resolve_image(item_url, clean_title, region, item.get('body', ''))
 
         src_html = ""
         if item.get('source'):
@@ -2828,7 +2943,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     </div>
     '''
     top_url = data['top_story']['sources'][0]['url'] if data['top_story'].get('sources') else ''
-    top_img, top_category = resolve_image(top_url, data['top_story'].get('title', ''), 'ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ')
+    top_img, top_category = resolve_image(top_url, data['top_story'].get('title', ''), 'ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ', data['top_story'].get('body', ''))
 
     # House Search Nav Button & Card
     house_nav_html = ""
@@ -2858,7 +2973,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     cyprus_cards = []
     for idx, item in enumerate(data['cyprus'], 1):
         item_url = item['source']['url'] if item.get('source') else ''
-        img_url, cat_name = resolve_image(item_url, item['title'], 'ΚΥΠΡΟΣ')
+        img_url, cat_name = resolve_image(item_url, item['title'], 'ΚΥΠΡΟΣ', item.get('body', ''))
 
         is_lead = (idx == 1)
         is_p6 = (item['is_portfolio'] or idx == 6)
@@ -2922,7 +3037,7 @@ def render_morning_html(data, house_stats, search_index, is_subfolder=False, dat
     world_cards = []
     for idx, item in enumerate(data['world'], 1):
         item_url = item['source']['url'] if item.get('source') else ''
-        img_url, cat_name = resolve_image(item_url, item['title'], 'ΔΙΕΘΝΗ')
+        img_url, cat_name = resolve_image(item_url, item['title'], 'ΔΙΕΘΝΗ', item.get('body', ''))
 
         is_lead = (idx == 1)
         if is_lead:
