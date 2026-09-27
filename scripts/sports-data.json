@@ -5,41 +5,54 @@
       "ΚΟΠ / CFA",
       "Kerkida.net"
     ],
+    "last_result": {
+      "match": "Ομόνοια Λευκωσίας – Krasava ΕΝΥ Διγενής Ύψωνα",
+      "score": "4-1",
+      "competition": "Cyprus League by Stoiximan (4η αγωνιστική)",
+      "date": "Κυριακή 20 Σεπτεμβρίου 2026",
+      "venue": "Στάδιο ΓΣΠ",
+      "scorers": "Κουλιμπαλί (15'), Τανάσε (57'), Ντουβέρν (77'), Τάνκοβιτς (90'+4') — Μπούντνικ (33')",
+      "summary": "Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)",
+      "source_url": "https://www.cfa.com.cy/Gr/news/53723",
+      "source": "ΚΟΠ / CFA"
+    },
     "next_fixture": {
-      "fixture": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA (Στάδιο ΓΣΠ) (Κυριακή, 20.09.2026 / 19:00)",
-      "match": "ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ – KRASAVA",
-      "date": "Κυριακή, 20.09.2026 / 19:00",
+      "fixture": "19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026)",
+      "match": "19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος)",
+      "date": "Παρασκευή 09.10.2026",
+      "competition": "Cyprus League by Stoiximan (5η αγωνιστική)",
+      "broadcast": "Cytavision Sports 1HD",
       "source_url": "https://www.cfa.com.cy/Gr/news/53723",
       "source": "ΚΟΠ / CFA"
     },
     "articles": [
       {
-        "title": "Παίρνουν σειρά οι άλλοι... δύο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/pairnoyn-seira-oi-alloi-dyo",
+        "title": "Ξεχώρισε...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xehorise-1",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Bίντεο) Κωνσταντίνου στο Kerkida.net: \"Θέλω να τα δίνω όλα για την ομάδα μου\"",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/binteo-konstantinoy-sto-kerkidanet-thelo-na-ta-dino-ola-gia-tin-omada-moy",
+        "title": "Θα χρειαστεί...διαχείριση",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tha-hreiasteidiaheirisi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Κοντά στον...περσινό",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/konta-stonpersino",
+        "title": "Αλλαγή ο Μπάλκοβετς",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/allagi-o-mpalkobets",
         "source": "Kerkida.net"
       },
       {
-        "title": "Η ευκαιρία...",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-eykairia",
+        "title": "\"Δεν μπορούσα να κοιμηθώ όταν έμαθα για το ενδιαφέρον της Ομόνοιας, θέλω το πρώτο μου πρωτάθλημα\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/den-mporoysa-na-koimitho-thelo-proto-moy-protathlima",
         "source": "Kerkida.net"
       },
       {
-        "title": "Περισσότερες λύσεις με την επανέναρξη",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/perissoteres-lyseis-me-tin-epanenarxi",
+        "title": "Βίκτωρος... τριφύλλι!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/biktoros-trifylli",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-26T12:54:31.045984+00:00"
+    "fetched_at": "2026-09-27T08:33:19.770747+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -47,10 +60,23 @@
       "The Guardian",
       "BBC Sport"
     ],
+    "last_result": {
+      "match": "Fulham – Manchester United",
+      "score": "1-1",
+      "competition": "Premier League (5η αγωνιστική)",
+      "date": "Κυριακή 20 Σεπτεμβρίου 2026",
+      "venue": "Craven Cottage",
+      "summary": "Fulham – Manchester United 1-1 (Craven Cottage, Premier League)",
+      "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
+      "source": "BBC Sport"
+    },
     "next_fixture": {
-      "fixture": "UEFA Champions League: Manchester United versus Sabah — 20:00",
-      "match": "Manchester United versus Sabah — 20:00",
-      "competition": "UEFA Champions League",
+      "fixture": "Premier League: Manchester United versus Tottenham Hotspur — 17:00 (Saturday 10th October 2026)",
+      "match": "Manchester United versus Tottenham Hotspur — 17:00",
+      "competition": "Premier League (7η αγωνιστική)",
+      "date": "Saturday 10th October 2026",
+      "venue": "Old Trafford",
+      "broadcast": "NovaSports Premier League / Sky Sports",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
@@ -81,7 +107,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-26T12:54:32.161101+00:00"
+    "fetched_at": "2026-09-27T08:33:20.457549+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -89,15 +115,32 @@
       "Marca",
       "BBC Sport"
     ],
+    "last_result": {
+      "match": "Atlético Madrid – Real Madrid",
+      "score": "2-1",
+      "competition": "Spanish La Liga (6η αγωνιστική - Derbi Madrileño)",
+      "date": "Κυριακή 20 Σεπτεμβρίου 2026",
+      "venue": "Cívitas Metropolitano",
+      "summary": "Atlético Madrid – Real Madrid 2-1 (Cívitas Metropolitano, Derbi Madrileño)",
+      "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
+      "source": "Marca / BBC Sport"
+    },
     "next_fixture": {
-      "fixture": "Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)",
-      "match": "Real Madrid versus Rayo Vallecano — 20:00",
-      "competition": "Spanish La Liga",
-      "date": "Saturday 12th September",
+      "fixture": "Spanish La Liga: Real Madrid versus Villarreal — 22:00 (Saturday 10th October 2026)",
+      "match": "Real Madrid versus Villarreal — 22:00",
+      "competition": "Spanish La Liga (8η αγωνιστική)",
+      "date": "Saturday 10th October 2026",
+      "venue": "Santiago Bernabéu",
+      "broadcast": "PrimeTel / Cablenet",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Mbappé medical report: hyperextension of the posterior capsule of the left knee",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/26/mbappe-medical-report-hyperextension-of-the-posterior-capsule-of-the-left-knee.html",
+        "source": "Marca"
+      },
       {
         "title": "Mbappé eases concerns over his knee: laughs with Arda Güler and no sign of bandages",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/26/mbappe-eases-concerns-over-his-knee-laughs-with-arda-gueler-and-no-sign-of-bandages.html",
@@ -117,14 +160,9 @@
         "title": "Roberto Carlos explains his ruin: \"They left my account at zero... I lost 99% of what I earned in football\"",
         "url": "https://www.marca.com/en/football/2026/09/25/roberto-carlos-explains-his-ruin-they-left-my-account-at-zero-i-lost-99-of-what-i-earned-in-football.html",
         "source": "Marca"
-      },
-      {
-        "title": "Diomande threatens Vinicius's reign",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/23/diomande-threatens-vinicius-s-reign.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-26T12:54:33.616097+00:00"
+    "fetched_at": "2026-09-27T08:33:21.423758+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -132,42 +170,52 @@
       "Formula1.com",
       "BBC Sport F1"
     ],
+    "last_result": {
+      "race": "Azerbaijan Grand Prix 2026 (Baku City Circuit)",
+      "date": "Σάββατο 26 Σεπτεμβρίου 2026",
+      "winner": "George Russell (Mercedes)",
+      "podium": "1ος George Russell (Mercedes), 2ος Max Verstappen (Red Bull), 3ος Isack Hadjar (Red Bull), 4ος Charles Leclerc (Ferrari), 5ος Kimi Antonelli (Mercedes), 6ος Lewis Hamilton (Ferrari)",
+      "summary": "Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars",
+      "source_url": "https://www.formula1.com/en/racing/2026/azerbaijan.html",
+      "source": "Formula1.com / BBC Sport F1"
+    },
     "next_fixture": {
-      "race": "Spanish Grand Prix 2026 (Gran Premio de España)",
-      "circuit": "Madrid / Circuit de Barcelona-Catalunya",
-      "round": "Round 14",
-      "dates": "11 - 13 Σεπτεμβρίου 2026",
-      "race_day": "Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου",
-      "source_url": "https://www.formula1.com/en/racing/2026/spain.html",
+      "race": "Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix)",
+      "circuit": "Bahrain International Circuit, Sakhir",
+      "round": "Round 16",
+      "dates": "2 - 4 Οκτωβρίου 2026",
+      "race_day": "Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου",
+      "broadcast": "Cytavision Sports",
+      "source_url": "https://www.formula1.com/en/racing/2026/bahrain.html",
       "source": "Formula1.com"
     },
     "articles": [
+      {
+        "title": "'Mr Saturday' Russell 'comes through other side after real tough period'",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckly558q6jeqo",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Norris says Colapinto should be banned after accident",
+        "url": "https://www.bbc.com/sport/formula1/articles/c9vgyyd5n4yjo",
+        "source": "BBC Sport F1"
+      },
       {
         "title": "Russell wins despite late Verstappen challenge",
         "url": "https://www.bbc.com/sport/formula1/articles/ck8d33760j63o",
         "source": "BBC Sport F1"
       },
       {
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Antonelli 'comes back to earth' with qualifying crash",
         "url": "https://www.bbc.com/sport/formula1/articles/cqd0885k3d28o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Russell takes pole in Baku as Antonelli hits wall",
-        "url": "https://www.bbc.com/sport/formula1/articles/cmde0wl6rk0ko",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Chadwick says driving F1 car 'top of bucket list'",
-        "url": "https://www.bbc.com/sport/formula1/articles/ck5ywrn20z3vo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "The moment Antonelli knew he had been transformed as an F1 driver",
-        "url": "https://www.bbc.com/sport/formula1/articles/cmpq03x9x27ro",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-26T12:54:35.550750+00:00"
+    "fetched_at": "2026-09-27T08:33:22.649656+00:00"
   }
 }

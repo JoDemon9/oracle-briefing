@@ -1450,5 +1450,29 @@
   "https://www.cnbc.com/2026/09/26/trump-rejects-irans-conditional-ceasefire-proposal-wsj-reports.html": {
     "image": "https://image.cnbcfm.com/api/v1/image/108368439-1790424775469-gettyimages-2296584703-mms11214_2g823jbf.jpeg?v=1790425381&amp;w=1920&amp;h=1080",
     "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.aa.com.tr/en/world": {
+    "image": "https://www.aa.com.tr/images/meta-photo.png",
+    "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.kathimerini.com.cy": {
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.bazaraki.com": {
+    "image": "https://www.bazaraki.com/static/images/fb/bazaraki.a975451f8bd6.png",
+    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+  },
+  "https://www.euronews.com": {
+    "image": "https://static.euronews.com/website/images/euronews-og-image-1200x675.png",
+    "category": "ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ"
+  },
+  "https://www.cnbc.com": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108285632-1774986309800-cnbc_versant_share.png?v=1774986411&amp;w=1920&amp;h=1080",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.com/news": {
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80",
+    "category": "ΔΙΕΘΝΗ"
   }
 }

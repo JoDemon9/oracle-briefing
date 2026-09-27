@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limassol Housing Intelligence • 20/09/2026</title>
+  <title>Limassol Housing Intelligence • 26/09/2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -920,7 +920,7 @@
           <span class="badge-live"><span class="pulse-dot"></span> LIVE INTELLIGENCE</span>
         </h1>
         <p>
-          Εκτέλεση: <strong>Κυριακή 20 Σεπτεμβρίου 2026</strong> | Κυλιόμενο 7ήμερο: <strong>13/09 – 20/09/2026</strong> | Άξονας: <strong>Ύψωνας – Γερμασόγεια</strong> (1 & 2 Υ/Δ)
+          Εκτέλεση: <strong>Σάββατο 26 Σεπτεμβρίου 2026</strong> | Κυλιόμενο 7ήμερο: <strong>19/09 – 26/09/2026</strong> | Άξονας: <strong>Ύψωνας – Γερμασόγεια</strong> (1 & 2 Υ/Δ)
         </p>
       </div>
       <div>
@@ -934,28 +934,28 @@
     <!-- METRICS GRID -->
     <div class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-value mono" style="color: #fff;">4.534+</div>
-        <div class="kpi-label">Συνολική Σάρωση (Raw Ingest)</div>
+        <div class="kpi-value mono" style="color: #fff;">4.316</div>
+        <div class="kpi-label">Συνολική Σάρωση 7ημέρου</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value mono" style="color: #38bdf8;">3.210</div>
-        <div class="kpi-label">Ευρετήριο Εβδομάδας (1 & 2 Υ/Δ)</div>
+        <div class="kpi-value mono" style="color: #38bdf8;">4.316</div>
+        <div class="kpi-label">Ευρετήριο Εβδομάδας</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value mono" style="color: #94a3b8;">3.196</div>
+        <div class="kpi-value mono" style="color: #94a3b8;">6.879</div>
         <div class="kpi-label">Ιστορικό Μητρώο Ακινήτων</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value mono" style="color: #34d399;">14</div>
+        <div class="kpi-value mono" style="color: #34d399;">15</div>
         <div class="kpi-label">Κορυφαία Εγκεκριμένα (Curated)</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value mono" style="color: #fbbf24;">28</div>
+        <div class="kpi-value mono" style="color: #fbbf24;">35</div>
         <div class="kpi-label">Χρειάζεται Επιβεβαίωση</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value mono" style="color: #f43f5e;">8</div>
-        <div class="kpi-label">Μεταβολές Τιμής (Price Drops)</div>
+        <div class="kpi-value mono" style="color: #f43f5e;">28</div>
+        <div class="kpi-label">Μεταβολές Τιμής (Price Changes)</div>
       </div>
     </div>
   </div>
@@ -1001,6 +1001,9 @@
     <button class="tab-btn" onclick="switchTab('spacious')">
       📐 Ευρυχωρία & Άνεση <span class="tab-badge">Top 12</span>
     </button>
+        <button class="tab-btn" onclick="switchTab('macro')">
+      🌐 Macro Barometer (Χωρίς Budget) <span class="tab-badge" style="background:#38bdf8;color:#090d16;font-weight:800;">6.997</span>
+    </button>
     <button class="tab-btn" onclick="switchTab('comparator')">
       ⚖️ Σύγκριση Ακινήτων <span class="tab-badge" id="badge-compare">0</span>
     </button>
@@ -1019,6 +1022,373 @@
     <button class="tab-btn" onclick="switchTab('history')">
       🏛️ Ιστορικό Μητρώο <span class="tab-badge">3.196</span>
     </button>
+  </div>
+
+  
+  <!-- TAB: MACRO MARKET BAROMETER (UNCONSTRAINED) -->
+  <div id="tab-macro" class="tab-content" style="display: none;">
+    
+    <!-- Macro Header Banner -->
+    <div style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.12) 100%); border: 1px solid var(--border-accent); border-radius: 16px; padding: 24px; margin-bottom: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h2 style="font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 10px;">
+            🌐 Βαρόμετρο Αγοράς (Macro Index — Χωρίς Περιορισμό Budget)
+          </h2>
+          <p style="color: var(--text-muted); font-size: 14px; max-width: 900px;">
+            Παρακολούθηση της πραγματικής πορείας των τιμών σε <strong>6.997 αγγελίες 1 & 2 υπνοδωματίων</strong> στον άξονα Ύψωνα–Γερμασόγειας, χωρίς τα πλαφόν των €230k / €280k. Υπολογισμός πραγματικού πληθωρισμού ανά τετραγωνικό μέτρο και μέτρηση του βαθμού προσβασιμότητας (Affordability Ratio).
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <span style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Ιστορικό Βάσης</span>
+          <div class="mono" style="font-size: 16px; font-weight: 700; color: #38bdf8;">29/08 ➔ 26/09/2026 (5 Εβδομάδες)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Macro KPI Quick Grid -->
+    <div class="kpi-grid" style="margin-bottom: 28px;">
+      <div class="kpi-card" style="border-left: 3px solid #38bdf8;">
+        <div class="kpi-value mono" style="color: #38bdf8;">€420.000</div>
+        <div class="kpi-label">Διάμεση Τιμή 2Υ/Δ (Όλος ο Άξονας)</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">4.630 €/τ.μ. εσωτερικού</div>
+      </div>
+      <div class="kpi-card" style="border-left: 3px solid #f43f5e;">
+        <div class="kpi-value mono" style="color: #f43f5e;">9,6%</div>
+        <div class="kpi-label">Προσβασιμότητα 2Υ/Δ (≤ €280k)</div>
+        <div style="font-size: 12px; color: #f43f5e; margin-top: 4px;">Μόνο 1 στα 10 2άρια εντός budget!</div>
+      </div>
+      <div class="kpi-card" style="border-left: 3px solid #10b981;">
+        <div class="kpi-value mono" style="color: #10b981;">€275.000</div>
+        <div class="kpi-label">Ύψωνας 2Υ/Δ Διάμεσος</div>
+        <div style="font-size: 12px; color: #10b981; margin-top: 4px;">56,2% εντός budget (Το κύριο καταφύγιο)</div>
+      </div>
+      <div class="kpi-card" style="border-left: 3px solid #f59e0b;">
+        <div class="kpi-value mono" style="color: #f59e0b;">€270.000</div>
+        <div class="kpi-label">Διάμεση Τιμή 1Υ/Δ (Όλος ο Άξονας)</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">4.900 €/τ.μ. (25,5% ≤ €230k)</div>
+      </div>
+      <div class="kpi-card" style="border-left: 3px solid #a855f7;">
+        <div class="kpi-value mono" style="color: #a855f7;">€565.000</div>
+        <div class="kpi-label">Γερμασόγεια 2Υ/Δ Διάμεσος</div>
+        <div style="font-size: 12px; color: #a855f7; margin-top: 4px;">6.476 €/τ.μ. (<1% εντός budget)</div>
+      </div>
+    </div>
+
+    <!-- Section 1: 5-Week Time-Series Table -->
+    <div style="margin-bottom: 32px;">
+      <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+        📈 Εξέλιξη Αγοράς Άξονα (Χρονοσειρά 5 Εβδομάδων)
+      </h3>
+      <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 14px;">
+        Σύγκριση της συνολικής αγοράς από το Baseline της 29ης Αυγούστου έως την τρέχουσα εβδομάδα.
+      </p>
+      
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Εβδομάδα / Ημ/νία</th>
+              <th>Αγγελίες</th>
+              <th>1Υ/Δ Διάμεση Τιμή</th>
+              <th>1Υ/Δ €/τ.μ.</th>
+              <th>1Υ/Δ Προσβασιμότητα (≤€230k)</th>
+              <th>2Υ/Δ Διάμεση Τιμή</th>
+              <th>2Υ/Δ €/τ.μ.</th>
+              <th>2Υ/Δ Προσβασιμότητα (≤€280k)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Εβδομάδα 1 (29/08/2026)</strong></td>
+              <td class="mono">183</td>
+              <td class="mono">€215.000</td>
+              <td class="mono">4.200 €/τ.μ.</td>
+              <td><span style="color:#10b981; font-weight:700;">89,3%</span></td>
+              <td class="mono">€270.000</td>
+              <td class="mono">3.294 €/τ.μ.</td>
+              <td><span style="color:#10b981; font-weight:700;">93,8%</span></td>
+            </tr>
+            <tr>
+              <td><strong>Εβδομάδα 2 (06/09/2026)</strong></td>
+              <td class="mono">1.537</td>
+              <td class="mono">€284.000</td>
+              <td class="mono">4.805 €/τ.μ.</td>
+              <td><span style="color:#f59e0b; font-weight:700;">22,7%</span></td>
+              <td class="mono">€428.000</td>
+              <td class="mono">4.474 €/τ.μ.</td>
+              <td><span style="color:#f43f5e; font-weight:700;">6,9%</span></td>
+            </tr>
+            <tr>
+              <td><strong>Εβδομάδα 3 (12/09/2026)</strong></td>
+              <td class="mono">3.174</td>
+              <td class="mono">€272.000</td>
+              <td class="mono">4.524 €/τ.μ.</td>
+              <td><span style="color:#f59e0b; font-weight:700;">26,9%</span></td>
+              <td class="mono">€422.000</td>
+              <td class="mono">4.353 €/τ.μ.</td>
+              <td><span style="color:#f43f5e; font-weight:700;">9,9%</span></td>
+            </tr>
+            <tr>
+              <td><strong>Εβδομάδα 4 (20/09/2026)</strong></td>
+              <td class="mono">3.220</td>
+              <td class="mono">€260.000</td>
+              <td class="mono">3.458 €/τ.μ.</td>
+              <td><span style="color:#10b981; font-weight:700;">37,2%</span></td>
+              <td class="mono">€415.000</td>
+              <td class="mono">2.882 €/τ.μ.</td>
+              <td><span style="color:#f43f5e; font-weight:700;">13,7%</span></td>
+            </tr>
+            <tr style="background: rgba(56, 189, 248, 0.08); font-weight: 700;">
+              <td><strong>Εβδομάδα 5 (26/09/2026)</strong> <span class="badge-live" style="font-size:10px;padding:2px 8px;">ΤΡΕΧΟΝ</span></td>
+              <td class="mono">6.997</td>
+              <td class="mono" style="color:#38bdf8;">€270.000</td>
+              <td class="mono" style="color:#38bdf8;">4.900 €/τ.μ.</td>
+              <td><span style="color:#f59e0b; font-weight:800;">25,5%</span></td>
+              <td class="mono" style="color:#38bdf8;">€420.000</td>
+              <td class="mono" style="color:#38bdf8;">4.630 €/τ.μ.</td>
+              <td><span style="color:#f43f5e; font-weight:800;">9,6%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 2: District Affordability & Price Heatmap -->
+    <div style="margin-bottom: 32px;">
+      <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+        🗺️ Χάρτης Προσβασιμότητας Ανά Περιοχή (2 Υπνοδωμάτια — Budget ≤ €280.000)
+      </h3>
+      <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 16px;">
+        Ποιο ποσοστό των διαμερισμάτων 2Υ/Δ σε κάθε περιοχή είναι προσβάσιμο εντός του προϋπολογισμού σου:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+        
+        <!-- Ypsonas Card -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="font-size: 16px; color: #fff;">Ύψωνας (Δυτικό Άκρο)</strong>
+            <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;">56,2% Εντός Budget</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+            <span>2Υ/Δ Διάμεσος: <strong style="color: #fff;">€275.000</strong> (3.400 €/τ.μ.)</span>
+            <span>Δείγμα: 381 ακίνητα</span>
+          </div>
+          <div style="height: 10px; background: var(--surface-elev); border-radius: 999px; overflow: hidden;">
+            <div style="width: 56.2%; height: 100%; background: #10b981; border-radius: 999px;"></div>
+          </div>
+          <div style="font-size: 11.5px; color: #94a3b8; margin-top: 8px;">
+            ⚠️ <em>Τον Αύγουστο ήταν 96% εντός budget. Σήμερα το 44% έχει ξεπεράσει τα €280k.</em>
+          </div>
+        </div>
+
+        <!-- Kato Polemidia Card -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="font-size: 16px; color: #fff;">Κάτω Πολεμίδια</strong>
+            <span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;">18,8% Εντός Budget</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+            <span>2Υ/Δ Διάμεσος: <strong style="color: #fff;">€320.000</strong> (3.704 €/τ.μ.)</span>
+            <span>Δείγμα: 161 ακίνητα</span>
+          </div>
+          <div style="height: 10px; background: var(--surface-elev); border-radius: 999px; overflow: hidden;">
+            <div style="width: 18.8%; height: 100%; background: #f59e0b; border-radius: 999px;"></div>
+          </div>
+          <div style="font-size: 11.5px; color: #94a3b8; margin-top: 8px;">
+            Επιλεκτικές ευκαιρίες (π.χ. Rank #4 στα €280k για 82 τ.μ.).
+          </div>
+        </div>
+
+        <!-- Zakaki Card -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="font-size: 16px; color: #fff;">Ζακάκι (Casino / Mall)</strong>
+            <span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;">9,4% Εντός Budget</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+            <span>2Υ/Δ Διάμεσος: <strong style="color: #fff;">€335.000</strong> (3.579 €/τ.μ.)</span>
+            <span>Δείγμα: 241 ακίνητα</span>
+          </div>
+          <div style="height: 10px; background: var(--surface-elev); border-radius: 999px; overflow: hidden;">
+            <div style="width: 9.4%; height: 100%; background: #f43f5e; border-radius: 999px;"></div>
+          </div>
+          <div style="font-size: 11.5px; color: #94a3b8; margin-top: 8px;">
+            Έντονη πίεση τιμών — πάνω από 90% των 2Υ/Δ ξεπερνούν τα €280k.
+          </div>
+        </div>
+
+        <!-- Agia Fyla Card -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="font-size: 16px; color: #fff;">Αγία Φύλα</strong>
+            <span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;">8,8% Εντός Budget</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+            <span>2Υ/Δ Διάμεσος: <strong style="color: #fff;">€346.190</strong> (4.669 €/τ.μ.)</span>
+            <span>Δείγμα: 104 ακίνητα</span>
+          </div>
+          <div style="height: 10px; background: var(--surface-elev); border-radius: 999px; overflow: hidden;">
+            <div style="width: 8.8%; height: 100%; background: #f43f5e; border-radius: 999px;"></div>
+          </div>
+          <div style="font-size: 11.5px; color: #94a3b8; margin-top: 8px;">
+            Σπάνιες ευκαιρίες όπως το Rank #2 (88 τ.μ. στα €273k).
+          </div>
+        </div>
+
+        <!-- Agios Athanasios Card -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="font-size: 16px; color: #fff;">Άγιος Αθανάσιος</strong>
+            <span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;">0,8% Εντός Budget</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+            <span>2Υ/Δ Διάμεσος: <strong style="color: #fff;">€430.000</strong> (5.048 €/τ.μ.)</span>
+            <span>Δείγμα: 435 ακίνητα</span>
+          </div>
+          <div style="height: 10px; background: var(--surface-elev); border-radius: 999px; overflow: hidden;">
+            <div style="width: 1.0%; height: 100%; background: #e11d48; border-radius: 999px;"></div>
+          </div>
+          <div style="font-size: 11.5px; color: #94a3b8; margin-top: 8px;">
+            Σχεδόν μηδενική προσφορά 2Υ/Δ κάτω από €280k (μόνο 1Υ/Δ στα €230k).
+          </div>
+        </div>
+
+        <!-- Germasogeia Card -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="font-size: 16px; color: #fff;">Γερμασόγεια (Ανατολικό Άκρο)</strong>
+            <span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;">0,9% Εντός Budget</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+            <span>2Υ/Δ Διάμεσος: <strong style="color: #fff;">€565.000</strong> (6.476 €/τ.μ.)</span>
+            <span>Δείγμα: 527 ακίνητα</span>
+          </div>
+          <div style="height: 10px; background: var(--surface-elev); border-radius: 999px; overflow: hidden;">
+            <div style="width: 1.0%; height: 100%; background: #e11d48; border-radius: 999px;"></div>
+          </div>
+          <div style="font-size: 11.5px; color: #94a3b8; margin-top: 8px;">
+            Πλήρης αποκοπή από τα όρια της έρευνας (Luxury corridor).
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  
+    <!-- Section 3: Concrete Case Studies of Price Fluctuations -->
+    <div style="margin-bottom: 32px;">
+      <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+        🔍 Case Studies: Πραγματικά Παραδείγματα Μεταβολών στο Μητρώο
+      </h3>
+      <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 16px;">
+        Αυθεντικά ακίνητα που παρακολουθούνται από τα τέλη Αυγούστου και οι πραγματικές αναπροσαρμογές τιμοκαταλόγου:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px;">
+        
+        <!-- Case 1: Ypsonas -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+            <div>
+              <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #f59e0b; letter-spacing: 0.5px;">ΥΨΩΝΑΣ • 2 Υ/Δ (95 τ.μ.)</span>
+              <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin-top: 2px;">Index #11507247</h4>
+            </div>
+            <span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 12px;">+€15.000 (+5,5%)</span>
+          </div>
+          <div class="mono" style="font-size: 14px; margin-bottom: 10px;">
+            <span style="text-decoration: line-through; color: #94a3b8;">€275.000</span> ➔ <strong style="color: #38bdf8;">€290.000</strong>
+          </div>
+          <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.45;">
+            <strong>Αιτία Μεταβολής:</strong> Ολοκλήρωση σκελετού μπετόν στον 1ο όροφο. Ο κατασκευαστής προχώρησε σε κλιμακωτή αύξηση τιμοκαταλόγου. <em>Αποτέλεσμα: Εκτοξεύτηκε πάνω από το ταβάνι των €280k.</em>
+          </p>
+        </div>
+
+        <!-- Case 2: Zakaki -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+            <div>
+              <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #f43f5e; letter-spacing: 0.5px;">ΖΑΚΑΚΙ • 1 Υ/Δ (50 τ.μ.)</span>
+              <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin-top: 2px;">Bazaraki #6598176</h4>
+            </div>
+            <span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 12px;">+€35.000 (+15,6%)</span>
+          </div>
+          <div class="mono" style="font-size: 14px; margin-bottom: 10px;">
+            <span style="text-decoration: line-through; color: #94a3b8;">€225.000</span> ➔ <strong style="color: #38bdf8;">€260.000</strong>
+          </div>
+          <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.45;">
+            <strong>Αιτία Μεταβολής:</strong> Κερδοσκοπική αναπροσαρμογή λόγω γειτνίασης με City of Dreams / Mall και πίεσης από επενδυτές Airbnb. Κανένα κατασκευαστικό έξοδο δεν άλλαξε.
+          </p>
+        </div>
+
+        <!-- Case 3: Agios Athanasios -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+            <div>
+              <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #38bdf8; letter-spacing: 0.5px;">ΑΓΙΟΣ ΑΘΑΝΑΣΙΟΣ • 1 Υ/Δ</span>
+              <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin-top: 2px;">Bazaraki #6692332</h4>
+            </div>
+            <span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 12px;">+€21.000 (+9,2%)</span>
+          </div>
+          <div class="mono" style="font-size: 14px; margin-bottom: 10px;">
+            <span style="text-decoration: line-through; color: #94a3b8;">€229.000</span> ➔ <strong style="color: #38bdf8;">€250.000</strong>
+          </div>
+          <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.45;">
+            <strong>Αιτία Μεταβολής:</strong> Ήταν εντός του ορίου των €230k την 1η εβδομάδα. Μετά από υψηλό αριθμό τηλεφωνημάτων, ο πωλητής αναπροσάρμοσε στα €250k.
+          </p>
+        </div>
+
+        <!-- Case 4: Asymmetry / Luxury Correction -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+            <div>
+              <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #10b981; letter-spacing: 0.5px;">ΜΕΣΑ ΓΕΙΤΟΝΙΑ • 2 Υ/Δ ΡΕΤΙΡΕ</span>
+              <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin-top: 2px;">Bazaraki #6623652</h4>
+            </div>
+            <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 12px;">-€125.000 (-17,2%)</span>
+          </div>
+          <div class="mono" style="font-size: 14px; margin-bottom: 10px;">
+            <span style="text-decoration: line-through; color: #94a3b8;">€725.000</span> ➔ <strong style="color: #10b981;">€600.000</strong>
+          </div>
+          <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.45;">
+            <strong>Ασυμμετρία Αγοράς:</strong> Ενώ τα προσιτά (<€280k) αυξάνονται λόγω συνωστισμού αγοραστών, τα υπερτιμημένα luxury μένουν στα αζήτητα και αναγκάζονται σε διορθώσεις.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 4: The 3 Price Adjustment Mechanisms -->
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 24px;">
+      <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        ⚙️ Πώς Μεταβάλλονται οι Τιμές στην Πράξη: Οι 3 Μηχανισμοί της Αγοράς
+      </h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+        <div style="background: var(--surface-elev); border-radius: 12px; padding: 16px; border: 1px solid var(--border);">
+          <strong style="color: #38bdf8; font-size: 14px; display: block; margin-bottom: 6px;">1. Κατασκευαστικά Ορόσημα (+3% έως +6%)</strong>
+          <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.45;">
+            Οι κατασκευαστές αυξάνουν τις τιμές αυτόματα με την ολοκλήρωση κάθε σταδίου (θεμέλια ➔ μπετά ➔ τοιχοποιία ➔ παράδοση), μειώνοντας το ρίσκο του έργου.
+          </p>
+        </div>
+
+        <div style="background: var(--surface-elev); border-radius: 12px; padding: 16px; border: 1px solid var(--border);">
+          <strong style="color: #fbbf24; font-size: 14px; display: block; margin-bottom: 6px;">2. Το Φαινόμενο "Floor Ladder"</strong>
+          <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.45;">
+            Κάθε όροφος κοστίζει +€10.000–€15.000. Μόλις πωληθεί το διαμέρισμα του 1ου ορόφου, η υπάρχουσα αγγελία ανανεώνεται με την τιμή του 2ου ορόφου.
+          </p>
+        </div>
+
+        <div style="background: var(--surface-elev); border-radius: 12px; padding: 16px; border: 1px solid var(--border);">
+          <strong style="color: #34d399; font-size: 14px; display: block; margin-bottom: 6px;">3. Συρρίκνωση Τετραγωνικών (Shrinkflation)</strong>
+          <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.45;">
+            Για να μείνουν εντός του ψυχολογικού ορίου των €280k, τα νέα διαμερίσματα σχεδιάζονται στα 75–77 τ.μ. αντί για 85 τ.μ. Το κόστος ανά τ.μ. αυξάνεται «αθόρυβα».
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- TAB 1: CURATED PROPERTIES -->
@@ -1258,7 +1628,7 @@
     <div style="margin-bottom: 32px;">
       <h2 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px;">📉 Μεταβολές Ζητούμενων Τιμών στο Ιστορικό Μητρώο</h2>
       <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-        Ακίνητα που ήταν ήδη καταγεγραμμένα σε προηγούμενες εβδομάδες και σημειώθηκε πραγματική αναπροσαρμογή τιμής εντός του 7ημέρου 13/09 – 20/09/2026.
+        Ακίνητα που ήταν ήδη καταγεγραμμένα σε προηγούμενες εβδομάδες και σημειώθηκε πραγματική αναπροσαρμογή τιμής εντός του 7ημέρου 19/09 – 26/09/2026.
       </p>
       
       <div class="table-container">

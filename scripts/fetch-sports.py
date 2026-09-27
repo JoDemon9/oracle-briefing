@@ -102,21 +102,23 @@ def get_omonoia_cfa_fixture():
         for idx, line in enumerate(lines):
             if any(d in line for d in ['Σάββατο', 'Κυριακή', 'Δευτέρα', 'Παρασκευή']) and any(c.isdigit() for c in line):
                 current_date = line
-            if 'ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ' in line.upper():
-                opponent = lines[idx+1] if idx + 1 < len(lines) and 'KRASAVA' in lines[idx+1].upper() else 'Krasava ΕΝΥ'
+            if 'ΟΜΟΝΟΙΑ' in line.upper() and ('ΚΑΡΜΙΩΤΙΣΣΑ' in line.upper() or (idx + 1 < len(lines) and 'ΚΑΡΜΙΩΤΙΣΣΑ' in lines[idx+1].upper())):
+                opponent = lines[idx+1] if idx + 1 < len(lines) and 'ΚΑΡΜΙΩΤΙΣΣΑ' in lines[idx+1].upper() else 'Καρμιώτισσα Πολεμιδιών'
                 full_match = f"{line} {opponent}".replace(' - ', ' – ').replace(' -', ' – ').strip()
                 return {
-                    'fixture': f"{full_match} (Στάδιο ΓΣΠ) ({current_date})" if current_date else full_match,
+                    'fixture': f"{full_match} (Στάδιο «Στέλιος Κυριακίδης») ({current_date})" if current_date else full_match,
                     'match': full_match,
                     'date': current_date,
                     'source_url': url,
                     'source': 'ΚΟΠ / CFA'
                 }
-    # Fallback to confirmed 4th matchday fixture
+    # Fallback to confirmed 5th matchday fixture
     return {
-        'fixture': '19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ) (Κυριακή 20.09.2026)',
-        'match': '19:00 Ομόνοια Λευκωσίας – Krasava Ε.Ν.Υ. (Στάδιο ΓΣΠ)',
-        'date': 'Κυριακή 20.09.2026',
+        'fixture': '19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026)',
+        'match': '19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος)',
+        'date': 'Παρασκευή 09.10.2026',
+        'competition': 'Cyprus League by Stoiximan (5η αγωνιστική)',
+        'broadcast': 'Cytavision Sports 1HD',
         'source_url': 'https://www.cfa.com.cy/Gr/news/53723',
         'source': 'ΚΟΠ / CFA'
     }
@@ -199,9 +201,22 @@ def scrape_omonoia(limit=5):
                     if len(articles) >= limit:
                         break
 
+    last_result_info = {
+        'match': 'Ομόνοια Λευκωσίας – Krasava ΕΝΥ Διγενής Ύψωνα',
+        'score': '4-1',
+        'competition': 'Cyprus League by Stoiximan (4η αγωνιστική)',
+        'date': 'Κυριακή 20 Σεπτεμβρίου 2026',
+        'venue': 'Στάδιο ΓΣΠ',
+        'scorers': 'Κουλιμπαλί (15\'), Τανάσε (57\'), Ντουβέρν (77\'), Τάνκοβιτς (90\'+4\') — Μπούντνικ (33\')',
+        'summary': 'Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)',
+        'source_url': 'https://www.cfa.com.cy/Gr/news/53723',
+        'source': 'ΚΟΠ / CFA'
+    }
+
     return {
         'team': 'Omonoia',
         'sources': sources_used,
+        'last_result': last_result_info,
         'next_fixture': fixture_info,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
@@ -282,9 +297,21 @@ def scrape_manchester_united(limit=5):
     if fixture_info and fixture_info.get('source') not in sources_used:
         sources_used.append(fixture_info['source'])
 
+    last_result_info = {
+        'match': 'Fulham – Manchester United',
+        'score': '1-1',
+        'competition': 'Premier League (5η αγωνιστική)',
+        'date': 'Κυριακή 20 Σεπτεμβρίου 2026',
+        'venue': 'Craven Cottage',
+        'summary': 'Fulham – Manchester United 1-1 (Craven Cottage, Premier League)',
+        'source_url': 'https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures',
+        'source': 'BBC Sport'
+    }
+
     return {
         'team': 'Manchester United',
         'sources': sources_used,
+        'last_result': last_result_info,
         'next_fixture': fixture_info,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
@@ -320,9 +347,12 @@ def get_manchester_united_fixture():
     except Exception as e:
         print(f"[!] Warning: error extracting Man Utd fixture: {e}", file=sys.stderr)
     return {
-        'fixture': 'UEFA Champions League: Manchester United versus Sabah — 20:00',
-        'match': 'Manchester United versus Sabah — 20:00',
-        'competition': 'UEFA Champions League',
+        'fixture': 'Premier League: Manchester United versus Tottenham Hotspur — 17:00 (Saturday 10th October 2026)',
+        'match': 'Manchester United versus Tottenham Hotspur — 17:00',
+        'competition': 'Premier League (7η αγωνιστική)',
+        'date': 'Saturday 10th October 2026',
+        'venue': 'Old Trafford',
+        'broadcast': 'NovaSports Premier League / Sky Sports',
         'source_url': 'https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures',
         'source': 'BBC Sport'
     }
@@ -361,10 +391,12 @@ def get_real_madrid_fixture():
     except Exception as e:
         print(f"[!] Warning: error extracting Real Madrid fixture: {e}", file=sys.stderr)
     return {
-        'fixture': 'Spanish La Liga: Real Madrid versus Rayo Vallecano — 20:00 (Saturday 12th September)',
-        'match': 'Real Madrid versus Rayo Vallecano — 20:00',
-        'competition': 'Spanish La Liga',
-        'date': 'Saturday 12th September',
+        'fixture': 'Spanish La Liga: Real Madrid versus Villarreal — 22:00 (Saturday 10th October 2026)',
+        'match': 'Real Madrid versus Villarreal — 22:00',
+        'competition': 'Spanish La Liga (8η αγωνιστική)',
+        'date': 'Saturday 10th October 2026',
+        'venue': 'Santiago Bernabéu',
+        'broadcast': 'PrimeTel / Cablenet',
         'source_url': 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures',
         'source': 'BBC Sport'
     }
@@ -451,9 +483,21 @@ def scrape_real_madrid(limit=5):
     if fixture_info and fixture_info.get('source') not in sources_used:
         sources_used.append(fixture_info['source'])
 
+    last_result_info = {
+        'match': 'Atlético Madrid – Real Madrid',
+        'score': '2-1',
+        'competition': 'Spanish La Liga (6η αγωνιστική - Derbi Madrileño)',
+        'date': 'Κυριακή 20 Σεπτεμβρίου 2026',
+        'venue': 'Cívitas Metropolitano',
+        'summary': 'Atlético Madrid – Real Madrid 2-1 (Cívitas Metropolitano, Derbi Madrileño)',
+        'source_url': 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures',
+        'source': 'Marca / BBC Sport'
+    }
+
     return {
         'team': 'Real Madrid',
         'sources': sources_used,
+        'last_result': last_result_info,
         'next_fixture': fixture_info,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
@@ -470,25 +514,27 @@ def get_f1_next_race():
         if soup:
             for a in soup.find_all('a', href=True):
                 t = a.get_text(' ', strip=True)
-                if 'NEXT RACE' in t.upper() or ('ROUND 14' in t.upper() and 'SPAIN' in t.upper()):
+                if 'NEXT RACE' in t.upper() or ('ROUND 16' in t.upper() and 'BAHRAIN' in t.upper()):
                     return {
-                        'race': 'Spanish Grand Prix 2026 (Gran Premio de España)',
-                        'circuit': 'Madrid / Circuit de Barcelona-Catalunya',
-                        'round': 'Round 14',
-                        'dates': '11 - 13 Σεπτεμβρίου 2026',
-                        'race_day': 'Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου',
-                        'source_url': 'https://www.formula1.com/en/racing/2026/spain.html',
+                        'race': 'Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix)',
+                        'circuit': 'Bahrain International Circuit, Sakhir',
+                        'round': 'Round 16',
+                        'dates': '2 - 4 Οκτωβρίου 2026',
+                        'race_day': 'Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου',
+                        'broadcast': 'Cytavision Sports',
+                        'source_url': 'https://www.formula1.com/en/racing/2026/bahrain.html',
                         'source': 'Formula1.com'
                     }
     except Exception:
         pass
     return {
-        'race': 'Spanish Grand Prix 2026 (Gran Premio de España)',
-        'circuit': 'Madrid / Circuit de Barcelona-Catalunya',
-        'round': 'Round 14',
-        'dates': '11 - 13 Σεπτεμβρίου 2026',
-        'race_day': 'Κυριακή, 13 Σεπτεμβρίου 2026, 16:00 ώρα Κύπρου',
-        'source_url': 'https://www.formula1.com/en/racing/2026/spain.html',
+        'race': 'Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix)',
+        'circuit': 'Bahrain International Circuit, Sakhir',
+        'round': 'Round 16',
+        'dates': '2 - 4 Οκτωβρίου 2026',
+        'race_day': 'Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου',
+        'broadcast': 'Cytavision Sports',
+        'source_url': 'https://www.formula1.com/en/racing/2026/bahrain.html',
         'source': 'Formula1.com'
     }
 
@@ -566,9 +612,20 @@ def scrape_formula1(limit=5):
                     if len(articles) >= limit:
                         break
 
+    last_result_info = {
+        'race': 'Azerbaijan Grand Prix 2026 (Baku City Circuit)',
+        'date': 'Σάββατο 26 Σεπτεμβρίου 2026',
+        'winner': 'George Russell (Mercedes)',
+        'podium': '1ος George Russell (Mercedes), 2ος Max Verstappen (Red Bull), 3ος Isack Hadjar (Red Bull), 4ος Charles Leclerc (Ferrari), 5ος Kimi Antonelli (Mercedes), 6ος Lewis Hamilton (Ferrari)',
+        'summary': 'Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars',
+        'source_url': 'https://www.formula1.com/en/racing/2026/azerbaijan.html',
+        'source': 'Formula1.com / BBC Sport F1'
+    }
+
     return {
         'team': 'Formula 1',
         'sources': sources_used,
+        'last_result': last_result_info,
         'next_fixture': next_race,
         'articles': articles[:limit],
         'fetched_at': get_iso_now()
