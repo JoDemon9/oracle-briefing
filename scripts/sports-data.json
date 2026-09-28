@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "Οι πολυθεσίτες στο \"10\" δίνουν... πολυτέλεια",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oi-polythesites-sto-10-dinoyn-polyteleia",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Η \"αποκάλυψη\" του...καλοκαιριού",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apokalypsi-toykalokairioy",
         "source": "Kerkida.net"
@@ -37,22 +42,12 @@
         "source": "Kerkida.net"
       },
       {
-        "title": "Παναγιώτης-Μουαμέρ!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/panagiotis-moyamer",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Ξεχώρισε...",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xehorise-1",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Θα χρειαστεί...διαχείριση",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tha-hreiasteidiaheirisi",
+        "title": "Βαθμοί και καλό ποδόσφαιρο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/bathmoi-kai-kalo-podosfairo",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-27T15:13:54.630989+00:00"
+    "fetched_at": "2026-09-28T05:28:57.055097+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -107,7 +102,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-27T15:13:56.237951+00:00"
+    "fetched_at": "2026-09-28T05:28:58.575912+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -162,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-27T15:13:58.013651+00:00"
+    "fetched_at": "2026-09-28T05:28:59.480424+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -216,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-27T15:14:02.849699+00:00"
+    "fetched_at": "2026-09-28T05:29:00.817986+00:00"
   }
 }

@@ -1030,5 +1030,45 @@
   "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ccd0/live/83714c70-ba4b-11f1-952f-c5888b744c34.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/27/russia-hits-ukraines-largest-mobile-provider-strikes-data-centres": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/2026-09-27T125004Z_1714356319_RC2LRNAVB4PW_RTRMADP_3_UKRAINE-CRISIS-ATTACK-KYIV-DATA-CENTRES.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/09/28/todays-weather-increased-cloud-rain-possible": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/08/bad-weather.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/28/paphos-police-book-34-for-electric-scooter-infractions": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/04/electric-scooter.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.philenews.com/kosmos/article/1775290/se-tentomeno-schini-i-schesis-israil-tourkias-o-netaniachou-epidioki-na-stili-sto-dikastirio-tis-chagis-ton-erntogan-gia-tous-kourdous-ke-ti-chamas/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/netanyahu-erdogan-apo-oie.jpg",
+    "category": "ΔΙΚΑΙΟΣΥΝΗ"
+  },
+  "https://www.philenews.com/apopsis/arthra-apo-f/article/1774495/antimetopizete-apotelesmatika-i-paratipi-metanastefsi/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2023/03/μεταναστες_ID_493398.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.philenews.com/athlitika/article/1775306/germania-ellada-i-galanolefki-xerane-tin-mansaft-tou-klop-ke-egrapse-istoria-me-chriso-skorer-ton-kourmpeli-ke-0-1/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/kourbelis_233932.jpg",
+    "category": "ΓΕΡΜΑΝΙΑ"
+  },
+  "https://www.bbc.co.uk/news/articles/cw98005ndz7no?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b03e/live/dca633d0-bab6-11f1-aa85-8f10bc212c53.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/ckpq0g7z5pjjo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/2059/live/af01bc20-baa6-11f1-96c0-052f341a8103.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b2f6/live/f8a40890-ba6c-11f1-a109-c7409015a263.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c3grvv7p81lqo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/d390/live/1c1bd500-ba1d-11f1-9108-e745779fe632.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }
