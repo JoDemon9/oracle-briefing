@@ -7,7 +7,7 @@
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
 > * **Αγορές & Tech:** S&P 500 (+0,51%), Nasdaq 100 (+0,42%), Bank of Cyprus (-0,09%), Bitcoin (-1,74%). Tech Watchlist: Apple (+1,53%), Alphabet (+0,61%), TSMC (-0,12%), Microsoft (+3,66%), Meta (-3,33%), NVIDIA (+0,22%), Micron (+0,16%).
-> * **Επικαιρότητα:** F1 leader Antonelli calls Azerbaijan weekend the worst of his season · No excuses for Erasmus as Springboks beaten by Australia in Perth · Inside Yemen's front-line city as Houthis battle for control
+> * **Επικαιρότητα:** Improved govt proposal to be put to hourly-paid workers · Cyprus tourism faces a reset as Stek pushes quality, value and AI · Inside Yemen's front-line city as Houthis battle for control
 > * **Αθλητικά:** Αποτελέσματα & αγώνες για Ομόνοια, Manchester United (Premier League: 10 talking points from the weekend’s action), Real Madrid και Formula 1 (Norris apologises to Colapinto for ban comments).
 
 ---
@@ -46,15 +46,15 @@
 
 ## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] F1 leader Antonelli calls Azerbaijan weekend the worst of his season
-Formula One championship leader Kimi Antonelli called the Azerbaijan Grand Prix weekend the worst of his season after recovering to finish fifth in Saturday’s race following a cost
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Improved govt proposal to be put to hourly-paid workers
+An improved government proposal aimed at resolving the ongoing dispute with hourly-paid public sector workers will be put before employees for a decision, unions said on Monday fol
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/f1-leader-antonelli-calls-azerbaijan-weekend-the-worst-of-his-season)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/improved-govt-proposal-to-be-put-to-hourly-paid-workers)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] No excuses for Erasmus as Springboks beaten by Australia in Perth
-South Africa coach Rassie Erasmus believes his side only have themselves to blame following an epic 42-38 loss to Australia in their one-off test in Perth on Sunday, but praised th
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Cyprus tourism faces a reset as Stek pushes quality, value and AI
+Cyprus’ tourism sector needs to adapt more quickly to a changing international environment, with greater emphasis on quality, higher value per visitor and the use of technology and
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/no-excuses-for-erasmus-as-springboks-beaten-by-australia-in-perth)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/cyprus-tourism-faces-a-reset-as-stek-pushes-quality-value-and-ai)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Inside Yemen's front-line city as Houthis battle for control
 In rare access to Yemen's conflict zone the BBC travels to the front line with pro-government soldiers.
