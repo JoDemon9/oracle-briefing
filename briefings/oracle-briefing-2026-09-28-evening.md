@@ -6,8 +6,8 @@
 
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
-> * **Αγορές & Tech:** S&P 500 (+0,51%), Nasdaq 100 (+0,42%), Bank of Cyprus (-0,09%), Bitcoin (-1,74%). Tech Watchlist: Apple (+1,53%), Alphabet (+0,61%), TSMC (-0,12%), Microsoft (+3,66%), Meta (-3,33%), NVIDIA (+0,22%), Micron (+0,16%).
-> * **Επικαιρότητα:** Improved govt proposal to be put to hourly-paid workers · Cyprus tourism faces a reset as Stek pushes quality, value and AI · Inside Yemen's front-line city as Houthis battle for control
+> * **Αγορές & Tech:** S&P 500 (-0,77%), Nasdaq 100 (-1,08%), Bank of Cyprus (+0,56%), Bitcoin (-1,57%). Tech Watchlist: Apple (-0,78%), Alphabet (-0,56%), TSMC (+0,50%), Microsoft (-1,35%), Meta (-4,79%), NVIDIA (+1,68%), Micron (-2,61%).
+> * **Επικαιρότητα:** Iran denies involvement in US-run airbase plot after UK nationals held · MPs say traffic demands need a better solution · Inside Yemen's front-line city as Houthis battle for control
 > * **Αθλητικά:** Αποτελέσματα & αγώνες για Ομόνοια, Manchester United (Premier League: 10 talking points from the weekend’s action), Real Madrid και Formula 1 (Norris apologises to Colapinto for ban comments).
 
 ---
@@ -23,38 +23,38 @@
 ### 📊 Κύριοι Δείκτες, Συνάλλαγμα & Crypto
 | Αγορά / Τίτλος | Κλείσιμο | Μεταβολή | Σχόλιο |
 | :--- | :--- | :--- | :--- |
-| **S&P 500 (SPX)** | 7.743,41 | +0,51% | Ήπια διόρθωση εν αναμονή στοιχείων πληθωρισμού |
-| **Nasdaq 100 (NDQ)** | 30.608,13 | +0,42% | Πιέσεις στους τεχνολογικούς τίτλους υψηλού beta |
-| **Bitcoin (BTC/USD)** | $82.983,72 | -1,74% | Συσσώρευση στην περιοχή των $77k |
-| **EUR/USD** | 1,14 | -0,16% | Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ |
-| **EUR/GBP** | 0,86 | -0,24% | Σταθεροποίηση εντός στενού εύρους διακύμανσης |
-| **Bank of Cyprus (BOCH)** | €10,73 | -0,09% | Ισχυρό κλείσιμο σε υψηλό ημέρας στο ΧΑΚ/ΧΑ |
-| **Brent Crude** | $100,95 | +3,60% | Εδραίωση πάνω από το ψυχολογικό όριο των $100 |
+| **S&P 500 (SPX)** | 7.683,69 | -0,77% | Ήπια διόρθωση εν αναμονή στοιχείων πληθωρισμού |
+| **Nasdaq 100 (NDQ)** | 30.276,81 | -1,08% | Πιέσεις στους τεχνολογικούς τίτλους υψηλού beta |
+| **Bitcoin (BTC/USD)** | $83.128,55 | -1,57% | Συσσώρευση στην περιοχή των $77k |
+| **EUR/USD** | 1,14 | -0,14% | Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ |
+| **EUR/GBP** | 0,86 | -0,27% | Σταθεροποίηση εντός στενού εύρους διακύμανσης |
+| **Bank of Cyprus (BOCH)** | €10,80 | +0,56% | Ισχυρό κλείσιμο σε υψηλό ημέρας στο ΧΑΚ/ΧΑ |
+| **Brent Crude** | $98,66 | +0,85% | Εδραίωση πάνω από το ψυχολογικό όριο των $100 |
 
 ### 💻 Μετοχές Τεχνολογίας (Tech Watchlist)
 | Μετοχή / Ticker | Κλείσιμο | Μεταβολή | Σχόλιο |
 | :--- | :--- | :--- | :--- |
-| **TSMC (TSM)** | $450,61 | -0,12% | Ήπια υποχώρηση στον παγκόσμιο κλάδο ημιαγωγών |
-| **NVIDIA (NVDA)** | $225,07 | +0,22% | Κατοχύρωση κερδών μετά το πολυήμερο ράλι |
-| **Alphabet (GOOG)** | $341,08 | +0,61% | Σταθεροποίηση και ανθεκτικότητα στο οικοσύστημα AI |
-| **Apple (AAPL)** | $341,07 | +1,53% | Συσσώρευση ενόψει νέου κύκλου ανακοινώσεων υλικού & AI |
-| **Microsoft (MSFT)** | $516,17 | +3,66% | Διατήρηση υψηλών επιπέδων σε εταιρικό cloud & Azure |
-| **Micron (MU)** | $1.082,28 | +0,16% | Ισχυρή ζήτηση μνημών HBM για επιταχυντές AI |
-| **Meta (META)** | $751,66 | -3,33% | Θετική διαφοροποίηση χάρη στις αποδόσεις διαφήμισης & Llama |
+| **TSMC (TSM)** | $452,88 | +0,50% | Ήπια υποχώρηση στον παγκόσμιο κλάδο ημιαγωγών |
+| **NVIDIA (NVDA)** | $228,86 | +1,68% | Κατοχύρωση κερδών μετά το πολυήμερο ράλι |
+| **Alphabet (GOOG)** | $339,16 | -0,56% | Σταθεροποίηση και ανθεκτικότητα στο οικοσύστημα AI |
+| **Apple (AAPL)** | $338,40 | -0,78% | Συσσώρευση ενόψει νέου κύκλου ανακοινώσεων υλικού & AI |
+| **Microsoft (MSFT)** | $509,22 | -1,35% | Διατήρηση υψηλών επιπέδων σε εταιρικό cloud & Azure |
+| **Micron (MU)** | $1.053,98 | -2,61% | Ισχυρή ζήτηση μνημών HBM για επιταχυντές AI |
+| **Meta (META)** | $715,62 | -4,79% | Θετική διαφοροποίηση χάρη στις αποδόσεις διαφήμισης & Llama |
 
 ---
 
 ## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Improved govt proposal to be put to hourly-paid workers
-An improved government proposal aimed at resolving the ongoing dispute with hourly-paid public sector workers will be put before employees for a decision, unions said on Monday fol
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Iran denies involvement in US-run airbase plot after UK nationals held
+Iran denied involvement on Monday in a suspected plot to attack a British airbase used by the United States to strike Iranian sites, and police said five men arrested over explosiv
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/improved-govt-proposal-to-be-put-to-hourly-paid-workers)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/iran-denies-involvement-in-us-run-airbase-plot-after-uk-nationals-held)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Cyprus tourism faces a reset as Stek pushes quality, value and AI
-Cyprus’ tourism sector needs to adapt more quickly to a changing international environment, with greater emphasis on quality, higher value per visitor and the use of technology and
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] MPs say traffic demands need a better solution
+MPs said no on Monday to the release of €146,000 to upgrade traffic camera systems and to the photo radar list, which would enable authorities to collect outstanding fines at cross
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/cyprus-tourism-faces-a-reset-as-stek-pushes-quality-value-and-ai)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/09/28/mps-say-traffic-demands-need-a-better-solution)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Inside Yemen's front-line city as Houthis battle for control
 In rare access to Yemen's conflict zone the BBC travels to the front line with pro-government soldiers.
@@ -79,7 +79,7 @@ South African President Cyril Ramaphosa says the murders are a "stain on our nat
 ### ΟΜΟΝΟΙΑ
 *   **Τελευταίο αποτέλεσμα:** {'match': 'Ομόνοια Λευκωσίας – Krasava ΕΝΥ Διγενής Ύψωνα', 'score': '4-1', 'competition': 'Cyprus League by Stoiximan (4η αγωνιστική)', 'date': 'Κυριακή 20 Σεπτεμβρίου 2026', 'venue': 'Στάδιο ΓΣΠ', 'scorers': "Κουλιμπαλί (15'), Τανάσε (57'), Ντουβέρν (77'), Τάνκοβιτς (90'+4') — Μπούντνικ (33')", 'summary': 'Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)', 'source_url': 'https://www.cfa.com.cy/Gr/news/53723', 'source': 'ΚΟΠ / CFA'}
 *   **Επόμενος αγώνας:** 19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026)
-*   **Ρεπορτάζ & Νέα:** Ασφάλεια και στους..."στόπερ"
+*   **Ρεπορτάζ & Νέα:** 90λεπτο Ντράγκομιρ, πάγκο Τανάσε και Σούνιτς
 *   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026)
 *   **Πηγή:** [ΚΟΠ / CFA](https://www.cfa.com.cy/Gr/news/53723)
 
@@ -93,7 +93,7 @@ South African President Cyril Ramaphosa says the murders are a "stain on our nat
 ### Real Madrid
 *   **Τελευταίο αποτέλεσμα:** Mbappé medical report: hyperextension of the posterior capsule of the left knee
 *   **Επόμενος αγώνας:** Spanish La Liga: Real Madrid versus Villarreal — 22:00 (Saturday 10th October 2026)
-*   **Ρεπορτάζ & Νέα:** Mbappé medical report: hyperextension of the posterior capsule of the left knee
+*   **Ρεπορτάζ & Νέα:** Barça takes Florentino to court: the date set for the conciliation hearing
 *   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026)
 *   **Πηγή:** [Marca / BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)
 

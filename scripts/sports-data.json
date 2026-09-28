@@ -27,22 +27,22 @@
     },
     "articles": [
       {
-        "title": "Ασφάλεια και στους...\"στόπερ\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/asfaleia-kai-stoysstoper",
+        "title": "90λεπτο Ντράγκομιρ, πάγκο Τανάσε και Σούνιτς",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/90lepto-ntragkomir-pagko-tanase-kai-soynits",
         "source": "Kerkida.net"
       },
       {
-        "title": "Οι πολυθεσίτες στο \"10\" δίνουν... πολυτέλεια",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oi-polythesites-sto-10-dinoyn-polyteleia",
+        "title": "Το καθήκον του/Φαμπιάνο",
+        "url": "https://www.kerkida.net/eidiseis/kop-ethniki/omonoia/kathikon-toyfampiano",
         "source": "Kerkida.net"
       },
       {
-        "title": "Βαθμοί και καλό ποδόσφαιρο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/bathmoi-kai-kalo-podosfairo",
+        "title": "Ξανά...δουλειά",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xanadoyleia",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-28T11:07:14.654670+00:00"
+    "fetched_at": "2026-09-28T22:15:47.569238+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -97,7 +97,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-28T11:07:16.289503+00:00"
+    "fetched_at": "2026-09-28T22:15:48.841292+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -127,6 +127,11 @@
     },
     "articles": [
       {
+        "title": "Barça takes Florentino to court: the date set for the conciliation hearing",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/09/28/barca-takes-florentino-to-court-the-date-set-for-the-conciliation-hearing.html",
+        "source": "Marca"
+      },
+      {
         "title": "Mbappé medical report: hyperextension of the posterior capsule of the left knee",
         "url": "https://www.marca.com/en/football/spanish-football/2026/09/26/mbappe-medical-report-hyperextension-of-the-posterior-capsule-of-the-left-knee.html",
         "source": "Marca"
@@ -145,14 +150,9 @@
         "title": "Mbappé scores the first goal of the Zidane era... and leaves injured",
         "url": "https://www.marca.com/en/football/2026/09/25/mbappe-scores-the-first-goal-of-the-zidane-and-leaves-injured.html",
         "source": "Marca"
-      },
-      {
-        "title": "Roberto Carlos explains his ruin: \"They left my account at zero... I lost 99% of what I earned in football\"",
-        "url": "https://www.marca.com/en/football/2026/09/25/roberto-carlos-explains-his-ruin-they-left-my-account-at-zero-i-lost-99-of-what-i-earned-in-football.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-28T11:07:18.031919+00:00"
+    "fetched_at": "2026-09-28T22:15:49.691046+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -206,6 +206,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-28T11:07:19.544500+00:00"
+    "fetched_at": "2026-09-28T22:15:50.596526+00:00"
   }
 }
