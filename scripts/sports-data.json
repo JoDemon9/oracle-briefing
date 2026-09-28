@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "Ασφάλεια και στους...\"στόπερ\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/asfaleia-kai-stoysstoper",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Οι πολυθεσίτες στο \"10\" δίνουν... πολυτέλεια",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oi-polythesites-sto-10-dinoyn-polyteleia",
         "source": "Kerkida.net"
@@ -37,17 +42,17 @@
         "source": "Kerkida.net"
       },
       {
-        "title": "Το \"αντίο\" του Βίκτωρος: \"'Όμορφες αναμνήσεις και σημαντικές εμπειρίες\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/antio-toy-biktoros-omorfes-anamniseis-kai-simantikes-empeiries",
-        "source": "Kerkida.net"
-      },
-      {
         "title": "Βαθμοί και καλό ποδόσφαιρο",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/bathmoi-kai-kalo-podosfairo",
         "source": "Kerkida.net"
+      },
+      {
+        "title": "Το \"αντίο\" του Βίκτωρος: \"'Όμορφες αναμνήσεις και σημαντικές εμπειρίες\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/antio-toy-biktoros-omorfes-anamniseis-kai-simantikes-empeiries",
+        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-28T05:28:57.055097+00:00"
+    "fetched_at": "2026-09-28T08:07:15.285450+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -102,7 +107,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-28T05:28:58.575912+00:00"
+    "fetched_at": "2026-09-28T08:07:16.436841+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +162,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-28T05:28:59.480424+00:00"
+    "fetched_at": "2026-09-28T08:07:17.946045+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,7 +191,7 @@
     },
     "articles": [
       {
-        "title": "Horner a distraction for Ferrari says Vasseur",
+        "title": "Horner a distraction for Ferrari, says Vasseur",
         "url": "https://www.bbc.com/sport/formula1/articles/cvwyz791096jo",
         "source": "BBC Sport F1"
       },
@@ -211,6 +216,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-28T05:29:00.817986+00:00"
+    "fetched_at": "2026-09-28T08:07:19.560628+00:00"
   }
 }
