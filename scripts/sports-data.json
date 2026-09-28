@@ -37,22 +37,12 @@
         "source": "Kerkida.net"
       },
       {
-        "title": "Η \"αποκάλυψη\" του...καλοκαιριού",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apokalypsi-toykalokairioy",
-        "source": "Kerkida.net"
-      },
-      {
         "title": "Βαθμοί και καλό ποδόσφαιρο",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/bathmoi-kai-kalo-podosfairo",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Το \"αντίο\" του Βίκτωρος: \"'Όμορφες αναμνήσεις και σημαντικές εμπειρίες\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/antio-toy-biktoros-omorfes-anamniseis-kai-simantikes-empeiries",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-28T08:07:15.285450+00:00"
+    "fetched_at": "2026-09-28T11:07:14.654670+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -107,7 +97,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-28T08:07:16.436841+00:00"
+    "fetched_at": "2026-09-28T11:07:16.289503+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -162,7 +152,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-28T08:07:17.946045+00:00"
+    "fetched_at": "2026-09-28T11:07:18.031919+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -191,6 +181,11 @@
     },
     "articles": [
       {
+        "title": "Norris apologises to Colapinto for ban comments",
+        "url": "https://www.bbc.com/sport/formula1/articles/cm87vz5w4jwro",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Horner a distraction for Ferrari, says Vasseur",
         "url": "https://www.bbc.com/sport/formula1/articles/cvwyz791096jo",
         "source": "BBC Sport F1"
@@ -198,11 +193,6 @@
       {
         "title": "'Mr Saturday' Russell 'comes through other side after real tough period'",
         "url": "https://www.bbc.com/sport/formula1/articles/ckly558q6jeqo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Norris says Colapinto should be banned after accident",
-        "url": "https://www.bbc.com/sport/formula1/articles/c9vgyyd5n4yjo",
         "source": "BBC Sport F1"
       },
       {
@@ -216,6 +206,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-28T08:07:19.560628+00:00"
+    "fetched_at": "2026-09-28T11:07:19.544500+00:00"
   }
 }

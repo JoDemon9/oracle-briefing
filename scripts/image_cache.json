@@ -1034,5 +1034,25 @@
   "https://www.bbc.co.uk/news/articles/ckpq0g7z5pjjo": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/2059/live/af01bc20-baa6-11f1-96c0-052f341a8103.jpg",
     "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+  },
+  "https://cyprus-mail.com/2026/09/28/lexus-cycling-dream-team-honoured-for-2025-ride-of-love-contribution": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Lexus-Cycle-Dream-Team.jpeg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/28/cyprus-fuel-sales-fall-1-4-per-cent-as-pump-prices-climb": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/03/petrol-fuel-oil-station.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/28/britain-seeks-compromise-over-blocked-orange-order-march-in-northern-ireland": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/2026-09-28T080256Z_896425284_RC2URNALKBRV_RTRMADP_3_NIRELAND-PARADE.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cw98005ndz7no?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b03e/live/dca633d0-bab6-11f1-aa85-8f10bc212c53.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cxp84g2ly1mjo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/0b3c/live/3b3dc640-bb09-11f1-913f-9dfd502f2fcc.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
