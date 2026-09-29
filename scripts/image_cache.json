@@ -1098,5 +1098,25 @@
   "https://www.bbc.co.uk/news/articles/cmkg8qgy9d9lo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/2a6a/live/e5e03d10-bb97-11f1-8663-cd23eb071822.jpg",
     "category": "ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ"
+  },
+  "https://cyprus-mail.com/2026/09/29/openai-shelves-new-ai-model-release-over-safety-concerns": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/2026-09-24T234900Z_1930453634_RC2ALNA5L3CJ_RTRMADP_3_AI-OPENAI-CYBERSECURITY.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/29/using-old-election-playbook-netanyahu-projects-image-as-israels-protector": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/bibi.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8cc7/live/fb735b70-bbfc-11f1-90b9-913e4354ed35.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/ck9qr8jy8ynyo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/681a/live/874ab620-bbf8-11f1-bd21-bdf910f2cec6.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cvlylj41egxgo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/2d47/live/e8123270-bbfe-11f1-bc1f-3f186ca4140c.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
