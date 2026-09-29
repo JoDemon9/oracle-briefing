@@ -1078,5 +1078,25 @@
   "https://www.cnbc.com/2026/09/29/india-investment-billions-tech-ai-us-china.html": {
     "image": "https://image.cnbcfm.com/api/v1/image/108369161-1790655388031-gettyimages-2293947794-AVaishnav_Global_Fintech_Fest_GFF_in_Mumbai_28.jpeg?v=1790655423&amp;w=1920&amp;h=1080",
     "category": "ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ & ΟΗΕ"
+  },
+  "https://cyprus-mail.com/2026/09/29/cyprus-v-latvia-ends-in-goalless-draw": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/cy-lat.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/29/israel-kills-senior-hamas-commander-in-gaza-strike": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/hamas.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/29/cyprus-cement-profit-climbs-to-e5-4m-as-vassiliko-contribution-rises": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/Cement.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cm5y5nynl75ko?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/1ac1/live/580d3570-bbc8-11f1-bc1f-3f186ca4140c.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cmkg8qgy9d9lo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/2a6a/live/e5e03d10-bb97-11f1-8663-cd23eb071822.jpg",
+    "category": "ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ"
   }
 }
