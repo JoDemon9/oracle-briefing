@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "Κι άλλες...τέτοιες",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ki-allestetoies",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "90λεπτο Ντράγκομιρ, πάγκο Τανάσε και Σούνιτς",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/90lepto-ntragkomir-pagko-tanase-kai-soynits",
         "source": "Kerkida.net"
@@ -42,7 +47,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-28T22:15:47.569238+00:00"
+    "fetched_at": "2026-09-29T05:48:00.672981+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -97,7 +102,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-28T22:15:48.841292+00:00"
+    "fetched_at": "2026-09-29T05:48:02.059650+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -152,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-28T22:15:49.691046+00:00"
+    "fetched_at": "2026-09-29T05:48:02.888773+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -206,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-28T22:15:50.596526+00:00"
+    "fetched_at": "2026-09-29T05:48:04.039732+00:00"
   }
 }
