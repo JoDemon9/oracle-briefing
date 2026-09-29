@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "To \"πράσινο\" πλάνο για τη νέα σεζόν!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/prasino-plano-gia-ti-nea-sezon",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Κι άλλες...τέτοιες",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ki-allestetoies",
         "source": "Kerkida.net"
@@ -47,7 +52,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-29T05:48:00.672981+00:00"
+    "fetched_at": "2026-09-29T07:51:23.008858+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -77,6 +82,11 @@
     },
     "articles": [
       {
+        "title": "Every saint has a past: how man at heart of City’s first scandal became a United hero",
+        "url": "https://www.theguardian.com/football/2026/sep/29/every-saint-has-a-past-lessons-from-citys-first-scandal-in-1906",
+        "source": "The Guardian"
+      },
+      {
         "title": "Manchester United report seventh straight annual loss and sell fans £125 grass clumps",
         "url": "https://www.theguardian.com/football/2026/sep/23/manchester-united-seventh-straight-annual-loss-record-revenue-financial-results",
         "source": "The Guardian"
@@ -95,14 +105,9 @@
         "title": "Carrick disputes Cunha’s claim that Manchester United lacked energy in Fulham draw",
         "url": "https://www.theguardian.com/football/2026/sep/20/michael-carrick-matheus-cunha-fulham-manchester-united-premier-league",
         "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United’s engine room runs out of steam as fans voice frustration",
-        "url": "https://www.theguardian.com/football/2026/sep/20/manchester-uniteds-engine-room-runs-out-of-puff-as-fans-begin-to-voice-frustration",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-29T05:48:02.059650+00:00"
+    "fetched_at": "2026-09-29T07:51:24.314783+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +162,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-29T05:48:02.888773+00:00"
+    "fetched_at": "2026-09-29T07:51:25.863036+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +191,11 @@
     },
     "articles": [
       {
+        "title": "Does Horner have a chance of Ferrari job? F1 Q&A",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckp84426lmggo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Norris apologises to Colapinto for ban comments",
         "url": "https://www.bbc.com/sport/formula1/articles/cm87vz5w4jwro",
         "source": "BBC Sport F1"
@@ -204,13 +214,8 @@
         "title": "Russell wins despite late Verstappen challenge",
         "url": "https://www.bbc.com/sport/formula1/articles/ck8d33760j63o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Andrew Benson Q&A: Send us your questions",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-29T05:48:04.039732+00:00"
+    "fetched_at": "2026-09-29T07:51:28.064710+00:00"
   }
 }
