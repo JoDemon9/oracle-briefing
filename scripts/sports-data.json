@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Θα τον... χρειαστεί",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tha-ton-hreiastei-0",
+        "title": "Θέλει... προσοχή",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thelei-prosohi-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "To \"πράσινο\" πλάνο για τη νέα σεζόν!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/prasino-plano-gia-ti-nea-sezon",
+        "title": "Έμειναν στο μηδέν...",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/emeinan-sto-miden",
         "source": "Kerkida.net"
       },
       {
-        "title": "Κι άλλες...τέτοιες",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ki-allestetoies",
+        "title": "Μαζί... τα φιλαράκια!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/mazi-ta-filarakia-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "90λεπτο Ντράγκομιρ, πάγκο Τανάσε και Σούνιτς",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/90lepto-ntragkomir-pagko-tanase-kai-soynits",
+        "title": "Ζεσταίνεται ο...\"El Toro\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/zestainetai-oel-toro",
         "source": "Kerkida.net"
       },
       {
-        "title": "Το καθήκον του/Φαμπιάνο",
-        "url": "https://www.kerkida.net/eidiseis/kop-ethniki/omonoia/kathikon-toyfampiano",
+        "title": "«Ήρθα σε μια ομάδα με υψηλούς στόχους, που κάθε χρόνο διεκδικεί τα πάντα.\"",
+        "url": "https://www.kerkida.net/eidiseis/alla-spor/petosfaira/omonoia/irtha-se-mia-omada-me-ypsiloys-stohoys-poy-kathe-hrono-diekdikei-ta-panta",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-29T10:50:05.922190+00:00"
+    "fetched_at": "2026-09-30T07:30:50.249604+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -82,6 +82,16 @@
     },
     "articles": [
       {
+        "title": "Wayne Rooney says Manchester City should not be stripped of titles for rules breach",
+        "url": "https://www.theguardian.com/football/2026/sep/29/wayne-rooney-manchester-city-united-premier-league-titles-breaching-financial-rules",
+        "source": "The Guardian"
+      },
+      {
+        "title": "How important is a fast start for teams chasing the Premier League title?",
+        "url": "https://www.theguardian.com/football/2026/sep/29/premier-league-fast-start-teams-manchester-city",
+        "source": "The Guardian"
+      },
+      {
         "title": "Every saint has a past: how man at heart of City’s first scandal became a United hero",
         "url": "https://www.theguardian.com/football/2026/sep/29/every-saint-has-a-past-lessons-from-citys-first-scandal-in-1906",
         "source": "The Guardian"
@@ -95,19 +105,9 @@
         "title": "Slip sliding away: football season-ticket holders fear falling down pecking order",
         "url": "https://www.theguardian.com/football/2026/sep/23/premier-league-season-ticket-holders-pecking-order-new-fans-football-tourists",
         "source": "The Guardian"
-      },
-      {
-        "title": "Premier League: 10 talking points from the weekend’s action",
-        "url": "https://www.theguardian.com/football/2026/sep/21/premier-league-10-talking-points-from-the-weekends-action",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Carrick disputes Cunha’s claim that Manchester United lacked energy in Fulham draw",
-        "url": "https://www.theguardian.com/football/2026/sep/20/michael-carrick-matheus-cunha-fulham-manchester-united-premier-league",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-29T10:50:07.343759+00:00"
+    "fetched_at": "2026-09-30T07:30:51.482646+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -162,7 +162,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-29T10:50:08.957244+00:00"
+    "fetched_at": "2026-09-30T07:30:52.256417+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -191,6 +191,11 @@
     },
     "articles": [
       {
+        "title": "'I still feel as fast as anybody' - Alonso on why he's staying in F1",
+        "url": "https://www.bbc.com/sport/formula1/articles/cde0gz51g36o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Ferrari back Vasseur amid speculation over future",
         "url": "https://www.bbc.com/sport/formula1/articles/cm1dlv4710g9o",
         "source": "BBC Sport F1"
@@ -209,13 +214,8 @@
         "title": "Horner a distraction for Ferrari, says Vasseur",
         "url": "https://www.bbc.com/sport/formula1/articles/cvwyz791096jo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "'Mr Saturday' Russell 'comes through other side after real tough period'",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckly558q6jeqo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-29T10:50:10.513811+00:00"
+    "fetched_at": "2026-09-30T07:30:53.643755+00:00"
   }
 }

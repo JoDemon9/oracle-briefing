@@ -1,115 +1,192 @@
 [
   {
+    "date": "2026-09-30",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Visa says AI will reshape European banking as early adopters pull ahead",
+    "snippet": "Artificial intelligence is set to fundamentally reshape retail banking in Europe by 2030, with early adopters expected to pull significantly ahead of competitors, according to new...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Tennessee set to execute woman for first time in 200 years [Επικαιρότητα]",
+    "snippet": "Death row inmate Christa Pike, convicted of murdering a schoolmate three decades ago, is due to be executed by lethal injection in Tennessee on Wednesday, becom...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. ALL unlimited for only €14,99 from Epic [Επικαιρότητα]",
+    "snippet": "Do you want it ALL unlimited? At a low price? And without a contractual duration commitment? Then Epic’s Unlimited Plan is for you. Unlimited data, minutes and...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Diverted flydubai flight to Israel is not believed to be a hijacking incident, Israeli prime minister’s office said [Επικαιρότητα]",
+    "snippet": "The diversion to Saudi Arabia of aflydubai flight to Israel on Wednesday is not believed to be a hijacking incident, a spokesperson for the Israeli prime minist...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Hidden lithium batteries drive 80 per cent of dangerous goods incidents, IATA warns [Επικαιρότητα]",
+    "snippet": "Around 80 per cent of dangerous goods incidents reported to IATA in the first half of 2025 involved undeclared or hidden hazardous goods, prompting the airline...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🌍 Διεθνή",
+    "title": "1. Chinese AI tool told researchers how to make bioweapons [Διεθνή]",
+    "snippet": "Mindgard said it discovered in July that Kimi models K2.6 and K3 Swarm could evade developer's safety limits....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🌍 Διεθνή",
+    "title": "2. Three takeaways from Trump's 'Super Intelligence' summit [Διεθνή]",
+    "snippet": "The meeting at the White House came as some tech bosses and experts have called for tighter rules around AI....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🌍 Διεθνή",
+    "title": "3. Girl has multiple surgeries to control infections after strike in Gaza [Διεθνή]",
+    "snippet": "Witnesses say Raseel's tent was hit by an Israeli helicopter strike. Israel’s military says it has no record of the attack....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🌍 Διεθνή",
+    "title": "4. South Korea demands apology from Pyongyang for landmine blasts that injured three [Διεθνή]",
+    "snippet": "Blasts in the Demilitarised Zone (DMZ) injured three South Korean personnel earlier this month....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "🌍 Διεθνή",
+    "title": "5. South Africa to clean up high-risk areas after 12 women killed [Διεθνή]",
+    "snippet": "The deaths sparked a national outcry about the scale of violence against women in the country....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-09-30",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-09-29",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Παράλληλες Έμμεσες Διαπραγματεύσεις ΗΠΑ - Ιράν μέσω Διαμεσολαβητών για τα Στενά του Ορμούζ: Ρεκόρ Εξαγωγών Πετρελαίου εν μέσω Πολέμου, Εμμονή Τραμπ κατά της Χαλάρωσης Κυρώσεων και Νέα Άνοδος Αποδόσεων Ομολόγων [Εξέλιξη] [Επιβεβαιωμένο]",
     "snippet": "Σε ένα σύνθετο και λεπτό διπλωματικό πόκερ υψηλού ρίσκου εισέρχεται η κρίση στον Περσικό Κόλπο, καθώς Ουάσιγκτον και Τεχεράνη διεξάγουν χωριστές, έμμεσες επαφές μέσω διαμεσολαβητών...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-29.html#top-story"
   },
   {
     "date": "2026-09-29",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Πολιτικό Σκηνικό & Προεδρικές 2028: Εσωκομματική θύελλα στον ΔΗΣΥ και συνέντευξη τύπου Αβέρωφ Νεοφύτου: «Δεν κατεβαίνω υποψήφιος για… υποψήφιος – Το δις εξαμαρτείν ουκ ανδρός σοφού» [Επιβεβαιωμένο]",
     "snippet": "Πολιτικό σεισμό στην Πινδάρου προκάλεσε η έκτακτη δημοσιογραφική διάσκεψη του τέως προέδρου του ΔΗΣΥ Αβέρωφ Νεοφύτου, ο οποίος ξεκαθάρισε με κατηγορηματικό τρόπ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-29.html#cyprus"
   },
   {
     "date": "2026-09-29",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Θεσμοί & Δημοκρατία: Παρέμβαση Προέδρου Χριστοδουλίδη στο Cyprus Forum: «Η Δημοκρατία μας δεν βρίσκεται σε παρακμή, αλλά δοκιμάζεται καθημερινά» — «Δεν είμαστε σε αδιέξοδο στο Κυπριακό» [Επιβεβαιωμένο]",
     "snippet": "Σε μια βαρυσήμαντη ομιλία κατά την έναρξη των εργασιών του Cyprus Forum 2026, ο Πρόεδρος της Δημοκρατίας Νίκος Χριστοδουλίδης απάντησε στις επικρίσεις περί θεσμ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-29.html#cyprus"
   },
   {
     "date": "2026-09-29",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Ενέργεια & Ηλεκτρική Διασύνδεση: Σε κρίσιμη καμπή το Great Sea Interconnector (GSI): Το μοντέλο όδευσης του Blue Raman και οι νέες Navtex στην Ανατολική Μεσόγειο [Επιβεβαιωμένο]",
     "snippet": "Σε φάση καθοριστικών αποφάσεων εισέρχεται το εμβληματικό έργο της ηλεκτρικής διασύνδεσης Κύπρου–Ελλάδας (Great Sea Interconnector), καθώς οι τεχνικές ομάδες του...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-29.html#cyprus"
   },
   {
     "date": "2026-09-29",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Ναυτιλία & Διεθνής Διπλωματία: Στην Ουάσιγκτον ο Γενικός Διευθυντής του Κυπριακού Ναυτιλιακού Επιμελητηρίου Θωμάς Καζάκος — Η ελευθερία της ναυσιπλοΐας στο επίκεντρο των επαφών [Επιβεβαιωμένο]",
     "snippet": "Σειρά κρίσιμων συναντήσεων με ανώτατους αξιωματούχους του Στέιτ Ντιπάρτμεντ, του αμερικανικού Υπουργείου Μεταφορών και της Ακτοφυλακής των ΗΠΑ πραγματοποιεί στη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-29.html#cyprus"
   },
   {
     "date": "2026-09-29",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Ευρωπαϊκά Κονδύλια & Οικονομία: Ραφαέλε Φίτο (Ευρωπαίος Επίτροπος): Η Κύπρος οφείλει να προετοιμαστεί άμεσα για το νέο ευρωπαϊκό πολυετές χρηματοδοτικό πλαίσιο μετά το 2027 [Επιβεβαιωμένο]",
     "snippet": "Σαφές μήνυμα προς την κυπριακή πολιτεία και την επιχειρηματική κοινότητα απηύθυνε ο Ευρωπαίος Επίτροπος Συνοχής και Μεταρρυθμίσεων Ραφαέλε Φίτο, μιλώντας στο πλ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-29.html#cyprus"
   },
   {
     "date": "2026-09-29",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ακίνητα & Ενοίκια Λεμεσού: Εβδομαδιαίο Δελτίο Αγοράς Ακινήτων Λεμεσού: Επενδυτικές ευκαιρίες 2Υ/Δ σε Αγία Φύλα, Κάψαλο και Κάτω Πολεμίδια με αποδόσεις μίσθωσης άνω του 6% εν μέσω σταθεροποίησης τιμών [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Το εβδομαδιαίο μητρώο καταγραφής κατοικιών της Λεμεσού αναδεικνύει ποιοτικές επενδυτικές ευκαιρίες σε οικιστικές γειτονιές της μείζονος πόλης, με τον άξονα Αγία...",
-    "url": "#cyprus"
+    "url": "briefings/2026-09-29.html#cyprus"
   },
   {
     "date": "2026-09-29",
     "section": "🌍 Διεθνή",
     "title": "1. Τεχνητή Νοημοσύνη & Ασφάλεια: Η OpenAI παγώνει την κυκλοφορία του νέου κορυφαίου μοντέλου (GPT-6.1 Astra) λόγω κρίσιμων ζητημάτων ασφάλειας και αξιοπιστίας [Επιβεβαιωμένο]",
     "snippet": "Σε μια ασυνήθιστη και βαρύνουσα απόφαση προχώρησε η OpenAI, παγώνοντας επ' αόριστον την προγραμματισμένη διάθεση του νέου προηγμένου μοντέλου της (GPT-6.1 Astra...",
-    "url": "#world"
+    "url": "briefings/2026-09-29.html#world"
   },
   {
     "date": "2026-09-29",
     "section": "🌍 Διεθνή",
     "title": "2. Νομισματική Πολιτική & Πληθωρισμός: Η Κεντρική Τράπεζα της Αυστραλίας αυξάνει τα επιτόκια σε υψηλό 15ετίας — Προειδοποίηση για νέες αυξήσεις λόγω επίμονου πληθωρισμού υπηρεσιών [Επιβεβαιωμένο]",
     "snippet": "Αιφνιδιασμό στις διεθνείς αγορές ομολόγων προκάλεσε η Κεντρική Τράπεζα της Αυστραλίας (RBA), αυξάνοντας το βασικό της επιτόκιο δανεισμού κατά 25 μονάδες βάσης κ...",
-    "url": "#world"
+    "url": "briefings/2026-09-29.html#world"
   },
   {
     "date": "2026-09-29",
     "section": "🌍 Διεθνή",
     "title": "3. Υποδομές AI & Big Tech: Η Samsung επενδύει $1 δισεκατομμύριο στην Helix Digital με τη στήριξη των Nvidia και KKR για υπερ-κέντρα δεδομένων AI [Επιβεβαιωμένο]",
     "snippet": "Σε μια στρατηγική τοποθέτηση μαμούθ προχώρησε ο νοτιοκορεατικός κολοσσός Samsung Electronics, δεσμεύοντας $1 δισ. για τη χρηματοδότηση της εταιρείας υποδομών τε...",
-    "url": "#world"
+    "url": "briefings/2026-09-29.html#world"
   },
   {
     "date": "2026-09-29",
     "section": "🌍 Διεθνή",
     "title": "4. Κοινωνική Πολιτική & Στέγαση: Δικαίωση για την 87χρονη έξωση στη Μαδρίτη: Επιστρέφει στην κατοικία της μετά την κατακραυγή και τον καταυλισμό αγανάκτησης [Επιβεβαιωμένο]",
     "snippet": "Αίσιο τέλος έλαβε η υπόθεση της 87χρονης συνταξιούχου στη Μαδρίτη, της οποίας η βίαιη έξωση από το σπίτι όπου διέμενε επί 50 χρόνια είχε πυροδοτήσει μαζικές δια...",
-    "url": "#world"
+    "url": "briefings/2026-09-29.html#world"
   },
   {
     "date": "2026-09-29",
     "section": "🌍 Διεθνή",
     "title": "5. Τεχνολογική Κυριαρχία: Η Ινδία κινητοποιεί επενδυτικό πακέτο $25 δισεκατομμυρίων για Deep Tech και ημιαγωγούς απέναντι στον ανταγωνισμό ΗΠΑ-Κίνας [Επιβεβαιωμένο]",
     "snippet": "Σε μια γιγαντιαία εθνική πρωτοβουλία για την κατοχύρωση τεχνολογικής αυτάρκειας προχωρά η κυβέρνηση της Ινδίας, εγκρίνοντας κρατικό επενδυτικό πακέτο ύψους $25...",
-    "url": "#world"
+    "url": "briefings/2026-09-29.html#world"
   },
   {
     "date": "2026-09-29",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Σεπτεμβρίου 2026 (Αύριο!): Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Σεπτεμβρίου 2026 (Αύριο!): Υποβολή αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-29.html#deadlines"
   },
   {
     "date": "2026-09-29",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω του συστήματος TaxisNet (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω του συστήματος TaxisNet (TaxisNet)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-29.html#deadlines"
   },
   {
     "date": "2026-09-29",
     "section": "📅 Προθεσμίες",
     "title": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ.",
     "snippet": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ....",
-    "url": "#deadlines"
+    "url": "briefings/2026-09-29.html#deadlines"
   },
   {
     "date": "2026-09-29",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-09-29.html#top-story"
   },
   {
     "date": "2026-09-28",
