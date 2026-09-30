@@ -1158,5 +1158,25 @@
   "https://www.bbc.co.uk/news/articles/c51kx9ze1mdzo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/dae4/live/d8d527f0-bc11-11f1-bd21-bdf910f2cec6.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/09/30/papadopoulos-confidence-building-measures-not-a-condition-for-enlarged-meeting": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/papa-christos-1.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/09/30/iran-says-it-receives-us-response-to-latest-proposal-as-washington-pulls-out-of-iraq": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/iraq.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cw20vxxn876no?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/d7cd/live/e4a1ffd0-bbdb-11f1-bd21-bdf910f2cec6.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/ckjw5jx2l393o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/4cc3/live/0f9ce800-bcc0-11f1-babe-4199b0e7ccea.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c65ym1dyn92mo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/a1f4/live/bfefaa90-bcba-11f1-babe-4199b0e7ccea.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
