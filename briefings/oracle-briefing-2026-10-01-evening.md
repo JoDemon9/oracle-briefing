@@ -7,7 +7,7 @@
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
 > * **Αγορές & Tech:** S&P 500 (-0,17%), Nasdaq 100 (-0,03%), Bank of Cyprus (-0,82%), Bitcoin (+0,75%). Tech Watchlist: Apple (-1,25%), Alphabet (-0,64%), TSMC (-0,16%), Microsoft (+0,36%), Meta (+0,47%), NVIDIA (+0,77%), Micron (-1,30%).
-> * **Επικαιρότητα:** Defence minister: Cyprus to continue strengthening defence capabilities · Greece proposes suspending asylum requests in emergencies · Tennessee halts executions after Christa Pike survives two lethal injection attempts
+> * **Επικαιρότητα:** Defence minister: Cyprus to continue strengthening defence capabilities · Greece proposes suspending asylum requests in emergencies · Christa Pike in critical condition after surviving two lethal injections, lawyer says
 > * **Αθλητικά:** Αποτελέσματα & αγώνες για Ομόνοια, Manchester United (How important is a fast start for teams chasing the Premier League title?), Real Madrid και Formula 1 ({'race': 'Azerbaijan Grand Prix 2026 (Baku City Circuit)', 'date': 'Σάββατο 26 Σεπτεμβρίου 2026', 'winner': 'George Russell (Mercedes)', 'podium': '1ος George Russell (Mercedes), 2ος Max Verstappen (Red Bull), 3ος Isack Hadjar (Red Bull), 4ος Charles Leclerc (Ferrari), 5ος Kimi Antonelli (Mercedes), 6ος Lewis Hamilton (Ferrari)', 'summary': 'Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars', 'source_url': 'https://www.formula1.com/en/racing/2026/azerbaijan.html', 'source': 'Formula1.com / BBC Sport F1'}).
 
 ---
@@ -56,8 +56,8 @@ Greece said on Thursday that the EU should develop an emergency mechanism to tem
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
 **Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/01/greece-proposes-suspending-asylum-requests-in-emergencies)
 
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Tennessee halts executions after Christa Pike survives two lethal injection attempts
-Pike had been on death row since she was convicted in 1996 for the murder of Colleen Slemmer.
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Christa Pike in critical condition after surviving two lethal injections, lawyer says
+Pike’s lawyers have asked for her death sentence to be commuted following the botched execution.
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
 **Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss)
 
@@ -66,7 +66,7 @@ The convicted killer is in hospital in Tennessee after surviving two lethal inje
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
 **Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss)
 
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Netanyahu says flight attacker 'underwent Islamist radical indoctrination'
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'
 Israel's prime minister says the pilot who tried to take over the Flydubai plane clearly intended to "down the plane".
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
 **Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss)
