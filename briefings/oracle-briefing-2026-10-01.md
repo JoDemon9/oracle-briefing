@@ -6,11 +6,11 @@
 
 ## ⭐ ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ
 
-### Cyprus Business Now: AI, CBC, housing. shipping, fintech, energy, Cyta
+### Defence minister: Cyprus to continue strengthening defence capabilities
 
-Artificial intelligence is already reproducing human biases and gender stereotypes, making the participation of women in the design and development of technology increasingly impor
+Cyprus will continue to strengthen and modernise its defence capabilities while deepening strategic partnerships with other countries, Defence Minister Vasilis Palmas said on Thursday following the Independence Day military parade. Palmas said the government’s aim was to further enhance Cyprus’ role
 
-**Πηγές:** [Ενημέρωση](https://cyprus-mail.com/2026/10/01/cyprus-business-now-ai-cbc-housing-shipping-fintech-energy-cyta)
+**Πηγές:** [Ενημέρωση](https://cyprus-mail.com/2026/10/01/defence-minister-cyprus-to-continue-strengthening-defence-capabilities)
 
 ---
 
@@ -20,11 +20,11 @@ Artificial intelligence is already reproducing human biases and gender stereotyp
 | :--- | :--- | :--- | :--- |
 | **S&P 500 (SPX)** | 7.651,54 | 0,25% | 01/10/2026 |
 | **Nasdaq 100 (NDQ)** | 30.408,50 | +0,23% | 01/10/2026 |
-| **Bitcoin (BTC/USD)** | $83.529,96 | 0,04% | 01/10/2026 |
-| **EUR/USD** | 1,13 | 0,36% | 01/10/2026 |
-| **EUR/GBP** | 0,85 | +0,04% | 01/10/2026 |
-| **Bank of Cyprus (BOCH)** | €10,85 | -1,27% | 01/10/2026 |
-| **Brent Crude** | $100,66 | +2,68% | 01/10/2026 |
+| **Bitcoin (BTC/USD)** | $83.859,79 | +0,35% | 01/10/2026 |
+| **EUR/USD** | 1,13 | 0,32% | 01/10/2026 |
+| **EUR/GBP** | 0,85 | 0,01% | 01/10/2026 |
+| **Bank of Cyprus (BOCH)** | €10,83 | -1,46% | 01/10/2026 |
+| **Brent Crude** | $99,64 | +1,64% | 01/10/2026 |
 | **TSMC (TSM)** | 456,19 | 0,16% | 01/10/2026 |
 | **NVIDIA (NVDA)** | 228,38 | +0,51% | 01/10/2026 |
 | **Alphabet (GOOG)** | 340,74 | +1,01% | 01/10/2026 |
@@ -52,30 +52,46 @@ Artificial intelligence is already reproducing human biases and gender stereotyp
 
 ## 🇨🇾 ΚΥΠΡΟΣ
 
-### 1. Not only the Parthenon has lost its marbles [Επικαιρότητα]
-How would the British public feel if someone stole old Nelson from his plinth, or a lion from Trafalgar Square, placed them in their museum and refused to give them back, knowing t  
+### 1. Barak MX unveiled at Cyprus Independence Day parade [Επικαιρότητα]
+Cyprus marked the 66th anniversary of its independence on Thursday with a military parade in Nicosia, during which the National Guard publicly displayed its Barak MX modular multi-mission air and missile defense system for the first time. The medium-to-long-range defence system was among the militar  
 **Γιατί με αφορά:** Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/01/not-only-the-parthenon-has-lost-its-marbles)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/01/barak-mx-unveiled-at-cyprus-independence-day-parade)
 
-### 2. Christodoulides says boosting deterrence ‘top priority’ [Επικαιρότητα]
-Upgrading Cyprus’ deterrent capabilities remains a “top priority”, President Nikos Christodoulides said on Thursday, as he highlighted increased defence spending and efforts to mod  
+### 2. Party leaders stress defence, security after Independence Day parade [Επικαιρότητα]
+Political party leaders stressed the importance of safeguarding the Republic and strengthening Cyprus’ security on Thursday, following the military parade marking the country’s 66th Independence Day. Akel boss Stefanos Stefanou described the Republic as the “shield” protecting the country and its pe  
 **Γιατί με αφορά:** Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/01/christodoulides-says-boosting-deterrence-top-priority)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/01/party-leaders-stress-defence-security-after-independence-day-parade)
 
-### 3. Η Ελλάδα στην προεδρία του Συμβουλίου Ασφαλείας του ΟΗΕ εν μέσω διεθνών κρίσεων – Στο φόντο και η διαδοχή Γκουτέρες [Επικαιρότητα]
-Την προεδρία του Συμβουλίου Ασφαλείας του ΟΗΕ αναλαμβάνει από σήμερα η Ελλάδα, για δεύτερη και τελευταία φορά στη διάρκεια της διετούς θητείας της ως εκλεγμένο μέλος για την περίοδ  
+### 3. Διπλωματικές πηγές: Προκλητική η νέα τουρκική NAVTEX για τον αγωγό [Επικαιρότητα]
+Ως «προκλητική μονομερή ενέργεια» της Άγκυρας χαρακτηρίζουν  διπλωματικές πηγές στην Ελλάδα την τουρκική NAVTEX για έρευνες που συνδέονται με τον σχεδιαζόμενο υποθαλάσσιο αγωγό φυσικού αερίου Τουρκίας–Κατεχομένων.
+Όπως τονίζουν πρόκειται για παράνομες έρευνες σε περιοχές κυπριακών χωρικών υδάτων και υφαλοκρηπίδας, οι οποίες παραβιάζουν την κυριαρχία και τα κυριαρχικά δικαιώματα της Κυπριακής Δημοκρατίας.
+Ειδικότερα, όπως αναφέρουν, «με την παράτυπη τουρκική NAVTEX (953/26), η Τουρκία εξήγγειλε παράνομες έρευνες σε περιοχές κυπριακών χωρικών υδάτων και υφαλοκρηπίδας, στο πλαίσιο του σχεδιαζόμενου υποθαλάσσιου αγωγού φυσικού αερίου μεταξύ Τουρκίας και της παράνομης αποσχιστικής οντότητας. Η ενέργεια αυτή συνιστά μία ακόμη προκλητική μονομερή ενέργεια».
+Διαβάστε επίσης: Βγάζει ξανά το Oruc Reis η Τουρκία: NAVTEX για αγωγό προς τα κατεχόμενα
+Οι ίδιες πηγές επισημαίνουν ότι σύμφωνα με Διεθνές Δίκαιο και τη Σύμβαση για το Δίκαιο της Θάλασσας (UNCLOS), μονομερείς ενέργειες για την ανάπτυξη ενεργειακών υποδομών, χωρίς τη συναίνεση της Κυπριακής Δημοκρατίας, στερούνται νομικής βάσης και παραβιάζουν την κυριαρχία και τα κυριαρχικά της δικαιώματα.
+Παράλληλα, τονίζουν ότι οι ενέργειες αυτές εντάσσονται σε μία διαρκή προσπάθεια εδραίωσης των τετελεσμένων της κατοχής και αντιβαίνουν προδήλως στους κανόνες του διεθνούς δικαίου.
+Οι διπλωματικές πηγές καταλήγουν ότι «σε μία ιδιαίτερα κρίσιμη συγκυρία για την ευρύτερη περιοχή, ανάλογες ενέργειες επιτείνουν τις εντάσεις, υπονομεύουν την οικοδόμηση εμπιστοσύνης και λειτουργούν εις βάρος της περιφερειακής σταθερότητας».  
 **Γιατί με αφορά:** Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.  
-**Πηγή:** [Philenews](https://www.philenews.com/kosmos/article/1776759/i-ellada-stin-proedria-tou-simvouliou-asfalias-tou-oie-en-meso-diethnon-kriseon-sto-fonto-ke-i-diadochi-gkouteres/)
+**Πηγή:** [SigmaLive](https://www.sigmalive.com/news/politics/1331620/diplomatikes-pighes-proklitiki-i-nea-toyrkiki-navtex-ghia-ton-aghogho)
 
-### 4. Νέα NAVTEX από την Τουρκία: Βγαίνει για έρευνες για τον αγωγό νότια των κατεχομένων το Oruc Reis – Πόσο θα διαρκέσουν [Επικαιρότητα]
-Navtex εξέδωσε η Τουρκία για δραστηριότητες του ερευνητικού σκάφους Oruc Reis στη θαλάσσια περιοχή μεταξύ Αττάλειας και Μερσίνης, με επέκταση έως τα νότια των κατεχομένων. Η Navtex  
+### 4. Ιωαννίδης: Έτοιμη η Κύπρος για πλήρη ένταξη στο Σένγκεν-Το επόμενο βήμα (VID) [Επικαιρότητα]
+Την τεχνική ετοιμότητα της Κύπρου για πλήρη ένταξη στον χώρο Σένγκεν υπογράμμισε ο Υφυπουργός Μετανάστευσης και Διεθνούς Προστασίας, Νικόλας Ιωαννίδης, προσερχόμενος στο Συμβούλιο Δικαιοσύνης και Εσωτερικών Υποθέσεων της ΕΕ στο Λουξεμβούργο.
+Όπως ανέφερε, από τεχνικής άποψης η Κύπρος είναι έτοιμη να καταστεί πλήρες μέλος του χώρου Σένγκεν, σημειώνοντας ωστόσο ότι απομένει η επίτευξη συμφωνίας σε πολιτικό επίπεδο κατά τους επόμενους μήνες.
+Αλληλεγγύη στην Ισπανία για τη Θέουτα
+Ο κ. Ιωαννίδης επανέλαβε παράλληλα την αλληλεγγύη της Κυπριακής Δημοκρατίας προς την Ισπανία σε σχέση με τη Θέουτα, τονίζοντας την ανάγκη συντονισμένης δράσης για την προστασία του εδάφους της Ευρωπαϊκής Ένωσης και του χώρου Σένγκεν.
+Έγκαιρη προειδοποίηση για μαζικές μετακινήσεις
+Ο Υφυπουργός αναφέρθηκε επίσης στην ανάγκη ενίσχυσης των ευρωπαϊκών δυνατοτήτων έγκαιρης προειδοποίησης για την αντιμετώπιση μαζικών παράτυπων μετακινήσεων.
+Τέλος, εξέφρασε τη στήριξη της Κύπρου στην ενισχυμένη συνεργασία της ΕΕ με τρίτες χώρες με στόχο την αύξηση των επιστροφών παράτυπων μεταναστών.
+Σύμφωνα με τον ίδιο, στις περιπτώσεις όπου τρίτες χώρες δεν συνεργάζονται στο ζήτημα των επιστροφών, η Ευρωπαϊκή Ένωση θα πρέπει να εξετάζει τη λήψη αυστηρότερων μέτρων.
+
+Στο Λουξεμβούργο σήμερα για τις εργασίες του Συμβουλίου Δικαιοσύνης και Εσωτερικών Υποθέσεων της ΕΕ. Προσερχόμενος στο Συμβούλιο,🔸 Αναφέρθηκα στην ένταξη της Κύπρου στον χώρο Σένγκεν. Από τεχνική άποψη, η Κύπρος είναι έτοιμη να καταστεί πλήρες μέλος του χώρου Σένγκεν. Είναι… pic.twitter.com/eqWKjXB8x7
+— Nicholas A Ioannides, PhD (@NickAIoannides) October 1, 2026  
 **Γιατί με αφορά:** Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.  
-**Πηγή:** [Philenews](https://www.philenews.com/politiki/article/1776761/nea-navtex-apo-tin-tourkia-vgeni-gia-erevnes-gia-ton-agogo-notia-ton-katechomenon-to-oruc-reis-poso-tha-diarkesoun/)
+**Πηγή:** [SigmaLive](https://www.sigmalive.com/news/local/1331616/ioannidis-etoimi-i-kypros-ghia-pliri-entaksi-sto-senghken-to-epomeno-vima-vid)
 
-### 5. Για τα παιδιά που ’ναι στο κόμμα [Ο Φάκελός μου]
-«Χαρά να σε γιαούρτωνα εκεί που ρητορεύειςεκεί που με χειροκροτάς χωρίς να το πιστεύεις,παίρνεις την αλήθεια μου και μου την κάνεις λιώμααπ’ το πόδι με τραβάς βαθιά μέσα στο χώμα»Δ  
+### 5. Iran readies harder retaliation if attacked as diplomacy faces long odds [Ο Φάκελός μου]
+Iran is preparing a broader and more forceful response if the United States resumes large-scale military attacks, sources said, while continuing a diplomatic push that Iranian officials privately see as unlikely to succeed. The planning reflects a conviction within Iran’s leadership that any renewed  
 **Γιατί με αφορά:** Αποτυπώνει τις τρέχουσες εξελίξεις στον δημόσιο και οικονομικό βίο της Κύπρου.  
-**Πηγή:** [Philenews](https://www.philenews.com/apopsis/arthra-apo-f/article/1776592/gia-ta-pedia-pou-ne-sto-komma/)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/01/iran-readies-harder-retaliation-if-attacked-as-diplomacy-faces-long-odds)
 
 ---
 
@@ -85,21 +101,21 @@ Navtex εξέδωσε η Τουρκία για δραστηριότητες το
 Killer Christa Pike's lawyer says she is being given "life-saving measures" in hospital after two syringes of pentobarbital.  
 **Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/cq8r6rjdvlx6o?at_medium=RSS&at_campaign=rss)
 
-### 2. Too early to say if Iran involved in Dubai-Tel Aviv flight attack, Israeli PM says [Διεθνή]
+### 2. What happened in failed execution of Christa Pike - and what next? [Διεθνή]
+The convicted killer is in hospital in Tennessee after surviving two lethal injections, in a case that has raised many questions.  
+**Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss)
+
+### 3. Too early to say if Iran involved in Dubai-Tel Aviv flight attack, Israeli PM says [Διεθνή]
 A pilot who stabbed another pilot on an Israel-bound plane is being investigated in Saudi Arabia, Benjamin Netanyahu says.  
 **Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/cqgmrm7xd8wyo?at_medium=RSS&at_campaign=rss)
 
-### 3. What we know about stabbing on Flydubai flight to Israel [Διεθνή]
-A pilot has been arrested and is being questioned after another pilot was stabbed, officials say.  
-**Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/cqjdv7pmj9dno?at_medium=RSS&at_campaign=rss)
+### 4. Russian dissident Garry Kasparov says US warned him of danger to his life [Διεθνή]
+"My family and I will not truly be safe as long as Putin is in power," says the former chess world champion.  
+**Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/c6y8z8kr5mk8o?at_medium=RSS&at_campaign=rss)
 
-### 4. Rosenberg: Putin shows no sign of stopping the war as Russia doubles down on Ukraine [Διεθνή]
-A foreign policy speech by the Russian president will be keenly watched, but all signs point to the full-scale invasion continuing.  
-**Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/cqx2ze420kpyo?at_medium=RSS&at_campaign=rss)
-
-### 5. Swiss glaciers suffer 'disastrous' year of ice loss, threatening water supplies [Διεθνή]
-Scientists say such rapid melting is no longer surprising given the pace of climate change.  
-**Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/c6n9w0ypjwl9o?at_medium=RSS&at_campaign=rss)
+### 5. Japan raises permanent residency fee by 20 times [Διεθνή]
+The hikes are part of immigration policy changes introduced to manage Japan's growing foreign population.  
+**Πηγή:** [Διεθνή](https://www.bbc.co.uk/news/articles/c6y8z8xeg8j1o?at_medium=RSS&at_campaign=rss)
 
 ---
 
@@ -113,15 +129,15 @@ Scientists say such rapid melting is no longer surprising given the pace of clim
 **Αιτία:** Εμπορική δραστηριότητα και διακυμάνσεις της τρέχουσας συνεδρίασης.  
 **Πηγή:** [Yahoo Finance](https://finance.yahoo.com)
 
-### Bitcoin (BTC/USD) — $83.529,96 (0,04%)
+### Bitcoin (BTC/USD) — $83.859,79 (+0,35%)
 **Αιτία:** Εμπορική δραστηριότητα και διακυμάνσεις της τρέχουσας συνεδρίασης.  
 **Πηγή:** [Yahoo Finance](https://finance.yahoo.com)
 
-### EUR/USD — 1,13 (0,36%)
+### EUR/USD — 1,13 (0,32%)
 **Αιτία:** Εμπορική δραστηριότητα και διακυμάνσεις της τρέχουσας συνεδρίασης.  
 **Πηγή:** [Yahoo Finance](https://finance.yahoo.com)
 
-### EUR/GBP — 0,85 (+0,04%)
+### EUR/GBP — 0,85 (0,01%)
 **Αιτία:** Εμπορική δραστηριότητα και διακυμάνσεις της τρέχουσας συνεδρίασης.  
 **Πηγή:** [Yahoo Finance](https://finance.yahoo.com)
 
@@ -131,28 +147,28 @@ Scientists say such rapid melting is no longer surprising given the pace of clim
 
 ### ΟΜΟΝΟΙΑ
 
-*   **Τελευταίο αποτέλεσμα:** {'match': 'Ομόνοια Λευκωσίας – Krasava ΕΝΥ Διγενής Ύψωνα', 'score': '4-1', 'competition': 'Cyprus League by Stoiximan (4η αγωνιστική)', 'date': 'Κυριακή 20 Σεπτεμβρίου 2026', 'venue': 'Στάδιο ΓΣΠ', 'scorers': "Κουλιμπαλί (15'), Τανάσε (57'), Ντουβέρν (77'), Τάνκοβιτς (90'+4') — Μπούντνικ (33')", 'summary': 'Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)', 'source_url': 'https://www.cfa.com.cy/Gr/news/53723', 'source': 'ΚΟΠ / CFA'}
+*   **Τελευταίο αποτέλεσμα:** Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)
 *   **Επόμενος αγώνας:** 19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026) ([Πρόγραμμα ΚΟΠ](https://www.cfa.com.cy/Gr/news/53723))
 *   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights)
 *   **Πηγή:** [ΚΟΠ / CFA](https://www.cfa.com.cy/Gr/news/53723)
 
 ### Manchester United
 
-*   **Τελευταίο αποτέλεσμα:** {'match': 'Fulham – Manchester United', 'score': '1-1', 'competition': 'Premier League (5η αγωνιστική)', 'date': 'Κυριακή 20 Σεπτεμβρίου 2026', 'venue': 'Craven Cottage', 'summary': 'Fulham – Manchester United 1-1 (Craven Cottage, Premier League)', 'source_url': 'https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures', 'source': 'BBC Sport'}
+*   **Τελευταίο αποτέλεσμα:** Fulham – Manchester United 1-1 (Craven Cottage, Premier League)
 *   **Επόμενος αγώνας:** Premier League: Manchester United versus Tottenham Hotspur — 17:30 ([BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures))
 *   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights)
 *   **Πηγή:** [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)
 
 ### Real Madrid
 
-*   **Τελευταίο αποτέλεσμα:** {'match': 'Atlético Madrid – Real Madrid', 'score': '2-1', 'competition': 'Spanish La Liga (6η αγωνιστική - Derbi Madrileño)', 'date': 'Κυριακή 20 Σεπτεμβρίου 2026', 'venue': 'Cívitas Metropolitano', 'summary': 'Atlético Madrid – Real Madrid 2-1 (Cívitas Metropolitano, Derbi Madrileño)', 'source_url': 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures', 'source': 'Marca / BBC Sport'}
+*   **Τελευταίο αποτέλεσμα:** Atlético Madrid – Real Madrid 2-1 (Cívitas Metropolitano, Derbi Madrileño)
 *   **Επόμενος αγώνας:** Spanish La Liga: Real Madrid versus Villarreal — 20:00 (Saturday 10th October) ([BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures))
 *   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights)
 *   **Πηγή:** [BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)
 
 ### Formula 1
 
-*   **Τελευταίο αποτέλεσμα:** {'race': 'Azerbaijan Grand Prix 2026 (Baku City Circuit)', 'date': 'Σάββατο 26 Σεπτεμβρίου 2026', 'winner': 'George Russell (Mercedes)', 'podium': '1ος George Russell (Mercedes), 2ος Max Verstappen (Red Bull), 3ος Isack Hadjar (Red Bull), 4ος Charles Leclerc (Ferrari), 5ος Kimi Antonelli (Mercedes), 6ος Lewis Hamilton (Ferrari)', 'summary': 'Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars', 'source_url': 'https://www.formula1.com/en/racing/2026/azerbaijan.html', 'source': 'Formula1.com / BBC Sport F1'}
+*   **Τελευταίο αποτέλεσμα:** Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars
 *   **Επόμενος αγώνας:** Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix) — Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου ([Formula1.com](https://www.formula1.com/en/racing/2026/bahrain.html))
 *   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights)
 *   **Πηγή:** [Formula1.com](https://www.formula1.com/en/racing/2026/bahrain.html)
@@ -161,11 +177,11 @@ Scientists say such rapid melting is no longer surprising given the pace of clim
 
 ## 🌤️ ΚΑΙΡΟΣ — ΛΕΜΕΣΟΣ
 
-*   **Θερμοκρασία:** 25°C (Μέγιστη) / 24°C (Ελάχιστη)
-*   **Υγρασία:** 65%
-*   **Άνεμος:** 14 km/h
+*   **Θερμοκρασία:** 24°C (Μέγιστη) / 24°C (Ελάχιστη)
+*   **Υγρασία:** 69%
+*   **Άνεμος:** 15 km/h
 *   **Πρόγνωση υπόλοιπης ημέρας:** Γενικά αίθριος καιρός.
-*   **Προειδοποιήσεις:** Δείκτης UV: 6
+*   **Προειδοποιήσεις:** Δείκτης UV: 0
 *   **Πηγή:** [Open-Meteo](https://open-meteo.com/)
 
 ---

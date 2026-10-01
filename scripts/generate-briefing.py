@@ -35,11 +35,25 @@ DEFAULT_HEADERS = {
 def clean_rss_title(title: str) -> str:
     if not title:
         return ""
-    t = re.sub(r'&nbsp;', ' ', title)
+    import html
+    t = html.unescape(title)
+    t = re.sub(r'&nbsp;', ' ', t)
     t = re.sub(r'<[^>]+>', '', t)
     t = re.sub(r'\s*-\s*[a-zA-Z0-9\.\-]+\.[a-z]{2,}.*$', '', t)
     t = re.sub(r'\s*\|\s*.*$', '', t)
     return re.sub(r'\s+', ' ', t).strip()
+
+
+FLUFF_KEYWORDS = [
+    'alcaraz', 'tennis', 'salad', 'recipe', 'meal', 'comedian', 'ronaldo', 'messi',
+    'diddy', 'f1', 'formula 1', 'grand prix', 'sepang', 'cup', 'derby', 'league',
+    'championship', 'football', 'soccer', 'nba', 'uefa', 'fifa', 'smurf', 'golf', 'tapestry'
+]
+
+
+def is_fluff_item(text: str) -> bool:
+    t = (text or '').lower()
+    return any(k in t for k in FLUFF_KEYWORDS)
 
 
 def resolve_redirect_url(url: str, timeout: int = 5) -> str:
@@ -251,6 +265,14 @@ def format_greek_num(val, decimals=2):
     return f"{int_part},{parts[1]}"
 
 
+def format_last_result(res, default=''):
+    if not res:
+        return default
+    if isinstance(res, dict):
+        return res.get('summary') or f"{res.get('match', '')} {res.get('score', '')}".strip() or res.get('race', '') or default
+    return str(res)
+
+
 def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_data, sports_data):
     greek_date = get_greek_date_str(today_str)
     top = cy_items[0] if cy_items else {'title': 'Σημαντικές οικονομικές εξελίξεις στην Κύπρο', 'link': 'https://cyprus-mail.com', 'desc': 'Συνεχίζονται οι διεργασίες στον χρηματοπιστωτικό και επενδυτικό τομέα.'}
@@ -276,23 +298,23 @@ def generate_rss_fallback(cy_items, world_items, wx_info, today_str, markets_dat
     omonoia = sports_data.get('omonoia', {})
     om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
     om_url = omonoia.get('next_fixture', {}).get('source_url', 'https://www.cfa.com.cy')
-    om_res = omonoia.get('last_result', '')
+    om_res = format_last_result(omonoia.get('last_result', ''))
 
     mu = sports_data.get('manchester_united', {})
     mu_fix = mu.get('next_fixture', {}).get('fixture', '')
     mu_url = mu.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/manchester-united')
-    mu_res = mu.get('last_result', '')
+    mu_res = format_last_result(mu.get('last_result', ''))
 
     rm = sports_data.get('real_madrid', {})
     rm_fix = rm.get('next_fixture', {}).get('fixture', '')
     rm_url = rm.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/real-madrid')
-    rm_res = rm.get('last_result', '')
+    rm_res = format_last_result(rm.get('last_result', ''))
 
     f1 = sports_data.get('formula1', {})
     f1_fix = f1.get('next_fixture', {}).get('race_day', '')
     f1_race = f1.get('next_fixture', {}).get('race', '')
     f1_url = f1.get('next_fixture', {}).get('source_url', 'https://www.formula1.com')
-    f1_res = f1.get('last_result', '')
+    f1_res = format_last_result(f1.get('last_result', ''))
 
     e1m = euribor.get('1m', '—')
     e3m = euribor.get('3m', '—')
@@ -554,21 +576,21 @@ def generate_midday_edition(cy_items, world_items, wx_info, today_str, markets_d
     omonoia = sports_data.get('omonoia', {}) if isinstance(sports_data, dict) else {}
     om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
     om_url = omonoia.get('next_fixture', {}).get('source_url', 'https://www.cfa.com.cy')
-    om_res = omonoia.get('last_result', 'Νίκη 3-1 στην πρεμιέρα')
+    om_res = format_last_result(omonoia.get('last_result'), 'Νίκη 3-1 στην πρεμιέρα')
     om_art = omonoia.get('articles', [])
     om_news = om_art[0]['title'] if om_art else 'Ολοκληρώθηκε η προπόνηση στο «Ηλίας Πούλλος» ενόψει της αναμέτρησης.'
 
     mu = sports_data.get('manchester_united', {}) if isinstance(sports_data, dict) else {}
     mu_fix = mu.get('next_fixture', {}).get('fixture', '')
     mu_url = mu.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/manchester-united')
-    mu_res = mu.get('last_result', 'Ισοπαλία 1-1 στην Premier League')
+    mu_res = format_last_result(mu.get('last_result'), 'Ισοπαλία 1-1 στην Premier League')
     mu_art = mu.get('articles', [])
     mu_news = mu_art[0]['title'] if mu_art else 'Ευρωπαϊκή προετοιμασία ενόψει του αγώνα.'
 
     rm = sports_data.get('real_madrid', {}) if isinstance(sports_data, dict) else {}
     rm_fix = rm.get('next_fixture', {}).get('fixture', '')
     rm_url = rm.get('next_fixture', {}).get('source_url', 'https://www.bbc.com/sport/football/teams/real-madrid')
-    rm_res = rm.get('last_result', 'Νίκη 3-0 επί της Real Betis')
+    rm_res = format_last_result(rm.get('last_result'), 'Νίκη 3-0 επί της Real Betis')
     rm_art = rm.get('articles', [])
     rm_news = rm_art[0]['title'] if rm_art else 'Προετοιμασία στο Valdebebas για το επόμενο ματς.'
 
@@ -576,7 +598,7 @@ def generate_midday_edition(cy_items, world_items, wx_info, today_str, markets_d
     f1_fix = f1.get('next_fixture', {}).get('race_day', '')
     f1_race = f1.get('next_fixture', {}).get('race', '')
     f1_url = f1.get('next_fixture', {}).get('source_url', 'https://www.formula1.com')
-    f1_res = f1.get('last_result', 'Italian Grand Prix (Monza)')
+    f1_res = format_last_result(f1.get('last_result'), 'Italian Grand Prix (Monza)')
     f1_news = 'Προετοιμασία των μονοθεσίων και αεροδυναμικές αναβαθμίσεις για το επόμενο Grand Prix.'
 
     sports_block = f"""### ΟΜΟΝΟΙΑ
@@ -765,7 +787,7 @@ def generate_evening_edition(cy_items, world_items, wx_info, today_str, markets_
     omonoia = sports_data.get('omonoia', {})
     om_fix = omonoia.get('next_fixture', {}).get('fixture', '')
     om_url = omonoia.get('next_fixture', {}).get('source_url', 'https://www.cfa.com.cy')
-    om_res = omonoia.get('last_result', 'Αναμέτρηση CFA 1ης Κατηγορίας')
+    om_res = format_last_result(omonoia.get('last_result'), 'Αναμέτρηση CFA 1ης Κατηγορίας')
     om_art = omonoia.get('articles', [])
     om_news = om_art[0]['title'] if om_art else 'Ολοκληρώθηκε η απογευματινή προπόνηση στο «Ηλίας Πούλλος».'
 
@@ -948,7 +970,7 @@ def main():
 
     print(f"Collecting live news for {today_str} ({edition})...")
 
-    # Priority 1: Check live-wire.json for fresh verified Cyprus news
+    # Priority 1: Check live-wire.json for fresh verified Cyprus news (filtered)
     cy_items = []
     wire_file = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
     if os.path.exists(wire_file):
@@ -957,25 +979,43 @@ def main():
                 wire_data = json.load(wf)
                 for w in wire_data:
                     title_w = clean_rss_title(w.get('title', ''))
-                    if title_w and w.get('source') in ['CNA', 'InBusinessNews', 'Philenews', 'Cyprus Mail', 'SigmaLive']:
-                        cy_items.append({
-                            'title': title_w,
-                            'link': w.get('link', ''),
-                            'desc': re.sub(r'<[^>]+>', '', w.get('snippet', '')).strip(),
-                            'source': w.get('source', 'Κύπρος')
-                        })
-                    if len(cy_items) >= 8:
-                        break
+                    if title_w and (w.get('category') == 'cyprus' or w.get('source') in ['CNA', 'InBusinessNews', 'Philenews', 'Cyprus Mail', 'SigmaLive']):
+                        if not is_fluff_item(title_w):
+                            cy_items.append({
+                                'title': title_w,
+                                'link': w.get('link', ''),
+                                'desc': re.sub(r'<[^>]+>', '', w.get('snippet', '')).strip(),
+                                'source': w.get('source', 'Κύπρος')
+                            })
         except Exception as e:
             print(f"Note: wire cache read notice: {e}")
 
-    # Priority 2: Direct Cyprus feeds
-    if not cy_items:
-        cy_items = fetch_rss_items('https://cyprus-mail.com/feed/', 8)
-    if not cy_items:
-        cy_items = fetch_rss_items('https://www.sigmalive.com/rss', 8)
-    if not cy_items:
-        cy_items = fetch_rss_items('https://news.google.com/rss/search?q=Cyprus+when:1d&hl=el&gl=CY&ceid=CY:el', 8)
+    # Priority 2: Augment with direct high-signal Cyprus feeds for real-time coverage
+    seen_links = {c['link'] for c in cy_items}
+    for feed_url, feed_src in [
+        ('https://www.sigmalive.com/rss', 'SigmaLive'),
+        ('https://www.philenews.com/feed/', 'Philenews'),
+        ('https://cyprus-mail.com/feed/', 'Cyprus Mail')
+    ]:
+        direct_items = fetch_rss_items(feed_url, 6)
+        for it in direct_items:
+            if it['link'] not in seen_links and not is_fluff_item(it['title']):
+                seen_links.add(it['link'])
+                cy_items.append({
+                    'title': it['title'],
+                    'link': it['link'],
+                    'desc': it['desc'],
+                    'source': feed_src
+                })
+
+    # Prioritize strategic geopolitical/defense/institutional Cyprus developments
+    def cyprus_story_priority(item):
+        t = item['title'].lower()
+        if any(w in t for w in ['barak', 'defence', 'παρέλαση', 'άμυνα', 'navtex', 'σένγκεν', 'schengen', 'deterrence']):
+            return 0
+        return 1
+
+    cy_items.sort(key=cyprus_story_priority)
 
     if not cy_items:
         print(f"❌ CRITICAL ERROR: Could not retrieve any live news for Cyprus ({edition} edition). Halting publication.")

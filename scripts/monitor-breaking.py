@@ -403,7 +403,7 @@ def run_monitor(dispatch=True):
             'id': h,
             'title': item['title'],
             'link': item['link'],
-            'snippet': item['description'][:180],
+            'snippet': item['description'][:300].strip(),
             'source': item['source'],
             'category': item.get('category', 'international'),
             'timestamp': int(time.time()),

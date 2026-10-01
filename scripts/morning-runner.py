@@ -73,8 +73,9 @@ def main():
 
     # 1. Generate Briefing Markdown (if needed)
     today_md = os.path.join(BASE_DIR, 'briefings', f'oracle-briefing-{today_str}.md')
-    if not os.path.exists(today_md):
-        if not run_command(f'python "{GEN_SCRIPT}"', "Generating today's news briefing"):
+    if force or not os.path.exists(today_md):
+        gen_args = " --force" if force else ""
+        if not run_command(f'python "{GEN_SCRIPT}" --edition morning{gen_args}', "Generating today's news briefing"):
             print("Failed to generate today's briefing.")
             sys.exit(1)
     else:

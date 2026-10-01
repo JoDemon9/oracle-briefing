@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "Έχει την... ικανότητα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ehei-tin-ikanotita",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Απίστευτες εικόνες...",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apisteytes-eikones",
         "source": "Kerkida.net"
@@ -45,14 +50,9 @@
         "title": "Mεταγραφικό deal-Πήρε Χρύση",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/deal-me-hrysi",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "DEAL με Ομόνοια και... στα \"κιτρινόμαυρα\"",
-        "url": "https://www.kerkida.net/eidiseis/b-katigoria/omonoia/deal-me-omonoia-kai-sta-kitrinomayra",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-01T11:05:03.442967+00:00"
+    "fetched_at": "2026-10-01T15:20:28.692585+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-01T11:05:04.927268+00:00"
+    "fetched_at": "2026-10-01T15:20:30.094001+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-01T11:05:05.918023+00:00"
+    "fetched_at": "2026-10-01T15:20:31.767956+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Russell says his 'confidence is back and growing'",
+        "url": "https://www.bbc.com/sport/formula1/articles/cv1j4jn5nxxlo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Ocon to leave Haas putting F1 future in doubt",
         "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
         "source": "BBC Sport F1"
@@ -201,16 +206,11 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "Ferrari back Vasseur amid speculation over future",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm1dlv4710g9o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Does Horner have a chance of Ferrari job? F1 Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckp84426lmggo",
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-01T11:05:07.120263+00:00"
+    "fetched_at": "2026-10-01T15:20:34.013896+00:00"
   }
 }
