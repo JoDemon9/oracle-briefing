@@ -1282,5 +1282,17 @@
   "https://www.bbc.co.uk/news/articles/cqjdv7pmj9dno": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/83af/live/a2587eb0-bce4-11f1-a64c-550be9e3c66b.jpg",
     "category": "ΑΕΡΟΠΟΡΙΑ"
+  },
+  "https://cyprus-mail.com/2026/10/01/greece-proposes-suspending-asylum-requests-in-emergencies": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/2026-09-04T143704Z_622461244_RC2CCNA0F5ZD_RTRMADP_3_EU-IMMIGRATION.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/f5bc/live/73d236d0-bdb6-11f1-babe-4199b0e7ccea.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/806d/live/8cf56f00-8950-11f1-aee1-9f17574ebbb3.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
