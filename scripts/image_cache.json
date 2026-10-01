@@ -1178,5 +1178,49 @@
   "https://www.bbc.co.uk/news/articles/c65ym1dyn92mo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/a1f4/live/bfefaa90-bcba-11f1-babe-4199b0e7ccea.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/10/01/cyprus-business-now-ai-cbc-housing-shipping-fintech-energy-cyta": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/07/Image-credit-Kyriacos-Nicolaou-Cyprus-Mail-Cyprus-Business-Now-Paphos.jpeg",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/10/01/not-only-the-parthenon-has-lost-its-marbles": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/colette-1.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/01/christodoulides-says-boosting-deterrence-top-priority": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/Christodoulides-Dendias-5.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.philenews.com/kosmos/article/1776759/i-ellada-stin-proedria-tou-simvouliou-asfalias-tou-oie-en-meso-diethnon-kriseon-sto-fonto-ke-i-diadochi-gkouteres/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2025/11/symvoulio-asfaleias-oie-united-nations-security-council.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.philenews.com/politiki/article/1776761/nea-navtex-apo-tin-tourkia-vgeni-gia-erevnes-gia-ton-agogo-notia-ton-katechomenon-to-oruc-reis-poso-tha-diarkesoun/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/10/ORUC_REIS.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.philenews.com/apopsis/arthra-apo-f/article/1776592/gia-ta-pedia-pou-ne-sto-komma/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/dysi.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cq8r6rjdvlx6o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8b6b/live/4ce5c930-bd5a-11f1-babe-4199b0e7ccea.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqgmrm7xd8wyo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/565c/live/ce323a50-bd69-11f1-bc2e-018d645d8d21.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqjdv7pmj9dno?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/83af/live/a2587eb0-bce4-11f1-a64c-550be9e3c66b.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqx2ze420kpyo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/4c37/live/eac38c60-bce6-11f1-8ce2-417f8f7cb095.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c6n9w0ypjwl9o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/4300/live/fc078410-bccb-11f1-9f83-d9975ff80416.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }

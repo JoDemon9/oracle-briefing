@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Θέλει... προσοχή",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thelei-prosohi-0",
+        "title": "Απίστευτες εικόνες...",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apisteytes-eikones",
         "source": "Kerkida.net"
       },
       {
-        "title": "Έμειναν στο μηδέν...",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/emeinan-sto-miden",
+        "title": "Ευκαιρία για...όλους",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/eykairia-giaoloys",
         "source": "Kerkida.net"
       },
       {
-        "title": "Μαζί... τα φιλαράκια!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/mazi-ta-filarakia-0",
+        "title": "Κερδισμένος...",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kerdismenos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ζεσταίνεται ο...\"El Toro\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/zestainetai-oel-toro",
+        "title": "Mεταγραφικό deal-Πήρε Χρύση",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/deal-me-hrysi",
         "source": "Kerkida.net"
       },
       {
-        "title": "«Ήρθα σε μια ομάδα με υψηλούς στόχους, που κάθε χρόνο διεκδικεί τα πάντα.\"",
-        "url": "https://www.kerkida.net/eidiseis/alla-spor/petosfaira/omonoia/irtha-se-mia-omada-me-ypsiloys-stohoys-poy-kathe-hrono-diekdikei-ta-panta",
+        "title": "DEAL με Ομόνοια και... στα \"κιτρινόμαυρα\"",
+        "url": "https://www.kerkida.net/eidiseis/b-katigoria/omonoia/deal-me-omonoia-kai-sta-kitrinomayra",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-09-30T07:30:50.249604+00:00"
+    "fetched_at": "2026-10-01T09:03:54.807529+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -71,12 +71,9 @@
       "source": "BBC Sport"
     },
     "next_fixture": {
-      "fixture": "Premier League: Manchester United versus Tottenham Hotspur — 17:00 (Saturday 10th October 2026)",
-      "match": "Manchester United versus Tottenham Hotspur — 17:00",
-      "competition": "Premier League (7η αγωνιστική)",
-      "date": "Saturday 10th October 2026",
-      "venue": "Old Trafford",
-      "broadcast": "NovaSports Premier League / Sky Sports",
+      "fixture": "Premier League: Manchester United versus Tottenham Hotspur — 17:30",
+      "match": "Manchester United versus Tottenham Hotspur — 17:30",
+      "competition": "Premier League",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
@@ -107,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-09-30T07:30:51.482646+00:00"
+    "fetched_at": "2026-10-01T09:03:55.870249+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -126,12 +123,10 @@
       "source": "Marca / BBC Sport"
     },
     "next_fixture": {
-      "fixture": "Spanish La Liga: Real Madrid versus Villarreal — 22:00 (Saturday 10th October 2026)",
-      "match": "Real Madrid versus Villarreal — 22:00",
-      "competition": "Spanish La Liga (8η αγωνιστική)",
-      "date": "Saturday 10th October 2026",
-      "venue": "Santiago Bernabéu",
-      "broadcast": "PrimeTel / Cablenet",
+      "fixture": "Spanish La Liga: Real Madrid versus Villarreal — 20:00 (Saturday 10th October)",
+      "match": "Real Madrid versus Villarreal — 20:00",
+      "competition": "Spanish La Liga",
+      "date": "Saturday 10th October",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
@@ -162,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-09-30T07:30:52.256417+00:00"
+    "fetched_at": "2026-10-01T09:03:56.533937+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -191,6 +186,16 @@
     },
     "articles": [
       {
+        "title": "Ocon to leave Haas putting F1 future in doubt",
+        "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Bahrain GP in Malaysia becomes third heat-hazard race of year",
+        "url": "https://www.bbc.com/sport/formula1/articles/cwg7klkxzzylo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "'I still feel as fast as anybody' - Alonso on why he's staying in F1",
         "url": "https://www.bbc.com/sport/formula1/articles/cde0gz51g36o",
         "source": "BBC Sport F1"
@@ -204,18 +209,8 @@
         "title": "Does Horner have a chance of Ferrari job? F1 Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/ckp84426lmggo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Norris apologises to Colapinto for ban comments",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm87vz5w4jwro",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Horner a distraction for Ferrari, says Vasseur",
-        "url": "https://www.bbc.com/sport/formula1/articles/cvwyz791096jo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-09-30T07:30:53.643755+00:00"
+    "fetched_at": "2026-10-01T09:03:57.253391+00:00"
   }
 }
