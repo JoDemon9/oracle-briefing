@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Ομόνοια/Layla Iskandar",
-        "url": "https://www.kerkida.net/eidiseis/alla-spor/gynaikeio/omonoia/omonoialayla-iskandar",
+        "title": "Πρώτα λεπτά για Βίκτωρος",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/prota-lepta-gia-biktoros",
         "source": "Kerkida.net"
       },
       {
-        "title": "Οδηγίες στον...\"βράχο\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/odigies-stonbraho",
+        "title": "Ομόνοια-Ολυμπιακός: Φιλική νίκη για τους \"μαυροπράσινους\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/olympiakos-leykosias/omonoia-olympiakos-filiki-niki-gia-toys-mayroprasinoys",
         "source": "Kerkida.net"
       },
       {
-        "title": "Εδώ ο... Γιώργος",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/edo-o-giorgos-0",
+        "title": "ΚΛΙΚΣ... Ομόνοια-Ολυμπιακός",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kliks-omonoia-olympiakos",
         "source": "Kerkida.net"
       },
       {
-        "title": "Μετά από...καιρό",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/meta-apokairo-0",
+        "title": "Η 11αδα της Ομόνοιας για το φιλικό",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-11ada-tis-omonoias-gia-filiko",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Πράσινα ΚΛΙΚΣ\" από την προπόνηση",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/prasina-kliks-apo-tin-proponisi-4",
+        "title": "Η κάμερα στον... Κίτσο!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/i-kamera-ston-kitso",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-02T10:38:13.792435+00:00"
+    "fetched_at": "2026-10-02T16:19:52.322875+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-02T10:38:14.539490+00:00"
+    "fetched_at": "2026-10-02T16:19:53.935126+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-02T10:38:15.331510+00:00"
+    "fetched_at": "2026-10-02T16:19:55.193458+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,7 +186,7 @@
     },
     "articles": [
       {
-        "title": "Leclerc tops Bahrain GP in Malaysia second practice",
+        "title": "Russell says Red Bull strongest after Bahrain practice",
         "url": "https://www.bbc.com/sport/formula1/articles/ckm2q2346zz9o",
         "source": "BBC Sport F1"
       },
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-02T10:38:16.206206+00:00"
+    "fetched_at": "2026-10-02T16:19:56.421344+00:00"
   }
 }
