@@ -1330,5 +1330,37 @@
   "https://www.bbc.co.uk/news/articles/cm1dld14weero?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/25fd/live/4b4dfad0-be0d-11f1-92ea-016450691ea1.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.philenews.com/kipros/avtoptis-martiras/article/1777109/averof-pote-den-amfevala-gia-ton-agno-ke-anidioteli-kosmo-tis-parataxis-den-tha-sas-prodoso-pote/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/09/averof-neofytou.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ"
+  },
+  "https://www.alphanews.live/cyprus/trochaio-me-to-kalimera-sto-highway-tessera-prosopa-sto-nosokomeio/": {
+    "image": "https://www.alphanews.live/wp-content/uploads/2024/12/asthenoforo.jpg",
+    "category": "ΔΗΜΟΣΙΑ ΤΑΞΗ"
+  },
+  "https://cyprus-mail.com/2026/10/02/coral-shell-licensee-inaugurates-its-100th-service-station-outside-greece": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/Coral-1.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/c5zjzjgdeneeo": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/95a3/live/c2123c20-be1d-11f1-8202-6fffc4c0ebaa.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.aljazeera.com/news/2026/10/2/russia-tries-to-freeze-ukraine-as-it-suffers-record-casualties-and-retreats": {
+    "image": "https://www.aljazeera.com/wp-content/uploads/2026/09/AP26271531161477-1790613113.jpg?resize=1920%2C1440",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.dw.com/en/is-germany-s-economic-slump-finally-over/a-78815447": {
+    "image": "https://static.dw.com/image/70511452_6.jpg",
+    "category": "ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ"
+  },
+  "https://www.theguardian.com/world/2026/oct/02/brazil-election-lady-of-aparecida-lula-bolsonaro-row": {
+    "image": "https://i.guim.co.uk/img/media/7a8377a8239c58331e80d9ae5164c51f212291f1/0_248_1952_1561/master/1952.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=b9a566312e55ad32cb81b35e35a545cc",
+    "category": "ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ"
+  },
+  "https://www.politico.eu/article/speed-up-eu-health-security-prep-says-nato-chief-medic/": {
+    "image": "https://www.politico.eu/wp-content/uploads/2024/09/30/nl-header_pro_morning-health-care.png",
+    "category": "ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ"
   }
 }
