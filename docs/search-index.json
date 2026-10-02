@@ -1,108 +1,192 @@
 [
   {
+    "date": "2026-10-02",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Ενοχλήθηκαν στα κατεχόμενα από την παρέλαση: «Μικρό νησί, μεγάλος μπελάς»",
+    "snippet": "Η χθεσινή στρατιωτική παρέλαση στη Λευκωσία για την  επέτειο της κυπριακής ανεξαρτησίας, σκάνδαλα που αφορούν την «αρχή ηλεκτρισμού», αλλά και η προβολή του έργου της «κυβέρνησης»...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Cyprus unemployment rate rises for third month running [Επικαιρότητα]",
+    "snippet": "Cyprus’ unemployment rate rose to 4.1 per cent in August 2026, according to Eurostat data, as the jobless rate across both the European Union and euro area rema...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Saudi-led coalition says Houthis attacked power station for Prophet’s Mosque in Medina [Επικαιρότητα]",
+    "snippet": "The Saudi-led coalition fighting Yemen’s Houthis said on Thursday that the Iran-aligned group had attacked a power distribution station in Medina which supplies...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Four arrested during overnight police operations [Επικαιρότητα]",
+    "snippet": "Four people were arrested during overnight police operations across Cyprus, including three for the illegal possession of tobacco products, police said on Frida...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Trump launches midterm campaign push in Texas and Oklahoma as Republicans face tough races [Επικαιρότητα]",
+    "snippet": "US President Donald Trump began a 32-day campaign blitz on Thursday with stops in Texas and Oklahoma, aiming to bolster Republican candidates as his party fight...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. South Korea’s Lee threatens action against Ukraine over transfer of North Korean soldiers [Ο Φάκελός μου]",
+    "snippet": "South Korean President Lee Jae Myung on Friday threatened unspecified measures against Ukraine unless Kyiv acknowledged what Seoul says was a confidentiality ag...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🌍 Διεθνή",
+    "title": "1. US pressures Europe over diesel reserves as Trump threatens export ban [Διεθνή]",
+    "snippet": "President Donald Trump has threatened to ban diesel exports in a bid to ease prices in the US ahead of the November elections....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🌍 Διεθνή",
+    "title": "2. Christa Pike in critical condition after surviving two lethal injections, lawyer says [Διεθνή]",
+    "snippet": "Pike’s lawyers have asked for her death sentence to be commuted following the botched execution....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🌍 Διεθνή",
+    "title": "3. NY's governor appoints special prosecutor in Cornell frat rape investigation [Διεθνή]",
+    "snippet": "The governor said she'd lost faith in prosecutors overseeing the case and handed it over to New York Attorney General Letitia James....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🌍 Διεθνή",
+    "title": "4. Seoul warns 'further action' if Ukraine does not apologise over prisoner-of-war row [Διεθνή]",
+    "snippet": "President Lee Jae Myung also accused Kyiv of \"attempting to provoke a war on the Korean Peninsula\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "🌍 Διεθνή",
+    "title": "5. Netanyahu says Flydubai attacker had 'Islamist radical indoctrination' [Διεθνή]",
+    "snippet": "Israel's prime minister says the pilot who tried to take over the Flydubai plane clearly intended to \"down the plane\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-02",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-10-01",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Ιστορική Αποκάλυψη του Αντιαεροπορικού Συστήματος Barak MX στην Παρέλαση της 66ης Επετείου της Κυπριακής Ανεξαρτησίας: Αναβάθμιση της Αποτρεπτικής Ισχύος, Μήνυμα Πάλμα για Στρατηγικές Συμμαχίες και Έπαινος Μάρκο Ρούμπιο για τη Σχέση ΗΠΑ-Κύπρου [Εξέλιξη] [Επιβεβαιωμένο]",
     "snippet": "Σε μια ιστορική καμπή για την αμυντική θωράκιση της Κυπριακής Δημοκρατίας εξελίχθηκε η στρατιωτική παρέλαση στη Λευκωσία για την 66η επέτειο της Ανεξαρτησίας, καθώς η Εθνική Φρουρά...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-01.html#top-story"
   },
   {
     "date": "2026-10-01",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Άμυνα & Στρατιωτική Παρέλαση: Δημόσια παρουσίαση του προηγμένου συστήματος αεράμυνας Barak MX στην παρέλαση για την 66η επέτειο Ανεξαρτησίας [Επιβεβαιωμένο]",
     "snippet": "Στο επίκεντρο του ενδιαφέροντος της φετινής μεγαλειώδους στρατιωτικής παρέλασης στη Λευκωσία βρέθηκε η επίσημη πρώτη εμφάνιση των συστοιχιών Barak MX της Εθνική...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-01.html#cyprus"
   },
   {
     "date": "2026-10-01",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Πολιτική Ηγεσία & Εθνική Στρατηγική: Δηλώσεις πολιτικών αρχηγών για την προάσπιση της Κυπριακής Δημοκρατίας και την ενίσχυση της ασφάλειας [Επιβεβαιωμένο]",
     "snippet": "Ομόθυμη στάση ως προς την ανάγκη θωράκισης του κράτους εξέφρασαν οι ηγέτες των κοινοβουλευτικών κομμάτων στο περιθώριο της παρέλασης της 1ης Οκτωβρίου. Ο Γενικό...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-01.html#cyprus"
   },
   {
     "date": "2026-10-01",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Ενεργειακές & Θαλάσσιες Ζώνες: Διπλωματικές πηγές καταγγέλλουν τη νέα προκλητική τουρκική NAVTEX για τον αγωγό φυσικού αερίου προς τα κατεχόμενα [Επιβεβαιωμένο]",
     "snippet": "Ως «προκλητική μονομερή ενέργεια» που παραβιάζει κατάφωρα το Διεθνές Δίκαιο και τη Σύμβαση για το Δίκαιο της Θάλασσας (UNCLOS) χαρακτηρίζουν διπλωματικές πηγές...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-01.html#cyprus"
   },
   {
     "date": "2026-10-01",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Ευρωπαϊκή Ολοκλήρωση & Μετανάστευση: Τεχνικά έτοιμη η Κύπρος για πλήρη ένταξη στη Ζώνη Σένγκεν — Παρέμβαση Νικόλα Ιωαννίδη στο Λουξεμβούργο [Επιβεβαιωμένο]",
     "snippet": "Την απόλυτη τεχνική ετοιμότητα της Κυπριακής Δημοκρατίας να καταστεί πλήρες μέλος του χώρου Σένγκεν υπογράμμισε ο Υφυπουργός Μετανάστευσης Νικόλας Ιωαννίδης, πρ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-01.html#cyprus"
   },
   {
     "date": "2026-10-01",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Διεθνείς Σχέσεις & Συνεργασία: Ο Υπουργός Εξωτερικών των ΗΠΑ Μάρκο Ρούμπιο εξαίρει τη στρατηγική σύμπλευση Ουάσιγκτον - Λευκωσίας [Επιβεβαιωμένο]",
     "snippet": "Θερμό συγχαρητήριο μήνυμα απηύθυνε προς τον κυπριακό λαό και την κυβέρνηση ο Υπουργός Εξωτερικών των Ηνωμένων Πολιτειών Μάρκο Ρούμπιο με την ευκαιρία της 66ης ε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-01.html#cyprus"
   },
   {
     "date": "2026-10-01",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ακίνητα & Ενοίκια Λεμεσού: Εβδομαδιαίο Δελτίο Αγοράς Ακινήτων Λεμεσού: Επενδυτικές ευκαιρίες 2Υ/Δ σε Αγία Φύλα, Κάψαλο και Κάτω Πολεμίδια με αποδόσεις άνω του 6% εν μέσω σταθεροποίησης τιμών [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Το εβδομαδιαίο μητρώο καταγραφής κατοικιών της Λεμεσού αναδεικνύει ποιοτικές επενδυτικές ευκαιρίες σε οικιστικές γειτονιές της μείζονος πόλης, με τον άξονα Αγία...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-01.html#cyprus"
   },
   {
     "date": "2026-10-01",
     "section": "🌍 Διεθνή",
     "title": "1. Μέση Ανατολή & Ενεργειακές Απειλές: Η Τεχεράνη προετοιμάζει σθεναρότερη στρατιωτική απάντηση καθώς οι διπλωματικές προσπάθειες συναντούν εμπόδια εν μέσω πίεσης στο Brent [Επιβεβαιωμένο]",
     "snippet": "Σε κατάσταση αυξημένου συναγερμού παραμένει η Μέση Ανατολή, καθώς ιρανικές πηγές επιβεβαιώνουν ότι η ηγεσία στην Τεχεράνη προετοιμάζει μια ευρύτερη και πιο δυνα...",
-    "url": "#world"
+    "url": "briefings/2026-10-01.html#world"
   },
   {
     "date": "2026-10-01",
     "section": "🌍 Διεθνή",
     "title": "2. Αεροπορική Ασφάλεια & Συμβάν Flydubai: Διεθνείς έρευνες μετά το πρωτοφανές περιστατικό μαχαιρώματος εν πτήσει και την απότομη βύθιση 4.000 μέτρων [Επιβεβαιωμένο]",
     "snippet": "Σοκ στις διεθνείς αερομεταφορές προκάλεσε το περιστατικό βίας εν πτήσει σε δρομολόγιο της Flydubai με προορισμό το Ισραήλ, κατά το οποίο συγκυβερνήτης επιτέθηκε...",
-    "url": "#world"
+    "url": "briefings/2026-10-01.html#world"
   },
   {
     "date": "2026-10-01",
     "section": "🌍 Διεθνή",
     "title": "3. Γεωπολιτική & Πόλεμος στην Ουκρανία: Μαζικά πλήγματα της Ρωσίας στο ενεργειακό δίκτυο της Ουκρανίας ενόψει χειμώνα — Προειδοποιήσεις Πούτιν για παράταση της σύγκρουσης [Επιβεβαιωμένο]",
     "snippet": "Σε νέο γύρο σαρωτικών πυραυλικών επιθέσεων κατά κρίσιμων σταθμών ηλεκτροπαραγωγής και υποσταθμών της Ουκρανίας προχώρησαν οι ρωσικές δυνάμεις, προκαλώντας εκτετ...",
-    "url": "#world"
+    "url": "briefings/2026-10-01.html#world"
   },
   {
     "date": "2026-10-01",
     "section": "🌍 Διεθνή",
     "title": "4. Αεροπορικές Έρευνες: Εμβάθυνση στα αίτια του συμβάντος Flydubai και διεθνής αναθεώρηση ελέγχων ασφαλείας [Επιβεβαιωμένο]",
     "snippet": "Καθώς οι σαουδαραβικές και εμιρατινές αρχές προχωρούν στην ανάκριση του συγκυβερνήτη, διεθνείς εμπειρογνώμονες ασφάλειας πτήσεων επισημαίνουν την ανάγκη ενίσχυσ...",
-    "url": "#world"
+    "url": "briefings/2026-10-01.html#world"
   },
   {
     "date": "2026-10-01",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω του συστήματος TaxisNet (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω του συστήματος TaxisNet (TaxisNet)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-01.html#deadlines"
   },
   {
     "date": "2026-10-01",
     "section": "📅 Προθεσμίες",
     "title": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ.",
     "snippet": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-01.html#deadlines"
   },
   {
     "date": "2026-10-01",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Νοεμβρίου 2026: Ενημέρωση φακέλων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Νοεμβρίου 2026: Ενημέρωση φακέλων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-01.html#deadlines"
   },
   {
     "date": "2026-10-01",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-01.html#top-story"
   },
   {
     "date": "2026-09-30",

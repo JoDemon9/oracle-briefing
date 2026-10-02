@@ -1294,5 +1294,41 @@
   "https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/806d/live/8cf56f00-8950-11f1-aee1-9f17574ebbb3.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.sigmalive.com/news/kypriako/1331685/enokhlithikan-sta-katekhomena-apo-tin-parelasi-mikro-nisi-meghalos-mpelas": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1364054/conversions/por_31-seo.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΥΠΟΔΟΜΕΣ"
+  },
+  "https://cyprus-mail.com/2026/10/02/cyprus-unemployment-rate-rises-for-third-month-running": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2022/03/tech-worker-woman-in-tech-remote-work-cyprus-mail.webp",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/02/saudi-led-coalition-says-houthis-attacked-power-station-for-prophets-mosque-in-medina": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/2026-10-01T224715Z_451999624_RC2MUNAL4F7J_RTRMADP_3_IRAN-CRISIS-SAUDI-YEMEN.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/02/four-arrested-during-overnight-police-operations": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/08/police-speeding-radar-3.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/02/trump-launches-midterm-campaign-push-in-texas-and-oklahoma-as-republicans-face-tough-races": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/2026-10-02T042354Z_1352076722_RC2PUNAEPUL4_RTRMADP_3_USA-TRUMP.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/02/south-koreas-lee-threatens-action-against-ukraine-over-transfer-of-north-korean-soldiers": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/2026-10-01T034939Z_1542944138_RC21UNA9W719_RTRMADP_3_SOUTHKOREA-MILITARY.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/c5zjzjgdeneeo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/95a3/live/c2123c20-be1d-11f1-8202-6fffc4c0ebaa.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cr1585y0y90go?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/7b91/live/ebf458a0-be01-11f1-abb3-a7ef3daa1887.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cm1dld14weero?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/25fd/live/4b4dfad0-be0d-11f1-92ea-016450691ea1.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }
