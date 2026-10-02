@@ -27,6 +27,16 @@
     },
     "articles": [
       {
+        "title": "Ομόνοια/Layla Iskandar",
+        "url": "https://www.kerkida.net/eidiseis/alla-spor/gynaikeio/omonoia/omonoialayla-iskandar",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Οδηγίες στον...\"βράχο\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/odigies-stonbraho",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Εδώ ο... Γιώργος",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/edo-o-giorgos-0",
         "source": "Kerkida.net"
@@ -40,19 +50,9 @@
         "title": "\"Πράσινα ΚΛΙΚΣ\" από την προπόνηση",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/prasina-kliks-apo-tin-proponisi-4",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Σκόραραν… 5 νέοι!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/skoraran-5-neoi",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Τετ α τετ με Κακουλλή",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tet-a-tet-me-kakoylli",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-02T07:02:33.410729+00:00"
+    "fetched_at": "2026-10-02T10:38:13.792435+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-02T07:02:34.201303+00:00"
+    "fetched_at": "2026-10-02T10:38:14.539490+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-02T07:02:34.852738+00:00"
+    "fetched_at": "2026-10-02T10:38:15.331510+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,7 +186,7 @@
     },
     "articles": [
       {
-        "title": "Verstappen tops Bahrain GP in Malaysia first practice",
+        "title": "Leclerc tops Bahrain GP in Malaysia second practice",
         "url": "https://www.bbc.com/sport/formula1/articles/ckm2q2346zz9o",
         "source": "BBC Sport F1"
       },
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-02T07:02:35.557758+00:00"
+    "fetched_at": "2026-10-02T10:38:16.206206+00:00"
   }
 }
