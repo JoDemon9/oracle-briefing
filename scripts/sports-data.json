@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Ψάχνοντας το πρώτο του...",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/psahnontas-proto-toy",
+        "title": "Αναμονή για το... επίσημο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/anamoni-gia-episimo",
         "source": "Kerkida.net"
       },
       {
-        "title": "Το μηδέν... του Φαμπιάνο",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/miden-toy-fampiano",
+        "title": "Θα έχει...ρόλο",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tha-eheirolo",
         "source": "Kerkida.net"
       },
       {
-        "title": "Χρήσιμα...συμπεράσματα",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/hrisimasymperasmata",
+        "title": "Ομόνοια/Συγκινητική αφιέρωση στον Άρη",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/apoel/omonoiasygkinitiki-afierosi-ston-ari",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Ήταν η καλύτερη προπόνηση που μπορούσαμε να κάνουμε\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/itan-i-kalyteri-proponisi-poy-mporoysame-na-kanoyme",
+        "title": "Η περηφάνια του Φαμπιάνο",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/i-perifania-toy-fampiano",
         "source": "Kerkida.net"
       },
       {
-        "title": "Μετά από πέντε δύσκολους μήνες",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/meta-apo-pente-dyskoloys-mines",
+        "title": "Για καλό... σκοπό!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/gia-kalo-skopo-4",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-03T09:59:04.371939+00:00"
+    "fetched_at": "2026-10-03T17:59:07.148637+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-03T09:59:05.682972+00:00"
+    "fetched_at": "2026-10-03T17:59:08.264949+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-03T09:59:06.484965+00:00"
+    "fetched_at": "2026-10-03T17:59:09.015795+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "'Incredible' Red Bull upgrade enlivens F1 in 'roasting hot' Malaysia",
+        "url": "https://www.bbc.com/sport/formula1/articles/c5vgj31224kmo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Verstappen takes first 2026 pole ahead of Hamilton",
         "url": "https://www.bbc.com/sport/formula1/articles/cm1j3l9867jwo",
         "source": "BBC Sport F1"
@@ -196,21 +201,16 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "Russell says his 'confidence is back and growing'",
-        "url": "https://www.bbc.com/sport/formula1/articles/cv1j4jn5nxxlo",
-        "source": "BBC Sport F1"
-      },
-      {
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
       },
       {
-        "title": "Ocon to leave Haas putting F1 future in doubt",
-        "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
+        "title": "Russell says his 'confidence is back and growing'",
+        "url": "https://www.bbc.com/sport/formula1/articles/cv1j4jn5nxxlo",
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-03T09:59:08.857126+00:00"
+    "fetched_at": "2026-10-03T17:59:10.265641+00:00"
   }
 }
