@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Πρώτα λεπτά για Βίκτωρος",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/prota-lepta-gia-biktoros",
+        "title": "Το μηδέν... του Φαμπιάνο",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/miden-toy-fampiano",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Χρήσιμα...συμπεράσματα",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/hrisimasymperasmata",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "\"Ήταν η καλύτερη προπόνηση που μπορούσαμε να κάνουμε\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/itan-i-kalyteri-proponisi-poy-mporoysame-na-kanoyme",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Μετά από πέντε δύσκολους μήνες",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/meta-apo-pente-dyskoloys-mines",
         "source": "Kerkida.net"
       },
       {
         "title": "Ομόνοια-Ολυμπιακός: Φιλική νίκη για τους \"μαυροπράσινους\"",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/olympiakos-leykosias/omonoia-olympiakos-filiki-niki-gia-toys-mayroprasinoys",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "ΚΛΙΚΣ... Ομόνοια-Ολυμπιακός",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/kliks-omonoia-olympiakos",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Η 11αδα της Ομόνοιας για το φιλικό",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-11ada-tis-omonoias-gia-filiko",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Η κάμερα στον... Κίτσο!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/i-kamera-ston-kitso",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-02T16:19:52.322875+00:00"
+    "fetched_at": "2026-10-03T08:34:36.460652+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,6 +79,11 @@
     },
     "articles": [
       {
+        "title": "Thrown in with Giggs and Beckham: how Manchester United tried to get Billy Kenny",
+        "url": "https://www.theguardian.com/football/2026/oct/03/billy-kenny-ryan-giggs-david-beckham-manchester-united-autobiography",
+        "source": "The Guardian"
+      },
+      {
         "title": "Wayne Rooney says Manchester City should not be stripped of titles for rules breach",
         "url": "https://www.theguardian.com/football/2026/sep/29/wayne-rooney-manchester-city-united-premier-league-titles-breaching-financial-rules",
         "source": "The Guardian"
@@ -97,14 +102,9 @@
         "title": "Manchester United report seventh straight annual loss and sell fans £125 grass clumps",
         "url": "https://www.theguardian.com/football/2026/sep/23/manchester-united-seventh-straight-annual-loss-record-revenue-financial-results",
         "source": "The Guardian"
-      },
-      {
-        "title": "Slip sliding away: football season-ticket holders fear falling down pecking order",
-        "url": "https://www.theguardian.com/football/2026/sep/23/premier-league-season-ticket-holders-pecking-order-new-fans-football-tourists",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-02T16:19:53.935126+00:00"
+    "fetched_at": "2026-10-03T08:34:37.740615+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-02T16:19:55.193458+00:00"
+    "fetched_at": "2026-10-03T08:34:38.468152+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -196,13 +196,13 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "Ocon to leave Haas putting F1 future in doubt",
-        "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
       },
       {
-        "title": "Andrew Benson Q&A: Send us your questions",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
+        "title": "Ocon to leave Haas putting F1 future in doubt",
+        "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
         "source": "BBC Sport F1"
       },
       {
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-02T16:19:56.421344+00:00"
+    "fetched_at": "2026-10-03T08:34:39.445178+00:00"
   }
 }
