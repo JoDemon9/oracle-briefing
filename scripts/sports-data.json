@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "Ψάχνοντας το πρώτο του...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/psahnontas-proto-toy",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Το μηδέν... του Φαμπιάνο",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/miden-toy-fampiano",
         "source": "Kerkida.net"
@@ -45,14 +50,9 @@
         "title": "Μετά από πέντε δύσκολους μήνες",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia-aradippoy/meta-apo-pente-dyskoloys-mines",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Ομόνοια-Ολυμπιακός: Φιλική νίκη για τους \"μαυροπράσινους\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/olympiakos-leykosias/omonoia-olympiakos-filiki-niki-gia-toys-mayroprasinoys",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-03T08:34:36.460652+00:00"
+    "fetched_at": "2026-10-03T09:59:04.371939+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-03T08:34:37.740615+00:00"
+    "fetched_at": "2026-10-03T09:59:05.682972+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-03T08:34:38.468152+00:00"
+    "fetched_at": "2026-10-03T09:59:06.484965+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Verstappen takes first 2026 pole ahead of Hamilton",
+        "url": "https://www.bbc.com/sport/formula1/articles/cm1j3l9867jwo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Russell says Red Bull strongest after Bahrain practice",
         "url": "https://www.bbc.com/sport/formula1/articles/ckm2q2346zz9o",
         "source": "BBC Sport F1"
@@ -204,13 +209,8 @@
         "title": "Ocon to leave Haas putting F1 future in doubt",
         "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "'I still feel as fast as anybody' - Alonso on why he's staying in F1",
-        "url": "https://www.bbc.com/sport/formula1/articles/cde0gz51g36o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-03T08:34:39.445178+00:00"
+    "fetched_at": "2026-10-03T09:59:08.857126+00:00"
   }
 }
