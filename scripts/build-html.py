@@ -53,7 +53,7 @@ TOPIC_FALLBACKS = {
     'cuba_havana': 'https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80',
     'oil_gas_commodities': 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80',
     'school': 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
-    'employment': 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
+    'employment': 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80',
     'economy': 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80',
     'energy': 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80',
     'banking': 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=800&q=80',
@@ -69,7 +69,17 @@ TOPIC_FALLBACKS = {
     'volcano': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
     'aviation': 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',
     'justice': 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
-    'general': 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80'
+    'general': 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80',
+    'waste_landfill': 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80',
+    'cyprus_disy_politics': 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80',
+    'macro_trade_deficit': 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+    'fuel_diesel': 'https://images.unsplash.com/photo-1579294800821-694d95e86143?w=800&q=80',
+    'heritage_monument': 'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
+    'military_middle_east': 'https://images.unsplash.com/photo-1579829366248-204fe8413f31?w=800&q=80',
+    'jobs_fed_labor': 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80',
+    'us_debt_dollars': 'https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=800&q=80',
+    'euro_inflation': 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80',
+    'uk_bbc_parliament': 'https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=800&q=80',
 }
 
 BAD_IMAGE_TOKENS = [
@@ -296,104 +306,144 @@ def save_image_cache(cache):
 def match_topic_fallback(title, content_text='', default_category='ΕΠΙΚΑΙΡΟΤΗΤΑ'):
     # Check title first (headline is primary topic), then text if title didn't match specific topic
     for text_to_check in [title.lower(), (title + ' ' + content_text).lower()]:
-        # 1. Strait of Hormuz / Tankers / Persian Gulf
+        # 1. Waste Management / Landfills / Recycling (EU court infringement, OEDA)
+        if any(k in text_to_check for k in ['υγειονομική ταφή', 'απόβλητ', 'σκυβάλ', 'οεδα', 'πεντάκωμ', 'κόσιη', 'ανακύκλωσ', 'διαχείριση αποβλήτων', 'landfill']):
+            return TOPIC_FALLBACKS['waste_landfill'], 'ΠΕΡΙΒΑΛΛΟΝ & ΥΠΟΔΟΜΕΣ'
+
+        # 2. Cultural Heritage / Monuments / Mosque restoration
+        if any(k in text_to_check for k in ['τζαμί', 'κοιλάνι', 'πολιτιστική κληρονομιά', 'μνημεί', 'αναστήλωση', 'αποκατάσταση μνημείου', 'τεχνική επιτροπή για την πολιτιστική']):
+            return TOPIC_FALLBACKS['heritage_monument'], 'ΠΟΛΙΤΙΣΤΙΚΗ ΚΛΗΡΟΝΟΜΙΑ'
+
+        # 3. Eurozone Inflation / European Consumer Prices / Strategic Reserves
+        if any(k in text_to_check for k in ['ευρωπαϊκός πληθωρισμός', 'πληθωρισμός της ευρωζώνης', 'πληθωρισμό της ευρωζώνης', 'ευρωζών']):
+            return TOPIC_FALLBACKS['euro_inflation'], 'ΕΥΡΩΠΑΪΚΗ ΟΙΚΟΝΟΜΙΑ'
+
+        # 4. Fuel & Retail Diesel / Gas Stations (Pump prices, energy inflation)
+        if any(k in text_to_check for k in ['ντίζελ', 'diesel', 'πρατήρι', 'λιανικές τιμές καυσίμων', 'ράλι στο ντίζελ', 'τιμές των υγρών καυσίμων', 'πετρέλαιο κίνησης']):
+            return TOPIC_FALLBACKS['fuel_diesel'], 'ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ'
+
+        # 5. Macroeconomics / Trade Deficit / Current Account Balance / Port Cargo
+        if any(k in text_to_check for k in ['έλλειμμα τρεχουσών', 'ισοζύγιο τρεχουσών', 'τρεχουσών συναλλαγών', 'μακροοικονομία & εξωτερικό', 'εμπορικό έλλειμμα', 'εισαγωγών εξοπλισμού']):
+            return TOPIC_FALLBACKS['macro_trade_deficit'], 'ΜΑΚΡΟΟΙΚΟΝΟΜΙΑ'
+
+        # 6. Cyprus Politics / DISY / Party Assembly
+        if any(k in text_to_check for k in ['δησυ', 'πολιτικού γραφείου', 'πολιτικό γραφείο', 'εκλογική συνέλευση', 'αννίτα δημητρίου', 'αβέρωφ', 'παμπορίδ']):
+            return TOPIC_FALLBACKS['cyprus_disy_politics'], 'ΠΟΛΙΤΙΚΗ & ΚΟΜΜΑΤΑ'
+
+        # 7. US National Debt / Federal Budget / $40 Trillion
+        if any(k in text_to_check for k in ['ομοσπονδιακό χρέος', 'χρέος των ηπα', '40 τρισεκατομμύρι', 'παγκόσμιο χρέος & δημοσιονομικά']):
+            return TOPIC_FALLBACKS['us_debt_dollars'], 'ΔΗΜΟΣΙΟΝΟΜΙΚΑ & ΑΓΟΡΕΣ'
+
+        # 8. UK Media & Parliament / BBC News / Westminster
+        if any(k in text_to_check for k in ['bbc', 'βρετανικά μμε', 'βρετανική', 'βρετανικό', 'licence fee', 'κοινοβουλευτικής επιτροπής για το μέλλον', 'westminster']):
+            return TOPIC_FALLBACKS['uk_bbc_parliament'], 'ΔΙΕΘΝΗ ΜΜΕ & ΘΕΣΜΟΙ'
+
+        # 9. Middle East Military Deployment / Red Sea / Carrier operations
+        if any(k in text_to_check for k in ['9.000 επιπλέον στρατιωτών', 'στρατιωτών των ηπα', 'αμερικανικών επιχειρήσεων', 'μέση ανατολή & ερυθρά', 'bab al-mandab', 'επιδρομών των ηνωμένων πολιτειών', 'taiz']):
+            return TOPIC_FALLBACKS['military_middle_east'], 'ΓΕΩΠΟΛΙΤΙΚΗ & ΑΜΥΝΑ'
+
+        # 10. US Labor Market / Non-Farm Payrolls / Fed Employment
+        if any(k in text_to_check for k in ['αμερικανική αγορά εργασίας', 'αγορά εργασίας & fed', 'θέσεων εργασίας', 'bureau of labor', 'μη γεωργικών']):
+            return TOPIC_FALLBACKS['jobs_fed_labor'], 'ΑΠΑΣΧΟΛΗΣΗ & FED'
+
+        # 11. Strait of Hormuz / Tankers / Persian Gulf
         if any(k in text_to_check for k in ['ορμούζ', 'στενά', 'δεξαμενόπλοι', 'τάνκερ', 'περσικ', 'hormuz']):
             return TOPIC_FALLBACKS['shipping_tanker'], 'ΓΕΩΠΟΛΙΤΙΚΗ & ΕΝΕΡΓΕΙΑ'
 
-        # 2. Interconnector / Power cables
+        # 12. Interconnector / Power cables
         if any(k in text_to_check for k in ['interconnector', 'καλώδι', 'διασύνδεσ', 'υποθαλάσσι', 'βυθομετρ']):
             return TOPIC_FALLBACKS['interconnector_grid'], 'ΕΝΕΡΓΕΙΑ & ΥΠΟΔΟΜΕΣ'
 
-        # 3. Running / Marathon / Coastal athletics
+        # 13. Running / Marathon / Coastal athletics
         if any(k in text_to_check for k in ['αγώνα δρόμου', 'δρομείς', 'κοεας', 'αμαθούντα', 'μαραθώνι', 'αθλητισμ']):
             return TOPIC_FALLBACKS['sports_running'], 'ΚΟΙΝΩΝΙΑ & ΑΘΛΗΤΙΣΜΟΣ'
 
-        # 4. Police / Night operations / Traffic checks
+        # 14. Police / Night operations / Traffic checks
         if any(k in text_to_check for k in ['αστυνομ', 'εξώδικ', 'τροχαί', 'μπλόκ', 'αλκοόλ', 'ναρκωτικ', 'narcotest', 'πρόστιμ']):
             return TOPIC_FALLBACKS['police_patrol_night'], 'ΔΗΜΟΣΙΑ ΤΑΞΗ'
 
-        # 5. Housing protests / Evictions / Madrid / Vultures
+        # 15. Housing protests / Evictions / Madrid / Vultures
         if any(k in text_to_check for k in ['vultures', 'maricarmen', 'διαδηλώσ', 'διαμαρτυρ', 'έξωση', 'εξώσεις', 'μαδρίτη', 'funds ακινήτων']):
             return TOPIC_FALLBACKS['housing_protest'], 'ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ'
 
-        # 6. Real estate / Limassol apartments / Bazaraki radar
-        if any(k in text_to_check for k in ['ακίνητ', 'ενοίκι', 'διαμέρισμ', 'κατοικί', 'στεγαστικ', 'αγορά ακινήτων', 'αγία φύλα', 'κάψαλος', 'νεάπολη', 'ύψωνα', 'bazaraki', '2υ/δ']):
+        # 16. Real estate / Limassol apartments / Bazaraki radar
+        if any(k in text_to_check for k in ['ακίνητ', 'ενοίκι', 'διαμέρισμ', 'κατοικί', 'στεγαστικ', 'αγορά ακινήτων', 'αγία φύλα', 'κάψαλος', 'νεάπολη', 'gross yields', 'bazaraki', '2υ/δ']):
             return TOPIC_FALLBACKS['real_estate_modern'], 'Ο ΦΑΚΕΛΟΣ ΜΟΥ'
 
-        # 7. AI & Defense / Anthropic / Pentagon / Military AI
-        if any(k in text_to_check for k in ['anthropic', 'πεντάγων', 'τεχνητή νοημοσύνη', 'claude', 'στρατιωτική χρήση ai', 'ai safety']):
+        # 17. AI & Defense / Anthropic / AI Safety / Defense Tech
+        if any(k in text_to_check for k in ['anthropic', 'τεχνητή νοημοσύνη', 'claude', 'στρατιωτική χρήση ai', 'ai safety', 'τεχνητής νοημοσύνης']):
             return TOPIC_FALLBACKS['ai_defense'], 'ΤΕΧΝΟΛΟΓΙΑ & ΑΜΥΝΑ'
 
-        # 8. Pope / Catholic church / Paris mass / Vatican
+        # 18. Pope / Catholic church / Paris mass / Vatican
         if any(k in text_to_check for k in ['πάπας', 'πάπα', 'λειτουργία', 'πιστοί', 'λούρδη', 'βατικαν', 'αποστολική']):
             return TOPIC_FALLBACKS['vatican_pope'], 'ΔΙΕΘΝΗ & ΚΟΙΝΩΝΙΑ'
 
-        # 9. Cuba / Havana / Latin America
+        # 19. Cuba / Havana / Latin America
         if any(k in text_to_check for k in ['κούβα', 'κουβαν', 'αβάνα', 'λατινική αμερική', 'cuba', 'ροδρίγκες']):
             return TOPIC_FALLBACKS['cuba_havana'], 'ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ'
 
-        # 10. Cyprus Problem / Holguin / Guterres / Erhurman
+        # 20. Cyprus Problem / Holguin / Guterres / Erhurman
         if any(k in text_to_check for k in ['ολγκίν', 'holguin', 'κυπριακό', 'έρχιουρμαν', 'γκουτέρες', 'τατάρ', 'νεκρή ζώνη']):
             return TOPIC_FALLBACKS['diplomacy_capitol'], 'ΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
 
-        # 11. UN General Assembly Speech / Lavrov
+        # 21. UN General Assembly Speech / Lavrov
         if any(k in text_to_check for k in ['λαβρόφ', 'lavrov', 'ομιλία λαβρόφ']):
             return TOPIC_FALLBACKS['un_assembly'], 'ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
 
-        # 12. UN Bilateral contacts / Kombos / India / Indonesia
+        # 22. UN Bilateral contacts / Kombos / India / Indonesia
         if any(k in text_to_check for k in ['κόμπος', 'ινδία', 'ινδονησία', 'διμερείς συμφωνίες', 'επαφών του υπεξ']):
             return TOPIC_FALLBACKS['bilateral_handshake'], 'ΔΙΕΘΝΕΙΣ ΣΧΕΣΕΙΣ & ΟΗΕ'
 
-        # 13. General UN / Diplomacy
+        # 23. General UN / Diplomacy
         if any(k in text_to_check for k in ['γενική συνέλευση', 'οηε', 'διπλωματ', 'χριστοδουλίδ']):
             return TOPIC_FALLBACKS['un_diplomacy_flags'], 'ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ'
 
-        # 14. Energy & Oil markets
-        if any(k in text_to_check for k in ['καύσιμ', 'πετρέλαι', 'βενζίν', 'brent', 'wti', 'αέριο', 'ενέργει', 'οπεκ']):
+        # 24. Energy & Oil markets (General)
+        if any(k in text_to_check for k in ['brent', 'wti', 'πετρέλαιο brent', 'πετρελαιοειδ', 'αέριο', 'ενέργει', 'οπεκ']):
             return TOPIC_FALLBACKS['oil_gas_commodities'], 'ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ'
 
-        # 15. Banking & Financial markets
-        if any(k in text_to_check for k in ['κεφαλαιαγορ', 'τράπεζ', 'boch', 'επιτόκι', 'euribor', 'χρηματοπιστωτ', 'dbrs', 'δημοσιονομ']):
+        # 25. Banking & Financial markets
+        if any(k in text_to_check for k in ['κεφαλαιαγορ', 'τράπεζ', 'boch', 'επιτόκι', 'euribor', 'χρηματοπιστωτ', 'dbrs']):
             return TOPIC_FALLBACKS['banking'], 'ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ'
 
-        # 16. Education / Schools
-        if any(k in text_to_check for k in ['σχολ', 'μαθητ', 'υποδομ', 'ύψωνα', 'παιδεία', 'εκπαίδευσ']):
+        # 26. Education / Schools (Removed 'υποδομ' and 'ύψωνα' to prevent false collisions)
+        if any(k in text_to_check for k in ['σχολεί', 'σχολικ', 'μαθητ', 'παιδεία', 'εκπαίδευσ', 'διδασκ']):
             return TOPIC_FALLBACKS['school'], 'ΠΑΙΔΕΙΑ & ΥΠΟΔΟΜΕΣ'
 
-        # 17. General shipping / maritime
-        if any(k in text_to_check for k in ['ναυτικ', 'πλοί', 'ναυτιλ', 'σκάφος', 'ναυάγ', 'λιμάν']):
+        # 27. General shipping / maritime
+        if any(k in text_to_check for k in ['ναυτικ', 'ναυτιλ', 'σκάφος', 'ναυάγ', 'λιμάν']):
             return TOPIC_FALLBACKS['shipping_tanker'], 'ΝΑΥΤΙΛΙΑ & ΑΣΦΑΛΕΙΑ'
 
-        # 18. Justice / Legal / ICJ
-        if any(k in text_to_check for k in ['icj', 'χάγη', 'δικαστήρι', 'γενοκτον', 'δικαιοσύν']):
+        # 28. Justice / Legal / ICJ
+        if any(k in text_to_check for k in ['icj', 'χάγη', 'δικαστήριο της χάγης', 'γενοκτον', 'δικαιοσύν']):
             return TOPIC_FALLBACKS['justice'], 'ΔΙΚΑΙΟΣΥΝΗ'
 
-        # 19. Aviation
-        if any(k in text_to_check for k in ['amazon', 'boeing', 'μαϊάμι', 'αεροπορικ', 'αεροδρόμι', 'πτήσ']):
+        # 29. Aviation
+        if any(k in text_to_check for k in ['amazon air', 'boeing', 'μαϊάμι αεροδρόμιο', 'αεροπορικ', 'αεροδρόμι', 'πτήσ']):
             return TOPIC_FALLBACKS['aviation'], 'ΑΕΡΟΠΟΡΙΑ'
 
-        # 20. Climate
+        # 30. Climate
         if any(k in text_to_check for k in ['κλίμα', 'θερμότερ', 'copernicus', 'καύσων', 'περιβάλλον', 'el niño']):
             return TOPIC_FALLBACKS['climate'], 'ΚΛΙΜΑ & ΠΕΡΙΒΑΛΛΟΝ'
 
-        # 21. Social / Family policy
+        # 31. Social / Family policy
         if any(k in text_to_check for k in ['τέκν', 'οικογένει', 'επίδομα', 'κοινωνικ']):
             return TOPIC_FALLBACKS['social'], 'ΚΟΙΝΩΝΙΚΗ ΠΟΛΙΤΙΚΗ'
 
-        # 22. Germany
+        # 32. Germany
         if any(k in text_to_check for k in ['afd', 'γερμανί', 'merz', 'σαξονία']):
             return TOPIC_FALLBACKS['germany'], 'ΓΕΡΜΑΝΙΑ'
 
-        # 23. Volcano
+        # 33. Volcano
         if any(k in text_to_check for k in ['krakatau', 'ηφαίστει', 'ινδονησία']):
             return TOPIC_FALLBACKS['volcano'], 'ΑΣΙΑ'
 
-        # 24. Employment
-        if any(k in text_to_check for k in ['απασχόληση', 'εργασί', 'cystat', 'μισθ']):
+        # 34. Employment (Avoid collision with 'εργασίες αποκατάστασης')
+        if any(k in text_to_check for k in ['απασχόληση', 'εργαζόμεν', 'cystat', 'μισθολογικ', 'ανεργία']):
             return TOPIC_FALLBACKS['employment'], 'ΟΙΚΟΝΟΜΙΑ'
 
-        # 25. Politics & Institutions
-        if any(k in text_to_check for k in ['λιμουζίν', 'βουλ', 'διορισμ', 'θεσμο', 'πολιτικ']):
+        # 35. Politics & Institutions
+        if any(k in text_to_check for k in ['λιμουζίν', 'βουλή', 'διορισμ', 'θεσμο', 'πολιτικ']):
             return TOPIC_FALLBACKS['politics'], 'ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ'
 
     return TOPIC_FALLBACKS['general'], default_category
