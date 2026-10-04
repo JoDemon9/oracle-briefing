@@ -1,115 +1,199 @@
 [
   {
+    "date": "2026-10-04",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "More storms to hit island in coming days",
+    "snippet": "Cyprus is unlikely to be affected by weather phenomena as extreme as those seen in Crete but may experience strong, isolated storms in the coming days, meteorological officer Panay...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Central Bank of Cyprus seeks insurance providers under three-year tender [Επικαιρότητα]",
+    "snippet": "The Central Bank of Cyprus (CBC) has launched a tender seeking insurance providers to supply coverage under contracts initially lasting three years. The tender,...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Israeli strike kills five in Gaza, including four women, health officials say [Επικαιρότητα]",
+    "snippet": "An Israeli airstrike killed at least five Palestinians, including four women, in an apartment building in Gaza City early on Saturday, health and civil defence...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Agriculture minister looks to boost role of female farmers [Επικαιρότητα]",
+    "snippet": "Further support measures to facilitate access to financing and sustainable investments for the agriculture sector were announced on Saturday by Agriculture Mini...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Businesses demand measurable returns from industrial 5G deployments [Επικαιρότητα]",
+    "snippet": "Industrial 5G is entering a more mature phase as enterprises move beyond testing the technology and increasingly assess whether it can deliver measurable operat...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Στόχος ισραηλινής επίθεσης ηγετικό στέλεχος της Χαμάς- Άγνωστη η τύχη του [Ο Φάκελός μου]",
+    "snippet": "Ανώτερες ισραηλινές πηγές ασφαλείας επιβεβαίωσαν ότι στόχος της σημερινής επίθεσης στη δυτική πόλη της Γάζας ήταν ο Αλί αλ-Αμούντι, ένα από τα πλέον ισχυρά στελ...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🌍 Διεθνή",
+    "title": "1. Tennessee prison chief to resign after Christa Pike's failed execution [Διεθνή]",
+    "snippet": "Pike's lawyers said the failure \"goes far beyond any one person\". Pike is in critical condition after surviving two lethal injections....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🌍 Διεθνή",
+    "title": "2. Cornell president says university 'must do better' after frat house rape allegations [Διεθνή]",
+    "snippet": "Michael Kotlikoff described the allegations of a woman who says she was drugged and gang raped as \"deeply disturbing\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🌍 Διεθνή",
+    "title": "3. Flydubai co-pilot attacked captain with axe, UAE official says [Διεθνή]",
+    "snippet": "The man accused of trying to take over the Israel-bound jet is named as Hamam al-Hammami by several media outlets....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🌍 Διεθνή",
+    "title": "4. Russia hits second major bridge in Ukraine's capital Kyiv [Διεθνή]",
+    "snippet": "The strike on the Pivnichnyi (Northern) Bridge comes after repeat attacks on another major bridge in Ukraine's capital....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "🌍 Διεθνή",
+    "title": "5. 'Anger in the streets': Tens of thousands protest in Spain over housing crisis [Διεθνή]",
+    "snippet": "More than 50 protests took place on Saturday after the government failed to get emergency legislation through parliament....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-04",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-10-03",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Παραπομπή της Κύπρου στο Ευρωπαϊκό Δικαστήριο για την Υγειονομική Ταφή: Κίνδυνος Βαριών Προστίμων εν μέσω Αστοχιών σε Πεντάκωμο, Κόσιη και Πάφο [Επιβεβαιωμένο]",
     "snippet": "Σε μια εξαιρετικά δυσμενή εξέλιξη για τη διεθνή περιβαλλοντική αξιοπιστία και τα δημόσια οικονομικά της Δημοκρατίας, η Ευρωπαϊκή Επιτροπή αποφάσισε την επίσημη παραπομπή της Κύπρου...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-03.html#top-story"
   },
   {
     "date": "2026-10-03",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Πολιτικές Εξελίξεις & ΔΗΣΥ: Ομόφωνη απόφαση Πολιτικού Γραφείου για παράταση των εσωκομματικών διαδικασιών στις 28 Νοεμβρίου [Επιβεβαιωμένο]",
     "snippet": "Σε κλίμα έντονων διαβουλεύσεων αλλά με ομόφωνη τελική απόφαση ολοκληρώθηκε η συνεδρίαση του Πολιτικού Γραφείου του Δημοκρατικού Συναγερμού, καθορίζοντας το πλαί...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-03.html#cyprus"
   },
   {
     "date": "2026-10-03",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Μακροοικονομία & Εξωτερικό Ισοζύγιο: Διεύρυνση του ελλείμματος τρεχουσών συναλλαγών στα €1,3 δισ. εν μέσω ενεργειακών εισαγωγών [Επιβεβαιωμένο]",
     "snippet": "Σημαντική διεύρυνση κατέγραψε το έλλειμμα στο ισοζύγιο τρεχουσών συναλλαγών της Κύπρου, αγγίζοντας το ποσό του €1,3 δισεκατομμυρίου σύμφωνα με τα πρόσφατα τραπε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-03.html#cyprus"
   },
   {
     "date": "2026-10-03",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Ενέργεια & Αγορά Καυσίμων: Το ράλι στο ντίζελ άνω των €2/λίτρο πιέζει τον πληθωρισμό στο 5,2% — Αντιδράσεις για τα φορολογικά βάρη [Επιβεβαιωμένο]",
     "snippet": "Σε εξαιρετικά υψηλά επίπεδα παραμένουν οι λιανικές τιμές των υγρών καυσίμων στην κυπριακή αγορά, με το πετρέλαιο κίνησης να καταγράφει τιμές άνω των €2 ανά λίτρ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-03.html#cyprus"
   },
   {
     "date": "2026-10-03",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Δημόσια Τάξη & Ασφάλεια: Στοχευμένες νυχτερινές επιχειρήσεις της Αστυνομίας σε Λεμεσό και Λευκωσία για έλεγχο παραβατικότητας [Επιβεβαιωμένο]",
     "snippet": "Σειρά συντονισμένων ελέγχων πραγματοποίησε η Αστυνομία Κύπρου κατά τη διάρκεια της νύχτας στα αστικά κέντρα της Λεμεσού και της Λευκωσίας, στο πλαίσιο ειδικού ε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-03.html#cyprus"
   },
   {
     "date": "2026-10-03",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Πολιτιστική Κληρονομιά & Μνημεία: Ολοκληρώθηκαν οι εργασίες αποκατάστασης στο ιστορικό τζαμί του Κοιλανίου στη Λεμεσό [Επιβεβαιωμένο]",
     "snippet": "Με επιτυχία ολοκληρώθηκαν οι εργασίες συντήρησης και δομικής αποκατάστασης στο ιστορικό τζαμί της κοινότητας Κοιλανίου στην επαρχία Λεμεσού, υπό την επίβλεψη τη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-03.html#cyprus"
   },
   {
     "date": "2026-10-03",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ακίνητα & Ενοίκια Λεμεσού: Σταθεροποίηση gross yields στο 6,5% σε Ύψωνα και Ζακάκι εν μέσω αυξημένης ζήτησης για 2Υ/Δ [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Η ανάλυση των τάσεων της κτηματαγοράς στη Λεμεσό για το φθινόπωρο του 2026 επιβεβαιώνει τη στροφή των εγχώριων και διεθνών επενδυτών προς τα δυτικά προάστια της...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-03.html#cyprus"
   },
   {
     "date": "2026-10-03",
     "section": "🌍 Διεθνή",
     "title": "1. Μέση Ανατολή & Ερυθρά Θάλασσα: Ολοκλήρωση 11ήμερων αμερικανικών επιχειρήσεων και αποστολή 9.000 επιπλέον στρατιωτών των ΗΠΑ στην περιοχή [Επιβεβαιωμένο]",
     "snippet": "Ολοκληρώθηκε ο κύκλος των έντονων αεροπορικών επιδρομών των Ηνωμένων Πολιτειών κατά θέσεων ιρανικών δυνάμεων και συμμάχων τους στην ευρύτερη περιφέρεια, μετά απ...",
-    "url": "#world"
+    "url": "briefings/2026-10-03.html#world"
   },
   {
     "date": "2026-10-03",
     "section": "🌍 Διεθνή",
     "title": "2. Αμερικανική Αγορά Εργασίας & Fed: Αύξηση μόλις 29.000 θέσεων εργασίας τον Σεπτέμβριο — Εξανεμίζονται οι προσδοκίες για νέες αυξήσεις επιτοκίων [Επιβεβαιωμένο]",
     "snippet": "Σημαντική επιβράδυνση κατέγραψε η αμερικανική αγορά εργασίας, με τα επίσημα στοιχεία του Bureau of Labor Statistics να δείχνουν δημιουργία μόλις 29.000 νέων μη...",
-    "url": "#world"
+    "url": "briefings/2026-10-03.html#world"
   },
   {
     "date": "2026-10-03",
     "section": "🌍 Διεθνή",
     "title": "3. Παγκόσμιο Χρέος & Δημοσιονομικά: Το ομοσπονδιακό χρέος των ΗΠΑ υπερβαίνει τα $40 τρισεκατομμύρια — Οριστικό τέλος στον φθηνό κρατικό δανεισμό [Επιβεβαιωμένο]",
     "snippet": "Ιστορικό ορόσημο ξεπέρασε το συνολικό δημόσιο χρέος των Ηνωμένων Πολιτειών, διαπερνώντας το όριο των $40 τρισεκατομμυρίων και επαναφέροντας στο προσκήνιο τη συζ...",
-    "url": "#world"
+    "url": "briefings/2026-10-03.html#world"
   },
   {
     "date": "2026-10-03",
     "section": "🌍 Διεθνή",
     "title": "4. Ευρωπαϊκός Πληθωρισμός & Καύσιμα: Στο 3,8% ο πληθωρισμός της Ευρωζώνης — Πιέσεις Ουάσιγκτον για αποδέσμευση στρατηγικών αποθεμάτων ντίζελ [Επιβεβαιωμένο]",
     "snippet": "Στο 3,8% διαμορφώθηκε ο ετήσιος πληθωρισμός στη ζώνη του ευρώ, καταγράφοντας την υψηλότερη τιμή των τελευταίων ετών καθώς το ενεργειακό κόστος και τα ακριβά καύ...",
-    "url": "#world"
+    "url": "briefings/2026-10-03.html#world"
   },
   {
     "date": "2026-10-03",
     "section": "🌍 Διεθνή",
     "title": "5. Βρετανικά ΜΜΕ & Δημόσιοι Θεσμοί: Έκθεση-καταπέλτης κοινοβουλευτικής επιτροπής για το μέλλον και τη χρηματοδότηση του BBC [Επιβεβαιωμένο]",
     "snippet": "Σε κρίσιμο σταυροδρόμι βρίσκεται ο βρετανικός ραδιοτηλεοπτικός κολοσσός BBC, σύμφωνα με έκθεση της αρμόδιας κοινοβουλευτικής επιτροπής του Ηνωμένου Βασιλείου πο...",
-    "url": "#world"
+    "url": "briefings/2026-10-03.html#world"
   },
   {
     "date": "2026-10-03",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω της πύλης TaxisNet (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω της πύλης TaxisNet (TaxisNet)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-03.html#deadlines"
   },
   {
     "date": "2026-10-03",
     "section": "📅 Προθεσμίες",
     "title": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της φθινοπωρινής συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ (ΕΚΤ).",
     "snippet": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της φθινοπωρινής συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ (Ε...",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-03.html#deadlines"
   },
   {
     "date": "2026-10-03",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Νοεμβρίου 2026: Επικαιροποίηση φακέλων και αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Νοεμβρίου 2026: Επικαιροποίηση φακέλων και αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-03.html#deadlines"
   },
   {
     "date": "2026-10-03",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-03.html#top-story"
   },
   {
     "date": "2026-10-02",

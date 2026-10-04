@@ -1458,5 +1458,33 @@
   "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/a5d3/live/7d12d1b0-bf45-11f1-babe-4199b0e7ccea.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/10/03/more-storms-to-hit-island-in-coming-days": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/light22.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+  },
+  "https://cyprus-mail.com/2026/10/03/israeli-strike-kills-five-in-gaza-including-four-women-health-officials-say": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/2026-10-03T112820Z_346041079_RC2LVNA3X2VU_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/03/agriculture-minister-looks-to-boost-role-of-female-farmers": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/farmer.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/04/businesses-demand-measurable-returns-from-industrial-5g-deployments": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/10/5G.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.sigmalive.com/news/international/1331846/stokhos-israilinis-epithesis-ighetiko-stelekhos-tis-xamas-aghnosti-i-tykhi-toy": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1364230/conversions/ap26269617293256_scaled-seo.jpg",
+    "category": "ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/ckly0leelnz4o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/1acd/live/708a4390-bf7e-11f1-9b0d-03ed169a0cab.jpg",
+    "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/225b/live/a58f5d00-bf24-11f1-bc2e-018d645d8d21.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }
