@@ -1506,5 +1506,21 @@
   "https://www.bbc.co.uk/news/articles/cxly4nym57q9o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8092/live/6ab37a20-bfbc-11f1-a64c-550be9e3c66b.png",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/10/04/heavy-rainfall-leads-to-14-callouts-for-fire-service": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/fire-service.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/04/changes-made-to-evacuation-protocols-after-fatal-limassol-fire": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/12/year-ender-Rebekah-main-Gutted-houses-in-Souni-which-lost-half-of-its-homes.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/df42/live/012a8270-bff2-11f1-a64c-550be9e3c66b.jpg",
+    "category": "ΔΙΕΘΝΗ ΜΜΕ & ΘΕΣΜΟΙ"
+  },
+  "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/7653/live/2853dd30-bffa-11f1-8c3e-3b2eab095459.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }

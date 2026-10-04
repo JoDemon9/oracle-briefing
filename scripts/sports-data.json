@@ -27,6 +27,16 @@
     },
     "articles": [
       {
+        "title": "Έρχεται... τρέξιμο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/erhetai-treximo",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "ΦΩΤΟΣ/ Ομόνοια Αραδίππου - Ομόνοια (Κ15)",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/fotos-omonoia-aradippoy-omonoia-k15",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Κ16 Ομόνοια - Ομόνοια Αραδίππου (Φωτορεπορτάζ)",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/k16-omonoia-omonoia-aradippoy-fotoreportaz",
         "source": "Kerkida.net"
@@ -40,19 +50,9 @@
         "title": "Πάγκο ο Μπάλκοβετς",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/pagko-o-mpalkobets",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Αναμονή για το... επίσημο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/anamoni-gia-episimo",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Θα έχει...ρόλο",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tha-eheirolo",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-04T10:42:13.829715+00:00"
+    "fetched_at": "2026-10-04T15:27:33.198960+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-04T10:42:15.215111+00:00"
+    "fetched_at": "2026-10-04T15:27:34.453922+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-04T10:42:15.908010+00:00"
+    "fetched_at": "2026-10-04T15:27:35.302858+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,7 +186,7 @@
     },
     "articles": [
       {
-        "title": "Verstappen wins Bahrain GP in Malaysia after long delays",
+        "title": "Verstappen wins in Malaysia after long delays as Russell retires",
         "url": "https://www.bbc.com/sport/formula1/articles/c5n49zx3zlvwo",
         "source": "BBC Sport F1"
       },
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-04T10:42:16.725077+00:00"
+    "fetched_at": "2026-10-04T15:27:36.623355+00:00"
   }
 }
