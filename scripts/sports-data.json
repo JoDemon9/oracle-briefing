@@ -27,6 +27,16 @@
     },
     "articles": [
       {
+        "title": "Κ16 Ομόνοια - Ομόνοια Αραδίππου (Φωτορεπορτάζ)",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/k16-omonoia-omonoia-aradippoy-fotoreportaz",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Αρχίζει η αντίστροφη...μέτρηση",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/arhizei-i-antistrofimetrisi",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Πάγκο ο Μπάλκοβετς",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/pagko-o-mpalkobets",
         "source": "Kerkida.net"
@@ -40,19 +50,9 @@
         "title": "Θα έχει...ρόλο",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/tha-eheirolo",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Ομόνοια/Συγκινητική αφιέρωση στον Άρη",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/apoel/omonoiasygkinitiki-afierosi-ston-ari",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Η περηφάνια του Φαμπιάνο",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/i-perifania-toy-fampiano",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-04T05:58:48.223633+00:00"
+    "fetched_at": "2026-10-04T10:42:13.829715+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-04T05:58:49.182562+00:00"
+    "fetched_at": "2026-10-04T10:42:15.215111+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-04T05:58:49.763768+00:00"
+    "fetched_at": "2026-10-04T10:42:15.908010+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Verstappen wins Bahrain GP in Malaysia after long delays",
+        "url": "https://www.bbc.com/sport/formula1/articles/c5n49zx3zlvwo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "'Incredible' Red Bull upgrade enlivens F1 in 'roasting hot' Malaysia",
         "url": "https://www.bbc.com/sport/formula1/articles/c5vgj31224kmo",
         "source": "BBC Sport F1"
@@ -193,11 +198,6 @@
       {
         "title": "Verstappen takes first 2026 pole ahead of Hamilton",
         "url": "https://www.bbc.com/sport/formula1/articles/cm1j3l9867jwo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Russell says Red Bull strongest after Bahrain practice",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckm2q2346zz9o",
         "source": "BBC Sport F1"
       },
       {
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-04T05:58:50.543095+00:00"
+    "fetched_at": "2026-10-04T10:42:16.725077+00:00"
   }
 }
