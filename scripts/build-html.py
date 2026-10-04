@@ -59,7 +59,7 @@ TOPIC_FALLBACKS = {
     'banking': 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=800&q=80',
     'shipwreck': 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
     'shipping': 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80',
-    'politics': 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
+    'politics': 'https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=800&q=80',
     'housing': 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
     'diplomacy': 'https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=800&q=80',
     'climate': 'https://images.unsplash.com/photo-1504370805625-d32c54b16100?w=800&q=80',
@@ -80,6 +80,9 @@ TOPIC_FALLBACKS = {
     'us_debt_dollars': 'https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=800&q=80',
     'euro_inflation': 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80',
     'uk_bbc_parliament': 'https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=800&q=80',
+    'earthquake': 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80',
+    'reading_books': 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80',
+    'fire_rescue_weather': 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80',
 }
 
 BAD_IMAGE_TOKENS = [
@@ -163,7 +166,7 @@ def extract_story_why_and_depth(raw_text):
 
     why = ""
     why_m = re.search(
-        r'(?:\*\*|__)?Γιατί με αφορά:(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Βάθος|Αντίλογος|Το υπόβαθρο|Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Πηγ[ήές]):|\n\n|\Z)',
+        r'(?:\*\*|__)?Γιατί με αφορά:(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Βάθος|Αντίλογος|Το υπόβαθρο|Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Πηγ(?:ή|ές)):|\n\n|\Z)',
         raw_text,
         re.DOTALL | re.IGNORECASE
     )
@@ -174,7 +177,7 @@ def extract_story_why_and_depth(raw_text):
     
     # Background
     bg_m = re.search(
-        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Υπόβαθρο):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Αντίλογος|Πηγ[ήές]):|\n\n|\Z)',
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Υπόβαθρο):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Αντίλογος|Πηγ(?:ή|ές)):|\n\n|\Z)',
         raw_text,
         re.DOTALL | re.IGNORECASE
     )
@@ -183,7 +186,7 @@ def extract_story_why_and_depth(raw_text):
 
     # Practical
     pr_m = re.search(
-        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι σημαίνει πρακτικά|Πρακτικά):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι να παρακολουθήσω|Αντίλογος|Πηγ[ήές]):|\n\n|\Z)',
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι σημαίνει πρακτικά|Πρακτικά):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι να παρακολουθήσω|Αντίλογος|Πηγ(?:ή|ές)):|\n\n|\Z)',
         raw_text,
         re.DOTALL | re.IGNORECASE
     )
@@ -192,7 +195,7 @@ def extract_story_why_and_depth(raw_text):
 
     # Next watch
     nw_m = re.search(
-        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι να παρακολουθήσω|Τι παρακολουθούμε):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι σημαίνει πρακτικά|Αντίλογος|Πηγ[ήές]):|\n\n|\Z)',
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Τι να παρακολουθήσω|Τι παρακολουθούμε):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι σημαίνει πρακτικά|Αντίλογος|Πηγ(?:ή|ές)):|\n\n|\Z)',
         raw_text,
         re.DOTALL | re.IGNORECASE
     )
@@ -201,7 +204,7 @@ def extract_story_why_and_depth(raw_text):
 
     # Antilogos
     al_m = re.search(
-        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Αντίλογος|Η άλλη άποψη):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Πηγ[ήές]):|\n\n|\Z)',
+        r'(?:\*|\-)?\s*(?:\*\*|__)?(?:Αντίλογος|Η άλλη άποψη):(?:\*\*|__)?\s*(.*?)(?=\n\s*(?:\*|\-)?\s*(?:\*\*|__)?(?:Το υπόβαθρο|Τι σημαίνει πρακτικά|Τι να παρακολουθήσω|Πηγ(?:ή|ές)):|\n\n|\Z)',
         raw_text,
         re.DOTALL | re.IGNORECASE
     )
@@ -445,6 +448,22 @@ def match_topic_fallback(title, content_text='', default_category='ΕΠΙΚΑΙ�
         # 35. Politics & Institutions
         if any(k in text_to_check for k in ['λιμουζίν', 'βουλή', 'διορισμ', 'θεσμο', 'πολιτικ']):
             return TOPIC_FALLBACKS['politics'], 'ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ'
+
+        # 36. Earthquake & Seismic Activity
+        if any(k in text_to_check for k in ['σεισμ', 'έρθκουεικ', 'ρίχτερ', 'earthquake', 'δόνηση', 'δονήσεις']):
+            return TOPIC_FALLBACKS['earthquake'], 'ΣΕΙΣΜΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ'
+
+        # 37. Reading & Books / Culture
+        if any(k in text_to_check for k in ['φιλαναγνωσί', 'βιβλί', 'διαβάσ', 'books', 'ανάγνωση']):
+            return TOPIC_FALLBACKS['reading_books'], 'ΠΑΙΔΕΙΑ & ΚΟΙΝΩΝΙΑ'
+
+        # 38. Storms, Fire Service & Evacuations
+        if any(k in text_to_check for k in ['βροχοπτώσ', 'πυροσβεστικ', 'διάσωσ', 'εκκένωσ', 'πλημμύρ', 'πυρκαγι', 'πολιτική προστασία', 'πολιτική άμυνα']):
+            return TOPIC_FALLBACKS['fire_rescue_weather'], 'ΠΟΛΙΤΙΚΗ ΠΡΟΣΤΑΣΙΑ & ΥΠΟΔΟΜΕΣ'
+
+        # 39. EU Migration & Return Hubs
+        if any(k in text_to_check for k in ['μεταναστευτικ', 'άσυλο', 'frontex', 'return hubs', 'κέντρα επιστροφών']):
+            return TOPIC_FALLBACKS['un_diplomacy_flags'], 'ΕΥΡΩΠΑΪΚΗ ΕΝΩΣΗ & ΜΕΤΑΝΑΣΤΕΥΤΙΚΟ'
 
     return TOPIC_FALLBACKS['general'], default_category
 
@@ -892,7 +911,7 @@ def parse_markdown(md_content, filename=""):
                 if sl_clean.startswith('### '):
                     capture = True
                     continue
-                if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', sl_clean, re.IGNORECASE) or sl_clean.startswith('---') or sl_clean.startswith('>'):
+                if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ(?:ή|ές)).*?:', sl_clean, re.IGNORECASE) or sl_clean.startswith('---') or sl_clean.startswith('>'):
                     capture = False
                     break
                 if capture and sl_clean:
@@ -916,11 +935,11 @@ def parse_markdown(md_content, filename=""):
                 itm_src = None
                 for il in itm_lines[1:]:
                     il_c = il.strip()
-                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', il_c, re.IGNORECASE) or il_c.startswith('---'):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ(?:ή|ές)).*?:', il_c, re.IGNORECASE) or il_c.startswith('---'):
                         break
                     elif il_c and not il_c.startswith('---'):
                         itm_body.append(il_c)
-                src_match = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', itm)
+                src_match = re.search(r'\*\*Πηγ(?:ή|ές):\*\*\s*(.+)', itm)
                 if src_match:
                     s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
                     if s_raw:
@@ -951,11 +970,11 @@ def parse_markdown(md_content, filename=""):
                 itm_src = None
                 for il in itm_lines[1:]:
                     il_c = il.strip()
-                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', il_c, re.IGNORECASE) or il_c.startswith('---'):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ(?:ή|ές)).*?:', il_c, re.IGNORECASE) or il_c.startswith('---'):
                         break
                     elif il_c and not il_c.startswith('---'):
                         itm_body.append(il_c)
-                src_match = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', itm)
+                src_match = re.search(r'\*\*Πηγ(?:ή|ές):\*\*\s*(.+)', itm)
                 if src_match:
                     s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
                     if s_raw:
@@ -1082,7 +1101,7 @@ def parse_markdown(md_content, filename=""):
                 c_why, c_depth = extract_story_why_and_depth(ci)
 
                 c_src = None
-                src_m = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', ci)
+                src_m = re.search(r'\*\*Πηγ(?:ή|ές):\*\*\s*(.+)', ci)
                 if src_m:
                     s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_m.group(1))
                     if s_raw:
@@ -1091,7 +1110,7 @@ def parse_markdown(md_content, filename=""):
                 c_body = []
                 for cl in ci_lines[1:]:
                     cl_c = cl.strip()
-                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', cl_c, re.IGNORECASE) or cl_c.startswith('---'):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ(?:ή|ές)).*?:', cl_c, re.IGNORECASE) or cl_c.startswith('---'):
                         break
                     if cl_c and not cl_c.startswith('---'):
                         c_body.append(cl_c)
@@ -1124,7 +1143,7 @@ def parse_markdown(md_content, filename=""):
                 w_why, w_depth = extract_story_why_and_depth(wi)
 
                 w_src = None
-                src_m = re.search(r'\*\*Πηγ[ήές]:\*\*\s*(.+)', wi)
+                src_m = re.search(r'\*\*Πηγ(?:ή|ές):\*\*\s*(.+)', wi)
                 if src_m:
                     s_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_m.group(1))
                     if s_raw:
@@ -1133,7 +1152,7 @@ def parse_markdown(md_content, filename=""):
                 w_body = []
                 for wl in wi_lines[1:]:
                     wl_c = wl.strip()
-                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ[ήές]).*?:', wl_c, re.IGNORECASE) or wl_c.startswith('---'):
+                    if re.match(r'^[\*\-\s]*\*{0,2}(?:Γιατί|Βάθος|Το υπόβαθρο|Τι σημαίνει|Τι να παρακολουθήσετε|Αντίλογος|Πηγ(?:ή|ές)).*?:', wl_c, re.IGNORECASE) or wl_c.startswith('---'):
                         break
                     if wl_c and not wl_c.startswith('---'):
                         w_body.append(wl_c)

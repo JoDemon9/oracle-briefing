@@ -1,7 +1,7 @@
 {
   "https://www.stockwatch.com.cy/en/news/dbrs-raises-cyprus-outlook-to-positive": {
     "image": "https://www.stockwatch.com.cy/storage/cache/1200x628/6a9c071a8d26c.jpg",
-    "category": "ΟΙΚΟΝΟΜΙΑ & ΑΞΙΟΧΡΕΟ"
+    "category": "ΜΑΚΡΟΟΙΚΟΝΟΜΙΑ"
   },
   "https://en.politis.com.cy/news/education/1031120/ypsonas-parents-issue-ultimatum-over-school-infrastructure-crisis": {
     "image": "https://cdn.politis.com.cy/thumbnails/525196/conversions/dhmotiko_sxolio_ypsona-seo.webp",
@@ -125,7 +125,7 @@
   },
   "https://stockwatch.com.cy/el/news/dyo-nea-steghastika-skhedia-570-oikopeda-kai-ekstra-orofos-poioys-afora": {
     "image": "https://www.stockwatch.com.cy/storage/cache/1200x628/6aa136ad4a156.jpg",
-    "category": "Ο ΦΑΚΕΛΟΣ ΜΟΥ"
+    "category": "ΑΚΙΝΗΤΑ ΛΕΜΕΣΟΥ"
   },
   "https://cyprus-mail.com/2026/09/09/iran-fires-missiles-at-us-used-base-in-jordan-as-gulf-war-escalates": {
     "image": "https://cyprus-mail.com/wp-content/uploads/2026/09/2026-09-08T230056Z_1478579696_RC2AFNAQJA7C_RTRMADP_3_IRAN-CRISIS-USA-NAVY-CARRIERS.jpg",
@@ -928,8 +928,8 @@
     "category": "ΟΙΚΟΝΟΜΙΑ"
   },
   "https://www.cnbc.com/2026/09/24/france-budget-debt-deficit-government.html": {
-    "image": "https://image.cnbcfm.com/api/v1/image/108367272-1790230736064-gettyimages-2295254910-2c9a0408.jpeg?v=1790230761&amp;w=1920&amp;h=1080",
-    "category": "ΠΟΛΙΤΙΚΗ & ΘΕΣΜΟΙ"
+    "image": "https://image.cnbcfm.com/api/v1/image/108367272-1790230736064-gettyimages-2295254910-2c9a0408.jpeg",
+    "category": "ΔΗΜΟΣΙΟΝΟΜΙΚΑ & ΟΜΟΛΟΓΑ"
   },
   "https://www.cnbc.com/2026/09/23/mark-zuckerberg-1299-meta-vr-glasses-ai-agent.html": {
     "image": "https://image.cnbcfm.com/api/v1/image/108367520-1790264014969-gettyimages-2296209074-META_CONNECT.jpeg?v=1790264039&amp;w=1920&amp;h=1080",
@@ -1509,11 +1509,11 @@
   },
   "https://cyprus-mail.com/2026/10/04/heavy-rainfall-leads-to-14-callouts-for-fire-service": {
     "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/fire-service.jpg",
-    "category": "🇨🇾 ΚΥΠΡΟΣ"
+    "category": "ΥΠΟΔΟΜΕΣ & ΚΑΙΡΟΣ"
   },
   "https://cyprus-mail.com/2026/10/04/changes-made-to-evacuation-protocols-after-fatal-limassol-fire": {
     "image": "https://cyprus-mail.com/wp-content/uploads/2025/12/year-ender-Rebekah-main-Gutted-houses-in-Souni-which-lost-half-of-its-homes.jpg",
-    "category": "🇨🇾 ΚΥΠΡΟΣ"
+    "category": "ΠΟΛΙΤΙΚΗ ΠΡΟΣΤΑΣΙΑ"
   },
   "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/df42/live/012a8270-bff2-11f1-a64c-550be9e3c66b.jpg",
@@ -1522,5 +1522,33 @@
   "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/7653/live/2853dd30-bffa-11f1-8c3e-3b2eab095459.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.sigmalive.com/news/environment/1257353/m-panaghiwtoy-to-2029-i-paradosi-erghon-se-oeda-kosiis-kai-pentakwmoy": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1283562/conversions/oeda_1024x421_1_768x316-seo.jpg",
+    "category": "ΠΕΡΙΒΑΛΛΟΝ & ΥΠΟΔΟΜΕΣ"
+  },
+  "https://cyprus-mail.com/2026/10/04/averof-should-know-when-to-quit": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/comment-loukis-Averof-Neophytou-has-renewed-his-presidential-ambitions.jpg",
+    "category": "ΠΟΛΙΤΙΚΗ & ΔΗΣΥ"
+  },
+  "https://cyprus-mail.com/2026/10/04/three-in-four-young-cypriots-read-no-books": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/feature-theo-main-82.9-per-cent-of-boys-aged-16-to-24-had-not-read-in-a-book-in-the-past-year.-Girls-are-at-66.3-per-cent-Depositphotos.jpg",
+    "category": "ΠΑΙΔΕΙΑ & ΚΟΙΝΩΝΙΑ"
+  },
+  "https://cyprus-mail.com/2026/10/04/germanys-merz-arrives-in-kyiv-to-the-sound-of-sirens-and-explosions": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/mertz2.jpg",
+    "category": "ΓΕΡΜΑΝΙΑ & ΟΥΚΡΑΝΙΑ"
+  },
+  "https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108368238-1790358261069-gettyimages-2297111436-jr_18591_wq7j0ohd.jpeg",
+    "category": "ΑΠΑΣΧΟΛΗΣΗ & FED"
+  },
+  "https://www.dw.com/en/eu-ministers-mull-new-ways-to-curb-irregular-migration/a-79509375": {
+    "image": "https://static.dw.com/image/52538913_6.jpg",
+    "category": "ΕΥΡΩΠΑΪΚΗ ΕΝΩΣΗ"
+  },
+  "https://www.sigmalive.com/news/all/1331910/treis-diadokhiki-seismi-sti-notia-toyrkia-ksypnisan-mnimes-toy-2023": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1364296/conversions/dasd-seo.jpg",
+    "category": "ΣΕΙΣΜΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ"
   }
 }
