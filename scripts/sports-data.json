@@ -27,6 +27,16 @@
     },
     "articles": [
       {
+        "title": "Τσέλιε/Ενδιαφέρουσα πληροφορία για την Ομόνοια!",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/tselieendiaferoysa-pliroforia-gia-tin-omonoia",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Ομόνοια/Προπώληση για Μπενφίκα",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/omonoiapropolisi-gia-mpenfika",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Κάλεσμα Ομόνοιας: \"Δίπλα στην Κύπρο μας!\"",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kalesma-omonoias-dipla-stin-kypro-mas",
         "source": "Kerkida.net"
@@ -40,19 +50,9 @@
         "title": "Source of Truth!",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/source-truth-32",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Μετά το \"Χ\" με Άρη η... Ομόνοια!",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/meta-h-me-ari-i-omonoia",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Ανακοίνωση/\"Η ΟΜΟΝΟΙΑ δίνει μεγάλη έμφαση σε αυτό το κεφάλαιο\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/anakoinosii-omonoia-dinei-megali-emfasi-se-ayto-kefalaio",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-05T09:38:04.271123+00:00"
+    "fetched_at": "2026-10-05T10:55:10.837706+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-05T09:38:05.456048+00:00"
+    "fetched_at": "2026-10-05T10:55:23.652435+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-05T09:38:06.331731+00:00"
+    "fetched_at": "2026-10-05T10:55:50.177837+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-05T09:38:08.216398+00:00"
+    "fetched_at": "2026-10-05T10:55:52.276264+00:00"
   }
 }
