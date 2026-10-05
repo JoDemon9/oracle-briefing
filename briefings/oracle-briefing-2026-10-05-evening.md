@@ -7,7 +7,7 @@
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
 > * **Αγορές & Tech:** S&P 500 (+0,75%), Nasdaq 100 (+0,82%), Bank of Cyprus (-0,09%), Bitcoin (-1,04%). Tech Watchlist: Apple (-0,10%), Alphabet (+1,24%), TSMC (+2,93%), Microsoft (+1,85%), Meta (+2,01%), NVIDIA (+2,08%), Micron (-1,34%).
-> * **Επικαιρότητα:** Rubio, asked about US bombers leaving UK, says no direct link with suspected plot · Commissioner warns against using children as political props after Fidias video · No10 insists UK military base RAF Fairford is safe after US withdraws bombers
+> * **Επικαιρότητα:** Rubio, asked about US bombers leaving UK, says no direct link with suspected plot · Commissioner warns against using children as political props after Fidias video · Trump says 'threat' led US to pull bombers from RAF Fairford
 > * **Αθλητικά:** Αποτελέσματα & αγώνες για Ομόνοια, Manchester United (How important is a fast start for teams chasing the Premier League title?), Real Madrid και Formula 1 (Verstappen wins in Malaysia after long delays as Russell retires).
 
 ---
@@ -56,20 +56,20 @@ Children’s rights commissioner Elena Pericleous on Monday warned against the u
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
 **Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/05/commissioner-warns-against-using-children-as-political-props-after-fidias-video)
 
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] No10 insists UK military base RAF Fairford is safe after US withdraws bombers
-US media reported a new threat led to the bombers being removed on Sunday, following an incident near the base last week.
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Trump says 'threat' led US to pull bombers from RAF Fairford
+The Pentagon confirmed on Sunday it had removed the B1 bombers from the base in England back to their home stations in America.
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
-**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cmy56yvv1kxxo?at_medium=RSS&at_campaign=rss)
+**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cwj3413e5m1lo?at_medium=RSS&at_campaign=rss)
+
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] France braces for national day of school protests after injuries and mass arrests
+France prepares for a day of protests in support of students who’ve been demanding more investment in education.
+**Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
+**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cr4g1q1elxnjo?at_medium=RSS&at_campaign=rss)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Flydubai co-pilot planned to crash plane into Tel Aviv airport or building, reports say
 The Omani national was a "lone wolf" extremist, according to the reports.
 **Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
 **Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cm3691y79xp5o?at_medium=RSS&at_campaign=rss)
-
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Teenager's hand blown off during confrontation between France school protesters and police
-The prefect of Pas-de-Calais says the 15-year-old's life is "not in danger" after the "very serious" incident.
-**Γιατί με αφορά:** Σημαντική διεθνής παράμετρος για τις αγορές και την περιφερειακή γεωπολιτική.  
-**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/c9zrdmxp4vy6o?at_medium=RSS&at_campaign=rss)
 
 
 ---
