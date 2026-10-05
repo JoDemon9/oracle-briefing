@@ -58,6 +58,11 @@ Dating: use the date in the search result; accept the last 48 hours; if no times
 - Όλοι οι σύνδεσμοι πρέπει να είναι πραγματικοί, λειτουργικοί και να οδηγούν σε υπαρκτή σελίδα (ή στο άρθρο/ενότητα του μέσου).
 - Όταν τα αποτελέσματα αναζήτησης περιέχουν redirect URLs (π.χ. grounding-api-redirect), επίλυσε άμεσα την τελική διεύθυνση ή χρησιμοποίησε το πραγματικό, έγκυρο και λειτουργικό URL του μέσου.
 - Κάθε σύνδεσμος πρέπει να ελέγχεται ότι δεν επιστρέφει 404 ή σφάλμα πριν την αποθήκευση.
+- ΠΡΩΤΟΚΟΛΛΟ ΓΝΗΣΙΩΝ ΕΙΔΗΣΕΟΓΡΑΦΙΚΩΝ ΕΙΚΟΝΩΝ (GENUINE EDITORIAL IMAGES — ΜΗΔΕΝΙΚΗ ΑΝΟΧΗ ΣΕ GENERIC STOCK PHOTOS):
+  * ΟΛΕΣ οι ειδήσεις (Θέμα Ημέρας, Κύπρος 1–6, Διεθνή 1–5) ΠΡΕΠΕΙ να συνδέονται με συγκεκριμένα, μόνιμα, βαθιά URL άρθρων (deep article URLs) και ΠΟΤΕ με generic domain roots.
+  * Τα generic/root URLs ενεργοποιούν το `is_generic_or_section_url` στο `scripts/build-html.py`, εξαναγκάζοντας το σύστημα σε ανεπιθύμητη πτώση σε stock Unsplash φωτογραφίες.
+  * Για κάθε είδηση, το βαθύ URL άρθρου καταχωρείται στο `scripts/image_cache.json` με το πραγματικό δημοσιογραφικό του `og:image` και τη σχετική κατηγορία.
+  * Μετά το `python scripts/build-html.py`, ελέγχεται υποχρεωτικά ότι οι κάρτες στο `docs/index.html` φέρουν 100% αυθεντικές φωτογραφίες άρθρων και 0 generic Unsplash stock εικόνες.
 
 SEARCH PLAN
 stock market today S&P 500 Nasdaq VIX

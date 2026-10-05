@@ -60,6 +60,11 @@ Dating: use the date in the search result; accept the last 48 hours; if no times
 - Απαγορεύεται ΑΥΣΤΗΡΑ η κατασκευή υποθετικών ή φανταστικών slugs/paths (π.χ. https://domain.com/category/slug-title). Κάθε τέτοιο link είναι broken/404.
 - Όλοι οι σύνδεσμοι πρέπει να είναι πραγματικοί, λειτουργικοί και να οδηγούν σε υπαρκτή, ζωντανή σελίδα άρθρου.
 - Όταν τα αποτελέσματα αναζήτησης περιέχουν redirect URLs (π.χ. grounding-api-redirect), επίλυσε άμεσα την τελική διεύθυνση ή χρησιμοποίησε το πραγματικό, έγκυρο και λειτουργικό URL του μέσου.
+- ΠΡΩΤΟΚΟΛΛΟ ΓΝΗΣΙΩΝ ΕΙΔΗΣΕΟΓΡΑΦΙΚΩΝ ΕΙΚΟΝΩΝ (GENUINE EDITORIAL IMAGES — ΜΗΔΕΝΙΚΗ ΑΝΟΧΗ ΣΕ GENERIC STOCK PHOTOS):
+  * ΟΛΕΣ οι ειδήσεις (Θέμα Ημέρας, Κύπρος 1–6, Διεθνή 1–5) ΠΡΕΠΕΙ να συνδέονται με συγκεκριμένα, μόνιμα, βαθιά URL άρθρων (deep article URLs, π.χ. https://domain.com/category/article-slug) και ΠΟΤΕ με generic domain roots (π.χ. https://www.stockwatch.com.cy ή https://politis.com.cy).
+  * Τα generic/root URLs ενεργοποιούν το `is_generic_or_section_url` στο `scripts/build-html.py`, εξαναγκάζοντας το σύστημα σε ανεπιθύμητη πτώση σε stock Unsplash φωτογραφίες.
+  * Για κάθε είδηση, το βαθύ URL άρθρου καταχωρείται στο `scripts/image_cache.json` με το πραγματικό δημοσιογραφικό του `og:image` και τη σχετική κατηγορία.
+  * Μετά το `python scripts/build-html.py`, ελέγχεται υποχρεωτικά ότι οι κάρτες στο `docs/index.html` φέρουν 100% αυθεντικές φωτογραφίες άρθρων και 0 generic Unsplash stock εικόνες.
 - ΠΟΛΛΑΠΛΗ ΔΙΑΣΤΑΥΡΩΣΗ ΑΘΛΗΤΙΚΩΝ (Cross-checking 2-3 φορές):
   * ΟΜΟΝΟΙΑ: Ο επόμενος αγώνας (αντίπαλος, ημερομηνία, ώρα, έδρα, διοργάνωση/αγωνιστική) επαληθεύεται ΥΠΟΧΡΕΩΤΙΚΑ από το επίσημο πρόγραμμα της ΚΟΠ (Cyprus Football Association — cfa.com.cy) και διασταυρώνεται με Kerkida.net και Goal.com.cy / Politis Sports. ΑΠΑΓΟΡΕΥΕΤΑΙ ΑΥΣΤΗΡΑ η μηχανική αντιγραφή του επόμενου αγώνα από προηγούμενη έκδοση χωρίς άμεση επαλήθευση.
   * Manchester United: Διασταύρωση από πολλαπλές βρετανικές πηγές (BBC Sport, The Guardian, Sky Sports, Premier League official).

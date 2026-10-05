@@ -899,7 +899,7 @@ def parse_markdown(md_content, filename=""):
             if anti_match:
                 top_data['antilogos'] = clean_plain(anti_match.group(1).strip())
 
-            src_match = re.search(r'\*\*Πηγές:\*\*\s*(.+)', sec)
+            src_match = re.search(r'\*\*Πηγ(?:ή|ές):\*\*\s*(.+)', sec)
             if src_match:
                 sources_raw = re.findall(r'\[(.*?)\]\((.*?)\)', src_match.group(1))
                 top_data['sources'] = [{'name': name, 'url': url} for name, url in sources_raw]
