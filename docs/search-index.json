@@ -1,115 +1,199 @@
 [
   {
+    "date": "2026-10-05",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Exercise ‘lifts my spirits’ president says at BeActive event",
+    "snippet": "President Nikos Christodoulides has participated in a sports event that was held as part of the BeActive programme at the presidential palace on Monday. Speaking at the event, the...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Two drink driving crashes at same spot in Nicosia [Επικαιρότητα]",
+    "snippet": "Two road collisions occurred at the same spot in Nicosia within three and a half hours on Sunday, with both drivers testing over the legal alcohol limit, police...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Teachers to receive revised appointment system proposal on Tuesday [Επικαιρότητα]",
+    "snippet": "Education Minister Athena Michaelidou pledged on Monday to push forward with reforms that would support teachers and improve learning opportunities for children...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Court of appeal increases sentences in meth case [Επικαιρότητα]",
+    "snippet": "The court of appeal has increased the prison sentences of two individuals for the possession of 211 grams of methamphetamine with the intention to supply, deemi...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Big Tech poses greater long-term threat to banks than fintechs, professor says [Επικαιρότητα]",
+    "snippet": "Technology giants such as Apple, Amazon and Google may pose a greater long-term threat to traditional banks than fintech companies, London Business School profe...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Μύθος ότι το Αμερικανικό σχέδιο του 1978 είναι «μια χαμένη ευκαιρία» [Ο Φάκελός μου]",
+    "snippet": "Από καιρού εις καιρόν ανατρέχουμε στις δέλτους της σύγχρονης ιστορίας του τόπου μας και ιδιαίτερα στην περίοδο λίγο πριν και μετά το προδοτικό πραξικόπημα που ά...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🌍 Διεθνή",
+    "title": "1. Right-wing Flávio Bolsonaro wins first round of Brazil election [Διεθνή]",
+    "snippet": "With neither candidate getting more than 50% of the vote, the election will go to a run-off on 25 October....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🌍 Διεθνή",
+    "title": "2. Watch: How Brazil's dramatic election unfolded [Διεθνή]",
+    "snippet": "Millions of Brazilians took to the polls on Sunday for the first round of the country's presidential elections....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🌍 Διεθνή",
+    "title": "3. US air force removes all bombers from British military base RAF Fairford [Διεθνή]",
+    "snippet": "No reason has been given for the withdrawal, but it follows a major incident last week when police were alerted to \"suspicious vehicles\" near the airbase....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🌍 Διεθνή",
+    "title": "4. 'Not again': Arrest of US marine for murder reignites protests in Japan's Okinawa [Διεθνή]",
+    "snippet": "For many locals on this island, the arrest has brought decades of frustration back to the fore....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "🌍 Διεθνή",
+    "title": "5. France closes up to 500 schools Monday over student protests [Διεθνή]",
+    "snippet": "Lessons will be \"totally or partly suspended\" in some high schools after clashes between riot police and student protesters, France's education minister says....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-05",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-10-04",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Διαχείριση Αποβλήτων & ΕΟΑ: Έκτακτος Οδικός Χάρτης Υπουργείου Περιβάλλοντος σε Πεντάκωμο και Κόσιη για Αποτροπή των Ευρωπαϊκών Προστίμων [Επιβεβαιωμένο]",
     "snippet": "Σε μια κρίσιμη συγκυρία για τα δημόσια οικονομικά και τη διεθνή αξιοπιστία της Δημοκρατίας, το Υπουργείο Γεωργίας, Αγροτικής Ανάπτυξης και Περιβάλλοντος υπό τη Μαρία Παναγιώτου ενε...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-04.html#top-story"
   },
   {
     "date": "2026-10-04",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Πολιτική Προστασία & Ορεινή Λεμεσός: Ριζική αναθεώρηση σχεδίων εκκένωσης και συντονισμού πυρόσβεσης μετά το πόρισμα της τραγωδίας του 2025 [Επιβεβαιωμένο]",
     "snippet": "Σειρά ουσιαστικών αλλαγών στη διάρθρωση και τον επιχειρησιακό συντονισμό των εκκενώσεων οικισμών εφάρμοσε η Δύναμη Πολιτικής Άμυνας, όπως ανακοίνωσε επίσημα ο Υ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-04.html#cyprus"
   },
   {
     "date": "2026-10-04",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Πολιτικό Σκηνικό & ΔΗΣΥ: Στην τελική ευθεία για την υποβολή υποψηφιοτήτων της 26ης Οκτωβρίου — Συσπειρώσεις γύρω από Αννίτα Δημητρίου και Αβέρωφ Νεοφύτου [Επιβεβαιωμένο]",
     "snippet": "Εντείνονται οι παρασκηνιακές επαφές και οι ζυμώσεις στη λεωφόρο Πινδάρου μετά την ομόφωνη απόφαση του Πολιτικού Γραφείου να ορίσει την 26η Οκτωβρίου ως καταληκτ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-04.html#cyprus"
   },
   {
     "date": "2026-10-04",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Εκπαίδευση & Κοινωνία: Προτελευταία στην ΕΕ η Κύπρος στη φιλαναγνωσία — Τρεις στους τέσσερις νέους δεν διαβάζουν ούτε ένα βιβλίο τον χρόνο [Επιβεβαιωμένο]",
     "snippet": "Έντονο προβληματισμό στην ακαδημαϊκή κοινότητα και το Υπουργείο Παιδείας προκαλούν τα νεότερα στοιχεία για τις πολιτιστικές συνήθειες του πληθυσμού, σύμφωνα με...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-04.html#cyprus"
   },
   {
     "date": "2026-10-04",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Υποδομές & Καιρικά Φαινόμενα: Ισχυρές φθινοπωρινές βροχοπτώσεις και 14 κλήσεις διάσωσης — Δοκιμασία για τα αντιπλημμυρικά δίκτυα των πόλεων [Επιβεβαιωμένο]",
     "snippet": "Σε αυξημένη επιφυλακή τέθηκε η Πυροσβεστική Υπηρεσία και οι δημοτικές αρχές κατά τη διάρκεια του τελευταίου εικοσιτετραώρου, ανταποκρινόμενες σε 38 συνολικά συμ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-04.html#cyprus"
   },
   {
     "date": "2026-10-04",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Μακροοικονομία & Εξωτερικό Ισοζύγιο: Διεύρυνση του ελλείμματος τρεχουσών συναλλαγών στα €1,3 δισ. εν μέσω ενεργειακών εισαγωγών [Επιβεβαιωμένο]",
     "snippet": "Σημαντική διεύρυνση κατέγραψε το έλλειμμα στο ισοζύγιο τρεχουσών συναλλαγών της Κύπρου, αγγίζοντας το ποσό του €1,3 δισεκατομμυρίου σύμφωνα με τα πρόσφατα τραπε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-04.html#cyprus"
   },
   {
     "date": "2026-10-04",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ακίνητα & Ενοίκια Λεμεσού: Σταθεροποίηση gross yields στο 6,5% σε Ύψωνα και Ζακάκι εν μέσω αυξημένης ζήτησης για 2Υ/Δ [Ο Φάκελός μου] [Επιβεβαιωμένο]",
     "snippet": "Η ανάλυση των τάσεων της κτηματαγοράς στη Λεμεσό για το φθινόπωρο του 2026 επιβεβαιώνει τη στροφή των εγχώριων και διεθνών επενδυτών προς τα δυτικά προάστια της...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-04.html#cyprus"
   },
   {
     "date": "2026-10-04",
     "section": "🌍 Διεθνή",
     "title": "1. Διπλωματία & Ουκρανικό: Ο Καγκελάριος Friedrich Merz στο Κίεβο υπό τον ήχο σειρήνων και εκρήξεων — Πακέτο στρατιωτικής συνδρομής και πίεση προς τη Μόσχα [Επιβεβαιωμένο]",
     "snippet": "Απρόσμενη επίσκεψη υψηλού συμβολισμού πραγματοποίησε στο Κίεβο ο νέος Καγκελάριος της Γερμανίας Friedrich Merz, φτάνοντας στην ουκρανική πρωτεύουσα την ώρα που...",
-    "url": "#world"
+    "url": "briefings/2026-10-04.html#world"
   },
   {
     "date": "2026-10-04",
     "section": "🌍 Διεθνή",
     "title": "2. Αμερικανική Αγορά Εργασίας & Fed: Αύξηση μόλις 29.000 θέσεων εργασίας τον Σεπτέμβριο — Εξανεμίζονται οι προσδοκίες για νέες αυξήσεις επιτοκίων [Επιβεβαιωμένο]",
     "snippet": "Σημαντική επιβράδυνση κατέγραψε η αμερικανική αγορά εργασίας, με τα επίσημα στοιχεία του Bureau of Labor Statistics να δείχνουν δημιουργία μόλις 29.000 νέων μη...",
-    "url": "#world"
+    "url": "briefings/2026-10-04.html#world"
   },
   {
     "date": "2026-10-04",
     "section": "🌍 Διεθνή",
     "title": "3. Ευρωπαϊκό Μεταναστευτικό & Σύνορα: Οι υπουργοί της ΕΕ εξετάζουν εξωτερικά κέντρα επιστροφών και αναστολή ασύλου σε έκτακτες καταστάσεις [Επιβεβαιωμένο]",
     "snippet": "Σε αυστηροποίηση των κοινών πολιτικών ασύλου προσανατολίζονται οι Υπουργοί Εσωτερικών της Ευρωπαϊκής Ένωσης ενόψει της προσεχούς συνόδου στις Βρυξέλλες, εξετάζο...",
-    "url": "#world"
+    "url": "briefings/2026-10-04.html#world"
   },
   {
     "date": "2026-10-04",
     "section": "🌍 Διεθνή",
     "title": "4. Παγκόσμιο Χρέος & Δημοσιονομικά: Το ομοσπονδιακό χρέος των ΗΠΑ υπερβαίνει τα $40 τρισεκατομμύρια — Οριστικό τέλος στον φθηνό κρατικό δανεισμό [Επιβεβαιωμένο]",
     "snippet": "Ιστορικό ορόσημο ξεπέρασε το συνολικό δημόσιο χρέος των Ηνωμένων Πολιτειών, διαπερνώντας το όριο των $40 τρισεκατομμυρίων και επαναφέροντας στο προσκήνιο τη συζ...",
-    "url": "#world"
+    "url": "briefings/2026-10-04.html#world"
   },
   {
     "date": "2026-10-04",
     "section": "🌍 Διεθνή",
     "title": "5. Σεισμική Δραστηριότητα & Ανατολική Μεσόγειος: Τρεις διαδοχικές δονήσεις έως 5,2 Ρίχτερ ταρακούνησαν τη νότια Τουρκία — Αισθητές σε Συρία και Κύπρο [Επιβεβαιωμένο]",
     "snippet": "Τρεις διαδοχικές σεισμικές δονήσεις μεσαίου μεγέθους, με την ισχυρότερη να φτάνει τα 5,2 Ρίχτερ, σημειώθηκαν στη νότια Τουρκία σε διάστημα λίγων ωρών, ξυπνώντας...",
-    "url": "#world"
+    "url": "briefings/2026-10-04.html#world"
   },
   {
     "date": "2026-10-04",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω της πύλης TaxisNet (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω της πύλης TaxisNet (TaxisNet)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-04.html#deadlines"
   },
   {
     "date": "2026-10-04",
     "section": "📅 Προθεσμίες",
     "title": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της φθινοπωρινής συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ (ΕΚΤ).",
     "snippet": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της φθινοπωρινής συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ (Ε...",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-04.html#deadlines"
   },
   {
     "date": "2026-10-04",
     "section": "📅 Προθεσμίες",
     "title": "Έως 30 Νοεμβρίου 2026: Επικαιροποίηση φακέλων και αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ).",
     "snippet": "Έως 30 Νοεμβρίου 2026: Επικαιροποίηση φακέλων και αιτήσεων για το Σχέδιο «Ενοίκιο Έναντι Δόσης» στα επαρχιακά γραφεία της ΚΕΔΙΠΕΣ (ΚΕΔΙΠΕΣ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-04.html#deadlines"
   },
   {
     "date": "2026-10-04",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-04.html#top-story"
   },
   {
     "date": "2026-10-03",

@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Έρχεται... τρέξιμο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/erhetai-treximo",
+        "title": "Κάλεσμα Ομόνοιας: \"Δίπλα στην Κύπρο μας!\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kalesma-omonoias-dipla-stin-kypro-mas",
         "source": "Kerkida.net"
       },
       {
-        "title": "ΦΩΤΟΣ/ Ομόνοια Αραδίππου - Ομόνοια (Κ15)",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/fotos-omonoia-aradippoy-omonoia-k15",
+        "title": "Εβδομάδα...επιστροφής",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ebdomadaepistrofis",
         "source": "Kerkida.net"
       },
       {
-        "title": "Κ16 Ομόνοια - Ομόνοια Αραδίππου (Φωτορεπορτάζ)",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/k16-omonoia-omonoia-aradippoy-fotoreportaz",
+        "title": "Source of Truth!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/source-truth-32",
         "source": "Kerkida.net"
       },
       {
-        "title": "Αρχίζει η αντίστροφη...μέτρηση",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/arhizei-i-antistrofimetrisi",
+        "title": "Μετά το \"Χ\" με Άρη η... Ομόνοια!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/meta-h-me-ari-i-omonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Πάγκο ο Μπάλκοβετς",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/pagko-o-mpalkobets",
+        "title": "Ανακοίνωση/\"Η ΟΜΟΝΟΙΑ δίνει μεγάλη έμφαση σε αυτό το κεφάλαιο\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/anakoinosii-omonoia-dinei-megali-emfasi-se-ayto-kefalaio",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-04T15:27:33.198960+00:00"
+    "fetched_at": "2026-10-05T09:38:04.271123+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-04T15:27:34.453922+00:00"
+    "fetched_at": "2026-10-05T09:38:05.456048+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-04T15:27:35.302858+00:00"
+    "fetched_at": "2026-10-05T09:38:06.331731+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,18 +186,13 @@
     },
     "articles": [
       {
+        "title": "Hamilton & Verstappen bemused after glitch turns F1 into 'Lego race'",
+        "url": "https://www.bbc.com/sport/formula1/articles/cwg7x820k9xjo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Verstappen wins in Malaysia after long delays as Russell retires",
         "url": "https://www.bbc.com/sport/formula1/articles/c5n49zx3zlvwo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "'Incredible' Red Bull upgrade enlivens F1 in 'roasting hot' Malaysia",
-        "url": "https://www.bbc.com/sport/formula1/articles/c5vgj31224kmo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Verstappen takes first 2026 pole ahead of Hamilton",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm1j3l9867jwo",
         "source": "BBC Sport F1"
       },
       {
@@ -209,8 +204,13 @@
         "title": "Russell says his 'confidence is back and growing'",
         "url": "https://www.bbc.com/sport/formula1/articles/cv1j4jn5nxxlo",
         "source": "BBC Sport F1"
+      },
+      {
+        "title": "Ocon to leave Haas putting F1 future in doubt",
+        "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
+        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-04T15:27:36.623355+00:00"
+    "fetched_at": "2026-10-05T09:38:08.216398+00:00"
   }
 }
