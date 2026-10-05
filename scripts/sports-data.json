@@ -27,32 +27,22 @@
     },
     "articles": [
       {
-        "title": "Τσέλιε/Ενδιαφέρουσα πληροφορία για την Ομόνοια!",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/tselieendiaferoysa-pliroforia-gia-tin-omonoia",
+        "title": "Ομόνοια και Κύπρος",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-kai-kypros",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ομόνοια/Προπώληση για Μπενφίκα",
-        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/omonoiapropolisi-gia-mpenfika",
+        "title": "Χαμογελαστοί!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hamogelastoi-3",
         "source": "Kerkida.net"
       },
       {
-        "title": "Κάλεσμα Ομόνοιας: \"Δίπλα στην Κύπρο μας!\"",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/kalesma-omonoias-dipla-stin-kypro-mas",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Εβδομάδα...επιστροφής",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ebdomadaepistrofis",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Source of Truth!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/source-truth-32",
+        "title": "Στο μυαλό του η... διαχείριση",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sto-myalo-toy-i-diaheirisi",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-05T11:44:41.162610+00:00"
+    "fetched_at": "2026-10-05T18:51:28.159338+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +94,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-05T11:44:42.053267+00:00"
+    "fetched_at": "2026-10-05T18:51:29.464530+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +147,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-05T11:44:42.943035+00:00"
+    "fetched_at": "2026-10-05T18:51:30.670786+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +176,11 @@
     },
     "articles": [
       {
+        "title": "F1 needs to have hard look at itself - Sainz",
+        "url": "https://www.bbc.com/sport/formula1/articles/cr62y51n1841o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Hamilton & Verstappen bemused after glitch turns F1 into 'Lego race'",
         "url": "https://www.bbc.com/sport/formula1/articles/cwg7x820k9xjo",
         "source": "BBC Sport F1"
@@ -204,13 +199,8 @@
         "title": "Russell says his 'confidence is back and growing'",
         "url": "https://www.bbc.com/sport/formula1/articles/cv1j4jn5nxxlo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Ocon to leave Haas putting F1 future in doubt",
-        "url": "https://www.bbc.com/sport/formula1/articles/c9e8e5k21ge5o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-05T11:44:43.854141+00:00"
+    "fetched_at": "2026-10-05T18:51:31.863912+00:00"
   }
 }
