@@ -575,10 +575,6 @@
     "image": "https://cdn.sigmalive.com/thumbnails/1361921/conversions/photo_2026_09_15_22_41_30-seo.jpg",
     "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
   },
-  "https://www.dw.com/en/why-are-european-banks-moving-gold-out-of-united-states/a-79213013": {
-    "image": "https://static.dw.com/image/78104138_6.jpg",
-    "category": "ΤΡΑΠΕΖΕΣ & ΚΕΦΑΛΑΙΑΓΟΡΑ"
-  },
   "https://www.dw.com/en/trump-seeks-halt-to-energy-attacks-by-both-russia-ukraine/a-79265774": {
     "image": "https://static.dw.com/image/78294107_6.jpg",
     "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
@@ -1594,5 +1590,57 @@
   "https://www.cnbc.com/2026/10/03/flydubai-co-pilot-attacked-pilot-with-axe-uae-says.html": {
     "image": "https://image.cnbcfm.com/api/v1/image/108372235-1791028710262-gettyimages-2297340221-AFP_C9U62HC.jpeg",
     "category": "ΑΣΦΑΛΕΙΑ & ΑΕΡΟΜΕΤΑΦΟΡΕΣ"
+  },
+  "https://www.philenews.com/politiki/article/1778586/christodoulidis-protini-kini-sinantisi-me-erchiourman-tin-erchomeni-evdomada-iparchi-politiki-voulisi-ke-idees-gia-ta-tria-themata-pou-zitise-o-ng-tou-oie/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/04/nikos_xristodoulidis.jpg",
+    "category": "ΚΥΠΡΙΑΚΟ"
+  },
+  "https://news.rik.cy/article/2026/10/6/o-proedros-tha-zetesei-apo-ton-erkhiourman-sunantese-ten-erkhomene-ebdomada/": {
+    "image": "https://www.philenews.com/wp-content/uploads/2026/04/nikos_xristodoulidis.jpg",
+    "category": "ΚΥΠΡΙΑΚΟ"
+  },
+  "https://www.stockwatch.com.cy/el/news/tamio-koyremenon-anighei-i-platforma-menoyn-ekkremotites": {
+    "image": "https://www.stockwatch.com.cy/storage/cache/1200x628/6ac38dfcf3bcc.jpg",
+    "category": "ΟΙΚΟΝΟΜΙΑ"
+  },
+  "https://cyprus-mail.com/2026/10/06/christodoulides-says-govt-has-spent-more-than-a-billion-to-ease-cost-of-living": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2025/01/petrol-pump-fuel.jpg",
+    "category": "ΚΥΒΕΡΝΗΣΗ"
+  },
+  "https://dialogos.com.cy/kampanaki-gia-tin-anergia-ayxithike-97-mesa-se-enan-chrono/": {
+    "image": "https://dialogos.com.cy/wp-content/uploads/2026/01/ANERGIA-2-1024x682-1-768x5121-1.jpg",
+    "category": "ΑΠΑΣΧΟΛΗΣΗ"
+  },
+  "https://www.sigmalive.com/news/local/1332127/brokhes-kai-kataighides-skhedon-se-olokliri-tin-kypro-dite-tin-ekseliksi-toy-kai": {
+    "image": "https://cdn.sigmalive.com/thumbnails/1364529/conversions/lightning_over_the_stormy_coast-seo.jpg",
+    "category": "ΚΑΙΡΟΣ"
+  },
+  "https://www.politis.com.cy/politis-news/koinonia/1047333/brokhes-kai-memonomenes-kataighides-simera-kai-aurio": {
+    "image": "https://cdn.politis.com.cy/thumbnails/538769/conversions/synnefa_kypros-seo.webp",
+    "category": "ΚΟΙΝΩΝΙΑ"
+  },
+  "https://www.stockwatch.com.cy/en/news/residential-property-prices-up-85-yoy-in-q2": {
+    "image": "https://www.stockwatch.com.cy/storage/cache/1200x628/6ab5046ce5d81.jpg",
+    "category": "ΑΚΙΝΗΤΑ ΛΕΜΕΣΟΥ"
+  },
+  "https://www.aljazeera.com/news/2026/10/6/police-clash-with-kosovo-protesters-over-bid-to-curb-hague-war-crimes-court": {
+    "image": "https://www.aljazeera.com/wp-content/uploads/2026/10/2026-10-05T195910Z_874423340_RC26XNAA2MRF_RTRMADP_3_WARCRIMES-KOSOVO-THACI-PROTEST-1791238190.jpg?resize=1920%2C1440",
+    "category": "ΒΑΛΚΑΝΙΑ"
+  },
+  "https://www.theguardian.com/world/2026/oct/05/uk-threatens-to-expel-israeli-diplomats-after-closing-of-east-jerusalem-consulate": {
+    "image": "https://i.guim.co.uk/img/media/1da8d161242bd7736d78039667e979fec035e639/51_0_6822_5461/master/6822.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=4ebc4b192586cced4ff4d221e431b5bc",
+    "category": "ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://www.cnbc.com/2026/10/05/japanese-companies-leaving-china-takaichi-comment-taiwan.html": {
+    "image": "https://image.cnbcfm.com/api/v1/image/108173276-17527542942025-07-17t045113z_65797734_rc2omfaxv7jh_rtrmadp_0_japan-politics-tariffs-mazda.jpeg?v=1752754349&w=1920&h=1080",
+    "category": "ΑΣΙΑ"
+  },
+  "https://cyprus-mail.com/2026/10/06/two-saudi-airports-targeted-on-monday-as-fighting-with-yemens-houthis-escalates": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/Capture.png",
+    "category": "ΜΕΣΗ ΑΝΑΤΟΛΗ"
+  },
+  "https://www.dw.com/en/germany-s-ex-spy-chief-arrested-for-espionage/a-79560278": {
+    "image": "https://static.dw.com/image/79560324_6.jpg",
+    "category": "ΔΙΕΘΝΗ"
   }
 }

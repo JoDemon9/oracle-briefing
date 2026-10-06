@@ -120,10 +120,13 @@ def is_generic_or_section_url(url):
         generic_single_parts = {
             'news', 'world', 'business', 'energy', 'economy', 'politics',
             'kipros', 'cyprus', 'en', 'el', 'gr', 'opinion', 'top-stories',
-            'latest'
+            'latest', 'sport', 'sports'
         }
-        if len(parts) == 1 and (parts[0] in generic_single_parts or not re.search(r'(\d+|\.html?)$', parts[0])):
-            return True
+        if len(parts) == 1:
+            if parts[0] in generic_single_parts:
+                return True
+            if parts[0].count('-') < 2 and len(parts[0]) < 25 and not re.search(r'(\d+|\.html?)$', parts[0]):
+                return True
         if parts in (['en', 'world'], ['en', 'news'], ['category', 'security'], ['studies', 'student-welfare', 'housing']):
             return True
     except Exception:
