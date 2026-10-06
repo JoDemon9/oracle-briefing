@@ -1,115 +1,199 @@
 [
   {
+    "date": "2026-10-06",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "British father back in court as defence prepares mitigation over son’s death",
+    "snippet": "The British father who pleaded guilty in connection with the death of his three-year-old son is due back before Paphos district court at 10.30am on Tuesday, when the prosecution is...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Keo board to consider another dividend after weaker first-half profit [Επικαιρότητα]",
+    "snippet": "Keo plc’s board will meet on October 20 to consider whether to pay another dividend, less than two months after the Cypriot beverage company completed a €1.69 m...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Norway targets AI glasses as Cyprus watches privacy debate [Επικαιρότητα]",
+    "snippet": "Norway is moving to temporarily ban AI-powered smart glasses in a range of public spaces, as concerns grow across Europe over devices capable of photographing,...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Cyprus Business Now: housing, banks, fintech, tourism, Lukoil, Japan, RIF [Επικαιρότητα]",
+    "snippet": "Cyprus’ construction sector continued to expand strongly in June 2026, with 751 building permits authorised during the month, an increase of 18.3 per cent compa...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Trump approval stuck at record low as Hispanic support falls [Επικαιρότητα]",
+    "snippet": "President Donald Trump’s approval rating held at a record low in recent days, as many Hispanic voters panned his job performance and planned to spurn his Republ...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Four arrested in nationwide police operation [Ο Φάκελός μου]",
+    "snippet": "Four people were arrested for offences including burglary, theft, illegal entry and malicious damage during targeted police operations across Cyprus overnight,...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🌍 Διεθνή",
+    "title": "1. Trump says 'threat' led US to pull bombers from RAF Fairford [Διεθνή]",
+    "snippet": "The Pentagon confirmed on Sunday it had removed the B1 bombers from the base in England back to their home stations in America....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🌍 Διεθνή",
+    "title": "2. France braces for national day of school protests after injuries and mass arrests [Διεθνή]",
+    "snippet": "France prepares for a day of protests in support of students who’ve been demanding more investment in education....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🌍 Διεθνή",
+    "title": "3. Saudi Arabia urged to spare man sentenced to death over Facebook post [Διεθνή]",
+    "snippet": "Anojan Sivarasa faces execution after he was found guilty of blasphemy over a Facebook comment....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🌍 Διεθνή",
+    "title": "4. Separatist party projected to win Quebec election, adding new test to Canada's unity [Διεθνή]",
+    "snippet": "The Parti Québécois, which secured a minority, has vowed to hold an independence referendum in the years to come....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "🌍 Διεθνή",
+    "title": "5. Nigeria mourns as 32 killed in military plane crash [Διεθνή]",
+    "snippet": "President Bola Tinubu describes the crash as a \"painful moment\" for the military and the entire nation....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-06",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-10-05",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Φορολογική Ελάφρυνση & Ακρίβεια: Έναρξη Εφαρμογής Μηδενικού Συντελεστή ΦΠΑ σε Βασικά Καταναλωτικά Προϊόντα — Πίεση για Διεύρυνση της Λίστας εν μέσω Πληθωρισμού 5,2% [Επιβεβαιωμένο]",
     "snippet": "Από την 1η Οκτωβρίου και με πλήρη ενσωμάτωση στο σύνολο του λιανεμπορίου σήμερα Δευτέρα, 5 Οκτωβρίου 2026, τέθηκε σε ισχύ η κυβερνητική απόφαση για εφαρμογή μηδενικού συντελεστή ΦΠ...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-05.html#top-story"
   },
   {
     "date": "2026-10-05",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Μακροοικονομία & Ανάπτυξη: Η Κεντρική Τράπεζα Κύπρου αναθεωρεί την πρόβλεψη για το ΑΕΠ στο 2,9% — Ανθεκτικότητα παρά τις γεωπολιτικές πιέσεις [Μονή πηγή]",
     "snippet": "Σημαντική ανοδική αναθεώρηση στις προβλέψεις για την πορεία της κυπριακής οικονομίας δημοσίευσε η Κεντρική Τράπεζα της Κύπρου (ΚΤΚ), ανεβάζοντας τον εκτιμώμενο...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-05.html#cyprus"
   },
   {
     "date": "2026-10-05",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Οδική Ασφάλεια & Αστυνόμευση: Έναρξη παγκύπριας εκστρατείας ελέγχων «Focus on the Road» με επίκεντρο τη χρήση κινητού [Επιβεβαιωμένο]",
     "snippet": "Σε εντατικούς στοχευμένους ελέγχους στους οδικούς άξονες όλων των επαρχιών προχωρά από σήμερα η Αστυνομία Κύπρου, στο πλαίσιο της πανευρωπαϊκής εκστρατείας του...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-05.html#cyprus"
   },
   {
     "date": "2026-10-05",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Βιομηχανία & Μεταποίηση: Αύξηση 5% στον Δείκτη Κύκλου Εργασιών τον Ιούλιο — Αντιστάθμιση εξαγωγών από την εγχώρια αγορά [Μονή πηγή]",
     "snippet": "Σημαντική ανάκαμψη κατέγραψε ο κυπριακός βιομηχανικός τομέας, με τον Δείκτη Κύκλου Εργασιών στη Βιομηχανία να ενισχύεται κατά 5,0% σε ετήσια βάση σύμφωνα με τα...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-05.html#cyprus"
   },
   {
     "date": "2026-10-05",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Ενέργεια & Πράσινη Μετάβαση: Νέο σχέδιο επιδότησης φωτοβολταϊκών για ΜμΕ και εμπορικά κτίρια — Ανοίγουν οι αιτήσεις [Επιβεβαιωμένο]",
     "snippet": "Το Υπουργείο Ενέργειας, Εμπορίου και Βιομηχανίας ανακοίνωσε την ολοκλήρωση του οδηγού εφαρμογής για το νέο πρόγραμμα επιδότησης εγκατάστασης φωτοβολταϊκών συστη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-05.html#cyprus"
   },
   {
     "date": "2026-10-05",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Υγεία & Δωρεά Οργάνων: Η Κύπρος στο επίκεντρο της Ευρωπαϊκής Ημέρας Δωρεάς Οργάνων 2026 — Επίσημη τελετή στην Πάφο [Μονή πηγή]",
     "snippet": "Την επίσημη φιλοξενία των πανευρωπαϊκών εκδηλώσεων για την «Ευρωπαϊκή Ημέρα Δωρεάς Οργάνων, Ιστών και Κυττάρων 2026» ανέλαβε η Κυπριακή Δημοκρατία σε συνεργασία...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-05.html#cyprus"
   },
   {
     "date": "2026-10-05",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ακίνητα Λεμεσού & House Search: Συμπίεση διαθεσιμότητας κάτω των €280k στον δυτικό άξονα — Διάμεση τιμή €300.000 στον Ύψωνα [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Τα ευρήματα του εβδομαδιαίου δελτίου House Search (03/10/2026) σε δείγμα άνω των 4.280 αγγελιών καταδεικνύουν ραγδαία συμπίεση της διαθεσιμότητας προσιτών διαμε...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-05.html#cyprus"
   },
   {
     "date": "2026-10-05",
     "section": "🌍 Διεθνή",
     "title": "1. Ισπανία & Πολιτική Κρίση: Πρόωρες βουλευτικές εκλογές για τις 29 Νοεμβρίου προκήρυξε ο Pedro Sánchez μετά την κατάρρευση του νομοσχεδίου στέγασης [Μονή πηγή]",
     "snippet": "Σε αιφνιδιαστική προσφυγή στις κάλπες οδηγείται η τέταρτη μεγαλύτερη οικονομία της ευρωζώνης, με τον Ισπανό Πρωθυπουργό Pedro Sánchez να ανακοινώνει τη διάλυση...",
-    "url": "#world"
+    "url": "briefings/2026-10-05.html#world"
   },
   {
     "date": "2026-10-05",
     "section": "🌍 Διεθνή",
     "title": "2. Βραζιλία & Προεδρικές Εκλογές: Στον β' γύρο της 25ης Οκτωβρίου Flávio Bolsonaro (47,1%) και Lula da Silva (45,1%) — Πολιτική πόλωση στη μεγαλύτερη οικονομία της Λατινικής Αμερικής [Μονή πηγή]",
     "snippet": "Σε μια δραματική αναμέτρηση που διέψευσε τα ευρήματα των τελευταίων δημοσκοπήσεων, οι προεδρικές εκλογές στη Βραζιλία οδηγούνται σε δεύτερο γύρο την 25η Οκτωβρί...",
-    "url": "#world"
+    "url": "briefings/2026-10-05.html#world"
   },
   {
     "date": "2026-10-05",
     "section": "🌍 Διεθνή",
     "title": "3. Μέση Ανατολή & Ερυθρά Θάλασσα: Ευρεία στρατιωτική επιχείρηση των κυβερνητικών δυνάμεων της Υεμένης — Ανακατάληψη της περιοχής Dhubab στο Bab al-Mandeb [Μονή πηγή]",
     "snippet": "Σημαντική τροπή λαμβάνουν οι στρατιωτικές ισορροπίες στη νότια χερσόνησο της Αραβίας, καθώς οι διεθνώς αναγνωρισμένες κυβερνητικές δυνάμεις της Υεμένης, υποστηρ...",
-    "url": "#world"
+    "url": "briefings/2026-10-05.html#world"
   },
   {
     "date": "2026-10-05",
     "section": "🌍 Διεθνή",
     "title": "4. Ευρωπαϊκή Διπλωματία & Βρετανία: Νέα εποχή επαναπροσέγγισης Λονδίνου-Βρυξελλών — Προτεραιότητα σε ασφάλεια, άμυνα και εμπόριο [Μονή πηγή]",
     "snippet": "Στην έναρξη μιας νέας στρατηγικής φάσης στις σχέσεις Ευρωπαϊκής Ένωσης και Ηνωμένου Βασιλείου αναφέρθηκε ο νεοδιορισθείς πρέσβης της ΕΕ στο Λονδίνο, Jukka Salov...",
-    "url": "#world"
+    "url": "briefings/2026-10-05.html#world"
   },
   {
     "date": "2026-10-05",
     "section": "🌍 Διεθνή",
     "title": "5. Διεθνείς Αερομεταφορές & Ασφάλεια: Έκτακτη εντολή Netanyahu για καθολική αναθεώρηση ελέγχων σε ξένα πληρώματα πτήσεων προς το Ισραήλ [Μονή πηγή]",
     "snippet": "Στη λήψη αυστηρών πρόσθετων μέτρων αεροπορικής ασφάλειας προχωρά το Ισραήλ, μετά από εντολή του Πρωθυπουργού Benjamin Netanyahu για πλήρη και εξονυχιστικό έλεγχ...",
-    "url": "#world"
+    "url": "briefings/2026-10-05.html#world"
   },
   {
     "date": "2026-10-05",
     "section": "📅 Προθεσμίες",
     "title": "Έως 19 Οκτωβρίου 2026: Προετοιμασία τεχνικών φακέλων και προσφορών για την υποβολή αιτήσεων στο Σχέδιο Φωτοβολταϊκών για ΜμΕ (Υπουργείο Ενέργειας).",
     "snippet": "Έως 19 Οκτωβρίου 2026: Προετοιμασία τεχνικών φακέλων και προσφορών για την υποβολή αιτήσεων στο Σχέδιο Φωτοβολταϊκών για ΜμΕ (Υπουργείο Ενέργειας)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-05.html#deadlines"
   },
   {
     "date": "2026-10-05",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω της πύλης TaxisNet (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων για το φορολογικό έτος μέσω της πύλης TaxisNet (TaxisNet)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-05.html#deadlines"
   },
   {
     "date": "2026-10-05",
     "section": "📅 Προθεσμίες",
     "title": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ (ΕΚΤ).",
     "snippet": "Έως 15 Οκτωβρίου 2026: Επανεξέταση περιθωρίων επιτοκίου σε τραπεζικά στεγαστικά δάνεια ενόψει της συνεδρίασης του Διοικητικού Συμβουλίου της ΕΚΤ (ΕΚΤ)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-05.html#deadlines"
   },
   {
     "date": "2026-10-05",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-05.html#top-story"
   },
   {
     "date": "2026-10-04",

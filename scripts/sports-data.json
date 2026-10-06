@@ -27,22 +27,12 @@
     },
     "articles": [
       {
-        "title": "Ομόνοια και Κύπρος",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-kai-kypros",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Χαμογελαστοί!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hamogelastoi-3",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Στο μυαλό του η... διαχείριση",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sto-myalo-toy-i-diaheirisi",
+        "title": "83 λεπτά ο Τανάσε",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/83-lepta-o-tanase",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-05T18:51:28.159338+00:00"
+    "fetched_at": "2026-10-06T07:36:51.675344+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -94,7 +84,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-05T18:51:29.464530+00:00"
+    "fetched_at": "2026-10-06T07:36:52.977863+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -147,7 +137,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-05T18:51:30.670786+00:00"
+    "fetched_at": "2026-10-06T07:36:53.789039+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -176,8 +166,18 @@
     },
     "articles": [
       {
+        "title": "Wet races and why future of F1 engines appears to be V8 turbos - Q&A",
+        "url": "https://www.bbc.com/sport/formula1/articles/cr15j3z2npz9o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "F1 needs to have hard look at itself - Sainz",
         "url": "https://www.bbc.com/sport/formula1/articles/cr62y51n1841o",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Bottas cycling from Malaysia to Singapore Grand Prix",
+        "url": "https://www.bbc.com/sport/formula1/articles/cv2d6p9en7wdo",
         "source": "BBC Sport F1"
       },
       {
@@ -189,18 +189,8 @@
         "title": "Verstappen wins in Malaysia after long delays as Russell retires",
         "url": "https://www.bbc.com/sport/formula1/articles/c5n49zx3zlvwo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Andrew Benson Q&A: Send us your questions",
-        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Russell says his 'confidence is back and growing'",
-        "url": "https://www.bbc.com/sport/formula1/articles/cv1j4jn5nxxlo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-05T18:51:31.863912+00:00"
+    "fetched_at": "2026-10-06T07:36:55.289034+00:00"
   }
 }
