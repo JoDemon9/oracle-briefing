@@ -27,17 +27,32 @@
     },
     "articles": [
       {
-        "title": "Μπαίνει μπροστά το... πλάνο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/mpainei-mprosta-plano",
+        "title": "Χατζηγιοβάνης: «Είμαι στα καλύτερά μου χρόνια, o ΟΦΗ αξίζει την αποθέωση»",
+        "url": "https://www.kerkida.net/eidiseis/ellada/super-league/omonoia/hatzigiobanis-eimai-sta-kalytera-moy-hronia-o-ofi-axizei-tin-apotheosi",
         "source": "Kerkida.net"
       },
       {
-        "title": "83 λεπτά ο Τανάσε",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/83-lepta-o-tanase",
+        "title": "Σε φουλ ρυθμούς ο...Ακιντόλα",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/se-foyl-rythmoys-oakintola",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Πλάνα απ' το \"Ηλίας Πούλλος\"",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/plana-ap-ilias-poyllos-4",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Θα χρειαστεί... ανάσες",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tha-hreiastei-anases",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Μπαίνει μπροστά το... πλάνο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/mpainei-mprosta-plano",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-06T10:58:51.359656+00:00"
+    "fetched_at": "2026-10-06T21:05:26.827586+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -89,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-06T10:59:04.873254+00:00"
+    "fetched_at": "2026-10-06T21:05:27.589892+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -142,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-06T10:59:07.372964+00:00"
+    "fetched_at": "2026-10-06T21:05:28.207675+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -196,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-06T10:59:10.521451+00:00"
+    "fetched_at": "2026-10-06T21:05:28.681924+00:00"
   }
 }
