@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-06T07:36:36.207867",
+  "fetched_at": "2026-10-06T11:25:29.808100",
   "quotes": {
     "S&P 500 (SPX)": {
       "symbol": "^GSPC",
@@ -15,32 +15,32 @@
     },
     "Bitcoin (BTC/USD)": {
       "symbol": "BTC-USD",
-      "price": 85415.03,
-      "change": -0.3913093065959471,
+      "price": 86242.97,
+      "change": 0.574211859558267,
       "date": "06/10/2026"
     },
     "EUR/USD": {
       "symbol": "EURUSD=X",
-      "price": 1.1226,
-      "change": 0.02673082063619059,
+      "price": 1.1263,
+      "change": 0.35641094181591404,
       "date": "06/10/2026"
     },
     "EUR/GBP": {
       "symbol": "EURGBP=X",
-      "price": 0.8485,
-      "change": 0.0,
+      "price": 0.8489,
+      "change": 0.04714201532114978,
       "date": "06/10/2026"
     },
     "Bank of Cyprus (BOCH)": {
       "symbol": "BOCHGR.AT",
-      "price": 10.59,
-      "change": -0.09433962264150743,
+      "price": 10.76,
+      "change": 1.605288007554296,
       "date": "06/10/2026"
     },
     "Brent Crude": {
       "symbol": "BZ=F",
-      "price": 99.44,
-      "change": -0.8771929824561358,
+      "price": 98.33,
+      "change": -1.983652312599676,
       "date": "06/10/2026"
     },
     "TSMC (TSM)": {
@@ -87,10 +87,10 @@
     }
   },
   "euribor": {
-    "1m": "2,437%",
-    "3m": "2,598%",
-    "6m": "3,058%",
-    "12m": "3,323%",
+    "1m": "2,432%",
+    "3m": "2,597%",
+    "6m": "2,986%",
+    "12m": "3,186%",
     "date": "06/10/2026",
     "source": "euribor-rates.eu"
   }

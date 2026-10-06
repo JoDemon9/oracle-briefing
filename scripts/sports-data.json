@@ -27,12 +27,17 @@
     },
     "articles": [
       {
+        "title": "Μπαίνει μπροστά το... πλάνο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/mpainei-mprosta-plano",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "83 λεπτά ο Τανάσε",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/83-lepta-o-tanase",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-06T07:36:51.675344+00:00"
+    "fetched_at": "2026-10-06T11:25:38.549703+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -84,7 +89,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-06T07:36:52.977863+00:00"
+    "fetched_at": "2026-10-06T11:25:40.529629+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -112,6 +117,21 @@
     },
     "articles": [
       {
+        "title": "\"Bellingham is terrifying, I had never seen anything like it\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/06/bellingham-is-terrifying-i-had-never-seen-anything-like-it.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Who is JJ Gabriel, the planet's biggest teenage gem, who has a nickname he detests and half of Europe knocking on his door?",
+        "url": "https://www.marca.com/en/football/2026/10/06/who-is-jj-gabriel-the-planet-s-biggest-teenage-gem-who-has-nickname-he-detests-and-half-of-europe-knocking-on-his-door.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Kylian Mbappé defies José Mourinho’s warning with a bicycle ride while injured",
+        "url": "https://www.marca.com/en/more-sports/2026/10/05/kylian-mbappe-defies-jose-mourinho-s-warning-with-bicycle-ride-while-injur-video.html",
+        "source": "Marca"
+      },
+      {
         "title": "Madrid statement on the Negreira case: \"Real Madrid asks UEFA for the investigation to move forward as quickly as possible\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/01/madrid-statement-on-the-negreira-case-real-madrid-asks-uefa-for-the-investigation-to-move-forward-as-quickly-as-possible.html",
         "source": "Marca"
@@ -120,24 +140,9 @@
         "title": "Kylian Mbappé puts his injury behind him and spends a romantic evening with Ester Expósito at a well-known Parisian nightclub",
         "url": "https://www.marca.com/en/lifestyle/celebrities/2026/10/01/kylian-mbappe-puts-his-injury-behind-him-and-spends-romantic-evening-with-ester-exposito-at-well-known-parisian-nightclub-video.html",
         "source": "Marca"
-      },
-      {
-        "title": "Was Vinicius Jr. replaced? The far-fetched conspiracy theory involving the CIA and reptilians",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/29/was-vinicius-jr-replaced-the-far-fetched-conspiracy-theory-involving-the-cia-and-reptilians.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Barça takes Florentino to court: the date set for the conciliation hearing",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/28/barca-takes-florentino-to-court-the-date-set-for-the-conciliation-hearing.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Mbappé medical report: hyperextension of the posterior capsule of the left knee",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/09/26/mbappe-medical-report-hyperextension-of-the-posterior-capsule-of-the-left-knee.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-06T07:36:53.789039+00:00"
+    "fetched_at": "2026-10-06T11:25:41.442147+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -191,6 +196,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-06T07:36:55.289034+00:00"
+    "fetched_at": "2026-10-06T11:25:42.585578+00:00"
   }
 }
