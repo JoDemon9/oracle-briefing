@@ -1690,5 +1690,25 @@
   "https://www.bbc.co.uk/news/articles/cqrmyz4mdn94o": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/e00e/live/bb88aa50-c1c5-11f1-babe-4199b0e7ccea.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/10/07/police-say-communications-law-crucial-as-cyprus-fbi-launched": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/police.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/07/arsenal-manager-arteta-extends-contract-until-2030": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/art.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b147/live/114ad2c0-c229-11f1-babe-4199b0e7ccea.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/c5zjx7xx3487o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/80cb/live/9b494cf0-c25f-11f1-babe-4199b0e7ccea.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqd09g0gj50ko?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/304d/live/e5ca5340-c26a-11f1-b278-615cdfb74f16.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
