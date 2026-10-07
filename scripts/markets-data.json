@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-07T21:24:54.191247",
+  "fetched_at": "2026-10-07T21:32:02.370087",
   "quotes": {
     "S&P 500 (SPX)": {
       "symbol": "^GSPC",
@@ -15,8 +15,8 @@
     },
     "Bitcoin (BTC/USD)": {
       "symbol": "BTC-USD",
-      "price": 83348.38,
-      "change": -2.569195626738889,
+      "price": 83278.48,
+      "change": -2.650905831852555,
       "date": "07/10/2026"
     },
     "EUR/USD": {
@@ -27,8 +27,8 @@
     },
     "EUR/GBP": {
       "symbol": "EURGBP=X",
-      "price": 0.8473,
-      "change": -0.08254716981131166,
+      "price": 0.8472,
+      "change": -0.09433962264151213,
       "date": "07/10/2026"
     },
     "Bank of Cyprus (BOCH)": {

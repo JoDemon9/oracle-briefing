@@ -52,7 +52,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-07T21:25:01.329383+00:00"
+    "fetched_at": "2026-10-07T21:32:06.560702+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-07T21:25:02.619677+00:00"
+    "fetched_at": "2026-10-07T21:32:06.899339+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-07T21:25:04.068762+00:00"
+    "fetched_at": "2026-10-07T21:32:07.494248+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-07T21:25:05.324982+00:00"
+    "fetched_at": "2026-10-07T21:32:08.521664+00:00"
   }
 }

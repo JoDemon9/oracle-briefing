@@ -6,8 +6,8 @@
 
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
-> * **Αγορές & Tech:** S&P 500 (-0,22%), Nasdaq 100 (-0,21%), Bank of Cyprus (-2,23%), Bitcoin (-2,57%). Tech Watchlist: Apple (+0,91%), Alphabet (+0,81%), TSMC (-2,09%), Microsoft (+0,09%), Meta (-2,38%), NVIDIA (-0,74%), Micron (+4,06%).
-> * **Επικαιρότητα:** World-renowned soprano Aida Garifullina at Curium · Calls intensify for Rialto to be transferred to Limassol · Spanish pensioner whose eviction sparked nationwide protests dies, union says
+> * **Αγορές & Tech:** S&P 500 (-0,22%), Nasdaq 100 (-0,21%), Bank of Cyprus (-2,23%), Bitcoin (-2,65%). Tech Watchlist: Apple (+0,91%), Alphabet (+0,81%), TSMC (-2,09%), Microsoft (+0,09%), Meta (-2,38%), NVIDIA (-0,74%), Micron (+4,06%).
+> * **Επικαιρότητα:** Rubio to link ancient Greek values to ‘America First’ speech in Athens · Hourly paid workers accept govt proposal for salary increases · Spanish pensioner whose eviction sparked nationwide protests dies, union says
 > * **Αθλητικά:** Αποτελέσματα & αγώνες για Ομόνοια, Manchester United (How important is a fast start for teams chasing the Premier League title?), Real Madrid και Formula 1 (Bottas cycling from Malaysia to Singapore Grand Prix).
 
 ---
@@ -25,9 +25,9 @@
 | :--- | :--- | :--- | :--- |
 | **S&P 500 (SPX)** | 7.801,77 | -0,22% | Ήπια διόρθωση εν αναμονή στοιχείων πληθωρισμού |
 | **Nasdaq 100 (NDQ)** | 31.160,08 | -0,21% | Πιέσεις στους τεχνολογικούς τίτλους υψηλού beta |
-| **Bitcoin (BTC/USD)** | $83.348,38 | -2,57% | Συσσώρευση στην περιοχή των $77k |
+| **Bitcoin (BTC/USD)** | $83.278,48 | -2,65% | Συσσώρευση στην περιοχή των $77k |
 | **EUR/USD** | 1,12 | -0,59% | Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ |
-| **EUR/GBP** | 0,85 | -0,08% | Σταθεροποίηση εντός στενού εύρους διακύμανσης |
+| **EUR/GBP** | 0,85 | -0,09% | Σταθεροποίηση εντός στενού εύρους διακύμανσης |
 | **Bank of Cyprus (BOCH)** | €10,51 | -2,23% | Ισχυρό κλείσιμο σε υψηλό ημέρας στο ΧΑΚ/ΧΑ |
 | **Brent Crude** | $100,95 | +0,37% | Εδραίωση πάνω από το ψυχολογικό όριο των $100 |
 
@@ -46,15 +46,15 @@
 
 ## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] World-renowned soprano Aida Garifullina at Curium
-One of the world’s most celebrated opera stars will perform on the island this week, joining the Cyprus Symphony Orchestra and two soloists at the historic Curium Ancient Theatre. Internationally acclaimed soprano Aida Garifullina, a soloist of the Vienna State Opera and the Metropolitan Opera in Ne
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Rubio to link ancient Greek values to ‘America First’ speech in Athens
+US Secretary of State Marco Rubio said on Wednesday that “strong and model NATO ally” Greece and the United States are launching new counterterrorism information sharing between their law enforcement agencies. During an official visit to Athens, Rubio said Greece was particularly exposed to the thre
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/07/world-renowned-soprano-aida-garifullina-at-curium)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/07/rubio-to-link-ancient-greek-values-to-america-first-speech-in-athens)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Calls intensify for Rialto to be transferred to Limassol
-Calls for Rialto theatre in Limassol to be handed over to the people are intensifying, as the government appears to be postponing a cabinet decision on a proposal submitted by Limassol’s municipality. Rialto, which was originally built as a modern cinema in 1930, said in a press release that it belo
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Hourly paid workers accept govt proposal for salary increases
+Hourly paid government staff are calling off their protests after their collective agreement was approved on Wednesday at an island-wide meeting. The proposal was submitted to the trade unions on September 28 during a meeting between President Nikos Christodoulides and the leaders of the hourly work
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/07/calls-intensify-for-rialto-to-be-transferred-to-limassol)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/07/hourly-paid-workers-accept-govt-proposal-for-salary-increases)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Spanish pensioner whose eviction sparked nationwide protests dies, union says
 Maricarmen Abascal, 87, was forcibly removed on a stretcher from her apartment of more than 70 years in September.
