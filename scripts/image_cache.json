@@ -1706,5 +1706,9 @@
   "https://www.bbc.co.uk/news/articles/cq9868z88rexo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/641f/live/0b408380-c075-11f1-aa5a-7b59b59b45bf.jpg",
     "category": "ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b147/live/114ad2c0-c229-11f1-babe-4199b0e7ccea.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
