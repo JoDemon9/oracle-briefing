@@ -1,88 +1,88 @@
 {
-  "fetched_at": "2026-10-07T14:02:15.144362",
+  "fetched_at": "2026-10-07T21:24:54.191247",
   "quotes": {
     "S&P 500 (SPX)": {
       "symbol": "^GSPC",
-      "price": 7818.93,
-      "change": 0.5785990390985339,
+      "price": 7801.77,
+      "change": -0.21946736957614218,
       "date": "07/10/2026"
     },
     "Nasdaq 100 (NDQ)": {
       "symbol": "^NDX",
-      "price": 31224.686,
-      "change": 0.4770333900204422,
+      "price": 31160.076,
+      "change": -0.20691961482014767,
       "date": "07/10/2026"
     },
     "Bitcoin (BTC/USD)": {
       "symbol": "BTC-USD",
-      "price": 83760.09,
-      "change": -2.087923687578049,
+      "price": 83348.38,
+      "change": -2.569195626738889,
       "date": "07/10/2026"
     },
     "EUR/USD": {
       "symbol": "EURUSD=X",
-      "price": 1.1193,
-      "change": -0.6215040397762689,
+      "price": 1.1196,
+      "change": -0.5948681523572893,
       "date": "07/10/2026"
     },
     "EUR/GBP": {
       "symbol": "EURGBP=X",
-      "price": 0.8466,
-      "change": -0.16509433962263642,
+      "price": 0.8473,
+      "change": -0.08254716981131166,
       "date": "07/10/2026"
     },
     "Bank of Cyprus (BOCH)": {
       "symbol": "BOCHGR.AT",
-      "price": 10.66,
-      "change": -0.8372093023255801,
+      "price": 10.51,
+      "change": -2.232558139534886,
       "date": "07/10/2026"
     },
     "Brent Crude": {
       "symbol": "BZ=F",
-      "price": 101.91,
-      "change": 1.3223304831974532,
+      "price": 100.95,
+      "change": 0.36786637502486036,
       "date": "07/10/2026"
     },
     "TSMC (TSM)": {
       "symbol": "TSM",
-      "price": 482.3,
-      "change": -0.7204610951008645,
+      "price": 472.2,
+      "change": -2.094132282811533,
       "date": "07/10/2026"
     },
     "NVIDIA (NVDA)": {
       "symbol": "NVDA",
-      "price": 239.24,
-      "change": 0.14231896190874985,
+      "price": 237.47,
+      "change": -0.7398428356462172,
       "date": "07/10/2026"
     },
     "Alphabet (GOOG)": {
       "symbol": "GOOG",
-      "price": 344.59,
-      "change": 0.2210394671785449,
+      "price": 347.37,
+      "change": 0.8067558547839547,
       "date": "07/10/2026"
     },
     "Apple (AAPL)": {
       "symbol": "AAPL",
-      "price": 333.63,
-      "change": 0.2222956532187837,
+      "price": 336.67,
+      "change": 0.9111890417528461,
       "date": "07/10/2026"
     },
     "Microsoft (MSFT)": {
       "symbol": "MSFT",
-      "price": 529.3,
-      "change": 0.784492935755361,
+      "price": 529.76,
+      "change": 0.08690723597204542,
       "date": "07/10/2026"
     },
     "Micron (MU)": {
       "symbol": "MU",
-      "price": 1045.56,
-      "change": -1.7293883228692895,
+      "price": 1088.0,
+      "change": 4.05906882436207,
       "date": "07/10/2026"
     },
     "Meta (META)": {
       "symbol": "META",
-      "price": 738.88,
-      "change": -0.40706294648874264,
+      "price": 721.31,
+      "change": -2.377923343438725,
       "date": "07/10/2026"
     }
   },

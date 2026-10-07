@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "(Ομόνοια)/Η ευκαιρία τους…",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/omonoiai-eykairia-toys",
+        "title": "\"Σταμάτησαν τα μουρμουρητά, φτιάχνεται κάτι πολύ καλό στην Ομόνοια\"",
+        "url": "https://www.kerkida.net/super-monday/omonoia/stamatisan-ta-moyrmoyrita-ftiahnetai-kati-poly-kalo-stin-omonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Φώτος) Φουλάρει για Καρμιώτισσα",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/fotos-foylarei-gia-karmiotissa",
+        "title": "Τα τρεξίματα του...",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ta-treximata-toy",
         "source": "Kerkida.net"
       },
       {
-        "title": "Οι ΡΕΦ στο Καρμιώτισσα - Ομόνοια",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/refinio/omonoia/oi-ref-sto-karmiotissa-omonoia",
+        "title": "Από κοντά τον... Ολλανδό",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apo-konta-ton-ollando",
         "source": "Kerkida.net"
       },
       {
-        "title": "Πανέτοιμος...",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/panetoimos-12",
+        "title": "Δεδομένο για...Σενού",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/dedomeno-giasenoy",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ομόνοια Κ17/Δηλώσεις από την προπόνηση",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/omonoia-k17diloseis-apo-tin-proponisi",
+        "title": "ΣΧΟΛΙΟ για Ανδρόνικο Κακουλλή: \"Έδωσε ώθηση...\"",
+        "url": "https://www.kerkida.net/super-monday/omonoia/sholio-gia-androniko-kakoylli-edose-othisi",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-07T10:52:48.644481+00:00"
+    "fetched_at": "2026-10-07T21:25:01.329383+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-07T10:52:53.587121+00:00"
+    "fetched_at": "2026-10-07T21:25:02.619677+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-07T10:53:08.885274+00:00"
+    "fetched_at": "2026-10-07T21:25:04.068762+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-07T10:53:12.562884+00:00"
+    "fetched_at": "2026-10-07T21:25:05.324982+00:00"
   }
 }
