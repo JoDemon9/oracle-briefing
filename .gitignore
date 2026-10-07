@@ -14,3 +14,4 @@ __pycache__/
 /briefings/live-wire.json
 .link-check*
 .*.json
+scratch/

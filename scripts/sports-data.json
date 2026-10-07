@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Χατζηγιοβάνης: «Είμαι στα καλύτερά μου χρόνια, o ΟΦΗ αξίζει την αποθέωση»",
-        "url": "https://www.kerkida.net/eidiseis/ellada/super-league/omonoia/hatzigiobanis-eimai-sta-kalytera-moy-hronia-o-ofi-axizei-tin-apotheosi",
+        "title": "(Ομόνοια)/Η ευκαιρία τους…",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/omonoiai-eykairia-toys",
         "source": "Kerkida.net"
       },
       {
-        "title": "Σε φουλ ρυθμούς ο...Ακιντόλα",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/se-foyl-rythmoys-oakintola",
+        "title": "(Φώτος) Φουλάρει για Καρμιώτισσα",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/fotos-foylarei-gia-karmiotissa",
         "source": "Kerkida.net"
       },
       {
-        "title": "Πλάνα απ' το \"Ηλίας Πούλλος\"",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/plana-ap-ilias-poyllos-4",
+        "title": "Οι ΡΕΦ στο Καρμιώτισσα - Ομόνοια",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/refinio/omonoia/oi-ref-sto-karmiotissa-omonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Θα χρειαστεί... ανάσες",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/tha-hreiastei-anases",
+        "title": "Πανέτοιμος...",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/panetoimos-12",
         "source": "Kerkida.net"
       },
       {
-        "title": "Μπαίνει μπροστά το... πλάνο",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/mpainei-mprosta-plano",
+        "title": "Ομόνοια Κ17/Δηλώσεις από την προπόνηση",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/akadimies/omonoia/omonoia-k17diloseis-apo-tin-proponisi",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-07T06:05:19.574858+00:00"
+    "fetched_at": "2026-10-07T10:52:48.644481+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-07T06:05:20.505901+00:00"
+    "fetched_at": "2026-10-07T10:52:53.587121+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -132,6 +132,11 @@
     },
     "articles": [
       {
+        "title": "Bellingham boosts Harry Kane's Ballon d'Or bid: \"He is the best English player to wear this shirt\"",
+        "url": "https://www.marca.com/en/football/international-football/2026/10/07/bellingham-boosts-harry-kane-s-ballon-d-or-bid-he-is-the-best-english-player-to-wear-this-shirt.html",
+        "source": "Marca"
+      },
+      {
         "title": "\"Bellingham is terrifying, I had never seen anything like it\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/06/bellingham-is-terrifying-i-had-never-seen-anything-like-it.html",
         "source": "Marca"
@@ -150,14 +155,9 @@
         "title": "Madrid statement on the Negreira case: \"Real Madrid asks UEFA for the investigation to move forward as quickly as possible\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/01/madrid-statement-on-the-negreira-case-real-madrid-asks-uefa-for-the-investigation-to-move-forward-as-quickly-as-possible.html",
         "source": "Marca"
-      },
-      {
-        "title": "Kylian Mbappé puts his injury behind him and spends a romantic evening with Ester Expósito at a well-known Parisian nightclub",
-        "url": "https://www.marca.com/en/lifestyle/celebrities/2026/10/01/kylian-mbappe-puts-his-injury-behind-him-and-spends-romantic-evening-with-ester-exposito-at-well-known-parisian-nightclub-video.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-07T06:05:21.829005+00:00"
+    "fetched_at": "2026-10-07T10:53:08.885274+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Russell to start from back of Singapore grid after penalty",
+        "url": "https://www.bbc.com/sport/formula1/articles/cm0qkdk37gy0o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Wet races and why future of F1 engines appears to be V8 turbos - Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/cr15j3z2npz9o",
         "source": "BBC Sport F1"
@@ -204,13 +209,8 @@
         "title": "Hamilton & Verstappen bemused after glitch turns F1 into 'Lego race'",
         "url": "https://www.bbc.com/sport/formula1/articles/cwg7x820k9xjo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Verstappen wins in Malaysia after long delays as Russell retires",
-        "url": "https://www.bbc.com/sport/formula1/articles/c5n49zx3zlvwo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-07T06:05:23.211765+00:00"
+    "fetched_at": "2026-10-07T10:53:12.562884+00:00"
   }
 }

@@ -6,39 +6,38 @@
 
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
-> * **Αγορές & Tech:** Μεσημβρινός παλμός σε S&P 500 Futures (+0,58%), Bank of Cyprus (+1,51%) και Brent Crude (+0,60%). Στο Midday Tech Watch παρακολουθούνται TSMC (-0,72%), NVIDIA (+0,14%), Apple (+0,22%) και Meta (-0,41%).
-> * **Επικαιρότητα (5 Εξελίξεις):** Επιχειρηματικές και γεωπολιτικές εξελίξεις σε Κύπρο και διεθνή σκηνή με άμεσο αντίκτυπο σε επενδύσεις και εφοδιαστική αλυσίδα.
-> * **Αθλητικά:** Πλήρης ετοιμότητα Ομόνοιας για το ντέρμπι και ευρωπαϊκό πρόγραμμα συλλόγων.
+> * **Αγορές & Tech:** Μεσημβρινός παλμός σε S&P 500 Futures (+0,58%), Bank of Cyprus (€10,66 / -0,84%) και Brent Crude ($101,91 / +1,32%). Στο Midday Tech Watch παρακολουθούνται TSMC ($482,30 / -0,72%), NVIDIA ($239,24 / +0,14%), Microsoft ($529,30 / +0,78%), Apple ($333,63 / +0,22%) και Micron ($1.045,56 / -1,73%).
+> * **Επικαιρότητα (5 Εξελίξεις):** Υπό έλεγχο η φωτιά στο δεξαμενόπλοιο «Rio» στη Μαύρη Θάλασσα, καταπέλτης η έκθεση της Ελεγκτικής για τον Ακάμα προς τον Γενικό Εισαγγελέα, άλμα 14% στις πωλήσεις ακινήτων, Νόμπελ Χημείας 2026 σε Kagan και Soai, και πακέτο €1,24 δισ. της Κομισιόν για την Ουκρανία.
+> * **Αθλητικά:** Ορισμός διαιτητών για το Καρμιώτισσα – Ομόνοια, τακτικό πλάνο Manchester United για Tottenham, ο Bellingham εκθειάζει τον Kane και ποινή για τον Russell ενόψει Singapore GP.
 
 ---
 
 ## ⚡ ΜΕΣΗΜΒΡΙΝΟ BREAKING & DEAL WIRE
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Ukraine’s Zelenskiy says intelligence shows Russia is preparing massive attack
-President Volodymyr Zelenskiy said on Tuesday that the latest intelligence suggested Russia was preparing a “massive attack” on Ukraine. “There is updated intelligence indicating that Russia is preparing a massive attack,” Zelenskiy said in his nightly video address. “Ukrainian services and our air
-**Γιατί με αφορά:** Άμεσες επιδράσεις στην επιχειρηματική δραστηριότητα, τη ρευστότητα και την τοπική αγορά.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/06/ukraines-zelenskiy-says-intelligence-shows-russia-is-preparing-massive-attack)
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Ναυτιλία & Μαύρη Θάλασσα: Υπό πλήρη έλεγχο η πυρκαγιά στο δεξαμενόπλοιο Aframax «Rio» κυπριακών συμφερόντων μετά την επίθεση θαλάσσιων drones
+Κατασβέστηκε πλήρως η φωτιά στο δεξαμενόπλοιο «Rio» υπό σημαία Λιβερίας, συνδεδεμένο με τον Κύπριο εφοπλιστή Ανδρέα Χατζηγιάννη, ανοικτά των ακτών του Σότσι στη Μαύρη Θάλασσα. Και τα 23 μέλη του πληρώματος (Ινδοί υπήκοοι) διασώθηκαν χωρίς τραυματισμούς, ενώ οι αρμόδιες ρωσικές αρχές επιβεβαίωσαν ότι δεν υπήρξε διαρροή πετρελαίου στη θαλάσσια περιοχή.  
+**Γιατί με αφορά:** Επηρεάζει άμεσα τα ναυτιλιακά ασφάλιστρα πολεμικού κινδύνου και τη διακίνηση ενεργειακών φορτίων στο ναυτιλιακό σύμπλεγμα της Λεμεσού.  
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/07/cyprus-linked-tanker-ablaze-off-sochi-after-black-sea-drone-attack)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] What could AI actually change in your business?
-On October 19, Panis.News in collaboration with GrantXpert and Future Skills Hub brings business leaders together at European University Cyprus for an evening focused on practical AI conversations. Picture the start of a working day. Your team has customer requests to answer, reports to prepare and
-**Γιατί με αφορά:** Άμεσες επιδράσεις στην επιχειρηματική δραστηριότητα, τη ρευστότητα και την τοπική αγορά.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/07/what-could-ai-actually-change-in-your-business)
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Θεσμοί & Ακάμας: Στον Γενικό Εισαγγελέα η Ειδική Έκθεση της Ελεγκτικής Υπηρεσίας για διερεύνηση ποινικών ευθυνών
+Στον Γενικό Εισαγγελέα διαβιβάστηκε η ειδική έκθεση της Ελεγκτικής Υπηρεσίας για τα κατασκευαστικά έργα στο Εθνικό Δασικό Πάρκο Ακάμα, καταγράφοντας σοβαρές αποκλίσεις από τους περιβαλλοντικούς όρους και εκτέλεση μόλις του 17,7% του έργου παρότι είχε παρέλθει το 94% του συμβατικού χρόνου.  
+**Γιατί με αφορά:** Αποτελεί κρίσιμο τεστ θεσμικής διαφάνειας και λογοδοσίας στη διαχείριση δημόσιων συμβάσεων και προστατευόμενων ζωνών.  
+**Πηγή:** [StockWatch](https://www.stockwatch.com.cy/el/news/katapeltis-i-ekthesi-ef-ghia-akama-paei-ston-gh-eisaghghelea)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] ECB proposes lighter supervision for smaller European banks
-The European Central Bank (ECB) is proposing a major expansion of proportionality in banking supervision that could bring around 150 additional smaller banks under a lighter regulatory framework, according to ECB Executive Board member Frank Elderson. In a post on the ECB’s supervision blog, Elderso
-**Γιατί με αφορά:** Άμεσες επιδράσεις στην επιχειρηματική δραστηριότητα, τη ρευστότητα και την τοπική αγορά.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/07/ecb-proposes-lighter-supervision-for-smaller-european-banks)
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Κτηματαγορά & 9μηνο 2026: Άλμα 13,6% στις πωλήσεις ακινήτων παγκύπρια με 14.969 συμβόλαια — Σταθερά πρώτη η Λεμεσός
+Τα νέα επίσημα στοιχεία του Κτηματολογίου δείχνουν ισχυρή άνοδο των πωλήσεων ακινήτων σε όλους τους μήνες του εννεαμήνου, με τη Λεμεσό να καταγράφει 4.860 πωλητήρια έγγραφα (+16,9% ετησίως και +31,7% έναντι 2024), επιστρέφοντας σε δυναμική τροχιά μετά την πρόσκαιρη κάμψη του Αυγούστου.  
+**Γιατί με αφορά:** Επιβεβαιώνει την επενδυτική υπεραξία και τη διαρκή ζήτηση οικιστικών μονάδων στη Λεμεσό.  
+**Πηγή:** [StockWatch](https://www.stockwatch.com.cy/el/news/kalpazoyn-me-anodo-14-oi-poliseis-akiniton)
 
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] France halts use of stun grenades after boy's hand blown off in student protests
-The step comes after several groups complained of police using disproportionate force towards teenagers.
-**Γιατί με αφορά:** Κρίσιμη παράμετρος για τη διεθνή μακροοικονομία, το ενεργειακό κόστος και το εμπόριο.  
-**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss)
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Επιστήμη: Στους Henri B. Kagan και Kenso Soai το Νόμπελ Χημείας 2026 για την ασύμμετρη αυτοκατάλυση
+Η Βασιλική Σουηδική Ακαδημία Επιστημών απένειμε το Νόμπελ Χημείας 2026 στους Henri B. Kagan και Kenso Soai για την ανακάλυψη των μη γραμμικών φαινομένων και της αυτοκατάλυσης στην οργανική σύνθεση, ανοίγοντας νέους δρόμους στη φαρμακοβιομηχανία.  
+**Γιατί με αφορά:** Ανοίγει τον δρόμο για δραστική μείωση κόστους παραγωγής σύγχρονων φαρμακευτικών ουσιών.  
+**Πηγή:** [Philenews](https://www.philenews.com/kosmos/article/1779052/se-dio-epistimones-to-nompel-chimias-2026-pia-ine-i-anakalipsi-pou-tous-charise-to-korifeo-vravio/)
 
-### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] US death row inmate Christa Pike awake and speaking after failed execution, lawyers say
-A medical expert advising her legal team says the murderer of Colleen Slemmer is communicating in a "basic way".
-**Γιατί με αφορά:** Κρίσιμη παράμετρος για τη διεθνή μακροοικονομία, το ενεργειακό κόστος και το εμπόριο.  
-**Πηγή:** [Διεθνή Πρακτορεία](https://www.bbc.co.uk/news/articles/c8kgezxn54qko?at_medium=RSS&at_campaign=rss)
-
+### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Ευρωπαϊκή Άμυνα: Νέο πακέτο €1,24 δισ. από την Κομισιόν για παραγωγή drones και πυραύλων στην Ουκρανία
+Η Ευρωπαϊκή Επιτροπή προχωρά στη διάθεση 1,24 δισ. ευρώ από τα απροσδόκητα έσοδα των δεσμευμένων ρωσικών περιουσιακών στοιχείων για την ενίσχυση της ευρωπαϊκής και ουκρανικής παραγωγής προηγμένων αμυντικών συστημάτων.  
+**Γιατί με αφορά:** Επηρεάζει την ευρωπαϊκή αμυντική βιομηχανία και τη μακροοικονομική σταθερότητα της ευρωζώνης.  
+**Πηγή:** [Dialogos](https://dialogos.com.cy/komision-neo-astronomiko-poso-124-dis-eyro-stin-oykrania-gia-drones-kai-pyrayloys/)
 
 ---
 
@@ -47,13 +46,13 @@ A medical expert advising her legal team says the murderer of Colleen Slemmer is
 ### 📈 Κύριοι Δείκτες, Ενέργεια & Crypto
 | Δείκτης / Αξία | Τιμή | Μεταβολή | Ώρα Αποτίμησης / Σχόλιο |
 | :--- | :--- | :--- | :--- |
-| **Bank of Cyprus (BOCH)** | €10,75 | +1,51% | Σταθερή ζήτηση στο ΧΑΚ/ΧΑ |
-| **Brent Crude** | $101,18 | +0,60% | Εδραίωση πάνω από τα $100/βαρέλι |
+| **Bank of Cyprus (BOCH)** | €10,66 | -0,84% | Σταθερή ζήτηση στο ΧΑΚ/ΧΑ |
+| **Brent Crude** | $101,91 | +1,32% | Εδραίωση πάνω από τα $101/βαρέλι |
 | **S&P 500 Futures** | 7.818,93 | +0,58% | Εν αναμονή έναρξης Wall Street |
 | **Nasdaq 100 Futures** | 31.224,69 | +0,48% | Συσσώρευση στα tech futures |
-| **Bitcoin (BTC/USD)** | $84.290,46 | -1,47% | Σταθεροποίηση στη ζώνη $77k |
-| **EUR/USD** | 1,12 | -0,29% | Στενό εύρος διακύμανσης |
-| **EUR/GBP** | 0,85 | -0,06% | Σταθερότητα στις ευρωπαϊκές ισοτιμίες |
+| **Bitcoin (BTC/USD)** | $83.760,09 | -2,09% | Σταθεροποίηση στη ζώνη $83k |
+| **EUR/USD** | 1,1193 | -0,62% | Στενό εύρος διακύμανσης |
+| **EUR/GBP** | 0,8466 | -0,17% | Σταθερότητα στις ευρωπαϊκές ισοτιμίες |
 
 ### 💻 Μετοχές Τεχνολογίας (Midday Tech Watch)
 | Μετοχή / Ticker | Τιμή / Pre-Market | Μεταβολή | Σχόλιο |
@@ -74,29 +73,29 @@ A medical expert advising her legal team says the murderer of Colleen Slemmer is
 
 ### ΟΜΟΝΟΙΑ
 *   **Τελευταίο αποτέλεσμα:** Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)
-*   **Επόμενος αγώνας:** 19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026)
-*   **Ρεπορτάζ & Νέα:** Χατζηγιοβάνης: «Είμαι στα καλύτερά μου χρόνια, o ΟΦΗ αξίζει την αποθέωση»
+*   **Επόμενος αγώνας:** 19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026, Cytavision Sports 1HD)
+*   **Ρεπορτάζ & Νέα:** Οριστικοποιήθηκαν οι διαιτητές από την ΚΟΠ, με τον Henning Berg να δίνει έμφαση στα τελειώματα φάσεων και στην τακτική προσέγγιση ενόψει της εξόδου στην Πάφο.
 *   **Highlights:** [Highlights Ομόνοιας στο YouTube](https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026)
 *   **Πηγή:** [ΚΟΠ / CFA](https://www.cfa.com.cy/Gr/news/53723)
 
 ### Manchester United
-*   **Τελευταίο αποτέλεσμα:** Fulham – Manchester United 1-1 (Craven Cottage, Premier League)
-*   **Επόμενος αγώνας:** Premier League: Manchester United versus Tottenham Hotspur — 17:30
-*   **Ρεπορτάζ & Νέα:** Thrown in with Giggs and Beckham: how Manchester United tried to get Billy Kenny
+*   **Τελευταίο αποτέλεσμα:** Fulham – Manchester United 1-1 (Craven Cottage, Premier League 5η αγωνιστική)
+*   **Επόμενος αγώνας:** Premier League: Manchester United versus Tottenham Hotspur — 17:30 (Σάββατο 10.10.2026, NovaSports Premier League)
+*   **Ρεπορτάζ & Νέα:** Εντατικές προπονήσεις στο Carrington με εστίαση στην αμυντική συνοχή και τη διαχείριση της πίεσης ενόψει του ντέρμπι με την Tottenham.
 *   **Highlights:** [Highlights Manchester United στο YouTube](https://www.youtube.com/results?search_query=Manchester+United+highlights+2026)
-*   **Πηγή:** [BBC Sport](https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures)
+*   **Πηγή:** [BBC Sport](https://www.bbc.com/sport)
 
 ### Real Madrid
 *   **Τελευταίο αποτέλεσμα:** Atlético Madrid – Real Madrid 2-1 (Cívitas Metropolitano, Derbi Madrileño)
-*   **Επόμενος αγώνας:** Spanish La Liga: Real Madrid versus Villarreal — 20:00 (Saturday 10th October)
-*   **Ρεπορτάζ & Νέα:** "Bellingham is terrifying, I had never seen anything like it"
+*   **Επόμενος αγώνας:** Spanish La Liga: Real Madrid versus Villarreal — 20:00 (Σάββατο 10.10.2026, PrimeTel / Cablenet)
+*   **Ρεπορτάζ & Νέα:** Ο Jude Bellingham έπλεξε το εγκώμιο του Harry Kane για τη Χρυσή Μπάλα, ενώ ο Kylian Mbappé τέθηκε στη διάθεση της ομάδας ενόψει Villarreal.
 *   **Highlights:** [Highlights Real Madrid στο YouTube](https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026)
-*   **Πηγή:** [Marca / BBC Sport](https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures)
+*   **Πηγή:** [Marca](https://www.marca.com/en/football/international-football/2026/10/07/bellingham-boosts-harry-kane-s-ballon-d-or-bid-he-is-the-best-english-player-to-wear-this-shirt.html)
 
 ### Formula 1
-*   **Τελευταίο αποτέλεσμα:** Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars
-*   **Επόμενος αγώνας:** Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix) — Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου
-*   **Ρεπορτάζ & Νέα:** Προετοιμασία των μονοθεσίων και αεροδυναμικές αναβαθμίσεις για το επόμενο Grand Prix.
+*   **Τελευταίο αποτέλεσμα:** Bahrain Grand Prix 2026 — Νίκη Max Verstappen (Red Bull) μπροστά από Antonelli και Hamilton σε απαιτητικό αγώνα.
+*   **Επόμενος αγώνας:** Singapore Grand Prix 2026 (Marina Bay Street Circuit) — Κυριακή, 11 Οκτωβρίου 2026, 15:00 ώρα Κύπρου (Cytavision Sports)
+*   **Ρεπορτάζ & Νέα:** Ποινή εκκίνησης από το τέλος του grid για τον George Russell λόγω αλλαγής εξαρτημάτων, με τις ομάδες να ολοκληρώνουν τα πακέτα υψηλής κάθετης δύναμης.
 *   **Highlights:** [Highlights Formula 1 στο YouTube](https://www.youtube.com/results?search_query=Formula+1+highlights+2026)
 *   **Πηγή:** [Formula1.com](https://www.formula1.com/en/racing/2026/bahrain.html)
 
@@ -104,11 +103,11 @@ A medical expert advising her legal team says the murderer of Colleen Slemmer is
 
 ## 🌤️ ΚΑΙΡΟΣ — ΛΕΜΕΣΟΣ
 
-*   **Θερμοκρασία:** 26°C (Μέγιστη ημέρας)
-*   **Υγρασία:** 59%
+*   **Θερμοκρασία:** 26°C (Μέγιστη ημέρας / 19°C ελάχιστη)
+*   **Υγρασία:** 58%
 *   **Άνεμος:** 10 km/h (Νοτιοδυτικός)
-*   **Προειδοποιήσεις:** Δείκτης UV: 6 (Υψηλός — συνιστάται αποφυγή παρατεταμένης έκθεσης)
-*   **Πρόγνωση υπόλοιπης ημέρας:** Γενικά αίθριος καιρός με τοπικές θαλάσσιες αύρες στην παραλιακή ζώνη.
+*   **Προειδοποιήσεις:** Δείκτης UV: 5,6 (Μέτριος — συνιστάται προστασία κατά τις μεσημβρινές ώρες)
+*   **Πρόγνωση υπόλοιπης ημέρας:** Γενικά αίθριος καιρός με τοπικές θαλάσσιες αύρες στην παραλιακή ζώνη και σταδιακή εξασθένηση των ανέμων.
 *   **Πηγή:** [Open-Meteo](https://open-meteo.com/)
 
 ---
@@ -116,8 +115,8 @@ A medical expert advising her legal team says the murderer of Colleen Slemmer is
 ## 🗂️ ΜΕΣΗΜΒΡΙΝΕΣ ΕΞΕΛΙΞΕΙΣ
 
 *   **Τραπεζικός Τομέας & ΧΑΚ:** Αυξημένη δραστηριότητα στους τραπεζικούς τίτλους εν μέσω ευρωπαϊκών ανακατατάξεων και σταθερής κεφαλαιακής επάρκειας.
-*   **Ενέργεια & Καύσιμα:** Σταθεροποίηση των διεθνών τιμών του αργού πετρελαίου και παρακολούθηση των εφοδιαστικών αλυσίδων.
-*   **Γεωπολιτικές Εξελίξεις:** Διπλωματική κινητικότητα στη Λευκωσία και συντονισμός με περιφερειακούς εταίρους στην Ανατολική Μεσόγειο.
+*   **Ενέργεια & Καύσιμα:** Σταθεροποίηση των διεθνών τιμών του αργού πετρελαίου στα $101,91 μετά την επίθεση στο τάνκερ «Rio».
+*   **Κτηματαγορά & Επενδύσεις:** Επιβεβαίωση της ηγετικής θέσης της Λεμεσού με 4.860 πωλητήρια έγγραφα στο 9μηνο (+16,9%).
 
 ---
 
