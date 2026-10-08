@@ -7,7 +7,7 @@
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
 > * **Αγορές & Tech:** S&P 500 (-0,22%), Nasdaq 100 (-0,21%), Bank of Cyprus (-2,57%), Bitcoin (-1,01%). Tech Watchlist: Apple (+0,91%), Alphabet (+0,81%), TSMC (-2,09%), Microsoft (+0,09%), Meta (-2,38%), NVIDIA (-0,74%), Micron (+4,06%).
-> * **Επικαιρότητα:** Cabinet approves recruitment of 400 contract NCOs from Syop ranks · Former Cyta CEO Andreas Neocleous joins PwC Cyprus as CCO · Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge
+> * **Επικαιρότητα:** CSE to suspend trading in Cyprus treasury bills ahead of delisting · XM among Europe’s 100 best employers for third consecutive year · Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge
 > * **Αθλητικά:** Αποτελέσματα & αγώνες για Ομόνοια, Manchester United (How important is a fast start for teams chasing the Premier League title?), Real Madrid και Formula 1 ({'race': 'Azerbaijan Grand Prix 2026 (Baku City Circuit)', 'date': 'Σάββατο 26 Σεπτεμβρίου 2026', 'winner': 'George Russell (Mercedes)', 'podium': '1ος George Russell (Mercedes), 2ος Max Verstappen (Red Bull), 3ος Isack Hadjar (Red Bull), 4ος Charles Leclerc (Ferrari), 5ος Kimi Antonelli (Mercedes), 6ος Lewis Hamilton (Ferrari)', 'summary': 'Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars', 'source_url': 'https://www.formula1.com/en/racing/2026/azerbaijan.html', 'source': 'Formula1.com / BBC Sport F1'}).
 
 ---
@@ -46,15 +46,15 @@
 
 ## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Cabinet approves recruitment of 400 contract NCOs from Syop ranks
-The Cabinet approved on Thursday the recruitment of 400 contract non-commissioned officers (NCOs) from among the National Guard’s contract soldiers (Syop). Defence Minister Vassilis Palmas said appointments will follow the ranking from a selection process that included written examinations and will
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] CSE to suspend trading in Cyprus treasury bills ahead of delisting
+The Cyprus Stock Exchange (CSE) will suspend trading in the 7th issue of Cyprus’ 13-week Treasury Bills for 2026 from October 20 to October 22, ahead of their delisting on October 23. The suspension will apply to the Treasury Bills issued for the period from July 24 to October 23, 2026, with trading
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/08/cabinet-approves-recruitment-of-400-contract-ncos-from-syop-ranks)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/08/cse-to-suspend-trading-in-cyprus-treasury-bills-ahead-of-delisting)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Former Cyta CEO Andreas Neocleous joins PwC Cyprus as CCO
-Former Cyta CEO Andreas Neocleous is joining PwC Cyprus as Chief Consulting Officer (CCO) on October 16, bringing more than 25 years of experience in strategy, business and digital transformation, and innovation. The appointment forms part of PwC Cyprus’ strategy to strengthen its Consulting service
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] XM among Europe’s 100 best employers for third consecutive year
+For the third consecutive year, XM, a FinTech company with strong momentum and international reach, has been named among Europe’s 100 best employers on the 2026 Fortune 100 Best Companies to Work For™ in Europe list. The list is compiled by the global organisation Great Place to Work® on the basis o
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/08/former-cyta-ceo-andreas-neocleous-joins-pwc-cyprus-as-cco)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/08/xm-among-europes-100-best-employers-for-third-consecutive-year)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge
 Ukraine accused Russia of targeting two crowded vehicles in the front line city of Kramatorsk to kill as many civilians as possible.
