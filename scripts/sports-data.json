@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "Οι τελευταίες...\"πινελιές\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oi-teleytaiespinelies-0",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "\"Σταμάτησαν τα μουρμουρητά, φτιάχνεται κάτι πολύ καλό στην Ομόνοια\"",
         "url": "https://www.kerkida.net/super-monday/omonoia/stamatisan-ta-moyrmoyrita-ftiahnetai-kati-poly-kalo-stin-omonoia",
         "source": "Kerkida.net"
@@ -45,14 +50,9 @@
         "title": "Δεδομένο για...Σενού",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/dedomeno-giasenoy",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "ΣΧΟΛΙΟ για Ανδρόνικο Κακουλλή: \"Έδωσε ώθηση...\"",
-        "url": "https://www.kerkida.net/super-monday/omonoia/sholio-gia-androniko-kakoylli-edose-othisi",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-08T06:10:42.647666+00:00"
+    "fetched_at": "2026-10-08T11:14:46.384286+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,6 +79,11 @@
     },
     "articles": [
       {
+        "title": "Havertz, Isak, Dorgu … spate of injuries with national teams leaves sour taste for top clubs",
+        "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu",
+        "source": "The Guardian"
+      },
+      {
         "title": "Thrown in with Giggs and Beckham: how Manchester United tried to get Billy Kenny",
         "url": "https://www.theguardian.com/football/2026/oct/03/billy-kenny-ryan-giggs-david-beckham-manchester-united-autobiography",
         "source": "The Guardian"
@@ -97,14 +102,9 @@
         "title": "Every saint has a past: how man at heart of City’s first scandal became a United hero",
         "url": "https://www.theguardian.com/football/2026/sep/29/every-saint-has-a-past-lessons-from-citys-first-scandal-in-1906",
         "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United report seventh straight annual loss and sell fans £125 grass clumps",
-        "url": "https://www.theguardian.com/football/2026/sep/23/manchester-united-seventh-straight-annual-loss-record-revenue-financial-results",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-08T06:10:43.637372+00:00"
+    "fetched_at": "2026-10-08T11:14:47.431066+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-08T06:10:44.368796+00:00"
+    "fetched_at": "2026-10-08T11:14:48.004372+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,16 @@
     },
     "articles": [
       {
+        "title": "F1 heat hazard declared for fourth time this season",
+        "url": "https://www.bbc.com/sport/formula1/articles/cm5yng71qpngo",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Snakes and jungle mind games as F1's Bottas cycles to Singapore GP",
+        "url": "https://www.bbc.com/sport/formula1/articles/cjr4yr3lv24lo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Russell to start from back of Singapore grid after penalty",
         "url": "https://www.bbc.com/sport/formula1/articles/cm0qkdk37gy0o",
         "source": "BBC Sport F1"
@@ -196,21 +206,11 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "F1 needs to have hard look at itself - Sainz",
-        "url": "https://www.bbc.com/sport/formula1/articles/cr62y51n1841o",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Bottas cycling from Malaysia to Singapore Grand Prix",
-        "url": "https://www.bbc.com/sport/formula1/articles/cv2d6p9en7wdo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Hamilton & Verstappen bemused after glitch turns F1 into 'Lego race'",
-        "url": "https://www.bbc.com/sport/formula1/articles/cwg7x820k9xjo",
+        "title": "What is the format for F1 sprint races in 2026?",
+        "url": "https://www.bbc.com/sport/formula1/articles/c4g236r9npyo",
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-08T06:10:45.230416+00:00"
+    "fetched_at": "2026-10-08T11:14:48.807536+00:00"
   }
 }
