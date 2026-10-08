@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Οι τελευταίες...\"πινελιές\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/oi-teleytaiespinelies-0",
+        "title": "Τι περιμένει... με την επανέναρξη!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ti-perimenei-me-tin-epanenarxi",
         "source": "Kerkida.net"
       },
       {
-        "title": "\"Σταμάτησαν τα μουρμουρητά, φτιάχνεται κάτι πολύ καλό στην Ομόνοια\"",
-        "url": "https://www.kerkida.net/super-monday/omonoia/stamatisan-ta-moyrmoyrita-ftiahnetai-kati-poly-kalo-stin-omonoia",
+        "title": "Πρώτη για Βίκτωρος",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/proti-gia-biktoros",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τα τρεξίματα του...",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ta-treximata-toy",
+        "title": "Η αποστολή της Ομόνοιας",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-14",
         "source": "Kerkida.net"
       },
       {
-        "title": "Από κοντά τον... Ολλανδό",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apo-konta-ton-ollando",
+        "title": "\"Αυτό είναι το νούμερο ένα κριτήριο\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ayto-einai-noymero-ena-kritirio",
         "source": "Kerkida.net"
       },
       {
-        "title": "Δεδομένο για...Σενού",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/dedomeno-giasenoy",
+        "title": "\"Αν θέλεις να γίνεις πρωταθλητής πρέπει να κερδίζεις αυτού του είδους τα παιχνίδια\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/theleis-na-gineis-protathlitis-prepei-na-kerdizeis-aytoy-toy-eidoys-ta-paihnidia",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-08T11:14:46.384286+00:00"
+    "fetched_at": "2026-10-08T21:28:40.393908+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,6 +79,11 @@
     },
     "articles": [
       {
+        "title": "Manchester United offer JJ Gabriel new deal but risk losing prodigy for £350,000",
+        "url": "https://www.theguardian.com/football/2026/oct/08/manchester-united-offer-jj-gabriel-new-deal-risk-losing-prodigy-football-premier-league",
+        "source": "The Guardian"
+      },
+      {
         "title": "Havertz, Isak, Dorgu … spate of injuries with national teams leaves sour taste for top clubs",
         "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu",
         "source": "The Guardian"
@@ -97,14 +102,9 @@
         "title": "How important is a fast start for teams chasing the Premier League title?",
         "url": "https://www.theguardian.com/football/2026/sep/29/premier-league-fast-start-teams-manchester-city",
         "source": "The Guardian"
-      },
-      {
-        "title": "Every saint has a past: how man at heart of City’s first scandal became a United hero",
-        "url": "https://www.theguardian.com/football/2026/sep/29/every-saint-has-a-past-lessons-from-citys-first-scandal-in-1906",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-08T11:14:47.431066+00:00"
+    "fetched_at": "2026-10-08T21:28:41.869297+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-08T11:14:48.004372+00:00"
+    "fetched_at": "2026-10-08T21:28:43.080480+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Russell to take further grid penalty this season",
+        "url": "https://www.bbc.com/sport/formula1/articles/c6y8lyj1pemko",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "F1 heat hazard declared for fourth time this season",
         "url": "https://www.bbc.com/sport/formula1/articles/cm5yng71qpngo",
         "source": "BBC Sport F1"
@@ -196,21 +201,16 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "Russell to start from back of Singapore grid after penalty",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm0qkdk37gy0o",
+        "title": "Ticket rises and more TV packages - why is price of sport increasing?",
+        "url": "https://www.bbc.com/sport/articles/cx7vpe1p070mo",
         "source": "BBC Sport F1"
       },
       {
         "title": "Wet races and why future of F1 engines appears to be V8 turbos - Q&A",
         "url": "https://www.bbc.com/sport/formula1/articles/cr15j3z2npz9o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "What is the format for F1 sprint races in 2026?",
-        "url": "https://www.bbc.com/sport/formula1/articles/c4g236r9npyo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-08T11:14:48.807536+00:00"
+    "fetched_at": "2026-10-08T21:28:44.327430+00:00"
   }
 }
