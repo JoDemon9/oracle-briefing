@@ -1818,5 +1818,21 @@
   "https://www.bbc.co.uk/news/articles/c875pwq134l3o?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/0a5b/live/25d71060-c2fa-11f1-b8c6-6d610e41a5d9.jpg",
     "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://cyprus-mail.com/2026/10/08/cabinet-approves-recruitment-of-400-contract-ncos-from-syop-ranks": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/07/Defence-Minister-Palmas-National-Guard-new-NCOs.jpeg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/08/former-cyta-ceo-andreas-neocleous-joins-pwc-cyprus-as-cco": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/Andreas-Neocleous-PwC.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/c60rln74yzvxo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/afaf/live/3e4f37a0-c2ee-11f1-89a3-9b445bfcfe23.jpg",
+    "category": "ΔΙΕΘΝΗ ΜΜΕ & ΘΕΣΜΟΙ"
+  },
+  "https://www.bbc.co.uk/news/articles/c5pvgn7xvxpzo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/bcd9/live/df938ae0-c329-11f1-9981-cf94ea240e40.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }
