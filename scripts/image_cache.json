@@ -1886,5 +1886,17 @@
   "https://www.bbc.co.uk/news/articles/ck1wvqw4lzdvo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/92d9/live/e8655f40-c3c4-11f1-9a39-31b474234113.png",
     "category": "ΔΙΕΘΝΗ ΜΜΕ & ΘΕΣΜΟΙ"
+  },
+  "https://cyprus-mail.com/2026/10/09/christodoulides-tells-civil-service-there-is-room-for-improvement": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/Christodoulides-Public-Service-Commission-commissioner-2.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/09/funeral-held-for-12-year-old-girl-killed-in-kyrenia-ferry-disaster": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/funeral2.jpeg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cm9wz5kng0x1o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/de59/live/0e911af0-c3df-11f1-95ba-dba767ffba7e.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
   }
 }

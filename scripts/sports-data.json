@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Ο... \"σίγουρος\"/Ομόνοια",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/o-sigoyrosomonoia",
+        "title": "Από... παλιά!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apo-palia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Ομόνοια παντού!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-pantoy",
+        "title": "(LIVE/Ημίχρονο) Καρμιώτισσα 0-0 Ομόνοια",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/liveimihrono-karmiotissa-0-0-omonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Κλικς από τη πρεμιέρα της Ομόνοιας",
-        "url": "https://www.kerkida.net/eidiseis/alla-spor/futsal/omonoia/kliks-apo-ti-premiera-tis-omonoias",
+        "title": "Τρίτο... στο μηδέν",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/trito-sto-miden",
         "source": "Kerkida.net"
       },
       {
-        "title": "Πράσινη... φόρτιση!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/prasini-fortisi",
+        "title": "Πέναλτι η Ομόνοια, άκυρο... μέσω on field review",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/penalti-i-omonoia-akyro-meso-field-review",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τα γάντια έχουν φαβορί",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ta-gantia-ehoyn-fabori",
+        "title": "(Βίντεο Kerkida) Δυναμικό... παρών από τους Ομονοιάτες",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-kerkida-dynamiko-paron-apo-toys-omonoiates",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-09T11:26:54.241034+00:00"
+    "fetched_at": "2026-10-09T17:07:17.474947+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,6 +79,16 @@
     },
     "articles": [
       {
+        "title": "Manchester United’s early wobble makes Tottenham visit a must-win for Carrick",
+        "url": "https://www.theguardian.com/football/2026/oct/09/manchester-united-tottenham-michael-carrick-premier-league",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Managers react to Manchester City’s guilty verdict: ‘Uncertainty is not good for anyone’",
+        "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-managers-reaction-manchester-city-verdict",
+        "source": "The Guardian"
+      },
+      {
         "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
         "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut",
         "source": "The Guardian"
@@ -92,19 +102,9 @@
         "title": "Manchester United offer JJ Gabriel new deal but risk losing prodigy for £350,000",
         "url": "https://www.theguardian.com/football/2026/oct/08/manchester-united-offer-jj-gabriel-new-deal-risk-losing-prodigy-football-premier-league",
         "source": "The Guardian"
-      },
-      {
-        "title": "Havertz, Isak, Dorgu … spate of injuries with national teams leaves sour taste for top clubs",
-        "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Thrown in with Giggs and Beckham: how Manchester United tried to get Billy Kenny",
-        "url": "https://www.theguardian.com/football/2026/oct/03/billy-kenny-ryan-giggs-david-beckham-manchester-united-autobiography",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-09T11:26:55.597763+00:00"
+    "fetched_at": "2026-10-09T17:07:18.240089+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-09T11:26:57.234151+00:00"
+    "fetched_at": "2026-10-09T17:07:18.895154+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,31 +186,31 @@
     },
     "articles": [
       {
+        "title": "Verstappen on sprint pole after another settings issue",
+        "url": "https://www.bbc.com/sport/formula1/articles/ck62y7jz1qqro",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Mercedes critics think I'm Satan - Wolff",
+        "url": "https://www.bbc.com/sport/formula1/articles/cmje5x0enkxqo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Russell fastest from Leclerc in Singapore practice",
         "url": "https://www.bbc.com/sport/formula1/articles/cm0e0w5ele7wo",
+        "source": "BBC Sport F1"
+      },
+      {
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
       },
       {
         "title": "Russell to take further grid penalty this season",
         "url": "https://www.bbc.com/sport/formula1/articles/c6y8lyj1pemko",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "F1 heat hazard declared for fourth time this season",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm5yng71qpngo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Snakes and jungle mind games as F1's Bottas cycles to Singapore GP",
-        "url": "https://www.bbc.com/sport/formula1/articles/cjr4yr3lv24lo",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Ticket rises and more TV packages - why is price of sport increasing?",
-        "url": "https://www.bbc.com/sport/articles/cx7vpe1p070mo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-09T11:26:58.653116+00:00"
+    "fetched_at": "2026-10-09T17:07:19.542019+00:00"
   }
 }
