@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Από... παλιά!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apo-palia",
+        "title": "Χαμόγελα και... Τσέλιε!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/hamogela-kai-tselie",
         "source": "Kerkida.net"
       },
       {
-        "title": "(LIVE/Ημίχρονο) Καρμιώτισσα 0-0 Ομόνοια",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/liveimihrono-karmiotissa-0-0-omonoia",
+        "title": "Ομαλά στο \"Στέλιος Κυριακίδης\", με μία φάση για ανάλυση!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/refinio/omonoia/omala-sto-stelios-kyriakidis-me-mia-fasi-gia-analysi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τρίτο... στο μηδέν",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/trito-sto-miden",
+        "title": "Μοντνόρ στο Kerkida: \"Είμαστε ευγνώμονες για τον κόσμο μας, μας δίνουν ενέργεια\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-montnor-sto-kerkida-eimaste-eygnomones-gia-ton-kosmo-mas-mas-dinoyn-energeia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Πέναλτι η Ομόνοια, άκυρο... μέσω on field review",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/penalti-i-omonoia-akyro-meso-field-review",
+        "title": "Χαμόγελο... κορυφής!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hamogelo-koryfis-1",
         "source": "Kerkida.net"
       },
       {
-        "title": "(Βίντεο Kerkida) Δυναμικό... παρών από τους Ομονοιάτες",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/binteo-kerkida-dynamiko-paron-apo-toys-omonoiates",
+        "title": "Ακόμη ένα και... ρεκόρ!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/akomi-ena-kai-rekor",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-09T17:07:17.474947+00:00"
+    "fetched_at": "2026-10-09T21:03:34.765969+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-09T17:07:18.240089+00:00"
+    "fetched_at": "2026-10-09T21:03:35.894574+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-09T17:07:18.895154+00:00"
+    "fetched_at": "2026-10-09T21:03:36.759116+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-09T17:07:19.542019+00:00"
+    "fetched_at": "2026-10-09T21:03:37.534772+00:00"
   }
 }
