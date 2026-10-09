@@ -27,6 +27,16 @@
     },
     "articles": [
       {
+        "title": "Με όλα τα δυνατά χαρτιά για το...\"διπλό\"",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-ola-ta-dynata-hartia-gia-todiplo",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Λες και είναι... πρεμιέρα!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/les-kai-einai-premiera",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Τι περιμένει... με την επανέναρξη!",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ti-perimenei-me-tin-epanenarxi",
         "source": "Kerkida.net"
@@ -40,19 +50,9 @@
         "title": "Η αποστολή της Ομόνοιας",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-14",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "\"Αυτό είναι το νούμερο ένα κριτήριο\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ayto-einai-noymero-ena-kritirio",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "\"Αν θέλεις να γίνεις πρωταθλητής πρέπει να κερδίζεις αυτού του είδους τα παιχνίδια\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/theleis-na-gineis-protathlitis-prepei-na-kerdizeis-aytoy-toy-eidoys-ta-paihnidia",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-08T21:28:40.393908+00:00"
+    "fetched_at": "2026-10-09T06:14:18.455082+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,6 +79,11 @@
     },
     "articles": [
       {
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend",
+        "source": "The Guardian"
+      },
+      {
         "title": "Manchester United offer JJ Gabriel new deal but risk losing prodigy for £350,000",
         "url": "https://www.theguardian.com/football/2026/oct/08/manchester-united-offer-jj-gabriel-new-deal-risk-losing-prodigy-football-premier-league",
         "source": "The Guardian"
@@ -97,14 +102,9 @@
         "title": "Wayne Rooney says Manchester City should not be stripped of titles for rules breach",
         "url": "https://www.theguardian.com/football/2026/sep/29/wayne-rooney-manchester-city-united-premier-league-titles-breaching-financial-rules",
         "source": "The Guardian"
-      },
-      {
-        "title": "How important is a fast start for teams chasing the Premier League title?",
-        "url": "https://www.theguardian.com/football/2026/sep/29/premier-league-fast-start-teams-manchester-city",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-08T21:28:41.869297+00:00"
+    "fetched_at": "2026-10-09T06:14:19.795212+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-08T21:28:43.080480+00:00"
+    "fetched_at": "2026-10-09T06:14:20.799516+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-08T21:28:44.327430+00:00"
+    "fetched_at": "2026-10-09T06:14:21.955007+00:00"
   }
 }

@@ -1,122 +1,206 @@
 [
   {
+    "date": "2026-10-09",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Trump says US will not attack Iran before midterm elections in November",
+    "snippet": "President Donald Trump said on Thursday that the US will not launch an attack on Iran before November’s US midterm congressional elections, asserting that the two countries are hav...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Teachers protest over appointment reforms [Επικαιρότητα]",
+    "snippet": "Hundreds of teachers from public schools demonstrated at the presidential palace on Thursday afternoon, voicing opposition to a proposed change in the appointme...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Ex-prince Andrew search warrants quashed after police accept legal error [Επικαιρότητα]",
+    "snippet": "British police on Thursday said that search warrants they secured to search properties linked to Andrew Mountbatten-Windsor had been issued unlawfully and must...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. December date set for Turkish Cypriot legislative elections [Επικαιρότητα]",
+    "snippet": "The Turkish Cypriots will hold legislative elections on December 6, with a bill setting out the timetable for the elections passing through the legislature on T...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Seven CSE companies fail to publish half-yearly financial reports [Επικαιρότητα]",
+    "snippet": "The Cyprus Stock Exchange (CSE) has taken action against seven companies listed on its Emerging Companies Market after they failed to submit and publish their h...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Smog shuts down schools in Malaysia [Ο Φάκελός μου]",
+    "snippet": "Schools in several Malaysian states as well as its federal and administrative capitals will be closed on Friday, the education ministry said, after smoky haze c...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "1. Suspect linked to Monaco bomb attack on millionaire speaks to BBC from Ukrainian prison [Διεθνή]",
+    "snippet": "Vitalii Zhykovych gives his own account of the attempted assassination of Ukrainian-born businessman Vadym Yermolayev....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "2. Firing squad execution to be livestreamed, Pentagon says [Διεθνή]",
+    "snippet": "Pete Hegseth says the execution will be public, but a legal expert says the \"unprecedented\" decision is on \"uncertain legal terrain\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "3. ICE agent shoots man in New York City [Διεθνή]",
+    "snippet": "The mayor of New York expressed outrage at the shooting which the Department of Homeland Security said happened during the arrest of a \"criminal illegal alien\"....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "4. Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge [Διεθνή]",
+    "snippet": "Ukraine accused Russia of targeting two crowded vehicles in the front line city of Kramatorsk to kill as many civilians as possible....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "5. Christa Pike now walking after failed US execution, lawyer tells BBC [Διεθνή]",
+    "snippet": "A lawyer says the murderer of Colleen Slemmer is moving around her hospital room after surviving two lethal injections....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-10-08",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Ενεργειακή Ασφάλεια & Ανατολική Μεσόγειος: Διπλωματική Παρέμβαση των ΗΠΑ υπό τον Μάρκο Ρούμπιο για την Προώθηση του Great Sea Interconnector — Στα $105,16 το Brent μετά από Πλήγμα σε Τάνκερ στον Κόλπο του Κατάρ και Άλμα 25,8% στα Εγχώρια Καύσιμα [Επιβεβαιωμένο]",
     "snippet": "Σε τροχιά άμεσης διπλωματικής εμπλοκής των Ηνωμένων Πολιτειών εισέρχεται η ηλεκτρική διασύνδεση Κύπρου, Ελλάδας και Ισραήλ (Great Sea Interconnector), με τον Αμερικανό Υπουργό Εξωτ...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-08.html#top-story"
   },
   {
     "date": "2026-10-08",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Μακροοικονομία & Ακρίβεια: Στο 3,7% ο πληθωρισμός στην Κύπρο τον Σεπτέμβριο — Άλμα 25,8% στα πετρελαιοειδή και επιβάρυνση στα τιμολόγια ρεύματος [Επιβεβαιωμένο]",
     "snippet": "Σημαντική επιτάχυνση κατέγραψε ο πληθωρισμός στην Κύπρο τον Σεπτέμβριο του 2026, φθάνοντας στο 3,7% σύμφωνα με την ανακοίνωση της Στατιστικής Υπηρεσίας. Ο Δείκτ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-08.html#cyprus"
   },
   {
     "date": "2026-10-08",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Δημόσια Ασφάλεια & Αθλητισμός: Συναγερμός στην Αστυνομία για τους αγώνες της Maccabi Tel Aviv στη Λεμεσό — Απαιτούνται 500 αστυνομικοί ανά αναμέτρηση [Επιβεβαιωμένο]",
     "snippet": "Σε κατάσταση επιχειρησιακού συναγερμού βρίσκεται η Αστυνομία Κύπρου ενόψει της φιλοξενίας των εντός έδρας αγώνων της Maccabi Tel Aviv για τη Euroleague στο αθλη...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-08.html#cyprus"
   },
   {
     "date": "2026-10-08",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Ευρωπαϊκή Πολιτική & Κυπριακό: Παρέμβαση Ραφαέλε Φίτο στο Ευρωκοινοβούλιο — «Χωρίς λύση του Κυπριακού δεν νοείται βιώσιμη σταθερότητα στην Ανατολική Μεσόγειο» [Επιβεβαιωμένο]",
     "snippet": "Την αδιαπραγμάτευτη θέση ότι η επίλυση του Κυπριακού προβλήματος αποτελεί θεμελιώδη προϋπόθεση για την ασφάλεια και τη σταθερότητα σε ολόκληρη τη λεκάνη της Ανα...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-08.html#cyprus"
   },
   {
     "date": "2026-10-08",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Εθνική Άμυνα & Προσωπικό: Επαγγελματική διέξοδος για 400 ΣΥΟΠ — Εγκρίθηκε από το Υπουργικό Συμβούλιο η ανέλιξη σε βαθμό υπαξιωματικού [Επιβεβαιωμένο]",
     "snippet": "Ιστορική απόφαση για τη στελέχωση και τη μαχητική ισχύ της Εθνικής Φρουράς έλαβε το Υπουργικό Συμβούλιο, εγκρίνοντας την πρόταση του Υπουργού Άμυνας Βασίλη Πάλμ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-08.html#cyprus"
   },
   {
     "date": "2026-10-08",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Επιχειρηματικότητα & Εξωστρέφεια: Συμμαχία 57 κυπριακών και ελληνικών επιχειρήσεων σε έξι παραγωγικούς κλάδους στο Φόρουμ των Αθηνών [Επιβεβαιωμένο]",
     "snippet": "Δυναμική δικτύωση και συμφωνίες στρατηγικής συνεργασίας αναπτύχθηκαν κατά τη διάρκεια του Επιχειρηματικού Φόρουμ Κύπρου – Ελλάδας που έλαβε χώρα στην Αθήνα, με...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-08.html#cyprus"
   },
   {
     "date": "2026-10-08",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ακίνητα Λεμεσού & House Search: Το στεγαστικό ως ταβάνι στην ανάπτυξη της Κύπρου — Οι πιέσεις στα ενοίκια και η ανθεκτικότητα του Ύψωνα στα €275.000 [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Ως το κρισιμότερο διαρθρωτικό εμπόδιο για τη διατήρηση των υψηλών ρυθμών ανάπτυξης και την προσέλκυση ξένων ταλέντων αναδεικνύεται η στεγαστική στενότητα στην Κ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-08.html#cyprus"
   },
   {
     "date": "2026-10-08",
     "section": "🌍 Διεθνή",
     "title": "1. Ευρωπαϊκά Ομόλογα & Δημοσιονομικά: Η γαλλική πολιτική αναταραχή απειλεί με μετάδοση κινδύνου τα ομόλογα κρατών υψηλού χρέους στην ευρωζώνη [Επιβεβαιωμένο]",
     "snippet": "Έντονες αναταράξεις καταγράφονται στις ευρωπαϊκές αγορές κρατικού χρέους, καθώς η παρατεταμένη πολιτική αβεβαιότητα στη Γαλλία και η αδυναμία ψήφισης προϋπολογι...",
-    "url": "#world"
+    "url": "briefings/2026-10-08.html#world"
   },
   {
     "date": "2026-10-08",
     "section": "🌍 Διεθνή",
     "title": "2. Παγκόσμια Ενέργεια & Παρασκήνιο: Μυστικές επαφές ΗΠΑ-Ρωσίας για συμμετοχή Αμερικανών επενδυτών στους αγωγούς Nord Stream [Μονή πηγή]",
     "snippet": "Σε παρασκηνιακές διαβουλεύσεις για την πιθανή είσοδο αμερικανικού επενδυτικού σχήματος στους κατεστραμμένους αγωγούς φυσικού αερίου Nord Stream συμμετείχαν κορυ...",
-    "url": "#world"
+    "url": "briefings/2026-10-08.html#world"
   },
   {
     "date": "2026-10-08",
     "section": "🌍 Διεθνή",
     "title": "3. Μέση Ανατολή & Διπλωματία: Το Ισραήλ απαιτεί την αποχώρηση Βρετανών διπλωματών από την Ανατολική Ιερουσαλήμ μετά τις κυρώσεις του Λονδίνου [Επιβεβαιωμένο]",
     "snippet": "Σε σοβαρή διπλωματική κρίση εισέρχονται οι σχέσεις Ισραήλ και Ηνωμένου Βασιλείου, με τις αρχές στο Τελ Αβίβ να απαιτούν την απομάκρυνση της πλειονότητας των Βρε...",
-    "url": "#world"
+    "url": "briefings/2026-10-08.html#world"
   },
   {
     "date": "2026-10-08",
     "section": "🌍 Διεθνή",
     "title": "4. Πόλεμος στην Ουκρανία: Σφοδρό ρωσικό πλήγμα σε λεωφορεία στο μέτωπο με 33 νεκρούς εν μέσω κλιμάκωσης των επιθέσεων σε αστικές υποδομές [Επιβεβαιωμένο]",
     "snippet": "Τουλάχιστον 33 άνθρωποι έχασαν τη ζωή τους και δεκάδες άλλοι τραυματίστηκαν μετά από ρωσική πυραυλική επίθεση που έπληξε λεωφορεία μεταφοράς πολιτών σε πόλη της...",
-    "url": "#world"
+    "url": "briefings/2026-10-08.html#world"
   },
   {
     "date": "2026-10-08",
     "section": "🌍 Διεθνή",
     "title": "5. Βιοασφάλεια & Δημόσια Υγεία: Ο ΠΟΥ ζητά διαφάνεια από τη Μόσχα μετά τον θάνατο ερευνήτριας σε εργαστήριο παθογόνων στη Σιβηρία [Μονή πηγή]",
     "snippet": "Εξηγήσεις και πλήρη πρόσβαση σε επιδημιολογικά δεδομένα ζητά ο Παγκόσμιος Οργανισμός Υγείας (ΠΟΥ) από τις ρωσικές αρχές, μετά τον αιφνίδιο θάνατο 28χρονης επιστ...",
-    "url": "#world"
+    "url": "briefings/2026-10-08.html#world"
   },
   {
     "date": "2026-10-08",
     "section": "📅 Προθεσμίες",
     "title": "Έως 10 Οκτωβρίου 2026 (Σάββατο): Επανασυντονισμός τηλεοράσεων στη νέα συχνότητα DVB T2 για αποφυγή «μαύρου» στα ιδιωτικά κανάλια (Philenews).",
     "snippet": "Έως 10 Οκτωβρίου 2026 (Σάββατο): Επανασυντονισμός τηλεοράσεων στη νέα συχνότητα DVB T2 για αποφυγή «μαύρου» στα ιδιωτικά κανάλια (Philenews)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-08.html#deadlines"
   },
   {
     "date": "2026-10-08",
     "section": "📅 Προθεσμίες",
     "title": "Έως 20 Οκτωβρίου 2026 (14:00): Υποβολή αιτήσεων για την κρατική φοιτητική μέριμνα ακαδημαϊκού έτους 2025-2026 (Υπουργείο Οικονομικών).",
     "snippet": "Έως 20 Οκτωβρίου 2026 (14:00): Υποβολή αιτήσεων για την κρατική φοιτητική μέριμνα ακαδημαϊκού έτους 2025-2026 (Υπουργείο Οικονομικών)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-08.html#deadlines"
   },
   {
     "date": "2026-10-08",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων (TaxisNet)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-08.html#deadlines"
   },
   {
     "date": "2026-10-08",
     "section": "📅 Προθεσμίες",
     "title": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy).",
     "snippet": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-08.html#deadlines"
   },
   {
     "date": "2026-10-08",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-08.html#top-story"
   },
   {
     "date": "2026-10-07",
