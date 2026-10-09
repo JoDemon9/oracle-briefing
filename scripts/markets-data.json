@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-09T21:03:25.607348",
+  "fetched_at": "2026-10-09T21:12:25.551178",
   "quotes": {
     "S&P 500 (SPX)": {
       "symbol": "^GSPC",
@@ -15,8 +15,8 @@
     },
     "Bitcoin (BTC/USD)": {
       "symbol": "BTC-USD",
-      "price": 82438.95,
-      "change": 0.9162143598355106,
+      "price": 82499.34,
+      "change": 0.9901397335234384,
       "date": "09/10/2026"
     },
     "EUR/USD": {
@@ -39,8 +39,8 @@
     },
     "Brent Crude": {
       "symbol": "BZ=F",
-      "price": 104.39,
-      "change": 0.10548523206751,
+      "price": 104.43,
+      "change": 0.14384349827388346,
       "date": "09/10/2026"
     },
     "TSMC (TSM)": {

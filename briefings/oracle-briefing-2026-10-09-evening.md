@@ -6,8 +6,8 @@
 
 > [!NOTE]
 > **⚡ ΕΠΙΤΕΛΙΚΗ ΣΥΝΟΨΗ 60 ΔΕΥΤΕΡΟΛΕΠΤΩΝ:**
-> * **Αγορές & Tech:** S&P 500 (+0,59%), Nasdaq 100 (+0,51%), Bank of Cyprus (+0,89%), Bitcoin (+0,92%). Tech Watchlist: Apple (-1,11%), Alphabet (+0,87%), TSMC (-1,02%), Microsoft (+2,38%), Meta (-0,31%), NVIDIA (-0,52%), Micron (-0,66%).
-> * **Επικαιρότητα:** Two men arrested at UK airbase used by US released on bail · Man extradited to Cyprus over €200,000 jewellery store burglary · Trump announces deal for Russian diesel as Zelensky criticises 'gift to Putin'
+> * **Αγορές & Tech:** S&P 500 (+0,59%), Nasdaq 100 (+0,51%), Bank of Cyprus (+0,89%), Bitcoin (+0,99%). Tech Watchlist: Apple (-1,11%), Alphabet (+0,87%), TSMC (-1,02%), Microsoft (+2,38%), Meta (-0,31%), NVIDIA (-0,52%), Micron (-0,66%).
+> * **Επικαιρότητα:** MPs identify overcrowding, security issues at Limassol schools · UN calls US plans to livestream execution ‘abhorrent’ · Trump announces deal for Russian diesel as Zelensky criticises 'gift to Putin'
 > * **Αθλητικά:** Αποτελέσματα & αγώνες για Ομόνοια, Manchester United (Premier League: 10 things to look out for this weekend), Real Madrid και Formula 1 ({'race': 'Azerbaijan Grand Prix 2026 (Baku City Circuit)', 'date': 'Σάββατο 26 Σεπτεμβρίου 2026', 'winner': 'George Russell (Mercedes)', 'podium': '1ος George Russell (Mercedes), 2ος Max Verstappen (Red Bull), 3ος Isack Hadjar (Red Bull), 4ος Charles Leclerc (Ferrari), 5ος Kimi Antonelli (Mercedes), 6ος Lewis Hamilton (Ferrari)', 'summary': 'Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars', 'source_url': 'https://www.formula1.com/en/racing/2026/azerbaijan.html', 'source': 'Formula1.com / BBC Sport F1'}).
 
 ---
@@ -25,11 +25,11 @@
 | :--- | :--- | :--- | :--- |
 | **S&P 500 (SPX)** | 7.811,54 | +0,59% | Ήπια διόρθωση εν αναμονή στοιχείων πληθωρισμού |
 | **Nasdaq 100 (NDQ)** | 30.883,15 | +0,51% | Πιέσεις στους τεχνολογικούς τίτλους υψηλού beta |
-| **Bitcoin (BTC/USD)** | $82.438,95 | +0,92% | Συσσώρευση στην περιοχή των $77k |
+| **Bitcoin (BTC/USD)** | $82.499,34 | +0,99% | Συσσώρευση στην περιοχή των $77k |
 | **EUR/USD** | 1,12 | -0,09% | Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ |
 | **EUR/GBP** | 0,85 | -0,09% | Σταθεροποίηση εντός στενού εύρους διακύμανσης |
 | **Bank of Cyprus (BOCH)** | €10,23 | +0,89% | Ισχυρό κλείσιμο σε υψηλό ημέρας στο ΧΑΚ/ΧΑ |
-| **Brent Crude** | $104,39 | +0,11% | Εδραίωση πάνω από το ψυχολογικό όριο των $100 |
+| **Brent Crude** | $104,43 | +0,14% | Εδραίωση πάνω από το ψυχολογικό όριο των $100 |
 
 ### 💻 Μετοχές Τεχνολογίας (Tech Watchlist)
 | Μετοχή / Ticker | Κλείσιμο | Μεταβολή | Σχόλιο |
@@ -46,15 +46,15 @@
 
 ## 📰 ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ & ΕΞΕΛΙΞΕΙΣ
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Two men arrested at UK airbase used by US released on bail
-British counter-terrorism police said on Friday that two Latvian men who were arrested on Thursday inside a Royal Air Force base in eastern England that is used by US forces had been released on bail. The police said the men, aged 32 and 36, had been freed with strict conditions, while an investigat
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] MPs identify overcrowding, security issues at Limassol schools
+Problems at Limassol primary schools were discussed on Friday during a visit by MPs, who identified overcrowding and security issues as pressing challenges. The first stop for members of the House education committee and representatives of parents’ associations and teacher union Poed was the third p
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/09/two-men-arrested-at-uk-airbase-used-by-us-released-on-bail)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/09/mps-identify-overcrowding-security-issues-at-limassol-schools)
 
-### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Man extradited to Cyprus over €200,000 jewellery store burglary
-A 40-year-old man was remanded in custody for seven days by the Famagusta district court on Friday, after being extradited to Cyprus over the burglary of a jewellery store in which assets worth more than €200,000 were stolen. The man was arrested upon his arrival in Cyprus, following his prior arres
+### 🇨🇾 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] UN calls US plans to livestream execution ‘abhorrent’
+The United Nations on Friday called US plans to livestream the execution of Nidal Hasan, the gunman who killed 13 people at the Fort Hood military base in 2009, “abhorrent” and said it could be a violation of prohibitions against torture. “These kinds of public executions we’ve seen in other countri
 **Γιατί με αφορά:** Άμεση επίδραση στην τοπική οικονομία και στις επιχειρηματικές αποφάσεις.  
-**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/09/man-extradited-to-cyprus-over-e200000-jewellery-store-burglary)
+**Πηγή:** [Cyprus Mail](https://cyprus-mail.com/2026/10/09/un-calls-us-plans-to-livestream-execution-abhorrent)
 
 ### 🌍 [ΕΠΙΒΕΒΑΙΩΜΕΝΟ] Trump announces deal for Russian diesel as Zelensky criticises 'gift to Putin'
 Ukraine's president said allowing Russia to sell petroleum products would prolong a war that must be ended.
