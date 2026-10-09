@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "Με όλα τα δυνατά χαρτιά για το...\"διπλό\"",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/me-ola-ta-dynata-hartia-gia-todiplo",
+        "title": "Ο... \"σίγουρος\"/Ομόνοια",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/o-sigoyrosomonoia",
         "source": "Kerkida.net"
       },
       {
-        "title": "Λες και είναι... πρεμιέρα!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/les-kai-einai-premiera",
+        "title": "Ομόνοια παντού!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/omonoia-pantoy",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τι περιμένει... με την επανέναρξη!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/ti-perimenei-me-tin-epanenarxi",
+        "title": "Κλικς από τη πρεμιέρα της Ομόνοιας",
+        "url": "https://www.kerkida.net/eidiseis/alla-spor/futsal/omonoia/kliks-apo-ti-premiera-tis-omonoias",
         "source": "Kerkida.net"
       },
       {
-        "title": "Πρώτη για Βίκτωρος",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/proti-gia-biktoros",
+        "title": "Πράσινη... φόρτιση!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/prasini-fortisi",
         "source": "Kerkida.net"
       },
       {
-        "title": "Η αποστολή της Ομόνοιας",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/i-apostoli-tis-omonoias-14",
+        "title": "Τα γάντια έχουν φαβορί",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ta-gantia-ehoyn-fabori",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-09T06:14:18.455082+00:00"
+    "fetched_at": "2026-10-09T11:26:54.241034+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,6 +79,11 @@
     },
     "articles": [
       {
+        "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
+        "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut",
+        "source": "The Guardian"
+      },
+      {
         "title": "Premier League: 10 things to look out for this weekend",
         "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend",
         "source": "The Guardian"
@@ -97,14 +102,9 @@
         "title": "Thrown in with Giggs and Beckham: how Manchester United tried to get Billy Kenny",
         "url": "https://www.theguardian.com/football/2026/oct/03/billy-kenny-ryan-giggs-david-beckham-manchester-united-autobiography",
         "source": "The Guardian"
-      },
-      {
-        "title": "Wayne Rooney says Manchester City should not be stripped of titles for rules breach",
-        "url": "https://www.theguardian.com/football/2026/sep/29/wayne-rooney-manchester-city-united-premier-league-titles-breaching-financial-rules",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-09T06:14:19.795212+00:00"
+    "fetched_at": "2026-10-09T11:26:55.597763+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -132,6 +132,11 @@
     },
     "articles": [
       {
+        "title": "Real Madrid asks about McTominay, the \"Scottish Maradona\" whom Mourinho calls \"my boy\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/09/real-madrid-asks-about-mctominay-the-scottish-maradona-whom-mourinho-calls-my-boy.html",
+        "source": "Marca"
+      },
+      {
         "title": "Bellingham boosts Harry Kane's Ballon d'Or bid: \"He is the best English player to wear this shirt\"",
         "url": "https://www.marca.com/en/football/international-football/2026/10/07/bellingham-boosts-harry-kane-s-ballon-d-or-bid-he-is-the-best-english-player-to-wear-this-shirt.html",
         "source": "Marca"
@@ -150,14 +155,9 @@
         "title": "Kylian Mbappé defies José Mourinho’s warning with a bicycle ride while injured",
         "url": "https://www.marca.com/en/more-sports/2026/10/05/kylian-mbappe-defies-jose-mourinho-s-warning-with-bicycle-ride-while-injur-video.html",
         "source": "Marca"
-      },
-      {
-        "title": "Madrid statement on the Negreira case: \"Real Madrid asks UEFA for the investigation to move forward as quickly as possible\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/10/01/madrid-statement-on-the-negreira-case-real-madrid-asks-uefa-for-the-investigation-to-move-forward-as-quickly-as-possible.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-09T06:14:20.799516+00:00"
+    "fetched_at": "2026-10-09T11:26:57.234151+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Russell fastest from Leclerc in Singapore practice",
+        "url": "https://www.bbc.com/sport/formula1/articles/cm0e0w5ele7wo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Russell to take further grid penalty this season",
         "url": "https://www.bbc.com/sport/formula1/articles/c6y8lyj1pemko",
         "source": "BBC Sport F1"
@@ -204,13 +209,8 @@
         "title": "Ticket rises and more TV packages - why is price of sport increasing?",
         "url": "https://www.bbc.com/sport/articles/cx7vpe1p070mo",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Wet races and why future of F1 engines appears to be V8 turbos - Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/cr15j3z2npz9o",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-09T06:14:21.955007+00:00"
+    "fetched_at": "2026-10-09T11:26:58.653116+00:00"
   }
 }
