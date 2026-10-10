@@ -154,10 +154,10 @@
     "is_breaking": false
   },
   {
-    "id": "676ac995956c25be12e1a60b24e21674265acef79074ac688c7e7959e042f7be",
-    "title": "El Nino explained: How the weather pattern affects hurricanes and tropical storms",
-    "link": "https://www.dw.com/en/el-nino-explained-how-the-weather-pattern-affects-hurricanes-and-tropical-storms/a-79382511?maca=en-rss-en-all-1573-rdf",
-    "snippet": "From drought to major floods and extreme heat, El Nino will have a huge impact on the world's weather. In the Atlantic, it could mean a season without hurricanes.",
+    "id": "4b54e7b4640f79f6bd4a43a8dcf97207ff690380603438eb6d9bd4ef46c353aa",
+    "title": "Backlash over data centers tests Europe's AI ambitions",
+    "link": "https://www.dw.com/en/backlash-over-data-centers-tests-europe-s-ai-ambitions/a-79419800?maca=en-rss-en-all-1573-rdf",
+    "snippet": "Massive data centers needed to run AI are triggering protests across Europe. Their operators counter that they boost digital sovereignty and energy independence.",
     "source": "DW World",
     "category": "international",
     "timestamp": 1791616467,
@@ -475,7 +475,7 @@
     "time_str": "07:14 UTC",
     "is_breaking": true,
     "tags": [
-      "inflation"
+      "sanctions"
     ]
   },
   {
