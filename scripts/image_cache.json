@@ -1842,5 +1842,25 @@
   "https://www.bbc.co.uk/news/articles/ckgj921e14jdo": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/528b/live/a76ba860-c459-11f1-bc2e-018d645d8d21.jpg",
     "category": "ΓΕΩΠΟΛΙΤΙΚΗ & ΔΙΠΛΩΜΑΤΙΑ"
+  },
+  "https://cyprus-mail.com/2026/10/10/germanys-firewall-against-the-far-right-afd-feels-the-heat": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/04/merz2.jpg",
+    "category": "ΓΕΡΜΑΝΙΑ"
+  },
+  "https://cyprus-mail.com/2026/10/10/queen-camilla-on-the-joy-of-reading-despite-kings-laughter-and-her-tears": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/camilla.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/10/fury-joshua-tickets-priced-up-to-13000-sell-out-in-an-hour": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/boxing.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cm1dwgr666wno?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8c49/live/850032c0-c470-11f1-94f2-dbc7ff6db92b.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/c5lye9z4xw4yo?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/200a/live/11ffab00-c472-11f1-9fee-49b2288eef07.jpg",
+    "category": "ΔΙΕΘΝΗ ΜΜΕ & ΘΕΣΜΟΙ"
   }
 }
