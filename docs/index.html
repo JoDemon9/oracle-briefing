@@ -36,42 +36,406 @@
       --accent: #8a5320;
       --up: #1f6b3f;
       --down: #a3282b;
+      --s1: 4px;
+      --s2: 8px;
+      --s3: 12px;
+      --s4: 16px;
+      --s5: 24px;
+      --s6: 32px;
+      --s7: 48px;
+      --s8: 64px;
+      --r-sm: 4px;
       --r-md: 8px;
+
+      /* Compatible fallbacks */
+      --paper-bg: var(--paper);
+      --paper-card: var(--paper-raised);
+      --paper-border: var(--rule);
+      --ink-dark: var(--ink);
+      --ink-muted: var(--ink-quiet);
+      --accent-gold: var(--accent);
+      --accent-blue: var(--accent);
+      --accent-red: var(--down);
+      --accent-green: var(--up);
     }
 
     .dark {
       --paper: #14120e;
       --paper-raised: #1c1a15;
-      --rule: #2e2920;
-      --rule-strong: #4a4233;
-      --ink: #ede8dc;
-      --ink-body: #cfc8ba;
-      --ink-quiet: #8c8373;
-      --accent: #d4954b;
-      --up: #43a047;
-      --down: #e53935;
+      --rule: #33302a;
+      --rule-strong: #4a463d;
+      --ink: #f4f1e8;
+      --ink-body: #ddd8cc;
+      --ink-quiet: #948d7e;
+      --accent: #d69a5c;
+      --up: #56b37c;
+      --down: #e0736f;
+
+      /* Compatible fallbacks */
+      --paper-bg: var(--paper);
+      --paper-card: var(--paper-raised);
+      --paper-border: var(--rule);
+      --ink-dark: var(--ink);
+      --ink-muted: var(--ink-quiet);
+      --accent-gold: var(--accent);
+      --accent-blue: var(--accent);
+      --accent-red: var(--down);
+      --accent-green: var(--up);
     }
 
     body {
+      font-family: 'Newsreader', Georgia, serif;
       background-color: var(--paper);
       color: var(--ink-body);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    .font-masthead { font-family: 'Cinzel', serif; }
-    .font-editorial { font-family: 'Newsreader', serif; }
-    .t-masthead { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 4.5vw, 2.85rem); letter-spacing: 0.08em; font-weight: 700; line-height: 1.1; }
-    .t-section { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }
-    .card { background-color: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--r-md); }
+    /* Typographical scale (compact & elegant executive sizing) */
+    .t-masthead {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
+      line-height: 0.98;
+      letter-spacing: .05em;
+    }
+    .t-section {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    .t-lead {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+      color: var(--ink);
+    }
+    .t-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.08rem;
+      line-height: 1.3;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    .t-body {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 400;
+      font-size: 0.985rem;
+      line-height: 1.6;
+      color: var(--ink-body);
+      max-width: 68ch;
+    }
+    .t-body-sm {
+      font-family: 'Newsreader', Georgia, serif;
+      font-weight: 400;
+      font-size: 0.885rem;
+      line-height: 1.58;
+      color: var(--ink-body);
+    }
+    .t-meta {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 500;
+      font-size: .72rem;
+      line-height: 1.4;
+      color: var(--ink-quiet);
+    }
+    .t-num {
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum";
+    }
 
-    .ticker-wrap { overflow: hidden; white-space: nowrap; }
-    .ticker-content { display: inline-block; animation: tickerAnimation 40s linear infinite; }
-    .ticker-wrap:hover .ticker-content { animation-play-state: paused; }
-    @keyframes tickerAnimation { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    /* Cards */
+    .card, .editorial-card {
+      background-color: var(--paper-raised);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-md);
+      transition: border-color 0.2s ease;
+    }
+    .card:hover, .editorial-card:hover {
+      border-color: var(--rule-strong);
+    }
+    .card--hero {
+      background-color: var(--paper-raised);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-md);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
 
-    details > summary { list-style: none; }
-    details > summary::-webkit-details-marker { display: none; }
-    details[open] summary .expand-icon { transform: rotate(180deg); }
+    /* Drop cap for lead story */
+    .lead-body::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 3.4rem;
+      line-height: 0.8;
+      float: left;
+      margin-top: 0.12em;
+      margin-right: 0.18em;
+      margin-bottom: -0.05em;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Focus & Accessibility */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* ============================================== */
+    /* BESPOKE BROADSHEET PRINT / PDF EXPORT          */
+    /* Financial Times / NYT quality broadsheet layout */
+    /* ============================================== */
+    @media print {
+      @page {
+        size: A4;
+        margin: 1.2cm 1.5cm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        background-color: #ffffff !important;
+        color: #0a0a0a !important;
+        font-size: 9.5pt !important;
+        line-height: 1.45 !important;
+        font-family: 'Newsreader', 'Georgia', 'Times New Roman', serif !important;
+      }
+
+      /* Hide all interactive / digital-only elements */
+      .ticker-wrap,
+      nav,
+      #mainNav,
+      #themeToggle,
+      #themeToggleNav,
+      #archiveSearch,
+      #searchResults,
+      button,
+      input[type="range"],
+      a[href*="youtube.com"],
+      .print\:hidden,
+      .no-print,
+      footer {
+        display: none !important;
+      }
+
+      /* Force show all expandable content */
+      details {
+        display: block !important;
+      }
+      details summary {
+        display: none !important;
+      }
+      details > div {
+        display: block !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-top: 0.3em !important;
+      }
+
+      /* Broadsheet masthead */
+      .font-masthead {
+        font-size: 28pt !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.02em !important;
+        border-bottom: 3pt double #000 !important;
+        padding-bottom: 0.3em !important;
+        margin-bottom: 0.5em !important;
+        text-align: center !important;
+      }
+
+      /* Section headers — broadsheet rules */
+      .t-section {
+        font-size: 13pt !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        border-bottom: 2pt solid #000 !important;
+        padding-bottom: 0.15em !important;
+        margin-bottom: 0.6em !important;
+        page-break-after: avoid !important;
+      }
+
+      /* Card layout — clean flat broadsheet panels */
+      .card, .card--hero, .editorial-card {
+        border: none !important;
+        border-bottom: 0.5pt solid #ccc !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0.4em 0 !important;
+        margin-bottom: 0.5em !important;
+        page-break-inside: avoid !important;
+        background: transparent !important;
+      }
+
+      /* Headlines in print */
+      .t-lead {
+        font-size: 16pt !important;
+        font-weight: 800 !important;
+        line-height: 1.15 !important;
+      }
+      .t-title {
+        font-size: 12pt !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+      }
+
+      /* Body text — newspaper column style */
+      .t-body, .t-body-sm {
+        font-size: 9pt !important;
+        line-height: 1.4 !important;
+        text-align: justify !important;
+        hyphens: auto !important;
+      }
+
+      /* Meta / source lines */
+      .t-meta {
+        font-size: 7.5pt !important;
+        color: #666 !important;
+      }
+
+      /* Links — print as black, no decoration */
+      a {
+        text-decoration: none !important;
+        color: #0a0a0a !important;
+      }
+
+      /* Grid columns → stacked for print */
+      .grid {
+        display: block !important;
+      }
+
+      /* Images — constrained, captioned */
+      img {
+        max-height: 160px !important;
+        width: auto !important;
+        margin: 0 auto 0.3em !important;
+        display: block !important;
+        border: 0.5pt solid #ddd !important;
+      }
+
+      /* Dashboard table compact */
+      table {
+        font-size: 8pt !important;
+        border-collapse: collapse !important;
+      }
+      th, td {
+        padding: 2pt 4pt !important;
+        border-bottom: 0.5pt solid #ddd !important;
+      }
+
+      /* Sports cards — compact inline */
+      .bg-gradient-to-br {
+        background: transparent !important;
+        color: #000 !important;
+      }
+
+      /* Weather — inline compact */
+      #weatherGrid {
+        display: block !important;
+      }
+
+      /* Page breaks */
+      h2 {
+        page-break-after: avoid !important;
+      }
+      article {
+        page-break-inside: avoid !important;
+      }
+
+      /* Add print footer with branding */
+      body::after {
+        content: "THE ORACLE SOVEREIGN — Confidential Executive Briefing — © 2026";
+        display: block;
+        text-align: center;
+        font-size: 7pt;
+        color: #999;
+        margin-top: 1cm;
+        border-top: 0.5pt solid #ccc;
+        padding-top: 0.3em;
+      }
+    }
+
+    .ticker-wrap {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-content {
+      display: inline-block;
+      animation: tickerAnimation 40s linear infinite;
+    }
+
+    .ticker-wrap:hover .ticker-content {
+      animation-play-state: paused;
+    }
+
+    @keyframes tickerAnimation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-content { animation: none; }
+      body { transition: none; }
+    }
+    [id] { scroll-margin-top: 5rem; }
+    @media (max-width: 640px) { [id] { scroll-margin-top: 5rem; } }
+
+    /* Smart Navigation Header (Headroom Auto-hide) */
+    #mainNav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+      will-change: transform;
+    }
+    #mainNav.nav-hidden {
+      transform: translateY(-100%);
+      box-shadow: none !important;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] summary .expand-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Executive 60-Second Scan Mode */
+    body.scan-mode article:not(:first-of-type),
+    body.scan-mode #world,
+    body.scan-mode #sports,
+    body.scan-mode #portfolio,
+    body.scan-mode #developments,
+    body.scan-mode #rates-and-tools,
+    body.scan-mode details.depth,
+    body.scan-mode #houseSearchSection,
+    body.scan-mode .ticker-wrap {
+      display: none !important;
+    }
+    body.scan-mode #top-story {
+      border: 2px solid var(--accent);
+      border-radius: var(--r-md);
+      padding: 1.25rem;
+      background: var(--paper-raised);
+    }
   </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -114,113 +478,156 @@
     </div>
     
       </div>
-
-      <!-- Global Clocks Bar -->
-      <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
-        <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
-        <span>·</span>
-        <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span></span>
-        <span>·</span>
-        <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span></span>
-        <span>·</span>
-        <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span></span>
-      </div>
-
-      <!-- Controls -->
-      <div class="flex items-center gap-2">
-        <button id="themeToggle" class="px-2 py-1 rounded border border-[var(--rule)] text-xs hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος">🌓</button>
+      <div class="flex items-center gap-4 t-meta text-[var(--ink-quiet)]">
+        
+    <div id="globalClocks" class="hidden xl:flex items-center gap-2.5 font-mono text-[11px] text-[var(--ink-quiet)] border-l border-[var(--rule)] pl-3">
+      <span class="inline-flex items-center gap-1">🇨🇾 <strong>CY</strong> <span id="clockCY">--:--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇬🇧 <strong>LON</strong> <span id="clockLON">--:--</span> <span id="statusLON" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇺🇸 <strong>NYC</strong> <span id="clockNYC">--:--</span> <span id="statusNYC" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+      <span>·</span>
+      <span class="inline-flex items-center gap-1">🇯🇵 <strong>TYO</strong> <span id="clockTYO">--:--</span> <span id="statusTYO" class="text-[9px] px-1 py-0.2 rounded font-bold">--</span></span>
+    </div>
+    
+        <span>📍 Λεμεσός</span>
+        <span>⏱️ ~8'</span>
+        <button id="themeToggle" class="px-2.5 py-1 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition t-meta" aria-pressed="false" aria-label="Εναλλαγή θέματος">
+          🌓 Θέμα
+        </button>
       </div>
     </div>
   </div>
 
   <!-- MASTHEAD -->
-  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 bg-[var(--paper-raised)]">
-    <div class="max-w-7xl mx-auto text-center">
-      <div class="flex justify-between items-center text-xs uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
+  <header class="border-b-4 border-double border-[var(--rule-strong)] py-8 px-4 text-center bg-[var(--paper-raised)]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex justify-between items-center t-meta uppercase text-[var(--ink-quiet)] border-b border-[var(--rule)] pb-2 mb-4 font-mono">
         <div>ΕΤΟΣ 2026 · DAILY BRIEFING</div>
-        <div class="font-bold text-[var(--accent)]">🌙 NIGHT DEBRIEF & CLOSING BELL</div>
+        <div class="font-bold text-[var(--accent)]">ΕΜΠΙΣΤΕΥΤΙΚΟ BRIEFING</div>
         <div>ONE-READER EDITION</div>
       </div>
 
-      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase">
+      <h1 class="t-masthead text-[var(--ink)] mb-2 uppercase text-center">
         THE ORACLE SOVEREIGN
       </h1>
-      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto">
-        Απογευματινή Επιτελική Ανασκόπηση, Τελικά Κλεισίματα Αγορών, Αθλητικό Πρόγραμμα & Νυχτερινό Ραντάρ
+      <p class="font-editorial italic text-lg sm:text-xl text-[var(--ink-quiet)] max-w-2xl mx-auto text-center">
+        Ημερήσια Εφημερίδα Στρατηγικής, Αγορών, Κυπριακής Οικονομίας & Διεθνών Εξελίξεων
       </p>
 
-      <div class="flex flex-wrap justify-center items-center gap-3 mt-4 pt-3 border-t border-[var(--rule)] text-xs text-[var(--ink-quiet)] font-mono">
-        <span>📅 9 Οκτωβρίου 2026</span>
+      <div class="flex flex-wrap justify-center items-center gap-3 mt-5 pt-3 border-t border-[var(--rule)] t-meta text-[var(--ink-quiet)]">
+        <span>🇨🇾 Κύπρος & Ακίνητα</span>
         <span>·</span>
-        <span>⏰ 19:30 ώρα Κύπρου</span>
+        <span>🌍 Γεωπολιτική</span>
         <span>·</span>
-        <span>⏱️ 4' ανάγνωση</span>
+        <span>📊 Αγορές & Euribor</span>
         <span>·</span>
-        <a href="index.html" class="text-[var(--accent)] hover:underline font-bold">🏛️ Πύλη The Oracle</a>
+        <span>⚽ Ομόνοια, Clubs & Formula 1</span>
+        <span>·</span>
+        <span>🌤️ Καιρός Λεμεσού</span>
       </div>
     </div>
   </header>
 
   <!-- LIVE MARKET TICKER -->
-  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
+  <div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] t-meta ticker-wrap">
     <div class="ticker-content space-x-8 font-mono">
       <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.811,54</span> <span class="text-[var(--up)] font-semibold">+0,59%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">30.883,15</span> <span class="text-[var(--up)] font-semibold">+0,51%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">CBOE VIX:</span> <span class="text-[var(--ink-body)]">14,15%</span> <span class="text-[var(--down)] font-semibold">-0,35%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Απόδοση Αμερικανικού 10ετούς:</span> <span class="text-[var(--ink-body)]">5,10%</span> <span class="text-[var(--down)] font-semibold">-0,02%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Πετρέλαιο Brent:</span> <span class="text-[var(--ink-body)]">$104,72</span> <span class="text-[var(--up)] font-semibold">+0,42%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Πετρέλαιο WTI:</span> <span class="text-[var(--ink-body)]">$99,40</span> <span class="text-[var(--up)] font-semibold">+0,38%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR / USD:</span> <span class="text-[var(--ink-body)]">1,1206</span> <span class="text-[var(--down)] font-semibold">-0,09%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR / GBP:</span> <span class="text-[var(--ink-body)]">0,8461</span> <span class="text-[var(--down)] font-semibold">-0,12%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$82.652,09</span> <span class="text-[var(--up)] font-semibold">+0,12%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Ethereum (ETH/USD):</span> <span class="text-[var(--ink-body)]">$2.670,50</span> <span class="text-[var(--up)] font-semibold">+0,19%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Euribor 3 Μηνών:</span> <span class="text-[var(--ink-body)]">2,642%</span> <span class="text-[var(--up)] font-semibold">+0,006%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Τράπεζα Κύπρου (BOCH):</span> <span class="text-[var(--ink-body)]">€10,23</span> <span class="text-[var(--up)] font-semibold">+0,89%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.811,54</span> <span class="text-[var(--up)] font-semibold">+0,59%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">30.883,15</span> <span class="text-[var(--up)] font-semibold">+0,51%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">CBOE VIX:</span> <span class="text-[var(--ink-body)]">14,15%</span> <span class="text-[var(--down)] font-semibold">-0,35%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Απόδοση Αμερικανικού 10ετούς:</span> <span class="text-[var(--ink-body)]">5,10%</span> <span class="text-[var(--down)] font-semibold">-0,02%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Πετρέλαιο Brent:</span> <span class="text-[var(--ink-body)]">$104,72</span> <span class="text-[var(--up)] font-semibold">+0,42%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Πετρέλαιο WTI:</span> <span class="text-[var(--ink-body)]">$99,40</span> <span class="text-[var(--up)] font-semibold">+0,38%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR / USD:</span> <span class="text-[var(--ink-body)]">1,1206</span> <span class="text-[var(--down)] font-semibold">-0,09%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR / GBP:</span> <span class="text-[var(--ink-body)]">0,8461</span> <span class="text-[var(--down)] font-semibold">-0,12%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$82.652,09</span> <span class="text-[var(--up)] font-semibold">+0,12%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Ethereum (ETH/USD):</span> <span class="text-[var(--ink-body)]">$2.670,50</span> <span class="text-[var(--up)] font-semibold">+0,19%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Euribor 3 Μηνών:</span> <span class="text-[var(--ink-body)]">2,642%</span> <span class="text-[var(--up)] font-semibold">+0,006%</span></span> <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Τράπεζα Κύπρου (BOCH):</span> <span class="text-[var(--ink-body)]">€10,23</span> <span class="text-[var(--up)] font-semibold">+0,89%</span></span>
     </div>
   </div>
 
-  <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
-  <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] text-xs">
-    <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
-      <div class="flex items-center gap-2 flex-shrink-0">
-        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
-          <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
-        </span>
+  
+    <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
+    <div id="liveWireBar" class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] t-meta">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-white font-mono text-[10px] font-bold tracking-wider uppercase shadow-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
+          </span>
+        </div>
+        <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
+          <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
+        </div>
+        <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
+          <span>Προβολή Όλων (50+)</span> <span>➔</span>
+        </button>
       </div>
-      <div id="liveWireTicker" class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0">
-        <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
-      </div>
-      <button id="openWireDrawerBtn" class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1">
-        <span>Προβολή Όλων (50+)</span> <span>➔</span>
-      </button>
     </div>
-  </div>
+    
 
-  <!-- MAIN CONTAINER -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+  <!-- NAVIGATION & INSTANT SEARCH -->
+  <nav id="mainNav" class="bg-[var(--paper-raised)] border-b border-[var(--rule)] sticky top-0 z-40 px-3 sm:px-4 py-2 shadow-xs backdrop-blur-md bg-opacity-95" aria-label="Κύρια πλοήγηση">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
+      <div class="flex items-center gap-1.5 t-meta font-medium overflow-x-auto no-scrollbar py-0.5 max-w-full flex-nowrap sm:flex-wrap">
+        <a href="#top-story" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--accent)] text-white font-semibold transition">⭐ Πρώτο Θέμα</a>
+        <a href="#cyprus" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-semibold">🇨🇾 Κύπρος</a>
+        <a href="#world" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🌍 Διεθνή</a>
+        <a href="#sports" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium">⚽ Αθλητικά & F1</a>
+        <a href="#markets" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">💰 Αγορές</a>
+        <a href="#rates-and-tools" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🏦 Επιτόκια & Dashboard</a>
+        <a href="#portfolio" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🎯 Ο Φάκελός μου</a>
+        <a href="house-search/latest.html" target="_blank" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium flex items-center gap-1">🏠 <span>Ακίνητα</span></a>
+        <a href="#weather" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">🌤️ Καιρός</a>
+        <a href="#deadlines" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-full bg-[var(--paper)] text-[var(--ink)] border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition">📅 Προθεσμίες</a>
+      </div>
 
-    <!-- 🎙️ AUDIO BRIEFING PLAYER -->
+      <!-- Search Input Container with Instant Dropdown & Actions -->
+      <div class="relative flex items-center gap-1.5 flex-shrink-0 ml-auto sm:ml-0">
+        <button id="scanModeToggle" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--accent)] font-semibold transition flex items-center gap-1" title="Εναλλαγή σε 60-Second Scan">
+          <span>⚡</span> <span class="hidden md:inline">60″ Scan</span>
+        </button>
+        <button onclick="window.print()" class="t-meta px-2.5 py-1.5 rounded border border-[var(--rule)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition flex items-center gap-1" title="Εκτύπωση ή Αποθήκευση σε Broadsheet PDF" aria-label="Εκτύπωση σελίδας">
+          <span>📄</span> <span class="hidden md:inline">PDF Broadsheet</span>
+        </button>
+        <div class="relative">
+          <label for="archiveSearch" class="sr-only">Αναζήτηση στο αρχείο</label>
+          <input type="text" id="archiveSearch" placeholder="🔍 Αναζήτηση στο αρχείο..." 
+                 class="t-meta px-3 py-1.5 rounded border border-[var(--rule)] bg-[var(--paper)] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] w-32 sm:w-56 focus:w-44 sm:focus:w-60 transition-all shadow-xs">
+          <!-- Live Search Results Dropdown -->
+          <div id="searchResults" class="hidden absolute right-0 top-full mt-2 w-80 sm:w-96 max-h-96 overflow-y-auto bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl shadow-xl z-50 p-2 text-xs space-y-2">
+          </div>
+        </div>
+        <button id="themeToggleNav" class="t-meta px-2 py-1.5 rounded border border-[var(--rule)] hover:bg-[var(--paper)] transition" title="Εναλλαγή θέματος" aria-label="Εναλλαγή θέματος">
+          🌓
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER (NEWS-FIRST HIERARCHY) -->
+  <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- 🎙️ THE SOVEREIGN EXECUTIVE AUDIO BRIEFING -->
     <div id="audioBriefingPlayer" class="p-4 bg-[var(--paper-raised)] border border-[var(--rule)] rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-xs">
       <div class="flex items-center gap-3.5">
         <button id="audioPlayBtn" class="w-11 h-11 rounded-full bg-[var(--accent)] text-white flex items-center justify-center shadow hover:opacity-90 transition font-bold text-lg flex-shrink-0" aria-label="Αναπαραγωγή ηχητικής σύνοψης">
           ▶
         </button>
         <div>
-          <div class="text-xs font-bold text-[var(--ink)] flex items-center gap-2">
-            <span>🎙️ Ακρόαση Απογευματινής Σύνοψης (The Sovereign Audio Debrief)</span>
+          <div class="t-meta font-bold text-[var(--ink)] flex items-center gap-2">
+            <span>🎙️ Ακρόαση Πρωινής Σύνοψης (The Sovereign Audio Briefing)</span>
             <span id="audioLiveBadge" class="hidden text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-mono font-semibold">LIVE</span>
           </div>
-          <div id="audioStatusText" class="text-xs text-[var(--ink-quiet)]">
-            Επιτελική σύνοψη κλεισίματος ~1.5 λεπτού · Πατήστε Play για φωνητική ανάγνωση
+          <div id="audioStatusText" class="t-meta text-[var(--ink-quiet)]">
+            Επιτελική σύνοψη ~2 λεπτών · Πατήστε Play για φωνητική ανάγνωση
           </div>
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <button id="audioSpeedBtn" class="text-xs font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
+        <button id="audioSpeedBtn" class="t-meta font-mono px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:border-[var(--accent)] text-[var(--ink-body)]" title="Ταχύτητα ανάγνωσης">
           1.0x
         </button>
-        <button id="audioStopBtn" class="text-xs px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
+        <button id="audioStopBtn" class="t-meta px-2.5 py-1 rounded border border-[var(--rule)] bg-[var(--paper)] hover:bg-[var(--down)] hover:text-white text-[var(--ink-quiet)] hidden" title="Διακοπή">
           ⏹ Διακοπή
         </button>
       </div>
     </div>
 
-    
-
-    <!-- ==================== 🏁 1. ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ ==================== -->
+    <!-- ==================== ⭐ 1. ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ (HERO NEWS) ==================== -->
     <section id="top-story" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>🏁</span> <span>Το Αποτύπωμα της Ημέρας</span>
+          <span>⭐</span> <span>Το Θέμα της Ημέρας</span>
         </h2>
         <span class="t-meta ml-auto uppercase">ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ</span>
       </div>
@@ -239,12 +646,14 @@
               <p class="mt-1 font-medium leading-snug t-meta">Ενεργειακή Ασφάλεια & Υποδομές: Συμμαχία Cyfield με China Harbour και Ενδιαφέρον 6 Ομίλων για τη Διάσωση του Τερματικού LNG στο Βασιλικό — Στα $104,72 το Brent εν μέσω Διλήμματος των «27» στο Ecofin και Mega-Deal Τραμπ-Πούτιν για το Ντίζελ [Επιβεβαιωμένο]</p>
             </div>
           </div>
-          <div class="md:col-span-7 p-6 sm:p-7 flex flex-col justify-between">
+
+          <!-- Text Column -->
+          <div class="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-2 text-xs uppercase tracking-wider mb-2 text-[var(--accent)] font-semibold">
-                <span>Τελική Αποτίμηση</span>
+              <div class="flex items-center gap-2 t-meta uppercase tracking-wider mb-2 text-[var(--accent)] font-semibold">
+                <span>Κορυφαία Εξέλιξη</span>
                 <span>·</span>
-                <span class="text-[var(--ink-quiet)] font-mono">9 Οκτωβρίου 2026</span>
+                <span class="text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
               </div>
 
               <h3 class="t-lead mb-4">
@@ -611,18 +1020,16 @@
       </div>
     </section>
 
-    
-    <!-- ==================== 📰 2. ΑΠΟΓΕΥΜΑΤΙΝΗ ΕΠΙΚΑΙΡΟΤΗΤΑ ==================== -->
-    <section id="evening-news" class="scroll-mt-24">
+    <!-- ==================== 🌍 3. ΔΙΕΘΝΗ ==================== -->
+    <section id="world" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>📰</span> <span>Απογευματινή Επικαιρότητα & Εξελίξεις</span>
+          <span>🌍</span> <span>Διεθνή</span>
         </h2>
-        <span class="text-xs font-mono text-[var(--accent)] uppercase font-bold ml-auto">CURATED DIGEST</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
+        <article class="card md:col-span-2 overflow-hidden flex flex-col justify-between">
           <div>
             <div class="h-64 sm:h-72 bg-[var(--paper)] relative overflow-hidden">
               <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8c49/live/850032c0-c470-11f1-94f2-dbc7ff6db92b.jpg" alt="1. Παγκόσμια Ενέργεια & Κυρώσεις: Συμφωνία-σοκ Τραμπ με Πούτιν για 4,8 εκατ. τόνους ρωσικού ντίζελ — Αντιδράσεις για καταστρατήγηση κυρώσεων και καταγγελία Ζελένσκι [Επιβεβαιωμένο]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=800&q=80';">
@@ -793,20 +1200,24 @@
           <div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">🏛️</span><div><strong class="font-bold text-[var(--ink)]">Το υπόβαθρο:</strong> Το γαλλικό έλλειμμα υπερβαίνει το 6% του ΑΕΠ, ενώ η Εθνοσυνέλευση παραμένει διαιρεμένη ως προς τα μέτρα περικοπής δαπανών.</div></div><div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚡</span><div><strong class="font-bold text-[var(--ink)]">Τι σημαίνει πρακτικά:</strong> Εάν τα spreads συνεχίσουν να διευρύνονται, η ΕΚΤ ενδέχεται να υποχρεωθεί να εξετάσει την ενεργοποίηση του μηχανισμού TPI υπό αυστηρούς όρους.</div></div><div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚖️</span><div><strong class="font-bold text-[var(--ink)]">Αντίλογος:</strong> Γάλλοι αξιωματούχοι του Υπουργείου Οικονομικών αντιτείνουν ότι η γαλλική οικονομία διατηρεί ισχυρή παραγωγική βάση και ότι οι αποδόσεις των ομολόγων παραμένουν υπό έλεγχο.</div></div>
         </div>
         
-        
       </div>
     </details>
     
             </div>
           </div>
-          <div class="p-5 sm:p-6 pt-0 border-t border-[var(--rule)] flex items-center justify-between">
-            <span class="t-meta text-[var(--ink-quiet)] font-mono">19:30 EEST</span>
-            <a href="https://cyprus-mail.com/2026/10/09/christodoulides-tells-civil-service-there-is-room-for-improvement" target="_blank" rel="noopener noreferrer" class="t-meta font-bold text-[var(--accent)] hover:underline flex items-center gap-1"><span>Cyprus Mail</span> <span>➔</span></a>
+          <div class="p-5 sm:p-6 pt-0">
+            
+        <div class="flex justify-between items-center t-meta pt-3 border-t border-[var(--rule)]">
+          <a href="https://www.philenews.com/oikonomia/kosmos-ikonomia/article/1779627/evropaika-omologa-i-galliki-anatarachi-ke-o-kindinos-metadosis-se-ikonomies-me-ipsilo-chreos/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent)] hover:underline">
+            Philenews
+          </a>
+          <span class="font-mono text-[var(--ink-quiet)]">Επιβεβαιωμένο</span>
+        </div>
           </div>
         </article>
         
 
-        <article class="card overflow-hidden flex flex-col justify-between hover:border-[var(--rule-strong)] transition shadow-xs">
+        <article class="card overflow-hidden flex flex-col justify-between">
           <div>
             <div class="h-44 bg-[var(--paper)] relative overflow-hidden">
               <img src="https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/528b/live/a76ba860-c459-11f1-bc2e-018d645d8d21.jpg" alt="5. Διεθνείς Σχέσεις: Οργή Τραμπ κατά Νορβηγίας για το Νόμπελ Ειρήνης — «Έπρεπε να το είχα πάρει εγώ» [Επιβεβαιωμένο]" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=800&q=80';">
@@ -836,7 +1247,6 @@
           <div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">🏛️</span><div><strong class="font-bold text-[var(--ink)]">Το υπόβαθρο:</strong> Είναι η δεύτερη συνεχόμενη χρονιά που ο πρώην πρόεδρος καταφέρεται δημόσια εναντίον του θεσμού των βραβείων Νόμπελ.</div></div><div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚡</span><div><strong class="font-bold text-[var(--ink)]">Τι σημαίνει πρακτικά:</strong> Αναδεικνύει την αυξανόμενη ένταση στις διατλαντικές σχέσεις και τη ρητορική πίεση προς τους παραδοσιακούς σκανδιναβικούς συμμάχους.</div></div><div class="flex items-start gap-2.5"><span class="text-xs flex-shrink-0 mt-0.5">⚖️</span><div><strong class="font-bold text-[var(--ink)]">Αντίλογος:</strong> Πολιτικοί αναλυτές σημειώνουν ότι τέτοιες δηλώσεις απευθύνονται πρωτίστως στο εσωτερικό κοινό των ΗΠΑ στο πλαίσιο της προεκλογικής συσπείρωσης.</div></div>
         </div>
         
-        
       </div>
     </details>
     
@@ -855,7 +1265,6 @@
         
       </div>
     </section>
-    
 
     <!-- ==================== ⚽ 4. ΑΘΛΗΤΙΚΑ & FORMULA 1 ==================== -->
     <section id="sports" class="scroll-mt-24 my-8 sm:my-12">
@@ -1209,20 +1618,33 @@
     <section id="markets" class="scroll-mt-24">
       <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
         <h2 class="t-section flex items-center gap-2">
-          <span>🔔</span> <span>Closing Bell & Αγορές</span>
+          <span>💰</span> <span>Αγορές & Top Movers</span>
         </h2>
-        <span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">ΤΕΛΙΚΑ ΚΛΕΙΣΙΜΑΤΑ</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+      </div>
+    </section>
+
+    <!-- ==================== 🏦 5. ΕΠΙΤΟΚΙΑ, ΥΠΟΛΟΓΙΣΤΗΣ ΔΟΣΗΣ & DASHBOARD ==================== -->
+    <section id="rates-and-tools" class="scroll-mt-24 space-y-8 bg-[var(--paper-raised)] p-6 rounded border border-[var(--rule)]">
+      
+      <!-- Rates Header -->
+      <div class="flex items-center gap-2 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🏦</span> <span>Χρηματοοικονομικά Εργαλεία & Επιτόκια</span>
+        </h2>
       </div>
 
-      
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          <!-- Macro Indices & FX -->
-          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-[var(--rule)]">
-            <div class="p-3.5 bg-[var(--paper)] border-b border-[var(--rule)] flex items-center justify-between">
-              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
-                <span>🏛️</span> <span>Κύριοι Δείκτες, Συνάλλαγμα & Crypto</span>
-              </h3>
-              <span class="text-[10px] font-mono text-[var(--accent)] font-bold">MACRO & FX</span>
+      <!-- Euribor & Mortgage Calculator Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Euribor Table -->
+        <div class="lg:col-span-6 card p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 border-b border-[var(--rule)] pb-2">
+              <h3 class="t-title font-bold text-[var(--ink)]">Διατραπεζικά Επιτόκια Euribor</h3>
+              <span class="t-meta font-mono text-[var(--ink-quiet)]">euribor-rates.eu</span>
             </div>
             <table class="w-full text-left t-meta mb-4">
               <thead>
@@ -1516,222 +1938,43 @@
             <span class="t-meta uppercase tracking-widest text-[var(--accent)] font-bold mb-1">
               Ο Αριθμός της Ημέρας
             </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ήπια διόρθωση εν αναμονή στοιχείων πληθωρισμού</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Nasdaq 100 (NDQ)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">30.850,31</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+0,41%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Πιέσεις στους τεχνολογικούς τίτλους υψηλού beta</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Bitcoin (BTC/USD)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$82.608,31</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+1,12%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Συσσώρευση στην περιοχή των $77k</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>EUR/USD</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">1,12</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-0,18%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ελαφρά ενίσχυση δολαρίου ενόψει αποφάσεων ΕΚΤ</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>EUR/GBP</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">0,85</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-0,13%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Σταθεροποίηση εντός στενού εύρους διακύμανσης</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Bank of Cyprus (BOCH)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">€10,23</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+0,89%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ισχυρό κλείσιμο σε υψηλό ημέρας στο ΧΑΚ/ΧΑ</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Brent Crude</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$103,81</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-0,45%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Εδραίωση πάνω από το ψυχολογικό όριο των $100</td>
-        </tr>
-        
-                </tbody>
-              </table>
+            <div class="font-masthead text-4xl sm:text-5xl font-black text-[var(--ink)] my-2">
+              —
             </div>
-          </div>
-
-          <!-- Tech Stocks Watchlist -->
-          <div class="lg:col-span-6 card overflow-hidden shadow-xs border border-indigo-500/30">
-            <div class="p-3.5 bg-gradient-to-r from-[var(--paper)] to-indigo-950/10 border-b border-[var(--rule)] flex items-center justify-between">
-              <h3 class="font-bold text-xs uppercase tracking-wider text-[var(--ink)] flex items-center gap-1.5">
-                <span>💻</span> <span>Μετοχές Τεχνολογίας (Watchlist)</span>
-              </h3>
-              <span class="text-[10px] font-mono text-indigo-500 font-bold">TECH RADAR</span>
-            </div>
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead class="bg-[var(--paper)] text-[10px] uppercase text-[var(--ink-quiet)] font-mono border-b border-[var(--rule)]">
-                  <tr>
-                    <th class="py-2.5 px-3.5">Μετοχή</th>
-                    <th class="py-2.5 px-3.5 font-mono">Τιμή</th>
-                    <th class="py-2.5 px-3.5 font-mono">Μεταβολή</th>
-                    <th class="py-2.5 px-3.5">Σχόλιο</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-[var(--rule)] font-sans">
-                  
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>TSMC (TSM)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$450,34</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-1,67%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ήπια υποχώρηση στον παγκόσμιο κλάδο ημιαγωγών</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>NVIDIA (NVDA)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$229,32</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-0,50%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Κατοχύρωση κερδών μετά το πολυήμερο ράλι</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Alphabet (GOOG)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$349,75</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+1,42%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Σταθεροποίηση και ανθεκτικότητα στο οικοσύστημα AI</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Apple (AAPL)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$335,12</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-1,56%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Συσσώρευση ενόψει νέου κύκλου ανακοινώσεων υλικού & AI</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Microsoft (MSFT)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$534,80</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+2,33%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Διατήρηση υψηλών επιπέδων σε εταιρικό cloud & Azure</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Micron (MU)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$1.028,00</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20">
-              <span>-0,76%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--down)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,1 10,5 19,9 28,11" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Ισχυρή ζήτηση μνημών HBM για επιταχυντές AI</td>
-        </tr>
-        
-        <tr class="border-b border-[var(--rule)] hover:bg-[var(--paper-raised)] transition">
-          <td class="py-3 px-3.5 font-bold text-[var(--ink)] flex items-center gap-1.5">
-            <span>Meta (META)</span>
-          </td>
-          <td class="py-3 px-3.5 font-mono font-bold text-[var(--ink)]">$726,09</td>
-          <td class="py-3 px-3.5 font-mono">
-            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20">
-              <span>+0,72%</span> <svg class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewBox="0 0 29 12" aria-hidden="true"><polyline fill="none" stroke="var(--up)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" points="1,11 10,9 19,5 28,1" /></svg>
-            </span>
-          </td>
-          <td class="py-3 px-3.5 text-xs text-[var(--ink-body)]">Θετική διαφοροποίηση χάρη στις αποδόσεις διαφήμισης & Llama</td>
-        </tr>
-        
-                </tbody>
-              </table>
-            </div>
+            <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">
+              
+            </p>
           </div>
         </div>
-        
-    </section>
-
-    <!-- ==================== ⚽ 4. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
-    <section id="sports-radar" class="scroll-mt-24">
-      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-        <h2 class="t-section flex items-center gap-2">
-          <span>⚽</span> <span>Απογευματινός Αθλητισμός & Πρόγραμμα</span>
-        </h2>
-        <span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">HIGHLIGHTS & FIXTURES</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    </section>
+
+    <!-- ==================== 🏠 6. Ο ΦΑΚΕΛΟΣ ΜΟΥ & REAL ESTATE RADAR ==================== -->
+    <section id="portfolio" class="scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+        <h2 class="t-section flex items-center gap-2">
+          <span>🎯</span> <span>Ο Φάκελός μου & Ακίνητα</span>
+        </h2>
+      </div>
+
+      <!-- House Search Banner if available -->
+      
+        <div class="card p-5 border-l-4 border-[var(--accent)] mb-6">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="t-meta font-bold uppercase tracking-wider text-[var(--accent)] flex items-center gap-1.5">
+              <span>🏠</span> REAL ESTATE RADAR — ΕΒΔΟΜΑΔΙΑΙΟ ΔΕΛΤΙΟ ΛΕΜΕΣΟΥ
+            </span>
+            <span class="t-meta font-mono text-[var(--ink-quiet)]">Έκδοση: 2026-10-03</span>
+          </div>
+          <p class="t-body-sm text-[var(--ink-body)] mb-3 leading-relaxed">
+            Εντοπίστηκαν <strong>— μοναδικά ακίνητα</strong> (Bazaraki & BuySellCyprus) στον άξονα Ύψωνα → Γερμασόγειας. 
+            <strong>— Top Picks</strong> πέρασαν όλα τα φίλτρα: —.
+          </p>
+          <a href="house-search/latest.html" target="_blank" class="inline-flex items-center gap-1.5 t-meta font-bold text-[var(--accent)] hover:underline">
+            <span>Άνοιγμα πλήρους εβδομαδιαίας έκθεσης ακινήτων</span> <span>➔</span>
+          </a>
+        </div>
         
 
       <div class="space-y-3.5">
@@ -1821,16 +2064,13 @@
 
         <div class="lg:col-span-5 card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
           <div>
-            <div class="bg-gradient-to-r from-emerald-900 to-green-950 p-4 text-white flex items-center justify-between">
-              <div class="flex items-center gap-2.5">
-                <span class="text-2xl">☘️</span>
-                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ</h3>
-              </div>
-              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                CYPRUS LEAGUE & EUROPE
-              </span>
+            <div class="flex items-center justify-between mb-4 border-b border-[var(--rule)] pb-2.5">
+              <h3 class="t-title font-bold text-[var(--ink)] flex items-center gap-2">
+                <span>📋</span> <span>Ανάλυση & Προειδοποιήσεις</span>
+              </h3>
+              <span class="t-meta font-mono text-[var(--ink-quiet)]">KITASWEATHER</span>
             </div>
-            <div class="p-5 space-y-3">
+            <div class="space-y-2.5">
               
             <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
               <span class="text-xl flex-shrink-0 mt-0.5">🌡️</span>
@@ -1868,143 +2108,7 @@
             </div>
             </div>
           </div>
-          <div class="p-4 pt-0">
-            <a href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
-              <span>▶</span> <span>Highlights Ομόνοιας στο YouTube</span>
-            </a>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-700/30 dark:border-red-600/40">
-          <div>
-            <div class="bg-gradient-to-r from-red-900 to-stone-950 p-4 text-white flex items-center justify-between">
-              <div class="flex items-center gap-2.5">
-                <span class="text-2xl">🔴</span>
-                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">MANCHESTER UNITED</h3>
-              </div>
-              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                UEFA CHAMPIONS LEAGUE
-              </span>
-            </div>
-            <div class="p-5 space-y-3">
-              
-        <div class="flex items-start gap-2 text-xs">
-          <span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
-          <span class="text-[var(--ink-body)]">Premier League: 10 things to look out for this weekend</span>
         </div>
-              
-        <div class="flex items-start gap-2 text-xs">
-          <span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
-          <span class="text-[var(--ink-body)] font-medium">Premier League: Manchester United versus Tottenham Hotspur — 17:30</span>
-        </div>
-              
-        <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-          <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
-          Manchester United’s early wobble makes Tottenham visit a must-win for Carrick
-        </div>
-              
-        <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-          <span>Επίσημη Πηγή:</span>
-          <a href="https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">BBC Sport</a>
-        </div>
-            </div>
-          </div>
-          <div class="p-4 pt-0">
-            <a href="https://www.youtube.com/results?search_query=Manchester+United+highlights+2026" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
-              <span>▶</span> <span>Highlights Manchester United στο YouTube</span>
-            </a>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-amber-700/30 dark:border-amber-600/40">
-          <div>
-            <div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-purple-950 p-4 text-white flex items-center justify-between">
-              <div class="flex items-center gap-2.5">
-                <span class="text-2xl">⚪</span>
-                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">REAL MADRID</h3>
-              </div>
-              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                SPANISH LA LIGA
-              </span>
-            </div>
-            <div class="p-5 space-y-3">
-              
-        <div class="flex items-start gap-2 text-xs">
-          <span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
-          <span class="text-[var(--ink-body)]">Kylian Mbappé defies José Mourinho’s warning with a bicycle ride while injured</span>
-        </div>
-              
-        <div class="flex items-start gap-2 text-xs">
-          <span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
-          <span class="text-[var(--ink-body)] font-medium">Spanish La Liga: Real Madrid versus Villarreal — 20:00 (Saturday 10th October)</span>
-        </div>
-              
-        <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-          <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
-          Real Madrid asks about McTominay, the "Scottish Maradona" whom Mourinho calls "my boy"
-        </div>
-              
-        <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-          <span>Επίσημη Πηγή:</span>
-          <a href="https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">Marca / BBC Sport</a>
-        </div>
-            </div>
-          </div>
-          <div class="p-4 pt-0">
-            <a href="https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
-              <span>▶</span> <span>Highlights Real Madrid στο YouTube</span>
-            </a>
-          </div>
-        </article>
-        
-
-        <article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-600/30 dark:border-red-500/40">
-          <div>
-            <div class="bg-gradient-to-r from-neutral-900 to-red-950 p-4 text-white flex items-center justify-between">
-              <div class="flex items-center gap-2.5">
-                <span class="text-2xl">🏎️</span>
-                <h3 class="font-masthead font-bold text-sm tracking-wide text-white">FORMULA 1</h3>
-              </div>
-              <span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                FIA WORLD CHAMPIONSHIP
-              </span>
-            </div>
-            <div class="p-5 space-y-3">
-              
-        <div class="flex items-start gap-2 text-xs">
-          <span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
-          <span class="text-[var(--ink-body)]">{'race': 'Azerbaijan Grand Prix 2026 (Baku City Circuit)', 'date': 'Σάββατο 26 Σεπτεμβρίου 2026', 'winner': 'George Russell (Mercedes)', 'podium': '1ος George Russell (Mercedes), 2ος Max Verstappen (Red Bull), 3ος Isack Hadjar (Red Bull), 4ος Charles Leclerc (Ferrari), 5ος Kimi Antonelli (Mercedes), 6ος Lewis Hamilton (Ferrari)', 'summary': 'Azerbaijan Grand Prix (Baku) — Νίκη George Russell (Mercedes) μπροστά από Verstappen και Hadjar σε επεισοδιακό αγώνα με 2 Safety Cars', 'source_url': 'https://www.formula1.com/en/racing/2026/azerbaijan.html', 'source': 'Formula1.com / BBC Sport F1'}</span>
-        </div>
-              
-        <div class="flex items-start gap-2 text-xs">
-          <span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
-          <span class="text-[var(--ink-body)] font-medium">Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix) — Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου</span>
-        </div>
-              
-        <div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-          <strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ & Νέα:</strong>
-          Verstappen on sprint pole after another settings issue
-        </div>
-              
-        <div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-          <span>Επίσημη Πηγή:</span>
-          <a href="https://www.formula1.com/en/racing/2026/bahrain.html" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-medium">Formula1.com</a>
-        </div>
-            </div>
-          </div>
-          <div class="p-4 pt-0">
-            <a href="https://www.youtube.com/results?search_query=Formula+1+highlights+2026" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition">
-              <span>▶</span> <span>Highlights Formula 1 στο YouTube</span>
-            </a>
-          </div>
-        </article>
-        
       </div>
     </section>
 
@@ -2041,8 +2145,8 @@
               <p class="t-body-sm text-[var(--ink-body)] leading-relaxed">Το Brent παραμένει στα $104,72, καθώς η ανακοίνωση Τραμπ για αγορά ρωσικού ντίζελ προκαλεί γεωπολιτική θύελλα και αμφισβήτηση των κυρώσεων.</p>
             </div>
           </div>
-        </section>
-        
+        </div>
+      </section>
 
       <section id="deadlines" class="card p-5 sm:p-6 shadow-xs flex flex-col justify-between">
         <div>
@@ -2059,55 +2163,20 @@
               <div class="t-body-sm text-[var(--ink-body)] leading-relaxed"><strong class="font-bold text-[var(--ink)]">Από σήμερα:</strong> Συλλογή δικαιολογητικών και έκδοση Πιστοποιητικού Ενεργειακής Απόδοσης (ΠΕΑ) για αίτηση στις νέες χορηγίες κατοικιών έως €32.000 (<a href="https://www.sigmalive.com/news/local/1332749/xorighies-eos-eur32000-ghia-energheiaki-anavathmisi-katoikiwn-oi-dikaioukhoi" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">SigmaLive</a>).</div>
             </div>
 
-      <div class="card p-5 sm:p-6 bg-gradient-to-br from-[var(--paper-raised)] via-[var(--paper-raised)] to-indigo-950/10 border-indigo-500/20">
-        <p class="text-xs text-[var(--ink-quiet)] mb-4 font-mono">
-          Κρίσιμοι άξονες παρακολούθησης κατά τη διάρκεια της νύχτας μέχρι το επόμενο πρωινό άνοιγμα:
-        </p>
-        <ul class="space-y-3">
-          
-        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
-          <span class="text-xl flex-shrink-0 mt-0.5">🌏</span>
-          <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-            Ασιατικό Άνοιγμα (02:00 EEST): Παρακολούθηση Nikkei & Hang Seng και αντίκτυπος στη διαμόρφωση των τιμών ενέργειας.
-          </div>
-        </li>
-        
+            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
+              <div class="t-body-sm text-[var(--ink-body)] leading-relaxed"><strong class="font-bold text-[var(--ink)]">Έως 20 Οκτωβρίου 2026 (14:00):</strong> Υποβολή αιτήσεων για την κρατική φοιτητική μέριμνα ακαδημαϊκού έτους 2025-2026 (<a href="https://www.mof.gov.cy" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">Υπουργείο Οικονομικών</a>).</div>
+            </div>
 
-        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
-          <span class="text-xl flex-shrink-0 mt-0.5">🛡️</span>
-          <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-            Νυχτερινές Εξελίξεις Μέσης Ανατολής: Επιφυλακή για γεωπολιτικές μεταβολές στον περιφερειακό εναέριο χώρο και τις ναυτιλιακές οδούς.
-          </div>
-        </li>
-        
+            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
+              <div class="t-body-sm text-[var(--ink-body)] leading-relaxed"><strong class="font-bold text-[var(--ink)]">Έως 31 Οκτωβρίου 2026:</strong> Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων (<a href="https://taxisnet.mof.gov.cy" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">TaxisNet</a>).</div>
+            </div>
 
-        <li class="flex items-start gap-3 p-3.5 rounded-xl bg-[var(--paper-raised)] border border-[var(--rule)]">
-          <span class="text-xl flex-shrink-0 mt-0.5">🌅</span>
-          <div class="text-xs text-[var(--ink-body)] leading-relaxed flex-grow">
-            Αυριανή Ώρα Έναρξης: Το πρωινό Sovereign Broadsheet θα εκδοθεί στις 07:30 ώρα Κύπρου.
+            <div class="p-4 sm:p-5 rounded-2xl bg-[var(--paper)] border border-[var(--rule)] shadow-2xs">
+              <div class="t-body-sm text-[var(--ink-body)] leading-relaxed"><strong class="font-bold text-[var(--ink)]">Έως 6 Νοεμβρίου 2026:</strong> Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (<a href="https://www.gov.cy" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline font-semibold">gov.cy</a>).</div>
+            </div>
           </div>
-        </li>
-        
-        </ul>
-      </div>
-    </section>
-
-    <!-- ==================== 🏛️ 7. ΣΥΝΔΕΣΗ ΜΕ ΤΟ ΠΡΩΙΝΟ BROADSHEET ==================== -->
-    <div class="card p-6 bg-gradient-to-r from-amber-500/5 via-[var(--paper-raised)] to-[var(--paper-raised)] border-l-4 border-[var(--accent)] flex flex-wrap items-center justify-between gap-4 shadow-xs">
-      <div class="max-w-2xl">
-        <div class="text-xs font-mono font-bold uppercase tracking-wider text-[var(--accent)] mb-1">
-          🏛️ THE SOVEREIGN MORNING BROADSHEET
         </div>
-        <h3 class="font-editorial text-xl font-bold text-[var(--ink)] mb-1">
-          Χρειάζεστε την πλήρη ανάλυση της ημέρας;
-        </h3>
-        <p class="text-xs text-[var(--ink-body)] leading-relaxed">
-          Ανατρέξτε στην πρωινή έκδοση (07:30) για το πλήρες ρεπορτάζ Κύπρου, τον υπολογιστή δανείων Euribor, την εβδομαδιαία έκθεση ακινήτων Λεμεσού και τα διεθνή νέα.
-        </p>
-      </div>
-      <a href="briefings/2026-10-09.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent)] text-white font-bold text-xs hover:opacity-90 transition shadow">
-        <span>Άνοιγμα Πρωινού Broadsheet</span> <span>➔</span>
-      </a>
+      </section>
     </div>
 
     <!-- ==================== 🔍 11. ΓΙΑ ΑΥΡΙΟ ==================== -->
@@ -2162,25 +2231,6 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="mt-16 border-t border-[var(--rule)] bg-[var(--paper-raised)] py-8 px-4 text-xs text-[var(--ink-quiet)]">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
-      <div class="space-y-1">
-        <div class="font-bold text-[var(--ink)] font-masthead">THE ORACLE SOVEREIGN</div>
-        <div>Confidential Executive Briefing · Night Debrief Edition</div>
-      </div>
-      <div class="flex items-center gap-4 font-mono text-[11px]">
-        <a href="index.html" class="hover:text-[var(--accent)]">Αρχική</a>
-        <span>·</span>
-        <a href="briefings/2026-10-09.html" class="hover:text-[var(--accent)]">Πρωινό Broadsheet</a>
-        <span>·</span>
-        <a href="briefings/2026-10-09-midday.html" class="hover:text-[var(--accent)]">Μεσημβρινός Παλμός</a>
-        <span>·</span>
-        <button onclick="window.print()" class="hover:text-[var(--accent)]">Εκτύπωση PDF</button>
-      </div>
-    </div>
-  </footer>
-
   
   <!-- ⚡ 24/7 LIVE WIRE DRAWER MODAL -->
   <div id="wireDrawerModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden justify-end transition-opacity duration-300">
@@ -2201,104 +2251,505 @@
     </div>
   </div>
   <script id="initialWireData" type="application/json">
-[{"id": "d6e4c0cc12b6472aa58e1acbd4939193d109ffcbf0aae8f5551bc6a3a55301c8", "title": "Spanish scientists find first evidence of Diplodocus dinosaur in Europe", "link": "https://www.dw.com/en/spanish-scientists-find-first-evidence-of-diplodocus-dinosaur-in-europe/a-79277825?maca=en-rss-en-all-1573-rdf", "snippet": "Paleontologists in Spain say they have found the first evidence of the long-necked Diplodocus genus of dinosaur outside of North America. They found bones at the rich La Tejeria fossil site in Teruel in eastern Spain.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "d6d2775f228081b09915ff36975b228b65a3225c3208a42d97b72dff434e14ff", "title": "German drama 'Blindspot Berlin' revisits 2016 Christmas market attack", "link": "https://www.dw.com/en/german-drama-blindspot-berlin-revisits-2016-christmas-market-attack/a-79281162?maca=en-rss-en-all-1573-rdf", "snippet": "A decade after the terrorist attack on a Berlin Christmas market, a new German miniseries looks into the institutional failures that allowed the deadly truck rampage to happen.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0440ddd655874f0c7db77c5ab0dc380ecf52726d1e41e0ecf8696f810e900ac3", "title": "Jews once lived lived here: When houses tell stories", "link": "https://www.dw.com/en/jews-once-lived-lived-here-when-houses-tell-stories/a-79264813?maca=en-rss-en-all-1573-rdf", "snippet": "Time and again, residents tracing the history of their homes discover the lives of Jewish predecessors who fled or were deported amid stories of suffering and loss.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "1f43861fded956af94f6ea73accc2413b0250f891f3272737a8574823f03a94a", "title": "VAR's mission creep a problem for football", "link": "https://www.dw.com/en/var-s-mission-creep-a-problem-for-football/a-79272642?maca=en-rss-en-all-1573-rdf", "snippet": "After a decade of use, questions around VAR in football are louder than ever. Has the technology strayed too far from its remit?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "ded7e987853fddcc59182f0af0cd5ae987e0b42fe8fa7f2fbf0cb95259fca022", "title": "Beethoven and Andy Warhol: Rebel icons on show in Bonn", "link": "https://www.dw.com/en/beethoven-and-andy-warhol-rebel-icons-on-show-in-bonn/a-79296944?maca=en-rss-en-all-1573-rdf", "snippet": "The new exhibition \"Beethoven by Warhol\" at the Beethoven House in Bonn presents the pop artist's late masterpiece: a picture of Ludwig van Beethoven. The exhibition shares the story of the work with the public.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "9dc5a14d187bcc558db6cf3d38c6c73fee9aad825e7996934d7b72ffe11fd39c", "title": "Women's football in Germany booming, but still much to do", "link": "https://www.dw.com/en/women-s-football-in-germany-booming-but-still-much-to-do/a-79291687?maca=en-rss-en-all-1573-rdf", "snippet": "Women's football is growing rapidly, particularly in Germany. Nevertheless, equal pay and investment remain major talking points.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "59329bb1602187f5dd31995d3b172c13fc1e1a68ec3ae941e48f82b1325ded2b", "title": "Rebels, workers, radicals: The making of 'Red Berlin'", "link": "https://www.dw.com/en/rebels-workers-radicals-the-making-of-red-berlin/a-79325410?maca=en-rss-en-all-1573-rdf", "snippet": "Bloody May, student sit-ins and the squatter movement: Berlin has long been a hotbed for working-class organizing and radical left-wing politics.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "e695785fe7d07ab3fdb09414eda766cb67a4c07a07e164b16b33f0cdbc693e7f", "title": "Summer of 2026 broke records in Europe, and caused deaths", "link": "https://www.dw.com/en/summer-of-2026-broke-records-in-europe-and-caused-deaths/a-79339630?maca=en-rss-en-all-1573-rdf", "snippet": "The summer of 2026 was not only the hottest on record in Europe, it also saw a record number of people die. More than 16,000 are thought to have died because of the heat in Germany alone.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "94124089471dd6403841d654227a6df8ae44eda0edb7b5dd7b7edd1090e0a561", "title": "Princess Diana's brother makes explosive claims about royals in new memoir", "link": "https://www.dw.com/en/princess-diana-s-brother-makes-explosive-claims-about-royals-in-new-memoir/a-79309465?maca=en-rss-en-all-1573-rdf", "snippet": "Here are some of the key revelations from Charles Earl Spencer's highly anticipated memoir \"Swan Song: Diana, My Sister.\" It has already provoked Buckingham Palace to react.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "5bb1e5b86b2fb266fc2dafee61d8be372623e432fbc86ff7a783ab9bdfbd42c8", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "link": "https://www.dw.com/en/will-germany-have-enough-gas-this-winter-amid-energy-supply-crunch/a-79360317?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's gas storage sites are far less full than in recent years. Officials say supplies are secure, but analysts warn that a cold winter or import disruptions could push prices higher. So how secure is the supply?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "8a710752aa99a9fce9827a1f7b93fff0d8aa65b785e4813580db7b539f3ecfcb", "title": "Male infertility is 'grossly underreported'", "link": "https://www.dw.com/en/male-infertility-is-grossly-underreported/a-79368722?maca=en-rss-en-all-1573-rdf", "snippet": "It's not all on women anymore — doctors do test men for sperm count and motility. But still too few men get checked, possibly due to a misconception that a healthy sex life means healthy sperm. Spoiler: It doesn't.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "a08607ebfb4991831ff92e9dcf3d3abd6624f5868056480ec20cf316e82015b9", "title": "Could we see MMA at the Olympics?", "link": "https://www.dw.com/en/could-we-see-mma-at-the-olympics/a-79369605?maca=en-rss-en-all-1573-rdf", "snippet": "Mixed martial arts has made its debut at the Asian Games this week. It takes the sport closer to the Olympics, but there are doubts about the next step — and the influence of the popular and lucrative UFC.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "49ce22b682d8d7b7999034537cc76481b3039e460aedf3edbeb8526f56ae8054", "title": "Living in the shadow of LA's hidden oil wells", "link": "https://www.dw.com/en/living-in-the-shadow-of-la-s-hidden-oil-wells/a-79237420?maca=en-rss-en-all-1573-rdf", "snippet": "Many lifelong residents of Los Angeles have health impacts from growing up close to oil extraction. Now, the city is trying to close down the worst offenders, but it's an enormous task.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "902f1819ddc72b3e7e3e45a69d09fa0681ad9d10bb040233c68b45a0a36bbb18", "title": "China's new travel rules unsettle tech giants and talent", "link": "https://www.dw.com/en/china-s-new-travel-rules-unsettle-tech-giants-and-talent/a-79319937?maca=en-rss-en-all-1573-rdf", "snippet": "Beijing is locking the gates to stop expertise and capital in strategic industries from fleeing. The country accused of industrial-scale intellectual property theft now fears the West will take its own.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "676ac995956c25be12e1a60b24e21674265acef79074ac688c7e7959e042f7be", "title": "El Nino explained: How the weather pattern affects hurricanes and tropical storms", "link": "https://www.dw.com/en/el-nino-explained-how-the-weather-pattern-affects-hurricanes-and-tropical-storms/a-79382511?maca=en-rss-en-all-1573-rdf", "snippet": "From drought to major floods and extreme heat, El Nino will have a huge impact on the world's weather. In the Atlantic, it could mean a season without hurricanes.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "498f914da25dbc6b84042107dd48efd75c2b948d2f27d8fdcff3d31e5f2ff345", "title": "Three-way battle for power in world chess: Who will be elected FIDE president in Samarkand?", "link": "https://www.dw.com/en/three-way-battle-for-power-in-world-chess-who-will-be-elected-fide-president-in-samarkand/a-79413301?maca=en-rss-en-all-1573-rdf", "snippet": "The era of Russian presidents is coming to an end at the World Chess Federation (FIDE). Two Germans and one Kazakh are up for election. Among the issues at play are money, Kremlin influence, and unanswered questions.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "478ec617dc659eb678a7c43fc72620549b459add5eb8991e8aa759eeab499a19", "title": "Jürgen Klopp starts Germany job with shaky Netherlands draw", "link": "https://www.dw.com/en/jürgen-klopp-starts-germany-job-with-shaky-netherlands-draw/a-79420143?maca=en-rss-en-all-1573-rdf", "snippet": "A late Netherlands goal denied Jürgen Klopp a win in his first match as Germany coach. The former Liverpool and Borussia Dortmund boss has big ambitions, but the game showed he's going to need more time to achieve them.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "8643823ab44401883d43c4d7a0194fe572489200ab296641d0f6952142ecfa7e", "title": "Bundesliga, other top European leagues call for major FIFA reforms", "link": "https://www.dw.com/en/bundesliga-other-top-european-leagues-call-for-major-fifa-reforms/a-79431717?maca=en-rss-en-all-1573-rdf", "snippet": "The Bundesliga and three other leading European football leagues have said major reforms to world-governing body FIFA are \"essential.\" However, they stopped short of calling for the resignation of boss Gianni Infantino.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "5b950eab031a27dcdf514795b24255301a9f98ff42217523c65f2d23b858a840", "title": "What would Francis of Assisi make of his fame today?", "link": "https://www.dw.com/en/what-would-francis-of-assisi-make-of-his-fame-today/a-79346151?maca=en-rss-en-all-1573-rdf", "snippet": "The Catholic saint renounced wealth and fame to become a mendicant friar. Yet throughout history, his teachings and life have inspired popes, Dante and even Mussolini.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "8b083581ef2161ef1072955e16abeaefe377d94d75bf3d94a2430ea66614b09f", "title": "Will Jürgen Klopp's charisma be enough for Germany?", "link": "https://www.dw.com/en/will-jürgen-klopp-s-charisma-be-enough-for-germany/a-79455266?maca=en-rss-en-all-1573-rdf", "snippet": "After defeat to Greece, Jürgen Klopp faces the first real test of his tenure as coach of Germany's national men's football team. Can his charisma alone push this group forward?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "113ffb65851bee5e014b85bc372e7834415a7e30594247b7ddb174c4562a4c8b", "title": "Global trade weathers Iran, Ukraine and Trump's tariffs", "link": "https://www.dw.com/en/global-trade-weathers-iran-ukraine-and-trump-s-tariffs/a-79352643?maca=en-rss-en-all-1573-rdf", "snippet": "Over the past six years, COVID, two wars and Donald Trump's tariffs have shaken world trade. With globalization already stalling, is this a temporary shock or the start of a great reversal?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "44f2dcfda347cc340b7de11385d0ed004cb0da99b7e59882b733a5c7bfc19196", "title": "South Park satirist pushes for accountability in Cornell gang-rape lawsuit", "link": "https://www.dw.com/en/south-park-satirist-pushes-for-accountability-in-cornell-gang-rape-lawsuit/a-79475382?maca=en-rss-en-all-1573-rdf", "snippet": "Writer Toby Morton is using a new website to amplify allegations in a high-profile sexual assault lawsuit involving seven Cornell students. The reopening of the case is causing an outcry on social media.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "dd4b500604bc02ac305efd2bd4aa35648cf9d9386584b06d62ae3718e191bf5c", "title": "El Nino is a 'postcard from the future' — and could cause 451,000 excess heat deaths", "link": "https://www.dw.com/en/el-nino-is-a-postcard-from-the-future-and-could-cause-451-000-excess-heat-deaths/a-79430945?maca=en-rss-en-all-1573-rdf", "snippet": "The current El Nino could cause 451,000 excess heat deaths. Researchers warn it offers a glimpse of temperatures that may become normal within 20 years.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "1b89ad2098c2a28366a96323870b455c5ddd6507126be8dea59e1db293a94103", "title": "Is US President Donald Trump right to rename AI as 'Super Intelligence'?", "link": "https://www.dw.com/en/is-us-president-donald-trump-right-to-rename-ai-as-super-intelligence/a-79430388?maca=en-rss-en-all-1573-rdf", "snippet": "Donald Trump thinks the name artificial intelligence sounds \"fake\" and has ordered US agencies to use \"Super Intelligence\" instead. Yet, tech firms and researchers have little reason to play along.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "9d5ddf99b70b6038e408ed54640c1493f0055c9861223c6c65a519058c425ec6", "title": "Senegal's Youth Olympics makes Olympics in Africa 'logical'", "link": "https://www.dw.com/en/senegal-s-youth-olympics-makes-olympics-in-africa-logical/a-79468975?maca=en-rss-en-all-1573-rdf", "snippet": "The Youth Olympics are to be hosted in Africa for the first time ever. The edition in Senegal is also a chance to prove the continent can host a full Olympics in the future.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "81ded575bb91bc89e5238ac14386b9e6e61f337cadef4b932de616f96571950e", "title": "Germany news: Merz lauds NATO with Westphalian Peace Prize", "link": "https://www.dw.com/en/germany-news-merz-lauds-nato-with-westphalian-peace-prize/live-79496180?maca=en-rss-en-all-1573-rdf", "snippet": "At a ceremony to honor NATO, the German chancellor warned that Russia will threaten the rest of Europe if it isn't stopped in Ukraine. In other news, the German military will set up its first drone regiment.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "e722cbf44e62bd1f9515ce5068a71d16cac225d8a0dfff3d5fbaf5d20a57c620", "title": "Trump says U.S. will not attack Iran before midterm election", "link": "https://www.cnbc.com/2026/10/08/iran-war-trump-midterm-election.html", "snippet": "Trump said talks with Tehran were “productive” as the Iran war pushes oil and gas prices higher and support for the conflict falls.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "6a53bee5faf1e67a9c26410929eee1ee8d70219e0814fbed7dad450e31d238fc", "title": "Ferrari’s chairman is bullish on AI. He’s less certain how businesses will cash in", "link": "https://www.cnbc.com/2026/10/09/john-elkann-ferrari-ai-technology.html", "snippet": "Ferrari chair John Elkann played down AI bubble fears, but acknowledged investment in the technology could outpace revenue generation.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0ae558caae855f8c4febddc848abef1451e7b01957f874a4b62977e93bdc33d6", "title": "The Indian billionaire investing in Trump's refinery project is also buying more Venezuelan crude", "link": "https://www.cnbc.com/2026/10/08/india-billionaire-trump-ambani-venezuela-oil.html", "snippet": "Outside the U.S., India is the biggest destination for Venezuelan oil, with Reliance Industries purchasing the bulk of it.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "13c19735eb761e8e947fbcd12a1f06f334be480e10b1543558eb0e9331132b03", "title": "Ray Dalio warns the stock market's cushion against rising bond yields is shrinking", "link": "https://www.cnbc.com/2026/10/08/ray-dalio-stocks-bond-yields.html", "snippet": "Ray Dalio says earnings have cushioned stocks from rising bond yields, but that buffer is shrinking as he warns free cash flow could weaken.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "af5be55d90ebc59d9b9a8c87447796b1517b3e306d63b8a5b543ac8538ec93c6", "title": "Trump strikes deal with Putin to supply Russian diesel to U.S. and global markets", "link": "https://www.cnbc.com/2026/10/09/trump-putin-russian-diesel-us-global-markets.html", "snippet": "President Donald Trump has few options to reduce diesel prices given the destruction done to refineries by the wars in Eastern Europe and the Middle East.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "2fb12cbdf936e329a00f3158687a6fbfbddd47b5b72fa61053ca9583895d756e", "title": "South Africa lawyer 'Navi' Pillay wins Nobel Peace Prize for efforts to prosecute war crimes, genocide", "link": "https://www.cnbc.com/2026/10/09/nobel-peace-prize-navanethem-navi-pillay-winner.html", "snippet": "Navanethem \"Navi\" Pillay was awarded the Nobel Peace Prize on Friday for her work promoting peace and international law.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "f009e9062a3c97e8ef64bc84c5d4e4b9d8d8b0390811957963aa522e9ec31b17", "title": "Delta CEO: 'Safety is going to make the call' on launching Saudi Arabia flight", "link": "https://www.cnbc.com/2026/10/09/delta-riyadh-flight-safety-houthi-attacks.html", "snippet": "Delta is weighing whether to continue with its Riyadh, Saudi Arabia flight debut as planned.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "7bd0bdc1aaa60087a57c750ea6de334cab6bec2e49ad95367c6220bd7124d813", "title": "India calls JD Vance's comments about immigrants 'deeply offensive'", "link": "https://www.cnbc.com/2026/10/09/india-us-immigration-h1b-visa.html", "snippet": "India calls comments of U.S. Vice President J.D. Vance about immigrants from the country \"deeply offensive.\"", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "c8c0ac6cee886cdf617ff4e18e3a8ec73e6ee2e554c0eb892648535706bbe317", "title": "Pilot killed in attacks by Iran-backed Houthis on Riyadh airport; Saudi-led coalition vows 'firm' response", "link": "https://www.cnbc.com/2026/10/09/saudi-us-iran-war-trump-hormuz.html", "snippet": "Two attacks were launched on Saudi Arabia's King Khalid International Airport Thursday, officials said.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "ed4c3abf8bfbbbebe227297c64bcf282350ee64ecf584204cb577f740bbeddd4", "title": "Treasury's Bessent hires Trump's controversial former Fed board pick, Judy Shelton, as advisor", "link": "https://www.cnbc.com/2026/10/09/judy-shelton-scott-bessent-treasury.html", "snippet": "Shelton's controversial economic ideas led the Senate to block her nomination to the Fed. Now she's going to be a counselor to the Treasury secretary.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["fed"]}, {"id": "e4474fbb6c52fd5a1d82d45af2fa554375be71e789710a12e8f6d027ec596954", "title": "The used car market is stagnant. Here's how to profit anyway", "link": "https://www.cnbc.com/2026/10/09/the-used-car-market-is-stagnant-heres-how-to-profit-anyway.html", "snippet": "Michael Khouw breaks down this short strangle options trade.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0691c768049245ae64429c095e70133c77216850c9958061376f41c7cbf122e1", "title": "Verizon posts worst day since 2002 as SpaceX U.S. network plans whack cell provider stocks", "link": "https://www.cnbc.com/2026/10/09/verizon-att-tmobile-stocks-spacex-network.html", "snippet": "SpaceX announced the spectrum deal Thursday, as the company aims to push deeper into the telecom market through its Starlink service.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "78bba40e55be9c27edf6a58c000bd37897b86a5ec12b50d2ac41204100e8b765", "title": "Junk bonds are 'flashing yellow.' Watch these warning signs", "link": "https://www.cnbc.com/2026/10/09/junk-bonds-are-flashing-yellow-watch-these-warning-signs.html", "snippet": "Spreads have widened in the high-yield bond market, but that doesn't tell the whole story.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "34fcffae8a3cb73a6ecccb479c42e4d267815c9b998ae5668664779a57274ae4", "title": "Americans' debt problems are flashing a warning not seen since the Great Recession", "link": "https://www.cnbc.com/2026/10/09/american-debt-delinquency.html", "snippet": "Researchers found that while wealth disparities narrowed somewhat, the ability to meet debt payments deteriorated significantly.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "42d02d6dda09380ff1995273840b06324d5a102c52d3d0e17c283e3f683a44bd", "title": "Diko, SEK agree on pension reform necessity", "link": "https://cyprus-mail.com/2026/10/09/diko-sek-agree-on-pension-reform-necessity", "snippet": "Diko and trade union SEK found common ground on Friday in discussions on mandatory provident funds and other main aspects of pension reforms, with Diko president Nicholas Papadopoulos saying the reforms must go ahead to improve the quality of life of elderly people. SEK general secretary Andreas Mat", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "15c4e3118aa1902c2f3f0d6fba1325e7f090362074859f9f798d3326def7b853", "title": "UN calls US plans to livestream execution ‘abhorrent’", "link": "https://cyprus-mail.com/2026/10/09/un-calls-us-plans-to-livestream-execution-abhorrent", "snippet": "The United Nations on Friday called US plans to livestream the execution of Nidal Hasan, the gunman who killed 13 people at the Fort Hood military base in 2009, “abhorrent” and said it could be a violation of prohibitions against torture. “These kinds of public executions we’ve seen in other countri", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "69697456fe7b5df8c2b257e74fd74f0af7bd9868efd59bbaf0694a2b3e4acd7a", "title": "Cyprus backs EU spending flexibility for energy security", "link": "https://cyprus-mail.com/2026/10/09/cyprus-backs-eu-spending-flexibility-for-energy-security", "snippet": "Finance Minister Makis Keravnos has called for greater flexibility in EU spending rules to allow Cyprus and other member states to support households and businesses while investing in energy security, as the conflict in the Middle East increases uncertainty over growth and inflation. Speaking at a E", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["inflation"]}, {"id": "98ddd261ed194b64f89eaf47228efdab46f35e642454e406ccf7991412421a39", "title": "Christodoulides: ‘no alternative but to solve Cyprus problem’", "link": "https://cyprus-mail.com/2026/10/09/christodoulides-no-alternative-but-to-solve-cyprus-problem", "snippet": "President Nikos Christodoulides has reiterated that there is “no other option” than resolving the Cyprus problem, saying the Greek Cypriot side is ready to resume negotiations immediately ahead of his meeting with Turkish Cypriot leader Tufan Erhurman on Tuesday. Speaking at the national refugee mee", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "57dff8a4cc402f8cce8035d09bcce4572a3e2198d4737463d599b6a3635f4e13", "title": "Our View: Fighting organised crime requires modern tools", "link": "https://cyprus-mail.com/2026/10/10/our-view-fighting-organised-crime-requires-modern-tools", "snippet": "Attempts by the Cyprus police to have legislation that would allow telecommunication interception date back to the last century. The Clerides government had also drafted legislation that would allow wiretapping and telecommunication interception – the main argument being that this would provide a to", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "287eb1d7d32a2c6ebd12167d5f2b3cbf20fccd106421b43ae0cf57baa4f22716", "title": "Safer gambling conference to tackle online risks", "link": "https://cyprus-mail.com/2026/10/10/safer-gambling-conference-to-tackle-online-risks", "snippet": "A host of experts and professionals will be discussing modern challenges and new approaches at Cyprus 9th Safer Gambling Conference on October 12 in Nicosia, titled ‘The Future of Player Protection: Shaping a More Sustainable Gambling Industry Through Innovation’. The conference will examine ways in", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "da7f4a0bf0c4cef8fac9e92719fe86c237134f679ae66e30c48d7803631b264d", "title": "Cyprus Business Now: economy, fuel, property, travel, GSI, Cyta, tourism, shipping", "link": "https://cyprus-mail.com/2026/10/10/cyprus-business-now-economy-fuel-property-travel-lng-gsi-cyta-tourism", "snippet": "Finance Minister Makis Keravnos on Friday called for greater flexibility in EU fiscal rules to allow member states to increase spending and support households and businesses struggling with inflation and the energy crisis. Speaking ahead of the Ecofin meeting in Luxembourg, Keravnos expressed confid", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["inflation"]}, {"id": "2a7038db69754792613d026389f9ebb80bf805d900c0e4d13b61e45f805621e4", "title": "Man City and playing by the rules", "link": "https://cyprus-mail.com/2026/10/10/playing-by-the-rules", "snippet": "The world of football marvelled at Manchester City’s extraordinary decade. It was not only the gathering of numerous trophies. It was the level of football they played that made them, for a time, almost untouchable. Cynics were quick to say that this was simply proof that an abundance of money is th", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0f9d84b548e5bc65d41eadabbe4e34487e45472d78ce4e06ab7171d195be222e", "title": "Horror films coming to Deryneia", "link": "https://cyprus-mail.com/2026/10/10/horror-films-coming-to-deryneia", "snippet": "October is here, and soon Halloween events and spooky gatherings will fill the cultural agenda. While many of those tend to be for children, this upcoming event is definitely not. After the success of the first Horror Cinema night by ProjectFilms101 last year, the team is taking over Avenue Garage i", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "6596a4e88ff41de0cebb0b89b0b08d69d97879cdcadc96fb9d80dcd308d9f618", "title": "Κραυγή απόγνωσης από τους φοιτητές: Δουλεύουν για να καλύψουν τα έξοδά(ΒΙΝΤΕΟ)", "link": "https://www.sigmalive.com/news/local/1332732/kraughi-apoghnosis-apo-toys-foitites-doyleuoyn-ghia-na-kalypsoyn-ta-eksodabinteo", "snippet": "Αντιμέτωποι με την ακρίβεια βρίσκονται οι φοιτητές, καθώς οι αυξήσεις στα ενοίκια, τα καύσιμα και γενικότερα στο κόστος ζωής δυσκολεύουν ολοένα και περισσότερο την καθημερινότητά τους. Η έναρξη της νέας ακαδημαϊκής χρονιάς βρίσκει πολλούς φοιτητές να προσπαθούν να τα βγάλουν πέρα με δυσκολία. Κάποιο", "source": "Sigmalive", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "46dc0726d073dc68da7769715184e839ee1916b30b482f1c7e31fff2fb6a3e10", "title": "Παναμάς: Ισχυρός σεισμός  7,6  Ρίχτερ - Προειδοποίηση για τσουνάμι (ΒΙΝΤΕΟ)", "link": "https://www.sigmalive.com/news/international/1332733/panamas-iskhiros-seismos-800-rikhter-proeidopiisi-ghia-tsoynami", "snippet": "Μια πολύ ισχυρή σεισμική δόνηση μεγέθους 7,6 βαθμών σημειώθηκε στα νότια παράλια του Παναμά, σύμφωνα με το αμερικανικό γεωλογικό ινστιτούτο (USGS). Ο σεισμός προερχόταν από εστιακό βάθος 10 χιλιομέτρων. Μάρτυρες που μίλησαν στο πρακτορείο Reuters είπαν ότι έγινε ιδιαίτερα αισθητός στην Πόλη του Πανα", "source": "Sigmalive", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["σεισμός"]}, {"id": "20d4198e72007300b817f639e7acd0a536c07e340f8bde0afd3ad802f0f29fe9", "title": "Μάκης Κεραυνός: Υπέρ της Τραπεζικής Ένωσης και ευελιξίας στην οικονομία", "link": "https://www.sigmalive.com/news/oikonomia/1332735/makis-keraunos-yper-tis-trapezikis-enosis-kai-efeliksias-stin-oikonomia", "snippet": "Την ικανοποίησή του για τη συμφωνία των «27» επί της δέσμης για την ενοποίηση των αγορών και την εποπτεία (MISP) εξέφρασε ο Υπουργός Οικονομικών Μάκης Κεραυνός, στο Συμβούλιο Υπουργών Οικονομικών της ΕΕ στο Λουξεμβούργο. Χαρακτήρισε τη λύση «έντιμο συμβιβασμό», ο οποίος δεν ικανοποιεί μεν όλες τις α", "source": "Sigmalive", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "883d6f0b63772e8b5f618373513face9d1a4a713d878faab76b05b37f0dbf501", "title": "Θλίψη για τον Ατανά Ντράμοφ", "link": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thlipsi-gia-ton-atana-ntramof", "snippet": "Θλίψη για τον Ατανά Ντράμοφ Channel A' Κατηγορία onisiforos.stavrou 12/10/2024 - 12:26", "source": "Kerkida", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "e49e363d20597c4cabd283258c4574edb807001ed5bc3124cc76acb70271ade1", "title": "5η αγωνιστική", "link": "https://www.kerkida.net/championship-round/5i-agonistiki-23", "snippet": "5η αγωνιστική vanaliv 04/09/2026 - 15:39 Παρασκευή 09/10/2026 Καρμιώτισσα - Ομόνοια 0 - 3 Άρθρο Αγώνα Σάββατο 10/10/2026 Krasava ENY - Απόλλωνας 18:00 -- ΑΠΟΕΛ - Ν. Σαλαμίνα 19:00 -- Κυριακή 11/10/2026 Ανόρθωση - Πάφος FC 18:00 -- ΑΕΛ - Ομόνοια 29M 19:00 -- Ολυμπιακός Λ. - Άρης 19:00 -- Δευτέρα 12/1", "source": "Kerkida", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "460de9909c0ef54e5d4d77c0eb7ead3a2c3d2ecef2ff2a0d5033f97e517cbc0f", "title": "Scotland's Forrest leads Open de Espana on day two", "link": "https://www.skysports.com/watch/video/13597026/open-de-espana-day-two-highlights", "snippet": "Highlights from day two of the Open de Espana at Club de Campo Villa de Madrid.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "42b1c94af8a9d27a91c9e982baffc6706b6ce46238e683ca0a0318622a5b58b7", "title": "Forrest holds halfway lead at Open de Espana", "link": "https://www.skysports.com/golf/news/12040/13597032/open-de-espana-grant-forrest-continues-good-record-to-take-one-stroke-lead-into-the-weekend-in-madrid", "snippet": "Scotland's Grant Forrest continued his good record at the Open de Espana to take a one-stroke lead into the weekend.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "ee01305496307936970a9b62336e63b7996f0a03de755ae495dc258fa60fdb84", "title": "Bowen's late penalty saved as West Ham held by QPR", "link": "https://www.skysports.com/football/west-ham-united-vs-queens-park-rangers/report/560605", "snippet": "Jarrod Bowen saw his 91st-minute penalty saved as West Ham missed the chance to move top of the Sky Bet Championship after a 1-1 draw with QPR.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "85383d6e8aaca193ebcfbbe03005108fdfea7177831928b70a1e59bb6df9f08d", "title": "Arteta says conscience clear over time at Man City", "link": "https://www.skysports.com/football/news/12040/13596973/man-city-charges-arsenal-boss-mikel-arteta-says-he-has-clear-conscience-over-his-time-at-etihad-after-serious-breaches-of-financial-rules", "snippet": "Mikel Arteta has said he has a clear conscience over his former club Manchester City's serious breaches of financial rules.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "92ec4f59222c9236c8ceabb22953e0c557421b5fd52e5189cc54d03a850e65d2", "title": "Papers: Man Utd forced into transfer market in January?", "link": "https://www.skysports.com/football/news/12040/13597035/man-utd-may-be-forced-into-transfer-market-in-january-paper-talk", "snippet": "The top stories and transfer rumours from Saturday's newspapers...", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "d96b1b8087150868bf01fe81e2de8a35d2fae8a48c2c5364fa52f8ec32f673d8", "title": "'You will see me back' - Smith vows 2027 return after Swiss Darts Trophy win", "link": "https://www.skysports.com/darts/news/12040/13597050/swiss-darts-trophy-former-world-champion-michael-smith-plans-on-playing-100-per-cent-of-the-tournaments-in-2027-after-opening-win", "snippet": "Former world champion Michael Smith says he plans on \"playing 100 per cent of the tournaments\" in 2027 after an opening win at the Swiss Darts Trophy.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}]
+[{"id": "d6e4c0cc12b6472aa58e1acbd4939193d109ffcbf0aae8f5551bc6a3a55301c8", "title": "Spanish scientists find first evidence of Diplodocus dinosaur in Europe", "link": "https://www.dw.com/en/spanish-scientists-find-first-evidence-of-diplodocus-dinosaur-in-europe/a-79277825?maca=en-rss-en-all-1573-rdf", "snippet": "Paleontologists in Spain say they have found the first evidence of the long-necked Diplodocus genus of dinosaur outside of North America. They found bones at the rich La Tejeria fossil site in Teruel in eastern Spain.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "d6d2775f228081b09915ff36975b228b65a3225c3208a42d97b72dff434e14ff", "title": "German drama 'Blindspot Berlin' revisits 2016 Christmas market attack", "link": "https://www.dw.com/en/german-drama-blindspot-berlin-revisits-2016-christmas-market-attack/a-79281162?maca=en-rss-en-all-1573-rdf", "snippet": "A decade after the terrorist attack on a Berlin Christmas market, a new German miniseries looks into the institutional failures that allowed the deadly truck rampage to happen.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0440ddd655874f0c7db77c5ab0dc380ecf52726d1e41e0ecf8696f810e900ac3", "title": "Jews once lived lived here: When houses tell stories", "link": "https://www.dw.com/en/jews-once-lived-lived-here-when-houses-tell-stories/a-79264813?maca=en-rss-en-all-1573-rdf", "snippet": "Time and again, residents tracing the history of their homes discover the lives of Jewish predecessors who fled or were deported amid stories of suffering and loss.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "1f43861fded956af94f6ea73accc2413b0250f891f3272737a8574823f03a94a", "title": "VAR's mission creep a problem for football", "link": "https://www.dw.com/en/var-s-mission-creep-a-problem-for-football/a-79272642?maca=en-rss-en-all-1573-rdf", "snippet": "After a decade of use, questions around VAR in football are louder than ever. Has the technology strayed too far from its remit?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "ded7e987853fddcc59182f0af0cd5ae987e0b42fe8fa7f2fbf0cb95259fca022", "title": "Beethoven and Andy Warhol: Rebel icons on show in Bonn", "link": "https://www.dw.com/en/beethoven-and-andy-warhol-rebel-icons-on-show-in-bonn/a-79296944?maca=en-rss-en-all-1573-rdf", "snippet": "The new exhibition \"Beethoven by Warhol\" at the Beethoven House in Bonn presents the pop artist's late masterpiece: a picture of Ludwig van Beethoven. The exhibition shares the story of the work with the public.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "9dc5a14d187bcc558db6cf3d38c6c73fee9aad825e7996934d7b72ffe11fd39c", "title": "Women's football in Germany booming, but still much to do", "link": "https://www.dw.com/en/women-s-football-in-germany-booming-but-still-much-to-do/a-79291687?maca=en-rss-en-all-1573-rdf", "snippet": "Women's football is growing rapidly, particularly in Germany. Nevertheless, equal pay and investment remain major talking points.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "59329bb1602187f5dd31995d3b172c13fc1e1a68ec3ae941e48f82b1325ded2b", "title": "Rebels, workers, radicals: The making of 'Red Berlin'", "link": "https://www.dw.com/en/rebels-workers-radicals-the-making-of-red-berlin/a-79325410?maca=en-rss-en-all-1573-rdf", "snippet": "Bloody May, student sit-ins and the squatter movement: Berlin has long been a hotbed for working-class organizing and radical left-wing politics.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "e695785fe7d07ab3fdb09414eda766cb67a4c07a07e164b16b33f0cdbc693e7f", "title": "Summer of 2026 broke records in Europe, and caused deaths", "link": "https://www.dw.com/en/summer-of-2026-broke-records-in-europe-and-caused-deaths/a-79339630?maca=en-rss-en-all-1573-rdf", "snippet": "The summer of 2026 was not only the hottest on record in Europe, it also saw a record number of people die. More than 16,000 are thought to have died because of the heat in Germany alone.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "94124089471dd6403841d654227a6df8ae44eda0edb7b5dd7b7edd1090e0a561", "title": "Princess Diana's brother makes explosive claims about royals in new memoir", "link": "https://www.dw.com/en/princess-diana-s-brother-makes-explosive-claims-about-royals-in-new-memoir/a-79309465?maca=en-rss-en-all-1573-rdf", "snippet": "Here are some of the key revelations from Charles Earl Spencer's highly anticipated memoir \"Swan Song: Diana, My Sister.\" It has already provoked Buckingham Palace to react.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "5bb1e5b86b2fb266fc2dafee61d8be372623e432fbc86ff7a783ab9bdfbd42c8", "title": "Will Germany have enough gas this winter amid energy supply crunch?", "link": "https://www.dw.com/en/will-germany-have-enough-gas-this-winter-amid-energy-supply-crunch/a-79360317?maca=en-rss-en-all-1573-rdf", "snippet": "Germany's gas storage sites are far less full than in recent years. Officials say supplies are secure, but analysts warn that a cold winter or import disruptions could push prices higher. So how secure is the supply?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "8a710752aa99a9fce9827a1f7b93fff0d8aa65b785e4813580db7b539f3ecfcb", "title": "Male infertility is 'grossly underreported'", "link": "https://www.dw.com/en/male-infertility-is-grossly-underreported/a-79368722?maca=en-rss-en-all-1573-rdf", "snippet": "It's not all on women anymore — doctors do test men for sperm count and motility. But still too few men get checked, possibly due to a misconception that a healthy sex life means healthy sperm. Spoiler: It doesn't.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "a08607ebfb4991831ff92e9dcf3d3abd6624f5868056480ec20cf316e82015b9", "title": "Could we see MMA at the Olympics?", "link": "https://www.dw.com/en/could-we-see-mma-at-the-olympics/a-79369605?maca=en-rss-en-all-1573-rdf", "snippet": "Mixed martial arts has made its debut at the Asian Games this week. It takes the sport closer to the Olympics, but there are doubts about the next step — and the influence of the popular and lucrative UFC.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "49ce22b682d8d7b7999034537cc76481b3039e460aedf3edbeb8526f56ae8054", "title": "Living in the shadow of LA's hidden oil wells", "link": "https://www.dw.com/en/living-in-the-shadow-of-la-s-hidden-oil-wells/a-79237420?maca=en-rss-en-all-1573-rdf", "snippet": "Many lifelong residents of Los Angeles have health impacts from growing up close to oil extraction. Now, the city is trying to close down the worst offenders, but it's an enormous task.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "902f1819ddc72b3e7e3e45a69d09fa0681ad9d10bb040233c68b45a0a36bbb18", "title": "China's new travel rules unsettle tech giants and talent", "link": "https://www.dw.com/en/china-s-new-travel-rules-unsettle-tech-giants-and-talent/a-79319937?maca=en-rss-en-all-1573-rdf", "snippet": "Beijing is locking the gates to stop expertise and capital in strategic industries from fleeing. The country accused of industrial-scale intellectual property theft now fears the West will take its own.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "4b54e7b4640f79f6bd4a43a8dcf97207ff690380603438eb6d9bd4ef46c353aa", "title": "Backlash over data centers tests Europe's AI ambitions", "link": "https://www.dw.com/en/backlash-over-data-centers-tests-europe-s-ai-ambitions/a-79419800?maca=en-rss-en-all-1573-rdf", "snippet": "Massive data centers needed to run AI are triggering protests across Europe. Their operators counter that they boost digital sovereignty and energy independence.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "498f914da25dbc6b84042107dd48efd75c2b948d2f27d8fdcff3d31e5f2ff345", "title": "Three-way battle for power in world chess: Who will be elected FIDE president in Samarkand?", "link": "https://www.dw.com/en/three-way-battle-for-power-in-world-chess-who-will-be-elected-fide-president-in-samarkand/a-79413301?maca=en-rss-en-all-1573-rdf", "snippet": "The era of Russian presidents is coming to an end at the World Chess Federation (FIDE). Two Germans and one Kazakh are up for election. Among the issues at play are money, Kremlin influence, and unanswered questions.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "478ec617dc659eb678a7c43fc72620549b459add5eb8991e8aa759eeab499a19", "title": "Jürgen Klopp starts Germany job with shaky Netherlands draw", "link": "https://www.dw.com/en/jürgen-klopp-starts-germany-job-with-shaky-netherlands-draw/a-79420143?maca=en-rss-en-all-1573-rdf", "snippet": "A late Netherlands goal denied Jürgen Klopp a win in his first match as Germany coach. The former Liverpool and Borussia Dortmund boss has big ambitions, but the game showed he's going to need more time to achieve them.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "8643823ab44401883d43c4d7a0194fe572489200ab296641d0f6952142ecfa7e", "title": "Bundesliga, other top European leagues call for major FIFA reforms", "link": "https://www.dw.com/en/bundesliga-other-top-european-leagues-call-for-major-fifa-reforms/a-79431717?maca=en-rss-en-all-1573-rdf", "snippet": "The Bundesliga and three other leading European football leagues have said major reforms to world-governing body FIFA are \"essential.\" However, they stopped short of calling for the resignation of boss Gianni Infantino.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "5b950eab031a27dcdf514795b24255301a9f98ff42217523c65f2d23b858a840", "title": "What would Francis of Assisi make of his fame today?", "link": "https://www.dw.com/en/what-would-francis-of-assisi-make-of-his-fame-today/a-79346151?maca=en-rss-en-all-1573-rdf", "snippet": "The Catholic saint renounced wealth and fame to become a mendicant friar. Yet throughout history, his teachings and life have inspired popes, Dante and even Mussolini.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "8b083581ef2161ef1072955e16abeaefe377d94d75bf3d94a2430ea66614b09f", "title": "Will Jürgen Klopp's charisma be enough for Germany?", "link": "https://www.dw.com/en/will-jürgen-klopp-s-charisma-be-enough-for-germany/a-79455266?maca=en-rss-en-all-1573-rdf", "snippet": "After defeat to Greece, Jürgen Klopp faces the first real test of his tenure as coach of Germany's national men's football team. Can his charisma alone push this group forward?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "113ffb65851bee5e014b85bc372e7834415a7e30594247b7ddb174c4562a4c8b", "title": "Global trade weathers Iran, Ukraine and Trump's tariffs", "link": "https://www.dw.com/en/global-trade-weathers-iran-ukraine-and-trump-s-tariffs/a-79352643?maca=en-rss-en-all-1573-rdf", "snippet": "Over the past six years, COVID, two wars and Donald Trump's tariffs have shaken world trade. With globalization already stalling, is this a temporary shock or the start of a great reversal?", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "44f2dcfda347cc340b7de11385d0ed004cb0da99b7e59882b733a5c7bfc19196", "title": "South Park satirist pushes for accountability in Cornell gang-rape lawsuit", "link": "https://www.dw.com/en/south-park-satirist-pushes-for-accountability-in-cornell-gang-rape-lawsuit/a-79475382?maca=en-rss-en-all-1573-rdf", "snippet": "Writer Toby Morton is using a new website to amplify allegations in a high-profile sexual assault lawsuit involving seven Cornell students. The reopening of the case is causing an outcry on social media.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "dd4b500604bc02ac305efd2bd4aa35648cf9d9386584b06d62ae3718e191bf5c", "title": "El Nino is a 'postcard from the future' — and could cause 451,000 excess heat deaths", "link": "https://www.dw.com/en/el-nino-is-a-postcard-from-the-future-and-could-cause-451-000-excess-heat-deaths/a-79430945?maca=en-rss-en-all-1573-rdf", "snippet": "The current El Nino could cause 451,000 excess heat deaths. Researchers warn it offers a glimpse of temperatures that may become normal within 20 years.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "1b89ad2098c2a28366a96323870b455c5ddd6507126be8dea59e1db293a94103", "title": "Is US President Donald Trump right to rename AI as 'Super Intelligence'?", "link": "https://www.dw.com/en/is-us-president-donald-trump-right-to-rename-ai-as-super-intelligence/a-79430388?maca=en-rss-en-all-1573-rdf", "snippet": "Donald Trump thinks the name artificial intelligence sounds \"fake\" and has ordered US agencies to use \"Super Intelligence\" instead. Yet, tech firms and researchers have little reason to play along.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "9d5ddf99b70b6038e408ed54640c1493f0055c9861223c6c65a519058c425ec6", "title": "Senegal's Youth Olympics makes Olympics in Africa 'logical'", "link": "https://www.dw.com/en/senegal-s-youth-olympics-makes-olympics-in-africa-logical/a-79468975?maca=en-rss-en-all-1573-rdf", "snippet": "The Youth Olympics are to be hosted in Africa for the first time ever. The edition in Senegal is also a chance to prove the continent can host a full Olympics in the future.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "81ded575bb91bc89e5238ac14386b9e6e61f337cadef4b932de616f96571950e", "title": "Germany news: Merz lauds NATO with Westphalian Peace Prize", "link": "https://www.dw.com/en/germany-news-merz-lauds-nato-with-westphalian-peace-prize/live-79496180?maca=en-rss-en-all-1573-rdf", "snippet": "At a ceremony to honor NATO, the German chancellor warned that Russia will threaten the rest of Europe if it isn't stopped in Ukraine. In other news, the German military will set up its first drone regiment.", "source": "DW World", "category": "international", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "e722cbf44e62bd1f9515ce5068a71d16cac225d8a0dfff3d5fbaf5d20a57c620", "title": "Trump says U.S. will not attack Iran before midterm election", "link": "https://www.cnbc.com/2026/10/08/iran-war-trump-midterm-election.html", "snippet": "Trump said talks with Tehran were “productive” as the Iran war pushes oil and gas prices higher and support for the conflict falls.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "6a53bee5faf1e67a9c26410929eee1ee8d70219e0814fbed7dad450e31d238fc", "title": "Ferrari’s chairman is bullish on AI. He’s less certain how businesses will cash in", "link": "https://www.cnbc.com/2026/10/09/john-elkann-ferrari-ai-technology.html", "snippet": "Ferrari chair John Elkann played down AI bubble fears, but acknowledged investment in the technology could outpace revenue generation.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0ae558caae855f8c4febddc848abef1451e7b01957f874a4b62977e93bdc33d6", "title": "The Indian billionaire investing in Trump's refinery project is also buying more Venezuelan crude", "link": "https://www.cnbc.com/2026/10/08/india-billionaire-trump-ambani-venezuela-oil.html", "snippet": "Outside the U.S., India is the biggest destination for Venezuelan oil, with Reliance Industries purchasing the bulk of it.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "13c19735eb761e8e947fbcd12a1f06f334be480e10b1543558eb0e9331132b03", "title": "Ray Dalio warns the stock market's cushion against rising bond yields is shrinking", "link": "https://www.cnbc.com/2026/10/08/ray-dalio-stocks-bond-yields.html", "snippet": "Ray Dalio says earnings have cushioned stocks from rising bond yields, but that buffer is shrinking as he warns free cash flow could weaken.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "af5be55d90ebc59d9b9a8c87447796b1517b3e306d63b8a5b543ac8538ec93c6", "title": "Trump strikes deal with Putin to supply Russian diesel to U.S. and global markets", "link": "https://www.cnbc.com/2026/10/09/trump-putin-russian-diesel-us-global-markets.html", "snippet": "President Donald Trump has few options to reduce diesel prices given the destruction done to refineries by the wars in Eastern Europe and the Middle East.", "source": "CNBC Markets", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "2fb12cbdf936e329a00f3158687a6fbfbddd47b5b72fa61053ca9583895d756e", "title": "South Africa lawyer 'Navi' Pillay wins Nobel Peace Prize for efforts to prosecute war crimes, genocide", "link": "https://www.cnbc.com/2026/10/09/nobel-peace-prize-navanethem-navi-pillay-winner.html", "snippet": "Navanethem \"Navi\" Pillay was awarded the Nobel Peace Prize on Friday for her work promoting peace and international law.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "f009e9062a3c97e8ef64bc84c5d4e4b9d8d8b0390811957963aa522e9ec31b17", "title": "Delta CEO: 'Safety is going to make the call' on launching Saudi Arabia flight", "link": "https://www.cnbc.com/2026/10/09/delta-riyadh-flight-safety-houthi-attacks.html", "snippet": "Delta is weighing whether to continue with its Riyadh, Saudi Arabia flight debut as planned.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "7bd0bdc1aaa60087a57c750ea6de334cab6bec2e49ad95367c6220bd7124d813", "title": "India calls JD Vance's comments about immigrants 'deeply offensive'", "link": "https://www.cnbc.com/2026/10/09/india-us-immigration-h1b-visa.html", "snippet": "India calls comments of U.S. Vice President J.D. Vance about immigrants from the country \"deeply offensive.\"", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "c8c0ac6cee886cdf617ff4e18e3a8ec73e6ee2e554c0eb892648535706bbe317", "title": "Pilot killed in attacks by Iran-backed Houthis on Riyadh airport; Saudi-led coalition vows 'firm' response", "link": "https://www.cnbc.com/2026/10/09/saudi-us-iran-war-trump-hormuz.html", "snippet": "Two attacks were launched on Saudi Arabia's King Khalid International Airport Thursday, officials said.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "ed4c3abf8bfbbbebe227297c64bcf282350ee64ecf584204cb577f740bbeddd4", "title": "Treasury's Bessent hires Trump's controversial former Fed board pick, Judy Shelton, as advisor", "link": "https://www.cnbc.com/2026/10/09/judy-shelton-scott-bessent-treasury.html", "snippet": "Shelton's controversial economic ideas led the Senate to block her nomination to the Fed. Now she's going to be a counselor to the Treasury secretary.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["fed"]}, {"id": "e4474fbb6c52fd5a1d82d45af2fa554375be71e789710a12e8f6d027ec596954", "title": "The used car market is stagnant. Here's how to profit anyway", "link": "https://www.cnbc.com/2026/10/09/the-used-car-market-is-stagnant-heres-how-to-profit-anyway.html", "snippet": "Michael Khouw breaks down this short strangle options trade.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0691c768049245ae64429c095e70133c77216850c9958061376f41c7cbf122e1", "title": "Verizon posts worst day since 2002 as SpaceX U.S. network plans whack cell provider stocks", "link": "https://www.cnbc.com/2026/10/09/verizon-att-tmobile-stocks-spacex-network.html", "snippet": "SpaceX announced the spectrum deal Thursday, as the company aims to push deeper into the telecom market through its Starlink service.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "78bba40e55be9c27edf6a58c000bd37897b86a5ec12b50d2ac41204100e8b765", "title": "Junk bonds are 'flashing yellow.' Watch these warning signs", "link": "https://www.cnbc.com/2026/10/09/junk-bonds-are-flashing-yellow-watch-these-warning-signs.html", "snippet": "Spreads have widened in the high-yield bond market, but that doesn't tell the whole story.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "34fcffae8a3cb73a6ecccb479c42e4d267815c9b998ae5668664779a57274ae4", "title": "Americans' debt problems are flashing a warning not seen since the Great Recession", "link": "https://www.cnbc.com/2026/10/09/american-debt-delinquency.html", "snippet": "Researchers found that while wealth disparities narrowed somewhat, the ability to meet debt payments deteriorated significantly.", "source": "CNBC Top News", "category": "finance", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "42d02d6dda09380ff1995273840b06324d5a102c52d3d0e17c283e3f683a44bd", "title": "Diko, SEK agree on pension reform necessity", "link": "https://cyprus-mail.com/2026/10/09/diko-sek-agree-on-pension-reform-necessity", "snippet": "Diko and trade union SEK found common ground on Friday in discussions on mandatory provident funds and other main aspects of pension reforms, with Diko president Nicholas Papadopoulos saying the reforms must go ahead to improve the quality of life of elderly people. SEK general secretary Andreas Mat", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "15c4e3118aa1902c2f3f0d6fba1325e7f090362074859f9f798d3326def7b853", "title": "UN calls US plans to livestream execution ‘abhorrent’", "link": "https://cyprus-mail.com/2026/10/09/un-calls-us-plans-to-livestream-execution-abhorrent", "snippet": "The United Nations on Friday called US plans to livestream the execution of Nidal Hasan, the gunman who killed 13 people at the Fort Hood military base in 2009, “abhorrent” and said it could be a violation of prohibitions against torture. “These kinds of public executions we’ve seen in other countri", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "69697456fe7b5df8c2b257e74fd74f0af7bd9868efd59bbaf0694a2b3e4acd7a", "title": "Cyprus backs EU spending flexibility for energy security", "link": "https://cyprus-mail.com/2026/10/09/cyprus-backs-eu-spending-flexibility-for-energy-security", "snippet": "Finance Minister Makis Keravnos has called for greater flexibility in EU spending rules to allow Cyprus and other member states to support households and businesses while investing in energy security, as the conflict in the Middle East increases uncertainty over growth and inflation. Speaking at a E", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["sanctions"]}, {"id": "98ddd261ed194b64f89eaf47228efdab46f35e642454e406ccf7991412421a39", "title": "Christodoulides: ‘no alternative but to solve Cyprus problem’", "link": "https://cyprus-mail.com/2026/10/09/christodoulides-no-alternative-but-to-solve-cyprus-problem", "snippet": "President Nikos Christodoulides has reiterated that there is “no other option” than resolving the Cyprus problem, saying the Greek Cypriot side is ready to resume negotiations immediately ahead of his meeting with Turkish Cypriot leader Tufan Erhurman on Tuesday. Speaking at the national refugee mee", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "57dff8a4cc402f8cce8035d09bcce4572a3e2198d4737463d599b6a3635f4e13", "title": "Our View: Fighting organised crime requires modern tools", "link": "https://cyprus-mail.com/2026/10/10/our-view-fighting-organised-crime-requires-modern-tools", "snippet": "Attempts by the Cyprus police to have legislation that would allow telecommunication interception date back to the last century. The Clerides government had also drafted legislation that would allow wiretapping and telecommunication interception – the main argument being that this would provide a to", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "287eb1d7d32a2c6ebd12167d5f2b3cbf20fccd106421b43ae0cf57baa4f22716", "title": "Safer gambling conference to tackle online risks", "link": "https://cyprus-mail.com/2026/10/10/safer-gambling-conference-to-tackle-online-risks", "snippet": "A host of experts and professionals will be discussing modern challenges and new approaches at Cyprus 9th Safer Gambling Conference on October 12 in Nicosia, titled ‘The Future of Player Protection: Shaping a More Sustainable Gambling Industry Through Innovation’. The conference will examine ways in", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "da7f4a0bf0c4cef8fac9e92719fe86c237134f679ae66e30c48d7803631b264d", "title": "Cyprus Business Now: economy, fuel, property, travel, GSI, Cyta, tourism, shipping", "link": "https://cyprus-mail.com/2026/10/10/cyprus-business-now-economy-fuel-property-travel-lng-gsi-cyta-tourism", "snippet": "Finance Minister Makis Keravnos on Friday called for greater flexibility in EU fiscal rules to allow member states to increase spending and support households and businesses struggling with inflation and the energy crisis. Speaking ahead of the Ecofin meeting in Luxembourg, Keravnos expressed confid", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["inflation"]}, {"id": "2a7038db69754792613d026389f9ebb80bf805d900c0e4d13b61e45f805621e4", "title": "Man City and playing by the rules", "link": "https://cyprus-mail.com/2026/10/10/playing-by-the-rules", "snippet": "The world of football marvelled at Manchester City’s extraordinary decade. It was not only the gathering of numerous trophies. It was the level of football they played that made them, for a time, almost untouchable. Cynics were quick to say that this was simply proof that an abundance of money is th", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "0f9d84b548e5bc65d41eadabbe4e34487e45472d78ce4e06ab7171d195be222e", "title": "Horror films coming to Deryneia", "link": "https://cyprus-mail.com/2026/10/10/horror-films-coming-to-deryneia", "snippet": "October is here, and soon Halloween events and spooky gatherings will fill the cultural agenda. While many of those tend to be for children, this upcoming event is definitely not. After the success of the first Horror Cinema night by ProjectFilms101 last year, the team is taking over Avenue Garage i", "source": "Cyprus Mail", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "6596a4e88ff41de0cebb0b89b0b08d69d97879cdcadc96fb9d80dcd308d9f618", "title": "Κραυγή απόγνωσης από τους φοιτητές: Δουλεύουν για να καλύψουν τα έξοδά(ΒΙΝΤΕΟ)", "link": "https://www.sigmalive.com/news/local/1332732/kraughi-apoghnosis-apo-toys-foitites-doyleuoyn-ghia-na-kalypsoyn-ta-eksodabinteo", "snippet": "Αντιμέτωποι με την ακρίβεια βρίσκονται οι φοιτητές, καθώς οι αυξήσεις στα ενοίκια, τα καύσιμα και γενικότερα στο κόστος ζωής δυσκολεύουν ολοένα και περισσότερο την καθημερινότητά τους. Η έναρξη της νέας ακαδημαϊκής χρονιάς βρίσκει πολλούς φοιτητές να προσπαθούν να τα βγάλουν πέρα με δυσκολία. Κάποιο", "source": "Sigmalive", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "46dc0726d073dc68da7769715184e839ee1916b30b482f1c7e31fff2fb6a3e10", "title": "Παναμάς: Ισχυρός σεισμός  7,6  Ρίχτερ - Προειδοποίηση για τσουνάμι (ΒΙΝΤΕΟ)", "link": "https://www.sigmalive.com/news/international/1332733/panamas-iskhiros-seismos-800-rikhter-proeidopiisi-ghia-tsoynami", "snippet": "Μια πολύ ισχυρή σεισμική δόνηση μεγέθους 7,6 βαθμών σημειώθηκε στα νότια παράλια του Παναμά, σύμφωνα με το αμερικανικό γεωλογικό ινστιτούτο (USGS). Ο σεισμός προερχόταν από εστιακό βάθος 10 χιλιομέτρων. Μάρτυρες που μίλησαν στο πρακτορείο Reuters είπαν ότι έγινε ιδιαίτερα αισθητός στην Πόλη του Πανα", "source": "Sigmalive", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": true, "tags": ["σεισμός"]}, {"id": "20d4198e72007300b817f639e7acd0a536c07e340f8bde0afd3ad802f0f29fe9", "title": "Μάκης Κεραυνός: Υπέρ της Τραπεζικής Ένωσης και ευελιξίας στην οικονομία", "link": "https://www.sigmalive.com/news/oikonomia/1332735/makis-keraunos-yper-tis-trapezikis-enosis-kai-efeliksias-stin-oikonomia", "snippet": "Την ικανοποίησή του για τη συμφωνία των «27» επί της δέσμης για την ενοποίηση των αγορών και την εποπτεία (MISP) εξέφρασε ο Υπουργός Οικονομικών Μάκης Κεραυνός, στο Συμβούλιο Υπουργών Οικονομικών της ΕΕ στο Λουξεμβούργο. Χαρακτήρισε τη λύση «έντιμο συμβιβασμό», ο οποίος δεν ικανοποιεί μεν όλες τις α", "source": "Sigmalive", "category": "cyprus", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "883d6f0b63772e8b5f618373513face9d1a4a713d878faab76b05b37f0dbf501", "title": "Θλίψη για τον Ατανά Ντράμοφ", "link": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/thlipsi-gia-ton-atana-ntramof", "snippet": "Θλίψη για τον Ατανά Ντράμοφ Channel A' Κατηγορία onisiforos.stavrou 12/10/2024 - 12:26", "source": "Kerkida", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "e49e363d20597c4cabd283258c4574edb807001ed5bc3124cc76acb70271ade1", "title": "5η αγωνιστική", "link": "https://www.kerkida.net/championship-round/5i-agonistiki-23", "snippet": "5η αγωνιστική vanaliv 04/09/2026 - 15:39 Παρασκευή 09/10/2026 Καρμιώτισσα - Ομόνοια 0 - 3 Άρθρο Αγώνα Σάββατο 10/10/2026 Krasava ENY - Απόλλωνας 18:00 -- ΑΠΟΕΛ - Ν. Σαλαμίνα 19:00 -- Κυριακή 11/10/2026 Ανόρθωση - Πάφος FC 18:00 -- ΑΕΛ - Ομόνοια 29M 19:00 -- Ολυμπιακός Λ. - Άρης 19:00 -- Δευτέρα 12/1", "source": "Kerkida", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "460de9909c0ef54e5d4d77c0eb7ead3a2c3d2ecef2ff2a0d5033f97e517cbc0f", "title": "Scotland's Forrest leads Open de Espana on day two", "link": "https://www.skysports.com/watch/video/13597026/open-de-espana-day-two-highlights", "snippet": "Highlights from day two of the Open de Espana at Club de Campo Villa de Madrid.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "42b1c94af8a9d27a91c9e982baffc6706b6ce46238e683ca0a0318622a5b58b7", "title": "Forrest holds halfway lead at Open de Espana", "link": "https://www.skysports.com/golf/news/12040/13597032/open-de-espana-grant-forrest-continues-good-record-to-take-one-stroke-lead-into-the-weekend-in-madrid", "snippet": "Scotland's Grant Forrest continued his good record at the Open de Espana to take a one-stroke lead into the weekend.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "ee01305496307936970a9b62336e63b7996f0a03de755ae495dc258fa60fdb84", "title": "Bowen's late penalty saved as West Ham held by QPR", "link": "https://www.skysports.com/football/west-ham-united-vs-queens-park-rangers/report/560605", "snippet": "Jarrod Bowen saw his 91st-minute penalty saved as West Ham missed the chance to move top of the Sky Bet Championship after a 1-1 draw with QPR.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "85383d6e8aaca193ebcfbbe03005108fdfea7177831928b70a1e59bb6df9f08d", "title": "Arteta says conscience clear over time at Man City", "link": "https://www.skysports.com/football/news/12040/13596973/man-city-charges-arsenal-boss-mikel-arteta-says-he-has-clear-conscience-over-his-time-at-etihad-after-serious-breaches-of-financial-rules", "snippet": "Mikel Arteta has said he has a clear conscience over his former club Manchester City's serious breaches of financial rules.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "92ec4f59222c9236c8ceabb22953e0c557421b5fd52e5189cc54d03a850e65d2", "title": "Papers: Man Utd forced into transfer market in January?", "link": "https://www.skysports.com/football/news/12040/13597035/man-utd-may-be-forced-into-transfer-market-in-january-paper-talk", "snippet": "The top stories and transfer rumours from Saturday's newspapers...", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}, {"id": "d96b1b8087150868bf01fe81e2de8a35d2fae8a48c2c5364fa52f8ec32f673d8", "title": "'You will see me back' - Smith vows 2027 return after Swiss Darts Trophy win", "link": "https://www.skysports.com/darts/news/12040/13597050/swiss-darts-trophy-former-world-champion-michael-smith-plans-on-playing-100-per-cent-of-the-tournaments-in-2027-after-opening-win", "snippet": "Former world champion Michael Smith says he plans on \"playing 100 per cent of the tournaments\" in 2027 after an opening win at the Swiss Darts Trophy.", "source": "Sky Sports", "category": "sports", "timestamp": 1791616467, "time_str": "07:14 UTC", "is_breaking": false}]
   </script>
     
 
-  <!-- JAVASCRIPT ENGINE -->
+  <!-- SCRIPTS: Theme Toggle, Calculator, Weather Fetch, Instant Search -->
   <script>
-    // Theme Toggle
-    const themeBtn = document.getElementById('themeToggle');
-    if (themeBtn) {
-      themeBtn.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('oracle-theme', isDark ? 'dark' : 'light');
+    // 1. Theme Toggle
+    (function () {
+      const btn = document.getElementById('themeToggle');
+      const btnNav = document.getElementById('themeToggleNav');
+      const updateThemeButtons = (isDark) => {
+        if (btn) btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        if (btnNav) btnNav.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      };
+      const isDarkInit = document.documentElement.classList.contains('dark');
+      updateThemeButtons(isDarkInit);
+
+      const toggleTheme = () => {
+        const darkNow = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('oracle-theme', darkNow ? 'dark' : 'light');
+        updateThemeButtons(darkNow);
+      };
+
+      if (btn) btn.addEventListener('click', toggleTheme);
+      if (btnNav) btnNav.addEventListener('click', toggleTheme);
+    })();
+
+    // 2. Interactive Mortgage Calculator (Enhanced with Euribor comparison)
+    (function () {
+      const amountEl = document.getElementById('calcAmount');
+      const yearsEl = document.getElementById('calcYears');
+      const rateEl = document.getElementById('calcRate');
+
+      const amountVal = document.getElementById('amountVal');
+      const yearsVal = document.getElementById('yearsVal');
+      const rateVal = document.getElementById('rateVal');
+      const monthlyInstallment = document.getElementById('monthlyInstallment');
+      const totalInterest = document.getElementById('totalInterest');
+      const totalRepayment = document.getElementById('totalRepayment');
+      const costOfCredit = document.getElementById('costOfCredit');
+      const principalBar = document.getElementById('principalBar');
+      const interestBar = document.getElementById('interestBar');
+      const euriborPayment = document.getElementById('euriborPayment');
+      const euriborDiff = document.getElementById('euriborDiff');
+
+      const EURIBOR_3M = 2.670;  // Current Euribor 3M rate
+      const SPREAD = 1.10;       // Typical Cyprus bank spread
+
+      function calcMonthly(P, r, n) {
+        if (r > 0) return (P * r) / (1 - Math.pow(1 + r, -n));
+        return P / n;
+      }
+
+      function calculate() {
+        if (!amountEl || !yearsEl || !rateEl) return;
+        const P = parseFloat(amountEl.value);
+        const y = parseFloat(yearsEl.value);
+        const annualRate = parseFloat(rateEl.value);
+
+        amountVal.textContent = '€' + P.toLocaleString('el-CY');
+        yearsVal.textContent = y + ' έτη';
+        rateVal.textContent = annualRate.toFixed(2).replace('.', ',') + '%';
+
+        const r = (annualRate / 100) / 12;
+        const n = y * 12;
+
+        const m = calcMonthly(P, r, n);
+        const totalPay = m * n;
+        const interest = totalPay - P;
+
+        // Core results
+        monthlyInstallment.textContent = '€' + Math.round(m).toLocaleString('el-CY');
+        totalInterest.textContent = '€' + Math.round(interest).toLocaleString('el-CY');
+
+        // Total repayment
+        if (totalRepayment) totalRepayment.textContent = '€' + Math.round(totalPay).toLocaleString('el-CY');
+
+        // Cost of credit %
+        if (costOfCredit) {
+          const pct = ((interest / P) * 100).toFixed(1).replace('.', ',');
+          costOfCredit.textContent = pct + '%';
+        }
+
+        // Visual breakdown bar
+        if (principalBar && interestBar) {
+          const principalPct = (P / totalPay) * 100;
+          const interestPct = (interest / totalPay) * 100;
+          principalBar.style.width = principalPct.toFixed(1) + '%';
+          interestBar.style.width = interestPct.toFixed(1) + '%';
+        }
+
+        // Euribor 3M comparison
+        if (euriborPayment && euriborDiff) {
+          const euriborRate = ((EURIBOR_3M + SPREAD) / 100) / 12;
+          const euriborM = calcMonthly(P, euriborRate, n);
+          const diff = Math.round(euriborM) - Math.round(m);
+          euriborPayment.textContent = '€' + Math.round(euriborM).toLocaleString('el-CY');
+          if (diff <= 0) {
+            euriborDiff.textContent = '(−€' + Math.abs(diff).toLocaleString('el-CY') + '/μήνα)';
+            euriborDiff.className = 't-meta font-mono text-[var(--up)]';
+          } else {
+            euriborDiff.textContent = '(+€' + diff.toLocaleString('el-CY') + '/μήνα)';
+            euriborDiff.className = 't-meta font-mono text-[var(--down)]';
+          }
+        }
+      }
+
+      if (amountEl && yearsEl && rateEl) {
+        amountEl.addEventListener('input', calculate);
+        yearsEl.addEventListener('input', calculate);
+        rateEl.addEventListener('input', calculate);
+        calculate();
+      }
+    })();
+
+    // 3. Open-Meteo Live Client Weather Fetch
+    (function () {
+      const cities = [
+        { name: 'Λεμεσός', icon: '🌊', lat: 34.68, lon: 33.04 },
+        { name: 'Λευκωσία', icon: '🏛️', lat: 35.17, lon: 33.36 },
+        { name: 'Λάρνακα', icon: '✈️', lat: 34.92, lon: 33.63 },
+        { name: 'Πάφος', icon: '🪨', lat: 34.77, lon: 32.42 },
+        { name: 'Τρόοδος', icon: '🌲', lat: 34.92, lon: 32.88 }
+      ];
+
+      const wmoText = {
+        0: 'Αίθριος', 1: 'Κυρίως αίθριος', 2: 'Μερικώς νεφελώδης', 3: 'Συννεφιασμένος',
+        45: 'Ομίχλη', 51: 'Ψεκάδες', 61: 'Ασθενής βροχή', 63: 'Βροχή', 65: 'Ισχυρή βροχή',
+        80: 'Μπόρες', 95: 'Καταιγίδα'
+      };
+
+      const wmoIcons = {
+        0: '☀️', 1: '🌤️', 2: '⛅', 3: '☁️',
+        45: '🌫️', 51: '🌦️', 61: '🌧️', 63: '🌧️', 65: '⛈️',
+        80: '🌦️', 95: '⛈️'
+      };
+
+      async function fetchWeather() {
+        try {
+          const container = document.getElementById('wx-live');
+          if (!container) return;
+          const fetches = cities.map(c =>
+            fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,weather_code&timezone=auto`)
+              .then(r => r.json())
+              .then(d => ({ name: c.name, cityIcon: c.icon, temp: Math.round(d.current.temperature_2m), code: d.current.weather_code }))
+              .catch(() => null)
+          );
+
+          const results = await Promise.all(fetches);
+          if (results.some(r => r !== null)) {
+            container.innerHTML = results.map(r => {
+              if (!r) return '';
+              const desc = wmoText[r.code] || 'Ήπιος';
+              const icon = wmoIcons[r.code] || '🌤️';
+              return `
+                <div class="p-3.5 bg-[var(--paper)] rounded-2xl border border-[var(--rule)] shadow-xs flex flex-col items-center justify-between hover:border-[var(--accent)] transition">
+                  <div class="t-meta text-[var(--ink-quiet)] font-semibold flex items-center gap-1.5">
+                    <span>${r.cityIcon}</span> <span>${r.name}</span>
+                  </div>
+                  <div class="text-3xl sm:text-4xl my-2">${icon}</div>
+                  <div class="text-2xl font-black text-[var(--accent)] t-num">${r.temp}°C</div>
+                  <div class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[var(--rule)]/40 text-[var(--ink-quiet)] mt-1.5">${desc}</div>
+                </div>
+              `;
+            }).join('');
+          }
+        } catch (e) {
+          console.warn('Open-Meteo live weather fetch fallback maintained.', e);
+        }
+      }
+      fetchWeather();
+    })();
+
+    // 4. Instant Archive Search (Asynchronous Fetch with client-side cache)
+    (function () {
+      const input = document.getElementById('archiveSearch');
+      const resultsContainer = document.getElementById('searchResults');
+      if (!input || !resultsContainer) return;
+
+      let searchData = [];
+      let loadingPromise = null;
+
+      function getSearchData() {
+        if (!loadingPromise) {
+          loadingPromise = fetch('search-index.json').catch(() => fetch('../search-index.json'))
+            .then(r => r.json())
+            .then(d => { searchData = d; return d; })
+            .catch(err => {
+              console.warn('Could not load search index asynchronously:', err);
+              return [];
+            });
+        }
+        return loadingPromise;
+      }
+
+      input.addEventListener('focus', getSearchData);
+
+      input.addEventListener('input', async (e) => {
+        const q = e.target.value.trim().toLowerCase();
+        if (q.length < 2) {
+          resultsContainer.classList.add('hidden');
+          resultsContainer.innerHTML = '';
+          return;
+        }
+
+        const data = searchData.length ? searchData : await getSearchData();
+        const matches = data.filter(item => 
+          item.title.toLowerCase().includes(q) || 
+          item.snippet.toLowerCase().includes(q) ||
+          item.section.toLowerCase().includes(q)
+        ).slice(0, 8);
+
+        if (matches.length === 0) {
+          resultsContainer.innerHTML = '<div class="p-3 text-center t-meta text-[var(--ink-quiet)]">Δεν βρέθηκαν αποτελέσματα.</div>';
+          resultsContainer.classList.remove('hidden');
+          return;
+        }
+
+        resultsContainer.innerHTML = matches.map(m => `
+          <a href="${m.url}" class="block p-2.5 rounded hover:bg-[var(--paper)] transition border-b border-[var(--rule)] last:border-0">
+            <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)] mb-1">
+              <span>${m.section}</span>
+              <span>📅 ${m.date}</span>
+            </div>
+            <div class="font-bold text-[var(--ink)] leading-snug mb-1">${m.title}</div>
+            <div class="t-meta text-[var(--ink-quiet)] line-clamp-2">${m.snippet}</div>
+          </a>
+        `).join('');
+
+        resultsContainer.classList.remove('hidden');
       });
-    }
 
-    // Global Clocks
-    function updateClocks() {
-      const now = new Date();
-      const fmt = (tz) => new Intl.DateTimeFormat('el-GR', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
-      const cy = document.getElementById('clockCY'); if (cy) cy.textContent = fmt('Asia/Nicosia');
-      const lon = document.getElementById('clockLON'); if (lon) lon.textContent = fmt('Europe/London');
-      const nyc = document.getElementById('clockNYC'); if (nyc) nyc.textContent = fmt('America/New_York');
-      const tyo = document.getElementById('clockTYO'); if (tyo) tyo.textContent = fmt('Asia/Tokyo');
-    }
-    updateClocks();
-    setInterval(updateClocks, 10000);
+      document.addEventListener('click', (e) => {
+        if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
+          resultsContainer.classList.add('hidden');
+        }
+      });
+    })();
 
-    // Audio Briefing Player (Web Speech API)
+    // 5. 60-Second Executive Scan Mode Toggle
+    (function () {
+      const scanBtn = document.getElementById('scanModeToggle');
+      if (!scanBtn) return;
+
+      const savedMode = localStorage.getItem('oracle-scan-mode') === '1';
+      if (savedMode) {
+        document.body.classList.add('scan-mode');
+        scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+        scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+      }
+
+      scanBtn.addEventListener('click', () => {
+        const isScan = document.body.classList.toggle('scan-mode');
+        localStorage.setItem('oracle-scan-mode', isScan ? '1' : '0');
+        if (isScan) {
+          scanBtn.innerHTML = '<span>📖</span> <span class="hidden md:inline">Πλήρης Έκδοση</span>';
+          scanBtn.classList.add('bg-[var(--accent)]', 'text-white');
+        } else {
+          scanBtn.innerHTML = '<span>⚡</span> <span class="hidden md:inline">60″ Scan</span>';
+          scanBtn.classList.remove('bg-[var(--accent)]', 'text-white');
+        }
+      });
+    })();
+
+    // 6. Sovereign Executive Audio Briefing (SpeechSynthesis)
     (function () {
       const playBtn = document.getElementById('audioPlayBtn');
-      const stopBtn = document.getElementById('audioStopBtn');
       const speedBtn = document.getElementById('audioSpeedBtn');
+      const stopBtn = document.getElementById('audioStopBtn');
       const statusText = document.getElementById('audioStatusText');
-      const liveBadge = document.getElementById('audioLiveBadge');
+      const badge = document.getElementById('audioLiveBadge');
+
       if (!playBtn || !('speechSynthesis' in window)) return;
 
-      let synth = window.speechSynthesis;
-      let utterance = null;
-      let speeds = [1.0, 1.25, 1.5];
+      const speeds = [1.0, 1.25, 1.5];
       let speedIdx = 0;
+      let isSpeaking = false;
 
       function getBriefingText() {
-        let text = "Απογευματινή επιτελική σύνοψη της εφημερίδας The Oracle Sovereign για τις 10 Σεπτεμβρίου 2026. ";
-        const topEl = document.getElementById('topStoryBody');
-        if (topEl) text += topEl.innerText + " ";
-        text += "Στις αγορές και το closing bell: ";
-        ['S&P 500 (SPX): 7.807,86, μεταβολή +0,55%.', 'Nasdaq 100 (NDQ): 30.850,31, μεταβολή +0,41%.', 'Bitcoin (BTC/USD): $82.608,31, μεταβολή +1,12%.', 'EUR/USD: 1,12, μεταβολή -0,18%.', 'EUR/GBP: 0,85, μεταβολή -0,13%.', 'Bank of Cyprus (BOCH): €10,23, μεταβολή +0,89%.', 'Brent Crude: $103,81, μεταβολή -0,45%.', 'TSMC (TSM): $450,34, μεταβολή -1,67%.', 'NVIDIA (NVDA): $229,32, μεταβολή -0,50%.', 'Alphabet (GOOG): $349,75, μεταβολή +1,42%.', 'Apple (AAPL): $335,12, μεταβολή -1,56%.', 'Microsoft (MSFT): $534,80, μεταβολή +2,33%.', 'Micron (MU): $1.028,00, μεταβολή -0,76%.', 'Meta (META): $726,09, μεταβολή +0,72%.'].forEach(m => text += m + " ");
-        text += "Στον νυχτερινό κίνδυνο: Παρακολούθηση ασιατικού ανοίγματος στις δύο τα ξημερώματα και περιφερειακού εναέριου χώρου.";
-        return text;
+        const titleEl = document.querySelector('#top-story h3');
+        const title = titleEl ? titleEl.innerText : '';
+        const bodyEl = document.querySelector('#top-story p');
+        const body = bodyEl ? bodyEl.innerText : '';
+        const deadlines = Array.from(document.querySelectorAll('#deadlines li')).slice(0, 3).map(li => li.innerText.split('—')[0]).join('. ');
+
+        return `The Oracle Sovereign. Ημερήσιο εμπιστευτικό briefing. Πρώτο θέμα: ${title}. ${body.slice(0, 320)}. Σημαντικές προθεσμίες και ενέργειες: ${deadlines}. Τέλος συνοπτικής ενημέρωσης.`;
+      }
+
+      function startPlayback() {
+        window.speechSynthesis.cancel();
+        const text = getBriefingText();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'el-GR';
+        utter.rate = speeds[speedIdx];
+
+        const voices = window.speechSynthesis.getVoices();
+        const elVoice = voices.find(v => v.lang.startsWith('el') || v.lang.includes('GR'));
+        if (elVoice) utter.voice = elVoice;
+
+        utter.onstart = () => {
+          isSpeaking = true;
+          playBtn.textContent = '⏸';
+          if (badge) badge.classList.remove('hidden');
+          if (stopBtn) stopBtn.classList.remove('hidden');
+          statusText.textContent = `Φωνητική ανάγνωση σε εξέλιξη (${speeds[speedIdx]}x)...`;
+        };
+
+        utter.onend = () => {
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Ολοκληρώθηκε η ηχητική σύνοψη.';
+        };
+
+        utter.onerror = () => {
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
+          if (stopBtn) stopBtn.classList.add('hidden');
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        };
+
+        window.speechSynthesis.speak(utter);
       }
 
       playBtn.addEventListener('click', () => {
-        if (synth.speaking && !synth.paused) {
-          synth.pause();
-          playBtn.innerHTML = '▶';
-          statusText.innerText = 'Σε παύση · Πατήστε Play για συνέχεια';
-          return;
+        if (isSpeaking) {
+          if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+            playBtn.textContent = '⏸';
+            statusText.textContent = `Συνέχιση ανάγνωσης (${speeds[speedIdx]}x)...`;
+          } else {
+            window.speechSynthesis.pause();
+            playBtn.textContent = '▶';
+            statusText.textContent = 'Σε παύση.';
+          }
+        } else {
+          startPlayback();
         }
-        if (synth.paused) {
-          synth.resume();
-          playBtn.innerHTML = '⏸';
-          statusText.innerText = 'Αναπαραγωγή σε εξέλιξη...';
-          return;
-        }
+      });
 
-        utterance = new SpeechSynthesisUtterance(getBriefingText());
-        utterance.lang = 'el-GR';
-        utterance.rate = speeds[speedIdx];
-        utterance.onend = () => {
-          playBtn.innerHTML = '▶';
+      if (stopBtn) {
+        stopBtn.addEventListener('click', () => {
+          window.speechSynthesis.cancel();
+          isSpeaking = false;
+          playBtn.textContent = '▶';
+          if (badge) badge.classList.add('hidden');
           stopBtn.classList.add('hidden');
-          liveBadge.classList.add('hidden');
-          statusText.innerText = 'Ολοκληρώθηκε η ανάγνωση της απογευματινής σύνοψης';
-        };
+          statusText.textContent = 'Πατήστε Play για φωνητική ανάγνωση.';
+        });
+      }
 
-        synth.speak(utterance);
-        playBtn.innerHTML = '⏸';
-        stopBtn.classList.remove('hidden');
-        liveBadge.classList.remove('hidden');
-        statusText.innerText = 'Αναπαραγωγή απογευματινής σύνοψης...';
-      });
+      if (speedBtn) {
+        speedBtn.addEventListener('click', () => {
+          speedIdx = (speedIdx + 1) % speeds.length;
+          speedBtn.textContent = `${speeds[speedIdx]}x`;
+          if (isSpeaking) startPlayback();
+        });
+      }
+    })();
 
-      stopBtn.addEventListener('click', () => {
-        synth.cancel();
-        playBtn.innerHTML = '▶';
-        stopBtn.classList.add('hidden');
-        liveBadge.classList.add('hidden');
-        statusText.innerText = 'Διακόπηκε η ανάγνωση';
-      });
+    // 7. Smart Sticky Navigation Header (Auto-hide on scroll down, reveal on scroll up)
+    (function () {
+      const nav = document.getElementById('mainNav');
+      if (!nav) return;
 
-      speedBtn.addEventListener('click', () => {
-        speedIdx = (speedIdx + 1) % speeds.length;
-        speedBtn.innerText = speeds[speedIdx] + 'x';
-        if (synth.speaking) {
-          synth.cancel();
-          playBtn.click();
+      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      let ticking = false;
+      const threshold = 8;
+      const minScrollToHide = 100;
+
+      function onScroll() {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Near top of the page: always keep visible
+        if (currentScrollY <= minScrollToHide) {
+          nav.classList.remove('nav-hidden');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
         }
-      });
+
+        // Prevent triggering on iOS rubber-band overscroll at bottom of document
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        if (currentScrollY >= maxScroll - 20) {
+          ticking = false;
+          return;
+        }
+
+        const delta = currentScrollY - lastScrollY;
+
+        if (Math.abs(delta) > threshold) {
+          if (delta > 0) {
+            // Scrolling down -> hide nav
+            nav.classList.add('nav-hidden');
+            const sr = document.getElementById('searchResults');
+            if (sr && !sr.classList.contains('hidden')) sr.classList.add('hidden');
+          } else {
+            // Scrolling up -> show nav
+            nav.classList.remove('nav-hidden');
+          }
+          lastScrollY = currentScrollY;
+        }
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // 8. 24/7 Global Market Clocks & Live Trading Badges
+    (function () {
+      function updateClocks() {
+        const now = new Date();
+        
+        function formatTZ(tz) {
+          try {
+            return new Intl.DateTimeFormat('el-GR', {
+              timeZone: tz,
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false
+            }).format(now);
+          } catch (e) {
+            return '--:--';
+          }
+        }
+
+        function getMarketStatus(tz, openH, openM, closeH, closeM) {
+          try {
+            const parts = new Intl.DateTimeFormat('en-US', {
+              timeZone: tz,
+              weekday: 'short',
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: false
+            }).formatToParts(now);
+            
+            const p = {};
+            parts.forEach(x => p[x.type] = x.value);
+            const day = p.weekday;
+            const h = parseInt(p.hour, 10);
+            const m = parseInt(p.minute, 10);
+            
+            if (day === 'Sat' || day === 'Sun') return { open: false, label: 'CLOSED' };
+            
+            const currentMins = h * 60 + m;
+            const openMins = openH * 60 + openM;
+            const closeMins = closeH * 60 + closeM;
+            
+            const isOpen = currentMins >= openMins && currentMins < closeMins;
+            return { open: isOpen, label: isOpen ? 'OPEN' : 'CLOSED' };
+          } catch (e) {
+            return { open: false, label: '--' };
+          }
+        }
+
+        const cyEl = document.getElementById('clockCY');
+        const lonEl = document.getElementById('clockLON');
+        const nycEl = document.getElementById('clockNYC');
+        const tyoEl = document.getElementById('clockTYO');
+
+        if (cyEl) cyEl.textContent = formatTZ('Asia/Nicosia');
+        if (lonEl) lonEl.textContent = formatTZ('Europe/London');
+        if (nycEl) nycEl.textContent = formatTZ('America/New_York');
+        if (tyoEl) tyoEl.textContent = formatTZ('Asia/Tokyo');
+
+        // London: LSE 08:00 - 16:30
+        const lonSt = getMarketStatus('Europe/London', 8, 0, 16, 30);
+        const lonStEl = document.getElementById('statusLON');
+        if (lonStEl) {
+          lonStEl.textContent = lonSt.label;
+          lonStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (lonSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+
+        // NYC: NYSE 09:30 - 16:00
+        const nycSt = getMarketStatus('America/New_York', 9, 30, 16, 0);
+        const nycStEl = document.getElementById('statusNYC');
+        if (nycStEl) {
+          nycStEl.textContent = nycSt.label;
+          nycStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (nycSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+
+        // Tokyo: TSE 09:00 - 15:30
+        const tyoSt = getMarketStatus('Asia/Tokyo', 9, 0, 15, 30);
+        const tyoStEl = document.getElementById('statusTYO');
+        if (tyoStEl) {
+          tyoStEl.textContent = tyoSt.label;
+          tyoStEl.className = 'text-[9px] px-1 py-0.2 rounded font-bold ' + (tyoSt.open ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-neutral-500/20 text-neutral-400');
+        }
+      }
+
+      updateClocks();
+      setInterval(updateClocks, 1000);
     })();
 
 
@@ -2439,5 +2890,6 @@
     })();
     
   </script>
+
 </body>
 </html>

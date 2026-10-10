@@ -102,28 +102,112 @@
     "section": "📅 Προθεσμίες",
     "title": "Έως 20 Οκτωβρίου 2026 (14:00): Υποβολή αιτήσεων για την κρατική φοιτητική μέριμνα ακαδημαϊκού έτους 2025-2026 (Υπουργείο Οικονομικών).",
     "snippet": "Έως 20 Οκτωβρίου 2026 (14:00): Υποβολή αιτήσεων για την κρατική φοιτητική μέριμνα ακαδημαϊκού έτους 2025-2026 (Υπουργείο Οικονομικών)....",
-    "url": "briefings/2026-10-08.html#deadlines"
+    "url": "#deadlines"
   },
   {
     "date": "2026-10-10",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων (TaxisNet)....",
-    "url": "briefings/2026-10-08.html#deadlines"
+    "url": "#deadlines"
   },
   {
     "date": "2026-10-10",
     "section": "📅 Προθεσμίες",
     "title": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy).",
     "snippet": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy)....",
-    "url": "briefings/2026-10-08.html#deadlines"
+    "url": "#deadlines"
   },
   {
-    "date": "2026-10-08",
+    "date": "2026-10-09",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Trump says US will not attack Iran before midterm elections in November",
+    "snippet": "President Donald Trump said on Thursday that the US will not launch an attack on Iran before November’s US midterm congressional elections, asserting that the two countries are hav...",
+    "url": "briefings/2026-10-09.html#top-story"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Teachers protest over appointment reforms [Επικαιρότητα]",
+    "snippet": "Hundreds of teachers from public schools demonstrated at the presidential palace on Thursday afternoon, voicing opposition to a proposed change in the appointme...",
+    "url": "briefings/2026-10-09.html#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Ex-prince Andrew search warrants quashed after police accept legal error [Επικαιρότητα]",
+    "snippet": "British police on Thursday said that search warrants they secured to search properties linked to Andrew Mountbatten-Windsor had been issued unlawfully and must...",
+    "url": "briefings/2026-10-09.html#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. December date set for Turkish Cypriot legislative elections [Επικαιρότητα]",
+    "snippet": "The Turkish Cypriots will hold legislative elections on December 6, with a bill setting out the timetable for the elections passing through the legislature on T...",
+    "url": "briefings/2026-10-09.html#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Seven CSE companies fail to publish half-yearly financial reports [Επικαιρότητα]",
+    "snippet": "The Cyprus Stock Exchange (CSE) has taken action against seven companies listed on its Emerging Companies Market after they failed to submit and publish their h...",
+    "url": "briefings/2026-10-09.html#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Smog shuts down schools in Malaysia [Ο Φάκελός μου]",
+    "snippet": "Schools in several Malaysian states as well as its federal and administrative capitals will be closed on Friday, the education ministry said, after smoky haze c...",
+    "url": "briefings/2026-10-09.html#cyprus"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "1. Suspect linked to Monaco bomb attack on millionaire speaks to BBC from Ukrainian prison [Διεθνή]",
+    "snippet": "Vitalii Zhykovych gives his own account of the attempted assassination of Ukrainian-born businessman Vadym Yermolayev....",
+    "url": "briefings/2026-10-09.html#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "2. Firing squad execution to be livestreamed, Pentagon says [Διεθνή]",
+    "snippet": "Pete Hegseth says the execution will be public, but a legal expert says the \"unprecedented\" decision is on \"uncertain legal terrain\"....",
+    "url": "briefings/2026-10-09.html#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "3. ICE agent shoots man in New York City [Διεθνή]",
+    "snippet": "The mayor of New York expressed outrage at the shooting which the Department of Homeland Security said happened during the arrest of a \"criminal illegal alien\"....",
+    "url": "briefings/2026-10-09.html#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "4. Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge [Διεθνή]",
+    "snippet": "Ukraine accused Russia of targeting two crowded vehicles in the front line city of Kramatorsk to kill as many civilians as possible....",
+    "url": "briefings/2026-10-09.html#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "🌍 Διεθνή",
+    "title": "5. Christa Pike now walking after failed US execution, lawyer tells BBC [Διεθνή]",
+    "snippet": "A lawyer says the murderer of Colleen Slemmer is moving around her hospital room after surviving two lethal injections....",
+    "url": "briefings/2026-10-09.html#world"
+  },
+  {
+    "date": "2026-10-09",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "briefings/2026-10-09.html#deadlines"
+  },
+  {
+    "date": "2026-10-09",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "briefings/2026-10-08.html#top-story"
+    "url": "briefings/2026-10-09.html#top-story"
   },
   {
     "date": "2026-10-08",
@@ -236,6 +320,13 @@
     "title": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy).",
     "snippet": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy)....",
     "url": "briefings/2026-10-08.html#deadlines"
+  },
+  {
+    "date": "2026-10-08",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
+    "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
+    "url": "briefings/2026-10-08.html#top-story"
   },
   {
     "date": "2026-10-07",
