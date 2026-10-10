@@ -27,6 +27,11 @@
     },
     "articles": [
       {
+        "title": "Ξανά εκτός... ξανά γκολ",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xana-ektos-xana-gkol",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "ΣΧΟΛΙΟ Τσίκινη/Καρμιώτισσα-Ομόνοια",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sholio-tsikinikarmiotissa-omonoia",
         "source": "Kerkida.net"
@@ -45,14 +50,9 @@
         "title": "Ποιοι θα ταξιδέψουν στο Τορίνο;",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/poioi-tha-taxidepsoyn-sto-torino",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Τρέλα για Τορίνο!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/trela-gia-torino",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-10T10:44:26.639006+00:00"
+    "fetched_at": "2026-10-10T15:55:39.396964+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,6 +79,16 @@
     },
     "articles": [
       {
+        "title": "Manchester United v Tottenham: Premier League – live",
+        "url": "https://www.theguardian.com/football/live/2026/oct/10/manchester-united-v-tottenham-premier-league-live",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Premier League today: How to watch Manchester United v Spurs, TV channels & live stream Saturday 10 October",
+        "url": "https://www.theguardian.com/football/2026/oct/10/premier-league-how-to-watch-manchester-united-tottenham-hotspur",
+        "source": "The Guardian"
+      },
+      {
         "title": "Managers react to Manchester City’s guilty verdict: ‘Uncertainty is not good for anyone’",
         "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-managers-reaction-manchester-city-verdict",
         "source": "The Guardian"
@@ -92,19 +102,9 @@
         "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
         "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut",
         "source": "The Guardian"
-      },
-      {
-        "title": "Premier League: 10 things to look out for this weekend",
-        "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United offer JJ Gabriel new deal but risk losing prodigy for £350,000",
-        "url": "https://www.theguardian.com/football/2026/oct/08/manchester-united-offer-jj-gabriel-new-deal-risk-losing-prodigy-football-premier-league",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-10T10:44:28.578889+00:00"
+    "fetched_at": "2026-10-10T15:55:40.365342+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -132,6 +132,11 @@
     },
     "articles": [
       {
+        "title": "What penalty could Mbappé face if he decides to leave Real Madrid?",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/10/what-penalty-could-mbappe-face-if-he-decides-to-leave-real-madrid.html",
+        "source": "Marca"
+      },
+      {
         "title": "Real Madrid asks about McTominay, the \"Scottish Maradona\" whom Mourinho calls \"my boy\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/09/real-madrid-asks-about-mctominay-the-scottish-maradona-whom-mourinho-calls-my-boy.html",
         "source": "Marca"
@@ -150,14 +155,9 @@
         "title": "Who is JJ Gabriel, the planet's biggest teenage gem, who has a nickname he detests and half of Europe knocking on his door?",
         "url": "https://www.marca.com/en/football/2026/10/06/who-is-jj-gabriel-the-planet-s-biggest-teenage-gem-who-has-nickname-he-detests-and-half-of-europe-knocking-on-his-door.html",
         "source": "Marca"
-      },
-      {
-        "title": "Kylian Mbappé defies José Mourinho’s warning with a bicycle ride while injured",
-        "url": "https://www.marca.com/en/more-sports/2026/10/05/kylian-mbappe-defies-jose-mourinho-s-warning-with-bicycle-ride-while-injur-video.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-10T10:44:29.645428+00:00"
+    "fetched_at": "2026-10-10T15:55:41.322600+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Verstappen beats Ferraris to Singapore pole",
+        "url": "https://www.bbc.com/sport/formula1/articles/cvj6j5kyx2p1o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Verstappen wins sprint after Russell crashes out",
         "url": "https://www.bbc.com/sport/formula1/articles/cwn73gmz78reo",
         "source": "BBC Sport F1"
@@ -204,13 +209,8 @@
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Russell fastest from Leclerc in Singapore practice",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm0e0w5ele7wo",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-10T10:44:30.960213+00:00"
+    "fetched_at": "2026-10-10T15:55:42.238117+00:00"
   }
 }

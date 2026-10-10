@@ -1862,5 +1862,21 @@
   "https://www.bbc.co.uk/news/articles/c5lye9z4xw4yo?at_medium=RSS&at_campaign=rss": {
     "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/200a/live/11ffab00-c472-11f1-9fee-49b2288eef07.jpg",
     "category": "ΔΙΕΘΝΗ ΜΜΕ & ΘΕΣΜΟΙ"
+  },
+  "https://cyprus-mail.com/2026/10/10/mouttayiaka-stabbing-suspect-remanded-for-eight-days": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/08/police.jpg",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://cyprus-mail.com/2026/10/10/three-owls-freed-from-illegal-bird-traps": {
+    "image": "https://cyprus-mail.com/wp-content/uploads/2026/10/owl-2.webp",
+    "category": "🇨🇾 ΚΥΠΡΟΣ"
+  },
+  "https://www.bbc.co.uk/news/articles/cmlyle97pqd7o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/cafe/live/bfd91a70-c4bf-11f1-a64c-550be9e3c66b.jpg",
+    "category": "🌍 ΔΙΕΘΝΗ"
+  },
+  "https://www.bbc.co.uk/news/articles/cwvgdpv642g5o?at_medium=RSS&at_campaign=rss": {
+    "image": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/98ce/live/569e8e50-c49c-11f1-869c-8f95c437952a.jpg",
+    "category": "ΕΝΕΡΓΕΙΑ & ΑΓΟΡΕΣ"
   }
 }
