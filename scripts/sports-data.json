@@ -27,32 +27,32 @@
     },
     "articles": [
       {
-        "title": "\"Σταμάτησαν τα μουρμουρητά, φτιάχνεται κάτι πολύ καλό στην Ομόνοια\"",
-        "url": "https://www.kerkida.net/super-monday/omonoia/stamatisan-ta-moyrmoyrita-ftiahnetai-kati-poly-kalo-stin-omonoia",
+        "title": "(Βίντεο Kerkida) Επίθεση αγάπης στον Εβάντρο!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/binteo-kerkida-epithesi-agapis-ston-ebantro",
         "source": "Kerkida.net"
       },
       {
-        "title": "Τα τρεξίματα του...",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/ta-treximata-toy",
+        "title": "Έψαχνε ένα... πέτυχε τρία",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/epsahne-ena-petyhe-tria",
         "source": "Kerkida.net"
       },
       {
-        "title": "Από κοντά τον... Ολλανδό",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/apo-konta-ton-ollando",
+        "title": "Ξανά... ασίστ!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/xana-asist-0",
         "source": "Kerkida.net"
       },
       {
-        "title": "Δεδομένο για...Σενού",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/dedomeno-giasenoy",
+        "title": "Χαμόγελα και... Τσέλιε!",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/hamogela-kai-tselie",
         "source": "Kerkida.net"
       },
       {
-        "title": "ΣΧΟΛΙΟ για Ανδρόνικο Κακουλλή: \"Έδωσε ώθηση...\"",
-        "url": "https://www.kerkida.net/super-monday/omonoia/sholio-gia-androniko-kakoylli-edose-othisi",
+        "title": "Ομαλά στο \"Στέλιος Κυριακίδης\", με μία φάση για ανάλυση!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/refinio/omonoia/omala-sto-stelios-kyriakidis-me-mia-fasi-gia-analysi",
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-08T06:10:42.647666+00:00"
+    "fetched_at": "2026-10-10T07:10:28.255118+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -79,37 +79,36 @@
     },
     "articles": [
       {
-        "title": "Thrown in with Giggs and Beckham: how Manchester United tried to get Billy Kenny",
-        "url": "https://www.theguardian.com/football/2026/oct/03/billy-kenny-ryan-giggs-david-beckham-manchester-united-autobiography",
+        "title": "Managers react to Manchester City’s guilty verdict: ‘Uncertainty is not good for anyone’",
+        "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-managers-reaction-manchester-city-verdict",
         "source": "The Guardian"
       },
       {
-        "title": "Wayne Rooney says Manchester City should not be stripped of titles for rules breach",
-        "url": "https://www.theguardian.com/football/2026/sep/29/wayne-rooney-manchester-city-united-premier-league-titles-breaching-financial-rules",
+        "title": "Manchester United’s early wobble makes Tottenham visit a must-win for Carrick",
+        "url": "https://www.theguardian.com/football/2026/oct/09/manchester-united-tottenham-michael-carrick-premier-league",
         "source": "The Guardian"
       },
       {
-        "title": "How important is a fast start for teams chasing the Premier League title?",
-        "url": "https://www.theguardian.com/football/2026/sep/29/premier-league-fast-start-teams-manchester-city",
+        "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
+        "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut",
         "source": "The Guardian"
       },
       {
-        "title": "Every saint has a past: how man at heart of City’s first scandal became a United hero",
-        "url": "https://www.theguardian.com/football/2026/sep/29/every-saint-has-a-past-lessons-from-citys-first-scandal-in-1906",
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend",
         "source": "The Guardian"
       },
       {
-        "title": "Manchester United report seventh straight annual loss and sell fans £125 grass clumps",
-        "url": "https://www.theguardian.com/football/2026/sep/23/manchester-united-seventh-straight-annual-loss-record-revenue-financial-results",
+        "title": "Manchester United offer JJ Gabriel new deal but risk losing prodigy for £350,000",
+        "url": "https://www.theguardian.com/football/2026/oct/08/manchester-united-offer-jj-gabriel-new-deal-risk-losing-prodigy-football-premier-league",
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-08T06:10:43.637372+00:00"
+    "fetched_at": "2026-10-10T07:10:41.963370+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
     "sources": [
-      "Marca",
       "BBC Sport"
     ],
     "last_result": {
@@ -123,41 +122,15 @@
       "source": "Marca / BBC Sport"
     },
     "next_fixture": {
-      "fixture": "Spanish La Liga: Real Madrid versus Villarreal — 20:00 (Saturday 10th October)",
+      "fixture": "Spanish La Liga: Real Madrid versus Villarreal — 20:00",
       "match": "Real Madrid versus Villarreal — 20:00",
       "competition": "Spanish La Liga",
-      "date": "Saturday 10th October",
+      "date": "",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
-    "articles": [
-      {
-        "title": "Bellingham boosts Harry Kane's Ballon d'Or bid: \"He is the best English player to wear this shirt\"",
-        "url": "https://www.marca.com/en/football/international-football/2026/10/07/bellingham-boosts-harry-kane-s-ballon-d-or-bid-he-is-the-best-english-player-to-wear-this-shirt.html",
-        "source": "Marca"
-      },
-      {
-        "title": "\"Bellingham is terrifying, I had never seen anything like it\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/10/06/bellingham-is-terrifying-i-had-never-seen-anything-like-it.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Who is JJ Gabriel, the planet's biggest teenage gem, who has a nickname he detests and half of Europe knocking on his door?",
-        "url": "https://www.marca.com/en/football/2026/10/06/who-is-jj-gabriel-the-planet-s-biggest-teenage-gem-who-has-nickname-he-detests-and-half-of-europe-knocking-on-his-door.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Kylian Mbappé defies José Mourinho’s warning with a bicycle ride while injured",
-        "url": "https://www.marca.com/en/more-sports/2026/10/05/kylian-mbappe-defies-jose-mourinho-s-warning-with-bicycle-ride-while-injur-video.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Madrid statement on the Negreira case: \"Real Madrid asks UEFA for the investigation to move forward as quickly as possible\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/10/01/madrid-statement-on-the-negreira-case-real-madrid-asks-uefa-for-the-investigation-to-move-forward-as-quickly-as-possible.html",
-        "source": "Marca"
-      }
-    ],
-    "fetched_at": "2026-10-08T06:10:44.368796+00:00"
+    "articles": [],
+    "fetched_at": "2026-10-10T07:10:43.392682+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,31 +159,31 @@
     },
     "articles": [
       {
-        "title": "Russell to start from back of Singapore grid after penalty",
-        "url": "https://www.bbc.com/sport/formula1/articles/cm0qkdk37gy0o",
+        "title": "Verstappen on sprint pole after another settings issue",
+        "url": "https://www.bbc.com/sport/formula1/articles/ck62y7jz1qqro",
         "source": "BBC Sport F1"
       },
       {
-        "title": "Wet races and why future of F1 engines appears to be V8 turbos - Q&A",
-        "url": "https://www.bbc.com/sport/formula1/articles/cr15j3z2npz9o",
+        "title": "Mercedes critics think I'm Satan - Wolff",
+        "url": "https://www.bbc.com/sport/formula1/articles/cmje5x0enkxqo",
         "source": "BBC Sport F1"
       },
       {
-        "title": "F1 needs to have hard look at itself - Sainz",
-        "url": "https://www.bbc.com/sport/formula1/articles/cr62y51n1841o",
+        "title": "Russell fastest from Leclerc in Singapore practice",
+        "url": "https://www.bbc.com/sport/formula1/articles/cm0e0w5ele7wo",
         "source": "BBC Sport F1"
       },
       {
-        "title": "Bottas cycling from Malaysia to Singapore Grand Prix",
-        "url": "https://www.bbc.com/sport/formula1/articles/cv2d6p9en7wdo",
+        "title": "Andrew Benson Q&A: Send us your questions",
+        "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
       },
       {
-        "title": "Hamilton & Verstappen bemused after glitch turns F1 into 'Lego race'",
-        "url": "https://www.bbc.com/sport/formula1/articles/cwg7x820k9xjo",
+        "title": "Russell to take further grid penalty this season",
+        "url": "https://www.bbc.com/sport/formula1/articles/c6y8lyj1pemko",
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-08T06:10:45.230416+00:00"
+    "fetched_at": "2026-10-10T07:10:47.597508+00:00"
   }
 }
