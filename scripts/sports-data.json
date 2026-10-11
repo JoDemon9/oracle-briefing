@@ -52,7 +52,7 @@
         "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-11T09:26:42.241555+00:00"
+    "fetched_at": "2026-10-11T10:56:57.590696+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-11T09:27:03.133300+00:00"
+    "fetched_at": "2026-10-11T10:56:59.085033+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -132,6 +132,16 @@
     },
     "articles": [
       {
+        "title": "Mourinho is left speechless after the latest controversy involving Vinicius",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/11/mourinho-is-left-speechless-after-the-latest-controversy-involving-vinicius.html",
+        "source": "Marca"
+      },
+      {
+        "title": "The report complicates Vinicius's presence in the Clásico: \"Aggressive attitude\" and protests \"at the top of his voice\"",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/11/the-report-complicates-vinicius-s-presence-in-the-clasico-aggressive-attitude-and-protests-at-the-top-of-his-voice.html",
+        "source": "Marca"
+      },
+      {
         "title": "Vinicius apologizes for his sending-off but feels persecuted by referees in the Spanish league",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/11/vinicius-apologizes-for-his-sending-off-but-feels-persecuted-by-referees-in-the-spanish-league.html",
         "source": "Marca"
@@ -145,19 +155,9 @@
         "title": "Diomandé strikes, Vinícius sees red: Inside Real Madrid’s chaotic, dramatic win over Villarreal",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/10/diomande-strikes-vinicius-sees-red-inside-real-madrid-s-chaotic-dramatic-win-over-villarreal.html",
         "source": "Marca"
-      },
-      {
-        "title": "What penalty could Mbappé face if he decides to leave Real Madrid?",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/10/10/what-penalty-could-mbappe-face-if-he-decides-to-leave-real-madrid.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Real Madrid asks about McTominay, the \"Scottish Maradona\" whom Mourinho calls \"my boy\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/10/09/real-madrid-asks-about-mctominay-the-scottish-maradona-whom-mourinho-calls-my-boy.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-11T09:27:05.405711+00:00"
+    "fetched_at": "2026-10-11T10:56:59.884936+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -211,6 +211,6 @@
         "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-11T09:27:09.094136+00:00"
+    "fetched_at": "2026-10-11T10:57:01.086429+00:00"
   }
 }
