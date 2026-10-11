@@ -27,6 +27,21 @@
     },
     "articles": [
       {
+        "title": "Παναγιώτου/90λεπτο και τρίποντο!",
+        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/panagiotoy90lepto-kai-triponto",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Δεν έπεισε πριν από την Ομόνοια",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/den-epeise-prin-apo-tin-omonoia",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Όταν έρχεται το...πρώτο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/otan-erhetai-toproto",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Από την πρεμιέρα στον πάγκο",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/apo-tin-premiera-ston-pagko",
         "source": "Kerkida.net"
@@ -35,24 +50,9 @@
         "title": "Ενδιαφέρει Ομόνοια/ Έτσι... επέστρεψε στις νίκες η Celje (Στιγμιότυπα)",
         "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/endiaferei-omonoia-etsi-epestrepse-stis-nikes-i-celje-stigmiotypa",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "Ξανά εκτός... ξανά γκολ",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xana-ektos-xana-gkol",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "ΣΧΟΛΙΟ Τσίκινη/Καρμιώτισσα-Ομόνοια",
-        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/sholio-tsikinikarmiotissa-omonoia",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Χαμόγελο... για δύο λόγους!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hamogelo-gia-dyo-logoys",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-11T10:56:57.590696+00:00"
+    "fetched_at": "2026-10-11T16:23:29.849322+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -104,7 +104,7 @@
         "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-11T10:56:59.085033+00:00"
+    "fetched_at": "2026-10-11T16:23:30.772529+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -157,7 +157,7 @@
         "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-11T10:56:59.884936+00:00"
+    "fetched_at": "2026-10-11T16:23:31.461369+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Verstappen dominates for first Singapore Grand Prix win",
+        "url": "https://www.bbc.com/sport/formula1/articles/c84g1p2ql9z5o",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Verstappen building major momentum as 'no-one very happy' at McLaren",
         "url": "https://www.bbc.com/sport/formula1/articles/cmn4ezn5ep3jo",
         "source": "BBC Sport F1"
@@ -204,13 +209,8 @@
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
-      },
-      {
-        "title": "Verstappen on sprint pole after another settings issue",
-        "url": "https://www.bbc.com/sport/formula1/articles/ck62y7jz1qqro",
-        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-11T10:57:01.086429+00:00"
+    "fetched_at": "2026-10-11T16:23:32.563729+00:00"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-11T10:56:47.213139",
+  "fetched_at": "2026-10-11T16:23:21.699477",
   "quotes": {
     "S&P 500 (SPX)": {
       "symbol": "^GSPC",
@@ -15,8 +15,8 @@
     },
     "Bitcoin (BTC/USD)": {
       "symbol": "BTC-USD",
-      "price": 82927.85,
-      "change": 0.01939411014865772,
+      "price": 83717.62,
+      "change": 0.9719367949809673,
       "date": "11/10/2026"
     },
     "EUR/USD": {
