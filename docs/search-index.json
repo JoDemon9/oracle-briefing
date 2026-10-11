@@ -1,129 +1,213 @@
 [
   {
+    "date": "2026-10-11",
+    "section": "⭐ Πρώτο Θέμα",
+    "title": "Tales from the coffeeshop: A week of suicide bomber tactics in politics",
+    "snippet": "YOU HAVE to admire Averof Neophytou’s suicide bomber tactics with which he cleared the way for his presidential candidacy. It has not been secured yet, as he will stand against Dis...",
+    "url": "#top-story"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🇨🇾 Κύπρος",
+    "title": "1. Building resilience in the digital age: the strategic value of a digital euro for Cyprus and Europe [Επικαιρότητα]",
+    "snippet": "By Stelios Georgakis, Head, Directorate General Payments, Central Bank of Cyprus Cyprus has long stood at the crossroads of continents, cultures and trade route...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🇨🇾 Κύπρος",
+    "title": "2. Thunderstorms ahead as temperatures reach 32C [Επικαιρότητα]",
+    "snippet": "Isolated rain and possible thunderstorms are expected on Sunday afternoon, mainly over Troodos, Nicosia and Kyrenia. According to the Met Office, the day will s...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🇨🇾 Κύπρος",
+    "title": "3. Bear that escaped enclosure at Melios Zoo back in its home [Επικαιρότητα]",
+    "snippet": "Police confirmed on Sunday that a bear that escaped from its enclosure at Melios Zoo on Saturday evening has been returned safely. Police were informed by the m...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🇨🇾 Κύπρος",
+    "title": "4. Electricity cables continue to pose a significant fire risk [Επικαιρότητα]",
+    "snippet": "EAC cables were responsible for several fires that broke out in recent weeks, with the forestry department saying that whilst the situation has vastly improved,...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🇨🇾 Κύπρος",
+    "title": "5. Two drivers injured in head-on crash near Tsada [Ο Φάκελός μου]",
+    "snippet": "Two drivers were taken to hospital after a head-on collision on the Polis Chrysochous to Paphos Road near Tsada on Saturday night. The crash happened at about 1...",
+    "url": "#cyprus"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🌍 Διεθνή",
+    "title": "1. 'Time for Ukraine to get new president,' says Trump after Zelensky condemns diesel deal [Διεθνή]",
+    "snippet": "Ukraine's leader had said the deal with Russia to release diesel into the US would help Moscow fund the war....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🌍 Διεθνή",
+    "title": "2. Young men live in fear of being snatched off the streets and sold to Myanmar's army [Διεθνή]",
+    "snippet": "A desperate junta is in a war of attrition against ethnic militias and and civilian resistance....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🌍 Διεθνή",
+    "title": "3. Delhi sees more protests as 'cockroach' group's leaders released [Διεθνή]",
+    "snippet": "Police say they will keep restricting access to the city centre after thousands of people were detained and released on Saturday....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🌍 Διεθνή",
+    "title": "4. US justice department investigates TV networks over Trump pool coverage [Διεθνή]",
+    "snippet": "The White House had blocked access for CNN, MS Now and Politico, leading them to restrict pool coverage....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "🌍 Διεθνή",
+    "title": "5. Four dead and thousands without power after Hurricane Isaias lashes US [Διεθνή]",
+    "snippet": "Roofs were ripped off buildings after Isaias barrelled into the US on Friday evening, before it weakened to a post-tropical cyclone....",
+    "url": "#world"
+  },
+  {
+    "date": "2026-10-11",
+    "section": "📅 Προθεσμίες",
+    "title": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor.",
+    "snippet": "Τραπεζικές Ρυθμίσεις: Επανεξέταση περιθωρίων επιτοκίου στεγαστικών δανείων βάσει Euribor....",
+    "url": "#deadlines"
+  },
+  {
     "date": "2026-10-10",
     "section": "⭐ Πρώτο Θέμα",
     "title": "Ενεργειακή Ασφάλεια & Υποδομές: Συμμαχία Cyfield με China Harbour και Ενδιαφέρον 6 Ομίλων για τη Διάσωση του Τερματικού LNG στο Βασιλικό — Στα $104,72 το Brent εν μέσω Διλήμματος των «27» στο Ecofin και Mega-Deal Τραμπ-Πούτιν για το Ντίζελ [Επιβεβαιωμένο]",
     "snippet": "Σε κρίσιμη καμπή επανεκκίνησης εισέρχεται το στρατηγικό έργο του τερματικού εισαγωγής υγροποιημένου φυσικού αερίου (LNG) στο Βασιλικό, καθώς ο κυπριακός κατασκευαστικός όμιλος Cyfi...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-10.html#top-story"
   },
   {
     "date": "2026-10-10",
     "section": "🇨🇾 Κύπρος",
     "title": "1. Δημοσιονομικά & Ενέργεια: Σε δίλημμα οι «27» της ΕΕ στο Ecofin — Μάχη Κεραυνού για ευελιξία δαπανών και ανάσα €1 δισ. για την Ελλάδα [Επιβεβαιωμένο]",
     "snippet": "Χωρίς κοινή συμφωνία για μέτρα αναχαίτισης της ενεργειακής ακρίβειας ολοκληρώθηκαν οι συνεδριάσεις του Eurogroup και του Ecofin στο Λουξεμβούργο, με το ζήτημα ν...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-10.html#cyprus"
   },
   {
     "date": "2026-10-10",
     "section": "🇨🇾 Κύπρος",
     "title": "2. Ενεργειακές Υποδομές: Συμμαχία Cyfield με China Harbour και ενδιαφέρον Saipem, Terna, Avax για το τερματικό Βασιλικού [Επιβεβαιωμένο]",
     "snippet": "Σε τροχιά δυναμικού ανταγωνισμού τίθεται η αποπεράτωση του ημιτελούς τερματικού LNG στο Βασιλικό, με τον όμιλο Cyfield να ενώνει δυνάμεις με την κινεζική China...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-10.html#cyprus"
   },
   {
     "date": "2026-10-10",
     "section": "🇨🇾 Κύπρος",
     "title": "3. Εθνικά Θέματα & Αντικατοχική Δράση: Σήμερα η 46η αντικατοχική πορεία Μόρφου — Μήνυμα Χριστοδουλίδη για λύση χωρίς εναλλακτική [Επιβεβαιωμένο]",
     "snippet": "Πραγματοποιείται σήμερα στον Αστρομερίτη η 46η ετήσια αντικατοχική πορεία Μόρφου, με τη συμμετοχή εκπροσώπων της πολιτικής ηγεσίας, ξένων κοινοβουλευτικών αντιπ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-10.html#cyprus"
   },
   {
     "date": "2026-10-10",
     "section": "🇨🇾 Κύπρος",
     "title": "4. Κοινωνική Ασφάλιση: Σύμπλευση ΔΗΚΟ και ΣΕΚ για την επιτάχυνση της συνταξιοδοτικής μεταρρύθμισης και την αναλογιστική μείωση [Επιβεβαιωμένο]",
     "snippet": "Πλήρη ταύτιση απόψεων για την άμεση προώθηση της συνολικής συνταξιοδοτικής μεταρρύθμισης διαπίστωσαν σε κοινή συνάντηση αντιπροσωπείες του ΔΗΚΟ υπό τον Νικόλα Π...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-10.html#cyprus"
   },
   {
     "date": "2026-10-10",
     "section": "🇨🇾 Κύπρος",
     "title": "5. Πολιτιστική Κληρονομιά: Επαναπατρισμός δύο κλεμμένων εικόνων του 14ου αιώνα μετά την τουρκική εισβολή [Επιβεβαιωμένο]",
     "snippet": "Στον επαναπατρισμό δύο σπάνιων βυζαντινών εικόνων του 14ου αιώνα, οι οποίες είχαν λεηλατηθεί από εκκλησίες των κατεχομένων μετά την εισβολή του 1974, προχώρησαν...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-10.html#cyprus"
   },
   {
     "date": "2026-10-10",
     "section": "🇨🇾 Κύπρος",
     "title": "6. Ακίνητα & House Search: Χορηγίες έως €32.000 για ενεργειακή αναβάθμιση κατοικιών — Η ανθεκτικότητα των νεόδμητων στον Ύψωνα στα €275.000 [Ο Φάκελός μου] [Μονή πηγή]",
     "snippet": "Σε τροχιά υλοποίησης τέθηκε το νέο κρατικό σχέδιο χορηγιών για την ενεργειακή αναβάθμιση κατοικιών, το οποίο προσφέρει επιδοτήσεις έως και €32.000 για κτήρια σχ...",
-    "url": "#cyprus"
+    "url": "briefings/2026-10-10.html#cyprus"
   },
   {
     "date": "2026-10-10",
     "section": "🌍 Διεθνή",
     "title": "1. Παγκόσμια Ενέργεια & Κυρώσεις: Συμφωνία-σοκ Τραμπ με Πούτιν για 4,8 εκατ. τόνους ρωσικού ντίζελ — Αντιδράσεις για καταστρατήγηση κυρώσεων και καταγγελία Ζελένσκι [Επιβεβαιωμένο]",
     "snippet": "Σφοδρές πολιτικές και διπλωματικές αντιδράσεις πυροδότησε η ανακοίνωση του Ντόναλντ Τραμπ για επίτευξη άμεσης συμφωνίας με τη Μόσχα για την προμήθεια 4,8 εκατομ...",
-    "url": "#world"
+    "url": "briefings/2026-10-10.html#world"
   },
   {
     "date": "2026-10-10",
     "section": "🌍 Διεθνή",
     "title": "2. Διεθνής Δικαιοσύνη & Διπλωματία: Κυρώσεις ΗΠΑ κατά του Διεθνούς Ποινικού Δικαστηρίου — Το ΔΠΔ καταγγέλλει επίθεση στο κράτος δικαίου [Επιβεβαιωμένο]",
     "snippet": "Σε πρωτοφανή κλιμάκωση της αντιπαράθεσης με τους διεθνείς θεσμούς προχώρησε η Ουάσιγκτον, επιβάλλοντας σαρωτικές οικονομικές και ταξιδιωτικές κυρώσεις σε αξιωμα...",
-    "url": "#world"
+    "url": "briefings/2026-10-10.html#world"
   },
   {
     "date": "2026-10-10",
     "section": "🌍 Διεθνή",
     "title": "3. Φυσικές Καταστροφές & Υποδομές: Σεισμός 7,7 Ρίχτερ συγκλονίζει τον Παναμά — Ζημιές σε κτήρια και συναγερμός για τσουνάμι [Επιβεβαιωμένο]",
     "snippet": "Ισχυρότατη σεισμική δόνηση μεγέθους 7,7 βαθμών της κλίμακας Ρίχτερ έπληξε τις νότιες ακτές του Παναμά, προκαλώντας σοβαρές ζημιές σε κτηριακές υποδομές και πανι...",
-    "url": "#world"
+    "url": "briefings/2026-10-10.html#world"
   },
   {
     "date": "2026-10-10",
     "section": "🌍 Διεθνή",
     "title": "4. Ευρωπαϊκή Οικονομία & Χρέος: Ο Πολ Κρούγκμαν προειδοποιεί ότι η Γαλλία κινδυνεύει να γίνει «πολύ μεγάλη για να σωθεί» [Επιβεβαιωμένο]",
     "snippet": "Την ανησυχία του για τη δημοσιονομική τροχιά της Γαλλίας εξέφρασε ο νομπελίστας οικονομολόγος Πολ Κρούγκμαν, επισημαίνοντας ότι το γιγαντιαίο δημόσιο χρέος της...",
-    "url": "#world"
+    "url": "briefings/2026-10-10.html#world"
   },
   {
     "date": "2026-10-10",
     "section": "🌍 Διεθνή",
     "title": "5. Διεθνείς Σχέσεις: Οργή Τραμπ κατά Νορβηγίας για το Νόμπελ Ειρήνης — «Έπρεπε να το είχα πάρει εγώ» [Επιβεβαιωμένο]",
     "snippet": "Έντονη δυσαρέσκεια εξέφρασε ο Ντόναλντ Τραμπ μετά την ανακοίνωση της νορβηγικής επιτροπής για το Νόμπελ Ειρήνης 2026, χαρακτηρίζοντας την απόφαση «κηλίδα για τη...",
-    "url": "#world"
+    "url": "briefings/2026-10-10.html#world"
   },
   {
     "date": "2026-10-10",
     "section": "📅 Προθεσμίες",
     "title": "Σήμερα 10 Οκτωβρίου 2026 (Σάββατο): Επανασυντονισμός τηλεοράσεων στη νέα συχνότητα DVB T2 για αποφυγή διακοπής σήματος στα ιδιωτικά κανάλια (SigmaLive).",
     "snippet": "Σήμερα 10 Οκτωβρίου 2026 (Σάββατο): Επανασυντονισμός τηλεοράσεων στη νέα συχνότητα DVB T2 για αποφυγή διακοπής σήματος στα ιδιωτικά κανάλια (SigmaLive)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-10.html#deadlines"
   },
   {
     "date": "2026-10-10",
     "section": "📅 Προθεσμίες",
     "title": "Από σήμερα: Συλλογή δικαιολογητικών και έκδοση Πιστοποιητικού Ενεργειακής Απόδοσης (ΠΕΑ) για αίτηση στις νέες χορηγίες κατοικιών έως €32.000 (SigmaLive).",
     "snippet": "Από σήμερα: Συλλογή δικαιολογητικών και έκδοση Πιστοποιητικού Ενεργειακής Απόδοσης (ΠΕΑ) για αίτηση στις νέες χορηγίες κατοικιών έως €32.000 (SigmaLive)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-10.html#deadlines"
   },
   {
     "date": "2026-10-10",
     "section": "📅 Προθεσμίες",
     "title": "Έως 20 Οκτωβρίου 2026 (14:00): Υποβολή αιτήσεων για την κρατική φοιτητική μέριμνα ακαδημαϊκού έτους 2025-2026 (Υπουργείο Οικονομικών).",
     "snippet": "Έως 20 Οκτωβρίου 2026 (14:00): Υποβολή αιτήσεων για την κρατική φοιτητική μέριμνα ακαδημαϊκού έτους 2025-2026 (Υπουργείο Οικονομικών)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-10.html#deadlines"
   },
   {
     "date": "2026-10-10",
     "section": "📅 Προθεσμίες",
     "title": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων (TaxisNet).",
     "snippet": "Έως 31 Οκτωβρίου 2026: Υποβολή φορολογικών δηλώσεων εισοδήματος φυσικών προσώπων (TaxisNet)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-10.html#deadlines"
   },
   {
     "date": "2026-10-10",
     "section": "📅 Προθεσμίες",
     "title": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy).",
     "snippet": "Έως 6 Νοεμβρίου 2026: Επαλήθευση τραπεζικών στοιχείων (IBAN) στην ηλεκτρονική υπηρεσία του Εθνικού Ταμείου Αλληλεγγύης (gov.cy)....",
-    "url": "#deadlines"
+    "url": "briefings/2026-10-10.html#deadlines"
   },
   {
     "date": "2026-10-10",
     "section": "⭐ Πρώτο Θέμα",
     "title": "🏁 ΤΟ ΑΠΟΤΥΠΩΜΑ ΤΗΣ ΗΜΕΡΑΣ",
     "snippet": "Ολοκλήρωση της σημερινής ημέρας με σταθεροποίηση στους κύριους δείκτες και ενεργή παρακολούθηση των εξελίξεων σε Κύπρο και διεθνές επίπεδο. Οι αγορές προετοιμάζονται για το αυριανό...",
-    "url": "#top-story"
+    "url": "briefings/2026-10-10.html#top-story"
   },
   {
     "date": "2026-10-09",

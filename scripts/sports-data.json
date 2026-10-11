@@ -27,6 +27,16 @@
     },
     "articles": [
       {
+        "title": "Από την πρεμιέρα στον πάγκο",
+        "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/apo-tin-premiera-ston-pagko",
+        "source": "Kerkida.net"
+      },
+      {
+        "title": "Ενδιαφέρει Ομόνοια/ Έτσι... επέστρεψε στις νίκες η Celje (Στιγμιότυπα)",
+        "url": "https://www.kerkida.net/eyropaikoi-agones/omonoia/endiaferei-omonoia-etsi-epestrepse-stis-nikes-i-celje-stigmiotypa",
+        "source": "Kerkida.net"
+      },
+      {
         "title": "Ξανά εκτός... ξανά γκολ",
         "url": "https://www.kerkida.net/eidiseis/a-katigoria/omonoia/xana-ektos-xana-gkol",
         "source": "Kerkida.net"
@@ -40,19 +50,9 @@
         "title": "Χαμόγελο... για δύο λόγους!",
         "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/hamogelo-gia-dyo-logoys",
         "source": "Kerkida.net"
-      },
-      {
-        "title": "(Βίντεο Kerkida) ΑΤΑΚΑ... για τη διακοπή!",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/binteo-kerkida-ataka-gia-ti-diakopi",
-        "source": "Kerkida.net"
-      },
-      {
-        "title": "Ποιοι θα ταξιδέψουν στο Τορίνο;",
-        "url": "https://www.kerkida.net/eidiseis/alles-stiles/koys-koys/omonoia/poioi-tha-taxidepsoyn-sto-torino",
-        "source": "Kerkida.net"
       }
     ],
-    "fetched_at": "2026-10-10T15:55:39.396964+00:00"
+    "fetched_at": "2026-10-11T09:03:02.952050+00:00"
   },
   "manchester_united": {
     "team": "Manchester United",
@@ -71,40 +71,40 @@
       "source": "BBC Sport"
     },
     "next_fixture": {
-      "fixture": "Premier League: Manchester United versus Tottenham Hotspur — 17:30",
-      "match": "Manchester United versus Tottenham Hotspur — 17:30",
-      "competition": "Premier League",
+      "fixture": "UEFA Champions League - League Stage: Atletico Madrid versus Manchester United — 20:00",
+      "match": "Atletico Madrid versus Manchester United — 20:00",
+      "competition": "UEFA Champions League - League Stage",
       "source_url": "https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
       {
-        "title": "Manchester United v Tottenham: Premier League – live",
+        "title": "Manchester United and Spurs come back to reality as City saga offers brief distraction",
+        "url": "https://www.theguardian.com/football/2026/oct/10/draw-brings-no-respite-for-manchester-united-and-tottenham-as-crises-continue",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Carrick ‘massively disappointed’ after United drop points against 10-man Spurs",
+        "url": "https://www.theguardian.com/football/2026/oct/10/michael-carrick-manchester-united-tottenham-roberto-de-zerbi",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Manchester United 1-1 Tottenham: Premier League – as it happened",
         "url": "https://www.theguardian.com/football/live/2026/oct/10/manchester-united-v-tottenham-premier-league-live",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Solanke strikes late as 10-man Spurs salvage point at Manchester United",
+        "url": "https://www.theguardian.com/football/2026/oct/10/manchester-united-tottenham-premier-league-match-report",
         "source": "The Guardian"
       },
       {
         "title": "Premier League today: How to watch Manchester United v Spurs, TV channels & live stream Saturday 10 October",
         "url": "https://www.theguardian.com/football/2026/oct/10/premier-league-how-to-watch-manchester-united-tottenham-hotspur",
         "source": "The Guardian"
-      },
-      {
-        "title": "Managers react to Manchester City’s guilty verdict: ‘Uncertainty is not good for anyone’",
-        "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-managers-reaction-manchester-city-verdict",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Manchester United’s early wobble makes Tottenham visit a must-win for Carrick",
-        "url": "https://www.theguardian.com/football/2026/oct/09/manchester-united-tottenham-michael-carrick-premier-league",
-        "source": "The Guardian"
-      },
-      {
-        "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
-        "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut",
-        "source": "The Guardian"
       }
     ],
-    "fetched_at": "2026-10-10T15:55:40.365342+00:00"
+    "fetched_at": "2026-10-11T09:03:04.211693+00:00"
   },
   "real_madrid": {
     "team": "Real Madrid",
@@ -123,14 +123,29 @@
       "source": "Marca / BBC Sport"
     },
     "next_fixture": {
-      "fixture": "Spanish La Liga: Real Madrid versus Villarreal — 20:00",
-      "match": "Real Madrid versus Villarreal — 20:00",
-      "competition": "Spanish La Liga",
-      "date": "",
+      "fixture": "UEFA Champions League - League Stage: Roma versus Real Madrid — 20:00 (Wednesday 14th October)",
+      "match": "Roma versus Real Madrid — 20:00",
+      "competition": "UEFA Champions League - League Stage",
+      "date": "Wednesday 14th October",
       "source_url": "https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures",
       "source": "BBC Sport"
     },
     "articles": [
+      {
+        "title": "Vinicius apologizes for his sending-off but feels persecuted by referees in the Spanish league",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/11/vinicius-apologizes-for-his-sending-off-but-feels-persecuted-by-referees-in-the-spanish-league.html",
+        "source": "Marca"
+      },
+      {
+        "title": "The rising USMNT star that dominated Real Madrid and has a sky-high ceiling",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/11/the-rising-usmnt-star-that-dominated-real-madrid-and-has-sky-high-ceiling.html",
+        "source": "Marca"
+      },
+      {
+        "title": "Diomandé strikes, Vinícius sees red: Inside Real Madrid’s chaotic, dramatic win over Villarreal",
+        "url": "https://www.marca.com/en/football/spanish-football/2026/10/10/diomande-strikes-vinicius-sees-red-inside-real-madrid-s-chaotic-dramatic-win-over-villarreal.html",
+        "source": "Marca"
+      },
       {
         "title": "What penalty could Mbappé face if he decides to leave Real Madrid?",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/10/what-penalty-could-mbappe-face-if-he-decides-to-leave-real-madrid.html",
@@ -140,24 +155,9 @@
         "title": "Real Madrid asks about McTominay, the \"Scottish Maradona\" whom Mourinho calls \"my boy\"",
         "url": "https://www.marca.com/en/football/spanish-football/2026/10/09/real-madrid-asks-about-mctominay-the-scottish-maradona-whom-mourinho-calls-my-boy.html",
         "source": "Marca"
-      },
-      {
-        "title": "Bellingham boosts Harry Kane's Ballon d'Or bid: \"He is the best English player to wear this shirt\"",
-        "url": "https://www.marca.com/en/football/international-football/2026/10/07/bellingham-boosts-harry-kane-s-ballon-d-or-bid-he-is-the-best-english-player-to-wear-this-shirt.html",
-        "source": "Marca"
-      },
-      {
-        "title": "\"Bellingham is terrifying, I had never seen anything like it\"",
-        "url": "https://www.marca.com/en/football/spanish-football/2026/10/06/bellingham-is-terrifying-i-had-never-seen-anything-like-it.html",
-        "source": "Marca"
-      },
-      {
-        "title": "Who is JJ Gabriel, the planet's biggest teenage gem, who has a nickname he detests and half of Europe knocking on his door?",
-        "url": "https://www.marca.com/en/football/2026/10/06/who-is-jj-gabriel-the-planet-s-biggest-teenage-gem-who-has-nickname-he-detests-and-half-of-europe-knocking-on-his-door.html",
-        "source": "Marca"
       }
     ],
-    "fetched_at": "2026-10-10T15:55:41.322600+00:00"
+    "fetched_at": "2026-10-11T09:03:05.109626+00:00"
   },
   "formula1": {
     "team": "Formula 1",
@@ -186,6 +186,11 @@
     },
     "articles": [
       {
+        "title": "Verstappen building major momentum as 'no-one very happy' at McLaren",
+        "url": "https://www.bbc.com/sport/formula1/articles/cmn4ezn5ep3jo",
+        "source": "BBC Sport F1"
+      },
+      {
         "title": "Verstappen beats Ferraris to Singapore pole",
         "url": "https://www.bbc.com/sport/formula1/articles/cvj6j5kyx2p1o",
         "source": "BBC Sport F1"
@@ -196,21 +201,16 @@
         "source": "BBC Sport F1"
       },
       {
-        "title": "Verstappen on sprint pole after another settings issue",
-        "url": "https://www.bbc.com/sport/formula1/articles/ck62y7jz1qqro",
-        "source": "BBC Sport F1"
-      },
-      {
-        "title": "Mercedes critics think I'm Satan - Wolff",
-        "url": "https://www.bbc.com/sport/formula1/articles/cmje5x0enkxqo",
-        "source": "BBC Sport F1"
-      },
-      {
         "title": "Andrew Benson Q&A: Send us your questions",
         "url": "https://www.bbc.com/sport/formula1/articles/ckg3y15zje8o",
         "source": "BBC Sport F1"
+      },
+      {
+        "title": "Verstappen on sprint pole after another settings issue",
+        "url": "https://www.bbc.com/sport/formula1/articles/ck62y7jz1qqro",
+        "source": "BBC Sport F1"
       }
     ],
-    "fetched_at": "2026-10-10T15:55:42.238117+00:00"
+    "fetched_at": "2026-10-11T09:03:07.015198+00:00"
   }
 }
