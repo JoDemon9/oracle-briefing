@@ -1,21 +1,7 @@
 name: 24/7 Sovereign Intelligence Engine (Editions)
 on:
-  schedule:
-    # --- Flagship Scheduled Editions (Cyprus EEST, UTC+3) ---
-    # 07:25 AM Cyprus Time (EEST, UTC+3) — Morning Broadsheet (Primary)
-    - cron: '25 4 * * *'
-    # 07:40 AM Cyprus Time (EEST, UTC+3) — Morning Broadsheet (Safety Net)
-    - cron: '40 4 * * *'
-    # 13:25 PM Cyprus Time (EEST, UTC+3) — Midday Market Pulse (Primary)
-    - cron: '25 10 * * *'
-    # 13:40 PM Cyprus Time (EEST, UTC+3) — Midday Market Pulse (Safety Net)
-    - cron: '40 10 * * *'
-    # 19:25 PM Cyprus Time (EEST, UTC+3) — Evening Debrief (Primary)
-    - cron: '25 16 * * *'
-    # 19:40 PM Cyprus Time (EEST, UTC+3) — Evening Debrief (Safety Net)
-    - cron: '40 16 * * *'
-  push:
-    paths: ['docs/briefings/**', 'briefings/**', '.github/workflows/notify.yml']
+  # Scheduled publishing is handled by ChatGPT tasks.
+  # Keep the legacy generator available for manual runs only.
   workflow_dispatch:
     inputs:
       edition:
