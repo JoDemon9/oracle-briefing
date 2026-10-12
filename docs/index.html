@@ -148,7 +148,7 @@
 <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> 24/7 WIRE
         </span>
 </div>
-<div class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0" id="liveWireTicker">
+<span id="wireHealth" role="status" class="text-xs">Έλεγχος ενημέρωσης ροής…</span><div class="overflow-hidden whitespace-nowrap text-xs text-[var(--ink-body)] flex-grow font-sans min-w-0" id="liveWireTicker">
 <span class="text-[var(--ink-quiet)] italic">Συνεχής ροή έκτακτης ειδησεογραφίας...</span>
 </div>
 <button class="flex-shrink-0 text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1" id="openWireDrawerBtn">
@@ -1027,14 +1027,26 @@
         return document.getElementById('liveWireTicker');
       }
 
+      function wireLink(item) {
+        const a = document.createElement('a');
+        try {
+          const u = new URL(item.link);
+          if (!['http:', 'https:'].includes(u.protocol) || u.username || u.password) return null;
+          a.href = u.href;
+        } catch { return null; }
+        a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = item.title || '';
+        a.className = 'font-bold hover:underline block leading-snug';
+        return a;
+      }
       function renderTicker() {
         const tickerEl = getTicker();
         if (!tickerEl || !wireItems.length) return;
-        const item = wireItems[activeIndex];
-        const breakBadge = item.is_breaking ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white font-bold text-[10px] mr-1.5 animate-pulse">ΕΚΤΑΚΤΟ</span>' : '';
-        const timeBadge = `<span class="font-mono text-[var(--ink-quiet)] mr-2">[${item.time_str || ''}]</span>`;
-        const srcBadge = `<span class="text-[var(--accent)] font-semibold ml-2">(${item.source || ''})</span>`;
-        tickerEl.innerHTML = `<div class="truncate transition-opacity duration-300 opacity-100">${breakBadge}${timeBadge}<a href="${item.link}" target="_blank" rel="noopener noreferrer" class="hover:underline text-[var(--ink)] font-medium">${item.title}</a>${srcBadge}</div>`;
+        const item = wireItems[activeIndex], a = wireLink(item);
+        tickerEl.replaceChildren();
+        const line = document.createElement('div');
+        line.textContent = (item.time_str || 'Χρόνος δημοσίευσης άγνωστος') + ' · ' + (item.source || '') + ' · ';
+        if (a) line.append(a);
+        tickerEl.append(line);
       }
 
       function rotateTicker() {
@@ -1045,25 +1057,16 @@
       }
 
       function renderDrawer() {
-        const drawerContent = getDrawerContent();
-        if (!drawerContent || !wireItems.length) return;
-        drawerContent.innerHTML = wireItems.map(item => {
-          const isB = item.is_breaking;
-          const borderCls = isB ? 'border-red-500 bg-red-500/5' : 'border-[var(--rule)] bg-[var(--paper)]';
-          const breakTag = isB ? '<span class="px-1.5 py-0.2 rounded bg-red-600 text-white text-[10px] font-bold mr-1.5">ΕΚΤΑΚΤΟ</span>' : '';
-          return `
-            <div class="p-3 rounded-lg border ${borderCls} space-y-1 text-xs">
-              <div class="flex items-center justify-between text-[10px] font-mono text-[var(--ink-quiet)]">
-                <span>${item.source || ''} · ${item.time_str || ''}</span>
-                ${isB ? '<span class="text-red-500 font-bold uppercase">⚡ Flash</span>' : ''}
-              </div>
-              <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="font-bold text-[var(--ink)] hover:text-[var(--accent)] block leading-snug">
-                ${breakTag}${item.title}
-              </a>
-              ${item.snippet ? `<p class="text-[var(--ink-body)] line-clamp-2 text-[11px]">${item.snippet}</p>` : ''}
-            </div>
-          `;
-        }).join('');
+        const container = getDrawerContent();
+        if (!container) return;
+        container.replaceChildren();
+        for (const item of wireItems) {
+          const a = wireLink(item); if (!a) continue;
+          const box = document.createElement('div'); box.className = 'p-3 rounded-lg border space-y-1 text-xs';
+          const meta = document.createElement('p'); meta.textContent = (item.source || '') + ' · ' + (item.time_str || 'Χρόνος άγνωστος');
+          const snippet = document.createElement('p'); snippet.textContent = item.snippet || '';
+          box.append(meta, a, snippet); container.append(box);
+        }
       }
 
       function toggleDrawer(open) {
@@ -1119,6 +1122,7 @@
       // 2. Fetch fresh updates in background
       async function fetchWire() {
         const candidates = [
+          'https://raw.githubusercontent.com/JoDemon9/oracle-briefing/main/docs/live-wire.json',
           'live-wire.json',
           'live-wire.json',
           '../live-wire.json',
@@ -1148,5 +1152,9 @@
     })();
     
   </script>
-<script defer="" src="assets/edition-registry.js"></script></body>
+<script defer="" src="assets/edition-registry.js"></script><script>
+(()=>{const label=document.getElementById('wireHealth');
+async function paint(){try{const r=await fetch('https://raw.githubusercontent.com/JoDemon9/oracle-briefing/main/docs/wire-health.json',{cache:'no-store'});if(!r.ok)throw Error();const h=await r.json();const age=Date.now()-Date.parse(h.last_success_at);if(!Number.isFinite(age)||age>90*60000){label.textContent='Ροή: καθυστερημένη ενημέρωση';return}const time=new Intl.DateTimeFormat('el-GR',{timeZone:'Europe/Nicosia',hour:'2-digit',minute:'2-digit'}).format(new Date(h.last_success_at));label.textContent='Ροή: έλεγχος '+time+' Κύπρου'+(h.status==='ok'?'':' · ορισμένες πηγές μη διαθέσιμες')}catch{label.textContent='Ροή: κατάσταση μη διαθέσιμη'}}paint();setInterval(paint,60000)})();
+</script>
+</body>
 </html>

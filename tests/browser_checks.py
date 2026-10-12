@@ -81,6 +81,15 @@ def run(screenshots=None):
             assert page.locator('html').get_attribute('class')=='dark'
             assert not errors, errors
             checks.append('Portal theme works when browser storage is blocked')
+            hostile = [{'title':'<img src=x onerror="window.__wireInjected=true">', 'link':'https://example.com/news', 'snippet':'<script>window.__wireInjected=true</script>', 'source':'RSS', 'time_str':'12/10 12:48 · Κύπρος'}]
+            page.route('**/live-wire.json', lambda r:r.fulfill(json=hostile))
+            page.route('**/wire-health.json', lambda r:r.fulfill(json={'last_success_at':'2000-01-01T00:00:00Z','status':'ok'}))
+            page.reload(wait_until='networkidle')
+            page.wait_for_function('document.getElementById("wireHealth").textContent.includes("καθυστερημένη")')
+            page.wait_for_function('document.getElementById("liveWireTicker").textContent.includes("<img")')
+            assert page.locator('#liveWireTicker img').count()==0
+            assert not page.evaluate('Boolean(window.__wireInjected)')
+            checks.append('RSS markup stays plain text and stale collection is labelled honestly')
             browser.close()
     finally:
         server.shutdown()

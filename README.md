@@ -1,70 +1,9 @@
-# 🏛️ THE ORACLE SOVEREIGN
+# The Oracle Sovereign — oracle-briefing
 
-[![Daily Deployment](https://github.com/JoDemon9/oracle-briefing/actions/workflows/notify.yml/badge.svg)](https://github.com/JoDemon9/oracle-briefing/actions/workflows/notify.yml)
-[![Live Web Portal](https://img.shields.io/badge/Web_Edition-Live_on_GitHub_Pages-8a5320?style=flat&logo=safari)](https://jodemon9.github.io/oracle-briefing/)
-[![Latest Edition](https://img.shields.io/badge/Latest_Edition-2026--10--11-1f6b3f?style=flat)](https://jodemon9.github.io/oracle-briefing/briefings/2026-10-11.html)
+Κεντρική δημόσια πύλη, ιστορικό αρχείο και συλλογή Wire. Δεν παράγει νέες εκδόσεις.
 
-> **Αυστηρά εμπιστευτικό ημερήσιο briefing υψηλού σήματος** για την Κύπρο, τις ευρωπαϊκές αγορές και διεθνείς λήπτες αποφάσεων.  
-> 🌐 **Διαβάστε τη διαδραστική διαδικτυακή εφημερίδα:** [jodemon9.github.io/oracle-briefing](https://jodemon9.github.io/oracle-briefing/)  
-> 📱 **Πλήρης Έκδοση Σήμερα:** [Έκδοση 11ης Οκτωβρίου 2026](https://jodemon9.github.io/oracle-briefing/briefings/2026-10-11.html)
+**Η παραγωγή γίνεται από scheduled actions μέσα στο ChatGPT.** Οι Gemini/Antigravity generators και οι παλιοί Telegram/daily runners έχουν αφαιρεθεί. Το Wire συλλέγει μόνο RSS χωρίς Telegram.
 
----
+Ξεκίνα από [AGENTS.md](AGENTS.md) και [OPERATIONS.md](OPERATIONS.md). Η προδιαγραφή και το κοινό prompt συντηρούνται στο [Claude-Briefing](https://github.com/JoDemon9/Claude-Briefing/blob/main/BRIEFING_SPEC.md). Το παλιό audit είναι ιστορικό, δεν περιγράφει ενεργό scheduler.
 
-## 🏛️ ΤΕΛΕΥΤΑΙΑ ΕΚΔΟΣΗ — Κυριακή, 11 Οκτωβρίου 2026
-
-**07:30 ώρα Κύπρου · χρόνος ανάγνωσης ~8 λεπτά**
-
-### ⭐ ΤΟ ΘΕΜΑ ΤΗΣ ΗΜΕΡΑΣ
-#### Διπλωματική Κινητικότητα & Γεωπολιτική: Πρόσκληση-Έκπληξη της Τουρκίας στον Πρόεδρο Χριστοδουλίδη για τη Διάσκεψη COP31 του ΟΗΕ — Στον Απόηχο του Ρήγματος Τραμπ-Ζελένσκι για το Ρωσικό Ντίζελ και της Επίθεσης στο Αεροδρόμιο του Ριάντ [Επιβεβαιωμένο]
-
-Σε απρόσμενη και πρωτοφανή διπλωματική καμπή εισέρχονται οι ισορροπίες στην Ανατολική Μεσόγειο, καθώς η τουρκική κυβέρνηση απηύθυνε επίσημη πρόσκληση στον Πρόεδρο της Κυπριακής Δημοκρατίας Νίκο Χριστοδουλίδη να παραστεί στις εργασίες της Παγκόσμιας Διάσκεψης του ΟΗΕ για το Κλίμα (COP31), την οποία διεκδικεί να φιλοξενήσει η Άγκυρα στην Αττάλεια. Πρόκειται για την πρώτη επίσημη πρόσκληση Κύπριου ηγέτη σε πολυμερή διεθνή διάσκεψη επί τουρκικού εδάφους εδώ και δεκαετίες, δημιουργώντας σημαντικές ευκαιρίες αλλά και λεπτές προκλήσεις για την κρατική οντότητα της Κυπριακής Δημοκρατίας. Οι εξελίξεις συμπίπτουν με τις χθεσινές δηλώσεις του Νίκου Χριστοδουλίδη από την αντικατοχική πορεία Μόρφου στον Αστρομερίτη, όπου επανέλαβε την πλήρη ετοιμότητα της ελληνοκυπριακής πλευράς για ουσιαστική επανέναρξη συνομιλιών υπό τον ΟΗΕ, την ώρα που η περιφερειακή γεωπολιτική σκακιέρα συγκλονίζεται από τη μαζική επίθεση με drones στο αεροδρόμιο King Khalid του Ριάντ με 12 νεκρούς και πάνω από 300 τραυματίες, καθώς και από το βαθύ ρήγμα στην Ουάσιγκτον μετά την αξίωση Τραμπ για αντικατάσταση του Ζελένσκι λόγω της σύγκρουσης για το ρωσικό ντίζελ, διατηρώντας το πετρέλαιο Brent στα $104,72 (+0,42%).
-
-* **Γιατί είναι πρώτο:** Η επίσημη πρόσκληση της Άγκυρας προς τον εκλεγμένο ηγέτη της Κυπριακής Δημοκρατίας αναδιατάσσει το διπλωματικό σκηνικό, υποχρεώνοντας την τουρκική πλευρά να διαχειριστεί την κρατική παρουσία της Λευκωσίας ενόψει της προπαρασκευής της άτυπης διευρυμένης διάσκεψης υπό τον ΓΓ του ΟΗΕ Αντόνιο Γκουτέρες.
-* **Τι σημαίνει για τον αναγνώστη:** Αναβαθμίζει τη διπλωματική ορατότητα και το ειδικό βάρος της Κύπρου στη διεθνή κοινότητα, λειτουργώντας υποστηρικτικά για τον δείκτη σταθερότητας και την προστασία των εθνικών ενεργειακών υποδομών.
-* **Πηγές:** [SigmaLive](https://www.sigmalive.com/news/politics/1332865/proskeklimenos-stin-cop31-stin-toyrkia-o-ptd-ghia-ti-diaskepsi-toy-ohe-ghia-klima) · [BBC](https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo) · [Cyprus Mail](https://cyprus-mail.com/2026/10/11/riyadh-airport-attack-kills-12-wounds-more-than-309)
-
----
-
-## 📊 DASHBOARD & ΑΓΟΡΕΣ
-
-| Δείκτης / Περιουσιακό Στοιχείο | Τιμή | Μεταβολή | Ημ. αναφοράς |
-| :--- | :--- | :--- | :--- |
-| **S&P 500 (SPX)** | 7.811,54 | +0,59% | 11/10/2026 |
-| **Nasdaq 100 (NDQ)** | 30.883,15 | +0,51% | 11/10/2026 |
-| **Brent Crude** | $104,72 | +0,42% | 11/10/2026 |
-| **Bitcoin (BTC/USD)** | $82.985,35 | +0,09% | 11/10/2026 |
-| **EUR/USD** | 1,1206 | -0,09% | 11/10/2026 |
-| **EUR/GBP** | 0,8461 | -0,12% | 11/10/2026 |
-| **Euribor 3M** | 2,632% | -0,010% | 11/10/2026 |
-| **Bank of Cyprus (BOCH)** | €10,23 | +0,89% | 11/10/2026 |
-
-* **Ενδεικτική δόση στεγαστικού δανείου:** €200.000 / 25 έτη με 3,85% → **€1.039,18 τον μήνα**.
-* **Ο αριθμός της ημέρας: €25 εκατ. για το «Κυπριακό Σήμα»** — Το συνολικό πακέτο μέτρων και άμεσων ενισχύσεων (με άμεσα διαθέσιμα €7,1 εκατ.) για την κατοχύρωση της εθνικής ταυτότητας των τοπικών αγροτικών προϊόντων και την προστασία των παραγωγών ([SigmaLive](https://www.sigmalive.com/news/local/1332864/kipriako-sima-sto-teliko-stadio-i-katokhyrosi-stiriksi-eur25-ek-se-aghrotes)).
-
----
-
-## 🇨🇾 ΚΥΠΡΟΣ & 🌍 ΔΙΕΘΝΗ (Κύριες Εξελίξεις)
-
-1. **Διπλωματία & Κλίμα:** Πρόσκληση-έκπληξη της Τουρκίας στον Πρόεδρο Χριστοδουλίδη για τη σύνοδο COP31 του ΟΗΕ στην Αττάλεια ([SigmaLive](https://www.sigmalive.com/news/politics/1332865/proskeklimenos-stin-cop31-stin-toyrkia-o-ptd-ghia-ti-diaskepsi-toy-ohe-ghia-klima)).
-2. **Δημοσιονομικά & Οικονομία:** «Το τέρας του κρατικού μισθολογίου γιγαντώνεται» — Συναγερμός στο ΥΠΟΙΚ για ανελαστικές δαπάνες και ΑΤΑ ([Philenews](https://www.philenews.com/oikonomia/kypros/article/1780768/to-teras-tou-kratikou-misthologiou-gigantonete/)).
-3. **Αγροδιατροφή & Εμπόριο:** «Κυπριακό Σήμα» στο τελικό στάδιο κατοχύρωσης — Πακέτο €25 εκατ. και άμεση στήριξη €7,1 εκατ. στους παραγωγούς ([SigmaLive](https://www.sigmalive.com/news/local/1332864/kipriako-sima-sto-teliko-stadio-i-katokhyrosi-stiriksi-eur25-ek-se-aghrotes)).
-4. **Εθνικά Θέματα:** Μήνυμα Χριστοδουλίδη από την αντικατοχική πορεία Μόρφου — «Θα πράξουμε ό,τι είναι ανθρωπίνως δυνατόν για επανένωση» ([Philenews](https://www.philenews.com/politiki/article/1780766/christodoulidis-tha-praxoume-oti-ine-anthropinos-dinaton-gia-epanenosi-tis-kiprou/)).
-5. **Ενεργειακές Υποδομές:** Great Sea Interconnector (GSI) — Η γεωπολιτική και τεχνική επιλογή της υποθαλάσσιας διασύνδεσης ([Philenews](https://www.philenews.com/apopsis/paremvaseis-ston-f/article/1780165/gsi-giati-dia-thalassis-ke-ochi-meso-egiptou/)).
-6. **Παγκόσμια Πολιτική & Ενέργεια:** Οργή Τραμπ κατά Ζελένσκι — «Ώρα για νέο Πρόεδρο» μετά την καταδίκη του deal για το ρωσικό ντίζελ ([BBC](https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo)).
-7. **Μέση Ανατολή:** Πολύνεκρη επίθεση στο αεροδρόμιο του Ριάντ με 12 νεκρούς και 300+ τραυματίες ([Cyprus Mail](https://cyprus-mail.com/2026/10/11/riyadh-airport-attack-kills-12-wounds-more-than-309)).
-
----
-
-## ⚽ ΑΘΛΗΤΙΚΟΣ ΠΑΛΜΟΣ
-
-* ☘️ **Ομόνοια:** Μεγάλο διπλό στην Πάφο κόντρα στην Καρμιώτισσα με 3-0 (Brouwers 60', Satka, Tankovic) και στροφή στο ευρωπαϊκό ματς με την Τσέλιε (15/10).
-* 🔴 **Manchester United:** Ισοπαλία 1-1 στο Old Trafford με Tottenham (Fernandes 24' — Solanke 88') και απογοήτευση Carrick για την απώλεια βαθμών κόντρα σε 10 παίκτες.
-* ⚪ **Real Madrid:** Επεισοδιακή νίκη 2-1 επί της Villarreal στο Bernabéu (Diomandé, Valverde), αποβολή και δημόσια απολογία Vinícius.
-* 🏎️ **Formula 1:** Ο Max Verstappen στην pole position και νικητής του Sprint στο Marina Bay — ΣΗΜΕΡΑ Κυριακή (11/10, 15:00) ο μεγάλος αγώνας του Singapore Grand Prix.
-
----
-
-## 📂 Δομή Αποθετηρίου
-* `briefings/`: Όλα τα πρωτογενή αρχεία Markdown και HTML των εκδόσεων (`oracle-briefing-YYYY-MM-DD.md`).
-* `docs/`: Η ζωντανή στατική πύλη που δημοσιεύεται μέσω **GitHub Pages** (`docs/index.html`, `docs/briefings/`).
-* `scripts/`: Η αυτοματοποιημένη μηχανή συλλογής ζωντανών δεδομένων (markets, sports, weather, Telegram dispatch, link verification).
+Τα δημόσια URLs είναι [η εφημερίδα](https://jodemon9.github.io/Claude-Briefing/) και [η πύλη](https://jodemon9.github.io/oracle-briefing/). Το ιδιωτικό docs είναι preview και δεν φιλοξενείται δημόσια.
