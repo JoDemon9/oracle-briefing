@@ -1,0 +1,65 @@
+[
+  {
+    "id": "2026-10-12-evening",
+    "date": "2026-10-12",
+    "type": "evening",
+    "status": "published",
+    "published_at": "2026-10-12T19:47:35+03:00",
+    "title": "Προϋπολογισμός, κυρώσεις και εξελίξεις της βραδινής έκδοσης",
+    "url": "evening/2026-10-12.html"
+  },
+  {
+    "id": "2026-10-12-midday",
+    "date": "2026-10-12",
+    "type": "midday",
+    "status": "published",
+    "published_at": "2026-10-12T13:56:19+03:00",
+    "title": "Μηδενικός ΦΠΑ, διπλωματία και διεθνείς εξελίξεις",
+    "url": "midday/2026-10-12.html"
+  },
+  {
+    "id": "2026-10-12-morning",
+    "date": "2026-10-12",
+    "type": "morning",
+    "status": "published",
+    "published_at": "2026-10-12T07:24:05+03:00",
+    "title": "Προϋπολογισμός, γεωπολιτική και αθλητικές εξελίξεις",
+    "url": "morning/2026-10-12.html"
+  },
+  {
+    "id": "2026-10-11-evening",
+    "date": "2026-10-11",
+    "type": "evening",
+    "status": "published",
+    "published_at": null,
+    "title": "Η ενημέρωση της 2026-10-11",
+    "url": "briefings/2026-10-11.html"
+  },
+  {
+    "id": "2026-09-09-midday",
+    "date": "2026-09-09",
+    "type": "midday",
+    "status": "published",
+    "published_at": null,
+    "title": "Ιστορική έκδοση 2026-09-09",
+    "url": "briefings/2026-09-09.html"
+  },
+  {
+    "id": "2026-09-08-midday",
+    "date": "2026-09-08",
+    "type": "midday",
+    "status": "published",
+    "published_at": null,
+    "title": "Ιστορική έκδοση 2026-09-08",
+    "url": "briefings/2026-09-08.html"
+  },
+  {
+    "id": "2026-09-07-evening",
+    "date": "2026-09-07",
+    "type": "evening",
+    "status": "published",
+    "published_at": null,
+    "title": "Ιστορική έκδοση 2026-09-07",
+    "url": "briefings/2026-09-07.html"
+  }
+]

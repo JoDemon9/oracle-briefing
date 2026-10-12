@@ -3,10 +3,10 @@
 """
 monitor-breaking.py — 24/7 Real-Time Wire & Breaking Flash Engine
 Monitors priority Cyprus and international feeds for high-impact breaking developments.
-When a verified breaking threshold is met:
+When a keyword indicates potentially important news:
   1. Records event to scripts/live-wire.json and docs/live-wire.json
   2. Avoids duplicate alerts using scripts/breaking-cache.json
-  3. Dispatches high-priority Telegram Flash alert (⚡ THE ORACLE FLASH)
+  3. Records provider health and freshness. Never generates editions or sends Telegram.
 """
 
 import os
@@ -18,6 +18,8 @@ import re
 import urllib.request
 import urllib.parse
 import ssl
+from email.utils import parsedate_to_datetime
+from zoneinfo import ZoneInfo
 from datetime import datetime, timezone
 import warnings
 import xml.etree.ElementTree as ET
@@ -34,6 +36,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_FILE = os.path.join(BASE_DIR, 'scripts', 'breaking-cache.json')
 LIVE_WIRE_FILE = os.path.join(BASE_DIR, 'scripts', 'live-wire.json')
 DOCS_WIRE_FILE = os.path.join(BASE_DIR, 'docs', 'live-wire.json')
+HEALTH_FILE = os.path.join(BASE_DIR, 'docs', 'wire-health.json')
+PROVIDER_HEALTH = {}
+NICOSIA = ZoneInfo('Europe/Nicosia')
+
 DOCS_SUB_WIRE_FILE = os.path.join(BASE_DIR, 'docs', 'briefings', 'live-wire.json')
 
 HEADERS = {
@@ -73,12 +79,6 @@ SOURCES = [
         'category': 'international'
     },
     # 2. Finance & Market Intelligence (3 sources)
-    {
-        'name': 'Yahoo Finance',
-        'url': 'https://finance.yahoo.com/news/rssindex',
-        'lang': 'en',
-        'category': 'finance'
-    },
     {
         'name': 'CNBC Top News',
         'url': 'https://www.cnbc.com/id/100003114/device/rss/rss.html',
@@ -148,8 +148,6 @@ CRITICAL_KEYWORDS_EN = [
 
 def create_ssl_context():
     ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
     return ctx
 
 
@@ -236,10 +234,13 @@ def get_xml_child_text(elem, tag_names):
 def fetch_feed(source):
     items = []
     try:
+        PROVIDER_HEALTH[source['name']] = {'status': 'error', 'items': 0}
         req = urllib.request.Request(source['url'], headers=HEADERS)
         ctx = create_ssl_context()
         with urllib.request.urlopen(req, context=ctx, timeout=12) as resp:
-            content = resp.read()
+            content = resp.read(2_000_001)
+            if len(content) > 2_000_000:
+                raise ValueError('Oversized feed')
 
         # 1. Primary parser: xml.etree.ElementTree
         parsed_via_et = False
@@ -298,8 +299,10 @@ def fetch_feed(source):
                         'lang': source['lang'],
                         'category': source.get('category', 'international')
                     })
+        PROVIDER_HEALTH[source['name']] = {'status': 'ok' if items else 'empty', 'items': len(items)}
     except Exception as e:
-        print(f"[!] Feed fetch error for {source['name']}: {e}", file=sys.stderr)
+        PROVIDER_HEALTH[source['name']] = {'status': 'error', 'items': 0, 'error': type(e).__name__}
+        print(f"[!] Feed fetch error for {source['name']}: {type(e).__name__}", file=sys.stderr)
     return items
 
 
@@ -324,67 +327,60 @@ def is_high_impact(item):
     return False, []
 
 
-def send_telegram_flash(flash_item):
-    token = os.environ.get('TELEGRAM_BOT_TOKEN')
-    chat_id = os.environ.get('TELEGRAM_CHAT_ID')
 
-    if not token or not chat_id:
-        env_file = os.path.join(BASE_DIR, '.env')
-        if os.path.exists(env_file):
-            try:
-                with open(env_file, 'r', encoding='utf-8') as f:
-                    for line in f:
-                        if line.startswith('TELEGRAM_BOT_TOKEN='):
-                            token = line.split('=', 1)[1].strip().strip('"\'')
-                        elif line.startswith('TELEGRAM_CHAT_ID='):
-                            chat_id = line.split('=', 1)[1].strip().strip('"\'')
-            except Exception:
-                pass
-
-    if not token or not chat_id:
-        print("[-] Telegram credentials not configured for flash alert.", file=sys.stderr)
-        return False
-
-    now_cy = datetime.now(timezone.utc).strftime('%H:%M')
-    msg = (
-        f"⚡ <b>THE ORACLE FLASH | ΕΚΤΑΚΤΟ</b>\n"
-        f"<i>{now_cy} ώρα Κύπρου · 24/7 Intelligence Wire</i>\n\n"
-        f"🚨 <b>{flash_item['title']}</b>\n\n"
-        f"{flash_item.get('description', '')[:220]}...\n\n"
-        f"🔗 <a href=\"{flash_item['link']}\">Πλήρες Ρεπορτάζ ({flash_item['source']})</a> · "
-        f"<a href=\"https://jodemon9.github.io/oracle-briefing/\">Web Terminal</a>"
-    )
-
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        'chat_id': chat_id,
-        'text': msg,
-        'parse_mode': 'HTML',
-        'disable_web_page_preview': False
-    }
-
+def publication_time(value):
+    if not value:
+        return None
     try:
-        data = json.dumps(payload).encode('utf-8')
-        req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
-        ctx = create_ssl_context()
-        with urllib.request.urlopen(req, context=ctx, timeout=10) as resp:
-            print("[✔] Telegram flash alert dispatched successfully!", file=sys.stderr)
-            return True
-    except Exception as e:
-        print(f"[!] Error sending Telegram flash: {e}", file=sys.stderr)
+        stamp = parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        try:
+            stamp = datetime.fromisoformat(value.replace('Z', '+00:00'))
+        except (TypeError, ValueError):
+            return None
+    return stamp.astimezone(timezone.utc) if stamp.tzinfo else None
+
+
+def eligible(item, now=None):
+    now = now or datetime.now(timezone.utc)
+    title = item.get('title', '').strip()
+    if not title or re.search(r'mobile app advert|advertisement|league.table|βαθμολογία.*20\d{2}[-–]20\d{2}', title, re.I):
         return False
+    published = publication_time(item.get('pub_date'))
+    # Undated feed navigation cannot be labelled as fresh news.
+    return bool(published and -300 <= (now-published).total_seconds() <= 48*3600)
 
 
-def run_monitor(dispatch=True):
+def write_health(new_items):
+    now = datetime.now(timezone.utc)
+    old = {}
+    if os.path.exists(HEALTH_FILE):
+        try:
+            with open(HEALTH_FILE, encoding='utf-8') as stream:
+                old = json.load(stream)
+        except (ValueError, OSError):
+            pass
+    successes = sum(p['status'] == 'ok' for p in PROVIDER_HEALTH.values())
+    payload = {'schema_version': 1, 'checked_at': now.isoformat(),
+               'last_success_at': now.isoformat() if successes else old.get('last_success_at'),
+               'status': 'ok' if successes == len(PROVIDER_HEALTH) and successes else 'degraded' if successes else 'failed',
+               'successful_providers': successes, 'total_providers': len(PROVIDER_HEALTH),
+               'new_items': new_items, 'providers': PROVIDER_HEALTH}
+    temporary = HEALTH_FILE+'.tmp'
+    with open(temporary, 'w', encoding='utf-8') as stream:
+        json.dump(payload, stream, ensure_ascii=False, indent=2)
+    os.replace(temporary, HEALTH_FILE)
+
+
+def run_monitor():
     print("[*] 24/7 Breaking Wire Monitor running...", file=sys.stderr)
     cache = load_cache()
     seen_hashes = set(cache.get('seen_hashes', []))
-    last_flash_time = cache.get('last_flash_time', 0)
     current_time = time.time()
 
-    wire_items = load_live_wire()
+    wire_items = [x for x in load_live_wire() if x.get('published_at') and
+                  eligible({'title': x.get('title'), 'pub_date': x['published_at']})]
     new_wire_count = 0
-    flashed_count = 0
 
     all_harvested = []
     for src in SOURCES:
@@ -392,6 +388,8 @@ def run_monitor(dispatch=True):
         all_harvested.extend(items)
 
     for item in all_harvested:
+        if not eligible(item):
+            continue
         if not (item.get('link') or '').startswith('http'):
             continue
         h = hashlib.sha256((item['link'] + item['title']).encode('utf-8')).hexdigest()
@@ -406,8 +404,10 @@ def run_monitor(dispatch=True):
             'snippet': item['description'][:300].strip(),
             'source': item['source'],
             'category': item.get('category', 'international'),
-            'timestamp': int(time.time()),
-            'time_str': datetime.now(timezone.utc).strftime('%H:%M UTC'),
+            'timestamp': int(publication_time(item['pub_date']).timestamp()),
+            'published_at': publication_time(item['pub_date']).isoformat(),
+            'retrieved_at': datetime.now(timezone.utc).isoformat(),
+            'time_str': publication_time(item['pub_date']).astimezone(NICOSIA).strftime('%d/%m %H:%M · Κύπρος'),
             'is_breaking': False
         }
 
@@ -417,31 +417,27 @@ def run_monitor(dispatch=True):
             item_obj['tags'] = matched_tags
             print(f"[!] High-impact item detected: {item['title']} (Tags: {matched_tags})", file=sys.stderr)
 
-            time_since_flash = current_time - last_flash_time
-            is_explicit_breaking = any(u in item['title'].lower() for u in ['έκτακτο', 'εκτακτο', 'breaking', 'urgent'])
-
-            if dispatch and (is_explicit_breaking or time_since_flash > 5400):
-                dispatched = send_telegram_flash(item)
-                if dispatched:
-                    last_flash_time = current_time
-                    flashed_count += 1
-
         wire_items.insert(0, item_obj)
         new_wire_count += 1
 
     cache['seen_hashes'] = list(seen_hashes)
-    cache['last_flash_time'] = last_flash_time
+    cache.pop('last_flash_time', None)
     save_cache(cache)
     save_live_wire(wire_items)
+    write_health(new_wire_count)
 
-    print(f"[✔] Monitor complete. {new_wire_count} new wire items recorded, {flashed_count} flash alerts sent.", file=sys.stderr)
-    return new_wire_count, flashed_count
+    print(f"[✔] Monitor complete. {new_wire_count} new wire items recorded, no Telegram delivery.", file=sys.stderr)
+    return new_wire_count
 
 
 def main():
-    dispatch = '--no-dispatch' not in sys.argv
-    run_monitor(dispatch=dispatch)
+    try:
+        run_monitor()
+        return 0 if any(x['status'] == 'ok' for x in PROVIDER_HEALTH.values()) else 1
+    except Exception as error:
+        print(f'Monitor failed: {type(error).__name__}', file=sys.stderr)
+        return 1
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

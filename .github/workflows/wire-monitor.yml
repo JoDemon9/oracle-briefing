@@ -1,33 +1,40 @@
-name: 24/7 Breaking Wire Monitor
+name: Wire collection (no edition generation or Telegram)
 on:
   schedule:
-    # Off-peak 30-min cadence (minutes 15 and 45) to avoid top-of-hour scheduler congestion
     - cron: '15,45 * * * *'
   workflow_dispatch:
-
+permissions:
+  contents: write
 concurrency:
-  group: oracle-wire-${{ github.ref }}
-  cancel-in-progress: true
-
+  group: oracle-wire-main
+  cancel-in-progress: false
 jobs:
-  wire_monitor:
+  wire:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: pip install beautifulsoup4 yfinance
-      - name: Run 24/7 Wire Monitor
+        with:
+          python-version: '3.12'
+      - run: pip install beautifulsoup4
+      - run: python -m unittest discover -s tests -p 'test_wire.py' -v
+      - name: Collect dated news and provider health
+        id: collect
+        continue-on-error: true
         run: python scripts/monitor-breaking.py
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      # Edition generation and recovery are handled by ChatGPT tasks.
-      - name: Commit Updated Wire Data
+      - name: Persist only wire data and health
+        if: always()
         run: |
           git config user.name "The Oracle Wire"
-          git config user.email "oracle-wire@antigravity.internal"
-          git add scripts/live-wire.json docs/live-wire.json docs/ briefings/ scripts/*.json || true
-          git diff --staged --quiet || (git commit -m "⚡ [Wire Update] Sync live wire [skip-ci-dispatch]" && git push)
+          git config user.email "oracle-wire@users.noreply.github.com"
+          git add scripts/live-wire.json scripts/breaking-cache.json docs/live-wire.json docs/briefings/live-wire.json docs/wire-health.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update wire and provider health"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Surface collection failure
+        if: steps.collect.outcome == 'failure'
+        run: exit 1

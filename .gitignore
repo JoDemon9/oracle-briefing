@@ -15,3 +15,5 @@ __pycache__/
 .link-check*
 .*.json
 scratch/
+
+.work/

@@ -1,0 +1,7 @@
+/* The public registry is built by Claude-Briefing/scripts/v2/build.py. */
+(async()=>{'use strict';const host='https://jodemon9.github.io/Claude-Briefing/',labels={morning:'Πρωινή',midday:'Μεσημεριανή',evening:'Βραδινή'},slot=document.querySelector('[data-published-editions]');
+try{const response=await fetch('data/editions.json');if(!response.ok)throw Error();const records=await response.json();const order={morning:0,midday:1,evening:2};const published=records.filter(x=>x.status==='published').sort((a,b)=>b.date.localeCompare(a.date)||order[b.type]-order[a.type]);const latest=published[0];if(!latest)throw Error();slot.replaceChildren();const title=document.createElement('strong');title.textContent='Νεότερες εκδόσεις · '+latest.date;slot.append(title);
+document.querySelectorAll('[data-latest-edition-label]').forEach(el=>{el.textContent=labels[latest.type]+' έκδοση · '+latest.date});
+for(const type of ['morning','midday','evening']){const found=published.find(x=>x.date===latest.date&&x.type===type);const el=document.createElement(found?'a':'span');el.textContent=labels[type]+' · '+(found?'Δημοσιευμένη':'Δεν έχει δημοσιευτεί');if(found){el.href=host+found.url}slot.append(el)}
+document.querySelectorAll('[data-latest-briefing]').forEach(a=>{a.href=host+latest.url;a.textContent='Νεότερη δημοσιευμένη έκδοση · '+latest.date+' ↗'});
+}catch{slot.textContent='Το μητρώο εκδόσεων δεν φορτώθηκε. Το δημόσιο αρχείο παραμένει διαθέσιμο.'}})();
