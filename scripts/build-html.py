@@ -5162,6 +5162,10 @@ def render_html(data, house_stats, search_index, is_subfolder=False, date_slug=N
         return render_morning_html(data, house_stats, search_index, is_subfolder=is_subfolder, date_slug=date_slug)
 
 def main():
+    if '--legacy' not in sys.argv and os.path.isfile(os.path.join(DOCS_DIR,'data','editions.json')):
+        raise SystemExit('Active editions are published by Claude-Briefing v2. Sync the public registry; legacy rendering is historical only.')
+    if '--legacy' in sys.argv:
+        sys.argv.remove('--legacy')
     target_md = None
     if len(sys.argv) > 1:
         target_md = os.path.abspath(sys.argv[1])
