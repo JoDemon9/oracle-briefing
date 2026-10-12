@@ -24,16 +24,10 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      - name: Catch-up Check for Scheduled Briefings
-        run: python scripts/catchup-briefings.py
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          BRIEFING_BASE_URL: ${{ vars.BRIEFING_BASE_URL }}
-      - name: Commit Updated Wire Data & Editions
+      # Edition generation and recovery are handled by ChatGPT tasks.
+      - name: Commit Updated Wire Data
         run: |
           git config user.name "The Oracle Wire"
           git config user.email "oracle-wire@antigravity.internal"
           git add scripts/live-wire.json docs/live-wire.json docs/ briefings/ scripts/*.json || true
-          git diff --staged --quiet || (git commit -m "⚡ [Wire Update] Sync live wire & editions [skip-ci-dispatch]" && git push)
+          git diff --staged --quiet || (git commit -m "⚡ [Wire Update] Sync live wire [skip-ci-dispatch]" && git push)
