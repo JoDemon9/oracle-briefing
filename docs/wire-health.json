@@ -1,10 +1,59 @@
 {
   "schema_version": 1,
-  "checked_at": null,
-  "last_success_at": null,
-  "status": "unavailable",
-  "successful_providers": 0,
-  "total_providers": 0,
-  "new_items": 0,
-  "providers": {}
+  "checked_at": "2026-10-12T18:51:57.227942+00:00",
+  "last_success_at": "2026-10-12T18:51:57.227942+00:00",
+  "status": "ok",
+  "successful_providers": 12,
+  "total_providers": 12,
+  "new_items": 209,
+  "providers": {
+    "BBC World": {
+      "status": "ok",
+      "items": 27
+    },
+    "France 24": {
+      "status": "ok",
+      "items": 24
+    },
+    "Al Jazeera": {
+      "status": "ok",
+      "items": 25
+    },
+    "DW World": {
+      "status": "ok",
+      "items": 136
+    },
+    "CNBC Top News": {
+      "status": "ok",
+      "items": 30
+    },
+    "CNBC Markets": {
+      "status": "ok",
+      "items": 30
+    },
+    "Philenews": {
+      "status": "ok",
+      "items": 20
+    },
+    "Sigmalive": {
+      "status": "ok",
+      "items": 25
+    },
+    "Cyprus Mail": {
+      "status": "ok",
+      "items": 20
+    },
+    "BBC Sport": {
+      "status": "ok",
+      "items": 76
+    },
+    "Sky Sports": {
+      "status": "ok",
+      "items": 20
+    },
+    "Kerkida": {
+      "status": "ok",
+      "items": 5
+    }
+  }
 }
