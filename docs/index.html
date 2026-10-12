@@ -74,7 +74,15 @@
     details > summary::-webkit-details-marker { display: none; }
     details[open] summary .expand-icon { transform: rotate(180deg); }
   </style>
-<style>[data-published-editions]{display:flex;flex-wrap:wrap;gap:8px;align-items:center}[data-published-editions] a,[data-published-editions] span{padding:10px;min-height:44px}button,summary{min-height:44px}button{min-width:44px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.grid>*,.flex>*{min-width:0}.card{min-width:0}main{overflow-wrap:anywhere}.card table{min-width:560px;overflow-wrap:normal}footer a{display:inline-flex;align-items:center;min-height:44px}@media(max-width:639px){header .flex,footer .flex,main>section>.flex,.card>div:first-child.flex,.card .items-start{flex-wrap:wrap;gap:.5rem}#liveWireBar>div{flex-wrap:wrap}#liveWireTicker{flex-basis:100%;order:3}}</style></head>
+<style>[data-published-editions]{display:flex;flex-wrap:wrap;gap:8px;align-items:center}[data-published-editions] a,[data-published-editions] span{padding:10px;min-height:44px}button,summary{min-height:44px}button{min-width:44px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.grid>*,.flex>*{min-width:0}.card{min-width:0}main{overflow-wrap:anywhere}.card table{min-width:560px;overflow-wrap:normal}footer a{display:inline-flex;align-items:center;min-height:44px}@media(max-width:639px){header .flex,footer .flex,main>section>.flex,.card>div:first-child.flex,.card .items-start{flex-wrap:wrap;gap:.5rem}#liveWireBar>div{flex-wrap:wrap}#liveWireTicker{flex-basis:100%;order:3}}</style><style>
+.section-shortcuts{position:sticky;top:0;z-index:40;background:var(--paper-raised);border-bottom:1px solid var(--rule)}
+.section-shortcuts>div{max-width:1280px;margin:auto;padding:0 16px;display:flex;flex-wrap:wrap;gap:0 20px}
+.section-shortcuts a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-size:12px;font-weight:700;text-decoration:none}
+.section-shortcuts a:hover{color:var(--accent);text-decoration:underline}
+#top-story,#evening-news,#sports-radar,#closing-bell{scroll-margin-top:108px}
+@media print{.section-shortcuts{display:none}}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style></head>
 <body class="antialiased min-h-screen">
 <aside aria-label="Νεότερη διαθέσιμη έκδοση" id="oracle-chatgpt-latest" style="padding:20px 24px;background:#123b36;color:#f3eee4;font:14px/1.6 Arial,sans-serif;border-bottom:2px solid #cba176"><div style="max-width:1240px;margin:auto"><strong data-latest-edition-label="">Νεότερη δημοσιευμένη έκδοση</strong><p style="margin:8px 0">Ειδήσεις, αναλύσεις, αγορές και αθλητική ενημέρωση στα ελληνικά.</p><a data-latest-briefing="" href="https://jodemon9.github.io/Claude-Briefing/evening/2026-10-12.html" style="display:inline-block;padding:10px 16px;background:#cba176;color:#102522;font-weight:700;text-decoration:none">Άνοιξε τη νεότερη δημοσιευμένη έκδοση ↗</a><p style="font-size:11px;margin:10px 0 0;opacity:.8">Το περιεχόμενο της παλαιότερης έκδοσης παρακάτω παραμένει με την αρχική του ημερομηνία. Οι σύνδεσμοι εκδόσεων οδηγούν στα δημοσιευμένα αρχεία.</p></div></aside>
 <!-- TOP BAR & STATUS -->
@@ -134,12 +142,9 @@
 </div>
 </div>
 </header>
-<!-- LIVE MARKET TICKER -->
-<div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
-<div class="ticker-content space-x-8 font-mono">
-<span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&amp;P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.811,54</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,59%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">30.883,15</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,51%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$83.717,62</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,97%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,12</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,09%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,85</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,12%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,23</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,89%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$104,72</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,42%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$453,31</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,02%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$229,28</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,52%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$347,86</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,87%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$336,64</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,11%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$535,07</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+2,38%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$1.029,00</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,66%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$718,67</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,31%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&amp;P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.811,54</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,59%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">30.883,15</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,51%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$83.717,62</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,97%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,12</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,09%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,85</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,12%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,23</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,89%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$104,72</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,42%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$453,31</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,02%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$229,28</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,52%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$347,86</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,87%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$336,64</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,11%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$535,07</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+2,38%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$1.029,00</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,66%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$718,67</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,31%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span>
-</div>
-</div>
+<nav class="section-shortcuts" aria-label="Ενότητες εφημερίδας">
+<div><a href="#top-story">Κύρια νέα</a><a href="#evening-news">Κύπρος &amp; Διεθνή</a><a href="#sports-radar">Αθλητικά</a><a href="#closing-bell">Αγορές</a></div>
+</nav>
 <!-- ⚡ 24/7 REAL-TIME LIVE WIRE BAR -->
 <div class="bg-[var(--paper-raised)] text-[var(--ink)] py-2 px-4 border-b border-[var(--rule)] text-xs" id="liveWireBar">
 <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
@@ -409,6 +414,167 @@
 </article>
 </div>
 </section>
+<!-- ==================== ⚽ 4. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
+<section class="scroll-mt-24" id="sports-radar">
+<div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
+<h2 class="t-section flex items-center gap-2">
+<span>⚽</span> <span>Απογευματινός Αθλητισμός &amp; Πρόγραμμα</span>
+</h2>
+<span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">HIGHLIGHTS &amp; FIXTURES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-emerald-700/30 dark:border-emerald-600/40">
+<div>
+<div class="bg-gradient-to-r from-emerald-900 to-green-950 p-4 text-white flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="text-2xl">☘️</span>
+<h3 class="font-masthead font-bold text-sm tracking-wide text-white">ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ</h3>
+</div>
+<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                CYPRUS LEAGUE &amp; EUROPE
+              </span>
+</div>
+<div class="p-5 space-y-3">
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
+<span class="text-[var(--ink-body)]">Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)</span>
+</div>
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
+<span class="text-[var(--ink-body)] font-medium">19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026)</span>
+</div>
+<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
+<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
+          Παναγιώτου/90λεπτο και τρίποντο!
+        </div>
+<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
+<span>Επίσημη Πηγή:</span>
+<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.cfa.com.cy/Gr/news/53723" rel="noopener noreferrer" target="_blank">ΚΟΠ / CFA</a>
+</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026" rel="noopener noreferrer" target="_blank">
+<span>▶</span> <span>Highlights Ομόνοιας στο YouTube</span>
+</a>
+</div>
+</article>
+<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-700/30 dark:border-red-600/40">
+<div>
+<div class="bg-gradient-to-r from-red-900 to-stone-950 p-4 text-white flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="text-2xl">🔴</span>
+<h3 class="font-masthead font-bold text-sm tracking-wide text-white">MANCHESTER UNITED</h3>
+</div>
+<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                UEFA CHAMPIONS LEAGUE
+              </span>
+</div>
+<div class="p-5 space-y-3">
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
+<span class="text-[var(--ink-body)]">Carrick ‘massively disappointed’ after United drop points against 10-man Spurs</span>
+</div>
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
+<span class="text-[var(--ink-body)] font-medium">UEFA Champions League - League Stage: Atletico Madrid versus Manchester United — 20:00</span>
+</div>
+<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
+<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
+          Manchester United and Spurs come back to reality as City saga offers brief distraction
+        </div>
+<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
+<span>Επίσημη Πηγή:</span>
+<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures" rel="noopener noreferrer" target="_blank">BBC Sport</a>
+</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Manchester+United+highlights+2026" rel="noopener noreferrer" target="_blank">
+<span>▶</span> <span>Highlights Manchester United στο YouTube</span>
+</a>
+</div>
+</article>
+<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-amber-700/30 dark:border-amber-600/40">
+<div>
+<div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-purple-950 p-4 text-white flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="text-2xl">⚪</span>
+<h3 class="font-masthead font-bold text-sm tracking-wide text-white">REAL MADRID</h3>
+</div>
+<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                SPANISH LA LIGA
+              </span>
+</div>
+<div class="p-5 space-y-3">
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
+<span class="text-[var(--ink-body)]">{'match': 'Atlético Madrid – Real Madrid', 'score': '2-1', 'competition': 'Spanish La Liga (6η αγωνιστική - Derbi Madrileño)', 'date': 'Κυριακή 20 Σεπτεμβρίου 2026', 'venue': 'Cívitas Metropolitano', 'summary': 'Atlético Madrid – Real Madrid 2-1 (Cívitas Metropolitano, Derbi Madrileño)', 'source_url': 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures', 'source': 'Marca / BBC Sport'}</span>
+</div>
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
+<span class="text-[var(--ink-body)] font-medium">UEFA Champions League - League Stage: Roma versus Real Madrid — 20:00 (Wednesday 14th October)</span>
+</div>
+<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
+<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
+          Mourinho is left speechless after the latest controversy involving Vinicius
+        </div>
+<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
+<span>Επίσημη Πηγή:</span>
+<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures" rel="noopener noreferrer" target="_blank">Marca / BBC Sport</a>
+</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026" rel="noopener noreferrer" target="_blank">
+<span>▶</span> <span>Highlights Real Madrid στο YouTube</span>
+</a>
+</div>
+</article>
+<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-600/30 dark:border-red-500/40">
+<div>
+<div class="bg-gradient-to-r from-neutral-900 to-red-950 p-4 text-white flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="text-2xl">🏎️</span>
+<h3 class="font-masthead font-bold text-sm tracking-wide text-white">FORMULA 1</h3>
+</div>
+<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
+                FIA WORLD CHAMPIONSHIP
+              </span>
+</div>
+<div class="p-5 space-y-3">
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
+<span class="text-[var(--ink-body)]">Verstappen dominates for first Singapore Grand Prix win</span>
+</div>
+<div class="flex items-start gap-2 text-xs">
+<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
+<span class="text-[var(--ink-body)] font-medium">Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix) — Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου</span>
+</div>
+<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
+<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
+          Verstappen dominates for first Singapore Grand Prix win
+        </div>
+<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
+<span>Επίσημη Πηγή:</span>
+<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.formula1.com/en/racing/2026/bahrain.html" rel="noopener noreferrer" target="_blank">Formula1.com</a>
+</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Formula+1+highlights+2026" rel="noopener noreferrer" target="_blank">
+<span>▶</span> <span>Highlights Formula 1 στο YouTube</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- MARKET SNAPSHOT · original edition date -->
+<div class="bg-[var(--paper)] text-[var(--ink)] py-2 border-y border-[var(--rule)] text-xs ticker-wrap">
+<div class="ticker-content space-x-8 font-mono">
+<span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&amp;P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.811,54</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,59%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">30.883,15</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,51%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$83.717,62</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,97%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,12</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,09%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,85</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,12%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,23</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,89%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$104,72</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,42%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$453,31</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,02%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$229,28</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,52%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$347,86</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,87%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$336,64</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,11%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$535,07</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+2,38%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$1.029,00</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,66%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$718,67</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,31%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">S&amp;P 500 (SPX):</span> <span class="text-[var(--ink-body)]">7.811,54</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,59%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Nasdaq 100 (NDQ):</span> <span class="text-[var(--ink-body)]">30.883,15</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,51%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bitcoin (BTC/USD):</span> <span class="text-[var(--ink-body)]">$83.717,62</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,97%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/USD:</span> <span class="text-[var(--ink-body)]">1,12</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,09%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">EUR/GBP:</span> <span class="text-[var(--ink-body)]">0,85</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,12%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Bank of Cyprus (BOCH):</span> <span class="text-[var(--ink-body)]">€10,23</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,89%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Brent Crude:</span> <span class="text-[var(--ink-body)]">$104,72</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,42%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">TSMC (TSM):</span> <span class="text-[var(--ink-body)]">$453,31</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,02%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">NVIDIA (NVDA):</span> <span class="text-[var(--ink-body)]">$229,28</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,52%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Alphabet (GOOG):</span> <span class="text-[var(--ink-body)]">$347,86</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+0,87%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Apple (AAPL):</span> <span class="text-[var(--ink-body)]">$336,64</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-1,11%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Microsoft (MSFT):</span> <span class="text-[var(--ink-body)]">$535,07</span> <span class="text-[var(--up)] font-semibold inline-flex items-center">+2,38%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,11 10,9 19,5 28,1" stroke="var(--up)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Micron (MU):</span> <span class="text-[var(--ink-body)]">$1.029,00</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,66%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span> · <span class="inline-flex items-center gap-1.5"><span class="font-bold text-[var(--ink)]">Meta (META):</span> <span class="text-[var(--ink-body)]">$718,67</span> <span class="text-[var(--down)] font-semibold inline-flex items-center">-0,31%<svg aria-hidden="true" class="w-7 h-3 inline-block ml-1.5 opacity-80 flex-shrink-0" viewbox="0 0 29 12"><polyline fill="none" points="1,1 10,5 19,9 28,11" stroke="var(--down)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline></svg></span></span>
+</div>
+</div>
 <!-- ==================== 🔔 3. CLOSING BELL & ΑΓΟΡΕΣ ==================== -->
 <section class="scroll-mt-24" id="closing-bell">
 <div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
@@ -632,161 +798,6 @@
 </table>
 </div>
 </div>
-</div>
-</section>
-<!-- ==================== ⚽ 4. ΑΠΟΓΕΥΜΑΤΙΝΟΣ ΑΘΛΗΤΙΣΜΟΣ ==================== -->
-<section class="scroll-mt-24" id="sports-radar">
-<div class="flex items-center gap-2 mb-4 pb-2 border-b-2 border-[var(--rule-strong)]">
-<h2 class="t-section flex items-center gap-2">
-<span>⚽</span> <span>Απογευματινός Αθλητισμός &amp; Πρόγραμμα</span>
-</h2>
-<span class="text-xs font-mono text-[var(--ink-quiet)] ml-auto">HIGHLIGHTS &amp; FIXTURES</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-emerald-700/30 dark:border-emerald-600/40">
-<div>
-<div class="bg-gradient-to-r from-emerald-900 to-green-950 p-4 text-white flex items-center justify-between">
-<div class="flex items-center gap-2.5">
-<span class="text-2xl">☘️</span>
-<h3 class="font-masthead font-bold text-sm tracking-wide text-white">ΟΜΟΝΟΙΑ ΛΕΥΚΩΣΙΑΣ</h3>
-</div>
-<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                CYPRUS LEAGUE &amp; EUROPE
-              </span>
-</div>
-<div class="p-5 space-y-3">
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
-<span class="text-[var(--ink-body)]">Ομόνοια – Krasava ΕΝΥ 4-1 (Ημίχρονο 1-1, Στάδιο ΓΣΠ, 4η αγωνιστική)</span>
-</div>
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
-<span class="text-[var(--ink-body)] font-medium">19:00 Καρμιώτισσα Πολεμιδιών – Ομόνοια Λευκωσίας (Στάδιο «Στέλιος Κυριακίδης», Πάφος) (Παρασκευή 09.10.2026)</span>
-</div>
-<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
-          Παναγιώτου/90λεπτο και τρίποντο!
-        </div>
-<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-<span>Επίσημη Πηγή:</span>
-<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.cfa.com.cy/Gr/news/53723" rel="noopener noreferrer" target="_blank">ΚΟΠ / CFA</a>
-</div>
-</div>
-</div>
-<div class="p-4 pt-0">
-<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Omonoia+FC+highlights+2026" rel="noopener noreferrer" target="_blank">
-<span>▶</span> <span>Highlights Ομόνοιας στο YouTube</span>
-</a>
-</div>
-</article>
-<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-700/30 dark:border-red-600/40">
-<div>
-<div class="bg-gradient-to-r from-red-900 to-stone-950 p-4 text-white flex items-center justify-between">
-<div class="flex items-center gap-2.5">
-<span class="text-2xl">🔴</span>
-<h3 class="font-masthead font-bold text-sm tracking-wide text-white">MANCHESTER UNITED</h3>
-</div>
-<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                UEFA CHAMPIONS LEAGUE
-              </span>
-</div>
-<div class="p-5 space-y-3">
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
-<span class="text-[var(--ink-body)]">Carrick ‘massively disappointed’ after United drop points against 10-man Spurs</span>
-</div>
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
-<span class="text-[var(--ink-body)] font-medium">UEFA Champions League - League Stage: Atletico Madrid versus Manchester United — 20:00</span>
-</div>
-<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
-          Manchester United and Spurs come back to reality as City saga offers brief distraction
-        </div>
-<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-<span>Επίσημη Πηγή:</span>
-<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.bbc.com/sport/football/teams/manchester-united/scores-fixtures" rel="noopener noreferrer" target="_blank">BBC Sport</a>
-</div>
-</div>
-</div>
-<div class="p-4 pt-0">
-<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Manchester+United+highlights+2026" rel="noopener noreferrer" target="_blank">
-<span>▶</span> <span>Highlights Manchester United στο YouTube</span>
-</a>
-</div>
-</article>
-<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-amber-700/30 dark:border-amber-600/40">
-<div>
-<div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-purple-950 p-4 text-white flex items-center justify-between">
-<div class="flex items-center gap-2.5">
-<span class="text-2xl">⚪</span>
-<h3 class="font-masthead font-bold text-sm tracking-wide text-white">REAL MADRID</h3>
-</div>
-<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                SPANISH LA LIGA
-              </span>
-</div>
-<div class="p-5 space-y-3">
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
-<span class="text-[var(--ink-body)]">{'match': 'Atlético Madrid – Real Madrid', 'score': '2-1', 'competition': 'Spanish La Liga (6η αγωνιστική - Derbi Madrileño)', 'date': 'Κυριακή 20 Σεπτεμβρίου 2026', 'venue': 'Cívitas Metropolitano', 'summary': 'Atlético Madrid – Real Madrid 2-1 (Cívitas Metropolitano, Derbi Madrileño)', 'source_url': 'https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures', 'source': 'Marca / BBC Sport'}</span>
-</div>
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
-<span class="text-[var(--ink-body)] font-medium">UEFA Champions League - League Stage: Roma versus Real Madrid — 20:00 (Wednesday 14th October)</span>
-</div>
-<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
-          Mourinho is left speechless after the latest controversy involving Vinicius
-        </div>
-<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-<span>Επίσημη Πηγή:</span>
-<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.bbc.com/sport/football/teams/real-madrid/scores-fixtures" rel="noopener noreferrer" target="_blank">Marca / BBC Sport</a>
-</div>
-</div>
-</div>
-<div class="p-4 pt-0">
-<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Real+Madrid+highlights+2026" rel="noopener noreferrer" target="_blank">
-<span>▶</span> <span>Highlights Real Madrid στο YouTube</span>
-</a>
-</div>
-</article>
-<article class="card overflow-hidden flex flex-col justify-between border rounded-2xl shadow-xs border-red-600/30 dark:border-red-500/40">
-<div>
-<div class="bg-gradient-to-r from-neutral-900 to-red-950 p-4 text-white flex items-center justify-between">
-<div class="flex items-center gap-2.5">
-<span class="text-2xl">🏎️</span>
-<h3 class="font-masthead font-bold text-sm tracking-wide text-white">FORMULA 1</h3>
-</div>
-<span class="t-meta uppercase tracking-wider px-2 py-0.5 rounded-full text-[10px] bg-black/40 text-white/90 border border-white/10">
-                FIA WORLD CHAMPIONSHIP
-              </span>
-</div>
-<div class="p-5 space-y-3">
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">⏱️ Τελ. Αποτέλεσμα:</span>
-<span class="text-[var(--ink-body)]">Verstappen dominates for first Singapore Grand Prix win</span>
-</div>
-<div class="flex items-start gap-2 text-xs">
-<span class="font-bold text-[var(--ink)] flex-shrink-0">📅 Επόμενος Αγώνας:</span>
-<span class="text-[var(--ink-body)] font-medium">Bahrain Grand Prix 2026 (Gulf Air Bahrain Grand Prix) — Κυριακή, 4 Οκτωβρίου 2026, 18:00 ώρα Κύπρου</span>
-</div>
-<div class="text-xs text-[var(--ink-body)] bg-[var(--paper)] p-3 rounded border border-[var(--rule)] leading-relaxed">
-<strong class="text-[var(--accent)] font-semibold block mb-1">📋 Ρεπορτάζ &amp; Νέα:</strong>
-          Verstappen dominates for first Singapore Grand Prix win
-        </div>
-<div class="text-[11px] text-[var(--ink-quiet)] flex items-center justify-between pt-2 border-t border-[var(--rule)]">
-<span>Επίσημη Πηγή:</span>
-<a class="text-[var(--accent)] hover:underline font-medium" href="https://www.formula1.com/en/racing/2026/bahrain.html" rel="noopener noreferrer" target="_blank">Formula1.com</a>
-</div>
-</div>
-</div>
-<div class="p-4 pt-0">
-<a class="inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-600 dark:text-red-400 text-xs font-bold border border-red-500/30 transition" href="https://www.youtube.com/results?search_query=Formula+1+highlights+2026" rel="noopener noreferrer" target="_blank">
-<span>▶</span> <span>Highlights Formula 1 στο YouTube</span>
-</a>
-</div>
-</article>
 </div>
 </section>
 <!-- ==================== 🌤️ 5. ΑΥΡΙΑΝΗ ΠΡΟΓΝΩΣΗ ΛΕΜΕΣΟΥ ==================== -->
