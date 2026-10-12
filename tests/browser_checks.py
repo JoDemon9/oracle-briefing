@@ -44,10 +44,12 @@ def run(screenshots=None):
                 page.goto(base+'/index.html', wait_until='networkidle')
                 page.wait_for_function('document.querySelector("[data-published-editions]").textContent.includes("Δημοσιευμένη")')
                 assert page.evaluate('getComputedStyle(document.querySelector(".max-w-7xl")).maxWidth')!='none', 'Portal styles did not load'
-                if screenshots and width in [375,1440]:
+                if screenshots and width in [320,375,1440]:
                     screenshots.mkdir(parents=True, exist_ok=True)
                     page.screenshot(path=str(screenshots/f'{width}-portal.png'), full_page=True)
-                assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'), f'Portal overflow at {width}px'
+                if not page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'):
+                    print(page.evaluate('JSON.stringify([...document.querySelectorAll("*")].filter(e=>e.getBoundingClientRect().right>innerWidth+1 && !e.closest(".ticker-wrap,.overflow-x-auto,#wireDrawerModal")).slice(0,25).map(e=>({tag:e.tagName,cls:e.className,right:e.getBoundingClientRect().right,text:e.textContent.slice(0,100)})))'))
+                    raise AssertionError(f'Portal overflow at {width}px')
                 assert page.locator('[data-published-editions] a').count()==3
                 assert page.locator('[data-latest-briefing]').first.get_attribute('href').endswith(latest['url'])
                 assert latest['date'] in page.locator('[data-latest-edition-label]').inner_text()
