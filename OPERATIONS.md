@@ -35,6 +35,7 @@
 | docs/data/release.json | Δημόσιο αποτύπωμα της υποψήφιας έκδοσης. Η ύπαρξή του δεν αποδεικνύει ότι δημοσιεύτηκε. |
 | .work/publication-check.json | Τοπικό αποτέλεσμα επιτυχούς ελέγχου των πραγματικά σερβιρισμένων αρχείων. Δεν μπαίνει στο Git. |
 | .github/workflows/content-checks.yml (public) | Έλεγχοι schema, tests, αναπαραγωγιμότητας HTML και browser. Δεν δημιουργεί ειδήσεις ούτε εκκινεί τα scheduled actions. |
+| .github/workflows/verify-deployment.yml (public) | Μετά από επιτυχημένο Pages deployment ελέγχει τα πραγματικά σερβιρισμένα hashes. Δεν παράγει περιεχόμενο και δεν είναι δεύτερος scheduler. Το αποτέλεσμα αποθηκεύεται ως artifact. |
 | .github/workflows/ci.yml (private) | Έλεγχοι κώδικα/δομημένων δεδομένων. Δεν δημοσιεύει και δεν ενεργοποιεί AI. |
 | scripts/monitor-breaking.py (Oracle) | Συλλογή πρόσφατων χρονολογημένων RSS ειδήσεων, φιλτράρισμα, αποθήκευση Wire και υγείας παρόχων. Δεν παράγει έκδοση και δεν στέλνει Telegram. |
 | .github/workflows/wire-monitor.yml (Oracle) | Ξεχωριστή συλλογή Wire στις :15/:45 UTC. GitHub cron μπορεί να καθυστερήσει. Μόνο τα συγκεκριμένα JSON αλλάζουν. |
