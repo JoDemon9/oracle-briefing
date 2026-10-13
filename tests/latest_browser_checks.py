@@ -53,13 +53,13 @@ def run(screenshots=None):
                 assert photo.bounding_box()['height']<=201
                 assert page.locator('.hero .story-content > h2').bounding_box()['y']<photo.bounding_box()['y']
                 assert page.locator('.hero .story-more').count()==0
-                assert page.locator('.hero .story-preview').is_visible()
-                assert len(page.locator('.hero .story-preview').inner_text().split())>=110
-                assert page.locator('.hero .read-more').get_attribute('href').startswith(SOURCE+'articles/')
+                assert page.locator('.hero .card-context').is_visible()
+                assert len(page.locator('.hero .card-context').inner_text().split())>=110
+                assert page.locator('.hero .read-link').get_attribute('href').startswith(SOURCE+'articles/')
                 assert page.locator('.hero .lead-overview img').evaluate('(x)=>x.complete&&x.naturalWidth>0&&x.naturalHeight>0')
                 assert not page.locator('.hero-grid > .analysis-grid').count()
                 assert len(page.locator('#cyprus .newscard .story-content').first.inner_text().split())>45
-                reader=page.locator('.hero .read-more').first
+                reader=page.locator('.hero .read-link').first
                 reader.focus()
                 assert reader.evaluate('(x)=>document.activeElement===x')
                 assert reader.get_attribute('href').endswith('/lead.html')
