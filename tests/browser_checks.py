@@ -41,7 +41,7 @@ def run(screenshots=None):
             page.on('pageerror', lambda error:errors.append(str(error)))
             for width in [320,375,390,1440]:
                 page.set_viewport_size({'width':width,'height':900})
-                page.goto(base+'/index.html', wait_until='networkidle')
+                page.goto(base+'/portal-archive.html', wait_until='networkidle')
                 page.wait_for_function('document.querySelector("[data-published-editions]").textContent.includes("Δημοσιευμένη")')
                 assert page.evaluate('getComputedStyle(document.querySelector(".max-w-7xl")).maxWidth')!='none', 'Portal styles did not load'
                 if screenshots and width in [320,375,1440]:
@@ -64,10 +64,8 @@ def run(screenshots=None):
             page.keyboard.press('Enter')
             assert page.locator('html').get_attribute('class')=='dark'
             checks.append('Portal keyboard theme control passed')
-            limited = [dict(x, status='draft') if x['date']==latest['date'] and x['type']=='evening' else x for x in records]
-            for edition_type in ['morning','midday']:
-                if not any(x['date']==latest['date'] and x['type']==edition_type and x['status']=='published' for x in limited):
-                    limited.append(dict(latest,id=latest['date']+'-'+edition_type,type=edition_type,status='published',url=edition_type+'/'+latest['date']+'.html'))
+            complete_date=max(x['date'] for x in records if sum(r['date']==x['date'] and r['status']=='published' for r in records)==3)
+            limited = [dict(x, status='draft') if x['date']==complete_date and x['type']=='evening' else x for x in records if x['date']<=complete_date]
             page.route('**/data/editions.json', lambda r:r.fulfill(json=limited[::-1]))
             page.reload(wait_until='networkidle')
             assert page.locator('[data-published-editions] a').count()==2
