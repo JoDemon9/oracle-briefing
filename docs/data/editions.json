@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-10-13-evening",
+    "date": "2026-10-13",
+    "type": "evening",
+    "status": "published",
+    "published_at": "2026-10-13T20:20:59+03:00",
+    "title": "Evening Debrief · Επαφές με συνέχεια, εξαγωγές και ευρωπαϊκή AI",
+    "url": "evening/2026-10-13.html"
+  },
+  {
     "id": "2026-10-13-midday",
     "date": "2026-10-13",
     "type": "midday",
