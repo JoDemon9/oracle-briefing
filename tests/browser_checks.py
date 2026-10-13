@@ -50,7 +50,10 @@ def run(screenshots=None):
                 if not page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'):
                     print(page.evaluate('JSON.stringify([...document.querySelectorAll("*")].filter(e=>e.getBoundingClientRect().right>innerWidth+1 && !e.closest(".ticker-wrap,.overflow-x-auto,#wireDrawerModal")).slice(0,25).map(e=>({tag:e.tagName,cls:e.className,right:e.getBoundingClientRect().right,text:e.textContent.slice(0,100)})))'))
                     raise AssertionError(f'Portal overflow at {width}px')
-                assert page.locator('[data-published-editions] a').count()==3
+                expected_count=len({x['type'] for x in published if x['date']==latest['date']})
+                assert page.locator('[data-published-editions] a').count()==expected_count
+                morning=max((x for x in published if x['type']=='morning'),key=lambda x:x['date'])
+                assert page.locator('[data-morning-briefing]').first.get_attribute('href').endswith(morning['url'])
                 assert page.locator('[data-latest-briefing]').first.get_attribute('href').endswith(latest['url'])
                 assert latest['date'] in page.locator('[data-latest-edition-label]').inner_text()
                 for button in page.locator('button:visible').all():
@@ -62,6 +65,9 @@ def run(screenshots=None):
             assert page.locator('html').get_attribute('class')=='dark'
             checks.append('Portal keyboard theme control passed')
             limited = [dict(x, status='draft') if x['date']==latest['date'] and x['type']=='evening' else x for x in records]
+            for edition_type in ['morning','midday']:
+                if not any(x['date']==latest['date'] and x['type']==edition_type and x['status']=='published' for x in limited):
+                    limited.append(dict(latest,id=latest['date']+'-'+edition_type,type=edition_type,status='published',url=edition_type+'/'+latest['date']+'.html'))
             page.route('**/data/editions.json', lambda r:r.fulfill(json=limited[::-1]))
             page.reload(wait_until='networkidle')
             assert page.locator('[data-published-editions] a').count()==2
