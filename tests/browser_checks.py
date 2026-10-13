@@ -4,6 +4,7 @@ import argparse
 import functools
 import json
 import threading
+import urllib.request
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
@@ -32,7 +33,12 @@ def run(screenshots=None):
             def route(request):
                 url = request.request.url
                 if url.startswith(base) or urlparse(url).hostname in {'cdn.tailwindcss.com','fonts.googleapis.com','fonts.gstatic.com'}:
-                    request.continue_()
+                    if url.startswith(base):
+                        request.continue_()
+                    else:
+                        # Use the runtime proxy and CA trust for external style fixtures.
+                        with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':request.request.headers.get('user-agent','Mozilla/5.0')}),timeout=30) as response:
+                            request.fulfill(body=response.read(),content_type=response.headers.get('Content-Type','text/plain'))
                 else:
                     request.abort()
             context.route('**/*', route)

@@ -1,0 +1,27 @@
+name: Verify served daily newspaper
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['pages build and deployment', 'pages-build-deployment']
+    types: [completed]
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || 'main' }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install beautifulsoup4
+      - run: python scripts/daily_release.py --verify-live
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: verified-daily-publication
+          path: .work/daily-publication-check.json
