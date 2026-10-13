@@ -52,21 +52,25 @@ def run(screenshots=None):
                 photo=page.locator('.hero .lead-overview img').first
                 assert photo.bounding_box()['height']<=201
                 assert page.locator('.hero .story-content > h2').bounding_box()['y']<photo.bounding_box()['y']
-                assert page.locator('.hero .story-more').get_attribute('open') is None
+                assert page.locator('.hero .story-more').count()==0
+                assert page.locator('.hero .story-preview').is_visible()
+                assert len(page.locator('.hero .story-preview').inner_text().split())>=110
+                assert page.locator('.hero .read-more').get_attribute('href').startswith(SOURCE+'articles/')
+                assert page.locator('.hero .lead-overview img').evaluate('(x)=>x.complete&&x.naturalWidth>0&&x.naturalHeight>0')
                 assert not page.locator('.hero-grid > .analysis-grid').count()
                 assert len(page.locator('#cyprus .newscard .story-content').first.inner_text().split())>45
-                more=page.locator('.hero .story-more > summary').first
-                more.focus();page.keyboard.press('Enter')
-                assert more.evaluate('(x)=>x.parentElement.open')
+                reader=page.locator('.hero .read-more').first
+                reader.focus()
+                assert reader.evaluate('(x)=>document.activeElement===x')
+                assert reader.get_attribute('href').endswith('/lead.html')
                 assert page.url==base+'/'
-                more.click()
                 if screenshots and width in [375,1440]:
                     screenshots.mkdir(parents=True,exist_ok=True)
                     page.evaluate('scrollTo(0,0)')
                     page.screenshot(path=str(screenshots/f'{width}-central-briefing.png'))
                     page.locator('.navs a[href="#cyprus"]').click()
                     page.screenshot(path=str(screenshots/f'{width}-large-news-cards.png'))
-                checks.append(f'{width}px: complete central briefing, compact lead, substantial cards, inline analysis')
+                checks.append(f'{width}px: complete central briefing, compact lead, substantial previews, decoded photographs and separate reader')
             updated=BeautifulSoup(original,'html.parser')
             updated.find('meta',attrs={'name':'oracle-edition-id'})['content']='2099-01-01-evening'
             updated.find('meta',attrs={'name':'oracle-published-at'})['content']='2099-01-01T19:30:00+02:00'
