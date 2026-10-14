@@ -2,14 +2,14 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-14",
-  "updated_at": "2026-10-14T21:27:22.366824+00:00",
+  "updated_at": "2026-10-14T21:54:11.397996+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-14.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "7599a17b97d99adabb7fcb96fbdb2ccde4dc0052d9fc933c1e1bbeae11163e3f",
+  "html_sha256": "021f12f273de9fb701d294d0f49c71e4a0096ce90146dbc6fb95d2c033c6e157",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
-    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=c44cb73cc739f450": "c44cb73cc739f4508f7c699214205663b54aa8b866ab0967ee83f98767d57a79",
+    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=8b5e432c5ce9c152": "8b5e432c5ce9c1520be73fb243d21751124949f7b0cd5bad56a5ac23d4ad6dd9",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=362e68f3bb10f463": "362e68f3bb10f4634502abceb3b8662035ead444786f0e33069e38e66671b52e",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-evening/lead.webp?v=dea3e5a3d966f054": "dea3e5a3d966f0545fa175ccc7210f331e61a589392a55b20f549f7a1531c9f6",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-evening/cyprus-takata.webp?v=bf90fbd3e6456fbe": "bf90fbd3e6456fbe8cac8646bc9530e4e743f21fff455dca4db96572ee180d58",
@@ -34,5 +34,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/sport-champions.webp?v=6d183af6c0f0561d": "6d183af6c0f0561de5c12336e2652f3518f3d8fa90e6372539ef0c794bcfd3cd",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/sport-omonoia.webp?v=bc4220839d5dfa47": "bc4220839d5dfa47a2e4c72a6b97c25265a1ece1789324e7895d9216a3fbb588"
   },
-  "version": "7eb57fb197ea01b06c849290a6586d72e24d5801a5d32c892dd20219d41a0788"
+  "version": "9ccc29c9d14c99e110d2e0054069cf1b2ccfd61e282dea98cedc6757840babd3"
 }

@@ -52,6 +52,14 @@ def run(screenshots=None):
                 assert page.locator('meta[name="oracle-day-id"]').get_attribute('content')==descriptor['day_id']
                 assert page.locator('#cyprus .newscard').count()>0 and page.locator('#world .newscard').count()>0
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
+                for bar in page.locator('.article-actions').all():
+                    boxes=[c.bounding_box() for c in bar.locator(':scope > details > summary,:scope > .story-actions > a').all()]
+                    assert max(b['y'] for b in boxes)-min(b['y'] for b in boxes)<2
+                    assert all(b['height']>=44 for b in boxes)
+                assert page.locator('figure figcaption,.photo-credit').count()==0
+                assert page.locator('.image-credits-link').count()==1
+                assert page.locator('#opportunities').count()==1
+                assert '04/11/2026 · 18:00 Κύπρου' in page.locator('#opportunities').inner_text()
                 photo=page.locator('.hero .lead-overview img').first
                 assert photo.bounding_box()['height']<=(281 if width>=700 else 191)
                 assert page.locator('.hero .lead-copy > h2').bounding_box()['y']<photo.bounding_box()['y'] if width<700 else photo.bounding_box()['width']>350
@@ -90,7 +98,7 @@ def run(screenshots=None):
                 for card in page.locator('.rate-card').all():
                     assert card.locator('time').is_visible()
                     assert card.locator('.quote-status').is_visible()
-                for panel in page.locator('.edition-panel').all():
+                for panel in page.locator('.edition-panel:not(.opportunities)').all():
                     panel.locator('.sources-disclosure>summary').focus();page.keyboard.press('Enter')
                     assert panel.locator('.source-item').first.is_visible()
                     for times in panel.locator('.source-times').all():
@@ -108,8 +116,7 @@ def run(screenshots=None):
                 if width>=1100:
                     hero=page.locator('.hero').bounding_box()
                     assert not page.locator('.hero .card-context').is_visible()
-                    gap=page.locator('.hero .read-link').bounding_box()['y']-page.locator('.hero .lead-analysis').bounding_box()['y']-page.locator('.hero .lead-analysis').bounding_box()['height']
-                    assert 0<=gap<60,('Unused lead space',gap)
+                    assert page.locator('.hero .article-actions').bounding_box()['height']<=55
                 assert page.locator('#changes .update-card').count()>0
                 assert page.locator('#changes .update-card h3').count()>0
                 evidence=page.locator('#changes .update-sources>summary').first
@@ -119,7 +126,7 @@ def run(screenshots=None):
                 assert page.locator('#changes .update-source-links a').count()>1
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
                 evidence.click()
-                for panel in page.locator('.edition-panel').all():
+                for panel in page.locator('.edition-panel:not(.opportunities)').all():
                     assert panel.locator('details.sources-disclosure').count()==1
                 assert page.locator('.calendar-list .calendar-event').count()>0
                 checks.append(f'{width}px: article columns, compact lead actions, update cards and consistent panels passed')
@@ -135,11 +142,8 @@ def run(screenshots=None):
                 first.locator('.card-analysis>summary').click()
                 assert first.locator('.article-meta').count()==1
                 assert first.locator('.story-history').count()==0
-                assert not page.locator('.hero .photo-details').is_visible()
-                page.locator('.hero .photo-credit>summary').focus();page.keyboard.press('Enter')
-                assert page.locator('.hero .photo-details').is_visible()
-                assert page.locator('.hero .photo-details a').count()>=2
-                page.locator('.hero .photo-credit>summary').click()
+                assert page.locator('.hero figcaption,.hero .photo-credit').count()==0
+                assert page.locator('.image-credits-link').get_attribute('href')==SOURCE+'photo-credits.html'
                 if width<700:
                     assert page.locator('.masthead').bounding_box()['height']<90
                     assert page.locator('.stickybar').bounding_box()['height']<65
@@ -237,8 +241,10 @@ def run(screenshots=None):
             plain.locator('.section-menu>summary').click()
             plain.locator('#cyprus .card-analysis>summary').first.focus();plain.keyboard.press('Enter')
             assert plain.locator('#cyprus .card-context').first.is_visible()
-            plain.locator('.hero .photo-credit>summary').focus();plain.keyboard.press('Enter')
-            assert plain.locator('.hero .photo-details').is_visible()
+            assert plain.locator('figure figcaption,.photo-credit').count()==0
+            assert plain.locator('.image-credits-link').get_attribute('href')==SOURCE+'photo-credits.html'
+            plain.locator('.opportunity-watch>summary').focus();plain.keyboard.press('Enter')
+            assert plain.locator('#opportunity-cy-new-entrepreneurship-2024-call2').is_visible()
             plain.locator('.all-quotes>summary').focus();plain.keyboard.press('Enter')
             assert plain.locator('.all-quotes').get_attribute('open') is not None
             plain.locator('.rate-disclosure>summary').focus();plain.keyboard.press('Enter')
