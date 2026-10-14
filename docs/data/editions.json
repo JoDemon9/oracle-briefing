@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-10-14-morning",
+    "date": "2026-10-14",
+    "type": "morning",
+    "status": "published",
+    "published_at": "2026-10-14T08:48:14+03:00",
+    "title": "Η πρωινή εικόνα · 14 Οκτωβρίου 2026",
+    "url": "morning/2026-10-14.html"
+  },
+  {
     "id": "2026-10-13-evening",
     "date": "2026-10-13",
     "type": "evening",
