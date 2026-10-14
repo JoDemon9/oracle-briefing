@@ -5,11 +5,11 @@
   "updated_at": "2026-10-14T05:49:07.061412+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-14.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "011da07e94518c77c481ec2faeae7e6ea85861223fbcee3bde7cca569f9772b6",
+  "html_sha256": "2a5da68ce33e178bc14066c7e96af221efefbcfe1337cdf7597157a6e323c498",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
-    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=3e9da8f7ca5e889c": "3e9da8f7ca5e889c1f3c27944c94c106cdf78bd7ef0d34714e0fadc6e98f391e",
+    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=658a4a16dcb532d9": "658a4a16dcb532d90530f710b016e5f3b110bf2696fb886dadee83fbfa0e3575",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=be1d447546f3c37f": "be1d447546f3c37fdb54116bb4ead6d4e014c305a542b4a7ac8bc07b5937c5de",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/lead.webp?v=9fa19bf42d3a22ff": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/cyprus-1.webp?v=ac5f398e37f7ec1e": "ac5f398e37f7ec1e59081a7806b2e3a496c641d6870c9e7a7f7d019f94a4527b",
@@ -25,5 +25,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/sport-united.webp?v=4c2854a4f3105f00": "4c2854a4f3105f00c680b963a8fe355739197bb122e3c99adb8ed00ce627f5b6",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/sport-champions.webp?v=6d183af6c0f0561d": "6d183af6c0f0561de5c12336e2652f3518f3d8fa90e6372539ef0c794bcfd3cd"
   },
-  "version": "18c6beec1d9505f0b2c68c3b030e4257c3712b12b8e95749c2fd7e6a24959c3f"
+  "version": "af387576b0dae7a7e1f3529f032465a0ea0f61871fbc0bd80f3daee694d2e9eb"
 }
