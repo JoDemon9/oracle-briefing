@@ -20,12 +20,12 @@ class DailyReleaseTests(unittest.TestCase):
     def test_wrong_snapshot_hash_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);shutil.copytree(ROOT/'docs',root/'docs')
-            (root/'docs/data/day-snapshot.html').write_text('wrong publication')
+            (root/'docs/data/day-snapshot.html').write_text('wrong publication',encoding='utf-8')
             with self.assertRaisesRegex(ValueError,'hash mismatch'):release.record(root)
     def test_wrong_day_identity_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);shutil.copytree(ROOT/'docs',root/'docs')
-            p=root/'docs/index.html';text=p.read_text().replace('name="oracle-day-id"','name="wrong-day-id"');p.write_text(text)
+            p=root/'docs/index.html';text=p.read_text(encoding='utf-8').replace('name="oracle-day-id"','name="wrong-day-id"');p.write_text(text,encoding='utf-8')
             with self.assertRaises((ValueError,TypeError)):release.record(root)
     def test_modified_local_asset_cannot_receive_a_good_release_receipt(self):
         with tempfile.TemporaryDirectory() as directory:
