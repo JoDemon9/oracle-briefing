@@ -82,20 +82,62 @@ def run(screenshots=None):
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
                 if screenshots and width in [375,1440]:
                     page.locator('.tech-quotes').screenshot(path=str(screenshots/f'{width}-expanded-tech-watch.png'))
+                rate_summary=page.locator('.rate-disclosure>summary')
+                rate_summary.focus();page.keyboard.press('Enter')
+                assert rate_summary.evaluate('(x)=>x.parentElement.open')
+                for card in page.locator('.rate-card').all():
+                    assert card.locator('time').is_visible()
+                    assert card.locator('.quote-status').is_visible()
+                for panel in page.locator('.edition-panel').all():
+                    panel.locator('.sources-disclosure>summary').focus();page.keyboard.press('Enter')
+                    assert panel.locator('.source-item').first.is_visible()
+                    for times in panel.locator('.source-times').all():
+                        assert times.is_visible() and 'Ανάκτηση' in times.inner_text()
+                assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
+                if screenshots and width in [375,1440]:
+                    page.locator('.rate-summary').screenshot(path=str(screenshots/f'{width}-expanded-rates.png'))
+                    page.locator('.panel-weather').screenshot(path=str(screenshots/f'{width}-expanded-weather-sources.png'))
+                checks.append(f'{width}px: keyboard rate and panel disclosures preserve visible reference times without overflow')
                 page.locator('details').evaluate_all('(nodes)=>nodes.forEach(x=>x.open=false)')
                 assert not page.locator('.hero-grid > .analysis-grid').count()
+                expected_columns=3 if width>=1100 else 1
+                for grid in page.locator('#cyprus .g3,#world .g3').all():
+                    assert grid.evaluate('(x)=>getComputedStyle(x).gridTemplateColumns.split(" ").length')==expected_columns
+                if width>=1100:
+                    hero=page.locator('.hero').bounding_box()
+                    assert hero['height']<620,hero
+                    gap=page.locator('.hero .read-link').bounding_box()['y']-page.locator('.hero .abstract').bounding_box()['y']-page.locator('.hero .abstract').bounding_box()['height']
+                    assert gap<150,('Unused lead space',gap)
+                assert page.locator('#changes .update-card').count()>0
+                assert page.locator('#changes .update-card h3').count()>0
+                for panel in page.locator('.edition-panel').all():
+                    assert panel.locator('details.sources-disclosure').count()==1
+                assert page.locator('.calendar-list .calendar-event').count()>0
+                checks.append(f'{width}px: article columns, compact lead actions, update cards and consistent panels passed')
                 assert len(page.locator('#cyprus .newscard .story-content').first.inner_text().split())>45
                 reader=page.locator('.hero .read-link').first
                 reader.focus()
                 assert reader.evaluate('(x)=>document.activeElement===x')
                 assert urlsplit(reader.get_attribute('href')).path.endswith('/lead.html')
                 assert page.url==base+'/'
+                reader.evaluate('(x)=>x.blur()')
                 if screenshots and width in [375,1440]:
                     screenshots.mkdir(parents=True,exist_ok=True)
                     page.evaluate('scrollTo(0,0)')
                     page.screenshot(path=str(screenshots/f'{width}-central-briefing.png'))
                     page.locator('.navs a[href="#cyprus"]').click()
                     page.screenshot(path=str(screenshots/f'{width}-large-news-cards.png'))
+                if screenshots and width in [375,1440]:
+                    style='.stickybar,.back-top,.skip-link{visibility:hidden!important}'
+                    for selector,label in [('#changes','updates'),('.panel-tech','technology'),('.panel-weather','weather'),('.panel-calendar','calendar')]:
+                        if page.locator(selector).count():page.locator(selector).first.screenshot(path=str(screenshots/f'{width}-{label}.png'),style=style)
+                    page.locator('[data-theme-toggle]').click()
+                    assert page.locator('html').get_attribute('data-theme')=='dark'
+                    page.evaluate('scrollTo(0,0)')
+                    page.screenshot(path=str(screenshots/f'{width}-dark-central.png'))
+                    for selector,label in [('#changes','updates'),('.panel-weather','weather'),('.panel-calendar','calendar')]:
+                        if page.locator(selector).count():page.locator(selector).first.screenshot(path=str(screenshots/f'{width}-dark-{label}.png'),style=style)
+                    page.locator('[data-theme-toggle]').click()
                 checks.append(f'{width}px: complete central briefing, compact lead, substantial previews, decoded photographs and separate reader')
             updated=BeautifulSoup(original,'html.parser')
             updated.find('meta',attrs={'name':'oracle-day-id'})['content']='2099-01-01'
@@ -151,6 +193,10 @@ def run(screenshots=None):
             assert plain.locator('#cyprus .newscard').count()>0
             plain.locator('.all-quotes>summary').focus();plain.keyboard.press('Enter')
             assert plain.locator('.all-quotes').get_attribute('open') is not None
+            plain.locator('.rate-disclosure>summary').focus();plain.keyboard.press('Enter')
+            assert plain.locator('.rate-card time').first.is_visible()
+            plain.locator('.panel-weather .sources-disclosure>summary').focus();plain.keyboard.press('Enter')
+            assert plain.locator('.panel-weather .source-times').first.is_visible()
             assert not plain.evaluate('document.documentElement.scrollWidth>innerWidth+1')
             checks.append('JavaScript disabled: complete local newspaper and native market expansion work')
             browser.close()

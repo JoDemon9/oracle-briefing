@@ -1,0 +1,230 @@
+/* Shared newspaper components. Loaded after the base design and accessibility rules. */
+:root {
+  --ui-radius: 8px;
+  --action-ink: #faf8ef;
+  --surface-soft: color-mix(in srgb, var(--card) 55%, var(--paper));
+}
+html[data-theme="dark"] { --action-ink: #101819; }
+
+.g3, #cyprus .g3, #world .g3 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.g3 > .newscard { margin: 0; border-radius: var(--ui-radius); }
+.newscard .story-content { display: flex; flex-direction: column; padding: 22px; }
+.newscard .story-content h3 { font: 600 25px/1.24 Georgia, serif; margin: 10px 0 14px; }
+.newscard .abstract, .newscard .card-context p { font: 16px/1.7 Georgia, serif; }
+.newscard .card-context { margin: 18px 0; padding-left: 13px; }
+.newscard .story-actions { margin-top: auto; }
+.story-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 12px 0 4px; }
+.newscard .read-link, .hero .read-link {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 46px;
+  padding: 11px 15px;
+  border-radius: 6px;
+  background: var(--forest);
+  color: var(--action-ink) !important;
+  text-decoration: none;
+  font: 700 14px/1.5 Arial, sans-serif;
+  gap: 8px;
+}
+.reading-time { padding-left: 9px; border-left: 1px solid currentColor; white-space: nowrap; }
+.read-link .ui-icon { margin: 0; width: 18px; height: 18px; }
+.story-origin { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 8px 0 12px !important; }
+.story-origin time, .update-meta time { font: 12px/1.6 Arial, sans-serif; color: var(--muted); font-variant-numeric: tabular-nums; }
+.story-status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 9px;
+  border: 1px solid color-mix(in srgb, var(--forest) 28%, var(--line));
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--forest) 8%, var(--card));
+  color: var(--forest);
+  font: 700 12px/1.4 Arial, sans-serif;
+}
+
+/* The lead's actions share the text column, so the photograph creates no empty text row. */
+.hero { border-radius: var(--ui-radius); }
+.hero .story-content { padding: 24px; }
+.hero .story-content > h2 { max-width: 38ch; font: 600 clamp(27px, 2.5vw, 35px)/1.2 Georgia, serif; }
+.hero .lead-overview, .day-lead .hero .lead-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 240px);
+  align-items: start;
+  gap: 24px;
+}
+.lead-copy { min-width: 0; }
+.lead-copy .abstract { margin-bottom: 12px; }
+.lead-copy .abstract p { margin: 0; font: 18px/1.65 Georgia, serif; max-width: 70ch; }
+.lead-copy .card-context { margin: 12px 0; }
+.hero .lead-overview figure.photo { max-width: none; border-radius: 6px; }
+.hero .lead-overview figure.photo img { height: 200px; }
+.hero .lead-overview figure.photo figcaption { padding: 10px 0 0; font-size: 11px; line-height: 1.5; }
+.day-lead { margin: 22px 0; }
+
+/* Native details provide the same controls with or without JavaScript. */
+:is(.day-summary, .lead-analysis, .sources-disclosure, .update-sources, .changes-history,
+    .all-quotes, .tech-quotes, .quote-sources, .raw-quote, .market-documentation,
+    .rate-disclosure, .more-movers, .edition-about) > summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  min-height: 46px;
+  padding: 11px 12px;
+  margin: 0;
+  border-radius: 6px;
+  color: var(--forest);
+  font: 600 14px/1.5 Arial, sans-serif;
+  cursor: pointer;
+}
+:is(.day-summary, .lead-analysis, .sources-disclosure, .update-sources, .changes-history,
+    .all-quotes, .tech-quotes, .quote-sources, .raw-quote, .market-documentation,
+    .rate-disclosure, .more-movers, .edition-about) > summary::-webkit-details-marker { display: none; }
+:is(.day-summary, .lead-analysis, .sources-disclosure, .update-sources, .changes-history,
+    .all-quotes, .tech-quotes, .quote-sources, .raw-quote, .market-documentation,
+    .rate-disclosure, .more-movers, .edition-about) > summary::after {
+  content: "+";
+  margin-left: auto;
+  flex: none;
+  font: 400 22px/1 Arial, sans-serif;
+  color: var(--muted);
+}
+:is(.day-summary, .lead-analysis, .sources-disclosure, .update-sources, .changes-history,
+    .all-quotes, .tech-quotes, .quote-sources, .raw-quote, .market-documentation,
+    .rate-disclosure, .more-movers, .edition-about)[open] > summary::after { content: "−"; }
+summary:hover { background: var(--surface-soft); }
+.disclosure-count { padding: 2px 7px; background: var(--card2); border-radius: 4px; font-size: 11px; color: var(--muted); }
+.sources-disclosure, .lead-analysis, .story-history { margin-top: 10px; padding: 0; border-top: 1px solid var(--line); }
+.lead-analysis > .card-context { border-left: 0; padding: 0 12px 8px; }
+.disclosure-body { padding: 4px 12px 12px; }
+.disclosure-body > .muted { font: 12px/1.6 Arial, sans-serif; }
+.story-history a { display: flex; align-items: center; min-height: 44px; padding: 10px 12px; font: 13px/1.5 Arial, sans-serif; }
+.source-links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin: 12px 0; }
+.source-item { min-width: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface-soft); padding: 12px; }
+.source-links .source-item > a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; font: 700 13px/1.5 Arial, sans-serif; }
+.source-kind { display: block; color: var(--muted); font: 12px/1.5 Arial, sans-serif; }
+.source-times { display: grid; gap: 8px; margin: 10px 0 0; font: 12px/1.6 Arial, sans-serif; }
+.source-times > div { display: grid; grid-template-columns: 85px minmax(0, 1fr); gap: 8px; }
+.source-times dt { color: var(--muted); }
+.source-times dd { margin: 0; overflow-wrap: anywhere; }
+.source-access { font: 12px/1.6 Arial, sans-serif; color: var(--muted); }
+
+.day-summary { padding: 8px 16px; border-radius: var(--ui-radius); }
+.day-summary > summary { color: var(--ink); font: 600 23px/1.4 Georgia, serif; }
+.summary-points { list-style: none; counter-reset: summary; display: grid; gap: 0; margin: 10px 0 0; padding: 0; }
+.summary-points > li { counter-increment: summary; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; padding: 15px 4px; border-top: 1px solid var(--line); font: 17px/1.65 Georgia, serif; }
+.summary-points > li::before { content: counter(summary, decimal-leading-zero); color: var(--forest); font: 700 12px/1.8 Arial, sans-serif; }
+
+/* Updates are readable cards; sources remain available by their publisher names. */
+.day-changes { margin: 32px 0; }
+.day-changes .update-timeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.day-changes .update-card { margin: 0; padding: 20px; min-width: 0; display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: var(--ui-radius); }
+.update-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.update-card h3 { margin: 0 0 10px; font: 600 21px/1.35 Georgia, serif; }
+.day-changes .update-card p { margin: 0 0 14px; font: 15px/1.7 Arial, sans-serif; }
+.update-actions { margin-top: auto; display: flex; align-items: start; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--line); padding-top: 8px; }
+.update-origin { display: inline-flex; align-items: center; min-height: 46px; padding: 10px 8px; font: 600 13px/1.5 Arial, sans-serif; color: var(--forest); text-decoration: none; }
+.update-sources { min-width: 0; flex: 1; }
+.update-source-links { display: grid; gap: 6px; padding: 6px 8px; font: 13px/1.5 Arial, sans-serif; }
+.update-source-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.changes-history { margin-top: 14px; border: 1px solid var(--line); border-radius: var(--ui-radius); padding: 4px 12px; }
+.changes-history[open] > .update-timeline { padding: 10px 0; }
+.empty-state { padding: 20px; border: 1px solid var(--line); background: var(--card); border-radius: var(--ui-radius); font: 15px/1.7 Arial, sans-serif; }
+
+/* Technology, weather and the calendar share one surface and typography. */
+.edition-panel { padding: 24px; background: var(--card); border: 1px solid var(--line); border-radius: var(--ui-radius); margin: 28px 0; }
+.edition-panel .sectionhead { margin-bottom: 20px; border-bottom: 0; }
+.edition-panel .sectionhead h2 { display: flex; align-items: center; gap: 10px; margin: 0; font: 600 30px/1.2 Georgia, serif; }
+.edition-panel .sectionhead .ui-icon { width: 24px; height: 24px; color: var(--forest); }
+.panel-items { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.panel-item { padding: 18px; min-width: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface-soft); }
+.panel-item h3 { font: 700 15px/1.5 Arial, sans-serif; margin: 0 0 10px; color: var(--forest); }
+.panel-item p { margin: 0; font: 16px/1.75 Arial, sans-serif; }
+.panel-advisory { border-left: 3px solid var(--amber); background: color-mix(in srgb, var(--amber) 7%, var(--card)); }
+.edition-panel > .sources-disclosure { margin-top: 18px; }
+.calendar-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.calendar-event { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 16px 18px; border: 1px solid var(--line); background: var(--surface-soft); border-radius: 6px; min-width: 0; }
+.event-when { display: flex; align-items: center; gap: 7px; font: 700 14px/1.5 Arial, sans-serif; color: var(--forest); font-variant-numeric: tabular-nums; }
+.calendar-event p { margin: 0; font: 16px/1.7 Arial, sans-serif; }
+.event-separator { display: none; }
+
+/* Compact markets keep every quote, with consistent supporting cards and disclosures. */
+.compact-markets .market-overview { gap: 16px; padding: 20px; border-radius: var(--ui-radius); }
+.compact-markets .market-overview > h3 { font: 600 25px/1.3 Georgia, serif; margin: 0 0 2px; }
+.market-note { padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 6px; max-width: none; min-width: 0; }
+.market-overview > .market-note { background: var(--surface-soft); }
+.market-note h4 { font: 700 15px/1.4 Arial, sans-serif; margin: 0 0 10px; color: var(--forest); }
+.market-note p { font: 15px/1.7 Arial, sans-serif; margin: 0 0 8px; }
+.market-note > .sources-disclosure { margin-top: 10px; }
+.compact-markets .market-movers { gap: 16px; padding: 12px 0; }
+.market-movers > h3 { margin-bottom: 0; }
+.quote-card { border-radius: 6px; }
+.compact-markets > :is(.all-quotes, .tech-quotes, .market-documentation), .market-movers > details {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--ui-radius); padding: 4px 12px; margin-top: 14px;
+}
+.compact-markets .quote-sources { padding: 0; }
+.compact-markets .quote-sources > summary { padding: 10px 0; font-size: 12px; }
+.compact-markets .quote-sources .disclosure-body { padding: 4px 0; }
+.raw-quote > summary { font-size: 12px; }
+.rate-summary { padding: 20px; margin: 20px 0; border: 1px solid var(--line); border-radius: var(--ui-radius); background: var(--card); }
+.support-heading h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font: 600 23px/1.3 Georgia, serif; }
+.support-heading p { margin: 0 0 12px; font: 14px/1.6 Arial, sans-serif; color: var(--muted); }
+.rate-summary > details > .quote-grid { padding-top: 12px; }
+.rate-card .quote-status { color: var(--muted); }
+.market-method { max-width: 85ch; margin: 16px 0 0; font: 13px/1.7 Arial, sans-serif; }
+.day-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin: 32px 0 20px; padding: 18px 0; border-top: 1px solid var(--line); font: 12px/1.6 Arial, sans-serif; color: var(--muted); }
+.day-footer > a { display: inline-flex; align-items: center; min-height: 44px; font: 600 13px/1.5 Arial, sans-serif; }
+.day-footer > details { flex: 1; min-width: 0; }
+.day-footer > details > p { padding: 10px 12px; }
+
+@media (min-width: 700px) {
+  .g3, #cyprus .g3, #world .g3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .panel-items { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .calendar-event { grid-template-columns: 215px minmax(0, 1fr); align-items: start; gap: 20px; }
+  .edition-panel > .sources-disclosure .source-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1100px) {
+  .g3, #cyprus .g3, #world .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .day-changes .update-timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .hero .story-content { padding: 18px; }
+  .hero .lead-overview, .day-lead .hero .lead-overview { display: flex; flex-direction: column; gap: 12px; }
+  .lead-copy { display: contents; }
+  .lead-copy > .abstract { order: 0; }
+  .hero .lead-overview > figure.photo { order: 1; width: 100%; }
+  .hero .lead-overview > figure.photo img { height: 160px; }
+  .lead-copy > :is(.lead-analysis, .card-context, .story-more) { order: 2; width: 100%; }
+  .lead-copy > .story-actions { order: 3; }
+  .lead-copy > .sources-disclosure { order: 4; width: 100%; }
+  .lead-copy > .story-history { order: 5; }
+  .lead-copy .abstract p { font-size: 17px; }
+  .newscard .story-content { padding: 20px; }
+  .newscard .story-content h3 { font-size: 25px; }
+  .newscard .abstract, .newscard .card-context p { font-size: 17px; }
+  .day-summary { padding: 8px 12px; }
+  .day-summary > summary { font-size: 20px; }
+  .edition-panel { padding: 18px; }
+  .edition-panel .sectionhead h2 { font-size: 27px; }
+  .panel-item { padding: 16px; }
+  .calendar-event { padding: 16px; }
+  .day-changes .update-card { padding: 18px; }
+  .update-card h3 { font-size: 22px; }
+  .compact-markets .market-overview { padding: 16px; }
+  .market-note { margin-top: 12px; padding: 16px; }
+  .rate-summary { padding: 16px; }
+  .source-times > div { grid-template-columns: 1fr; gap: 2px; }
+  .day-footer { align-items: start; }
+  .day-footer > details { flex-basis: 100%; }
+}
+@media print {
+  .g3, #cyprus .g3, #world .g3, .update-timeline, .panel-items { display: block; }
+  .newscard, .update-card, .edition-panel { break-inside: avoid; box-shadow: none; }
+}
+
+.calendar-event > p:only-child { grid-column: 1 / -1; }
