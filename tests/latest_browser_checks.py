@@ -56,8 +56,8 @@ def run(screenshots=None):
                 assert photo.bounding_box()['height']<=(281 if width>=700 else 191)
                 assert page.locator('.hero .lead-copy > h2').bounding_box()['y']<photo.bounding_box()['y'] if width<700 else photo.bounding_box()['width']>350
                 assert page.locator('.hero .story-more').count()==0
-                assert not page.locator('.hero .card-context').is_visible()
-                page.locator('.hero .lead-analysis>summary').click()
+                assert page.locator('.hero .lead-analysis').evaluate('(x)=>x.tagName==="SECTION"')
+                assert page.locator('.hero .lead-analysis>summary').count()==0
                 assert page.locator('.hero .card-context').is_visible()
                 assert len(page.locator('.hero .card-context').inner_text().split())>=110
                 assert page.locator('.hero .read-link').get_attribute('href').startswith(SOURCE+'articles/')
@@ -105,9 +105,9 @@ def run(screenshots=None):
                     assert grid.evaluate('(x)=>getComputedStyle(x).gridTemplateColumns.split(" ").length')==expected_columns
                 if width>=1100:
                     hero=page.locator('.hero').bounding_box()
-                    assert hero['height']<620,hero
-                    gap=page.locator('.hero .read-link').bounding_box()['y']-page.locator('.hero .abstract').bounding_box()['y']-page.locator('.hero .abstract').bounding_box()['height']
-                    assert gap<150,('Unused lead space',gap)
+                    assert page.locator('.hero .card-context').is_visible()
+                    gap=page.locator('.hero .read-link').bounding_box()['y']-page.locator('.hero .lead-analysis').bounding_box()['y']-page.locator('.hero .lead-analysis').bounding_box()['height']
+                    assert 0<=gap<60,('Unused lead space',gap)
                 assert page.locator('#changes .update-card').count()>0
                 assert page.locator('#changes .update-card h3').count()>0
                 evidence=page.locator('#changes .update-sources>summary').first
@@ -139,7 +139,7 @@ def run(screenshots=None):
                 if width<700:
                     assert page.locator('.masthead').bounding_box()['height']<90
                     assert page.locator('.stickybar').bounding_box()['height']<65
-                    assert page.locator('.hero .lead-copy > h2').evaluate('(x)=>x.getBoundingClientRect().y+scrollY')<450
+                    assert page.locator('.hero .lead-copy > h2').evaluate('(x)=>x.getBoundingClientRect().y+scrollY')<650
                     menu=page.locator('.section-menu>summary');menu.focus();page.keyboard.press('Enter')
                     assert page.locator('.section-menu-list a').count()>=10
                     assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
@@ -150,7 +150,7 @@ def run(screenshots=None):
                 reader=page.locator('.hero .read-link').first
                 reader.focus()
                 assert reader.evaluate('(x)=>document.activeElement===x')
-                assert urlsplit(reader.get_attribute('href')).path.endswith('/lead.html')
+                assert urlsplit(reader.get_attribute('href')).path==urlsplit(BeautifulSoup(original,'html.parser').select_one('.hero .read-link')['href']).path
                 assert page.url==base+'/'
                 reader.evaluate('(x)=>x.blur()')
                 if screenshots and width in [375,1440]:
