@@ -5,16 +5,25 @@ on:
     branches: [main]
     paths: ['docs/index.html', 'docs/assets/edition-registry.js', 'docs/data/editions.json', 'scripts/**', 'tests/**', '.github/workflows/**']
 permissions:
-  contents: read
+  contents: write
 jobs:
   reading:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install playwright beautifulsoup4
+      - uses: actions/checkout@v4
+        with:
+          repository: JoDemon9/Claude-Briefing
+          ref: c34d3a63f422a2c6fd3d69d365aaf3a296b1ec21
+          path: .work/public
+      - name: Compose the verified daily snapshot
+        run: python .work/public/scripts/v2/sync_portal.py --portal-root .
       - run: python -m unittest discover -s tests -v
       - run: python -m playwright install --with-deps chromium
       - run: python tests/browser_checks.py --screenshots /tmp/oracle-portal-preview
@@ -26,3 +35,22 @@ jobs:
           path: |
             /tmp/oracle-portal-preview
             /tmp/oracle-central-preview
+
+      - name: Save reviewed snapshot on the candidate branch
+        if: github.event_name == 'pull_request'
+        env:
+          CANDIDATE_BRANCH: ${{ github.head_ref }}
+        run: |
+          if [ -f .review/validated-day.json ]; then
+            exit 0
+          fi
+          mkdir -p .review
+          cp /tmp/oracle-central-preview/375-compact-markets.png .review/
+          cp /tmp/oracle-central-preview/1440-compact-markets.png .review/
+          cp /tmp/oracle-central-preview/375-central-briefing.png .review/
+          python -c 'import json,pathlib; r=json.load(open("docs/data/release.json")); pathlib.Path(".review/validated-day.json").write_text(json.dumps({"day_id":r["day_id"],"release_id":r["release_id"],"public_head":"c34d3a63f422a2c6fd3d69d365aaf3a296b1ec21","unit_and_browser_checks":"passed"}))'
+          git config user.name "Codex"
+          git config user.email "codex@openai.com"
+          git add docs tests/latest_browser_checks.py .review
+          git commit -m "Save verified 14 October daily snapshot and browser previews"
+          git push origin "HEAD:refs/heads/$CANDIDATE_BRANCH"

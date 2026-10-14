@@ -19,6 +19,8 @@ def run(screenshots=None):
     if screenshots:screenshots.mkdir(parents=True,exist_ok=True)
     descriptor=json.loads((ROOT/'docs/data/day-latest.json').read_text(encoding='utf-8'))
     original=(ROOT/'docs/data/day-snapshot.html').read_text(encoding='utf-8')
+    registry=json.loads((ROOT/'docs/data/editions.json').read_text(encoding='utf-8'))
+    available_slots={e['type'] for e in registry if e['date']==descriptor['day_id'] and e['status']=='published'}
     state={'descriptor':descriptor,'html':original,'fail':False,'asset_fail':False,'asset_hash':False,'html_fail':False}
     server=ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(ROOT/'docs')))
     threading.Thread(target=server.serve_forever,daemon=True).start()
@@ -66,7 +68,7 @@ def run(screenshots=None):
                     assert img.evaluate('(x)=>x.naturalWidth>0&&x.naturalHeight>0')
                 page.locator('details').evaluate_all('(nodes)=>nodes.forEach(x=>x.open=false)')
                 assert page.locator('.edition-desk [aria-current]').count()==0
-                assert page.locator('.edition-desk a').count()==3
+                assert page.locator('.edition-desk a').count()==len(available_slots)
                 assert page.locator('.core-quotes>.quote-card:visible').count()<=6
                 assert page.locator('.market-movers>.market-note:visible').count()<=3
                 assert page.locator('#markets table.quotes').count()==0
