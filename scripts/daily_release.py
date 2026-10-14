@@ -15,11 +15,11 @@ def digest(raw):
 
 def manifest(root=ROOT):
     docs=Path(root)/'docs'
-    info=json.loads((docs/'data/day-latest.json').read_text())
+    info=json.loads((docs/'data/day-latest.json').read_text(encoding='utf-8'))
     snapshot=(docs/'data/day-snapshot.html').read_bytes()
     if digest(snapshot)!=info['html_sha256']:
         raise ValueError('Day snapshot hash mismatch')
-    doc=BeautifulSoup((docs/'index.html').read_text(),'html.parser')
+    doc=BeautifulSoup((docs/'index.html').read_text(encoding='utf-8'),'html.parser')
     if doc.select_one('meta[name="oracle-day-id"]')['content']!=info['day_id']:
         raise ValueError('Central newspaper identity mismatch')
     names={'index.html','assets/latest-briefing.js','data/day-latest.json','data/day-snapshot.html','data/days.json','data/editions.json','data/latest.json','data/latest-snapshot.html'}
@@ -41,12 +41,12 @@ def manifest(root=ROOT):
 
 def record(root=ROOT):
     receipt=manifest(root)
-    (Path(root)/'docs/data/release.json').write_text(json.dumps(receipt,indent=2)+'\n')
+    (Path(root)/'docs/data/release.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
     return receipt
 
 def verify(root=ROOT):
     root=Path(root)
-    receipt=json.loads((root/'docs/data/release.json').read_text())
+    receipt=json.loads((root/'docs/data/release.json').read_text(encoding='utf-8'))
     if manifest(root)!=receipt:
         raise ValueError('Central release receipt needs rebuilding')
     def check(relative):
@@ -64,7 +64,7 @@ def verify(root=ROOT):
         list(pool.map(check,names))
     result={'status':'verified','base_url':BASE,'day_id':receipt['day_id'],'release_id':receipt['release_id'],'checked_files':len(names)}
     output=root/'.work/daily-publication-check.json';output.parent.mkdir(exist_ok=True)
-    output.write_text(json.dumps(result,indent=2)+'\n')
+    output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     return result
 
 if __name__=='__main__':
