@@ -5,7 +5,7 @@
   "updated_at": "2026-10-14T21:54:11.397996+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-14.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "021f12f273de9fb701d294d0f49c71e4a0096ce90146dbc6fb95d2c033c6e157",
+  "html_sha256": "032a609c211d25e5a1b35d32fcf20e349fb15dcbac3583b5fdaaa420b0403271",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
@@ -34,5 +34,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/sport-champions.webp?v=6d183af6c0f0561d": "6d183af6c0f0561de5c12336e2652f3518f3d8fa90e6372539ef0c794bcfd3cd",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/sport-omonoia.webp?v=bc4220839d5dfa47": "bc4220839d5dfa47a2e4c72a6b97c25265a1ece1789324e7895d9216a3fbb588"
   },
-  "version": "9ccc29c9d14c99e110d2e0054069cf1b2ccfd61e282dea98cedc6757840babd3"
+  "version": "2efbb2b5fe8aad24332d351a1c56c224e417ed5a804ffa6d9f3a7aa01f2b40c3"
 }
