@@ -53,8 +53,8 @@ def run(screenshots=None):
                 assert page.locator('#cyprus .newscard').count()>0 and page.locator('#world .newscard').count()>0
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
                 photo=page.locator('.hero .lead-overview img').first
-                assert photo.bounding_box()['height']<=201
-                assert page.locator('.hero .story-content > h2').bounding_box()['y']<photo.bounding_box()['y']
+                assert photo.bounding_box()['height']<=(281 if width>=700 else 191)
+                assert page.locator('.hero .lead-copy > h2').bounding_box()['y']<photo.bounding_box()['y'] if width<700 else photo.bounding_box()['width']>350
                 assert page.locator('.hero .story-more').count()==0
                 assert not page.locator('.hero .card-context').is_visible()
                 page.locator('.hero .lead-analysis>summary').click()
@@ -110,11 +110,43 @@ def run(screenshots=None):
                     assert gap<150,('Unused lead space',gap)
                 assert page.locator('#changes .update-card').count()>0
                 assert page.locator('#changes .update-card h3').count()>0
+                evidence=page.locator('#changes .update-sources>summary').first
+                assert evidence.bounding_box()['height']<61
+                evidence.focus();page.keyboard.press('Enter')
+                assert page.locator('#changes .update-origin').first.is_visible()
+                assert page.locator('#changes .update-source-links a').count()>1
+                assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
+                evidence.click()
                 for panel in page.locator('.edition-panel').all():
                     assert panel.locator('details.sources-disclosure').count()==1
                 assert page.locator('.calendar-list .calendar-event').count()>0
                 checks.append(f'{width}px: article columns, compact lead actions, update cards and consistent panels passed')
                 assert len(page.locator('#cyprus .newscard .story-content').first.inner_text().split())>45
+                first=page.locator('#cyprus .newscard').first
+                assert first.bounding_box()['height']<1000
+                assert not first.locator('.card-context').is_visible()
+                first.locator('.card-analysis>summary').focus();page.keyboard.press('Enter')
+                assert first.locator('.card-context').is_visible()
+                assert len(first.locator('.card-context').inner_text().split())>=110
+                first.locator('.card-analysis>summary').click()
+                assert first.locator('.article-meta').count()==1
+                assert first.locator('.story-history').count()==0
+                assert not page.locator('.hero .photo-details').is_visible()
+                page.locator('.hero .photo-credit>summary').focus();page.keyboard.press('Enter')
+                assert page.locator('.hero .photo-details').is_visible()
+                assert page.locator('.hero .photo-details a').count()>=2
+                page.locator('.hero .photo-credit>summary').click()
+                if width<700:
+                    assert page.locator('.masthead').bounding_box()['height']<90
+                    assert page.locator('.stickybar').bounding_box()['height']<65
+                    assert page.locator('.hero .lead-copy > h2').evaluate('(x)=>x.getBoundingClientRect().y+scrollY')<450
+                    menu=page.locator('.section-menu>summary');menu.focus();page.keyboard.press('Enter')
+                    assert page.locator('.section-menu-list a').count()>=10
+                    assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
+                    page.keyboard.press('Escape');assert not page.locator('.section-menu').evaluate('(x)=>x.open')
+                assert page.locator('.market-summary>li').count()<=3
+                assert page.locator('.market-overview>.market-note').count()==0
+                checks.append(f'{width}px: content-first header, native menu, compact cards, combined evidence and licensed photo disclosures passed')
                 reader=page.locator('.hero .read-link').first
                 reader.focus()
                 assert reader.evaluate('(x)=>document.activeElement===x')
@@ -125,7 +157,12 @@ def run(screenshots=None):
                     screenshots.mkdir(parents=True,exist_ok=True)
                     page.evaluate('scrollTo(0,0)')
                     page.screenshot(path=str(screenshots/f'{width}-central-briefing.png'))
-                    page.locator('.navs a[href="#cyprus"]').click()
+
+                    if width<1100:
+                        page.locator('.section-menu>summary').click()
+                        page.locator('.section-menu-list a[href="#cyprus"]').click()
+                        assert not page.locator('.section-menu').evaluate('(x)=>x.open')
+                    else:page.locator('.navs a[href="#cyprus"]').click()
                     page.screenshot(path=str(screenshots/f'{width}-large-news-cards.png'))
                 if screenshots and width in [375,1440]:
                     style='.stickybar,.back-top,.skip-link{visibility:hidden!important}'
@@ -142,21 +179,21 @@ def run(screenshots=None):
             updated=BeautifulSoup(original,'html.parser')
             updated.find('meta',attrs={'name':'oracle-day-id'})['content']='2099-01-01'
             updated.find('meta',attrs={'name':'oracle-day-updated-at'})['content']='2099-01-01T19:30:00+02:00'
-            updated.select_one('.hero .story-content > h2').string='Δοκιμαστική νεότερη δημοσιευμένη έκδοση'
+            updated.select_one('.hero .lead-copy > h2').string='Δοκιμαστική νεότερη δημοσιευμένη έκδοση'
             state['html']=str(updated)
             state['descriptor']=dict(descriptor,day_id='2099-01-01',updated_at='2099-01-01T19:30:00+02:00',html_sha256=hashlib.sha256(state['html'].encode()).hexdigest())
             page.goto(base+'/',wait_until='networkidle')
             page.wait_for_function('document.querySelector("meta[name=oracle-day-id]").content==="2099-01-01"')
             assert page.url==base+'/' and not page.locator('iframe').count()
-            assert 'Δοκιμαστική' in page.locator('.hero .story-content > h2').inner_text()
+            assert 'Δοκιμαστική' in page.locator('.hero .lead-copy > h2').inner_text()
             page.locator('[data-theme-toggle]').click();assert page.locator('html').get_attribute('data-theme')=='dark'
             checks.append('Next published edition replaces the whole page at the same address; controls still work')
             # Corrections to the same published edition also replace stale content.
-            corrected=BeautifulSoup(original,'html.parser');corrected.select_one('.hero .story-content > h2').string='Δοκιμαστική διόρθωση της ίδιας έκδοσης'
+            corrected=BeautifulSoup(original,'html.parser');corrected.select_one('.hero .lead-copy > h2').string='Δοκιμαστική διόρθωση της ίδιας έκδοσης'
             state['html']=str(corrected)
             state['descriptor']=dict(descriptor,html_sha256=hashlib.sha256(state['html'].encode()).hexdigest())
             page.goto(base+'/',wait_until='networkidle')
-            page.wait_for_function('document.querySelector(".hero .story-content > h2").textContent.includes("Δοκιμαστική διόρθωση")')
+            page.wait_for_function('document.querySelector(".hero .lead-copy > h2").textContent.includes("Δοκιμαστική διόρθωση")')
             checks.append('A correction to the same edition refreshes its complete content')
             state['html']=original
             state['descriptor']=dict(descriptor,version='f'*64)
@@ -191,6 +228,13 @@ def run(screenshots=None):
             nojs.route('**/*',route)
             plain=nojs.new_page();plain.goto(base+'/',wait_until='networkidle')
             assert plain.locator('#cyprus .newscard').count()>0
+            plain.locator('.section-menu>summary').focus();plain.keyboard.press('Enter')
+            assert plain.locator('.section-menu-list a[href="#cyprus"]').is_visible()
+            plain.locator('.section-menu>summary').click()
+            plain.locator('#cyprus .card-analysis>summary').first.focus();plain.keyboard.press('Enter')
+            assert plain.locator('#cyprus .card-context').first.is_visible()
+            plain.locator('.hero .photo-credit>summary').focus();plain.keyboard.press('Enter')
+            assert plain.locator('.hero .photo-details').is_visible()
             plain.locator('.all-quotes>summary').focus();plain.keyboard.press('Enter')
             assert plain.locator('.all-quotes').get_attribute('open') is not None
             plain.locator('.rate-disclosure>summary').focus();plain.keyboard.press('Enter')
