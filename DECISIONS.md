@@ -4,6 +4,9 @@ The canonical decision history is maintained in [Claude-Briefing/DECISIONS.md](h
 
 Current records:
 
+- [DEC-004 — Whole-day overview](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-004-whole-day-overview.md): the user approved recommendation 1; reviewed points retain important stories from every participating slot.
+- [DEC-005 — Reading value](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-005-reading-value.md): the user approved recommendation 2; 30-second findings, useful optional expansion and further reading when justified supersede word-count floors and mandatory counterarguments.
+
 - [DEC-001 — Preserve the reasons behind fixes](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-001-decision-history.md): the user wants GitHub to retain what was fixed, why it was done and what future work must preserve.
 - [DEC-002 — Compact market evidence](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-002-compact-market-evidence.md): reduce repeated mobile documentation rows while keeping evidence and timestamps accessible. Implementation is staged, not live.
 - [DEC-003 — Market interpretation](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-003-market-interpretation.md): provide useful interpretation and Cyprus implications beyond a list of prices. Implementation is staged, not live.
