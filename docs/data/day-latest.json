@@ -2,17 +2,20 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-14",
-  "updated_at": "2026-10-14T11:05:00.891202+00:00",
+  "updated_at": "2026-10-14T17:12:38.506331+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-14.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "dcfa601ac56f07099e5e1bb17aade15eab2ed2d833b3c45f7cbd728a88b248b5",
+  "html_sha256": "009c1fb20a0681334627e3b827c03b8489a4cff647c9265e29e298c306012414",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=6408cc5866e7ee15": "6408cc5866e7ee15a3d98245800f4eabe5161e38048a8067d67cf0726cc5e5ad",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=362e68f3bb10f463": "362e68f3bb10f4634502abceb3b8662035ead444786f0e33069e38e66671b52e",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/lead.webp?v=dea3e5a3d966f054": "dea3e5a3d966f0545fa175ccc7210f331e61a589392a55b20f549f7a1531c9f6",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-evening/lead.webp?v=dea3e5a3d966f054": "dea3e5a3d966f0545fa175ccc7210f331e61a589392a55b20f549f7a1531c9f6",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-evening/cyprus-takata.webp?v=bf90fbd3e6456fbe": "bf90fbd3e6456fbe8cac8646bc9530e4e743f21fff455dca4db96572ee180d58",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-evening/cyprus-audit.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/cyprus-1.webp?v=ac5f398e37f7ec1e": "ac5f398e37f7ec1e59081a7806b2e3a496c641d6870c9e7a7f7d019f94a4527b",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-evening/cyprus-nursing.webp?v=9fa19bf42d3a22ff": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/cyprus-buses.webp?v=a41bb157120498ec": "a41bb157120498ec1aa6a16e5d89fdc5100a060cc374dc3b35ed35f9f8481313",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/lead.webp?v=9fa19bf42d3a22ff": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/cyprus-permits.webp?v=8740da4a55f75e72": "8740da4a55f75e721995266f8b4f65d9edfd5908366706db966f451277f59eae",
@@ -21,6 +24,7 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/cyprus-4.webp?v=cd41c7c4fcb9dfa6": "cd41c7c4fcb9dfa69a499a167b8d3fb71b8b213c7b5dfee1fa2d590f649dd211",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/cyprus-5.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/world-3.webp?v=0b70ea523289ead9": "0b70ea523289ead9cce2c681ef0c512f56aa16e73fcced86f151227a35e1e728",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-evening/world-cpi.webp?v=b53b3d254f27da7b": "b53b3d254f27da7bccf39976761e631fb47e8895c473e6067991accdc5fe935e",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/world-aramco.webp?v=6d5cb7ce9615d006": "6d5cb7ce9615d006c0eda535b815d2b9e3c5e07704e540412ba29389663572e1",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/world-data-centre.webp?v=80f551bb339467e8": "80f551bb339467e82e827e82d1d465ea66907fb6a7427249328f7093fe1e8245",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/world-2.webp?v=58930d817107fea3": "58930d817107fea3a876a51e91a6a5bed6374666070a6e6930cd09d0bfebbe0c",
@@ -30,5 +34,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/sport-champions.webp?v=6d183af6c0f0561d": "6d183af6c0f0561de5c12336e2652f3518f3d8fa90e6372539ef0c794bcfd3cd",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-midday/sport-omonoia.webp?v=bc4220839d5dfa47": "bc4220839d5dfa47a2e4c72a6b97c25265a1ece1789324e7895d9216a3fbb588"
   },
-  "version": "e4bc508b35cb44ca9bb69fb975e22f0ac80675b24d9af11dd27b3c5a8aeee13c"
+  "version": "c5a485c9fb2e8d8a54e9f6baf452c02ce8f3dbfa6fc788545ff8ade3894d2fc5"
 }
