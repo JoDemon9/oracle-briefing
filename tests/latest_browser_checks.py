@@ -53,8 +53,14 @@ def run(screenshots=None):
                 assert page.locator('#cyprus .newscard').count()>0 and page.locator('#world .newscard').count()>0
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
                 for bar in page.locator('.article-actions').all():
-                    boxes=[c.bounding_box() for c in bar.locator(':scope > details > summary,:scope > .story-actions > a').all()]
-                    assert max(b['y'] for b in boxes)-min(b['y'] for b in boxes)<2
+                    # Read one layout frame: separate protocol round trips can
+                    # straddle image/font layout shifts elsewhere in the page.
+                    boxes=bar.locator(':scope > details > summary,:scope > .story-actions > a').evaluate_all(
+                        '(nodes)=>nodes.map(n=>{const b=n.getBoundingClientRect();return {y:b.y,height:b.height}})')
+                    aligned=max(b['y'] for b in boxes)-min(b['y'] for b in boxes)<2
+                    if not aligned and screenshots:
+                        page.screenshot(path=str(screenshots/f'{width}-action-alignment-failure.png'),full_page=True)
+                    assert aligned, f'Article actions misaligned at {width}px: {boxes}'
                     assert all(b['height']>=44 for b in boxes)
                 assert page.locator('figure figcaption,.photo-credit').count()==0
                 assert page.locator('.image-credits-link').count()==1
