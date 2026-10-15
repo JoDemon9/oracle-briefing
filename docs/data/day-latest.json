@@ -2,10 +2,10 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-15",
-  "updated_at": "2026-10-15T17:44:48.096003+00:00",
+  "updated_at": "2026-10-15T18:06:24.387677+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-15.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "16d5b6866c786e80c696f5726a66bdeffc0ef62c1b708716a33d099cdaeb6e15",
+  "html_sha256": "70f788f52c224e5b8c3b6f4ccba4b4b21957becd704c43ccaf34da168f15d4a4",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
@@ -37,5 +37,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-15-evening/sport-zverev.webp?v=b422e5700b2f0036": "b422e5700b2f0036736cad7ce4144141948b0e02d14f8537e848476ea18bb78f",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-15-midday/sport-slam.webp?v=d443b915045c1055": "d443b915045c105549769098ff93111a4c2738a58a39c4b9d7974544a36acb63"
   },
-  "version": "490cd58485a896cd8d7bcdf8096cc16c9d96004147caa68b0d32f2cd9c02f27a"
+  "version": "a46f41c77e3194e4d26fb5c4d1e57a211a28cab33eddd45f6651c91941ea13ea"
 }
