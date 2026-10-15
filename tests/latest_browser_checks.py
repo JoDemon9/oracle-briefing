@@ -70,7 +70,15 @@ def run(screenshots=None):
                 assert page.locator('.hero .card-context').is_visible()
                 assert 0<len(page.locator('.hero .card-context').inner_text().split())<=180
                 depth.click()
-                assert page.locator('.hero .original-report').get_attribute('href').startswith('https://')
+                # DEC-005 supports both a useful full reader and an original-source link.
+                expected_reader=BeautifulSoup(original,'html.parser').select_one('.hero .read-link')
+                actual_reader=page.locator('.hero .read-link').first
+                assert actual_reader.get_attribute('href')==expected_reader['href']
+                if 'original-report' in expected_reader.get('class',[]):
+                    assert page.locator('.hero .original-report').get_attribute('href').startswith('https://')
+                else:
+                    assert urlsplit(actual_reader.get_attribute('href')).path.startswith('/Claude-Briefing/articles/')
+                    assert page.locator('.hero .original-report').count()==0
                 for img in page.locator('[data-editorial-image] img').all():
                     parent=img.locator('xpath=ancestor::details[1]')
                     if parent.count():parent.evaluate('(x)=>x.open=true')
