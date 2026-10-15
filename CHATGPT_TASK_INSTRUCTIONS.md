@@ -1,5 +1,11 @@
 # Ακριβείς οδηγίες αντικατάστασης των εξωτερικών ChatGPT tasks
 
+Latest follow-up DEC-011: the user requests real small sports logos instead of emojis. Use the canonical local club/F1 assets and shared credits; this supersedes older emoji-only/no-logo presentation instructions.
+
+## Latest requested fixes — DEC-008/009/010
+The canonical [editorial policy](https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md) now requires four small official latest-news links for favourite sports, up to two separate other-sports stories, a curated daily opening with unique global/Cyprus coverage and a collapsed chronology. New mornings: at most five Cyprus stories, normally five globals and up to seven only with an editorial reason, including the lead. The maintained public renderer/schema enforce the new review from 16 October. Preserve historical readers, publication/source/quote times and Wire. The current user request authorizes only the corresponding edits to the three existing briefing prompts, preserving schedules and unrelated settings. This supersedes the older sports-expansion and six-local-story targets.
+
+
 ## Εφημερίδα ημέρας — ενεργή αρχιτεκτονική 13/10/2026
 
 Η κύρια εμπειρία στο https://jodemon9.github.io/oracle-briefing/ είναι πλήρης ημερήσια εφημερίδα. Ο κοινός renderer παράγει `docs/daily/YYYY-MM-DD.html` (μόνιμο URL), `docs/today.html` (φορητή νεότερη πραγματική ημέρα), `docs/data/day-latest.json` (ταυτότητα και hashes), `docs/data/days/YYYY-MM-DD.json` (επικυρωμένο μοντέλο αναφορών), `docs/data/days.json` και `docs/daily/index.html` (αρχείο ημερών). Τα `docs/latest.html` / `docs/data/latest.json` διατηρούν ακριβώς τον ρόλο της τελευταίας **ανεξάρτητης έκδοσης**, μαζί με όλα τα morning/midday/evening URLs και readers.

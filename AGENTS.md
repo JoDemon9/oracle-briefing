@@ -1,5 +1,11 @@
 # Οδηγίες για βοηθούς — oracle-briefing
 
+Latest follow-up DEC-011: the user requests real small sports logos instead of emojis. Use the canonical local club/F1 assets and shared credits; this supersedes older emoji-only/no-logo presentation instructions.
+
+## Latest requested fixes — DEC-008/009/010
+The canonical [editorial policy](https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md) now requires four small official latest-news links for favourite sports, up to two separate other-sports stories, a curated daily opening with unique global/Cyprus coverage and a collapsed chronology. New mornings: at most five Cyprus stories, normally five globals and up to seven only with an editorial reason, including the lead. The maintained public renderer/schema enforce the new review from 16 October. Preserve historical readers, publication/source/quote times and Wire. The current user request authorizes only the corresponding edits to the three existing briefing prompts, preserving schedules and unrelated settings. This supersedes the older sports-expansion and six-local-story targets.
+
+
 ## Νεότερο αίτημα χρήστη — DEC-006 / DEC-007
 Διάβασε την ενεργή πολιτική https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md. Τρία article controls σε μία σειρά desktop/mobile, native αναπτύξεις από κάτω. Δεν εμφανίζονται λεζάντες ή panels φωτογραφίας/δικαιωμάτων ανά άρθρο· διατηρούνται ακριβές alt, metadata, gates και ενιαία σελίδα συντελεστών από το footer. Χωριστή ενότητα Επιδοτήσεις & δικαιώματα με πλήρη ελεγμένα edition.opportunities, σταθερά IDs, eligibility, ποσά, επίσημη αίτηση/οδηγίες, ημερομηνίες έναρξης/λήξης και χρόνο ελέγχου. Μην παρουσιάζεις κλειστή πρόσκληση, άγνωστη ημερομηνία ή πρόταση νόμου ως ενεργό δικαίωμα. Μην υποθέτεις προσωπική επιλεξιμότητα. Το νεότερο αίτημα εξουσιοδοτεί αντίστοιχες στοχευμένες αλλαγές στα τρία υπάρχοντα scheduled prompts χωρίς αλλαγή προγράμματος ή άλλων οδηγιών.
 

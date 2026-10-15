@@ -131,6 +131,11 @@ def run(screenshots=None):
                     hero=page.locator('.hero').bounding_box()
                     assert not page.locator('.hero .card-context').is_visible()
                     assert page.locator('.hero .article-actions').bounding_box()['height']<=55
+                assert not page.locator('#changes').evaluate('(x)=>x.open')
+                history=page.locator('#changes>summary');history.focus();page.keyboard.press('Enter')
+                assert page.locator('#changes').evaluate('(x)=>x.open')
+                assert page.locator('#sports .sport-news-link').count()==4
+                assert page.locator('#sports .sports-links details,#sports .sports-links p').count()==0
                 assert page.locator('#changes .update-card').count()>0
                 assert page.locator('#changes .update-card h3').count()>0
                 evidence=page.locator('#changes .update-sources>summary').first

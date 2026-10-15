@@ -1,5 +1,11 @@
 # Λειτουργία του Morning Briefing
 
+Latest follow-up DEC-011: the user requests real small sports logos instead of emojis. Use the canonical local club/F1 assets and shared credits; this supersedes older emoji-only/no-logo presentation instructions.
+
+## Latest requested fixes — DEC-008/009/010
+The canonical [editorial policy](https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md) now requires four small official latest-news links for favourite sports, up to two separate other-sports stories, a curated daily opening with unique global/Cyprus coverage and a collapsed chronology. New mornings: at most five Cyprus stories, normally five globals and up to seven only with an editorial reason, including the lead. The maintained public renderer/schema enforce the new review from 16 October. Preserve historical readers, publication/source/quote times and Wire. The current user request authorizes only the corresponding edits to the three existing briefing prompts, preserving schedules and unrelated settings. This supersedes the older sports-expansion and six-local-story targets.
+
+
 ## Ενεργή ανάγνωση και σύνοψη ημέρας — DEC-004/DEC-005 (15/10/2026)
 Διάβασε την [κοινή ενεργή πολιτική](https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md). Οι νέες v2 κάρτες δίνουν πλήρη factual περίληψη περίπου 30 δευτερολέπτων· όλες οι αναλύσεις, μαζί με το πρώτο θέμα, είναι προαιρετικές αναπτύξεις με πρόσθετη τεκμηριωμένη γνώση. Καταργούνται ελάχιστα μήκη 110/450 λέξεων και υποχρεωτικός αντίλογος. Ο reader είναι πλήρης μόνο όταν προσθέτει ουσία, αλλιώς η κάρτα συνδέει την αρχική πηγή. Η ημερήσια σύνοψη αναφέρεται σε ολόκληρη τη διαθέσιμη ημέρα με έγκυρα story IDs. Τα νέα αιτήματα 15/10 υπερισχύουν των παλιότερων οδηγιών για εμφανή ανάλυση lead/μήκος, χωρίς αλλαγή φωτογραφιών, ιστορικών URLs, ωρών πηγών ή Wire. Οι τρεις ήδη υπάρχουσες εργασίες ChatGPT ενημερώνονται μόνο στα σχετικά editorial πεδία.
 

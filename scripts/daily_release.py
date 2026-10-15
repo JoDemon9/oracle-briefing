@@ -32,7 +32,7 @@ def manifest(root=ROOT):
     prefix='assets/latest-snapshot/'+info['version']+'/'
     for relative in sorted(names):
         p=(docs/relative).resolve()
-        if not p.is_relative_to(docs.resolve()) or p.is_symlink() or p.suffix not in {'.html','.json','.css','.js','.webp'}:
+        if not p.is_relative_to(docs.resolve()) or p.is_symlink() or p.suffix not in {'.html','.json','.css','.js','.webp','.png','.jpg','.svg'}:
             raise ValueError('Unsafe central release path')
         files[relative]=digest(p.read_bytes())
         if relative.startswith(prefix) and files[relative]!=expected_assets.get(relative.removeprefix(prefix)):
