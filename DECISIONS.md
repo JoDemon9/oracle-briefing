@@ -18,3 +18,5 @@ For a meaningful fix, record the user need, reason, affected behavior, tradeoffs
 Latest: [DEC-008 compact sports](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-008-compact-sports.md), [DEC-009 curated day](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-009-curated-daily-newspaper.md), [DEC-010 morning balance](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-010-morning-news-balance.md). Follow the canonical records for implementation and publication status.
 
 [DEC-012 reading UI and explicit follow-ups](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-012-reading-ui-and-followups.md) records the latest approved UI changes; since-last-visit tracking remains deferred.
+
+[DEC-013 backend reliability](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-013-backend-publication-reliability.md) records the six approved backend fixes. Follow the canonical BACKEND_OPERATIONS.md; implementation remains on review branches until merged and live verified.

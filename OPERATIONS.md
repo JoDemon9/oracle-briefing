@@ -1,5 +1,8 @@
 # Λειτουργία του Morning Briefing
 
+## Latest backend request — DEC-013
+Follow [canonical backend operations](https://github.com/JoDemon9/Claude-Briefing/blob/main/BACKEND_OPERATIONS.md): resumable validated two-site publication with a private durable journal and explicit missing/failing slot/site status; machine-readable oracle-briefing/3 capabilities/schema hash; shared story registry and editorial duplicate review; source-backed typed freshness; conservative incremental rendering and bounded changed/current verification with a separate full archive audit. New contract, stable story_identity and structured weather-validity gates start 16 October 2026. Preserve unchanged historical contracts through accepted source fingerprints. No inferred outcomes, fuzzy automatic merges, private export, new scheduler, schedule changes or automatic PR merge. Actual main capabilities govern producers until these review branches are merged. The user's approval covers targeted corresponding updates to the three existing briefing prompts; other settings remain unchanged.
+
 ## Latest requested reading UI — DEC-012
 The canonical EDITORIAL_POLICY.md in Claude-Briefing now requires the compact mobile date/update row and native edition dropdown, headline → photo → full summary → actions on mobile, and explicit follow_ups links to genuinely later participating outcomes. Remove repeated 30-second labels and per-article duration estimates entirely. Preserve the daily overview, source/publication times, source text, photo gates and one-row controls. Since-last-visit tracking is deferred. Use the maintained renderer and only fields supported by the fresh public main schema.
 

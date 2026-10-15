@@ -2,10 +2,10 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-15",
-  "updated_at": "2026-10-15T15:51:53.846063+00:00",
+  "updated_at": "2026-10-15T16:30:44.844819+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-15.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "875890fd55dc7d484bbac5969217fcda578a45749b0cfd8dc9b85c8a26041006",
+  "html_sha256": "a4cd1005ed16fe8829d013fa5b918b38062892b6be7213f976225f7b3031e4b6",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
@@ -31,5 +31,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-15-midday/sport-slam.webp?v=d443b915045c1055": "d443b915045c105549769098ff93111a4c2738a58a39c4b9d7974544a36acb63"
   },
-  "version": "9229dd56d56d1adf4335645c4030c7e7c21ebdab6c310786fd1d60d9474fc3fc"
+  "version": "889d40148be9b1085821c5cc45e491a50d262b8121a0201c2c166631c5b7e760"
 }
