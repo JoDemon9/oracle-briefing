@@ -16,3 +16,5 @@ For a meaningful fix, record the user need, reason, affected behavior, tradeoffs
 [The newspaper review](https://github.com/JoDemon9/Claude-Briefing/blob/main/NEWSPAPER_REVIEW.md) is a proposed improvement backlog. Existing rules in AGENTS.md and OPERATIONS.md remain active, including historical URLs, complete daily snapshots, source times, privacy, accessibility and the independent Wire workflow.
 
 Latest: [DEC-008 compact sports](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-008-compact-sports.md), [DEC-009 curated day](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-009-curated-daily-newspaper.md), [DEC-010 morning balance](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-010-morning-news-balance.md). Follow the canonical records for implementation and publication status.
+
+[DEC-012 reading UI and explicit follow-ups](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-012-reading-ui-and-followups.md) records the latest approved UI changes; since-last-visit tracking remains deferred.

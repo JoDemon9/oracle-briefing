@@ -2,14 +2,14 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-15",
-  "updated_at": "2026-10-15T12:33:44.336789+00:00",
+  "updated_at": "2026-10-15T15:51:53.846063+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-15.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "7c92d9f5a0b4f505a08d38d8e9ed42f1103df2932e9cf584ee69625ab7560f00",
+  "html_sha256": "875890fd55dc7d484bbac5969217fcda578a45749b0cfd8dc9b85c8a26041006",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
-    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=fbcee96d97cc3f3c": "fbcee96d97cc3f3c52c9a71208c91a2fb6fbcb518b40fd7599da85b1c1741945",
+    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=2cb6d6fffbf6e61a": "2cb6d6fffbf6e61a4224e22acddcc719cf28eb94cfad861e0a86319df1bdd43c",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=362e68f3bb10f463": "362e68f3bb10f4634502abceb3b8662035ead444786f0e33069e38e66671b52e",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-15-midday/lead.webp?v=dca22fc5bc0979ab": "dca22fc5bc0979ab03d3d3c03ff318fde106d300a696729f03e44f8f085dc987",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-15-morning/lead.webp?v=f565ee94e876c80b": "f565ee94e876c80b6551ec76be43425c74aace6601b401f6cfdf08f2260c8b1a",
@@ -31,5 +31,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-15-midday/sport-slam.webp?v=d443b915045c1055": "d443b915045c105549769098ff93111a4c2738a58a39c4b9d7974544a36acb63"
   },
-  "version": "c325387d75f01942b779ac30d62ba355f9356fe4d64ec673c786c9c52e9d3a28"
+  "version": "9229dd56d56d1adf4335645c4030c7e7c21ebdab6c310786fd1d60d9474fc3fc"
 }

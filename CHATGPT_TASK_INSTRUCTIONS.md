@@ -1,5 +1,9 @@
 # Ακριβείς οδηγίες αντικατάστασης των εξωτερικών ChatGPT tasks
 
+## Latest requested reading UI — DEC-012
+The canonical EDITORIAL_POLICY.md in Claude-Briefing now requires the compact mobile date/update row and native edition dropdown, headline → photo → full summary → actions on mobile, and explicit follow_ups links to genuinely later participating outcomes. Remove repeated 30-second labels and per-article duration estimates entirely. Preserve the daily overview, source/publication times, source text, photo gates and one-row controls. Since-last-visit tracking is deferred. Use the maintained renderer and only fields supported by the fresh public main schema.
+
+
 Latest follow-up DEC-011: the user requests real small sports logos instead of emojis. Use the canonical local club/F1 assets and shared credits; this supersedes older emoji-only/no-logo presentation instructions.
 
 ## Latest requested fixes — DEC-008/009/010
