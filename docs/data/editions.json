@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-10-15-midday",
+    "date": "2026-10-15",
+    "type": "midday",
+    "status": "published",
+    "published_at": "2026-10-15T14:03:34+03:00",
+    "title": "Μεσημεριανός παλμός · GSI, Σένγκεν και πραγματικά αποτελέσματα TSMC",
+    "url": "midday/2026-10-15.html"
+  },
+  {
     "id": "2026-10-15-morning",
     "date": "2026-10-15",
     "type": "morning",
