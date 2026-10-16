@@ -10,6 +10,7 @@ When a keyword indicates potentially important news:
 """
 
 import os
+import fcntl
 import sys
 import json
 import time
@@ -432,7 +433,12 @@ def run_monitor():
 
 def main():
     try:
-        run_monitor()
+        # Share the local snapshot-promotion lock; RSS collection/schedules stay independent.
+        lock_dir=os.path.join(BASE_DIR,'.work')
+        os.makedirs(lock_dir,exist_ok=True)
+        with open(os.path.join(lock_dir,'publication.lock'),'a') as lock:
+            fcntl.flock(lock,fcntl.LOCK_EX)
+            run_monitor()
         return 0 if any(x['status'] == 'ok' for x in PROVIDER_HEALTH.values()) else 1
     except Exception as error:
         print(f'Monitor failed: {type(error).__name__}', file=sys.stderr)

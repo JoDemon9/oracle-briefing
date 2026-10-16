@@ -14,3 +14,13 @@ Current records:
 For a meaningful fix, record the user need, reason, affected behavior, tradeoffs, preservation requirements, actual checks and publication state in the canonical history. Reference decision IDs in commits/PRs. A later explicit user request can supersede a record; retain its old rationale and link the new record. Do not reverse an accepted choice during an unrelated fix or treat an unapproved recommendation as a requirement.
 
 [The newspaper review](https://github.com/JoDemon9/Claude-Briefing/blob/main/NEWSPAPER_REVIEW.md) is a proposed improvement backlog. Existing rules in AGENTS.md and OPERATIONS.md remain active, including historical URLs, complete daily snapshots, source times, privacy, accessibility and the independent Wire workflow.
+
+Latest: [DEC-008 compact sports](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-008-compact-sports.md), [DEC-009 curated day](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-009-curated-daily-newspaper.md), [DEC-010 morning balance](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-010-morning-news-balance.md). Follow the canonical records for implementation and publication status.
+
+[DEC-012 reading UI and explicit follow-ups](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-012-reading-ui-and-followups.md) records the latest approved UI changes; since-last-visit tracking remains deferred.
+
+[DEC-013 backend reliability](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-013-backend-publication-reliability.md) records the six approved backend fixes. Follow the canonical BACKEND_OPERATIONS.md; implementation remains on review branches until merged and live verified.
+
+[DEC-014 efficient editorial production](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-014-efficient-editorial-production.md) consolidates runtime inputs, research/due-check/photo reuse and separates routine checks from maintenance. Keep real scheduled runs, Pro observations, code and live deployment status distinct.
+
+DEC-015 restores the reviewed publication safeguards and compact instructions overwritten during the 16 October content sync, retains current Wire data, and carries the repaired complete day. Canonical record: https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-015-production-recovery-and-editorial-quality.md . Publication/task verification is reported separately.

@@ -1,43 +1,9 @@
-# Οδηγίες για βοηθούς — oracle-briefing
+# Oracle portal: AGENTS
 
-## Νεότερο αίτημα χρήστη — DEC-006 / DEC-007
-Διάβασε την ενεργή πολιτική https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md. Τρία article controls σε μία σειρά desktop/mobile, native αναπτύξεις από κάτω. Δεν εμφανίζονται λεζάντες ή panels φωτογραφίας/δικαιωμάτων ανά άρθρο· διατηρούνται ακριβές alt, metadata, gates και ενιαία σελίδα συντελεστών από το footer. Χωριστή ενότητα Επιδοτήσεις & δικαιώματα με πλήρη ελεγμένα edition.opportunities, σταθερά IDs, eligibility, ποσά, επίσημη αίτηση/οδηγίες, ημερομηνίες έναρξης/λήξης και χρόνο ελέγχου. Μην παρουσιάζεις κλειστή πρόσκληση, άγνωστη ημερομηνία ή πρόταση νόμου ως ενεργό δικαίωμα. Μην υποθέτεις προσωπική επιλεξιμότητα. Το νεότερο αίτημα εξουσιοδοτεί αντίστοιχες στοχευμένες αλλαγές στα τρία υπάρχοντα scheduled prompts χωρίς αλλαγή προγράμματος ή άλλων οδηγιών.
+Canonical active policy: https://github.com/JoDemon9/Claude-Briefing/blob/main/BRIEFING_RUNTIME.md (DEC-014). Routine tasks read applicable AGENTS files and that compact policy once; do not reread old manuals/renderer/schema archives. Maintenance reads canonical DECISIONS.md and relevant records. Earlier portal instructions remain under maintenance/history/2026-10-15 as historical reference, not an extra runtime checklist.
 
-## Ενεργή ανάγνωση και σύνοψη ημέρας — DEC-004/DEC-005 (15/10/2026)
-Διάβασε την [κοινή ενεργή πολιτική](https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md). Οι νέες v2 κάρτες δίνουν πλήρη factual περίληψη περίπου 30 δευτερολέπτων· όλες οι αναλύσεις, μαζί με το πρώτο θέμα, είναι προαιρετικές αναπτύξεις με πρόσθετη τεκμηριωμένη γνώση. Καταργούνται ελάχιστα μήκη 110/450 λέξεων και υποχρεωτικός αντίλογος. Ο reader είναι πλήρης μόνο όταν προσθέτει ουσία, αλλιώς η κάρτα συνδέει την αρχική πηγή. Η ημερήσια σύνοψη αναφέρεται σε ολόκληρη τη διαθέσιμη ημέρα με έγκυρα story IDs. Τα νέα αιτήματα 15/10 υπερισχύουν των παλιότερων οδηγιών για εμφανή ανάλυση lead/μήκος, χωρίς αλλαγή φωτογραφιών, ιστορικών URLs, ωρών πηγών ή Wire. Οι τρεις ήδη υπάρχουσες εργασίες ChatGPT ενημερώνονται μόνο στα σχετικά editorial πεδία.
+This repo saves the complete public daily newspaper and hosts the independent Wire. It does not generate editions. Keep the existing three ChatGPT schedules/settings and Wire collection schedule. No legacy/Gemini/catch-up generator, new automation, Telegram or other person-directed messaging. The user approves the compact prompt/research workflow; internal prompt changes are separate from Git commits.
 
-## Διατήρηση αποφάσεων και αιτιολογίας
+Use the maintained public sync/publisher, complete staged snapshot, exact live hash/decode checks and saved-good fallback. Preserve concurrent Wire data, original news/source/quote times, independent readers/URLs, public/private boundaries and all agreed sports/mobile/reading/image/financial/rights choices. Private notes, source caches, packets and usage metrics never enter docs or public CI artifacts; private Pages stays disabled.
 
-Πριν από αλλαγή, διάβασε [DECISIONS.md](DECISIONS.md) και τις σχετικές DEC εγγραφές στο κοινό ιστορικό Claude-Briefing. Κατάγραψε για κάθε ουσιαστική διόρθωση το αίτημα/ανάγκη χρήστη, τον λόγο, τι διατηρείται, τα αρχεία, πραγματικούς ελέγχους και χωριστή κατάσταση main/Pages/actions. Ανέφερε DEC IDs στο commit ή PR. Μην αναιρείς παλιά επιλογή σε άσχετη εργασία· νεότερο σαφές αίτημα μπορεί να την αντικαταστήσει με νέα συνδεδεμένη εγγραφή, διατηρώντας την αρχική αιτιολογία. Οι προτάσεις της ανασκόπησης δεν είναι εγκεκριμένες αλλαγές. Μην συντηρείς δεύτερο ασύμφωνο ιστορικό και μην προσθέτεις γενική απαίτηση άδειας για συνηθισμένες διορθώσεις.
-
-Πριν εκτελέσεις ή αναλύσεις Morning Briefing, διάβασε OPERATIONS.md και το BRIEFING_SPEC.md / CHATGPT_TASK_INSTRUCTIONS.md από το πραγματικό main του JoDemon9/Claude-Briefing. Μην υποθέτεις ότι ανοιχτό PR έχει δημοσιευτεί.
-
-Ο χρήστης παράγει τις εκδόσεις μέσω scheduled actions του ChatGPT στις 07:30 / 13:30 / 19:30 Europe/Athens. Αυτό είναι ήδη γνωστό και δεν χρειάζεται να τον ξαναρωτήσεις ποιος scheduler χρησιμοποιείται. Δεν δημιουργείς ή επαναφέρεις Gemini/Antigravity ή legacy scheduler/Telegram.
-
-Ρόλος αυτού του αποθετηρίου: Πλήρης εφημερίδα ημέρας στην κεντρική διεύθυνση, ιστορικό αρχείο και συλλογή Wire. Δεν παράγει νέες εκδόσεις.
-
-Η κύρια ροή είναι ChatGPT έρευνα → private Markdown/JSON → ελεγμένα δημόσια JSON και renderer v2 στο Claude-Briefing → Pages → δημόσιο μητρώο στην πύλη Oracle. Το Wire είναι χωριστή συλλογή RSS και δεν δημιουργεί εκδόσεις ή μηνύματα. Τα workflows CI ελέγχουν κώδικα/αρχεία, δεν εκτελούν τα ChatGPT actions.
-
-Ενημέρωσε το κοινό OPERATIONS.md και την προδιαγραφή όταν αλλάζει λειτουργία. Διατήρησε τα ιστορικά URLs και παράλληλες εκδόσεις. Άγνωστα στοιχεία μένουν άγνωστα. Δήλωσε ειλικρινά ποιοι έλεγχοι/deployments εκτελέστηκαν. Η δημοσίευση απαιτεί ελεγμένα δημόσια αρχεία και επαλήθευση πραγματικού Pages αποτελέσματος.
-
-Μην μεταφέρεις ιδιωτικές σημειώσεις ή ολόκληρο το private repository στο δημόσιο. Μην ενεργοποιήσεις Pages στο private. Μην επαναφέρεις διαγραμμένα executables από παλιά audits. Για επόμενη απάντηση κατάστασης ξεχώρισε κώδικα στο main, ανοιχτά PR, CI, Pages και εξωτερικά actions.
-
-Η αρχική Oracle δείχνει την πλήρη εφημερίδα ημέρας από today.html/day-latest.json. Τα latest.html/latest.json διατηρούν την τελευταία ανεξάρτητη έκδοση. Διάβασε την ενεργή αρχιτεκτονική ημέρας στο OPERATIONS.md και το δημόσιο DAILY_HUB_HANDOFF.md. Κράτησε ουσιαστικές κάρτες newspaper_analysis και χωριστούς πλήρεις readers. Δεν αλλάζεις τα πραγματικά ChatGPT automations σε αυτή την εργασία.
-
-
-## Κοινό UI — 14/10/2026
-Χρησιμοποίησε το templates/v2/newspaper-ui.css και τον κοινό renderer, όχι χειροκίνητη χρονολογημένη HTML. Κάρτες Κύπρου/διεθνών: 3 στήλες desktop (≥1100 px), 2 tablet, 1 mobile. Διατήρησε πλήρες κείμενο και native αναπτύξεις/πηγές, χωρίς line-clamp. Οι πηγές και οι χρόνοι δεν αλλάζουν σε εργασίες εμφάνισης. Διάβασε τη σχετική ενότητα στο OPERATIONS.md.
-
-
-## Frontend ανάγνωσης — 14/10/2026
-Διάβασε τη νεότερη ενότητα OPERATIONS.md: newspaper_ui.py + newspaper-ui.css οργανώνουν συμπαγή κορυφή, native μενού, lead με φωτογραφία και 3/2/1 στήλες. Το newspaper_analysis του πρώτου θέματος είναι πάντα ορατό· στις υπόλοιπες κάρτες είναι σε native ανάπτυξη, όλη η factual περίληψη παραμένει ορατή. Πλήρεις πηγές/αναφορές και λεζάντες/δικαιώματα είναι διαθέσιμα χωρίς JavaScript. Διατήρησε αμετάβλητα περιεχόμενο, δημοσιευμένους χρόνους, quote metadata, gates και ιστορικά URLs. Μην επαναφέρεις τις ψηλές αρχικές κάρτες ή οριζόντια κρυμμένη mobile πλοήγηση.
-
-
-## Κύρια εφημερίδα και εκδοτική ιεράρχηση — νεότερη οδηγία 14/10/2026
-Η κύρια μορφή είναι https://jodemon9.github.io/oracle-briefing/: ενιαία εφημερίδα ημέρας με μοναδικές ιστορίες και συμμετέχουσες δημοσιευμένες πρωινές/μεσημεριανές/βραδινές εκδόσεις. Αποθηκεύεται ανά ημερομηνία στο δημόσιο docs/daily/YYYY-MM-DD.html και βρίσκεται στο docs/daily/index.html. Το latest.html παραμένει ανεξάρτητο χρονικό στιγμιότυπο. Ο κοινός renderer εμφανίζει ορατή ταυτότητα και σύνδεσμο «Κύρια εφημερίδα» σε κάθε ημερήσια/ανεξάρτητη σελίδα. Δεν δημιουργεί ανύπαρκτες μεσημεριανές/βραδινές εκδόσεις.
-
-Το πρώτο θέμα εμφανίζει ολόκληρο το ελεγμένο newspaper_analysis χωρίς expand, με χωριστή ετικέτα «Γιατί έχει σημασία». Οι δευτερεύουσες κάρτες κρατούν τις native αναπτύξεις. Η σύνοψη 60 δευτερολέπτων αποδίδεται από κοινό helper ως θεματικές κάρτες με διακοσμητικά emoji, διατηρώντας έως έξι ελεγμένα σημεία. Το «Τι άλλαξε» της ανεξάρτητης έκδοσης αποδίδει κάθε υπάρχον εκδοτικό record ξεχωριστά, με ευανάγνωστο sans-serif κείμενο, χωρίς επινοημένο χρόνο. Τα αθλητικά έχουν διακοσμητικά emoji και χρώματα ομάδων, όχι μη αδειοδοτημένα επίσημα logos.
-
-Η ιεράρχηση είναι ρητή: edition.daily.lead_story_id επιλέγει πρώτο θέμα και στον κοινό renderer της ανεξάρτητης έκδοσης, article.daily.priority ταξινομεί με μικρότερη τιμή πρώτα. Αλλαγή αυτών των πεδίων είναι εκδοτική αναδιάταξη, όχι substantive_update ή απόδειξη νέου γεγονότος. Διατηρούνται categories, story_id, URLs, published_at, πηγές, quotes και ολόκληρο το ελεγμένο κείμενο. Στις 14/10, κατόπιν αιτήματος του χρήστη, προτάχθηκαν οι έντεκα αγνοούμενοι και η ασφάλεια ναυσιπλοΐας στη Μαύρη Θάλασσα, μετά η ενεργειακή/γεωπολιτική αναφορά, η κυπριακή οικονομία και το εμπόριο της Κίνας, πριν από ανακοινώσεις, μελλοντικές συμμετοχές και σεμινάρια. Κριτήρια: άμεση ανθρώπινη σημασία, ευρύς αντίκτυπος, ολοκληρωμένα/τεκμηριωμένα γεγονότα πριν από μελλοντικές υποσχέσεις. Η αβεβαιότητα για ευθύνη/παραγωγή παραμένει ρητή. Δεν έγινε νέα έρευνα· χρησιμοποιήθηκε αποκλειστικά η υπάρχουσα ελεγμένη ύλη.
-
-Τα πραγματικά ChatGPT automations δεν άλλαξαν. Δεν αλλάζουν Wire, scheduler, backend, image/reading gates ή ιδιωτικότητα.
+Routine content checks use changed/current edition/day/readers at mobile/desktop with and without JS; publisher/layout/schema/test/workflow changes get full regression. A failure blocks release and reports its stage; do not edit development code/tests to rescue an edition. A push/green CI is not a verified live newspaper. Respect fresh main capabilities; pending PRs are not deployed and this policy does not authorise automatic PR merges.

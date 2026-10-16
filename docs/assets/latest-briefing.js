@@ -43,9 +43,16 @@
           const raw = await result.arrayBuffer();
           if (await digest(raw) !== info.asset_sha256[url]) throw Error('Wrong asset');
           if (node.tagName === 'IMG') {
-            const bitmap = await createImageBitmap(new Blob([raw]));
-            if (!bitmap.width || !bitmap.height) throw Error('Undecodable image');
-            bitmap.close();
+            // Image.decode supports SVG crests as well as raster photographs;
+            // createImageBitmap rejects SVG blobs in supported browsers.
+            const type = url.split('?')[0].endsWith('.svg') ? 'image/svg+xml' : result.headers.get('content-type') || 'application/octet-stream';
+            const objectUrl = URL.createObjectURL(new Blob([raw], {type}));
+            try {
+              const image = new Image();
+              image.src = objectUrl;
+              await image.decode();
+              if (!image.naturalWidth || !image.naturalHeight) throw Error('Undecodable image');
+            } finally { URL.revokeObjectURL(objectUrl); }
           }
         }));
       }

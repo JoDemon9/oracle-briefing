@@ -3,6 +3,9 @@ import json
 import shutil
 import tempfile
 import unittest
+from unittest import mock
+from urllib.parse import urlsplit
+import urllib.error
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -34,5 +37,31 @@ class DailyReleaseTests(unittest.TestCase):
             asset=next(name for name in names if name.endswith('.webp'))
             (root/'docs'/asset).write_bytes(b'corrupted local image')
             with self.assertRaisesRegex(ValueError,'differs from reviewed'):release.record(root)
+
+    def test_verified_receipt_is_retained_when_a_later_check_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);shutil.copytree(ROOT/'docs',root/'docs');release.record(root)
+            bad=set()
+            def opener(request,**kwargs):
+                name=urlsplit(request.full_url).path.removeprefix('/oracle-briefing/')
+                response=mock.MagicMock();response.__enter__.return_value=response
+                response.status=200;response.geturl.return_value=request.full_url
+                response.read.return_value=b'bad' if name in bad else (root/'docs'/name).read_bytes()
+                return response
+            result=release.verify(root,opener=opener)
+            self.assertEqual(result['status'],'verified')
+            before=(root/'.work/daily-publication-check.json').read_bytes()
+            bad.add('index.html')
+            with self.assertRaisesRegex(ValueError,'does not serve'):release.verify(root,opener=opener)
+            self.assertEqual(before,(root/'.work/daily-publication-check.json').read_bytes())
+
+    def test_unreachable_release_has_bounded_retries(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);shutil.copytree(ROOT/'docs',root/'docs');release.record(root)
+            opener=mock.Mock(side_effect=urllib.error.URLError('offline'))
+            with mock.patch.object(release.time,'sleep'):
+                with self.assertRaisesRegex(ValueError,'could not be reached'):release.verify(root,opener=opener)
+            self.assertEqual(opener.call_count,3)
+            self.assertFalse((root/'.work/daily-publication-check.json').exists())
 
 if __name__=='__main__':unittest.main()
