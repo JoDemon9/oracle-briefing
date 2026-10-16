@@ -1,0 +1,56 @@
+# Οδηγίες για βοηθούς — oracle-briefing
+
+## Latest backend request — DEC-013
+Follow [canonical backend operations](https://github.com/JoDemon9/Claude-Briefing/blob/main/BACKEND_OPERATIONS.md): resumable validated two-site publication with a private durable journal and explicit missing/failing slot/site status; machine-readable oracle-briefing/3 capabilities/schema hash; shared story registry and editorial duplicate review; source-backed typed freshness; conservative incremental rendering and bounded changed/current verification with a separate full archive audit. New contract, stable story_identity and structured weather-validity gates start 16 October 2026. Preserve unchanged historical contracts through accepted source fingerprints. No inferred outcomes, fuzzy automatic merges, private export, new scheduler, schedule changes or automatic PR merge. Actual main capabilities govern producers until these review branches are merged. The user's approval covers targeted corresponding updates to the three existing briefing prompts; other settings remain unchanged.
+
+## Latest requested reading UI — DEC-012
+The canonical EDITORIAL_POLICY.md in Claude-Briefing now requires the compact mobile date/update row and native edition dropdown, headline → photo → full summary → actions on mobile, and explicit follow_ups links to genuinely later participating outcomes. Remove repeated 30-second labels and per-article duration estimates entirely. Preserve the daily overview, source/publication times, source text, photo gates and one-row controls. Since-last-visit tracking is deferred. Use the maintained renderer and only fields supported by the fresh public main schema.
+
+
+Latest follow-up DEC-011: the user requests real small sports logos instead of emojis. Use the canonical local club/F1 assets and shared credits; this supersedes older emoji-only/no-logo presentation instructions.
+
+## Latest requested fixes — DEC-008/009/010
+The canonical [editorial policy](https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md) now requires four small official latest-news links for favourite sports, up to two separate other-sports stories, a curated daily opening with unique global/Cyprus coverage and a collapsed chronology. New mornings: at most five Cyprus stories, normally five globals and up to seven only with an editorial reason, including the lead. The maintained public renderer/schema enforce the new review from 16 October. Preserve historical readers, publication/source/quote times and Wire. The current user request authorizes only the corresponding edits to the three existing briefing prompts, preserving schedules and unrelated settings. This supersedes the older sports-expansion and six-local-story targets.
+
+
+## Νεότερο αίτημα χρήστη — DEC-006 / DEC-007
+Διάβασε την ενεργή πολιτική https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md. Τρία article controls σε μία σειρά desktop/mobile, native αναπτύξεις από κάτω. Δεν εμφανίζονται λεζάντες ή panels φωτογραφίας/δικαιωμάτων ανά άρθρο· διατηρούνται ακριβές alt, metadata, gates και ενιαία σελίδα συντελεστών από το footer. Χωριστή ενότητα Επιδοτήσεις & δικαιώματα με πλήρη ελεγμένα edition.opportunities, σταθερά IDs, eligibility, ποσά, επίσημη αίτηση/οδηγίες, ημερομηνίες έναρξης/λήξης και χρόνο ελέγχου. Μην παρουσιάζεις κλειστή πρόσκληση, άγνωστη ημερομηνία ή πρόταση νόμου ως ενεργό δικαίωμα. Μην υποθέτεις προσωπική επιλεξιμότητα. Το νεότερο αίτημα εξουσιοδοτεί αντίστοιχες στοχευμένες αλλαγές στα τρία υπάρχοντα scheduled prompts χωρίς αλλαγή προγράμματος ή άλλων οδηγιών.
+
+## Ενεργή ανάγνωση και σύνοψη ημέρας — DEC-004/DEC-005 (15/10/2026)
+Διάβασε την [κοινή ενεργή πολιτική](https://github.com/JoDemon9/Claude-Briefing/blob/main/EDITORIAL_POLICY.md). Οι νέες v2 κάρτες δίνουν πλήρη factual περίληψη περίπου 30 δευτερολέπτων· όλες οι αναλύσεις, μαζί με το πρώτο θέμα, είναι προαιρετικές αναπτύξεις με πρόσθετη τεκμηριωμένη γνώση. Καταργούνται ελάχιστα μήκη 110/450 λέξεων και υποχρεωτικός αντίλογος. Ο reader είναι πλήρης μόνο όταν προσθέτει ουσία, αλλιώς η κάρτα συνδέει την αρχική πηγή. Η ημερήσια σύνοψη αναφέρεται σε ολόκληρη τη διαθέσιμη ημέρα με έγκυρα story IDs. Τα νέα αιτήματα 15/10 υπερισχύουν των παλιότερων οδηγιών για εμφανή ανάλυση lead/μήκος, χωρίς αλλαγή φωτογραφιών, ιστορικών URLs, ωρών πηγών ή Wire. Οι τρεις ήδη υπάρχουσες εργασίες ChatGPT ενημερώνονται μόνο στα σχετικά editorial πεδία.
+
+## Διατήρηση αποφάσεων και αιτιολογίας
+
+Πριν από αλλαγή, διάβασε [DECISIONS.md](DECISIONS.md) και τις σχετικές DEC εγγραφές στο κοινό ιστορικό Claude-Briefing. Κατάγραψε για κάθε ουσιαστική διόρθωση το αίτημα/ανάγκη χρήστη, τον λόγο, τι διατηρείται, τα αρχεία, πραγματικούς ελέγχους και χωριστή κατάσταση main/Pages/actions. Ανέφερε DEC IDs στο commit ή PR. Μην αναιρείς παλιά επιλογή σε άσχετη εργασία· νεότερο σαφές αίτημα μπορεί να την αντικαταστήσει με νέα συνδεδεμένη εγγραφή, διατηρώντας την αρχική αιτιολογία. Οι προτάσεις της ανασκόπησης δεν είναι εγκεκριμένες αλλαγές. Μην συντηρείς δεύτερο ασύμφωνο ιστορικό και μην προσθέτεις γενική απαίτηση άδειας για συνηθισμένες διορθώσεις.
+
+Πριν εκτελέσεις ή αναλύσεις Morning Briefing, διάβασε OPERATIONS.md και το BRIEFING_SPEC.md / CHATGPT_TASK_INSTRUCTIONS.md από το πραγματικό main του JoDemon9/Claude-Briefing. Μην υποθέτεις ότι ανοιχτό PR έχει δημοσιευτεί.
+
+Ο χρήστης παράγει τις εκδόσεις μέσω scheduled actions του ChatGPT στις 07:30 / 13:30 / 19:30 Europe/Athens. Αυτό είναι ήδη γνωστό και δεν χρειάζεται να τον ξαναρωτήσεις ποιος scheduler χρησιμοποιείται. Δεν δημιουργείς ή επαναφέρεις Gemini/Antigravity ή legacy scheduler/Telegram.
+
+Ρόλος αυτού του αποθετηρίου: Πλήρης εφημερίδα ημέρας στην κεντρική διεύθυνση, ιστορικό αρχείο και συλλογή Wire. Δεν παράγει νέες εκδόσεις.
+
+Η κύρια ροή είναι ChatGPT έρευνα → private Markdown/JSON → ελεγμένα δημόσια JSON και renderer v2 στο Claude-Briefing → Pages → δημόσιο μητρώο στην πύλη Oracle. Το Wire είναι χωριστή συλλογή RSS και δεν δημιουργεί εκδόσεις ή μηνύματα. Τα workflows CI ελέγχουν κώδικα/αρχεία, δεν εκτελούν τα ChatGPT actions.
+
+Ενημέρωσε το κοινό OPERATIONS.md και την προδιαγραφή όταν αλλάζει λειτουργία. Διατήρησε τα ιστορικά URLs και παράλληλες εκδόσεις. Άγνωστα στοιχεία μένουν άγνωστα. Δήλωσε ειλικρινά ποιοι έλεγχοι/deployments εκτελέστηκαν. Η δημοσίευση απαιτεί ελεγμένα δημόσια αρχεία και επαλήθευση πραγματικού Pages αποτελέσματος.
+
+Μην μεταφέρεις ιδιωτικές σημειώσεις ή ολόκληρο το private repository στο δημόσιο. Μην ενεργοποιήσεις Pages στο private. Μην επαναφέρεις διαγραμμένα executables από παλιά audits. Για επόμενη απάντηση κατάστασης ξεχώρισε κώδικα στο main, ανοιχτά PR, CI, Pages και εξωτερικά actions.
+
+Η αρχική Oracle δείχνει την πλήρη εφημερίδα ημέρας από today.html/day-latest.json. Τα latest.html/latest.json διατηρούν την τελευταία ανεξάρτητη έκδοση. Διάβασε την ενεργή αρχιτεκτονική ημέρας στο OPERATIONS.md και το δημόσιο DAILY_HUB_HANDOFF.md. Κράτησε ουσιαστικές κάρτες newspaper_analysis και χωριστούς πλήρεις readers. Δεν αλλάζεις τα πραγματικά ChatGPT automations σε αυτή την εργασία.
+
+
+## Κοινό UI — 14/10/2026
+Χρησιμοποίησε το templates/v2/newspaper-ui.css και τον κοινό renderer, όχι χειροκίνητη χρονολογημένη HTML. Κάρτες Κύπρου/διεθνών: 3 στήλες desktop (≥1100 px), 2 tablet, 1 mobile. Διατήρησε πλήρες κείμενο και native αναπτύξεις/πηγές, χωρίς line-clamp. Οι πηγές και οι χρόνοι δεν αλλάζουν σε εργασίες εμφάνισης. Διάβασε τη σχετική ενότητα στο OPERATIONS.md.
+
+
+## Frontend ανάγνωσης — 14/10/2026
+Διάβασε τη νεότερη ενότητα OPERATIONS.md: newspaper_ui.py + newspaper-ui.css οργανώνουν συμπαγή κορυφή, native μενού, lead με φωτογραφία και 3/2/1 στήλες. Το newspaper_analysis του πρώτου θέματος είναι πάντα ορατό· στις υπόλοιπες κάρτες είναι σε native ανάπτυξη, όλη η factual περίληψη παραμένει ορατή. Πλήρεις πηγές/αναφορές και λεζάντες/δικαιώματα είναι διαθέσιμα χωρίς JavaScript. Διατήρησε αμετάβλητα περιεχόμενο, δημοσιευμένους χρόνους, quote metadata, gates και ιστορικά URLs. Μην επαναφέρεις τις ψηλές αρχικές κάρτες ή οριζόντια κρυμμένη mobile πλοήγηση.
+
+
+## Κύρια εφημερίδα και εκδοτική ιεράρχηση — νεότερη οδηγία 14/10/2026
+Η κύρια μορφή είναι https://jodemon9.github.io/oracle-briefing/: ενιαία εφημερίδα ημέρας με μοναδικές ιστορίες και συμμετέχουσες δημοσιευμένες πρωινές/μεσημεριανές/βραδινές εκδόσεις. Αποθηκεύεται ανά ημερομηνία στο δημόσιο docs/daily/YYYY-MM-DD.html και βρίσκεται στο docs/daily/index.html. Το latest.html παραμένει ανεξάρτητο χρονικό στιγμιότυπο. Ο κοινός renderer εμφανίζει ορατή ταυτότητα και σύνδεσμο «Κύρια εφημερίδα» σε κάθε ημερήσια/ανεξάρτητη σελίδα. Δεν δημιουργεί ανύπαρκτες μεσημεριανές/βραδινές εκδόσεις.
+
+Το πρώτο θέμα εμφανίζει ολόκληρο το ελεγμένο newspaper_analysis χωρίς expand, με χωριστή ετικέτα «Γιατί έχει σημασία». Οι δευτερεύουσες κάρτες κρατούν τις native αναπτύξεις. Η σύνοψη 60 δευτερολέπτων αποδίδεται από κοινό helper ως θεματικές κάρτες με διακοσμητικά emoji, διατηρώντας έως έξι ελεγμένα σημεία. Το «Τι άλλαξε» της ανεξάρτητης έκδοσης αποδίδει κάθε υπάρχον εκδοτικό record ξεχωριστά, με ευανάγνωστο sans-serif κείμενο, χωρίς επινοημένο χρόνο. Τα αθλητικά έχουν διακοσμητικά emoji και χρώματα ομάδων, όχι μη αδειοδοτημένα επίσημα logos.
+
+Η ιεράρχηση είναι ρητή: edition.daily.lead_story_id επιλέγει πρώτο θέμα και στον κοινό renderer της ανεξάρτητης έκδοσης, article.daily.priority ταξινομεί με μικρότερη τιμή πρώτα. Αλλαγή αυτών των πεδίων είναι εκδοτική αναδιάταξη, όχι substantive_update ή απόδειξη νέου γεγονότος. Διατηρούνται categories, story_id, URLs, published_at, πηγές, quotes και ολόκληρο το ελεγμένο κείμενο. Στις 14/10, κατόπιν αιτήματος του χρήστη, προτάχθηκαν οι έντεκα αγνοούμενοι και η ασφάλεια ναυσιπλοΐας στη Μαύρη Θάλασσα, μετά η ενεργειακή/γεωπολιτική αναφορά, η κυπριακή οικονομία και το εμπόριο της Κίνας, πριν από ανακοινώσεις, μελλοντικές συμμετοχές και σεμινάρια. Κριτήρια: άμεση ανθρώπινη σημασία, ευρύς αντίκτυπος, ολοκληρωμένα/τεκμηριωμένα γεγονότα πριν από μελλοντικές υποσχέσεις. Η αβεβαιότητα για ευθύνη/παραγωγή παραμένει ρητή. Δεν έγινε νέα έρευνα· χρησιμοποιήθηκε αποκλειστικά η υπάρχουσα ελεγμένη ύλη.
+
+Τα πραγματικά ChatGPT automations δεν άλλαξαν. Δεν αλλάζουν Wire, scheduler, backend, image/reading gates ή ιδιωτικότητα.

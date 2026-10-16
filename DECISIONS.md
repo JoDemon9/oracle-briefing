@@ -20,3 +20,5 @@ Latest: [DEC-008 compact sports](https://github.com/JoDemon9/Claude-Briefing/blo
 [DEC-012 reading UI and explicit follow-ups](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-012-reading-ui-and-followups.md) records the latest approved UI changes; since-last-visit tracking remains deferred.
 
 [DEC-013 backend reliability](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-013-backend-publication-reliability.md) records the six approved backend fixes. Follow the canonical BACKEND_OPERATIONS.md; implementation remains on review branches until merged and live verified.
+
+[DEC-014 efficient editorial production](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-014-efficient-editorial-production.md) consolidates runtime inputs, research/due-check/photo reuse and separates routine checks from maintenance. Keep real scheduled runs, Pro observations, code and live deployment status distinct.
