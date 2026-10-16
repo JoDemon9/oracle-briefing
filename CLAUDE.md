@@ -13,3 +13,7 @@
 Μην μεταφέρεις ιδιωτικές σημειώσεις ή ολόκληρο το private repository στο δημόσιο. Μην ενεργοποιήσεις Pages στο private. Μην επαναφέρεις διαγραμμένα executables από παλιά audits. Για επόμενη απάντηση κατάστασης ξεχώρισε κώδικα στο main, ανοιχτά PR, CI, Pages και εξωτερικά actions.
 
 Οι οδηγίες ισχύουν επίσης για εργαλεία που διαβάζουν CLAUDE.md.
+
+## Αποσύνδεση παραγωγής περιεχομένου και ελέγχων CI (DEC-016) — 16/10/2026
+Το ChatGPT παράγει και παραδίδει τα ελεγμένα content JSONs (έρευνα, άρθρα, πηγές, provenance εικόνων). Η εκτέλεση compilation (build.py), schema validation και browser tests ανατίθεται στο CI (GitHub Actions) ώστε να εξοικονομούνται tokens και να αποτρέπονται timeouts στο chat container.
+
