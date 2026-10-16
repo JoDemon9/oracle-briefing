@@ -2,21 +2,25 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-16",
-  "updated_at": "2026-10-16T07:26:00.514306+00:00",
+  "updated_at": "2026-10-16T11:47:13.942319+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-16.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "a41abc33615e422bd04d8c8a1e4e0f00b982dde94ce5c99f6c7a7a80a188ac11",
+  "html_sha256": "17c199025e27b130307ea31b2edac9af3be39d3f0bf6c9bc800a878828d9fb79",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=938b2de61ced16f5": "938b2de61ced16f551813942986cead965c1aa8284924304b3ce994dafd12995",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=bab5f8cc8d240b52": "bab5f8cc8d240b52e05967e48d9daa48b7649c5434c73166bbbe35538266242c",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=362e68f3bb10f463": "362e68f3bb10f4634502abceb3b8662035ead444786f0e33069e38e66671b52e",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-morning/lead.webp?v=cebf4ca9b6e401e2": "cebf4ca9b6e401e2e63980bd851c4415987e909719360ddf27f0a51bbdfa3d00",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-midday/lead.webp?v=0cd5093776b8318e": "0cd5093776b8318ee5c83594a7fdb882e8c925666eccc09cb5bef0af672bc14e",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-midday/cyprus-road.webp?v=d9422b16b6091aff": "d9422b16b6091aff72187816a5a08aebdb0eb02f5d7c9b75b62d68983fd4a936",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-midday/cyprus-court.webp?v=c08ad51d292c5eb9": "c08ad51d292c5eb918a337fe2eff12d4c5ea6feae547e652d96de7db443a11f8",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-midday/cyprus-airports.webp?v=998a57d455c3617c": "998a57d455c3617c02eed2aa609aca7cea64d04334c54cd8ab1d98d34d6744a4",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-morning/cyprus-vat.webp?v=d67e5736fdcd94f9": "d67e5736fdcd94f9ec65dd4a7a3791a9108d2f75e2d05a22c9c59666542671ff",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-morning/world-asia.webp?v=f565ee94e876c80b": "f565ee94e876c80b6551ec76be43425c74aace6601b401f6cfdf08f2260c8b1a",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-midday/world-oregon.webp?v=867ca0970b018a45": "867ca0970b018a45eb9084a7df4a07fc2ff772a2e1879a2bba01a8b9d03b7efd",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-morning/world-fed.webp?v=b53b3d254f27da7b": "b53b3d254f27da7bccf39976761e631fb47e8895c473e6067991accdc5fe935e",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-morning/world-ukraine.webp?v=74e70536c9759343": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-16-morning/world-ebola.webp?v=70aee04d85265c39": "70aee04d85265c391f1d64797a9e170cf8ad64e41aeb1e7fff07128bb5fcabc2"
   },
-  "version": "780fd3016c188f69c85ae2809ff9e962d8dd736b58be630ea6aa76c92f5aa11f"
+  "version": "0ef0c6b0aa8f827e346de15668957465ef87e21a4ded10b0d7ebf86c5a64db9a"
 }
