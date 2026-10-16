@@ -23,4 +23,4 @@ Latest: [DEC-008 compact sports](https://github.com/JoDemon9/Claude-Briefing/blo
 
 [DEC-014 efficient editorial production](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-014-efficient-editorial-production.md) consolidates runtime inputs, research/due-check/photo reuse and separates routine checks from maintenance. Keep real scheduled runs, Pro observations, code and live deployment status distinct.
 
-DEC-015 restores the reviewed publication safeguards and compact instructions overwritten during the 16 October content sync, retains current Wire data, and carries the repaired complete day. Canonical record: https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-015-production-recovery-and-editorial-quality.md . Publication/task verification is reported separately.
+DEC-015 deploys the reviewed publication safeguards and compact instructions alongside the 16 October recovery, retains current Wire data, and carries the repaired complete day. Canonical record: https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-015-production-recovery-and-editorial-quality.md . Publication/task verification is reported separately.
