@@ -15,10 +15,29 @@ SOURCE='https://jodemon9.github.io/Claude-Briefing/'
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self,*args):pass
 
+def chronology(page, expected):
+    """The central snapshot must preserve populated and first-edition timelines."""
+    cards=expected.select('#changes .update-card')
+    assert page.locator('#changes .update-card').count()==len(cards)
+    assert page.locator('#changes .update-card h3').count()==len(cards)
+    if not cards:
+        empty=expected.select_one('#changes .empty-state')
+        assert empty and empty.get_text(strip=True)
+        assert page.locator('#changes .empty-state').inner_text()==empty.get_text(strip=True)
+        assert page.locator('#changes .update-sources').count()==0
+        return
+    evidence=page.locator('#changes .update-sources>summary').first
+    assert evidence.bounding_box()['height']<61
+    evidence.focus();page.keyboard.press('Enter')
+    assert page.locator('#changes .update-origin').first.is_visible()
+    assert page.locator('#changes .update-source-links a').count()==len(expected.select('#changes .update-source-links a'))
+    evidence.click()
+
 def run(screenshots=None):
     if screenshots:screenshots.mkdir(parents=True,exist_ok=True)
     descriptor=json.loads((ROOT/'docs/data/day-latest.json').read_text(encoding='utf-8'))
     original=(ROOT/'docs/data/day-snapshot.html').read_text(encoding='utf-8')
+    expected=BeautifulSoup(original,'html.parser')
     registry=json.loads((ROOT/'docs/data/editions.json').read_text(encoding='utf-8'))
     available_slots={e['type'] for e in registry if e['date']==descriptor['day_id'] and e['status']=='published'}
     state={'descriptor':descriptor,'html':original,'fail':False,'asset_fail':False,'asset_hash':False,'html_fail':False}
@@ -44,6 +63,19 @@ def run(screenshots=None):
                 else:r.abort()
             context.route('**/*',route)
             page=context.new_page();errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+            # Exercise both editorial states even when today's first edition has
+            # no substantive update. Never invent an update to satisfy the test.
+            probe=context.new_page()
+            for content in [
+                '<section id="changes"><p class="empty-state">Δεν υπάρχει ακόμη νέα εξέλιξη.</p></section>',
+                '<section id="changes"><article class="update-card"><h3>Τεκμηριωμένη εξέλιξη</h3><details class="update-sources"><summary>Πηγές</summary><div class="update-source-links"><a class="update-origin" href="#origin">Αρχική αναφορά</a><a href="https://example.org/source">Πηγή</a></div></details></article></section>',
+            ]:
+                probe.set_content(content);chronology(probe,BeautifulSoup(content,'html.parser'))
+            probe.set_content('<section id="changes"></section>')
+            try:chronology(probe,BeautifulSoup(content,'html.parser'))
+            except AssertionError:pass
+            else:raise AssertionError('Missing published chronology must fail')
+            probe.close()
             for width in [320,375,390,1440]:
                 page.set_viewport_size({'width':width,'height':1000})
                 page.goto(base+'/',wait_until='networkidle')
@@ -136,15 +168,8 @@ def run(screenshots=None):
                 assert page.locator('#changes').evaluate('(x)=>x.open')
                 assert page.locator('#sports .sport-news-link').count()==4
                 assert page.locator('#sports .sports-links details,#sports .sports-links p').count()==0
-                assert page.locator('#changes .update-card').count()>0
-                assert page.locator('#changes .update-card h3').count()>0
-                evidence=page.locator('#changes .update-sources>summary').first
-                assert evidence.bounding_box()['height']<61
-                evidence.focus();page.keyboard.press('Enter')
-                assert page.locator('#changes .update-origin').first.is_visible()
-                assert page.locator('#changes .update-source-links a').count()>1
+                chronology(page,expected)
                 assert not page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
-                evidence.click()
                 for panel in page.locator('.edition-panel:not(.opportunities)').all():
                     assert panel.locator('details.sources-disclosure').count()==1
                 assert page.locator('.calendar-list .calendar-event').count()>0
@@ -154,11 +179,18 @@ def run(screenshots=None):
                 # DEC-005 exposes the complete 30-second findings instead of a
                 # shorter headline-like abstract; retain a bounded initial card.
                 assert first.bounding_box()['height']<1300
-                assert not first.locator('.card-context').is_visible()
-                first.locator('.card-analysis>summary').focus();page.keyboard.press('Enter')
-                assert first.locator('.card-context').is_visible()
-                assert 0<len(first.locator('.card-context').inner_text().split())<=180
-                first.locator('.card-analysis>summary').click()
+                expected_card=expected.select_one('#cyprus .newscard')
+                has_analysis=expected_card.select_one('.card-analysis') is not None
+                assert first.locator('.card-analysis').count()==int(has_analysis)
+                if has_analysis:
+                    assert not first.locator('.card-context').is_visible()
+                    first.locator('.card-analysis>summary').focus();page.keyboard.press('Enter')
+                    assert first.locator('.card-context').is_visible()
+                    assert 0<len(first.locator('.card-context').inner_text().split())<=180
+                    first.locator('.card-analysis>summary').click()
+                else:
+                    assert first.locator('.card-context').count()==0
+                    assert first.locator('.abstract').inner_text()==expected_card.select_one('.abstract').get_text(strip=True)
                 assert first.locator('.article-meta').count()==1
                 assert first.locator('.story-history').count()==0
                 assert page.locator('.hero figcaption,.hero .photo-credit').count()==0
@@ -258,8 +290,11 @@ def run(screenshots=None):
             plain.locator('.section-menu>summary').focus();plain.keyboard.press('Enter')
             assert plain.locator('.section-menu-list a[href="#cyprus"]').is_visible()
             plain.locator('.section-menu>summary').click()
-            plain.locator('#cyprus .card-analysis>summary').first.focus();plain.keyboard.press('Enter')
-            assert plain.locator('#cyprus .card-context').first.is_visible()
+            analyses=plain.locator('.newscard .card-analysis>summary')
+            assert analyses.count()==len(expected.select('.newscard .card-analysis>summary'))
+            if analyses.count():
+                analyses.first.focus();plain.keyboard.press('Enter')
+                assert analyses.first.locator('xpath=..').locator('.card-context').is_visible()
             assert plain.locator('figure figcaption,.photo-credit').count()==0
             assert plain.locator('.image-credits-link').get_attribute('href')==SOURCE+'photo-credits.html'
             plain.locator('.opportunity-watch>summary').focus();plain.keyboard.press('Enter')
