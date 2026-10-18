@@ -1,5 +1,83 @@
 [
   {
+    "id": "38882e55e32928f89601873affa870212245f46e43b5b2836d70462c8519f5cd",
+    "title": "A child’s death, a parent’s ordeal",
+    "link": "https://cyprus-mail.com/2026/10/18/a-childs-death-a-parents-ordeal",
+    "snippet": "In recent months, too many families in Cyprus have had to face what no parent should ever experience, the death of a child, the grief of knowing that life will never be the same again. For some, that heartbreak has been compounded by police questioning, detention and even criminal prosecution, forci",
+    "source": "Cyprus Mail",
+    "category": "cyprus",
+    "timestamp": 1792286640,
+    "published_at": "2026-10-18T01:24:00+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.818513+00:00",
+    "time_str": "18/10 04:24 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "9a30366b0e7ac535cad078e354e208787da4593a0bf87eb4048c8fbbde85aec2",
+    "title": "Israeli settlers attack European diplomats in the occupied West Bank",
+    "link": "https://www.aljazeera.com/video/newsfeed/2026/10/18/israeli-settlers-attack-european-diplomats-in-the-occupied-west-bank?traffic_source=rss",
+    "snippet": "Masked Israeli settlers attacked European diplomats, a French mayor and Palestinians in the occupied West Bank.",
+    "source": "Al Jazeera",
+    "category": "international",
+    "timestamp": 1792285357,
+    "published_at": "2026-10-18T01:02:37+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.815823+00:00",
+    "time_str": "18/10 04:02 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "5a430a74307e0669be5691487f50c95651a5234f65fcc55c569f429120a2f5aa",
+    "title": "'No Kings' rallies push early voting ahead of US midterm elections",
+    "link": "https://www.dw.com/en/no-kings-rallies-push-early-voting-ahead-of-us-midterm-elections/a-79690502?maca=en-rss-en-all-1573-rdf",
+    "snippet": "Organizers of the \"No Kings\" protests, known for their anti-Trump sentiment, are urging Americans to vote early in the November 3 midterm elections, as Republicans face tough races to retain control of Congress.",
+    "source": "DW World",
+    "category": "international",
+    "timestamp": 1792284660,
+    "published_at": "2026-10-18T00:51:00+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.816242+00:00",
+    "time_str": "18/10 03:51 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "76c141e1fb5f68c176cae6c0afbc6b3c198c14142027f1a96ed4fe6e3704c9cf",
+    "title": "Iran war live: Israeli settlers attack EU diplomats; drones target Riyadh",
+    "link": "https://www.aljazeera.com/news/liveblog/2026/10/18/iran-war-live-tankers-hit-in-hormuz-israeli-settlers-attack-eu-diplomats?traffic_source=rss",
+    "snippet": "Fires reported on three tankers, as masked settlers attack European politicians in the occupied West Bank.",
+    "source": "Al Jazeera",
+    "category": "international",
+    "timestamp": 1792281611,
+    "published_at": "2026-10-18T00:00:11+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.815871+00:00",
+    "time_str": "18/10 03:00 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "0d555786e555278ac5b99dded4c0b922ff370a2d37d9d19fd4e7c96484333855",
+    "title": "US ambassador urges Israel to prosecute attackers of American journalist",
+    "link": "https://www.aljazeera.com/news/2026/10/17/us-ambassador-calls-on-israel-to-prosecute-settlers-over-journalist-attack?traffic_source=rss",
+    "snippet": "Trump-appointed Ambassador Mike Huckabee calls attack in occupied West Bank a &#039;despicable act of terror&#039;.",
+    "source": "Al Jazeera",
+    "category": "international",
+    "timestamp": 1792280459,
+    "published_at": "2026-10-17T23:40:59+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.815913+00:00",
+    "time_str": "18/10 02:40 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "227dc3ecc75a52890e93f519d6aab77f2041bd96f1ddbf8e2a1922b52c344813",
+    "title": "Saudi-led coalition intercepts drones as Egypt weighs sending help",
+    "link": "https://www.aljazeera.com/news/2026/10/17/saudi-led-coalition-intercepts-drones-as-egypt-weighs-sending-help?traffic_source=rss",
+    "snippet": "Forces intercepted and destroyed four drones over Saudi Arabia&#039;s Riyadh, Eastern Province and southern region.",
+    "source": "Al Jazeera",
+    "category": "international",
+    "timestamp": 1792279317,
+    "published_at": "2026-10-17T23:21:57+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.815957+00:00",
+    "time_str": "18/10 02:21 · Κύπρος",
+    "is_breaking": false
+  },
+  {
     "id": "f88952cc58b7c53a01226948d545ea64e0cb65398f8d59dafebd5c312746f591",
     "title": "How 'dangerous' Man City maintained 100 per cent record",
     "link": "https://www.bbc.co.uk/sport/football/videos/cx7vpl5qd008o?at_medium=RSS&at_campaign=rss",
@@ -114,6 +192,19 @@
     "published_at": "2026-10-17T21:18:26+00:00",
     "retrieved_at": "2026-10-17T21:29:25.264042+00:00",
     "time_str": "18/10 00:18 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "8963d6e1d48d4296fe3efa806f31b8644813d82f40e79373667a782cd5a1c9ae",
+    "title": "Photos: No Kings rallies in US urge midterm voters to cast ballots early",
+    "link": "https://www.aljazeera.com/gallery/2026/10/17/photos-no-kings-rallies-in-us-urge-midterm-voters-to-cast-ballots-early?traffic_source=rss",
+    "snippet": "Thousands gathered at events throughout the country on Saturday, building on two years of No Kings marches.",
+    "source": "Al Jazeera",
+    "category": "international",
+    "timestamp": 1792271290,
+    "published_at": "2026-10-17T21:08:10+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.815999+00:00",
+    "time_str": "18/10 00:08 · Κύπρος",
     "is_breaking": false
   },
   {
@@ -396,19 +487,6 @@
     "is_breaking": false
   },
   {
-    "id": "3b33168ae4cf53631e1dcc0752412087c75a8fee34f0f5483da253e4c3e65671",
-    "title": "Will the EU come to Ukraine’s rescue in war against Russia?",
-    "link": "https://www.aljazeera.com/video/inside-story/2026/10/17/will-the-eu-come-to-ukraines-rescue-in-war-against-russia?traffic_source=rss",
-    "snippet": "US support at risk as Trump-Zelenskyy relations nosedive.",
-    "source": "Al Jazeera",
-    "category": "international",
-    "timestamp": 1792263829,
-    "published_at": "2026-10-17T19:03:49+00:00",
-    "retrieved_at": "2026-10-17T21:29:25.259330+00:00",
-    "time_str": "17/10 22:03 · Κύπρος",
-    "is_breaking": false
-  },
-  {
     "id": "d778585c66a128863ecbca51504f44e4e53a213080425a71580d57520e9166d9",
     "title": "Mακρόν: «Η βία δεν έχει καμία θέση στη δημοκρατία μας»",
     "link": "https://www.sigmalive.com/news/international/1333800/makron-h-via-den-ekhei-kamia-thesi-sti-dimokratia-mas",
@@ -419,45 +497,6 @@
     "published_at": "2026-10-17T18:53:18+00:00",
     "retrieved_at": "2026-10-17T21:29:25.262805+00:00",
     "time_str": "17/10 21:53 · Κύπρος",
-    "is_breaking": false
-  },
-  {
-    "id": "a02513b86046601d44fb3a1f340b987cc0663bd728195252e7f001506fec5da2",
-    "title": "Is the US Embassy in Jerusalem for Israel or America?",
-    "link": "https://www.aljazeera.com/video/newsfeed/2026/10/17/is-the-us-embassy-in-jerusalem-for-israel-or-america?traffic_source=rss",
-    "snippet": "What led to the deaths of the nine Americans killed in the occupied West Bank since 2022?",
-    "source": "Al Jazeera",
-    "category": "international",
-    "timestamp": 1792262490,
-    "published_at": "2026-10-17T18:41:30+00:00",
-    "retrieved_at": "2026-10-17T23:28:32.412477+00:00",
-    "time_str": "17/10 21:41 · Κύπρος",
-    "is_breaking": false
-  },
-  {
-    "id": "a02513b86046601d44fb3a1f340b987cc0663bd728195252e7f001506fec5da2",
-    "title": "Is the US Embassy in Jerusalem for Israel or America?",
-    "link": "https://www.aljazeera.com/video/newsfeed/2026/10/17/is-the-us-embassy-in-jerusalem-for-israel-or-america?traffic_source=rss",
-    "snippet": "What led to the deaths of the nine Americans killed in the occupied West Bank since 2022?",
-    "source": "Al Jazeera",
-    "category": "international",
-    "timestamp": 1792262490,
-    "published_at": "2026-10-17T18:41:30+00:00",
-    "retrieved_at": "2026-10-17T21:29:25.259390+00:00",
-    "time_str": "17/10 21:41 · Κύπρος",
-    "is_breaking": false
-  },
-  {
-    "id": "e7836029acfb73cd27331d3cd7798c741e57734022fe3dd7e5aa3b4cc6fafd14",
-    "title": "European diplomats attacked by Israeli settlers in West Bank",
-    "link": "https://www.bbc.co.uk/news/articles/c962ydpmjm3zo?at_medium=RSS&at_campaign=rss",
-    "snippet": "The Israeli military condemns the violence but the prime minister's office says it is part of a \"smear\" campaign.",
-    "source": "BBC World",
-    "category": "international",
-    "timestamp": 1792262337,
-    "published_at": "2026-10-17T18:38:57+00:00",
-    "retrieved_at": "2026-10-17T21:29:25.256867+00:00",
-    "time_str": "17/10 21:38 · Κύπρος",
     "is_breaking": false
   },
   {
@@ -485,22 +524,6 @@
     "retrieved_at": "2026-10-17T18:51:55.782298+00:00",
     "time_str": "17/10 21:31 · Κύπρος",
     "is_breaking": false
-  },
-  {
-    "id": "ae41445f1060dee64e99cdb424f88c0239de63a2411ade61ecf08933afec6a30",
-    "title": "Israeli drone attacks kill six Palestinians across Gaza despite ‘ceasefire’",
-    "link": "https://www.aljazeera.com/news/2026/10/17/israeli-drone-attacks-kill-six-palestinians-across-gaza-despite-ceasefire?traffic_source=rss",
-    "snippet": "Attacks hit several areas as UNICEF reports more than 340 children killed since &#039;ceasefire&#039; began a year ago.",
-    "source": "Al Jazeera",
-    "category": "international",
-    "timestamp": 1792261619,
-    "published_at": "2026-10-17T18:26:59+00:00",
-    "retrieved_at": "2026-10-17T21:29:25.259448+00:00",
-    "time_str": "17/10 21:26 · Κύπρος",
-    "is_breaking": true,
-    "tags": [
-      "ceasefire"
-    ]
   },
   {
     "id": "39d31c3fa24f20b3a722fea580fe6c3fda7b5a44415e8925d613b6a7fecfe157",
@@ -537,8 +560,34 @@
     "category": "cyprus",
     "timestamp": 1792260276,
     "published_at": "2026-10-17T18:04:36+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.818586+00:00",
+    "time_str": "17/10 21:04 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "9111d7e70d818d11fb63c3b4dbb907af1b50d8c7f9ed46946719d6fe1c56251f",
+    "title": "Christodoulides, Erhurman send ‘message of peace’ at Pyla festival",
+    "link": "https://cyprus-mail.com/2026/10/17/christodoulides-erhurman-send-message-of-peace-at-pyla-festival",
+    "snippet": "President Nikos Christodoulides and Turkish Cypriot leader Tufan Erhurman jointly attended the annual bicommunal festival in the Larnaca district village of Pyla on Saturday evening, with the former declaring upon his arrival at the event that “we are sending a message of peace”. “We are sending a m",
+    "source": "Cyprus Mail",
+    "category": "cyprus",
+    "timestamp": 1792260276,
+    "published_at": "2026-10-17T18:04:36+00:00",
     "retrieved_at": "2026-10-17T18:51:55.782909+00:00",
     "time_str": "17/10 21:04 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "9ef21df85ad24b0024831e1e3706201a98fcabfd1d2c15ec2af4a530db9dba0d",
+    "title": "Η Γαλλία στις φλόγες: 800.000 πολίτες στους δρόμους-Ακρωτηριάστηκε διαδηλωτής",
+    "link": "https://www.sigmalive.com/news/international/1333797/h-gallia-stis-floghes-800000-polites-stoys-dromoys-akrotiriastike-diadilotis",
+    "snippet": "Περίπου 800.000 πολίτες συμμετείχαν σήμερα στις διαδηλώσεις και τις πορείες σε όλη τη Γαλλία κατά του \"υψηλού κόστους ζωής\", σύμφωνα με τον οριστικό απολογισμό των διοργανωτών βάσει των επικαιροποιημένων στοιχείων που ανακοίνωσαν διάφορες οργανώσεις που μετέχουν στην πανεθνική κινητοποίηση. Το συνδι",
+    "source": "Sigmalive",
+    "category": "cyprus",
+    "timestamp": 1792259800,
+    "published_at": "2026-10-17T17:56:40+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.818062+00:00",
+    "time_str": "17/10 20:56 · Κύπρος",
     "is_breaking": false
   },
   {
@@ -555,19 +604,6 @@
     "is_breaking": false
   },
   {
-    "id": "abe525bc62cf35787636625c295bbeb0e04cfb25634583ac8bc1897dbb191645",
-    "title": "Romanian fighter jets shoot down 2 drones over Black Sea",
-    "link": "https://www.dw.com/en/romanian-fighter-jets-shoot-down-2-drones-over-black-sea/a-79689156?maca=en-rss-en-all-1573-rdf",
-    "snippet": "Romanian Air Force F-16s shot down drones over Romanian territorial waters. Earlier this week, two chemical tankers were hit by drones near Romania's Black Sea coast.",
-    "source": "DW World",
-    "category": "international",
-    "timestamp": 1792259460,
-    "published_at": "2026-10-17T17:51:00+00:00",
-    "retrieved_at": "2026-10-17T21:29:25.259855+00:00",
-    "time_str": "17/10 20:51 · Κύπρος",
-    "is_breaking": false
-  },
-  {
     "id": "59157aa1c84cfbd3020d1f8efeb05e150814b986a1dea9a676ebd22ca1c8ce10",
     "title": "Αλβανία: Τεταμένη παραμένει η κατάσταση-Συνεχίζονται οι διαδηλώσεις",
     "link": "https://www.sigmalive.com/news/international/1333795/alvania-tetameni-paramenei-i-katastasi-sinekhizontai-oi-diadilwseis",
@@ -576,47 +612,21 @@
     "category": "cyprus",
     "timestamp": 1792258832,
     "published_at": "2026-10-17T17:40:32+00:00",
-    "retrieved_at": "2026-10-17T18:51:55.782430+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.818122+00:00",
     "time_str": "17/10 20:40 · Κύπρος",
     "is_breaking": false
   },
   {
-    "id": "dc8694abdc4d77d8983cec0fddb11da7278f682c7e918529efde35cd1e7461c6",
-    "title": "Στο ίδιο τραπέζι Χριστοδουλίδης-Έρχιουρμαν στην Πύλα – Μηνύματα από τον Πρόεδρο για Τουρκοκύπριους και Ολγκίν – Απέφυγε τις δηλώσεις ο Τουρκοκύπριος ηγέτης (εικόνες)",
-    "link": "https://www.philenews.com/kipros/koinonia/article/1783581/sto-idio-trapezi-christodoulidis-erchiourman-stin-pila-minimata-apo-ton-proedro-gia-tourkokiprious-ke-olgkin-ikones/",
-    "snippet": "Με μηνύματα ειρήνης, συνεργασίας και επανένωσης πραγματοποιήθηκε το βράδυ του Σαββάτου, στο γήπεδο φούτσαλ της Πύλας, το 6ο Δικοινοτικό Φεστιβάλ Ειρήνης, παρουσία του Προέδρου της Δημοκρατίας, Νίκου Χριστοδουλίδη, και του Τουρκοκύπριου ηγέτη, Τουφάν Έρχιουρμαν. Το φεστιβάλ επανήλθε ύστερα από επτά χ",
-    "source": "Philenews",
-    "category": "cyprus",
-    "timestamp": 1792257743,
-    "published_at": "2026-10-17T17:22:23+00:00",
-    "retrieved_at": "2026-10-17T21:29:25.262112+00:00",
-    "time_str": "17/10 20:22 · Κύπρος",
-    "is_breaking": false
-  },
-  {
-    "id": "e30d8c44e1b25590bfd5cf02a30344bd085304f429982b14493f772432e4002e",
-    "title": "Στο ίδιο τραπέζι Χριστοδουλίδης-Έρχιουρμαν στην Πύλα – Μηνύματα από τον Πρόεδρο για Τουρκοκύπριους και Ολγκίν (εικόνες)",
-    "link": "https://www.philenews.com/kipros/koinonia/article/1783581/sto-idio-trapezi-christodoulidis-erchiourman-stin-pila-minimata-apo-ton-proedro-gia-tourkokiprious-ke-olgkin-ikones/",
-    "snippet": "Με μηνύματα ειρήνης, συνεργασίας και επανένωσης πραγματοποιήθηκε το βράδυ του Σαββάτου, στο γήπεδο φούτσαλ της Πύλας, το 6ο Δικοινοτικό Φεστιβάλ Ειρήνης, παρουσία του Προέδρου της Δημοκρατίας, Νίκου Χριστοδουλίδη, και του Τουρκοκύπριου ηγέτη, Τουφάν Έρχιουρμαν. Το φεστιβάλ επανήλθε ύστερα από επτά χ",
-    "source": "Philenews",
-    "category": "cyprus",
-    "timestamp": 1792257743,
-    "published_at": "2026-10-17T17:22:23+00:00",
-    "retrieved_at": "2026-10-17T18:51:55.781772+00:00",
-    "time_str": "17/10 20:22 · Κύπρος",
-    "is_breaking": false
-  },
-  {
-    "id": "011e837244264304679e2d57281926f2563c0dcec7feac5042352fbe5487c14a",
-    "title": "Μαζί στο φεστιβάλ στην Πύλα Χριστοδουλίδης- Έρχιουρμαν - «Μήνυμα ειρήνης»",
-    "link": "https://www.sigmalive.com/news/kypriako/1333796/sto-festival-eirinis-stin-pyla-xristodoylidis-erkhioyrman",
-    "snippet": "Δεν υπάρχει άλλη επιλογή από την επανένωση της πατρίδας μας, δήλωσε ο Πρόεδρος της Δημοκρατίας Νίκος Χριστοδουλίδης το βράδυ του Σαββάτου από το Δικοινοτικό Φεστιβάλ Ειρήνης, το οποίο πραγματοποιήθηκε στην Πύλα, σημειώνοντας παράλληλα την σημασία τέτοιων συναντήσεων αλλά και ότι εκείνο που σίγουρα μ",
-    "source": "Sigmalive",
-    "category": "cyprus",
-    "timestamp": 1792257705,
-    "published_at": "2026-10-17T17:21:45+00:00",
-    "retrieved_at": "2026-10-17T21:29:25.262933+00:00",
-    "time_str": "17/10 20:21 · Κύπρος",
+    "id": "33682ca02c3a47e2760bf95876825933135ebd0ac4803007679450f846402a30",
+    "title": "Semiconductor market to remain solid ‘at least through next year,’ South Korea finance minister says",
+    "link": "https://www.cnbc.com/2026/10/17/south-korea-semiconductor-outlook-lee-hyoung-il.html",
+    "snippet": "South Korea's finance minister said semiconductor growth can last at least through 2027 as supply remains tight despite a global chip sell-off.",
+    "source": "CNBC Top News",
+    "category": "finance",
+    "timestamp": 1792255515,
+    "published_at": "2026-10-17T16:45:15+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.817147+00:00",
+    "time_str": "17/10 19:45 · Κύπρος",
     "is_breaking": false
   },
   {
@@ -748,6 +758,19 @@
     "category": "finance",
     "timestamp": 1792241181,
     "published_at": "2026-10-17T12:46:21+00:00",
+    "retrieved_at": "2026-10-18T01:33:57.817075+00:00",
+    "time_str": "17/10 15:46 · Κύπρος",
+    "is_breaking": false
+  },
+  {
+    "id": "a2b48b15e87542cc78a0031a4fd6562a97f1cdb50365f36787e80eecc5634518",
+    "title": "Berkshire shares buck market sell-off, rally to highest since Buffett said he would step down as CEO",
+    "link": "https://www.cnbc.com/2026/10/17/berkshire-rally-to-highest-since-buffett-announcement.html",
+    "snippet": "Berkshire Hathaway shares are at their highest level since Warren Buffett told shareholders at the May 2025 annual meeting he planned to step down as CEO at the end of that year.",
+    "source": "CNBC Top News",
+    "category": "finance",
+    "timestamp": 1792241181,
+    "published_at": "2026-10-17T12:46:21+00:00",
     "retrieved_at": "2026-10-17T18:51:55.780952+00:00",
     "time_str": "17/10 15:46 · Κύπρος",
     "is_breaking": false
@@ -764,34 +787,5 @@
     "retrieved_at": "2026-10-17T13:15:27.345841+00:00",
     "time_str": "17/10 15:46 · Κύπρος",
     "is_breaking": false
-  },
-  {
-    "id": "3c41550525130e28a29d35280fde0226d504cd479c584267d2b73889d01be9de",
-    "title": "Bending Spoons wants to revive software castoffs. Berkshire is backing the plan",
-    "link": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
-    "snippet": "Less than four months into life as a public company, Bending Spoons got a big vote of confidence this week from Berkshire Hathaway.",
-    "source": "CNBC Top News",
-    "category": "finance",
-    "timestamp": 1792238401,
-    "published_at": "2026-10-17T12:00:01+00:00",
-    "retrieved_at": "2026-10-17T13:15:27.345727+00:00",
-    "time_str": "17/10 15:00 · Κύπρος",
-    "is_breaking": false
-  },
-  {
-    "id": "41a8f05bb8d51a30c2eb0d29af14cb5a934ed2c04c369d932418d94c13ddf163",
-    "title": "Trump waives broad new Russia sanctions and tariffs under Graham Act, citing national interest",
-    "link": "https://www.cnbc.com/2026/10/17/trump-waives-russia-related-sanctions-tariffs-before-they-take-effect-.html",
-    "snippet": "Trump signed the Graham Bill, which targeted Russia over its invasion of Ukraine, into law in September.",
-    "source": "CNBC Top News",
-    "category": "finance",
-    "timestamp": 1792232444,
-    "published_at": "2026-10-17T10:20:44+00:00",
-    "retrieved_at": "2026-10-17T13:15:27.345618+00:00",
-    "time_str": "17/10 13:20 · Κύπρος",
-    "is_breaking": true,
-    "tags": [
-      "sanctions"
-    ]
   }
 ]
