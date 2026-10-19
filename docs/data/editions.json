@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-10-19-midday",
+    "date": "2026-10-19",
+    "type": "midday",
+    "status": "published",
+    "published_at": "2026-10-19T16:13:07+03:00",
+    "title": "Μεσημεριανός Παλμός · 19 Οκτωβρίου 2026",
+    "url": "midday/2026-10-19.html"
+  },
+  {
     "id": "2026-10-19-morning",
     "date": "2026-10-19",
     "type": "morning",
