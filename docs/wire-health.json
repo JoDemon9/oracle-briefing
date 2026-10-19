@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-18T23:16:41.339008+00:00",
-  "last_success_at": "2026-10-18T23:16:41.339008+00:00",
+  "checked_at": "2026-10-19T01:46:58.639668+00:00",
+  "last_success_at": "2026-10-19T01:46:58.639668+00:00",
   "status": "ok",
   "successful_providers": 12,
   "total_providers": 12,
-  "new_items": 40,
+  "new_items": 26,
   "providers": {
     "BBC World": {
       "status": "ok",
-      "items": 28
+      "items": 30
     },
     "France 24": {
       "status": "ok",
@@ -21,11 +21,11 @@
     },
     "DW World": {
       "status": "ok",
-      "items": 136
+      "items": 135
     },
     "CNBC Top News": {
       "status": "ok",
-      "items": 30
+      "items": 23
     },
     "CNBC Markets": {
       "status": "ok",
