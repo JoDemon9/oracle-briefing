@@ -182,12 +182,24 @@ def run(screenshots=None):
                     assert panel.locator('details.sources-disclosure').count()==1
                 assert page.locator('.calendar-list .calendar-event').count()>0
                 checks.append(f'{width}px: article columns, compact lead actions, update cards and consistent panels passed')
-                assert len(page.locator('#cyprus .newscard .story-content').first.inner_text().split())>45
                 first=page.locator('#cyprus .newscard').first
-                # DEC-005 exposes the complete 30-second findings instead of a
-                # shorter headline-like abstract; retain a bounded initial card.
-                assert first.bounding_box()['height']<1300
                 expected_card=expected.select_one('#cyprus .newscard')
+                # DEC-020 changes presentation only. Open the native finding
+                # before checking complete content; older saved snapshots remain supported.
+                if expected_card.select_one('.story-findings'):
+                    finding=first.locator('.story-findings')
+                    assert not finding.evaluate('(x)=>x.open')
+                    assert not finding.locator('.abstract').is_visible()
+                    trigger=finding.locator('summary');trigger.focus();page.keyboard.press('Enter')
+                    assert finding.locator('.abstract').is_visible()
+                    assert finding.locator('.abstract').inner_text()==expected_card.select_one('.abstract').get_text(strip=True)
+                    assert trigger.bounding_box()['height']>=44
+                    assert len(first.locator('.story-content').inner_text().split())>45
+                    trigger.click()
+                    assert not finding.locator('.abstract').is_visible()
+                else:
+                    assert len(first.locator('.story-content').inner_text().split())>45
+                assert first.bounding_box()['height']<1300
                 has_analysis=expected_card.select_one('.card-analysis') is not None
                 assert first.locator('.card-analysis').count()==int(has_analysis)
                 if has_analysis:
@@ -198,7 +210,7 @@ def run(screenshots=None):
                     first.locator('.card-analysis>summary').click()
                 else:
                     assert first.locator('.card-context').count()==0
-                    assert first.locator('.abstract').inner_text()==expected_card.select_one('.abstract').get_text(strip=True)
+                    assert first.locator('.abstract').text_content().strip()==expected_card.select_one('.abstract').get_text(strip=True)
                 assert first.locator('.article-meta').count()==1
                 assert first.locator('.story-history').count()==0
                 assert page.locator('.hero figcaption,.hero .photo-credit').count()==0
@@ -298,6 +310,17 @@ def run(screenshots=None):
             plain.locator('.section-menu>summary').focus();plain.keyboard.press('Enter')
             assert plain.locator('.section-menu-list a[href="#cyprus"]').is_visible()
             plain.locator('.section-menu>summary').click()
+            findings=plain.locator('.story-findings')
+            assert findings.count()==len(expected.select('.story-findings'))
+            if findings.count():
+                finding=findings.first
+                assert not finding.evaluate('(x)=>x.open')
+                assert not finding.locator('.abstract').is_visible()
+                toggle=finding.locator('summary');toggle.focus();plain.keyboard.press('Enter')
+                assert finding.locator('.abstract').is_visible()
+                assert finding.locator('.abstract').inner_text()==expected.select_one('.story-findings .abstract').get_text(strip=True)
+                toggle.click()
+                assert not finding.locator('.abstract').is_visible()
             analyses=plain.locator('.newscard .card-analysis>summary')
             assert analyses.count()==len(expected.select('.newscard .card-analysis>summary'))
             if analyses.count():
