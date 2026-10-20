@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-10-20-midday",
+    "date": "2026-10-20",
+    "type": "midday",
+    "status": "published",
+    "published_at": "2026-10-20T14:23:26+03:00",
+    "title": "Μεσημεριανή ενημέρωση · 20 Οκτωβρίου 2026",
+    "url": "midday/2026-10-20.html"
+  },
+  {
     "id": "2026-10-20-morning",
     "date": "2026-10-20",
     "type": "morning",
