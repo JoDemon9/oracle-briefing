@@ -102,12 +102,20 @@ def run(screenshots=None):
                 assert photo.bounding_box()['height']<=(281 if width>=700 else 191)
                 assert page.locator('.hero .lead-copy > h2').bounding_box()['y']<photo.bounding_box()['y'] if width<700 else photo.bounding_box()['width']>350
                 assert page.locator('.hero .story-more').count()==0
-                assert page.locator('.hero .lead-analysis').evaluate('(x)=>x.tagName==="DETAILS"')
-                assert not page.locator('.hero .card-context').is_visible()
-                depth=page.locator('.hero .lead-analysis>summary');depth.focus();page.keyboard.press('Enter')
-                assert page.locator('.hero .card-context').is_visible()
-                assert 0<len(page.locator('.hero .card-context').inner_text().split())<=180
-                depth.click()
+                # DEC-005: analysis is an optional, substantive expansion.
+                # Compare with the published snapshot so a missing expansion
+                # cannot silently pass when one was actually rendered.
+                lead_has_analysis=expected.select_one('.hero .lead-analysis') is not None
+                assert page.locator('.hero .lead-analysis').count()==int(lead_has_analysis)
+                if lead_has_analysis:
+                    assert page.locator('.hero .lead-analysis').evaluate('(x)=>x.tagName==="DETAILS"')
+                    assert not page.locator('.hero .card-context').is_visible()
+                    depth=page.locator('.hero .lead-analysis>summary');depth.focus();page.keyboard.press('Enter')
+                    assert page.locator('.hero .card-context').is_visible()
+                    assert 0<len(page.locator('.hero .card-context').inner_text().split())<=180
+                    depth.click()
+                else:
+                    assert page.locator('.hero .card-context').count()==0
                 # DEC-005 supports both a useful full reader and an original-source link.
                 expected_reader=BeautifulSoup(original,'html.parser').select_one('.hero .read-link')
                 actual_reader=page.locator('.hero .read-link').first
