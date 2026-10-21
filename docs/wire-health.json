@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-21T17:15:52.881327+00:00",
-  "last_success_at": "2026-10-21T17:15:52.881327+00:00",
+  "checked_at": "2026-10-21T20:54:37.526976+00:00",
+  "last_success_at": "2026-10-21T20:54:37.526976+00:00",
   "status": "ok",
   "successful_providers": 12,
   "total_providers": 12,
-  "new_items": 178,
+  "new_items": 136,
   "providers": {
     "BBC World": {
       "status": "ok",
@@ -45,7 +45,7 @@
     },
     "BBC Sport": {
       "status": "ok",
-      "items": 74
+      "items": 72
     },
     "Sky Sports": {
       "status": "ok",
