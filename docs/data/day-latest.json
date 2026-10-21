@@ -2,10 +2,10 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-21",
-  "updated_at": "2026-10-21T17:48:45.918939+00:00",
+  "updated_at": "2026-10-21T18:49:45.380691+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-21.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "cc80408a3cfa9c71eabd2a299ba9e2f019ccf70d702e2ed707d5378f7fb40667",
+  "html_sha256": "9e4c73618b16e01cd6db71bd53376f9d21467d4a34d86d4069ba012e9b50ae06",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
@@ -27,5 +27,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-21-evening/sport-euroleague.webp?v=b8f6667b12f69e5e": "b8f6667b12f69e5e069d14a1d5aada1c7c7d27900449ff1872a94414784c4a26"
   },
-  "version": "62597fc947ddbe26b5918b2d21a5344bb0e9d7332f090d6b493040211d8c22ea"
+  "version": "d68e8e6ad4e942dccc3d4ed57942f05bdcfbdbaac143b6d3425e7cd4cce766ed"
 }
