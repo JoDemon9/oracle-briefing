@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-10-21-evening",
+    "date": "2026-10-21",
+    "type": "evening",
+    "status": "published",
+    "published_at": "2026-10-21T20:15:00+03:00",
+    "title": "Βραδινός απολογισμός · 21 Οκτωβρίου 2026",
+    "url": "evening/2026-10-21.html"
+  },
+  {
     "id": "2026-10-20-midday",
     "date": "2026-10-20",
     "type": "midday",
