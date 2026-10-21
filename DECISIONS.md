@@ -1,5 +1,7 @@
 # Product decisions and reasons
 
+[DEC-020 — Luna, sports and collapsible findings](https://github.com/JoDemon9/Claude-Briefing/blob/codex/luna-sports-collapsible-findings/decisions/DEC-020-luna-sports-and-collapsible-findings.md): requested recovery preserves all findings behind native disclosures, visible dated favourite headlines, full source/image/coverage gates and the separate Wire. The portal browser check now opens findings before checking full article text, verifies exact text and keyboard toggling with/without JavaScript, and retains compatibility with older saved snapshots. Source code, local/CI checks, main/Pages, actual prompts and actual model selection remain distinct. The source implementation is reviewed in Claude-Briefing PR #23; this portal snapshot is prepared separately and is not live until approved publication and exact verification.
+
 The canonical decision history is maintained in [Claude-Briefing/DECISIONS.md](https://github.com/JoDemon9/Claude-Briefing/blob/main/DECISIONS.md), alongside the shared renderer and editorial specification. Read it before changing this portal. Do not maintain a second independently edited copy.
 
 Current records:

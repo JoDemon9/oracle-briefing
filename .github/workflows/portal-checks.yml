@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
     paths: ['docs/index.html', 'docs/assets/edition-registry.js', 'docs/data/editions.json', 'scripts/**', 'tests/**', '.github/workflows/**']
+  workflow_dispatch:
+    inputs:
+      full_regression:
+        description: Also run historical portal/Wire browser audits
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -17,16 +23,25 @@ jobs:
         id: scope
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: python scripts/check_scope.py --base "$BASE_SHA" --github-output "$GITHUB_OUTPUT"
+          FULL_REGRESSION: ${{ github.event.inputs.full_regression || 'false' }}
+        run: |
+          if [ "$FULL_REGRESSION" = "true" ]; then
+            python scripts/check_scope.py --base "$BASE_SHA" --github-output "$GITHUB_OUTPUT" --full-regression
+          else
+            python scripts/check_scope.py --base "$BASE_SHA" --github-output "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install playwright beautifulsoup4
-      - run: python -m unittest discover -s tests -v
+      - if: steps.scope.outputs.profile != 'central'
+        run: python -m unittest discover -s tests -q
       - run: python -m playwright install --with-deps chromium
       - if: steps.scope.outputs.profile == 'full'
         run: python tests/browser_checks.py --screenshots /tmp/oracle-portal-preview
-      - run: python tests/latest_browser_checks.py --screenshots /tmp/oracle-central-preview
+      - run: python tests/daily_smoke.py --screenshots /tmp/oracle-central-preview
+      - if: steps.scope.outputs.profile == 'full'
+        run: python tests/latest_browser_checks.py --screenshots /tmp/oracle-extended-preview
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -35,3 +50,4 @@ jobs:
             .work/check-scope.json
             /tmp/oracle-portal-preview
             /tmp/oracle-central-preview
+            /tmp/oracle-extended-preview
