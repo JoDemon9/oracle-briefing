@@ -14,6 +14,6 @@
 
 Οι οδηγίες ισχύουν επίσης για εργαλεία που διαβάζουν CLAUDE.md.
 
-## Αποσύνδεση παραγωγής περιεχομένου και ελέγχων CI (DEC-016) — 16/10/2026
-Το ChatGPT παράγει και παραδίδει τα ελεγμένα content JSONs (έρευνα, άρθρα, πηγές, provenance εικόνων). Η εκτέλεση compilation (build.py), schema validation και browser tests ανατίθεται στο CI (GitHub Actions) ώστε να εξοικονομούνται tokens και να αποτρέπονται timeouts στο chat container.
+## Αποσύνδεση παραγωγής περιεχομένου και αυτόνομο CI (DEC-016 / DEC-022) — 21/10/2026
+Το ChatGPT παράγει και παραδίδει τα ελεγμένα content JSONs (έρευνα, άρθρα, πηγές, provenance εικόνων, πλούσιες κάρτες αθλητικών και major stories για αγαπημένες ομάδες). Η εκτέλεση compilation (build.py), schema validation, βελτιστοποίηση εικόνων με fallback και συγχρονισμός ανατίθενται στο CI (GitHub Actions) ώστε να εκμηδενίζονται τα timeouts και η σπατάλη tokens στο chat container.
 
