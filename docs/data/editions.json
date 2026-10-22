@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-10-22-midday",
+    "date": "2026-10-22",
+    "type": "midday",
+    "status": "published",
+    "published_at": "2026-10-22T14:07:43+03:00",
+    "title": "Μεσημεριανή Ενημέρωση · 22 Οκτωβρίου 2026",
+    "url": "midday/2026-10-22.html"
+  },
+  {
+    "id": "2026-10-22-morning",
+    "date": "2026-10-22",
+    "type": "morning",
+    "status": "published",
+    "published_at": "2026-10-22T08:04:01+03:00",
+    "title": "Πρωινή σάρωση · 22 Οκτωβρίου 2026",
+    "url": "morning/2026-10-22.html"
+  },
+  {
     "id": "2026-10-21-evening",
     "date": "2026-10-21",
     "type": "evening",
