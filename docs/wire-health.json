@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-23T01:33:31.146782+00:00",
-  "last_success_at": "2026-10-23T01:33:31.146782+00:00",
+  "checked_at": "2026-10-23T06:32:24.740434+00:00",
+  "last_success_at": "2026-10-23T06:32:24.740434+00:00",
   "status": "ok",
   "successful_providers": 12,
   "total_providers": 12,
-  "new_items": 69,
+  "new_items": 123,
   "providers": {
     "BBC World": {
       "status": "ok",
-      "items": 37
+      "items": 28
     },
     "France 24": {
       "status": "ok",
@@ -45,7 +45,7 @@
     },
     "BBC Sport": {
       "status": "ok",
-      "items": 64
+      "items": 63
     },
     "Sky Sports": {
       "status": "ok",
