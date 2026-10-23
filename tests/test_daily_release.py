@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import hashlib
 import shutil
 import tempfile
 import unittest
@@ -13,6 +14,32 @@ spec=importlib.util.spec_from_file_location('central_release',ROOT/'scripts/dail
 release=importlib.util.module_from_spec(spec);spec.loader.exec_module(release)
 
 class DailyReleaseTests(unittest.TestCase):
+    def object_fixture(self,root):
+        docs=root/'docs';(docs/'data').mkdir(parents=True);(docs/'assets/snapshot-objects').mkdir(parents=True)
+        raw=b'body{color:green}';identity=hashlib.sha256(raw).hexdigest();relative='assets/snapshot-objects/'+identity+'.css'
+        (docs/relative).write_bytes(raw)
+        (docs/'index.html').write_text('<html><head><meta name="oracle-day-id" content="2026-10-23"><link rel="stylesheet" href="'+relative+'"></head><body><main>Saved newspaper</main></body></html>',encoding='utf-8')
+        snapshot=b'<html><main>Source newspaper</main></html>'
+        (docs/'data/day-snapshot.html').write_bytes(snapshot)
+        info={'day_id':'2026-10-23','version':'1'*64,'html_sha256':hashlib.sha256(snapshot).hexdigest(),'asset_sha256':{'https://jodemon9.github.io/Claude-Briefing/assets/test.css':identity}}
+        (docs/'data/day-latest.json').write_text(json.dumps(info),encoding='utf-8')
+        for name in ('days.json','editions.json','latest.json'):(docs/'data'/name).write_text('{}')
+        (docs/'data/latest-snapshot.html').write_text('Saved edition');(docs/'assets/latest-briefing.js').write_text('/* loader */')
+        return relative
+
+    def test_content_addressed_objects_are_bound_to_reviewed_source_bytes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);relative=self.object_fixture(root)
+            self.assertIn(relative,release.record(root)['files'])
+            (root/'docs'/relative).write_bytes(b'tampered stylesheet')
+            with self.assertRaisesRegex(ValueError,'differs from reviewed'):release.record(root)
+
+    def test_unknown_object_cannot_enter_the_snapshot_receipt(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);relative=self.object_fixture(root)
+            info=root/'docs/data/day-latest.json';data=json.loads(info.read_text());data['asset_sha256']={};info.write_text(json.dumps(data))
+            with self.assertRaisesRegex(ValueError,'differs from reviewed'):release.record(root)
+
     def test_receipt_is_reproducible_and_wire_is_independent(self):
         receipt=release.manifest()
         self.assertEqual(receipt,release.manifest())
