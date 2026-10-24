@@ -5,12 +5,12 @@
   "updated_at": "2026-10-24T10:45:10.242732+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-24.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "e4939926fe62040b4dace2e56d8e00b962169863ae99820ff820fc9e11cdda50",
+  "html_sha256": "d225bd18a2d36b8b21e1c899a78de4f10e659cb0f7ad74790ef755fd6513b755",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
-    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=8b96ec3cd2a17d25": "8b96ec3cd2a17d259ca0146d453e1d16ae40fac3552785b4d6d7c24da26fff90",
-    "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=362e68f3bb10f463": "362e68f3bb10f4634502abceb3b8662035ead444786f0e33069e38e66671b52e",
+    "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=1302a5cee05c0b60": "1302a5cee05c0b60b60d8d1c861d8c493b16f3ffc36c43824fc22f6a6bfe4e70",
+    "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=e81586839ff91d17": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/lead.webp?v=6d5cb7ce9615d006": "6d5cb7ce9615d006c0eda535b815d2b9e3c5e07704e540412ba29389663572e1",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/world-oleshky.webp?v=74e70536c9759343": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-midday/world-saudi.webp?v=af191ba5242af27e": "af191ba5242af27e71193aa0393c1f1f9265720b9aa582b503ec4e012e0a4dbd",
@@ -29,5 +29,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/realmadrid.svg?v=8ace3aae37c9e0d3": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c"
   },
-  "version": "72cc587935c28f132653332d6f1f48bf1f9b08dff43e8dd180a8960202ba5d21"
+  "version": "a825475e6d3a696645260b8a742332a068c91a54d9c96dcbf0dee999ce2b32a5"
 }
