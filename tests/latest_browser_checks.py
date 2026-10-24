@@ -59,6 +59,8 @@ def run(screenshots=None):
                 elif url.startswith(SOURCE+'assets/'):
                     relative=urlsplit(url).path.removeprefix('/Claude-Briefing/')
                     path=ROOT/'docs/assets/latest-snapshot'/descriptor['version']/relative
+                    if not path.is_file():
+                        path=ROOT/'docs/assets/snapshot-objects'/(descriptor['asset_sha256'][url]+Path(relative).suffix)
                     r.fulfill(status=503,body='missing') if state['asset_fail'] else r.fulfill(body='invalid asset') if state['asset_hash'] else r.fulfill(path=str(path)) if path.is_file() else r.abort()
                 else:r.abort()
             context.route('**/*',route)
@@ -188,9 +190,11 @@ def run(screenshots=None):
                 # before checking complete content; older saved snapshots remain supported.
                 if expected_card.select_one('.story-findings'):
                     finding=first.locator('.story-findings')
-                    assert not finding.evaluate('(x)=>x.open')
-                    assert not finding.locator('.abstract').is_visible()
+                    initially_open=bool(page.locator('html[data-intelligence="1"]').count())
+                    assert finding.evaluate('(x)=>x.open')==initially_open
+                    assert finding.locator('.abstract').is_visible()==initially_open
                     trigger=finding.locator('summary');trigger.focus();page.keyboard.press('Enter')
+                    if initially_open:page.keyboard.press('Enter')
                     assert finding.locator('.abstract').is_visible()
                     assert finding.locator('.abstract').inner_text()==expected_card.select_one('.abstract').get_text(strip=True)
                     assert trigger.bounding_box()['height']>=44

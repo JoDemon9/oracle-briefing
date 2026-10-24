@@ -1,3 +1,5 @@
+DEC-024: the approved source upgrade uses immutable assets/snapshot-objects/<sha>.<ext> for new snapshots. Verify their exact bytes against reviewed source assets; preserve legacy snapshot directories, old URLs, Wire and original times. Repository prompts do not update live tasks.
+
 # Oracle portal: AGENTS
 
 Canonical reference: https://github.com/JoDemon9/Claude-Briefing/blob/main/BRIEFING_RUNTIME.md. DEC-018/019: follow the actual self-contained task prompt; read applicable AGENTS and fresh maintained-main capabilities once. Runtime/manuals/schema/history are targeted references: read only needed sections, not a blanket startup checklist. This supersedes the previous instruction to read the entire runtime every run. Use bounded context/sports helpers only when actual main supports them; otherwise keep its existing supported fields. Maintenance reads canonical DECISIONS.md and relevant records. Earlier instructions remain in Git history and maintenance/history/2026-10-15 as history, not an extra runtime checklist.

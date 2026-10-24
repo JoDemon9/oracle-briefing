@@ -1,3 +1,5 @@
+DEC-024: the approved source upgrade uses immutable assets/snapshot-objects/<sha>.<ext> for new snapshots. Verify their exact bytes against reviewed source assets; preserve legacy snapshot directories, old URLs, Wire and original times. Repository prompts do not update live tasks.
+
 # Oracle portal — Λειτουργία
 
 Η μοναδική κανονική πολιτική βρίσκεται στο [Claude-Briefing/BRIEFING_RUNTIME.md](https://github.com/JoDemon9/Claude-Briefing/blob/main/BRIEFING_RUNTIME.md), DEC-023. Τα πλήρη prompts βρίσκονται στα [Morning](https://github.com/JoDemon9/Claude-Briefing/blob/main/prompts/morning.md), [Midday](https://github.com/JoDemon9/Claude-Briefing/blob/main/prompts/midday.md), [Evening](https://github.com/JoDemon9/Claude-Briefing/blob/main/prompts/evening.md). Pending PR δεν ισοδυναμεί με εγκατεστημένο main.

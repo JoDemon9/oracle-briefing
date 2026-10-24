@@ -53,6 +53,10 @@ def manifest(root=ROOT):
         files[relative]=digest(p.read_bytes())
         if relative.startswith(prefix) and files[relative]!=expected_assets.get(relative.removeprefix(prefix)):
             raise ValueError('Central asset differs from reviewed day: '+relative)
+        if relative.startswith('assets/snapshot-objects/'):
+            identity=p.stem
+            if len(identity)!=64 or identity!=files[relative] or identity not in expected_assets.values():
+                raise ValueError('Central asset differs from reviewed day: '+relative)
     return {'schema_version':1,'day_id':info['day_id'],'release_id':digest(json.dumps(files,sort_keys=True).encode()),'files':files,'scope':'Central daily newspaper and compatibility descriptors; Wire remains independent.'}
 
 def record(root=ROOT):

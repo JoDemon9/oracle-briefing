@@ -33,3 +33,5 @@ DEC-016 decoupled LLM content generation and CI testing (16 October): the user a
 
 DEC-022 sports section renaissance and autonomous CI publishing (21 October): the user requested restoring the sports section quality and eliminating the excessive verification checks and token bloat. Implemented resilient sports retrieval, rich scoreboard and analysis rendering on team cards, lifted major-stories exclusion on favorite teams, relaxed schema requirements, and fully automated build, image optimization, and two-site sync in GitHub Actions CI with zero-friction LLM push. Canonical record: https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-022-sports-renaissance-and-autonomous-ci.md .
 
+
+[DEC-024 — Intelligence authoring and reading](https://github.com/JoDemon9/Claude-Briefing/blob/main/decisions/DEC-024-intelligence-authoring-and-reading.md): user-approved implementation; source/portal review branches, checks and deployment tracked separately.
