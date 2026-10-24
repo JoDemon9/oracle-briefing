@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-10-24-morning",
+    "date": "2026-10-24",
+    "type": "morning",
+    "status": "published",
+    "published_at": "2026-10-24T07:48:00+03:00",
+    "title": "Oracle Πρωινό Briefing · 24 Οκτωβρίου 2026",
+    "url": "morning/2026-10-24.html"
+  },
+  {
+    "id": "2026-10-23-evening",
+    "date": "2026-10-23",
+    "type": "evening",
+    "status": "published",
+    "published_at": "2026-10-23T19:48:38+03:00",
+    "title": "Βραδινή Ενημέρωση",
+    "url": "evening/2026-10-23.html"
+  },
+  {
     "id": "2026-10-23-midday",
     "date": "2026-10-23",
     "type": "midday",
