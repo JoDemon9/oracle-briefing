@@ -1,33 +1,25 @@
 {
   "schema_version": 1,
   "status": "published",
-  "day_id": "2026-10-24",
-  "updated_at": "2026-10-24T10:45:10.242732+00:00",
-  "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-24.html",
+  "day_id": "2026-10-25",
+  "updated_at": "2026-10-25T12:12:18.859302+00:00",
+  "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-25.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "d225bd18a2d36b8b21e1c899a78de4f10e659cb0f7ad74790ef755fd6513b755",
+  "html_sha256": "61112abcc129e6bf1a5cf956efbe7a3b0f077974127807608e70d3874c2a3247",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=1302a5cee05c0b60": "1302a5cee05c0b60b60d8d1c861d8c493b16f3ffc36c43824fc22f6a6bfe4e70",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=e81586839ff91d17": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/lead.webp?v=6d5cb7ce9615d006": "6d5cb7ce9615d006c0eda535b815d2b9e3c5e07704e540412ba29389663572e1",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/world-oleshky.webp?v=74e70536c9759343": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-midday/world-saudi.webp?v=af191ba5242af27e": "af191ba5242af27e71193aa0393c1f1f9265720b9aa582b503ec4e012e0a4dbd",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-midday/world-france.webp?v=303346c4ccf61ce4": "303346c4ccf61ce471ee01d3ef0ce9bb69d6a710167d7a855147ee8b3f7c8d83",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/world-sudan.webp?v=70aee04d85265c39": "70aee04d85265c391f1d64797a9e170cf8ad64e41aeb1e7fff07128bb5fcabc2",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-midday/world-ukraine.webp?v=74e70536c9759343": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/world-ebola.webp?v=70aee04d85265c39": "70aee04d85265c391f1d64797a9e170cf8ad64e41aeb1e7fff07128bb5fcabc2",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-midday/cyprus-inequality.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-midday/cyprus-eunomia.webp?v=8fbda7816261be7d": "8fbda7816261be7d256097defdfa3d2d8f3da6be4b5535ab67f2482e4e688fa4",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/cyprus-whistleblowers.webp?v=9fa19bf42d3a22ff": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-midday/cyprus-larnaca.webp?v=381b615b35b871e7": "381b615b35b871e714f5b0da9f5c995a7d6e825a23f2e640112c5be7a7722693",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/cyprus-education.webp?v=9fa19bf42d3a22ff": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-24-morning/cyprus-tourism.webp?v=998a57d455c3617c": "998a57d455c3617c02eed2aa609aca7cea64d04334c54cd8ab1d98d34d6744a4",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/omonoia.png?v=c8bdaf163ea60834": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/manutd.svg?v=6020438ef2b47362": "6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/realmadrid.svg?v=8ace3aae37c9e0d3": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c"
   },
-  "version": "a825475e6d3a696645260b8a742332a068c91a54d9c96dcbf0dee999ce2b32a5"
+  "version": "15a5569d9525f65711a1114b371d1f87aba3a006003e158c41a88d97380e5465"
 }
