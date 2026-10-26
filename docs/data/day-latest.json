@@ -2,10 +2,10 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-26",
-  "updated_at": "2026-10-26T12:32:32.266592+00:00",
+  "updated_at": "2026-10-26T17:40:24.414379+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-26.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "62e78882473d3be7003bd6ce8f9b24f489d600f9ad4598c7091214b9757770dc",
+  "html_sha256": "41fe70023ab0e807996772fe44c413619c5119059e58454d4f591ab8b64c2837",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
@@ -16,5 +16,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/realmadrid.svg?v=8ace3aae37c9e0d3": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c"
   },
-  "version": "eccb722540d904dc78a0f46d52c4991aecfc03d74a4f5a7a47e332dbce8d5f74"
+  "version": "b8861e8db4abec6aa72ba33897675b280cfd3ade89282907607413e46fc3a299"
 }
