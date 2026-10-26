@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "day_id": "2026-10-26",
-  "release_id": "0dc6d157d7711cb8daad4636797442f312cf99e3da8ee71b3ef2bc592fe7f065",
+  "release_id": "37e779e8d325a9a99f74dc88f2bbba92bf4e7769832054c204a219097eaaa402",
   "files": {
     "assets/latest-briefing.js": "118770c5b61eba09ca493a67d168e7188ef85388c608297e71ae0a18895e7d4b",
     "assets/snapshot-objects/1302a5cee05c0b60b60d8d1c861d8c493b16f3ffc36c43824fc22f6a6bfe4e70.css": "1302a5cee05c0b60b60d8d1c861d8c493b16f3ffc36c43824fc22f6a6bfe4e70",
@@ -12,13 +12,13 @@
     "assets/snapshot-objects/b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5.css": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "assets/snapshot-objects/c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3.png": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
     "assets/snapshot-objects/e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52.js": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
-    "data/day-latest.json": "89a6aa1e142e0a512d9e22ed3fe1476014b80c4c8e68e0da5d92f1b1d0c72dbf",
-    "data/day-snapshot.html": "f52c3e1888b6e9b2415bd6c292dc00f7b60d4d6b1c0cddaa91a9a043e7f79ee0",
-    "data/days.json": "4b594632a2ed7da61a7eaa07d1425da5964173248927fe92c7dd23849b26ef97",
-    "data/editions.json": "b7a740456ba6226f2382620ea7eb2b5fcf9ca9eb4d3ac01f8b8ca3f920cd186c",
-    "data/latest-snapshot.html": "15b9af82890e8a32f743c3d6e142a9fc02cf6406a628a5c407f558d1e609fdcd",
-    "data/latest.json": "243f947c2908370551030dc7dfa16acd9dbaf012e2cfe7384bb2c84a59c6b234",
-    "index.html": "1c12567aac92d1301b90e6053be2af2b715476072ef901237827dfdadfd48869"
+    "data/day-latest.json": "4aa1713a2d566cd193b9665c09e4ccbd5a500bf53e7102f6a10fc393dfd1c3e1",
+    "data/day-snapshot.html": "62e78882473d3be7003bd6ce8f9b24f489d600f9ad4598c7091214b9757770dc",
+    "data/days.json": "47da6907b7c9851fc684586d0ad79e62b84fdccc33b8947edd173e7026ae43cc",
+    "data/editions.json": "01c1a574cd6d97676bc1ff909dbf3dd2fe2064ab788b5560710aa2d6222f3f52",
+    "data/latest-snapshot.html": "a67597006c658704edb835e49c49d4a8fb71a583214d6dc01b05db7d67f6d5c0",
+    "data/latest.json": "b8e98b3e8ef4cfb856463c303a3a05024a501172feb586c57533e4b71bd3042f",
+    "index.html": "a0991ab0319242746331d48b5979bd4d3c8a2f6f90d26247149c41478304635f"
   },
   "scope": "Central daily newspaper and compatibility descriptors; Wire remains independent."
 }
