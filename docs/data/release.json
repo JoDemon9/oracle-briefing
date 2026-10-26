@@ -1,29 +1,24 @@
 {
   "schema_version": 1,
-  "day_id": "2026-10-25",
-  "release_id": "60c31699e04b236de19d59ea94cffcdf6e870048ae439fa3b1977a173d570f50",
+  "day_id": "2026-10-26",
+  "release_id": "0dc6d157d7711cb8daad4636797442f312cf99e3da8ee71b3ef2bc592fe7f065",
   "files": {
     "assets/latest-briefing.js": "118770c5b61eba09ca493a67d168e7188ef85388c608297e71ae0a18895e7d4b",
     "assets/snapshot-objects/1302a5cee05c0b60b60d8d1c861d8c493b16f3ffc36c43824fc22f6a6bfe4e70.css": "1302a5cee05c0b60b60d8d1c861d8c493b16f3ffc36c43824fc22f6a6bfe4e70",
     "assets/snapshot-objects/1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807.css": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
-    "assets/snapshot-objects/2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192.webp": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
-    "assets/snapshot-objects/381b615b35b871e714f5b0da9f5c995a7d6e825a23f2e640112c5be7a7722693.webp": "381b615b35b871e714f5b0da9f5c995a7d6e825a23f2e640112c5be7a7722693",
     "assets/snapshot-objects/6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7.svg": "6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7",
-    "assets/snapshot-objects/74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1.webp": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
     "assets/snapshot-objects/8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c.jpg": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
     "assets/snapshot-objects/8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1.svg": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
-    "assets/snapshot-objects/8fbda7816261be7d256097defdfa3d2d8f3da6be4b5535ab67f2482e4e688fa4.webp": "8fbda7816261be7d256097defdfa3d2d8f3da6be4b5535ab67f2482e4e688fa4",
-    "assets/snapshot-objects/af191ba5242af27e71193aa0393c1f1f9265720b9aa582b503ec4e012e0a4dbd.webp": "af191ba5242af27e71193aa0393c1f1f9265720b9aa582b503ec4e012e0a4dbd",
     "assets/snapshot-objects/b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5.css": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "assets/snapshot-objects/c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3.png": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
     "assets/snapshot-objects/e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52.js": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
-    "data/day-latest.json": "9b05e2530d3a4cebd4588455f79d1b3caf2102eef8d5d892126c285c555d4a96",
-    "data/day-snapshot.html": "8b711a58486d723b0a4e20fe2af364c34668fde8cada5887b82f519db30857fd",
-    "data/days.json": "819f1586f7819f5bdd13fb22ebd1272fdf61ba04384bc60b40d7f2e8774ff302",
-    "data/editions.json": "4899e7aeeb0075935f6485c607317fe7bb9182e2e43844e67584ebe672a4064e",
-    "data/latest-snapshot.html": "08fb12e813e60d7d1b2e49743dab6462311887f39f22e6e4bafd127b89071788",
-    "data/latest.json": "0c6e348ea061959acb7856c716471b2ea0850227700a307e3bec3e750184c60f",
-    "index.html": "54dff69df0f97f15b0b82e996afcd37226648c4cfe8f56cc56ac99fa4a1192e8"
+    "data/day-latest.json": "89a6aa1e142e0a512d9e22ed3fe1476014b80c4c8e68e0da5d92f1b1d0c72dbf",
+    "data/day-snapshot.html": "f52c3e1888b6e9b2415bd6c292dc00f7b60d4d6b1c0cddaa91a9a043e7f79ee0",
+    "data/days.json": "4b594632a2ed7da61a7eaa07d1425da5964173248927fe92c7dd23849b26ef97",
+    "data/editions.json": "b7a740456ba6226f2382620ea7eb2b5fcf9ca9eb4d3ac01f8b8ca3f920cd186c",
+    "data/latest-snapshot.html": "15b9af82890e8a32f743c3d6e142a9fc02cf6406a628a5c407f558d1e609fdcd",
+    "data/latest.json": "243f947c2908370551030dc7dfa16acd9dbaf012e2cfe7384bb2c84a59c6b234",
+    "index.html": "1c12567aac92d1301b90e6053be2af2b715476072ef901237827dfdadfd48869"
   },
   "scope": "Central daily newspaper and compatibility descriptors; Wire remains independent."
 }
