@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-26T20:35:47.738452+00:00",
-  "last_success_at": "2026-10-26T20:35:47.738452+00:00",
+  "checked_at": "2026-10-27T00:05:46.791211+00:00",
+  "last_success_at": "2026-10-27T00:05:46.791211+00:00",
   "status": "ok",
   "successful_providers": 12,
   "total_providers": 12,
-  "new_items": 181,
+  "new_items": 118,
   "providers": {
     "BBC World": {
       "status": "ok",
