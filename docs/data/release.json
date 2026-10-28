@@ -1,17 +1,15 @@
 {
   "schema_version": 1,
-  "day_id": "2026-10-27",
-  "release_id": "f108c79712bfc5054577ce0e24b676a6c45f3552edaf9f6332a919ce08968019",
+  "day_id": "2026-10-28",
+  "release_id": "81f97211d91379fb927bcd39c00a3374aeac7b5404e0e80b5449f486871477be",
   "files": {
     "assets/latest-briefing.js": "118770c5b61eba09ca493a67d168e7188ef85388c608297e71ae0a18895e7d4b",
     "assets/snapshot-objects/1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807.css": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "assets/snapshot-objects/2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192.webp": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
     "assets/snapshot-objects/4c2854a4f3105f00c680b963a8fe355739197bb122e3c99adb8ed00ce627f5b6.webp": "4c2854a4f3105f00c680b963a8fe355739197bb122e3c99adb8ed00ce627f5b6",
     "assets/snapshot-objects/6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7.svg": "6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7",
-    "assets/snapshot-objects/74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1.webp": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
     "assets/snapshot-objects/8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c.jpg": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
     "assets/snapshot-objects/8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1.svg": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
-    "assets/snapshot-objects/9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3.webp": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
     "assets/snapshot-objects/a5006f0e3b79f189db76dd7b4288efc835ec2d1c25b0cd775b2f9c2153827a61.webp": "a5006f0e3b79f189db76dd7b4288efc835ec2d1c25b0cd775b2f9c2153827a61",
     "assets/snapshot-objects/b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5.css": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "assets/snapshot-objects/bc4220839d5dfa47a2e4c72a6b97c25265a1ece1789324e7895d9216a3fbb588.webp": "bc4220839d5dfa47a2e4c72a6b97c25265a1ece1789324e7895d9216a3fbb588",
@@ -20,13 +18,13 @@
     "assets/snapshot-objects/d76a58dff5f0854df3230aea03818d505807a6096636b38b675a5dea040aea1b.webp": "d76a58dff5f0854df3230aea03818d505807a6096636b38b675a5dea040aea1b",
     "assets/snapshot-objects/e60b6a96aa48f029c3f646147dfa6225d43755fcaa05f53056035923f91bd680.webp": "e60b6a96aa48f029c3f646147dfa6225d43755fcaa05f53056035923f91bd680",
     "assets/snapshot-objects/e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52.js": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
-    "data/day-latest.json": "c75433a6843fdc096ea6b914565de950008ee39aed21967c5f8f1496946dacf0",
-    "data/day-snapshot.html": "39d2aedfc4c97543ea659528c6e0c68c98804ec619b23ff7938f5263d77d4198",
-    "data/days.json": "586f62243ae9cd300fc56b1bb1fdbbecf0aefd381e431612262c842d8a0b508e",
-    "data/editions.json": "5cd6f5b8368db5871a045a450f778bef738615493e630de2be7b4b028860abae",
-    "data/latest-snapshot.html": "a7adf161b0119b3c744492c10b943f3aeed4617f02bae3ae4520a0d94d44d3f1",
-    "data/latest.json": "c4c8b4c69c911477bb8315f674f84494c1d1ffef62334429a056400b2357d39f",
-    "index.html": "11054ba3a03940335e728f97446e4ecff12a3864777221697d554fdf45c4aa7e"
+    "data/day-latest.json": "292c2be0dd3ef541bc0767235e3397957e6d9ec82f4d1c77a38563f61e6f3336",
+    "data/day-snapshot.html": "19168ff170bb3903fa9a7d3f94e3648b21bd63cd7c093fb00789a85ccc47644f",
+    "data/days.json": "cd49a27274f11b309320af5608badbf379f645baed689a7f9e3cf751b5274f2f",
+    "data/editions.json": "556b911df39dbf07f2d02505fe37be95b5abcd6f197259ca548409a4f1052159",
+    "data/latest-snapshot.html": "bcf7722958a6cd08e844a240b4d3d9c2e0f5e6a564428882aa398c62d9b34f40",
+    "data/latest.json": "4b5eb6ee5c3815db6f44461907ff66f863b7ae7a33df60703a9facd647962a19",
+    "index.html": "c5f4d9b118a4fd1cdb600514a925663ece21cedbf8160b3d67a3099294148a10"
   },
   "scope": "Central daily newspaper and compatibility descriptors; Wire remains independent."
 }

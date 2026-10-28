@@ -1,24 +1,18 @@
 {
   "schema_version": 1,
   "status": "published",
-  "day_id": "2026-10-27",
-  "updated_at": "2026-10-27T11:34:05.889163+00:00",
-  "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-27.html",
+  "day_id": "2026-10-28",
+  "updated_at": "2026-10-28T05:39:14.442314+00:00",
+  "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-28.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "39d2aedfc4c97543ea659528c6e0c68c98804ec619b23ff7938f5263d77d4198",
+  "html_sha256": "19168ff170bb3903fa9a7d3f94e3648b21bd63cd7c093fb00789a85ccc47644f",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=bdf12410ffa7a66e": "bdf12410ffa7a66eb09f3979bdc57bfe1fe291042a89a45cf3c2ea3903000907",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=e81586839ff91d17": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-midday/stubb-store-putin-call.webp?v=74e70536c9759343": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-morning/kyiv-university-strike.webp?v=a5006f0e3b79f189": "a5006f0e3b79f189db76dd7b4288efc835ec2d1c25b0cd775b2f9c2153827a61",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-midday/israel-election-voting.webp?v=a5006f0e3b79f189": "a5006f0e3b79f189db76dd7b4288efc835ec2d1c25b0cd775b2f9c2153827a61",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-morning/comey-removal-ruling.webp?v=a5006f0e3b79f189": "a5006f0e3b79f189db76dd7b4288efc835ec2d1c25b0cd775b2f9c2153827a61",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-midday/cyprus-eurobank-growth.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-morning/eoa-development-planning.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-midday/disy-georgiades-campaign.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-morning/edek-election-deadlines.webp?v=9fa19bf42d3a22ff": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-11-evening/cyprus-1.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-13-midday/sport-cyprus.webp?v=bc4220839d5dfa47": "bc4220839d5dfa47a2e4c72a6b97c25265a1ece1789324e7895d9216a3fbb588",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/omonoia.png?v=c8bdaf163ea60834": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-14-morning/sport-united.webp?v=4c2854a4f3105f00": "4c2854a4f3105f00c680b963a8fe355739197bb122e3c99adb8ed00ce627f5b6",
@@ -27,7 +21,7 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/realmadrid.svg?v=8ace3aae37c9e0d3": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/library/formula1.webp?v=e60b6a96aa48f029": "e60b6a96aa48f029c3f646147dfa6225d43755fcaa05f53056035923f91bd680",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-morning/united-manager-uncertainty.webp?v=4c2854a4f3105f00": "4c2854a4f3105f00c680b963a8fe355739197bb122e3c99adb8ed00ce627f5b6"
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-26-morning/antonelli-us-gp.webp?v=e60b6a96aa48f029": "e60b6a96aa48f029c3f646147dfa6225d43755fcaa05f53056035923f91bd680"
   },
-  "version": "0c44b13d3b13339f887683377d85013259b4705065a27b2ffcaeef6688f866fc"
+  "version": "279fa1769e79bff8b718cc568b8882150c7abcf59db1bcaa4c84df736ad1c3da"
 }
