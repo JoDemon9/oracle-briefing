@@ -2,19 +2,22 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-29",
-  "updated_at": "2026-10-29T11:30:25.523928+00:00",
+  "updated_at": "2026-10-29T17:29:10.481476+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-29.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "578219674989943b575016619b62ee5aac279426f42e8f68116492626327844c",
+  "html_sha256": "52ca1168f2809ed0ea5cfdfa4851007ef22b135e80e1f9ff3ec225118357ad6d",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=30506b8001560478": "30506b8001560478be9e77e3b61dec9868082e61438e6e6b4a676bb75233999c",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=e81586839ff91d17": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-midday/israel-election-voting.webp?v=a5006f0e3b79f189": "a5006f0e3b79f189db76dd7b4288efc835ec2d1c25b0cd775b2f9c2153827a61",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-11-evening/world-2.webp?v=74e70536c9759343": "74e70536c975934300273a9c7895e4f37467506aeacddf64f685f05475e609e1",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-27-midday/israel-election-voting.webp?v=a5006f0e3b79f189": "a5006f0e3b79f189db76dd7b4288efc835ec2d1c25b0cd775b2f9c2153827a61",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-25-midday/brazil-runoff-voting.webp?v=e1d2b912d0f25f7d": "e1d2b912d0f25f7d3f3a7678d83155f54aea5eef53a816191006d1d5bff4e5f0",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-12-morning/world-2.webp?v=4052e972a527ca69": "4052e972a527ca69cc3eae9c51e53f76188b07bbf6051b34ab0983ed85990922",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-12-evening/cyprus-1.webp?v=c08ad51d292c5eb9": "c08ad51d292c5eb918a337fe2eff12d4c5ea6feae547e652d96de7db443a11f8",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-11-evening/cyprus-1.webp?v=2834077fdc60d3ad": "2834077fdc60d3adc55eb33378e8972ba480e04b420aa9e037db464ad5a70192",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-11-evening/cyprus-2.webp?v=9fa19bf42d3a22ff": "9fa19bf42d3a22ff0e686d863366cb910aba144aca296b2fba55c94437ac34b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-13-evening/world-1.webp?v=b53b3d254f27da7b": "b53b3d254f27da7bccf39976761e631fb47e8895c473e6067991accdc5fe935e",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-11-evening/world-3.webp?v=58930d817107fea3": "58930d817107fea3a876a51e91a6a5bed6374666070a6e6930cd09d0bfebbe0c",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/omonoia.png?v=c8bdaf163ea60834": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
@@ -25,5 +28,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-12-midday/liverpool-city-match.webp?v=a3e2c4dbfa131ea4": "a3e2c4dbfa131ea46ee74ccd7c7d196bbf1738cf4564e0509e8df62b413844bc",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-12-morning/nfl-jaguars-london.webp?v=3497c68f56928a63": "3497c68f56928a6319e4f75e01d2b89afd88878f2987c3d3dba00ca6d57c831d"
   },
-  "version": "841eda0f0837971999b7cbc5d468d5bcfa0a29c4cafc5a563ec8f7124d205898"
+  "version": "3486a0739c28523b883f0db0b2f91f0d067e24838ab715bd70de8a2230ec043a"
 }
