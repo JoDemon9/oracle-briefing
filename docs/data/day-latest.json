@@ -2,10 +2,10 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-10-29",
-  "updated_at": "2026-10-29T05:47:44.683467+00:00",
+  "updated_at": "2026-10-29T07:48:08.302212+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-10-29.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "8628f2e58931531a672637128abe2ba0dc7d65331f39bdf4dde346a94b49de5f",
+  "html_sha256": "2f414c9d724dfb40f347c7de70d0aad23f09cc5eef765d9dbd003000f43146da",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
@@ -19,7 +19,10 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/omonoia.png?v=c8bdaf163ea60834": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/manutd.svg?v=6020438ef2b47362": "6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7",
     "https://jodemon9.github.io/Claude-Briefing/assets/brands/realmadrid.svg?v=8ace3aae37c9e0d3": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
-    "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c"
+    "https://jodemon9.github.io/Claude-Briefing/assets/brands/formula1.jpg?v=8012cabb691813cd": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/library/sports.webp?v=7b697f11d9e6095b": "7b697f11d9e6095b5c01430ed3781c902f85178f199c137679d82382b72a69ad",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-12-midday/liverpool-city-match.webp?v=a3e2c4dbfa131ea4": "a3e2c4dbfa131ea46ee74ccd7c7d196bbf1738cf4564e0509e8df62b413844bc",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/2026-10-12-morning/nfl-jaguars-london.webp?v=3497c68f56928a63": "3497c68f56928a6319e4f75e01d2b89afd88878f2987c3d3dba00ca6d57c831d"
   },
-  "version": "0a5caad0b5876ac514bd3fb60d3ce88c33812d6785a97a52d2b2014d61290da0"
+  "version": "a2cca6d5687c2b4139532afea1aa19677400ef1cb67b0c62457777e6fae4e853"
 }
