@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-29T21:11:40.730278+00:00",
-  "last_success_at": "2026-10-29T21:11:40.730278+00:00",
+  "checked_at": "2026-10-30T01:06:41.542920+00:00",
+  "last_success_at": "2026-10-30T01:06:41.542920+00:00",
   "status": "ok",
   "successful_providers": 12,
   "total_providers": 12,
-  "new_items": 190,
+  "new_items": 103,
   "providers": {
     "BBC World": {
       "status": "ok",
@@ -21,7 +21,7 @@
     },
     "DW World": {
       "status": "ok",
-      "items": 126
+      "items": 122
     },
     "CNBC Top News": {
       "status": "ok",
