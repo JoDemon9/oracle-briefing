@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-10-31-morning",
+    "date": "2026-10-31",
+    "type": "morning",
+    "status": "published",
+    "published_at": "2026-10-31T05:35:50.458247+00:00",
+    "title": "Πρωινή σάρωση · 2026-10-31",
+    "url": "morning/2026-10-31.html"
+  },
+  {
+    "id": "2026-10-30-evening",
+    "date": "2026-10-30",
+    "type": "evening",
+    "status": "published",
+    "published_at": "2026-10-30T17:32:41.596933+00:00",
+    "title": "Βραδινή σύνθεση · 2026-10-30",
+    "url": "evening/2026-10-30.html"
+  },
+  {
     "id": "2026-10-30-midday",
     "date": "2026-10-30",
     "type": "midday",
