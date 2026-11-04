@@ -2,10 +2,10 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-11-04",
-  "updated_at": "2026-11-04T05:35:27.507848+00:00",
+  "updated_at": "2026-11-04T05:53:53.672564+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-11-04.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "475a6f2203b1698404072d54cc5e43c40cc47ec0af5ad6de5f85542ca0e36cc9",
+  "html_sha256": "21d2cf18983e59587677e4df104343df547765334d382981c72c3ad29050df7c",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=1f0d3251c97a3140": "1f0d3251c97a3140cfa6e9e16ca065b5af9f1cbd01c4300aa5c87c348aaa8807",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
@@ -25,5 +25,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/e4f2f98f39838231d96490136e51fdfb9d12410b235a9a8ae72b396cf24a6941.webp?v=e4f2f98f39838231": "e4f2f98f39838231d96490136e51fdfb9d12410b235a9a8ae72b396cf24a6941",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/ac10748002e99ea792cdb65b18929e1439fe3119133a5be50321cf74323a75a0.webp?v=ac10748002e99ea7": "ac10748002e99ea792cdb65b18929e1439fe3119133a5be50321cf74323a75a0"
   },
-  "version": "1d094ae8ba09d909e75b3055b4042cbfab93909569f3499cc037286bc8731a04"
+  "version": "f81d6eab9785dc4ec354b5fcc506bc971b9e9f72f6df6b1ede0636e0b3d7896d"
 }
