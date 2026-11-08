@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
   "day_id": "2026-11-08",
-  "release_id": "72bb0767f1d7b4e25943cc7f00c84f1e4de0c08350d68bb1ae64adf746fea396",
+  "release_id": "de07658e5e6e5d754c88e6654c76fcbee22d06336135859b56e118c49ec3cc31",
   "files": {
     "assets/latest-briefing.js": "118770c5b61eba09ca493a67d168e7188ef85388c608297e71ae0a18895e7d4b",
     "assets/snapshot-objects/0c2d0e03fb8a810f003db11b6ebbe47d0a0d827a5b18e72ff4d5b414d37e9bcf.webp": "0c2d0e03fb8a810f003db11b6ebbe47d0a0d827a5b18e72ff4d5b414d37e9bcf",
     "assets/snapshot-objects/1073c7701644a32e2f9e27ba532b96e4152fb9a0696d1f49d6fbf2e5532834c8.webp": "1073c7701644a32e2f9e27ba532b96e4152fb9a0696d1f49d6fbf2e5532834c8",
     "assets/snapshot-objects/14e2579ab3f36d8ba9a15285a3e7769c7da563a72d8ff5811988ba92e471e850.webp": "14e2579ab3f36d8ba9a15285a3e7769c7da563a72d8ff5811988ba92e471e850",
+    "assets/snapshot-objects/1fe65b281c99c85a62e3aca4bf764cf06ebd9ab0900cf0cd89808acb0a2ef085.webp": "1fe65b281c99c85a62e3aca4bf764cf06ebd9ab0900cf0cd89808acb0a2ef085",
     "assets/snapshot-objects/27784bf1dde69b2b0f9ab97763b28b9e0c132eb7df231a5861297511cd97d641.webp": "27784bf1dde69b2b0f9ab97763b28b9e0c132eb7df231a5861297511cd97d641",
     "assets/snapshot-objects/30506b8001560478be9e77e3b61dec9868082e61438e6e6b4a676bb75233999c.css": "30506b8001560478be9e77e3b61dec9868082e61438e6e6b4a676bb75233999c",
     "assets/snapshot-objects/37aeb2276f15d591a332501ad578f907a47a4e5e2e3ca5f229a36d889b938b54.webp": "37aeb2276f15d591a332501ad578f907a47a4e5e2e3ca5f229a36d889b938b54",
@@ -14,7 +15,6 @@
     "assets/snapshot-objects/4eb05f52868c9f4859f1d347c166036b76f47eb596c6a52441d0e06eadfa2e9e.webp": "4eb05f52868c9f4859f1d347c166036b76f47eb596c6a52441d0e06eadfa2e9e",
     "assets/snapshot-objects/58930d817107fea3a876a51e91a6a5bed6374666070a6e6930cd09d0bfebbe0c.webp": "58930d817107fea3a876a51e91a6a5bed6374666070a6e6930cd09d0bfebbe0c",
     "assets/snapshot-objects/6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7.svg": "6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7",
-    "assets/snapshot-objects/621fc85af71790f8a641948aa47a81ca09b224065fa5e3ae2cfbeb698fa07833.webp": "621fc85af71790f8a641948aa47a81ca09b224065fa5e3ae2cfbeb698fa07833",
     "assets/snapshot-objects/8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c.jpg": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
     "assets/snapshot-objects/8248b22a4525e305b9dfd24ad854901131e33c74d5ce471e6f278886a6d48a6d.webp": "8248b22a4525e305b9dfd24ad854901131e33c74d5ce471e6f278886a6d48a6d",
     "assets/snapshot-objects/8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1.svg": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
@@ -23,16 +23,18 @@
     "assets/snapshot-objects/a82f1053ddf4a24c4d0c6a321bdd5d8692ada064f4403037b2dd90669372cf5a.webp": "a82f1053ddf4a24c4d0c6a321bdd5d8692ada064f4403037b2dd90669372cf5a",
     "assets/snapshot-objects/b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5.css": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "assets/snapshot-objects/c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3.png": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
+    "assets/snapshot-objects/da712ec32e6cbada3955c49705ccb6acc5256ac161a7df1ab8157c92cc444283.webp": "da712ec32e6cbada3955c49705ccb6acc5256ac161a7df1ab8157c92cc444283",
     "assets/snapshot-objects/dc14d4db3cd3f113e2dd0cbb5e8df5b9974dea814bfefaba2ec5578cb595a2a5.webp": "dc14d4db3cd3f113e2dd0cbb5e8df5b9974dea814bfefaba2ec5578cb595a2a5",
     "assets/snapshot-objects/e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52.js": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
+    "assets/snapshot-objects/ef2efb29014840aaba9a7e54363af5f21bd879d5dff06df0698a779a51dc0389.webp": "ef2efb29014840aaba9a7e54363af5f21bd879d5dff06df0698a779a51dc0389",
     "assets/snapshot-objects/fd82eca426a98142d260b12302358e728612e3082f91a541e547c4f37b768d98.webp": "fd82eca426a98142d260b12302358e728612e3082f91a541e547c4f37b768d98",
-    "data/day-latest.json": "a49748ffac48fe98a656f3aa0287d0c5a626cead8d48d80da05d47d62532d947",
-    "data/day-snapshot.html": "a5773d90939442bb86d60776fce54651a97f592d4ccc83a72a43a538d4777d0f",
-    "data/days.json": "215add2b0e692f5dc6efa875292d3f26708375ba4b97a75d00e04f2744df8f52",
-    "data/editions.json": "0d37649199cc1e32011ceb240f91d3a10bcaec9f4a7f30703a6159a7901eb43c",
-    "data/latest-snapshot.html": "2215995d6ab8eafbf63b281adb45a04427c40028950e8dacb38e3f3acbd92a92",
-    "data/latest.json": "e8d1d8010b88142e8a6c159c2a0cede69d61b7fc610a487c58e351898830cbc9",
-    "index.html": "2f912516f2a268c1885abd4c4329de7ed8307c137ac49dd5017ede6ae75ed795"
+    "data/day-latest.json": "63587b84750fbc505031f22c0ed035a6d57b44c581432431c78f023048acfd3f",
+    "data/day-snapshot.html": "851c1e4659c0f6c67c6c567f6c5b4aca73899fa784a02666ad7dede66b6f00da",
+    "data/days.json": "2e947c42d095d70fbf2c82a4f13bbccdf2a9cc26e4edbdb55a3483072581d8f1",
+    "data/editions.json": "1ff7cef02d3e13578b8c282fe58cf36089bf1baef12177393aa5f106c3d0eaa0",
+    "data/latest-snapshot.html": "b34b81b96c763e9737f9c7d559ca96f75c239392aaf97834d3955550d1ceab45",
+    "data/latest.json": "f41ea34421f752a6a9becfc9e17787508d4f09d4dc60d3e7eb7ccdd406e25bbe",
+    "index.html": "3a11750bf5049370a116e24fa717f2350d017e6b7129c267db758cae01b714d6"
   },
   "scope": "Central daily newspaper and compatibility descriptors; Wire remains independent."
 }
