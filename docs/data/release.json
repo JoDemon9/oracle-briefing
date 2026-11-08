@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "day_id": "2026-11-08",
-  "release_id": "1b509407546588a868b089fb85e971251f34b7a1268b21513e6c4b738452cf70",
+  "release_id": "72bb0767f1d7b4e25943cc7f00c84f1e4de0c08350d68bb1ae64adf746fea396",
   "files": {
     "assets/latest-briefing.js": "118770c5b61eba09ca493a67d168e7188ef85388c608297e71ae0a18895e7d4b",
     "assets/snapshot-objects/0c2d0e03fb8a810f003db11b6ebbe47d0a0d827a5b18e72ff4d5b414d37e9bcf.webp": "0c2d0e03fb8a810f003db11b6ebbe47d0a0d827a5b18e72ff4d5b414d37e9bcf",
@@ -16,20 +16,23 @@
     "assets/snapshot-objects/6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7.svg": "6020438ef2b47362e30fab77432b0fa2d2b54ab50d9c5a9ca9c8941b2ef04bf7",
     "assets/snapshot-objects/621fc85af71790f8a641948aa47a81ca09b224065fa5e3ae2cfbeb698fa07833.webp": "621fc85af71790f8a641948aa47a81ca09b224065fa5e3ae2cfbeb698fa07833",
     "assets/snapshot-objects/8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c.jpg": "8012cabb691813cd57ad473082bddc31c5c043f611b7a1c50178ef0ffaef8f3c",
+    "assets/snapshot-objects/8248b22a4525e305b9dfd24ad854901131e33c74d5ce471e6f278886a6d48a6d.webp": "8248b22a4525e305b9dfd24ad854901131e33c74d5ce471e6f278886a6d48a6d",
     "assets/snapshot-objects/8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1.svg": "8ace3aae37c9e0d37801d512a1dcf11ef2fdc034f51d13bec277518f7910d5a1",
     "assets/snapshot-objects/8dfbaf96d3dd17df376b955273394d903906937541d4ab7a49862bcbb2062938.webp": "8dfbaf96d3dd17df376b955273394d903906937541d4ab7a49862bcbb2062938",
     "assets/snapshot-objects/8e26257cd15dfbe6b9d969d15c3488c93bd9a463443698d1b1937b2b2276f50c.css": "8e26257cd15dfbe6b9d969d15c3488c93bd9a463443698d1b1937b2b2276f50c",
     "assets/snapshot-objects/a82f1053ddf4a24c4d0c6a321bdd5d8692ada064f4403037b2dd90669372cf5a.webp": "a82f1053ddf4a24c4d0c6a321bdd5d8692ada064f4403037b2dd90669372cf5a",
     "assets/snapshot-objects/b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5.css": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "assets/snapshot-objects/c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3.png": "c8bdaf163ea60834d4bdd6808887f210d239fd0e7e9faf004d13235c3fd3b5b3",
+    "assets/snapshot-objects/dc14d4db3cd3f113e2dd0cbb5e8df5b9974dea814bfefaba2ec5578cb595a2a5.webp": "dc14d4db3cd3f113e2dd0cbb5e8df5b9974dea814bfefaba2ec5578cb595a2a5",
     "assets/snapshot-objects/e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52.js": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
-    "data/day-latest.json": "b5531e8b8ebf02703330ad62f7b3d9ff809eb2778a7f469d0b5d6c97cdccf095",
-    "data/day-snapshot.html": "fe42eff828f97736fb3f83520d9010ea388638dc017d6219b762b813b5d095be",
-    "data/days.json": "0512a2da9643ffa0d959d4988fecc0d6f41a1f2b34e96d0d652ca3e6a77713c9",
-    "data/editions.json": "1be3bd69b2c25249bfb2b59587fa7105cfd0932734ffececeaa7e64da55eb209",
-    "data/latest-snapshot.html": "3c5ab6dcfe6ee224db9e96b2848b0ad51f4a913d553b3f9012c46090411d7bc0",
-    "data/latest.json": "d0fbc4da69c32ad809f02610797d85d4f737a9bfa5e5a5a882c01c2225de9c77",
-    "index.html": "7423c4849bebb705563c52f57040a04384f1dbc2a165adfbfdbf7c1757ce6346"
+    "assets/snapshot-objects/fd82eca426a98142d260b12302358e728612e3082f91a541e547c4f37b768d98.webp": "fd82eca426a98142d260b12302358e728612e3082f91a541e547c4f37b768d98",
+    "data/day-latest.json": "a49748ffac48fe98a656f3aa0287d0c5a626cead8d48d80da05d47d62532d947",
+    "data/day-snapshot.html": "a5773d90939442bb86d60776fce54651a97f592d4ccc83a72a43a538d4777d0f",
+    "data/days.json": "215add2b0e692f5dc6efa875292d3f26708375ba4b97a75d00e04f2744df8f52",
+    "data/editions.json": "0d37649199cc1e32011ceb240f91d3a10bcaec9f4a7f30703a6159a7901eb43c",
+    "data/latest-snapshot.html": "2215995d6ab8eafbf63b281adb45a04427c40028950e8dacb38e3f3acbd92a92",
+    "data/latest.json": "e8d1d8010b88142e8a6c159c2a0cede69d61b7fc610a487c58e351898830cbc9",
+    "index.html": "2f912516f2a268c1885abd4c4329de7ed8307c137ac49dd5017ede6ae75ed795"
   },
   "scope": "Central daily newspaper and compatibility descriptors; Wire remains independent."
 }
