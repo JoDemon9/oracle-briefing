@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-11-09-midday",
+    "date": "2026-11-09",
+    "type": "midday",
+    "status": "published",
+    "published_at": "2026-11-09T11:33:24.595482+00:00",
+    "title": "Μεσημεριανές εξελίξεις · 2026-11-09",
+    "url": "midday/2026-11-09.html"
+  },
+  {
     "id": "2026-11-09-morning",
     "date": "2026-11-09",
     "type": "morning",
