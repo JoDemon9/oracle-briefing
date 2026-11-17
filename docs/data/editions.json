@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-11-17-evening",
+    "date": "2026-11-17",
+    "type": "evening",
+    "status": "published",
+    "published_at": "2026-11-17T17:30:29.628631+00:00",
+    "title": "Βραδινή σύνθεση · 2026-11-17",
+    "url": "evening/2026-11-17.html"
+  },
+  {
     "id": "2026-11-17-midday",
     "date": "2026-11-17",
     "type": "midday",
