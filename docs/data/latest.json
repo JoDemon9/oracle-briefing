@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "status": "published",
-  "edition_id": "2026-11-17-evening",
-  "published_at": "2026-11-17T17:30:29.628631+00:00",
-  "edition_url": "https://jodemon9.github.io/Claude-Briefing/evening/2026-11-17.html",
+  "edition_id": "2026-11-18-morning",
+  "published_at": "2026-11-18T05:33:08.219839+00:00",
+  "edition_url": "https://jodemon9.github.io/Claude-Briefing/morning/2026-11-18.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/latest.html",
-  "html_sha256": "3cefd52606dfb4562bc7d3b216dd4add4af1280cab27292b35b8ebc52f572208",
-  "version": "a8148939e6da3930aa615aaed15b87e9c389323194f5ceb393c781d7c0b65cf8"
+  "html_sha256": "7906163710b13a1f23ce2f7a4dfa09e0e18832ee8d367bd6f67d29422b8d561d",
+  "version": "fbe0f4b2433472a82c9c4fae0e9eecf4e0e13e5deb4e2a2480dd1fd93f3362bc"
 }
