@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-18T09:12:58.580280+00:00",
-  "last_success_at": "2026-11-18T09:12:58.580280+00:00",
+  "checked_at": "2026-11-18T18:10:45.253794+00:00",
+  "last_success_at": "2026-11-18T18:10:45.253794+00:00",
   "status": "ok",
   "successful_providers": 12,
   "total_providers": 12,
-  "new_items": 177,
+  "new_items": 229,
   "providers": {
     "BBC World": {
       "status": "ok",
-      "items": 26
+      "items": 33
     },
     "France 24": {
       "status": "ok",
