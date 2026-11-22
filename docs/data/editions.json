@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-11-22-morning",
+    "date": "2026-11-22",
+    "type": "morning",
+    "status": "published",
+    "published_at": "2026-11-22T05:45:01.166646+00:00",
+    "title": "Πρωινή σάρωση · 2026-11-22",
+    "url": "morning/2026-11-22.html"
+  },
+  {
     "id": "2026-11-21-evening",
     "date": "2026-11-21",
     "type": "evening",
