@@ -2,17 +2,20 @@
   "schema_version": 1,
   "status": "published",
   "day_id": "2026-11-26",
-  "updated_at": "2026-11-26T11:41:15.450031+00:00",
+  "updated_at": "2026-11-26T17:32:37.845195+00:00",
   "day_url": "https://jodemon9.github.io/Claude-Briefing/daily/2026-11-26.html",
   "html_url": "https://jodemon9.github.io/Claude-Briefing/today.html",
-  "html_sha256": "58aa18f87ec28f4024b9b96ffeb10e3ee1cf26aa63defa5f567b6da72676f2ef",
+  "html_sha256": "e44766d046a41dda74f6e52b9063cd2dbd1e20eb0a727cc9ed93b29d6717870e",
   "asset_sha256": {
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper.css?v=8e26257cd15dfbe6": "8e26257cd15dfbe6b9d969d15c3488c93bd9a463443698d1b1937b2b2276f50c",
     "https://jodemon9.github.io/Claude-Briefing/assets/accessibility.css?v=b95750981168f7ff": "b95750981168f7ff41d7b5edfe705975e5f13183deddcae1454866226b8317e5",
     "https://jodemon9.github.io/Claude-Briefing/assets/newspaper-ui.css?v=30506b8001560478": "30506b8001560478be9e77e3b61dec9868082e61438e6e6b4a676bb75233999c",
     "https://jodemon9.github.io/Claude-Briefing/assets/reading.js?v=e81586839ff91d17": "e81586839ff91d17a60dcf106c5f33018009d8e5be248f14e55445126ebc9e52",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/9ba340b4cb6e33315f565c714642fc6b04694706b931a074c9726ef927d1bf66.webp?v=9ba340b4cb6e3331": "9ba340b4cb6e33315f565c714642fc6b04694706b931a074c9726ef927d1bf66",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/0d452bb6bb381151303321aec8ac0d027ab4661ed15abd42d840d8a6cf655801.webp?v=0d452bb6bb381151": "0d452bb6bb381151303321aec8ac0d027ab4661ed15abd42d840d8a6cf655801",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/96d3d33e350dd7ae643e5b9c40423bbfe46dd77987face1f860c5a4674bc1c1b.webp?v=96d3d33e350dd7ae": "96d3d33e350dd7ae643e5b9c40423bbfe46dd77987face1f860c5a4674bc1c1b",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/fec70bff8540f193089c5b2d96e3d17f0c1f42ae5d4175da6e60819e287e8665.webp?v=fec70bff8540f193": "fec70bff8540f193089c5b2d96e3d17f0c1f42ae5d4175da6e60819e287e8665",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/576ecb142d0e236e9be279b4aeb34bb5efac352ebbf06fa940fccc372eaf5387.webp?v=576ecb142d0e236e": "576ecb142d0e236e9be279b4aeb34bb5efac352ebbf06fa940fccc372eaf5387",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/bf7485804d3bcc5d51f39078d9cb80cf7304e61de30a429324b56d3566f008ac.webp?v=bf7485804d3bcc5d": "bf7485804d3bcc5d51f39078d9cb80cf7304e61de30a429324b56d3566f008ac",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/c34f2568715a21295b85d050dbb262e18695d6ae33a502b2582132ecc8d33a4d.webp?v=c34f2568715a2129": "c34f2568715a21295b85d050dbb262e18695d6ae33a502b2582132ecc8d33a4d",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/7e0f0a6dffd2e5508368484d35739a8c50486b158307d95336330051b2d1fc20.webp?v=7e0f0a6dffd2e550": "7e0f0a6dffd2e5508368484d35739a8c50486b158307d95336330051b2d1fc20",
@@ -20,9 +23,11 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/857bdfccae6efdc09d0bb0b8bb3a98211ec0b8f05c73e24736eb6d2712cdb378.webp?v=857bdfccae6efdc0": "857bdfccae6efdc09d0bb0b8bb3a98211ec0b8f05c73e24736eb6d2712cdb378",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/9d1e011938113271a9e6042003d7544fd8e2e5386e8ed22a66906fb52bc56b85.webp?v=9d1e011938113271": "9d1e011938113271a9e6042003d7544fd8e2e5386e8ed22a66906fb52bc56b85",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/5a38382ef114ca10df881d372ce9b81418167237f70d9aebcc17da9339c518d3.webp?v=5a38382ef114ca10": "5a38382ef114ca10df881d372ce9b81418167237f70d9aebcc17da9339c518d3",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/249b09b38b0de9edc2843850a07de3f87ab0631eae194e738ae1111a40535b0c.webp?v=249b09b38b0de9ed": "249b09b38b0de9edc2843850a07de3f87ab0631eae194e738ae1111a40535b0c",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/ebed52d2f14af76042dee7724d26e599668d0ca87ad5e6a95abd644c57a1f9b9.webp?v=ebed52d2f14af760": "ebed52d2f14af76042dee7724d26e599668d0ca87ad5e6a95abd644c57a1f9b9",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/f0a64df4db7c79007e41bf16403062996b4796ff94c3ea635e57acc9b30cbd42.webp?v=f0a64df4db7c7900": "f0a64df4db7c79007e41bf16403062996b4796ff94c3ea635e57acc9b30cbd42",
-    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/41247df857e7cb50297b06ed4e9d45a5639fac21d1def27ea79001ddd2b25e83.webp?v=41247df857e7cb50": "41247df857e7cb50297b06ed4e9d45a5639fac21d1def27ea79001ddd2b25e83",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/11aaa8aa68a3178c0e95ba3dd6a84fdf27416e3ebc44d7e5c3bac2015478fa4e.webp?v=11aaa8aa68a3178c": "11aaa8aa68a3178c0e95ba3dd6a84fdf27416e3ebc44d7e5c3bac2015478fa4e",
+    "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/fae43e1c731d8ab1b8fdd5fff8fb038282be8526a88ff4a9abee49432021063a.webp?v=fae43e1c731d8ab1": "fae43e1c731d8ab1b8fdd5fff8fb038282be8526a88ff4a9abee49432021063a",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/f90d7410fe72f3b75566792a14f90f3b42be6ab76f206e6f4732fa49c9cdb32c.webp?v=f90d7410fe72f3b7": "f90d7410fe72f3b75566792a14f90f3b42be6ab76f206e6f4732fa49c9cdb32c",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/df0599b6b1a3ddc4992b4cd83745dccb3aa1f681559cbc790601f8b9f988c4e9.webp?v=df0599b6b1a3ddc4": "df0599b6b1a3ddc4992b4cd83745dccb3aa1f681559cbc790601f8b9f988c4e9",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/0b9f686c4d4366dcd8c3af7f962689ac7fffb5263825fe55eb9e6e3d64203b22.webp?v=0b9f686c4d4366dc": "0b9f686c4d4366dcd8c3af7f962689ac7fffb5263825fe55eb9e6e3d64203b22",
@@ -35,5 +40,5 @@
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/b171b3463084bbb3629d57365c54bc1c0de3e0dfda9c0dcb32fc31e96e4d6013.webp?v=b171b3463084bbb3": "b171b3463084bbb3629d57365c54bc1c0de3e0dfda9c0dcb32fc31e96e4d6013",
     "https://jodemon9.github.io/Claude-Briefing/assets/editorial/source/4dd2a9bcf23c7bc79ab18d8adc2cca07842e1fbc189f777bfc05f1d78b7d53e0.webp?v=4dd2a9bcf23c7bc7": "4dd2a9bcf23c7bc79ab18d8adc2cca07842e1fbc189f777bfc05f1d78b7d53e0"
   },
-  "version": "e44503a9671c0087a8f2efc075ec8048af5213a48f00982c51df0635e31c021c"
+  "version": "a64018674007a752e260a291a1b32e287d287edab2843b1538d80054da3f541a"
 }
