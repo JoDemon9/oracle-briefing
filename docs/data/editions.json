@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-11-27-midday",
+    "date": "2026-11-27",
+    "type": "midday",
+    "status": "published",
+    "published_at": "2026-11-27T11:40:11.333255+00:00",
+    "title": "Μεσημεριανές εξελίξεις · 2026-11-27",
+    "url": "midday/2026-11-27.html"
+  },
+  {
+    "id": "2026-11-27-morning",
+    "date": "2026-11-27",
+    "type": "morning",
+    "status": "published",
+    "published_at": "2026-11-27T05:35:13.426014+00:00",
+    "title": "Πρωινή σάρωση · 2026-11-27",
+    "url": "morning/2026-11-27.html"
+  },
+  {
     "id": "2026-11-26-evening",
     "date": "2026-11-26",
     "type": "evening",
